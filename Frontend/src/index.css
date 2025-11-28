@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset margins and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee linear infinite;
+  animation-duration: 45s;
+}
+
+.animation-paused {
+  animation-play-state: paused;
+}
+
+/* Add to your existing CSS */
+/* Custom color classes for your theme */
+.bg-dark-grey {
+  background-color: #747578;
+}
+
+.bg-light-grey {
+  background-color: #8B8D8E;
+}
+
+.bg-dark-blue {
+  background-color: #00359E;
+}
+
+.bg-light-blue {
+  background-color: #003B9D;
+}
+
+.text-dark-blue {
+  color: #00359E;
+}
+
+.text-light-blue {
+  color: #003B9D;
+}
+
+.hover\:text-dark-blue:hover {
+  color: #00359E;
+}
+
+.hover\:text-light-blue:hover {
+  color: #003B9D;
+}
+
+/* Gradient backgrounds */
+.bg-grey-gradient {
+  background: linear-gradient(135deg, #747578, #8B8D8E);
+}
+
+.bg-blue-gradient {
+  background: linear-gradient(135deg, #00359E, #003B9D);
+}
+
+.hover\:bg-blue-gradient:hover {
+  background: linear-gradient(135deg, #00359E, #003B9D);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* h1, h2, h3, h4, h5, h6, p, span, div {
+  font-feature-settings: "ss01" on, "ss02" on;
+} */
