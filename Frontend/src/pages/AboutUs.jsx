@@ -549,56 +549,7 @@ export default function AboutUs() {
           </Box>
         </Box>
 
-       
-
-        {/* ====== HIMS STYLE ABOUT SECTION ====== */}
-        <Box
-          sx={{
-            textAlign: "center",
-            maxWidth: "900px",
-            margin: { xs: "80px auto 100px auto", md: "120px auto 140px auto" },
-            px: 2,
-            fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
-          }}
-        >
-          {/* BIG HEADING */}
-          <Typography
-            sx={{
-              fontSize: { xs: "36px", md: "64px" },
-              fontWeight: 700,
-              lineHeight: { xs: "44px", md: "72px" },
-              color: "#000",
-            }}
-          >
-            Your health is personal.
-            <br />
-            Now, so is your care.
-          </Typography>
-
-          {/* PARAGRAPH BELOW */}
-          <Typography
-            sx={{
-              mt: 4,
-              fontSize: { xs: "17px", md: "20px" },
-              fontWeight: 530,
-              lineHeight: { xs: "26px", md: "32px" },
-              color: "#2A2A2A",
-              maxWidth: "740px",
-              mx: "auto",
-            }}
-          >
-            Whether you're looking for an innovative treatment or a tried-and-true
-            generic option, TheLRX connects you with a licensed medical
-            provider in your state to assess your symptoms and health history on a
-            1-to-1 basis to determine what is right for you. Your provider
-            recommends a personalized treatment plan based on your unique needs and
-            goals. This customer-centric approach doesn't stop at delivery—through
-            our platform you can message your Care Team 24/7 at no
-            additional cost.
-          </Typography>
-        </Box>
-
-         {/* ====== VIDEO SECTION ====== */}
+           {/* ====== VIDEO SECTION ====== */}
         <Box
           sx={{
             width: "100%",
@@ -671,6 +622,58 @@ export default function AboutUs() {
             </Box>
           </Box>
         </Box>
+
+       
+
+        {/* ====== HIMS STYLE ABOUT SECTION ====== */}
+        <Box
+          sx={{
+            textAlign: "center",
+            maxWidth: "900px",
+            margin: { xs: "80px auto 100px auto", md: "120px auto 140px auto" },
+            px: 2,
+            fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
+          }}
+        >
+          {/* BIG HEADING */}
+          <Typography
+            sx={{
+              fontSize: { xs: "36px", md: "64px" },
+              fontWeight: 700,
+              lineHeight: { xs: "44px", md: "72px" },
+              color: "#000",
+            }}
+          >
+            Your health is personal.
+            <br />
+            Now, so is your care.
+          </Typography>
+
+
+          {/* PARAGRAPH BELOW */}
+          <Typography
+            sx={{
+              mt: 4,
+              fontSize: { xs: "17px", md: "20px" },
+              fontWeight: 530,
+              lineHeight: { xs: "26px", md: "32px" },
+              color: "#2A2A2A",
+              maxWidth: "740px",
+              mx: "auto",
+            }}
+          >
+            Whether you're looking for an innovative treatment or a tried-and-true
+            generic option, TheLRX connects you with a licensed medical
+            provider in your state to assess your symptoms and health history on a
+            1-to-1 basis to determine what is right for you. Your provider
+            recommends a personalized treatment plan based on your unique needs and
+            goals. This customer-centric approach doesn't stop at delivery—through
+            our platform you can message your Care Team 24/7 at no
+            additional cost.
+          </Typography>
+        </Box>
+
+      
 
         {/* ====== MOSAIC CARDS SECTION ====== */}
         <Box

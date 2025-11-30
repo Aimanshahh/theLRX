@@ -4,7 +4,7 @@ import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { ArrowRight, Star, Shield, Clock, Users, TrendingUp, Heart, ClipboardList, UserCheck, Package, Zap, Target, Brain, Pill, Calendar, CheckCircle, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
 // Import your background image - make sure to add this to your project
-import heroBackground from '../../assets/images/doctor1.jpg';
+import heroBackground from '../../assets/images/Oral medication.jpg';
 import productImage from '../../assets/images/Medicine.jpg';
 
 // Animation variants
