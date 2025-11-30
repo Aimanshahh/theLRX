@@ -3,7 +3,7 @@ import { Box, Typography, Drawer, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import manImg from "../assets/images/aboutusimg.png"; 
-// import videoFile from "../assets/video/video1.mov";
+import videoFile from "../assets/Videos/medicalexperts.mp4";
 
 // Import images for mosaic cards
 import img1 from "../assets/images/finalimg1.png";
@@ -598,6 +598,80 @@ export default function AboutUs() {
           </Typography>
         </Box>
 
+         {/* ====== VIDEO SECTION ====== */}
+        <Box
+          sx={{
+            width: "100%",
+            position: "relative",
+            backgroundColor: "#FFFFFF",
+            paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "120px" },
+            paddingBottom: { xs: "60px", sm: "80px", md: "100px", lg: "120px" },
+          }}
+        >
+          {/* Video Container - Full Width */}
+          <Box
+            sx={{
+              width: "100%",
+              borderRadius: { xs: "0", sm: "0", md: "0", lg: "0" },
+              overflow: "hidden",
+              position: "relative",
+              height: { xs: "400px", sm: "500px", md: "600px", lg: "700px" },
+            }}
+          >
+            {/* Video Element */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            >
+              <source src={videoFile} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            {/* Overlay Text - Clean like Hims */}
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.2)",
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#FFFFFF",
+                  fontWeight: "700",
+                  fontSize: { 
+                    xs: "1.8rem", 
+                    sm: "2.5rem", 
+                    md: "3.2rem", 
+                    lg: "4rem" 
+                  },
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px" },
+                  lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
+                  padding: { xs: "0 20px", sm: "0 30px", md: "0 40px" },
+                }}
+              >
+                THE LRX WAS BUILT FOR YOU
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+
         {/* ====== MOSAIC CARDS SECTION ====== */}
         <Box
           sx={{
@@ -714,6 +788,8 @@ export default function AboutUs() {
             </Box>
           </Box>
         </Box>
+
+
 
         {/* ====== SUCCESS STANDARD SECTION ====== */}
         <Box

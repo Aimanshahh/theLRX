@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { CheckCircle, Star, Circle, Menu, X } from "lucide-react"; 
 import logo from "../assets/LRXLOGOS/LOGO-3.png";
 import doctorImg from "../assets/images/doctorimg2.png";
-// import sampleVideo from "../assets/video/video1.mov";
+import sampleVideo from "../assets/Videos/medicalexperts.mp4";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -290,7 +290,7 @@ export default function MedicalExperts() {
       </Box>
 
       {/* VIDEO SECTION */}
-      {/* <Box
+      <Box
         sx={{
           width: "100%",
           backgroundColor: "#F4F5F6",
@@ -370,7 +370,7 @@ export default function MedicalExperts() {
             ))}
           </Box>
         </Box>
-      </Box> */}
+      </Box>
 
       {/* THE LXR BY THE NUMBERS SECTION */}
       <Box sx={{ 
