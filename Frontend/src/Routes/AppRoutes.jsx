@@ -33,7 +33,7 @@ import Lab2 from "../components/Medicines/Lab2";
 import GLP1 from "../components/Medicines/GLP-1";
 import Oralmedication from "../components/Medicines/Oralmedication";
 import Ozempic from "../components/Medicines/Ozempic";
-import Genericliraglutide from "../components/Medicines/GenericLiraglutide";
+import Genericliraglutide from "../components/Medicines/Genericliraglutide";
 import Zepbound from "../components/Medicines/Zepbound";
 import Mounjaro from "../components/Medicines/Mounjaro";
 
