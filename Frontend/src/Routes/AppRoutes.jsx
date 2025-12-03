@@ -14,6 +14,7 @@ import Blog from "../pages/Blog";
 import Medicalexperts from "../pages/Medicalexperts";
 import Signin from "../pages/Signin";
 import Register from "../pages/Registration";
+import Browsealltreatments from "../pages/Browsealltreatments";
 
 // FAQ Category Pages
 import TheBasics from "../components/FAQscategories/TheBasics";
@@ -44,7 +45,7 @@ import Hairhybrids from "../components/Medicines/Hairhybrids";
 
 // Sexual Health
 import Hardmints from "../components/Medicines/Hardmints";
-import Viagara from "../components/Medicines/Viagara";
+import Viagra from "../components/Medicines/Viagra";
 import Genericforcialis from "../components/Medicines/genericforcialis";
 import Valacyclovis from "../components/Medicines/valacylovis";
 
@@ -105,6 +106,7 @@ export default function AppRoutes() {
           <Route path="/Howitworks" element={<Howitworks />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Medicalexperts" element={<Medicalexperts />} />
+          <Route path="/Browsealltreatments" element={<Browsealltreatments/>} />
 
           {/* FAQ CATEGORY PAGES */}
           <Route path="/TheBasics" element={<TheBasics />} />
@@ -135,9 +137,9 @@ export default function AppRoutes() {
 
           {/* Sexual Health */}
           <Route path="/Hardmints" element={<Hardmints />} />
-          <Route path="/Viagara" element={<Viagara />} />
+          <Route path="/Viagra" element={<Viagra />} />
           <Route path="/genericforcialis" element={<Genericforcialis />} />
-          <Route path="/valacyclovis" element={<Valacyclovis />} />
+          <Route path="/Valacyclovis" element={<Valacyclovis />} />
 
           {/* Testosterone */}
           <Route path="/enclomiphene" element={<Enclomiphene />} />

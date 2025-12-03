@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SearchIcon from '@mui/icons-material/Search';
 import { useTheme, useMediaQuery } from "@mui/material";
+import { useNavigate } from "react-router-dom"; // <-- added
 
 import weightloss1 from "../../assets/Herocards/Weightloss1.png";
 import weightloss2 from "../../assets/Herocards/Weightloss2.png";
@@ -21,17 +22,18 @@ const palette = {
   black: "#000",
 };
 
+// Added route property for each card
 const topCards = [
-  { title: "Have better sex", desc: "Popular", image: hair1, popular: true },
-  { title: "Lose weight", image: weightloss1 },
-  { title: "Regrow hair", image: hair2 },
-  { title: "Boost testosterone", image: treat3 }
+  { title: "Have better sex", desc: "Popular", image: hair1, popular: true, route: "/better-sex" },
+  { title: "Lose weight", image: weightloss1, route: "/lose-weight" },
+  { title: "Regrow hair", image: hair2, route: "/regrow-hair" },
+  { title: "Boost testosterone", image: treat3, route: "/boost-testosterone" }
 ];
 
 const bottomCards = [
-  { title: "Tackle anxiety", image: weightloss2 },
-  { title: "Get smooth skin", image: skin2 },
-  { title: "Browse all treatments", browse: true }
+  { title: "Tackle anxiety", image: weightloss2, route: "/tackle-anxiety" },
+  { title: "Get smooth skin", image: skin2, route: "/smooth-skin" },
+  { title: "Browse all treatments", browse: true, route: "/Browsealltreatments" }
 ];
 
 export default function HeroCards() {
@@ -40,6 +42,7 @@ export default function HeroCards() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isSmallMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate(); // <-- added
 
   const baseCardStyle = {
     borderRadius: "22px",
@@ -98,7 +101,7 @@ export default function HeroCards() {
 
   return (
     <Container fluid className="py-4 px-3 px-md-5">
-      {/* TOP ROW - Responsive Grid */}
+      {/* TOP ROW */}
       <div
         style={{
           display: "grid",
@@ -121,6 +124,7 @@ export default function HeroCards() {
               whileHover={{ scale: isMobile ? 1.02 : 1.05, y: isMobile ? -2 : -4 }}
               onMouseEnter={() => setHoverIndex(i)}
               onMouseLeave={() => setHoverIndex(null)}
+              onClick={() => navigate(c.route)} // <-- navigation on click
             >
               {c.popular ? (
                 <div style={{
@@ -182,7 +186,7 @@ export default function HeroCards() {
         })}
       </div>
 
-      {/* BOTTOM ROW - Responsive Grid */}
+      {/* BOTTOM ROW */}
       <div
         style={{
           display: "grid",
@@ -211,6 +215,7 @@ export default function HeroCards() {
               whileHover={{ scale: isMobile ? 1.02 : 1.05, y: isMobile ? -2 : -3 }}
               onMouseEnter={() => setHoverBottomIndex(i)}
               onMouseLeave={() => setHoverBottomIndex(null)}
+              onClick={() => navigate(c.route)} // <-- navigation on click
             >
               <div style={{ flex: 1, minWidth: 0 }}>
                 <h5 style={{ 
@@ -238,7 +243,6 @@ export default function HeroCards() {
                 )}
               </div>
 
-              {/* Icon on the right */}
               {isBrowseCard ? (
                 <SearchIcon
                   style={{

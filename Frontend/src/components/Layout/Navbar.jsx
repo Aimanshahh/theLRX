@@ -97,9 +97,9 @@ const exploreItems = [
     label: "Sexual Health", 
     subsections: [
       { label: "Hard Mints", path: "/Hardmints" },
-      { label: "Viagara", path: "/Viagara" },
+      { label: "Viagra", path: "/Viagra" },
       { label: "Generic for Cialis", path: "/genericforcialis" },
-      { label: "Valacyclovis", path: "/valacyclovis" }
+      { label: "Valacyclovir", path: "/valacyclovis" }
     ]
   },
   { 
