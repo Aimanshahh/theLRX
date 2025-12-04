@@ -14,7 +14,6 @@ import Blog from "../pages/Blog";
 import Medicalexperts from "../pages/Medicalexperts";
 import Signin from "../pages/Signin";
 import Register from "../pages/Registration";
-import Browsealltreatments from "../pages/Browsealltreatments";
 
 // FAQ Category Pages
 import TheBasics from "../components/FAQscategories/TheBasics";
@@ -106,7 +105,7 @@ export default function AppRoutes() {
           <Route path="/Howitworks" element={<Howitworks />} />
           <Route path="/Blog" element={<Blog />} />
           <Route path="/Medicalexperts" element={<Medicalexperts />} />
-          <Route path="/Browsealltreatments" element={<Browsealltreatments/>} />
+          
 
           {/* FAQ CATEGORY PAGES */}
           <Route path="/TheBasics" element={<TheBasics />} />
