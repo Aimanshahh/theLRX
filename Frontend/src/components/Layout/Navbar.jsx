@@ -23,11 +23,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
-import treatment1 from "../../assets/Carousal/img1.jpg";
-import treatment2 from "../../assets/Carousal/img1.jpg";
-import treatment3 from "../../assets/Carousal/img1.jpg";
-import treatment4 from "../../assets/Carousal/img1.jpg";
-import treatment5 from "../../assets/Carousal/img2.jpg";
+import treatment1 from "../../assets/images/medicine.jpg";
+import treatment2 from "../../assets/images/medicine.jpg";
+import treatment3 from "../../assets/images/medicine.jpg";
+import treatment4 from "../../assets/images/medicine.jpg";
+import treatment5 from "../../assets/images/medicine.jpg";
 
 export default function Navbar() {
   const navigate = useNavigate();
