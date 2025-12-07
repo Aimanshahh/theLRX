@@ -1,21 +1,15 @@
-// import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
-// const LoadingContext = createContext();
+const LoaderContext = createContext();
 
-// export const useLoading = () => {
-//   const context = useContext(LoadingContext);
-//   if (!context) {
-//     throw new Error('useLoading must be used within a LoadingProvider');
-//   }
-//   return context;
-// };
+export const LoaderProvider = ({ children }) => {
+  const [loading, setLoading] = useState(false);
 
-// export const LoadingProvider = ({ children }) => {
-//   const [isLoading, setIsLoading] = useState(false);
+  return (
+    <LoaderContext.Provider value={{ loading, setLoading }}>
+      {children}
+    </LoaderContext.Provider>
+  );
+};
 
-//   return (
-//     <LoadingContext.Provider value={{ isLoading, setLoading: setIsLoading }}>
-//       {children}
-//     </LoadingContext.Provider>
-//   );
-// };
+export const useLoader = () => useContext(LoaderContext);
