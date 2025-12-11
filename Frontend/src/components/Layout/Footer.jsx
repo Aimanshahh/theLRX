@@ -1,7 +1,12 @@
 import React from "react";
-import { Box, Grid, Typography, Link, IconButton, Container } from "@mui/material";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, ArrowRight } from "lucide-react";
-import logo from "../../assets/LRXLOGOS/LOGO-2.png";
+import { Box, Grid, Typography, Link, Container, IconButton } from "@mui/material";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Youtube
+} from "lucide-react";
+import logo from "../../assets/LRXLOGOS/LOGO-5.png";
 
 export default function Footer() {
   return (
@@ -10,260 +15,195 @@ export default function Footer() {
       sx={{
         background: "linear-gradient(135deg, #00359E 0%, #00257A 100%)",
         color: "#fff",
-        position: "relative",
-        overflow: "hidden",
-        "&::before": {
-          content: '""',
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "1px",
-          background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
-        }
+        pt: 10,
+        pb: 6,
       }}
     >
-      {/* Background Pattern */}
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background: `
-            radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-            radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.08) 0%, transparent 50%)
-          `,
-          pointerEvents: "none",
-        }}
-      />
-      
       <Container maxWidth="lg">
-        <Grid container spacing={6} sx={{ py: 8, position: "relative", zIndex: 1 }}>
-          
-          {/* LEFT — LOGO + TEXT */}
-          <Grid item xs={12} md={4}>
-            <Box display="flex" flexDirection="column" gap={3}>
-              {/* Logo with white background for visibility */}
-              <Box 
-                sx={{ 
-                  display: "inline-flex",
-                  p: 2,
-                  borderRadius: 3,
-                  backgroundColor: "rgba(255, 255, 255, 0.95)",
-                  boxShadow: "0 8px 32px rgba(0, 0, 0, 0.1)",
-                  width: "fit-content"
-                }}
-              >
-                <img 
-                  src={logo} 
-                  alt="Liquid Rx Logo" 
-                  style={{ 
-                    width: "200px",
-                    filter: "brightness(1.1) contrast(1.1)"
-                  }} 
-                />
-              </Box>
-              
-              <Typography 
-                variant="h6" 
-                sx={{ 
-                  color: "rgba(255, 255, 255, 0.9)",
-                  fontSize: "1.1rem",
-                  lineHeight: 1.6,
-                  fontWeight: 300
-                }}
-              >
-                Premium liquid wellness and Rx solutions built with <Box component="span" sx={{ fontWeight: 600 }}>science + care</Box>.
-              </Typography>
+        <Grid container spacing={8}>
 
-              {/* Social Media - Mobile */}
-              <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1, mt: 2 }}>
-                {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                  <IconButton
-                    key={i}
-                    sx={{
-                      color: "rgba(255, 255, 255, 0.7)",
-                      background: "rgba(255, 255, 255, 0.1)",
-                      backdropFilter: "blur(10px)",
-                      "&:hover": { 
-                        color: "#fff", 
-                        background: "rgba(255, 255, 255, 0.2)",
-                        transform: "translateY(-2px)"
-                      },
-                      transition: "all 0.3s ease",
-                    }}
-                  >
-                    <Icon size={20} />
-                  </IconButton>
-                ))}
-              </Box>
+          {/* LOGO + BRAND DESCRIPTION */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ mb: 3 }}>
+              <img
+                src={logo}
+                alt="Liquid Rx Logo"
+                style={{ width: "170px", display: "block" }}
+              />
+            </Box>
+
+            <Typography
+              sx={{
+                fontSize: "0.92rem",
+                lineHeight: 1.7,
+                maxWidth: "320px",
+                color: "rgba(255,255,255,0.75)",
+              }}
+            >
+              Premium liquid wellness formulas crafted with science,
+              medical expertise, and results in mind.
+            </Typography>
+
+            {/* SOCIAL ICONS */}
+            <Box sx={{ mt: 3, display: "flex", gap: 1 }}>
+              {[Facebook, Instagram, Twitter, Youtube].map((Icon, i) => (
+                <IconButton
+                  key={i}
+                  sx={{
+                    p: 1,
+                    borderRadius: "10px",
+                    color: "#fff",
+                    background: "rgba(255,255,255,0.15)",
+                    border: "1px solid rgba(255,255,255,0.25)",
+                    "&:hover": {
+                      background: "rgba(255,255,255,0.25)",
+                    },
+                  }}
+                >
+                  <Icon size={18} />
+                </IconButton>
+              ))}
             </Box>
           </Grid>
 
-          {/* CENTER — QUICK LINKS */}
-          <Grid item xs={6} md={3}>
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                mb: 3, 
-                fontWeight: "bold",
-                fontSize: "1.1rem",
-                position: "relative",
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  bottom: -8,
-                  left: 0,
-                  width: 30,
-                  height: 2,
-                  background: "linear-gradient(90deg, #fff, transparent)",
-                  borderRadius: 2
-                }
+          {/* SHOP */}
+          <Grid item xs={6} md={2}>
+            <Typography
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.3px",
               }}
             >
-              Quick Links
+              Shop
             </Typography>
-            {["Home", "Treatments", "Shop", "About", "Contact"].map((item) => (
+
+            {["Weight Loss", "Women's Health", "Men's Health", "Supplements"].map(
+              (item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  sx={{
+                    display: "block",
+                    mb: 1.2,
+                    color: "rgba(255,255,255,0.75)",
+                    fontSize: "0.9rem",
+                    textDecoration: "none",
+                    "&:hover": { color: "#fff" },
+                  }}
+                >
+                  {item}
+                </Link>
+              )
+            )}
+          </Grid>
+
+          {/* COMPANY */}
+          <Grid item xs={6} md={2}>
+            <Typography
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.3px",
+              }}
+            >
+              Company
+            </Typography>
+
+            {["About Us", "Careers", "Blog", "Medical Team"].map((item) => (
               <Link
                 key={item}
-                href={`/${item.toLowerCase()}`}
+                href="#"
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  mb: 2,
-                  color: "rgba(255, 255, 255, 0.7)",
+                  display: "block",
+                  mb: 1.2,
+                  color: "rgba(255,255,255,0.75)",
+                  fontSize: "0.9rem",
                   textDecoration: "none",
-                  fontWeight: 300,
-                  transition: "all 0.3s ease",
-                  "&:hover": { 
-                    color: "#fff",
-                    transform: "translateX(5px)",
-                    "& .arrow": {
-                      opacity: 1,
-                      transform: "translateX(3px)"
-                    }
-                  },
+                  "&:hover": { color: "#fff" },
                 }}
               >
-                <ArrowRight 
-                  size={16} 
-                  className="arrow"
-                  style={{ 
-                    marginRight: 8, 
-                    opacity: 0, 
-                    transition: "all 0.3s ease" 
-                  }} 
-                />
                 {item}
               </Link>
             ))}
           </Grid>
 
-          {/* RIGHT — CONTACT */}
-          <Grid item xs={6} md={4}>
-            <Typography 
-              variant="h6" 
-              sx={{ 
-                mb: 3, 
-                fontWeight: "bold",
-                fontSize: "1.1rem",
-                position: "relative",
-                "&::after": {
-                  content: '""',
-                  position: "absolute",
-                  bottom: -8,
-                  left: 0,
-                  width: 30,
-                  height: 2,
-                  background: "linear-gradient(90deg, #fff, transparent)",
-                  borderRadius: 2
-                }
+          {/* SUPPORT */}
+          <Grid item xs={12} md={4}>
+            <Typography
+              sx={{
+                fontWeight: 700,
+                mb: 2,
+                fontSize: "1rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.3px",
               }}
             >
-              Get In Touch
+              Support
             </Typography>
 
             {[
-              { icon: Mail, text: "support@liquidrx.com" },
-              { icon: Phone, text: "+92 300 1234567" },
-              { icon: MapPin, text: "Islamabad, Pakistan" }
-            ].map((item, index) => (
-              <Box 
-                key={index}
-                display="flex" 
-                alignItems="center" 
-                gap={2} 
-                mb={2.5}
+              "Contact Support",
+              "FAQs",
+              "Shipping & Returns",
+              "Privacy Policy",
+              "Terms & Conditions",
+            ].map((item) => (
+              <Link
+                key={item}
+                href="#"
                 sx={{
-                  color: "rgba(255, 255, 255, 0.7)",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    color: "#fff",
-                    transform: "translateX(3px)"
-                  }
+                  display: "block",
+                  mb: 1.2,
+                  color: "rgba(255,255,255,0.75)",
+                  fontSize: "0.9rem",
+                  textDecoration: "none",
+                  "&:hover": { color: "#fff" },
                 }}
               >
-                <Box
-                  sx={{
-                    p: 1,
-                    borderRadius: 2,
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(10px)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center"
-                  }}
-                >
-                  <item.icon size={18} />
-                </Box>
-                <Typography sx={{ fontWeight: 300 }}>{item.text}</Typography>
-              </Box>
+                {item}
+              </Link>
             ))}
-
-            {/* Social Media - Desktop */}
-            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1, mt: 3 }}>
-              {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                <IconButton
-                  key={i}
-                  sx={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    background: "rgba(255, 255, 255, 0.1)",
-                    backdropFilter: "blur(10px)",
-                    "&:hover": { 
-                      color: "#fff", 
-                      background: "rgba(255, 255, 255, 0.2)",
-                      transform: "translateY(-2px)"
-                    },
-                    transition: "all 0.3s ease",
-                  }}
-                >
-                  <Icon size={20} />
-                </IconButton>
-              ))}
-            </Box>
           </Grid>
         </Grid>
 
-        {/* BOTTOM COPYRIGHT BAR */}
+        {/* LEGAL DISCLAIMER */}
         <Box
           sx={{
-            py: 4,
-            borderTop: "1px solid rgba(255, 255, 255, 0.1)",
-            textAlign: "center",
-            color: "rgba(255, 255, 255, 0.6)",
-            position: "relative",
-            zIndex: 1,
-            fontWeight: 300,
-            fontSize: "0.9rem",
-            backdropFilter: "blur(10px)",
-            background: "rgba(255, 255, 255, 0.02)",
-            borderRadius: "12px 12px 0 0",
+            mt: 6,
+            pt: 4,
+            borderTop: "1px solid rgba(255,255,255,0.25)",
+            color: "rgba(255,255,255,0.65)",
+            fontSize: "0.75rem",
+            lineHeight: 1.6,
           }}
         >
-          © {new Date().getFullYear()} Liquid Rx — All Rights Reserved.
+          <Typography sx={{ maxWidth: "900px", mb: 3 }}>
+            *These statements have not been evaluated by the FDA. Liquid Rx products are not intended 
+            to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider 
+            before using any new supplement or medication. Individual results may vary.
+          </Typography>
+
+          <Typography sx={{ maxWidth: "900px" }}>
+            All medical services are provided by licensed healthcare professionals. By using this 
+            website, you agree to our Terms & Conditions and acknowledge reviewing our Privacy Policy.
+          </Typography>
+        </Box>
+
+        {/* COPYRIGHT BAR */}
+        <Box
+          sx={{
+            textAlign: "center",
+            color: "rgba(255,255,255,0.6)",
+            fontSize: "0.8rem",
+            mt: 4,
+          }}
+        >
+          © {new Date().getFullYear()} Liquid Rx. All Rights Reserved.
         </Box>
       </Container>
     </Box>

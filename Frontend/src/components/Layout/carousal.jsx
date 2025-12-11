@@ -13,19 +13,16 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// IMAGES
 import weightLossImg from "../../assets/Carousal/img1.jpg";
 import fitnessImg from "../../assets/Carousal/img2.jpg";
-import recedingHairImg from "../../assets/Carousal/img3.jpg";
+import recedingHairImg from "../../assets/Carousal/img5.jpg";
 
-// CAROUSEL DATA
 const carouselData = [
   { title: "Learn more about weight loss", image: weightLossImg },
   { title: "How long does Minoxidil take to work?", image: fitnessImg },
   { title: "Hair regrowth that works", image: recedingHairImg },
 ];
 
-// ISSUES CARDS
 const issuesData = [
   { title: "Premature Ejaculation" },
   { title: "Hair Loss" },
@@ -37,68 +34,56 @@ const issuesData = [
 const CarousalWithCards = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  const isTablet = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
 
-  const scrollSpeed = 30; // pixels per second for continuous motion
+  // SUPER SLOW motion
+  const scrollSpeed = 6; // (lower = slower)
 
-  // Responsive carousel settings
   const settings = {
     infinite: true,
-    slidesToShow: isMobile ? 1.1 : isTablet ? 2.2 : 2.8,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: scrollSpeed * 1000,
+    speed: scrollSpeed * 10000, // ✨ ultra slow glide
     cssEase: "linear",
     arrows: false,
     swipe: true,
     pauseOnHover: true,
     touchMove: true,
-    responsive: [
-      {
-        breakpoint: 600, // Small mobile
-        settings: {
-          slidesToShow: 1.05,
-        }
-      },
-      {
-        breakpoint: 900, // Tablet
-        settings: {
-          slidesToShow: 1.8,
-        }
-      }
-    ]
   };
 
   return (
-    <Box sx={{ width: "100%", mt: 0, px: { xs: 1, sm: 2 } }}>
+    <Box sx={{ width: "100%", mt: 0, px: 0 }}>
       {/* ---------------- HERO CAROUSEL ---------------- */}
-      <Box sx={{ position: 'relative', mb: { xs: 2, sm: 3 } }}>
+      <Box sx={{ position: "relative", mb: { xs: 1, sm: 2 } }}>
         <Slider {...settings}>
           {carouselData.concat(carouselData).map((item, idx) => (
-            <Box key={idx} sx={{ px: { xs: 0.5, sm: 1 } }}>
+            <Box key={idx} sx={{ px: { xs: 0.3, sm: 0.4, md: 0.5 } }}>
               <Card
                 sx={{
-                  height: { xs: 180, sm: 250, md: 300, lg: 340 },
                   width: "100%",
+                  height: {
+                    xs: 330,
+                    sm: 450,
+                    md: 540,
+                    lg: 600,
+                  },
                   borderRadius: { xs: "12px", sm: "16px" },
                   overflow: "hidden",
                   position: "relative",
-                  boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)",
                 }}
               >
+                {/* Image */}
                 <CardMedia
                   component="img"
                   image={item.image}
-                  sx={{ 
-                    width: "100%", 
-                    height: "100%", 
+                  sx={{
+                    width: "100%",
+                    height: "100%",
                     objectFit: "cover",
-                    transition: "transform 0.3s ease",
-                    '&:hover': {
-                      transform: "scale(1.05)"
-                    }
+                    transition: "transform 0.4s ease",
+                    "&:hover": { transform: "scale(1.04)" },
                   }}
                 />
 
@@ -110,53 +95,51 @@ const CarousalWithCards = () => {
                     left: 0,
                     width: "100%",
                     height: "100%",
-                    background:
-                      "linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.25))",
+                    background: "linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45))",
                   }}
                 />
 
-                {/* Heading */}
+                {/* TEXT */}
                 <Typography
                   sx={{
                     position: "absolute",
-                    top: { xs: 12, sm: 16 },
-                    left: { xs: 12, sm: 16 },
-                    fontSize: { 
-                      xs: "0.9rem", 
-                      sm: "1.1rem", 
-                      md: "1.3rem", 
-                      lg: "1.6rem" 
+                    top: { xs: 16, sm: 22, md: 30 },
+                    left: { xs: 16, sm: 22, md: 30 },
+                    fontSize: {
+                      xs: "1.35rem",
+                      sm: "1.8rem",
+                      md: "2.2rem",
+                      lg: "2.4rem",
                     },
                     fontWeight: 700,
                     color: "#fff",
-                    width: { xs: "70%", sm: "60%" },
-                    textShadow: "0 2px 4px rgba(0,0,0,0.5)",
-                    lineHeight: 1.2,
+                    width: { xs: "78%", sm: "65%", md: "55%" },
+                    lineHeight: 1.12,
+                    letterSpacing: "-0.5px",
+                    textShadow: "0 2px 6px rgba(0,0,0,0.5)",
                   }}
                 >
                   {item.title}
                 </Typography>
 
-                {/* Explore Button */}
+                {/* BIGGER BUTTON */}
                 <Button
                   sx={{
                     position: "absolute",
-                    bottom: { xs: 12, sm: 16 },
-                    right: { xs: 12, sm: 16 },
+                    bottom: { xs: 16, sm: 22, md: 28 },
+                    left: { xs: 16, sm: 22, md: 30 },
                     backgroundColor: "#fff",
+                    borderRadius: "40px",
                     textTransform: "none",
-                    borderRadius: "50px",
-                    fontSize: { xs: "0.7rem", sm: "0.75rem" },
-                    px: { xs: 2, sm: 2.5 },
-                    py: { xs: 0.5, sm: 1 },
-                    fontWeight: 600,
-                    minWidth: "auto",
-                    "&:hover": { 
+                    fontSize: { xs: "0.85rem", sm: "1rem", md: "1.05rem" },
+                    px: { xs: 3, sm: 3.8, md: 4.5 },
+                    py: { xs: 0.9, sm: 1.1 },
+                    fontWeight: 700,
+                    "&:hover": {
                       backgroundColor: "#f4f4f4",
                       transform: "translateY(-2px)",
-                      boxShadow: "0 4px 8px rgba(0,0,0,0.2)"
                     },
-                    transition: "all 0.3s ease",
+                    transition: "all 0.25s ease",
                   }}
                 >
                   Explore
@@ -167,25 +150,24 @@ const CarousalWithCards = () => {
         </Slider>
       </Box>
 
-      {/* ---------------- GRADIENT TILES AUTO-SCROLL ---------------- */}
+      {/* ✔ Tiles remain the same (only fully responsive improved earlier) */}
+      {/* ---------------- TILES ---------------- */}
       <Box
         sx={{
-          mt: 0,
+          mt: 1,
           overflowX: "hidden",
           position: "relative",
-          py: 0,
-          px: { xs: 0.5, sm: 1 },
-          '&:hover .scroll-tiles': {
-            animationPlayState: 'paused'
-          }
+          py: 0.5,
+          px: { xs: 0.7, sm: 1 },
+          "&:hover .scroll-tiles": { animationPlayState: "paused" },
         }}
       >
         <Box
           className="scroll-tiles"
           sx={{
             display: "flex",
-            gap: { xs: 1, sm: 1.5 },
-            animation: `scrollTiles ${scrollSpeed * 2}s linear infinite`,
+            gap: { xs: 1, sm: 1.4 },
+            animation: `scrollTiles ${scrollSpeed * 4}s linear infinite`,
             width: "max-content",
           }}
         >
@@ -193,39 +175,33 @@ const CarousalWithCards = () => {
             <Card
               key={i}
               sx={{
-                minWidth: { xs: 140, sm: 180, md: 200 },
-                height: { xs: 70, sm: 90, md: 110 },
-                borderRadius: { xs: "12px", sm: "16px", md: "18px" },
+                minWidth: { xs: 145, sm: 175, md: 200 },
+                height: { xs: 75, sm: 90, md: 110 },
+                borderRadius: { xs: "12px", sm: "16px" },
                 display: "flex",
                 alignItems: "flex-end",
-                p: { xs: 1.5, sm: 2 },
+                p: { xs: 1.4, sm: 2 },
                 flexShrink: 0,
                 background: `linear-gradient(120deg,
                   ${["#A43BFF", "#FF6F3C", "#A43BFF", "#8A39E1", "#E4537A"][i % 5]},
-                  ${["#692BC7", "#D44724", "#692BC7", "#5B21B6", "#B02C5A"][i % 5]})`,
+                  ${["#692BC7", "#D44724", "#692BC7", "#5B21B6", "#B02C5A"][i % 5]}
+                )`,
                 color: "#fff",
                 fontWeight: 700,
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
-                "&:hover": { 
-                  transform: { xs: "translateY(-3px)", sm: "translateY(-6px)" },
-                  boxShadow: "0 8px 16px rgba(0,0,0,0.3)"
-                },
               }}
             >
-              <Typography sx={{ 
-                fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem" }, 
-                fontWeight: 800, 
-                lineHeight: 1.2 
-              }}>
+              <Typography
+                sx={{
+                  fontSize: { xs: "0.85rem", sm: "1rem" },
+                  fontWeight: 800,
+                }}
+              >
                 {issue.title}
               </Typography>
             </Card>
           ))}
         </Box>
 
-        {/* Scroll Animation */}
         <style>
           {`
             @keyframes scrollTiles {

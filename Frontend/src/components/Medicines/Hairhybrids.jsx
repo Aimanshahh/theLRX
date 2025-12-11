@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container, Chip, alpha, Grid, Card } from "@mu
 import { ArrowRight, CheckCircle, Zap, Sparkles, Target, Shield, Users, TrendingUp, Heart, Activity, Brain, Layers, Clock, Package, Calendar, Pill, Droplet, BrainCircuit } from "lucide-react";
 import { motion } from "framer-motion";
 import hairHybridImage from "../../assets/images/hairhybrid.jpg";
-import productImage from "../../assets/images/medicine.jpg";
+import productImage from "../../assets/medicines/Tirzepatide Vial.png";
 
 const HairHybrids = () => {
   return (

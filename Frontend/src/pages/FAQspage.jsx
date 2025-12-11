@@ -6,12 +6,12 @@ import { useNavigate } from "react-router-dom";
 // =======================
 // IMPORT YOUR CARD IMAGES
 // =======================
-import basicsImg from "../assets/Carousal/img3.jpg";
-import accountImg from "../assets/Carousal/img3.jpg";
-import medicalImg from "../assets/Carousal/img3.jpg";
-import shippingImg from "../assets/Carousal/img3.jpg";
-import privacyImg from "../assets/Carousal/img3.jpg";
-import troubleImg from "../assets/Carousal/img3.jpg";
+import basicsImg from "../assets/FAQs/img1.jpg";
+import accountImg from "../assets/FAQs/img2.jpg";
+import medicalImg from "../assets/FAQs/img6.jpg";
+import shippingImg from "../assets/FAQs/img4.jpg";
+import privacyImg from "../assets/FAQs/img5.jpg";
+import troubleImg from "../assets/FAQs/img3.jpg";
 import logo from "../assets/LRXLOGOS/LOGO-3.png";
 
 // ==============================

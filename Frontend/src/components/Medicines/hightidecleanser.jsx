@@ -20,7 +20,7 @@ import {
   CloudRain
 } from "lucide-react";
 
-import creamImg from "../../assets/images/medicineremovedbg.png";
+import creamImg from "../../assets/medicines/Tirzepatide Vial.png";
 
 const QuickBenefit = ({ Icon, title, text }) => (
   <Box

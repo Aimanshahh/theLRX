@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container, Grid, IconButton } from "@mui/mater
 import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Bed, Brain, Shield, CheckCircle, Star, Clock, Users, Award, ChevronLeft, ChevronRight, ArrowRight, Sparkles, Cloud, Zap, Sunrise, Coffee } from "lucide-react";
 import sleepBanner from "../../assets/images/troublesleeping.jpg";
-import sleepPill from "../../assets/images/medicine.jpg";
+import sleepPill from "../../assets/medicines/Tirzepatide Vial.png";
 
 const TroubleSleeping = () => {
   const palette = {

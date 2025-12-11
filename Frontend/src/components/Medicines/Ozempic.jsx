@@ -5,7 +5,7 @@ import { ArrowRight, Star, Shield, Clock, Users, TrendingUp, Heart, ClipboardLis
 
 // Import your background images - make sure to add these to your project
 import heroBackground from '../../assets/images/Ozempic.jpg';
-import productImage from '../../assets/images/Medicine.jpg';
+import productImage from '../../assets/medicines/Tirzepatide Vial.png';
 
 // Animation variants
 const fadeInUp = {

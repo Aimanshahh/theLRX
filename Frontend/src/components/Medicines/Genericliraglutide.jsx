@@ -5,7 +5,7 @@ import { ArrowRight, Star, Shield, Clock, Users, TrendingUp, Heart, ClipboardLis
 
 // Import your background image
 import liraglutideBackground from '../../assets/images/injection.jpg';
-import liraglutidePenImage from '../../assets/images/Medicine.jpg';
+import liraglutidePenImage from '../../assets/medicines/Tirzepatide Vial.png';
 
 // Animation variants
 const fadeInUp = {

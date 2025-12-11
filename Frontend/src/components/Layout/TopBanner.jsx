@@ -65,7 +65,7 @@ export default function TopBanner() {
         {/* SCROLLING TEXT */}
         <div
           className={`flex items-center animate-marquee ${paused ? "animation-paused" : ""}`}
-          style={{ height: "50px", whiteSpace: "nowrap" }}
+          style={{ height: "40px", whiteSpace: "nowrap" }}
         >
           {[...messages, ...messages].map((msg, i) => (
             <p

@@ -10,11 +10,10 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-// Import images directly (replace with correct images later)
-import image1 from "../../assets/Herocards/hairtreatment.png";
-import image2 from "../../assets/Herocards/hairtreatment.png";
-import image3 from "../../assets/Herocards/hairtreatment.png";
-import image4 from "../../assets/Herocards/hairtreatment.png";
+import image1 from "../../assets/medicines/Tirzepatide Pills.png";
+import image2 from "../../assets/medicines/Tirzepatide Pills.png";
+import image3 from "../../assets/medicines/Tirzepatide Pills.png";
+import image4 from "../../assets/medicines/Tirzepatide Pills.png";
 
 const cards = [
   {
@@ -22,131 +21,125 @@ const cards = [
     title: "your schedule",
     cta: "Get started",
     img: image1,
-    path: "/schedule-care"
+    path: "/schedule-care",
   },
   {
     subtitle: "Prescribed by",
     title: "licensed providers",
     cta: "Get personalized treatment",
     img: image2,
-    path: "/licensed-providers"
+    path: "/licensed-providers",
   },
   {
     subtitle: "Doctor-trusted",
     title: "ingredients",
     cta: "Find my treatment",
     img: image3,
-    path: "/trusted-ingredients"
+    path: "/trusted-ingredients",
   },
   {
     subtitle: "FDA-regulated",
     title: "pharmacies",
     cta: "Get personalized treatment",
     img: image4,
-    path: "/regulated-pharmacies"
+    path: "/regulated-pharmacies",
   },
 ];
 
 export default function FourCards() {
   const navigate = useNavigate();
-  
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
-
   const stagger = ["0px", "50px", "0px", "50px"];
 
   return (
     <Box
       sx={{
         width: "100%",
-        display: "flex",
-        justifyContent: "center",
-        py: { xs: 4, md: 10 },
-        px: 2,
-        backgroundColor: "#FFFFFF", // Clean white background
+        backgroundColor: "#FFFFFF",
+        py: { xs: 3, md: 8 },
+        px: 0,
+        overflow: "hidden",
       }}
     >
       <Box
         sx={{
           display: "grid",
           gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)" },
-          gap: { xs: 3, sm: 1 },
-          maxWidth: { xs: 400, sm: 900 },
+          gap: "4px", // micro spacing like Hims
+          width: "100%",
         }}
       >
         {cards.map((card, idx) => (
           <Card
             key={idx}
-            onClick={() => handleNavigation(card.path)}
             elevation={0}
+            onClick={() => navigate(card.path)}
             sx={{
               width: "100%",
               borderRadius: "22px",
-              backgroundColor: "#FFFFFF",
-              border: "2px solid #8B8D8E",
-              transform: { sm: `translateY(${stagger[idx]})` },
-              position: "relative",
-              p: 4,
-              textAlign: "center",
+              border: "1px solid #D9D9D9",
+              background: "#FFFFFF",
+              p: { xs: 3, md: 5 },
               cursor: "pointer",
+              textAlign: "center",
+              transform: { sm: `translateY(${stagger[idx]})` },
               transition: "all 0.3s ease",
-              '&:hover': {
-                transform: { sm: `translateY(calc(${stagger[idx]} - 8px))` },
-                boxShadow: "0 12px 30px rgba(0, 53, 158, 0.15)",
+              "&:hover": {
+                transform: { sm: `translateY(calc(${stagger[idx]} - 10px))` },
+                boxShadow: "0 14px 35px rgba(0,53,158,0.15)",
                 borderColor: "#00359E",
                 backgroundColor: "#F8F9FA",
-              }
+              },
             }}
           >
             <CardContent sx={{ p: 0 }}>
+              {/* SUBTITLE — small, tight, elegant */}
               <Typography
                 sx={{
-                  fontWeight: 600,
-                  fontSize: "0.8rem",
+                  fontSize: "0.75rem",
+                  fontWeight: 700,
                   textTransform: "uppercase",
-                  color: "#747578",
-                  letterSpacing: "0.5px",
+                  letterSpacing: "1px",
+                  color: "#6A6A6A",
                 }}
               >
                 {card.subtitle}
               </Typography>
 
+              {/* TITLE — bigger & stronger */}
               <Typography
                 sx={{
                   fontWeight: 800,
-                  fontSize: "1.35rem",
+                  fontSize: { xs: "1.6rem", md: "1.8rem" },
                   lineHeight: 1.2,
-                  mt: 0.7,
-                  color: "#000000",
+                  mt: 1,
+                  color: "#000",
                 }}
               >
                 {card.title}
               </Typography>
 
+              {/* CTA — Larger, more premium */}
               <Button
                 variant="contained"
-                size="small"
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleNavigation(card.path);
+                  navigate(card.path);
                 }}
                 sx={{
-                  mt: 2,
+                  mt: 3,
                   borderRadius: "999px",
-                  px: 3,
-                  py: 1,
-                  fontSize: "0.75rem",
+                  px: { xs: 3.5, md: 4 },
+                  py: { xs: 1.3, md: 1.5 },
+                  fontSize: { xs: "0.8rem", md: "0.9rem" },
+                  fontWeight: 700,
                   backgroundColor: "#00359E",
-                  color: "#FFFFFF",
                   textTransform: "none",
                   boxShadow: "0 4px 12px rgba(0, 53, 158, 0.3)",
-                  "&:hover": { 
+                  "&:hover": {
                     backgroundColor: "#003B9D",
                     transform: "translateY(-2px)",
                     boxShadow: "0 6px 16px rgba(0, 53, 158, 0.4)",
                   },
-                  transition: "all 0.3s ease"
                 }}
               >
                 {card.cta}
@@ -161,12 +154,8 @@ export default function FourCards() {
                 sx={{
                   width: "70%",
                   mx: "auto",
-                  height: "auto",
-                  objectFit: "contain",
-                  transition: "transform 0.3s ease",
-                  '&:hover': {
-                    transform: "scale(1.05)",
-                  }
+                  transition: "0.3s ease",
+                  "&:hover": { transform: "scale(1.05)" },
                 }}
               />
             </Box>

@@ -12,7 +12,7 @@ import { Zap, Dumbbell, Heart, Brain } from 'lucide-react';
 
 import bannerImg from "../../assets/images/beforeafter.jpg";
 import encloVideo from "../../assets/Videos/medicalexperts.mp4";
-import productImage  from "../../assets/images/medicine.jpg";
+import productImage  from "../../assets/medicines/Tirzepatide Vial.png";
 
 const Enclomiphene = () => {
   const palette = {

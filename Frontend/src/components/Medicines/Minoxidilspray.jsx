@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, Droplet, Sparkles, Target, Shield, Users, Tren
 import { motion } from "framer-motion";
 import minoxidilSprayImage from "../../assets/images/hair regrowth.jpg";
 // Add this import for your product image
-import productImage from "../../assets/images/medicine.jpg";
+import productImage from "../../assets/medicines/Tirzepatide Vial.png";
 
 const MinoxidilSpray = () => {
   return (

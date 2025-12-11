@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import valacyclovirImg from "../../assets/images/medicine.jpg"; // change path if needed
+import valacyclovirImg from "../../assets/medicines/Tirzepatide Vial.png"; // change path if needed
 import { 
   Box, 
   Typography, 

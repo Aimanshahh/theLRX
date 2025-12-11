@@ -7,49 +7,15 @@ import CloseIcon from '@mui/icons-material/Close';
 import { useTheme, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import weightloss1 from "../../assets/Herocards/Weightloss1.png";
-import weightloss2 from "../../assets/Herocards/Weightloss2.png";
-import hair1 from "../../assets/Herocards/hairtreatment.png";
-import hair2 from "../../assets/Herocards/hairtreatment2.png";
-import skin1 from "../../assets/Herocards/treatment1.png";
-import skin2 from "../../assets/Herocards/treatment2.png";
-import treat3 from "../../assets/Herocards/treatment3.png";
+// Corrected images
+import weightloss1 from "../../assets/Herocards/pillremoved.png";
+import Tackleanxiety from "../../assets/Herocards/virusremoved.png";
+import Intimicy from "../../assets/Herocards/testtube.png";
+import hair2 from "../../assets/Herocards/hairtreatment.png";
+import skin2 from "../../assets/Herocards/skincare.png";
+import testosterene from "../../assets/Herocards/bluepill.png";
 
-const palette = {
-  grey: "#747578",
-  lightGrey: "#8B8D8E",
-  blue: "#00359E",
-  white: "#fff",
-  black: "#000",
-};
-
-// Treatment List (Sidebar)
-const allTreatments = [
-  "Weight Loss",
-  "Hair Loss",
-  "Skin Treatments",
-  "Testosterone Boost",
-  "Anxiety",
-  "Sleep Issues",
-  "Sexual Health",
-  "Anti-Aging",
-  "Acne Care",
-];
-
-const topCards = [
-  { title: "Have better sex", desc: "Popular", image: hair1, popular: true, route: "/better-sex" },
-  { title: "Lose weight", image: weightloss1, route: "/lose-weight" },
-  { title: "Regrow hair", image: hair2, route: "/regrow-hair" },
-  { title: "Boost testosterone", image: treat3, route: "/boost-testosterone" }
-];
-
-const bottomCards = [
-  { title: "Tackle anxiety", image: weightloss2, route: "/tackle-anxiety" },
-  { title: "Get smooth skin", image: skin2, route: "/smooth-skin" },
-  { title: "Browse all treatments", browse: true }
-];
-
-// Updated Menu Data Structure with requested categories
+// Menu data
 const menuData = {
   "Weight Loss": [
     { title: "Weight Loss Program", route: "/treatment/weight-loss" },
@@ -83,21 +49,36 @@ const menuData = {
   ]
 };
 
-// ---------------------------------------------------
-// MAIN COMPONENT
-// ---------------------------------------------------
+const palette = {
+  grey: "#747578",
+  blue: "#00359E",
+  white: "#fff",
+  black: "#000",
+};
+
+const topCards = [
+  { title: "Have better sex", desc: "Popular", image: Intimicy, popular: true, route: "/better-sex" },
+  { title: "Lose weight", image: weightloss1, route: "/lose-weight" },
+  { title: "Regrow hair", image: hair2, route: "/regrow-hair" },
+  { title: "Boost testosterone", image: testosterene, route: "/boost-testosterone" }
+];
+
+const bottomCards = [
+  { title: "Tackle anxiety", image: Tackleanxiety, route: "/tackle-anxiety" },
+  { title: "Get smooth skin", image: skin2, route: "/smooth-skin" },
+  { title: "Browse all treatments", browse: true }
+];
+
 export default function HeroCards() {
   const [hoverIndex, setHoverIndex] = useState(null);
   const [hoverBottomIndex, setHoverBottomIndex] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState(null);
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isSmallMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
 
-  // Styles...
   const baseCardStyle = {
     borderRadius: "22px",
     padding: isMobile ? "1.5rem 1rem" : "2rem 2rem",
@@ -109,7 +90,6 @@ export default function HeroCards() {
     width: "100%",
     cursor: "pointer",
     position: "relative",
-    transition: "0.35s",
     overflow: "hidden",
     boxSizing: "border-box",
   };
@@ -120,11 +100,12 @@ export default function HeroCards() {
     background: palette.white,
     border: `1px solid rgba(0,0,0,0.08)`,
     color: palette.grey,
-    height: isMobile ? "80px" : "90px",
+    height: isMobile ? "130px" : "150px",
     cursor: "pointer",
     display: "flex",
     alignItems: "center",
     transition: "0.35s",
+    position: "relative",
   };
 
   const iconBase = {
@@ -147,15 +128,10 @@ export default function HeroCards() {
 
   return (
     <>
-      {/* ================================ */}
-      {/* HIMS STYLE MEGA DRAWER OVERLAY */}
-      {/* ================================ */}
+      {/* ================= SIDEBAR OVERLAY ================= */}
       {isSidebarOpen && (
         <div
-          onClick={() => {
-            setActiveCategory(null);
-            setIsSidebarOpen(false);
-          }}
+          onClick={() => setIsSidebarOpen(false)}
           style={{
             position: "fixed",
             top: 0,
@@ -168,9 +144,7 @@ export default function HeroCards() {
         />
       )}
 
-      {/* ================================ */}
-      {/* HIMS STYLE MEGA DRAWER */}
-      {/* ================================ */}
+      {/* ================= SIDEBAR ================= */}
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isSidebarOpen ? 0 : "100%" }}
@@ -187,10 +161,8 @@ export default function HeroCards() {
           flexDirection: "column",
           overflow: "hidden",
           boxShadow: "-5px 0 25px rgba(0, 0, 0, 0.15)",
-          willChange: "transform",
         }}
       >
-        {/* ================= HEADER ================= */}
         <div
           style={{
             height: "70px",
@@ -203,42 +175,24 @@ export default function HeroCards() {
         >
           <CloseIcon
             onClick={() => setIsSidebarOpen(false)}
-            style={{
-              cursor: "pointer",
-              fontSize: "28px",
-              color: "#000",
-              fontWeight: 300,
-            }}
+            style={{ cursor: "pointer", fontSize: "28px", color: "#000" }}
           />
         </div>
 
-        {/* ================= BODY ================= */}
-        <div
-          style={{
-            flex: 1,
-            overflowY: "auto",
-            padding: "24px 20px",
-            WebkitOverflowScrolling: "touch",
-          }}
-        >
+        <div style={{ flex: 1, overflowY: "auto", padding: "24px 20px" }}>
           {Object.entries(menuData).map(([category, items], i) => (
             <div key={i} style={{ marginBottom: "28px" }}>
-              
-              {/* MAIN CATEGORY HEADING */}
               <h4
                 style={{
                   fontSize: "22px",
                   fontWeight: 500,
                   marginBottom: "16px",
                   color: "#000",
-                  letterSpacing: "-0.2px",
                   textTransform: "uppercase",
                 }}
               >
                 {category}
               </h4>
-
-              {/* SUB CATEGORIES */}
               {items.map((item, j) => (
                 <div
                   key={j}
@@ -267,13 +221,7 @@ export default function HeroCards() {
                   }}
                 >
                   {item.title}
-                  <ChevronRightIcon
-                    style={{
-                      marginLeft: "auto",
-                      fontSize: "20px",
-                      color: "#666",
-                    }}
-                  />
+                  <ChevronRightIcon style={{ marginLeft: "auto", fontSize: "20px", color: "#666" }} />
                 </div>
               ))}
             </div>
@@ -281,11 +229,8 @@ export default function HeroCards() {
         </div>
       </motion.div>
 
-      {/* ----------------------------------- */}
-      {/* CARDS SECTION */}
-      {/* ----------------------------------- */}
+      {/* ================= CARDS ================= */}
       <Container fluid className="py-4 px-3 px-md-5" style={{ position: "relative", zIndex: 1 }}>
-        
         {/* TOP ROW */}
         <div
           style={{
@@ -332,12 +277,12 @@ export default function HeroCards() {
                     animate={{ scale: hovered ? 1.25 : 1 }}
                     transition={{ stiffness: 200, damping: 12 }}
                     style={{
-                      width: "95px",
-                      height: "95px",
+                      width: "140px",
+                      height: "140px",
                       objectFit: "contain",
                       position: "absolute",
-                      right: "20px",
-                      bottom: "10px",
+                      right: "15px",
+                      bottom: "15px",
                     }}
                   />
                 )}
@@ -372,22 +317,30 @@ export default function HeroCards() {
                   c.browse ? setIsSidebarOpen(true) : navigate(c.route)
                 }
               >
+                {c.image && (
+                  <motion.img
+                    src={c.image}
+                    alt=""
+                    animate={{ scale: hovered ? 1.1 : 1 }}
+                    transition={{ stiffness: 200, damping: 12 }}
+                    style={{
+                      width: "110px",
+                      height: "110px",
+                      objectFit: "contain",
+                      marginRight: "15px",
+                      borderRadius: "12px",
+                    }}
+                  />
+                )}
+
                 <h5 style={{ fontWeight: 825, fontSize: "1.05rem" }}>
                   {c.title}
                 </h5>
 
                 {c.browse ? (
-                  <SearchIcon style={{ 
-                    fontSize: "1.5rem", 
-                    marginLeft: "auto",
-                    color: hovered ? "#fff" : palette.grey 
-                  }} />
+                  <SearchIcon style={{ fontSize: "1.7rem", marginLeft: "auto", color: hovered ? "#fff" : palette.grey }} />
                 ) : (
-                  <ChevronRightIcon style={{ 
-                    fontSize: "1.5rem", 
-                    marginLeft: "auto",
-                    color: hovered ? "#fff" : palette.grey 
-                  }} />
+                  <ChevronRightIcon style={{ fontSize: "1.7rem", marginLeft: "auto", color: hovered ? "#fff" : palette.grey }} />
                 )}
               </motion.div>
             );

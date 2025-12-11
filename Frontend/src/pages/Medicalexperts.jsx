@@ -23,10 +23,10 @@ import exec3 from "../assets/images/doctorimg2.png";
 import exec4 from "../assets/images/doctorimg2.png";
 
 // STEPS
-import step1 from "../assets/images/step1.png";
-import step2 from "../assets/images/step1.png";
-import step3 from "../assets/images/step1.png";
-import step4 from "../assets/images/step1.png";
+import step1 from "../assets/medical experts/img1removed.png";
+import step2 from "../assets/medical experts/imgremoved (1).png";
+import step3 from "../assets/medical experts/img1removed.png";
+import step4 from "../assets/medical experts/imgremoved4.png";
 
 
 export default function MedicalExperts() {
@@ -827,21 +827,22 @@ export default function MedicalExperts() {
   </Typography>
 
   {/* 🟣 Circle Cards Grid */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateColumns: {
-        xs: "1fr",
-        sm: "1fr 1fr",
-        md: "repeat(4, 1fr)",
-      },
-      gap: { xs: 6, md: 5 },
-      maxWidth: "1150px",
-      mx: "auto",
-    }}
-  >
-    {/* 🔵 CARD 1 */}
-    <Box sx={{ textAlign: "center" }}>
+ {/* 🟣 Circle Cards Grid */}
+<Box
+  sx={{
+    display: "grid",
+    gridTemplateColumns: {
+      xs: "1fr",
+      sm: "1fr 1fr",
+      md: "repeat(4, 1fr)",
+    },
+    gap: { xs: 6, md: 5 },
+    maxWidth: "1150px",
+    mx: "auto",
+  }}
+>
+  {[step1, step2, step3, step4].map((img, idx) => (
+    <Box key={idx} sx={{ textAlign: "center", position: "relative" }}>
       <Box
         sx={{
           width: 215,
@@ -853,54 +854,25 @@ export default function MedicalExperts() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          overflow: "visible", // allow the image to break out
         }}
       >
-        <Box component="img" src={step1} sx={{ width: "125px" }} />
-      </Box>
-
-      <Typography
-        sx={{
-          fontSize: "16px",
-          fontWeight: 600,
-          color: "#1C1C1C",
-          mb: 0.5,
-        }}
-      >
-        Answer a few questions
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: "14px",
-          color: "#6E6E6E",
-          maxWidth: "210px",
-          mx: "auto",
-        }}
-      >
-        Tell us about your health and goals
-      </Typography>
-    </Box>
-
-    {/* 🟣 CARD 2 */}
-    <Box sx={{ textAlign: "center" }}>
-      <Box
-        sx={{
-          width: 215,
-          height: 215,
-          borderRadius: "50%",
-          background: "#F2F6FA",
-          mx: "auto",
-          mb: 2.5,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Box component="img" src={step2} sx={{ width: "125px" }} />
+        <Box
+          component="img"
+          src={img}
+          sx={{
+            width: "150%", // make it bigger than the circle
+            maxWidth: 260,
+            position: "relative",
+            top: "-10%", // move it slightly up
+            objectFit: "cover",
+            borderRadius: 2,
+          }}
+        />
       </Box>
 
       <Typography sx={{ fontSize: "16px", fontWeight: 600, color: "#1C1C1C", mb: 0.5 }}>
-        Get a personalized treatment plan
+        {idx === 0 ? "Answer a few questions" : idx === 1 ? "Get a personalized treatment plan" : idx === 2 ? "Free shipping" : "Free ongoing care"}
       </Typography>
 
       <Typography
@@ -911,78 +883,18 @@ export default function MedicalExperts() {
           mx: "auto",
         }}
       >
-        A licensed provider will review your info and recommend the best
+        {idx === 0
+          ? "Tell us about your health and goals"
+          : idx === 1
+          ? "A licensed provider will review your info and recommend the best"
+          : idx === 2
+          ? "All prescription treatment ships free, if prescribed"
+          : "All ongoing visits are free, anytime"}
       </Typography>
     </Box>
+  ))}
+</Box>
 
-    {/* 🟡 CARD 3 */}
-    <Box sx={{ textAlign: "center" }}>
-      <Box
-        sx={{
-          width: 215,
-          height: 215,
-          borderRadius: "50%",
-          background: "#F2F6FA",
-          mx: "auto",
-          mb: 2.5,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Box component="img" src={step3} sx={{ width: "125px" }} />
-      </Box>
-
-      <Typography sx={{ fontSize: "16px", fontWeight: 600, color: "#1C1C1C", mb: 0.5 }}>
-        Free shipping
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: "14px",
-          color: "#6E6E6E",
-          maxWidth: "210px",
-          mx: "auto",
-        }}
-      >
-        All prescription treatment ships free, if prescribed
-      </Typography>
-    </Box>
-
-    {/* 🟢 CARD 4 */}
-    <Box sx={{ textAlign: "center" }}>
-      <Box
-        sx={{
-          width: 215,
-          height: 215,
-          borderRadius: "50%",
-          background: "#F2F6FA",
-          mx: "auto",
-          mb: 2.5,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Box component="img" src={step4} sx={{ width: "125px" }} />
-      </Box>
-
-      <Typography sx={{ fontSize: "16px", fontWeight: 600, color: "#1C1C1C", mb: 0.5 }}>
-        Free ongoing care
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: "14px",
-          color: "#6E6E6E",
-          maxWidth: "210px",
-          mx: "auto",
-        }}
-      >
-        All ongoing visits are free, anytime
-      </Typography>
-    </Box>
-  </Box>
 </Box>
 
 

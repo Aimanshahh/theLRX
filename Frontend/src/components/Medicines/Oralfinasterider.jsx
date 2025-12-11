@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container, Chip, alpha, Grid, Card } from "@mu
 import { ArrowRight, CheckCircle, Pill, Sparkles, Target, Shield, Users, TrendingUp, Heart, Activity, Brain, Layers, Clock, Package, Calendar, Zap, Droplet } from "lucide-react";
 import { motion } from "framer-motion";
 import finasterideImage from "../../assets/images/Oralfinasteride.jpg";
-import productImage from "../../assets/images/medicine.jpg";
+import productImage from "../../assets/medicines/Tirzepatide Vial.png";
 
 const OralFinasteride = () => {
   return (

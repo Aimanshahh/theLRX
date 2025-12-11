@@ -1,13 +1,17 @@
 import React from "react";
-import guideImage from "../../assets/images/guidebanner.png"; // update path as needed
+import guideImage from "../../assets/images/guidebannerremoved.png"; 
+import { useTheme, useMediaQuery } from "@mui/material";
 
 export default function GuideBanner() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <section
       style={{
         width: "100%",
         background: "linear-gradient(135deg, #00359E 0%, #003B9D 50%, #8B8D8E 100%)",
-        padding: "70px 16px 100px", // Increased bottom padding from 70px to 100px
+        padding: isSmallScreen ? "40px 16px 50px" : "70px 16px 100px",
         display: "flex",
         justifyContent: "center",
       }}
@@ -15,6 +19,7 @@ export default function GuideBanner() {
       <div
         style={{
           display: "flex",
+          flexDirection: isSmallScreen ? "column-reverse" : "row",
           alignItems: "center",
           maxWidth: "1100px",
           width: "100%",
@@ -23,21 +28,20 @@ export default function GuideBanner() {
           border: "1px solid rgba(255, 255, 255, 0.3)",
           borderRadius: "26px",
           overflow: "hidden",
-          flexWrap: "wrap",
         }}
       >
         {/* LEFT TEXT */}
         <div
           style={{
             flex: "1 1 400px",
-            padding: "60px 50px",
+            padding: isSmallScreen ? "28px 20px 40px" : "60px 50px",
             color: "#FFFFFF",
             textAlign: "left",
           }}
         >
           <h2
             style={{
-              fontSize: "32px",
+              fontSize: isSmallScreen ? "24px" : "32px",
               fontWeight: "700",
               lineHeight: "1.25",
               marginBottom: "12px",
@@ -50,7 +54,7 @@ export default function GuideBanner() {
 
           <p
             style={{
-              fontSize: "15px",
+              fontSize: isSmallScreen ? "13px" : "15px",
               marginBottom: "22px",
               fontFamily: "Inter, sans-serif",
               color: "rgba(255, 255, 255, 0.9)",
@@ -64,7 +68,7 @@ export default function GuideBanner() {
               display: "flex",
               gap: "12px",
               marginBottom: "14px",
-              flexWrap: "wrap",
+              flexDirection: isSmallScreen ? "column" : "row",
             }}
           >
             <input
@@ -121,13 +125,25 @@ export default function GuideBanner() {
             </button>
           </form>
 
-          <small style={{ fontSize: "10px", opacity: "0.85", color: "rgba(255, 255, 255, 0.8)" }}>
+          <small
+            style={{
+              fontSize: "10px",
+              opacity: "0.85",
+              color: "rgba(255, 255, 255, 0.8)",
+            }}
+          >
             By providing your email you agree to the{" "}
-            <a style={{ color: "#FFFFFF", textDecoration: "underline" }} href="/terms">
+            <a
+              style={{ color: "#FFFFFF", textDecoration: "underline" }}
+              href="/terms"
+            >
               Terms & Conditions
             </a>{" "}
             and acknowledge the{" "}
-            <a style={{ color: "#FFFFFF", textDecoration: "underline" }} href="/privacy">
+            <a
+              style={{ color: "#FFFFFF", textDecoration: "underline" }}
+              href="/privacy"
+            >
               Privacy Policy
             </a>
             .
@@ -135,15 +151,31 @@ export default function GuideBanner() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div style={{ flex: "1 1 400px", height: "100%" }}>
+        <div
+          style={{
+            flex: "1 1 400px",
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+
+            // Pull image upward on mobile
+            padding: isSmallScreen ? "5px 10px 0px" : "0",
+            marginTop: isSmallScreen ? "-25px" : "0",
+          }}
+        >
           <img
             src={guideImage}
-            alt="Smiling person"
+            alt="Guide"
             style={{
               width: "100%",
-              height: "100%",
-              objectFit: "cover",
+              height: "auto",
+              maxHeight: isSmallScreen ? "350px" : "100%",
+              objectFit: "contain",
               display: "block",
+
+              // Slightly enlarge on mobile
+              transform: isSmallScreen ? "scale(1.1)" : "scale(1)",
             }}
           />
         </div>

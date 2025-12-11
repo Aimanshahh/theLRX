@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Box, Typography, Drawer, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import manImg from "../assets/images/aboutusimg.png"; 
+import manImg from "../assets/images/aboutdoctor1.png"; 
 import videoFile from "../assets/Videos/medicalexperts.mp4";
 
 // Import images for mosaic cards
@@ -676,121 +676,106 @@ export default function AboutUs() {
       
 
         {/* ====== MOSAIC CARDS SECTION ====== */}
-        <Box
-          sx={{
-            width: "100%",
-            maxWidth: "1500px",
-            mx: "auto",
-            display: "flex",
-            gap: 2,
-            alignItems: "flex-start",
-            px: 2,
-            pb: 2,
-          }}
-        >
-          {/* LEFT COLUMN */}
-          <Box
-            sx={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 0.5,
-            }}
-          >
-            {/* Large top left card */}
-            <CardBlock
-              title="Sexual performance"
-              image={img1}
-              gradient="linear-gradient(135deg, #D7E7FF 0%, #F5F7FA 100%)"
-              size="large"
-            />
+    <Box
+  sx={{
+    width: "100%",
+    maxWidth: "1500px",
+    mx: "auto",
+    display: "flex",
+    gap: 2,
+    alignItems: "flex-start",
+    px: 2,
+    pb: 2,
+  }}
+>
+  {/* LEFT COLUMN */}
+  <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 0.5 }}>
+    
+    {/* Sexual performance */}
+    <CardBlock
+      title="Sexual performance"
+      image={img1}
+      gradient="linear-gradient(135deg, #E9F0FF 0%, #EEF4FF 100%)"
+      size="large"
+    />
 
-            {/* Small Card 1 */}
-            <CardBlock
-              title="Skin care"
-              image={img3}
-              gradient="linear-gradient(135deg, #D8F1FF 0%, #F4F8FF 100%)"
-              size="small"
-            />
+    {/* Skin care */}
+    <CardBlock
+      title="Skin care"
+      image={img3}
+      gradient="linear-gradient(135deg, #F5F6F7 0%, #E8E9EA 100%)"
+      size="small"
+    />
 
-            {/* Small Card 2 */}
-            <CardBlock
-              title="Mental health"
-              image={img4}
-              gradient="linear-gradient(135deg, #E8DBFF 0%, #F7F5FF 100%)"
-              size="small"
-            />
-          </Box>
+    {/* Mental health */}
+    <CardBlock
+      title="Mental health"
+      image={img4}
+      gradient="linear-gradient(135deg, #EEF3FF 0%, #F7F8FF 100%)"
+      size="small"
+    />
+  </Box>
 
-          {/* RIGHT COLUMN */}
-          <Box
-            sx={{
-              flex: 1,
-              display: "flex",
-              flexDirection: "column",
-              gap: 0.5,
-            }}
-          >
-            {/* Large top right card */}
-            <CardBlock
-              title="Weight loss"
-              image={img2}
-              gradient="linear-gradient(135deg, #E9DFFF 0%, #F7F7FB 100%)"
-              size="large"
-            />
+  {/* RIGHT COLUMN */}
+  <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 0.5 }}>
+    
+    {/* Weight loss */}
+    <CardBlock
+      title="Weight loss"
+      image={img2}
+      gradient="linear-gradient(135deg, #FAFBFF 0%, #F0F2FF 100%)"
+      size="large"
+    />
 
-            {/* New TALL Hair growth card */}
-            <Box
-              sx={{
-                position: "relative",
-                borderRadius: "32px",
-                overflow: "hidden",
-                height: "444px",
-                width: "100%",
-                background: "linear-gradient(135deg, #E9DFFF 0%, #F7F7FB 100%)",
-                display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "flex-start",
-              }}
-            >
-              {/* IMAGE */}
-              <Box
-                component="img"
-                src={img5}
-                alt="Hair growth"
-                sx={{
-                  position: "absolute",
-                  bottom: 0,
-                  right: "0",
-                  height: "100%",
-                  width: "auto",
-                  objectFit: "contain",
-                  objectPosition: "right bottom",
-                  zIndex: 1,
-                }}
-              />
+    {/* Hair growth (Tall card) */}
+    <Box
+      sx={{
+        position: "relative",
+        borderRadius: "32px",
+        overflow: "hidden",
+        height: "444px",
+        width: "100%",
+        background: "linear-gradient(135deg, #E9F0FF 0%, #FAFBFF 100%)",
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: "flex-start",
+      }}
+    >
+      <Box
+        component="img"
+        src={img5}
+        alt="Hair growth"
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          height: "100%",
+          width: "auto",
+          objectFit: "contain",
+          zIndex: 1,
+        }}
+      />
 
-              {/* TITLE */}
-              <Typography
-                sx={{
-                  position: "absolute",
-                  top: 26,
-                  left: 26,
-                  fontSize: "32px",
-                  fontWeight: 700,
-                  color: "#ffffff",
-                  zIndex: 2,
-                  lineHeight: 1.05,
-                  maxWidth: "240px",
-                  textShadow: "0px 3px 6px rgba(0,0,0,0.25)",
-                  fontFamily: `"Inter", sans-serif`,
-                }}
-              >
-                Hair growth
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
+      <Typography
+        sx={{
+          position: "absolute",
+          top: 26,
+          left: 26,
+          fontSize: "32px",
+          fontWeight: 700,
+          color: "#ffffff",
+          zIndex: 2,
+          lineHeight: 1.05,
+          maxWidth: "240px",
+          fontFamily: `"Inter", sans-serif`,
+        }}
+      >
+        Hair growth
+      </Typography>
+    </Box>
+  </Box>
+</Box>
+
 
 
 

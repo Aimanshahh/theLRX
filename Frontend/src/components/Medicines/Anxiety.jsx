@@ -3,7 +3,7 @@ import { Box, Typography, Button, Container, Grid, IconButton } from "@mui/mater
 import { motion, AnimatePresence } from "framer-motion";
 import { Brain, Heart, Moon, Shield, CheckCircle, Star, Clock, Users, Award, ChevronLeft, ChevronRight, ArrowRight, Sparkles } from "lucide-react";
 import anxietyBanner from "../../assets/images/anxiety.jpg";
-import anxietyPill from "../../assets/images/medicine.jpg";
+import anxietyPill from "../../assets/medicines/Tirzepatide Vial.png";
 
 const Anxiety = () => {
   const palette = {

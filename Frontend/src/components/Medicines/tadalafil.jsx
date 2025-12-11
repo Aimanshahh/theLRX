@@ -7,7 +7,7 @@ import { Zap, Dumbbell, Heart, Brain } from 'lucide-react';
 // Import your images for Tadalafil
 import tadalafilBanner from "../../assets/images/Hairhybrid.jpg";
 import tadalafilVideo from "../../assets/Videos/medicalexperts.mp4";
-import tadalafilProduct from "../../assets/images/medicine.jpg";
+import tadalafilProduct from "../../assets/medicines/Tirzepatide Vial.png";
 
 const Tadalafil = () => {
   const palette = {

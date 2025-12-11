@@ -1,242 +1,358 @@
 import React from "react";
-import { Card, CardContent } from "@mui/material";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Card, CardContent, Typography, Button, Box } from "@mui/material";
+import { ClipboardCheck, HeartPulse, MessageCircle } from "lucide-react";
 
 export default function LongCard() {
   return (
     <Card
-      className="shadow-lg rounded position-relative overflow-hidden"
       sx={{
-        width: "100vw",
-        backgroundColor: "#00359E",
-        height: { xs: "auto", sm: "55rem", md: "50rem", lg: "50rem" }, // responsive height
+        width: "100%",
+        backgroundColor: "#f8fafc",
+        borderRadius: 0,
+        boxShadow: "none",
+        overflow: "hidden",
+        borderTop: "1px solid #e2e8f0",
+        borderBottom: "1px solid #e2e8f0",
       }}
     >
-      <CardContent
-        className="p-0"
-        sx={{
-          height: "100%",
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: "center",
-        }}
-      >
-        {/* MAIN FLEX CONTAINER */}
-        <div
-          style={{
+      <CardContent sx={{ p: 0 }}>
+        {/* MAIN CONTAINER */}
+        <Box
+          sx={{
             width: "100%",
             maxWidth: "1400px",
             margin: "0 auto",
-            padding: "3rem 2rem",
+            padding: { xs: "4rem 1.5rem", md: "6rem 2rem", lg: "8rem 2rem" },
             display: "flex",
-            flexDirection: "row",
-            gap: "3rem",
-            position: "relative",
-            zIndex: 5,
-            flexWrap: "wrap", // allows stacking on smaller screens
+            flexDirection: { xs: "column", lg: "row" },
+            gap: { xs: 6, md: 8, lg: 10 },
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
-          {/* ---------------- LEFT TEXT SECTION ---------------- */}
-          <div style={{ flex: "1 1 400px" }}>
-            <h1
-              className="text-white"
-              style={{
-                fontSize: "clamp(2rem, 3vw, 3rem)",
-                fontWeight: "700",
-                lineHeight: "1.1",
-                maxWidth: "600px",
-                marginBottom: "1.5rem",
+          {/* LEFT TEXT SECTION */}
+          <Box
+            sx={{
+              flex: 1,
+              maxWidth: { xs: "100%", lg: "520px" },
+            }}
+          >
+            <Typography
+              variant="h1"
+              sx={{
+                fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem", lg: "4rem" },
+                fontWeight: 800,
+                lineHeight: 1.1,
+                color: "#00359E",
+                mb: 3,
+                letterSpacing: "-0.02em",
               }}
             >
               Start your personalized treatment today.
-            </h1>
+            </Typography>
 
-            <p
-              style={{
-                fontSize: "clamp(1rem, 1.5vw, 1.2rem)",
-                opacity: 0.9,
-                maxWidth: "550px",
-                color: "white",
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: { xs: "1.1rem", md: "1.25rem" },
+                fontWeight: 400,
+                color: "#4A5568",
+                mb: 4,
+                lineHeight: 1.6,
+                maxWidth: "500px",
               }}
             >
-              Answer a few questions to get matched with treatment designed just
-              for you.
-            </p>
+              Answer a few questions to get matched with a treatment plan designed just for you by board-certified physicians.
+            </Typography>
 
             {/* BUTTONS */}
-            <div
-              style={{
-                marginTop: "2rem",
-                display: "flex",
-                gap: "1.2rem",
-                flexWrap: "wrap",
-              }}
-            >
-              <button
-                style={{
-                  backgroundColor: "#003B9D",
+            <Box sx={{ display: "flex", gap: 2, mb: 2, flexWrap: "wrap" }}>
+              <Button
+                variant="contained"
+                sx={{
+                  bgcolor: "#00359E",
                   color: "white",
-                  padding: "15px 32px",
-                  borderRadius: "12px",
-                  fontSize: "1.1rem",
-                  fontWeight: "600",
-                  border: "none",
-                  cursor: "pointer",
+                  py: 1.5,
+                  px: 4,
+                  borderRadius: 2,
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  textTransform: "none",
+                  boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
+                  "&:hover": {
+                    bgcolor: "#002F85",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
+                  },
+                  transition: "all 0.3s ease",
                 }}
               >
                 Get Started
-              </button>
+              </Button>
 
-              <button
-                style={{
-                  backgroundColor: "white",
+              <Button
+                variant="outlined"
+                sx={{
+                  borderColor: "#00359E",
+                  borderWidth: 2,
                   color: "#00359E",
-                  padding: "15px 32px",
-                  borderRadius: "12px",
-                  fontSize: "1.1rem",
-                  fontWeight: "600",
-                  border: "2px solid #8B8D8E",
-                  cursor: "pointer",
+                  py: 1.5,
+                  px: 4,
+                  borderRadius: 2,
+                  fontWeight: 700,
+                  fontSize: "1rem",
+                  textTransform: "none",
+                  "&:hover": {
+                    bgcolor: "rgba(0, 53, 158, 0.05)",
+                    borderColor: "#00359E",
+                    transform: "translateY(-2px)",
+                  },
+                  transition: "all 0.3s ease",
                 }}
               >
                 Learn More
-              </button>
-            </div>
+              </Button>
+            </Box>
 
-            <p
-              style={{
-                marginTop: "1rem",
-                color: "#d6d6d6",
-                fontSize: "0.95rem",
-                opacity: 0.9,
+            <Typography
+              variant="body2"
+              sx={{
+                color: "#718096",
+                fontSize: "0.9rem",
+                display: "flex",
+                alignItems: "center",
+                gap: 1,
               }}
             >
-              No obligations. Cancel anytime.
-            </p>
-          </div>
+              <span style={{ color: "#10b981", fontSize: "1.1rem" }}>✓</span> 
+              No obligations • Cancel anytime • Free consultation
+            </Typography>
+          </Box>
 
-          {/* ---------------- RIGHT CARDS SECTION ---------------- */}
-          <div
-            style={{
-              flex: "1 1 300px",
-              position: "relative",
-              height: "100%",
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              flexWrap: "wrap", // allows cards to wrap on smaller screens
-              gap: "1.5rem",
+          {/* RIGHT CARDS SECTION */}
+          <Box
+            sx={{
+              flex: 1,
+              width: "100%",
+              maxWidth: { xs: "100%", lg: "700px" },
             }}
           >
-            {/* DOOR CARD 1 */}
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.25)",
-                color: "#00359E",
-                borderRadius: "26px",
-                padding: "2rem",
-                width: "240px",
-                height: "360px",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.25)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)",
-                border: "1px solid rgba(255,255,255,0.3)",
+            {/* TWO CARDS ROW */}
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: { xs: "1fr", sm: "repeat(2, 1fr)" },
+                gap: 3,
+                mb: 3,
               }}
             >
-              <h4 style={{ fontWeight: "700", marginBottom: "0.6rem" }}>
-                Quick Consult
-              </h4>
-              <p style={{ color: "#747578", fontSize: "1rem" }}>
-                Answer a few questions to get started.
-              </p>
-            </div>
+              {/* CARD 1 - Online Assessment */}
+              <Box
+                sx={{
+                  bgcolor: "white",
+                  borderRadius: 2,
+                  p: 4,
+                  border: "1px solid #e2e8f0",
+                  height: "320px",
+                  display: "flex",
+                  flexDirection: "column",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0 12px 32px rgba(0, 0, 0, 0.1)",
+                    borderColor: "#cbd5e1",
+                  },
+                }}
+              >
+                <Box sx={{ mb: 3 }}>
+                  <Box
+                    sx={{
+                      width: "56px",
+                      height: "56px",
+                      bgcolor: "rgba(0, 53, 158, 0.08)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mb: 2.5,
+                    }}
+                  >
+                    <ClipboardCheck size={28} color="#00359E" />
+                  </Box>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: 700,
+                      color: "#1e293b",
+                      mb: 1,
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Online Assessment
+                  </Typography>
+                </Box>
+                <Box sx={{ flex: 1 }}>
+                  <Typography
+                    sx={{
+                      color: "#475569",
+                      lineHeight: 1.6,
+                      fontSize: "1.05rem",
+                      mb: 2,
+                    }}
+                  >
+                    Answer a few quick questions so we can understand your needs.
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#64748b",
+                      fontSize: "0.9rem",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    Takes just 5-10 minutes
+                  </Typography>
+                </Box>
+              </Box>
 
-            {/* DOOR CARD 2 */}
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.25)",
-                color: "#00359E",
-                borderRadius: "26px",
-                padding: "2rem",
-                width: "240px",
-                height: "360px",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.3)",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-start",
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)",
-                border: "1px solid rgba(255,255,255,0.3)",
-              }}
-            >
-              <h4 style={{ fontWeight: "700", marginBottom: "0.6rem" }}>
-                Personalized Plan
-              </h4>
-              <p style={{ color: "#747578", fontSize: "1rem" }}>
-                A treatment designed for your needs.
-              </p>
-            </div>
+              {/* CARD 2 - Personalized Plan */}
+              <Box
+                sx={{
+                  bgcolor: "white",
+                  borderRadius: 2,
+                  p: 4,
+                  border: "1px solid #e2e8f0",
+                  height: "320px",
+                  display: "flex",
+                  flexDirection: "column",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0 12px 32px rgba(0, 0, 0, 0.1)",
+                    borderColor: "#cbd5e1",
+                  },
+                }}
+              >
+                <Box sx={{ mb: 3 }}>
+                  <Box
+                    sx={{
+                      width: "56px",
+                      height: "56px",
+                      bgcolor: "rgba(0, 53, 158, 0.08)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mb: 2.5,
+                    }}
+                  >
+                    <HeartPulse size={28} color="#00359E" />
+                  </Box>
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: 700,
+                      color: "#1e293b",
+                      mb: 1,
+                      fontSize: "1.5rem",
+                    }}
+                  >
+                    Personalized Treatment Plan
+                  </Typography>
+                </Box>
+                <Box sx={{ flex: 1 }}>
+                  <Typography
+                    sx={{
+                      color: "#475569",
+                      lineHeight: 1.6,
+                      fontSize: "1.05rem",
+                      mb: 2,
+                    }}
+                  >
+                    A licensed provider reviews your answers and creates a tailored plan.
+                  </Typography>
+                 
+                </Box>
+              </Box>
+            </Box>
 
-            {/* RECTANGULAR BOTTOM CARD */}
-            <div
-              style={{
-                backgroundColor: "rgba(255, 255, 255, 0.25)",
-                color: "#00359E",
-                borderRadius: "26px",
-                padding: "2rem",
-                width: "500px",
-                height: "180px",
-                boxShadow: "0 8px 25px rgba(0,0,0,0.3)",
+            {/* WIDE CARD 3 - Support & Follow-ups */}
+            <Box
+              sx={{
+                bgcolor: "white",
+                borderRadius: 2,
+                p: { xs: 4, md: 5 },
+                border: "1px solid #e2e8f0",
                 display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                backdropFilter: "blur(10px)",
-                WebkitBackdropFilter: "blur(10px)",
-                border: "1px solid rgba(255,255,255,0.3)",
+                flexDirection: { xs: "column", sm: "row" },
+                alignItems: { xs: "flex-start", sm: "flex-start" },
+                gap: 4,
+                transition: "all 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-4px)",
+                  boxShadow: "0 12px 32px rgba(0, 0, 0, 0.1)",
+                  borderColor: "#cbd5e1",
+                },
               }}
             >
-              <h4 style={{ fontWeight: "700", marginBottom: "0.6rem" }}>
-                Ongoing Support
-              </h4>
-              <p style={{ color: "#747578", fontSize: "1rem" }}>
-                Message your provider anytime.
-              </p>
-            </div>
-          </div>
-        </div>
+              <Box sx={{ flexShrink: 0 }}>
+                <Box
+                  sx={{
+                    width: "56px",
+                    height: "56px",
+                    bgcolor: "rgba(0, 53, 158, 0.08)",
+                    borderRadius: "12px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    mb: { xs: 2.5, sm: 0 },
+                  }}
+                >
+                  <MessageCircle size={28} color="#00359E" />
+                </Box>
+              </Box>
+              <Box sx={{ flex: 1 }}>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 700,
+                    color: "#1e293b",
+                    mb: 1.5,
+                    fontSize: "1.5rem",
+                  }}
+                >
+                  Continuous Support
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "#475569",
+                    lineHeight: 1.6,
+                    fontSize: "1.05rem",
+                    mb: 2,
+                    maxWidth: "600px",
+                  }}
+                >
+                  Stay connected with ongoing check-ins and adjustments. Message your care team anytime you have questions.
+                </Typography>
+                <Box
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    bgcolor: "rgba(59, 130, 246, 0.1)",
+                    color: "#2563eb",
+                    px: 2,
+                    py: 0.5,
+                    borderRadius: "20px",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                  }}
+                >
+                  Ask questions anytime
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
       </CardContent>
-
-      {/* ---------------- SVG BACKGROUND (UNCHANGED) ---------------- */}
-      <svg
-        className="position-absolute top-0 end-0 h-100"
-        style={{ width: "160%", pointerEvents: "none" }}
-        viewBox="0 0 1200 600"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <linearGradient
-            id="bluePrimaryShadingGradient"
-            x1="0%"
-            x2="100%"
-            y1="0%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="#747578" />
-            <stop offset="20%" stopColor="#8B8D8E" />
-            <stop offset="40%" stopColor="#00359E" />
-            <stop offset="100%" stopColor="#003B9D" />
-          </linearGradient>
-        </defs>
-
-        <path
-          d="M1200 120 C1080 20 880 0 700 40 C520 80 420 160 300 220 C180 280 100 300 0 330 L0 600 L1200 600 Z"
-          fill="url(#bluePrimaryShadingGradient)"
-          opacity="0.95"
-        />
-      </svg>
     </Card>
   );
 }
