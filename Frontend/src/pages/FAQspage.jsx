@@ -177,15 +177,14 @@ const CategoryCards = () => {
   const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState(null);
 
-  const cards = [
-    { title: "The Basics", image: basicsImg, route: "/TheBasics" },
-    { title: "About Your Visit", image: accountImg, route: "/AboutYourVisits" },
-    { title: "Medical Care", image: medicalImg, route: "/Medicalcare" },
-    { title: "Shipping", image: shippingImg, route: "/Shipping" },
-    { title: "Privacy & Security", image: privacyImg, route: "/PrivacyAndSecurity" },
-    { title: "Troubleshooting", image: troubleImg, route: "/Troubleshooting" },
-  ];
-
+const cards = [
+    { title: "The Basics", image: basicsImg, route: "/faqs/basics" },
+    { title: "About Your Visit", image: accountImg, route: "/faqs/visits" },
+    { title: "Medical Care", image: medicalImg, route: "/faqs/medical-care" },
+    { title: "Shipping", image: shippingImg, route: "/faqs/shipping" },
+    { title: "Privacy & Security", image: privacyImg, route: "/faqs/privacy-security" },
+    { title: "Troubleshooting", image: troubleImg, route: "/faqs/troubleshooting" },
+]; 
   return (
     <Box
       sx={{
@@ -271,71 +270,37 @@ const CategoryCards = () => {
 // MAIN PAGE
 // ==============================
 export default function FAQspage() {
-  const allQuestions = [
-    {
-      id: 1,
-      question: "What is Hims/Hers?",
-      category: "The Basics",
-      keywords: ["what","hims","hers","definition","explanation","about"],
-      route: "/TheBasics"
-    },
-    {
-      id: 2,
-      question: "How does consultation work?",
-      category: "The Basics",
-      keywords: ["how","consultation","process","work","steps"],
-      route: "/TheBasics"
-    },
-    {
-      id: 3,
-      question: "Who are the providers?",
-      category: "My Account",
-      keywords: ["providers","doctors","physicians"],
-      route: "/AboutYourVisits"
-    },
-    {
-      id: 4,
-      question: "Do you require insurance?",
-      category: "Medical Care",
-      keywords: ["insurance","payment"],
-      route: "/Medicalcare"
-    },
-    {
-      id: 5,
-      question: "Are pharmacies FDA regulated?",
-      category: "Medical Care",
-      keywords: ["pharmacy","fda","regulated"],
-      route: "/Medicalcare"
-    },
-    {
-      id: 6,
-      question: "How do I reset password?",
-      category: "Troubleshooting",
-      keywords: ["reset","password","forgot"],
-      route: "/Troubleshooting"
-    },
-    {
-      id: 7,
-      question: "What are shipping options?",
-      category: "Shipping",
-      keywords: ["shipping","delivery"],
-      route: "/Shipping"
-    },
-    {
-      id: 8,
-      question: "How to update my profile info?",
-      category: "My Account",
-      keywords: ["update","profile","edit"],
-      route: "/AboutYourVisits"
-    },
-    {
-      id: 9,
-      question: "Is my data secure?",
-      category: "Privacy & Security",
-      keywords: ["data","secure","privacy"],
-      route: "/PrivacyAndSecurity"
-    },
-  ];
+ const allQuestions = [
+  {
+    id: 1,
+    question: "What is Hims/Hers?",
+    category: "The Basics",
+    keywords: ["what","hims","hers","definition","explanation","about"],
+    route: "/faqs/basics"  // Changed from "/TheBasics"
+  },
+  {
+    id: 2,
+    question: "How does consultation work?",
+    category: "The Basics",
+    keywords: ["how","consultation","process","work","steps"],
+    route: "/faqs/basics"  // Changed from "/TheBasics"
+  },
+  {
+    id: 3,
+    question: "Who are the providers?",
+    category: "My Account",
+    keywords: ["providers","doctors","physicians"],
+    route: "/faqs/visits"  // Changed from "/AboutYourVisits"
+  },
+  {
+    id: 4,
+    question: "Do you require insurance?",
+    category: "Medical Care",
+    keywords: ["insurance","payment"],
+    route: "/faqs/medical-care"  // Changed from "/Medicalcare"
+  },
+  // ... update ALL other routes similarly
+];
 
   return (
     <Box sx={{ 

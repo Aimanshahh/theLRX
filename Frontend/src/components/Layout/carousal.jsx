@@ -54,6 +54,48 @@ const CarousalWithCards = () => {
 
   return (
     <Box sx={{ width: "100%", mt: 0, px: 0 }}>
+      {/* ---------------- STATIC HEADING LIKE HIMS ---------------- */}
+      <Box
+        sx={{
+          textAlign: "center",
+          mb: { xs: 4, sm: 6, md: 8 },
+          px: 2,
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: {
+  xs: "2.2rem",
+  sm: "2.8rem",
+  md: "3.4rem",
+  lg: "4rem",
+},
+            fontWeight: 700,
+            lineHeight: 1.1,
+            letterSpacing: "-0.02em",
+            display: "inline-block",
+          }}
+        >
+          <Box
+            component="span"
+            sx={{
+              color: "#747578", // Dark grey shade for first half
+            }}
+          >
+            Here's What You&nbsp;
+          </Box>
+          <br></br>
+          <Box
+            component="span"
+            sx={{
+              color: "#00359E", // Darker blue shade for second half
+            }}
+          >
+            Need To Know?
+          </Box>
+        </Typography>
+      </Box>
+
       {/* ---------------- HERO CAROUSEL ---------------- */}
       <Box sx={{ position: "relative", mb: { xs: 1, sm: 2 } }}>
         <Slider {...settings}>
@@ -150,7 +192,6 @@ const CarousalWithCards = () => {
         </Slider>
       </Box>
 
-      {/* ✔ Tiles remain the same (only fully responsive improved earlier) */}
       {/* ---------------- TILES ---------------- */}
       <Box
         sx={{

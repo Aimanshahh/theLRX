@@ -1,77 +1,163 @@
 import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import { motion } from "framer-motion";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import CloseIcon from "@mui/icons-material/Close";
 import { useTheme, useMediaQuery } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-// Corrected images
-import weightloss1 from "../../assets/Herocards/pillremoved.png";
-import Tackleanxiety from "../../assets/Herocards/virusremoved.png";
-import Intimicy from "../../assets/Herocards/testtube.png";
-import hair2 from "../../assets/Herocards/hairtreatment.png";
-import skin2 from "../../assets/Herocards/skincare.png";
-import testosterene from "../../assets/Herocards/bluepill.png";
+/* ================= IMAGES ================= */
+import weightloss1 from "../../assets/Herocards/herocard2.png";
+import Tackleanxiety from "../../assets/Herocards/MEDICINE1.png";
+import Intimicy from "../../assets/Herocards/HeroCards.png";
+import hair2 from "../../assets/Herocards/herocard3.png";
+import skin2 from "../../assets/Herocards/herocard4.png";
+import testosterene from "../../assets/Herocards/Herocard1.png";
 
-// Menu data
+/* ================= SIDEBAR MENU ================= */
 const menuData = {
   "Weight Loss": [
-    { title: "Weight Loss Program", route: "/treatment/weight-loss" },
-    { title: "Fat Burner Treatments", route: "/treatment/fat-burner" },
-    { title: "Metabolism Boost", route: "/treatment/metabolism-boost" },
-    { title: "Diet Consultation", route: "/treatment/diet-consultation" },
+    { title: "Oral Semaglutide RDT", route: "/weight-loss/oral-semaglutide-rdt" },
+    { title: "Oral Tirzepatide RDT", route: "/weight-loss/oral-tirzepatide-rdt" },
+    { title: "Retatrutide Vial", route: "/weight-loss/retatrutide-vial" },
+    { title: "Semaglutide Injectable", route: "/weight-loss/semaglutide-injectable" },
+    { title: "Tirzepatide Injectable", route: "/weight-loss/tirzepatide-injectable" },
   ],
-  "Mental Health": [
-    { title: "Anxiety Treatment", route: "/treatment/anxiety" },
-    { title: "Sleep Issues", route: "/treatment/sleep-issues" },
-    { title: "Stress Management", route: "/treatment/stress-management" },
-    { title: "Depression Support", route: "/treatment/depression" },
+
+  "Peptides": [
+    { title: "BPC-157", route: "/peptides/bpc-157" },
+    { title: "CJC-1295 Ipamorelin", route: "/peptides/cjc-1295-ipamorelin" },
+    { title: "GHK-CU", route: "/peptides/ghk-cu" },
+    { title: "NAD+", route: "/peptides/nad" },
+    { title: "NAD+ Injectable", route: "/peptides/nad-injectable" },
+    { title: "PT-141", route: "/peptides/pt-141" },
+    { title: "Sermorelin 20mg", route: "/peptides/sermorelin-20mg" },
+    { title: "Vitamin B12", route: "/peptides/vitamin-b12" },
   ],
-  "Skin": [
-    { title: "Acne Care", route: "/treatment/acne-care" },
-    { title: "Anti-Aging Treatments", route: "/treatment/anti-aging" },
-    { title: "Skin Rejuvenation", route: "/treatment/skin-rejuvenation" },
-    { title: "Hyperpigmentation", route: "/treatment/hyperpigmentation" },
-  ],
+
   "Sexual Health": [
-    { title: "Sexual Health Consultation", route: "/treatment/sexual-health" },
-    { title: "Testosterone Boost", route: "/treatment/testosterone-boost" },
-    { title: "Erectile Dysfunction", route: "/treatment/erectile-dysfunction" },
-    { title: "Libido Enhancement", route: "/treatment/libido-enhancement" },
+    { title: "Drive Plus 6", route: "/sexual-health/drive-plus-6" },
+    { title: "Drive Plus 12", route: "/sexual-health/drive-plus-12" },
+    { title: "Drive Plus 18", route: "/sexual-health/drive-plus-18" },
+    { title: "Epiq Chew 30", route: "/sexual-health/epiq-chew-30" },
+    { title: "Lust 6", route: "/sexual-health/lust-6" },
+    { title: "Lust 12", route: "/sexual-health/lust-12" },
+    { title: "Lust 18", route: "/sexual-health/lust-18" },
+    { title: "Mach 6", route: "/sexual-health/mach-6" },
+    { title: "Mach 12", route: "/sexual-health/mach-12" },
+    { title: "Mach 18", route: "/sexual-health/mach-18" },
+    { title: "Overdrive Plus 6", route: "/sexual-health/overdrive-plus-6" },
+    { title: "Overdrive Plus 12", route: "/sexual-health/overdrive-plus-12" },
+    { title: "Passion 6", route: "/sexual-health/passion-6" },
+    { title: "Passion 12", route: "/sexual-health/passion-12" },
+    { title: "Passion 18", route: "/sexual-health/passion-18" },
+    { title: "Redpill 6", route: "/sexual-health/redpill-6" },
+    { title: "Redpill 12", route: "/sexual-health/redpill-12" },
   ],
-  "Hair": [
-    { title: "Hair Loss Treatment", route: "/treatment/hair-loss" },
-    { title: "Hair Regrowth", route: "/treatment/hair-regrowth" },
-    { title: "Scalp Treatment", route: "/treatment/scalp-treatment" },
-    { title: "Hair Thickening", route: "/treatment/hair-thickening" },
-  ]
 };
 
+/* ================= RIMO FORM URLs ================= */
+const rimoUrls = {
+  // Top cards URLs
+  "Have better sex": "https://try.thelrx.com/intake/ed-fmmbgk", // Replace with actual URL
+  "Lose weight": "https://try.thelrx.com/intake/wm-ltaaov", // Replace with actual URL
+  "Regrow hair": "https://try.thelrx.com/intake/gh-0ce9zd", // Replace with actual URL
+  "Boost testosterone": "https://try.thelrx.com/intake/cj-r201jp", // Your provided URL
+  
+  // Bottom cards URLs
+  "Tackle anxiety": "https://try.thelrx.com/intake/mb-qdl7pe", // Replace with actual URL
+  "Get smooth skin": "https://try.thelrx.com/intake/na-a4kt74", // Your provided URL
+};
+
+/* ================= OPEN RIMO FORM ================= */
+const openRimoForm = (cardTitle) => {
+  const url = rimoUrls[cardTitle];
+  if (url) {
+    // Open in new tab
+    window.open(url, "_blank", "noopener,noreferrer");
+    
+    // OR open in popup window (uncomment if preferred)
+    /*
+    const width = 500;
+    const height = 700;
+    const left = window.screenX + (window.outerWidth - width) / 2;
+    const top = window.screenY + (window.outerHeight - height) / 2;
+    
+    window.open(
+      url,
+      "RimoForm",
+      `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
+    );
+    */
+  }
+};
+
+/* ================= COLORS ================= */
 const palette = {
-  grey: "#747578",
-  blue: "#00359E",
+  greyDark: "#747578",
+  greyLight: "#8B8D8E",
+  blueDark: "#00359E",
   white: "#fff",
-  black: "#000",
+  black: "#111",
 };
 
+/* ================= DATA ================= */
 const topCards = [
-  { title: "Have better sex", desc: "Popular", image: Intimicy, popular: true, route: "/better-sex" },
-  { title: "Lose weight", image: weightloss1, route: "/lose-weight" },
-  { title: "Regrow hair", image: hair2, route: "/regrow-hair" },
-  { title: "Boost testosterone", image: testosterene, route: "/boost-testosterone" }
+  { 
+    first: "Have better", 
+    second: "sex", 
+    image: Intimicy, 
+    route: "/better-sex",
+    fullTitle: "Have better sex"
+  },
+  { 
+    first: "Lose", 
+    second: "weight", 
+    image: weightloss1, 
+    route: "/lose-weight", 
+    popular: true,
+    fullTitle: "Lose weight"
+  },
+  { 
+    first: "Regrow", 
+    second: "hair", 
+    image: hair2, 
+    route: "/regrow-hair",
+    fullTitle: "Regrow hair"
+  },
+  { 
+    first: "Boost", 
+    second: "testosterone", 
+    image: testosterene, 
+    route: "/boost-testosterone",
+    fullTitle: "Boost testosterone"
+  },
 ];
 
 const bottomCards = [
-  { title: "Tackle anxiety", image: Tackleanxiety, route: "/tackle-anxiety" },
-  { title: "Get smooth skin", image: skin2, route: "/smooth-skin" },
-  { title: "Browse all treatments", browse: true }
+  { 
+    first: "Tackle", 
+    second: "anxiety", 
+    image: Tackleanxiety, 
+    route: "/tackle-anxiety",
+    fullTitle: "Tackle anxiety"
+  },
+  { 
+    first: "Get smooth", 
+    second: "skin", 
+    image: skin2, 
+    route: "/smooth-skin",
+    fullTitle: "Get smooth skin"
+  },
+  { 
+    title: "Browse all treatments", 
+    browse: true 
+  },
 ];
 
 export default function HeroCards() {
-  const [hoverIndex, setHoverIndex] = useState(null);
-  const [hoverBottomIndex, setHoverBottomIndex] = useState(null);
+  const [hoverTop, setHoverTop] = useState(null);
+  const [hoverBottom, setHoverBottom] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const theme = useTheme();
@@ -79,51 +165,16 @@ export default function HeroCards() {
   const isSmallMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const navigate = useNavigate();
 
-  const baseCardStyle = {
-    borderRadius: "22px",
-    padding: isMobile ? "1.5rem 1rem" : "2rem 2rem",
-    background: palette.white,
-    border: `1px solid rgba(0,0,0,0.08)`,
-    color: palette.grey,
-    textAlign: "left",
-    height: isMobile ? "220px" : "260px",
-    width: "100%",
-    cursor: "pointer",
-    position: "relative",
-    overflow: "hidden",
-    boxSizing: "border-box",
-  };
+  const topTitleSize = isSmallMobile ? "20px" : "22px";
+  const bottomTitleSize = isSmallMobile ? "18px" : "20px";
 
-  const bottomCardStyle = {
-    borderRadius: "22px",
-    padding: isMobile ? "1rem" : "1rem 2rem",
-    background: palette.white,
-    border: `1px solid rgba(0,0,0,0.08)`,
-    color: palette.grey,
-    height: isMobile ? "130px" : "150px",
-    cursor: "pointer",
-    display: "flex",
-    alignItems: "center",
-    transition: "0.35s",
-    position: "relative",
-  };
-
-  const iconBase = {
-    position: "absolute",
-    top: "12px",
-    right: "12px",
-    fontSize: isMobile ? "1.2rem" : "1.5rem",
-  };
-
-  const badgeStyle = {
-    ...iconBase,
-    background: "rgba(0,0,0,0.05)",
-    color: palette.blue,
-    fontSize: isMobile ? "0.6rem" : "0.65rem",
-    fontWeight: 700,
-    textTransform: "uppercase",
-    padding: "4px 10px",
-    borderRadius: "12px",
+  const handleCardClick = (card) => {
+    if (card.browse) {
+      setIsSidebarOpen(true);
+    } else {
+      // Open specific Rimo form for each card
+      openRimoForm(card.fullTitle);
+    }
   };
 
   return (
@@ -134,10 +185,7 @@ export default function HeroCards() {
           onClick={() => setIsSidebarOpen(false)}
           style={{
             position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
+            inset: 0,
             background: "rgba(0,0,0,0.45)",
             zIndex: 9998,
           }}
@@ -148,80 +196,60 @@ export default function HeroCards() {
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: isSidebarOpen ? 0 : "100%" }}
-        transition={{ type: "tween", duration: 0.35 }}
+        transition={{ duration: 0.35 }}
         style={{
           position: "fixed",
           top: 0,
           right: 0,
-          height: "100vh",
           width: isMobile ? "90%" : "420px",
-          background: "#fff",
+          height: "100vh",
+          background: palette.white,
           zIndex: 9999,
           display: "flex",
           flexDirection: "column",
-          overflow: "hidden",
-          boxShadow: "-5px 0 25px rgba(0, 0, 0, 0.15)",
+          boxShadow: "-6px 0 24px rgba(0,0,0,0.15)",
         }}
       >
         <div
           style={{
             height: "70px",
             display: "flex",
-            alignItems: "center",
             justifyContent: "flex-end",
+            alignItems: "center",
             padding: "0 24px",
-            borderBottom: "1px solid #e0e0e0",
+            borderBottom: "1px solid #eee",
           }}
         >
           <CloseIcon
             onClick={() => setIsSidebarOpen(false)}
-            style={{ cursor: "pointer", fontSize: "28px", color: "#000" }}
+            style={{ fontSize: "28px", cursor: "pointer", color: palette.black }}
           />
         </div>
 
-        <div style={{ flex: 1, overflowY: "auto", padding: "24px 20px" }}>
-          {Object.entries(menuData).map(([category, items], i) => (
-            <div key={i} style={{ marginBottom: "28px" }}>
-              <h4
-                style={{
-                  fontSize: "22px",
-                  fontWeight: 500,
-                  marginBottom: "16px",
-                  color: "#000",
-                  textTransform: "uppercase",
-                }}
-              >
+        <div style={{ padding: "24px", overflowY: "auto" }}>
+          {Object.entries(menuData).map(([category, items]) => (
+            <div key={category} style={{ marginBottom: "28px" }}>
+              <h4 style={{ fontSize: "18px", fontWeight: 700, marginBottom: "12px" }}>
                 {category}
               </h4>
-              {items.map((item, j) => (
+
+              {items.map((item) => (
                 <div
-                  key={j}
+                  key={item.title}
                   onClick={() => {
                     navigate(item.route);
                     setIsSidebarOpen(false);
                   }}
                   style={{
-                    display: "flex",
-                    alignItems: "center",
-                    padding: "15px 0",
-                    fontSize: "15px",
-                    fontWeight: 500,
+                    padding: "14px 0",
                     borderBottom: "1px solid #f0f0f0",
                     cursor: "pointer",
-                    color: "#333",
-                    transition: "all 0.2s ease",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = "#f8f8f8";
-                    e.currentTarget.style.color = "#000";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "transparent";
-                    e.currentTarget.style.color = "#333";
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
                   {item.title}
-                  <ChevronRightIcon style={{ marginLeft: "auto", fontSize: "20px", color: "#666" }} />
+                  <ChevronRightIcon style={{ marginLeft: "auto" }} />
                 </div>
               ))}
             </div>
@@ -230,62 +258,112 @@ export default function HeroCards() {
       </motion.div>
 
       {/* ================= CARDS ================= */}
-      <Container fluid className="py-4 px-3 px-md-5" style={{ position: "relative", zIndex: 1 }}>
+      <Container fluid className="py-4 px-3 px-md-5">
         {/* TOP ROW */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: isSmallMobile ? "1fr" : isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
-            gap: "1rem",
-            marginBottom: "1rem",
+            gridTemplateColumns: isSmallMobile
+              ? "1fr"
+              : isMobile
+              ? "repeat(2,1fr)"
+              : "repeat(4,1fr)",
+            gap: "16px",
+            marginBottom: "16px",
           }}
         >
           {topCards.map((c, i) => {
-            const hovered = hoverIndex === i;
+            const hovered = hoverTop === i;
+
             return (
               <motion.div
                 key={i}
+                onMouseEnter={() => setHoverTop(i)}
+                onMouseLeave={() => setHoverTop(null)}
+                onClick={() => handleCardClick(c)}
+                whileHover={{ y: -6, scale: 1.04 }}
                 style={{
-                  ...baseCardStyle,
-                  background: hovered ? `linear-gradient(150deg, ${palette.blue}, ${palette.grey})` : "#fff",
-                  color: hovered ? "#fff" : palette.grey,
+                  borderRadius: "22px",
+                  padding: "22px",
+                  height: isSmallMobile ? "220px" : "260px",
+                  position: "relative",
+                  cursor: "pointer",
+                  overflow: "hidden",
+                  background: hovered
+                    ? "linear-gradient(150deg, #00359E, #747578)"
+                    : "#fff",
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
-                whileHover={{ scale: isMobile ? 1.02 : 1.05, y: -4 }}
-                onMouseEnter={() => setHoverIndex(i)}
-                onMouseLeave={() => setHoverIndex(null)}
-                onClick={() => navigate(c.route)}
               >
-                {c.popular ? (
-                  <div style={{
-                    ...badgeStyle,
-                    background: hovered ? "#fff" : "rgba(0,0,0,0.05)",
-                    color: hovered ? palette.blue : palette.black,
-                  }}>Popular</div>
-                ) : (
-                  <ChevronRightIcon style={{ ...iconBase, color: hovered ? "#fff" : palette.grey }} />
-                )}
-
-                <h5 style={{ fontWeight: 850, fontSize: "1.2rem", marginBottom: "0.5rem" }}>{c.title}</h5>
-                {c.desc && !hovered && (
-                  <p style={{ fontSize: "0.85rem", margin: 0, opacity: 0.8 }}>{c.desc}</p>
-                )}
-
-                {c.image && (
-                  <motion.img
-                    src={c.image}
-                    alt=""
-                    animate={{ scale: hovered ? 1.25 : 1 }}
-                    transition={{ stiffness: 200, damping: 12 }}
+                {/* Top right actions */}
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "16px",
+                    right: "16px",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
+                  {c.popular && (
+                    <span
+                      style={{
+                        fontSize: "11px",
+                        fontWeight: 700,
+                        padding: "4px 8px",
+                        borderRadius: "999px",
+                        background: "#2DBE60",
+                        color: "#fff",
+                      }}
+                    >
+                      Popular
+                    </span>
+                  )}
+                  <ChevronRightIcon
                     style={{
-                      width: "140px",
-                      height: "140px",
-                      objectFit: "contain",
-                      position: "absolute",
-                      right: "15px",
-                      bottom: "15px",
+                      fontSize: "22px",
+                      color: hovered ? "#fff" : palette.greyLight,
                     }}
                   />
-                )}
+                </div>
+
+                <motion.h3
+                  animate={{ y: hovered ? -4 : 0 }}
+                  transition={{ stiffness: 220, damping: 18 }}
+                  style={{
+                    fontSize: topTitleSize,
+                    fontWeight: 700,
+                    margin: 0,
+                    color: hovered ? "#fff" : palette.greyDark,
+                  }}
+                >
+                  {c.first}{" "}
+                  <span
+                    style={{
+                      color: hovered ? "#fff" : palette.blueDark,
+                      fontWeight: 800,
+                    }}
+                  >
+                    {c.second}
+                  </span>
+                </motion.h3>
+
+                {/* IMAGE — TRUE CENTER */}
+                <motion.img
+                  src={c.image}
+                  alt=""
+                  animate={{ y: hovered ? -8 : 0, scale: hovered ? 1.08 : 1 }}
+                  transition={{ stiffness: 220, damping: 18 }}
+                  style={{
+                    width: isSmallMobile ? "120px" : "150px",
+                    height: isSmallMobile ? "120px" : "150px",
+                    margin: "auto",
+                    objectFit: "contain",
+                  }}
+                />
               </motion.div>
             );
           })}
@@ -295,53 +373,81 @@ export default function HeroCards() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: isSmallMobile ? "1fr" : "repeat(3, 1fr)",
-            gap: "1rem",
+            gridTemplateColumns: isSmallMobile ? "1fr" : "repeat(3,1fr)",
+            gap: "16px",
           }}
         >
           {bottomCards.map((c, i) => {
-            const hovered = hoverBottomIndex === i;
+            const hovered = hoverBottom === i;
 
             return (
               <motion.div
                 key={i}
+                onMouseEnter={() => setHoverBottom(i)}
+                onMouseLeave={() => setHoverBottom(null)}
+                onClick={() => handleCardClick(c)}
+                whileHover={{ y: -4, scale: 1.03 }}
                 style={{
-                  ...bottomCardStyle,
-                  background: hovered ? `linear-gradient(150deg, ${palette.blue}, ${palette.grey})` : "#fff",
-                  color: hovered ? "#fff" : palette.grey,
+                  borderRadius: "22px",
+                  padding: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  cursor: "pointer",
+                  background: hovered
+                    ? "linear-gradient(150deg, #00359E, #747578)"
+                    : "#fff",
+                  border: "1px solid rgba(0,0,0,0.08)",
                 }}
-                whileHover={{ scale: 1.03, y: -3 }}
-                onMouseEnter={() => setHoverBottomIndex(i)}
-                onMouseLeave={() => setHoverBottomIndex(null)}
-                onClick={() =>
-                  c.browse ? setIsSidebarOpen(true) : navigate(c.route)
-                }
               >
                 {c.image && (
                   <motion.img
                     src={c.image}
                     alt=""
-                    animate={{ scale: hovered ? 1.1 : 1 }}
-                    transition={{ stiffness: 200, damping: 12 }}
+                    animate={{ y: hovered ? -6 : 0 }}
+                    transition={{ stiffness: 220, damping: 18 }}
                     style={{
-                      width: "110px",
-                      height: "110px",
+                      width: "80px",
+                      height: "80px",
+                      marginRight: "16px",
                       objectFit: "contain",
-                      marginRight: "15px",
-                      borderRadius: "12px",
                     }}
                   />
                 )}
 
-                <h5 style={{ fontWeight: 825, fontSize: "1.05rem" }}>
-                  {c.title}
-                </h5>
+                <motion.h4
+                  animate={{ y: hovered ? -4 : 0 }}
+                  transition={{ stiffness: 220, damping: 18 }}
+                  style={{
+                    fontSize: bottomTitleSize,
+                    fontWeight: 700,
+                    margin: 0,
+                    color: hovered ? "#fff" : palette.greyDark,
+                  }}
+                >
+                  {c.first ? (
+                    <>
+                      {c.first}{" "}
+                      <span
+                        style={{
+                          color: hovered ? "#fff" : palette.blueDark,
+                          fontWeight: 800,
+                        }}
+                      >
+                        {c.second}
+                      </span>
+                    </>
+                  ) : (
+                    c.title
+                  )}
+                </motion.h4>
 
-                {c.browse ? (
-                  <SearchIcon style={{ fontSize: "1.7rem", marginLeft: "auto", color: hovered ? "#fff" : palette.grey }} />
-                ) : (
-                  <ChevronRightIcon style={{ fontSize: "1.7rem", marginLeft: "auto", color: hovered ? "#fff" : palette.grey }} />
-                )}
+                <ChevronRightIcon
+                  style={{
+                    marginLeft: "auto",
+                    fontSize: "24px",
+                    color: hovered ? "#fff" : palette.greyLight,
+                  }}
+                />
               </motion.div>
             );
           })}

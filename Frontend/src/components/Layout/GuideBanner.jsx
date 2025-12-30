@@ -1,185 +1,181 @@
-import React from "react";
-import guideImage from "../../assets/images/guidebannerremoved.png"; 
-import { useTheme, useMediaQuery } from "@mui/material";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import heroImg from "../../assets/images/guidebannerremoved.png";
 
-export default function GuideBanner() {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
-
+const FullWidthGradientWithText = () => {
   return (
-    <section
-      style={{
-        width: "100%",
+    <Box
+      sx={{
+        width: "100vw",
+        minHeight: {
+          xs: "90vh",
+          sm: "100vh",
+          md: "120vh",
+          lg: "140vh",
+        },
+        position: "relative",
+        overflow: "hidden",
         background: "linear-gradient(135deg, #00359E 0%, #003B9D 50%, #8B8D8E 100%)",
-        padding: isSmallScreen ? "40px 16px 50px" : "70px 16px 100px",
         display: "flex",
-        justifyContent: "center",
+        alignItems: "flex-start",
+        pt: { xs: 8, sm: 10, md: 12, lg: 14 },
+        px: { xs: 4, sm: 6, md: 12, lg: 16 },
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: isSmallScreen ? "column-reverse" : "row",
-          alignItems: "center",
-          maxWidth: "1100px",
-          width: "100%",
-          background: "rgba(255, 255, 255, 0.15)",
-          backdropFilter: "blur(22px)",
-          border: "1px solid rgba(255, 255, 255, 0.3)",
-          borderRadius: "26px",
-          overflow: "hidden",
+      {/* Text Container */}
+      <Box
+        sx={{
+          maxWidth: { xs: "90%", sm: "60%", md: "50%", lg: "40%" },
+          ml: "-100px",
+          zIndex: 2,
         }}
       >
-        {/* LEFT TEXT */}
-        <div
-          style={{
-            flex: "1 1 400px",
-            padding: isSmallScreen ? "28px 20px 40px" : "60px 50px",
-            color: "#FFFFFF",
-            textAlign: "left",
+        <Typography
+          variant="h3"
+          sx={{
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: { xs: "1.6rem", sm: "2.2rem", md: "2.5rem", lg: "3rem" },
+            lineHeight: 1.2,
+            mb: 1.5,
           }}
         >
-          <h2
-            style={{
-              fontSize: isSmallScreen ? "24px" : "32px",
-              fontWeight: "700",
-              lineHeight: "1.25",
-              marginBottom: "12px",
-              fontFamily: "Inter, sans-serif",
-              textShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-            }}
-          >
-            Unlock the free Guide to Protein for Weight Loss
-          </h2>
-
-          <p
-            style={{
-              fontSize: isSmallScreen ? "13px" : "15px",
-              marginBottom: "22px",
-              fontFamily: "Inter, sans-serif",
-              color: "rgba(255, 255, 255, 0.9)",
-            }}
-          >
-            Written by board-certified doctors to support your journey.
-          </p>
-
-          <form
-            style={{
-              display: "flex",
-              gap: "12px",
-              marginBottom: "14px",
-              flexDirection: isSmallScreen ? "column" : "row",
-            }}
-          >
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              style={{
-                flex: "1 1 auto",
-                padding: "14px",
-                borderRadius: "10px",
-                border: "1px solid #8B8D8E",
-                outline: "none",
-                fontSize: "15px",
-                backgroundColor: "rgba(255, 255, 255, 0.95)",
-                color: "#000000",
-                transition: "all 0.3s ease",
-              }}
-              onFocus={(e) => {
-                e.target.style.borderColor = "#00359E";
-                e.target.style.boxShadow = "0 0 0 2px rgba(0, 53, 158, 0.2)";
-              }}
-              onBlur={(e) => {
-                e.target.style.borderColor = "#8B8D8E";
-                e.target.style.boxShadow = "none";
-              }}
-            />
-
-            <button
-              type="submit"
-              style={{
-                background: "#00359E",
-                color: "#FFFFFF",
-                padding: "14px 20px",
-                borderRadius: "10px",
-                fontWeight: "600",
-                border: "none",
-                cursor: "pointer",
-                fontSize: "15px",
-                transition: "all 0.3s ease",
-                boxShadow: "0 4px 12px rgba(0, 53, 158, 0.3)",
-              }}
-              onMouseOver={(e) => {
-                e.target.style.background = "#003B9D";
-                e.target.style.transform = "translateY(-2px)";
-                e.target.style.boxShadow = "0 6px 16px rgba(0, 53, 158, 0.4)";
-              }}
-              onMouseOut={(e) => {
-                e.target.style.background = "#00359E";
-                e.target.style.transform = "translateY(0)";
-                e.target.style.boxShadow = "0 4px 12px rgba(0, 53, 158, 0.3)";
-              }}
-            >
-              Get the guide
-            </button>
-          </form>
-
-          <small
-            style={{
-              fontSize: "10px",
-              opacity: "0.85",
-              color: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            By providing your email you agree to the{" "}
-            <a
-              style={{ color: "#FFFFFF", textDecoration: "underline" }}
-              href="/terms"
-            >
-              Terms & Conditions
-            </a>{" "}
-            and acknowledge the{" "}
-            <a
-              style={{ color: "#FFFFFF", textDecoration: "underline" }}
-              href="/privacy"
-            >
-              Privacy Policy
-            </a>
-            .
-          </small>
-        </div>
-
-        {/* RIGHT IMAGE */}
-        <div
-          style={{
-            flex: "1 1 400px",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-
-            // Pull image upward on mobile
-            padding: isSmallScreen ? "5px 10px 0px" : "0",
-            marginTop: isSmallScreen ? "-25px" : "0",
+          Unlock the Free Guide to Protein for Weight Loss
+        </Typography>
+        
+        <Typography
+          variant="body1"
+          sx={{
+            color: "#8B8D8E",
+            fontSize: { xs: "0.95rem", sm: "1.1rem", md: "1.2rem", lg: "1.3rem" },
+            lineHeight: 1.6,
+            mb: 4,
           }}
         >
-          <img
-            src={guideImage}
-            alt="Guide"
-            style={{
-              width: "100%",
-              height: "auto",
-              maxHeight: isSmallScreen ? "350px" : "100%",
-              objectFit: "contain",
-              display: "block",
+          Written by board-certified doctors to support your journey.
+        </Typography>
 
-              // Slightly enlarge on mobile
-              transform: isSmallScreen ? "scale(1.1)" : "scale(1)",
+        {/* Email Input Field */}
+        <TextField
+          fullWidth
+          placeholder="Email"
+          type="email"
+          required
+          sx={{
+            mb: 2,
+            backgroundColor: "#fff",
+            borderRadius: "16px",
+            '& .MuiOutlinedInput-root': {
+              borderRadius: "16px",
+              height: "60px",
+              fontSize: "17px",
+              '& fieldset': {
+                borderColor: "#8B8D8E",
+                borderWidth: "1px",
+              },
+              '&:hover fieldset': {
+                borderColor: "#00359E",
+              },
+              '&.Mui-focused fieldset': {
+                borderColor: "#00359E",
+                borderWidth: "2px",
+              },
+            },
+          }}
+        />
+<br></br>
+<br></br>
+
+        {/* Get the Guide Button */}
+        <Button
+          fullWidth
+          variant="contained"
+          sx={{
+            backgroundColor: "#747578",
+            color: "#fff",
+            fontSize: "17px",
+            fontWeight: 700,
+            height: "60px",
+            borderRadius: "80px",
+            textTransform: "none",
+            mb: 3,
+            '&:hover': {
+              backgroundColor: "#003B9D",
+            },
+          }}
+        >
+          Get The Guide
+        </Button>
+
+        {/* Terms & Privacy Text */}
+        <Typography
+          variant="caption"
+          sx={{
+            color: "rgba(255,255,255,0.85)",
+            fontSize: "11px",
+            display: "block",
+            lineHeight: 1.5,
+            mt: 1,
+          }}
+        >
+          By creating an account using email, I agree to the{" "}
+          <Typography
+            component="span"
+            sx={{
+              color: "#fff",
+              textDecoration: "underline",
+              fontSize: "11px",
+              cursor: "pointer",
+              fontWeight: 500,
+              '&:hover': {
+                color: "#f0f0f0",
+              },
             }}
-          />
-        </div>
-      </div>
-    </section>
+          >
+            Terms & Conditions
+          </Typography>
+          , and acknowledge the{" "}
+          <Typography
+            component="span"
+            sx={{
+              color: "#fff",
+              textDecoration: "underline",
+              fontSize: "11px",
+              cursor: "pointer",
+              fontWeight: 500,
+              '&:hover': {
+                color: "#f0f0f0",
+              },
+            }}
+          >
+            Privacy Policy
+          </Typography>
+          .
+        </Typography>
+      </Box>
+
+      {/* Hero Image */}
+      <Box
+        component="img"
+        src={heroImg}
+        alt="Hero"
+        sx={{
+          position: "absolute",
+          bottom: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          height: {
+            xs: "55%",
+            sm: "65%",
+            md: "75%",
+            lg: "85%",
+          },
+          objectFit: "contain",
+          pointerEvents: "none",
+          zIndex: 1,
+        }}
+      />
+    </Box>
   );
-}
+};
+
+export default FullWidthGradientWithText;

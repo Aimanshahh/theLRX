@@ -10,36 +10,36 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-import image1 from "../../assets/medicines/Tirzepatide Pills.png";
-import image2 from "../../assets/medicines/Tirzepatide Pills.png";
-import image3 from "../../assets/medicines/Tirzepatide Pills.png";
-import image4 from "../../assets/medicines/Tirzepatide Pills.png";
+import image1 from "../../assets/images/card12-removebg-preview.png";
+import image2 from "../../assets/images/4cardimg.png";
+import image3 from "../../assets/images/4cardimg4.png";
+import image4 from "../../assets/images/4cardimg3.png";
 
 const cards = [
   {
-    subtitle: "Care that fits",
-    title: "your schedule",
-    cta: "Get started",
+    subtitle: "Care That Fits",
+    title: "Your Schedule",
+    cta: "Get Started",
     img: image1,
     path: "/schedule-care",
   },
   {
-    subtitle: "Prescribed by",
-    title: "licensed providers",
-    cta: "Get personalized treatment",
+    subtitle: "Prescribed By",
+    title: "Licensed Providers",
+    cta: "Get Personalized Treatment",
     img: image2,
     path: "/licensed-providers",
   },
   {
-    subtitle: "Doctor-trusted",
-    title: "ingredients",
-    cta: "Find my treatment",
+    subtitle: "Doctor-Trusted",
+    title: "Ingredients",
+    cta: "Find My Treatment",
     img: image3,
     path: "/trusted-ingredients",
   },
   {
     subtitle: "FDA-regulated",
-    title: "pharmacies",
+    title: "Pharmacies",
     cta: "Get personalized treatment",
     img: image4,
     path: "/regulated-pharmacies",
@@ -69,28 +69,27 @@ export default function FourCards() {
         }}
       >
         {cards.map((card, idx) => (
-          <Card
-            key={idx}
-            elevation={0}
-            onClick={() => navigate(card.path)}
-            sx={{
-              width: "100%",
-              borderRadius: "22px",
-              border: "1px solid #D9D9D9",
-              background: "#FFFFFF",
-              p: { xs: 3, md: 5 },
-              cursor: "pointer",
-              textAlign: "center",
-              transform: { sm: `translateY(${stagger[idx]})` },
-              transition: "all 0.3s ease",
-              "&:hover": {
-                transform: { sm: `translateY(calc(${stagger[idx]} - 10px))` },
-                boxShadow: "0 14px 35px rgba(0,53,158,0.15)",
-                borderColor: "#00359E",
-                backgroundColor: "#F8F9FA",
-              },
-            }}
-          >
+    <Card
+  key={idx}
+  elevation={0}
+  sx={{
+    width: "100%",
+    borderRadius: "22px",
+    border: "1px solid #D9D9D9",
+    background: "#7D8FACFF",
+    p: { xs: 3, md: 5 },
+    textAlign: "center",
+    transform: { sm: `translateY(${stagger[idx]})` },
+    transition: "all 0.3s ease",
+    "&:hover": {
+      transform: { sm: `translateY(calc(${stagger[idx]} - 10px))` },
+      boxShadow: "0 14px 35px rgba(0,53,158,0.15)",
+      borderColor: "#00359E",
+      backgroundColor: "#F8F9FA",
+    },
+  }}
+>
+
             <CardContent sx={{ p: 0 }}>
               {/* SUBTITLE — small, tight, elegant */}
               <Typography
@@ -112,7 +111,7 @@ export default function FourCards() {
                   fontSize: { xs: "1.6rem", md: "1.8rem" },
                   lineHeight: 1.2,
                   mt: 1,
-                  color: "#000",
+                  color: "#00359E",
                 }}
               >
                 {card.title}
@@ -132,7 +131,7 @@ export default function FourCards() {
                   py: { xs: 1.3, md: 1.5 },
                   fontSize: { xs: "0.8rem", md: "0.9rem" },
                   fontWeight: 700,
-                  backgroundColor: "#00359E",
+                  backgroundColor: "#8B8D8E",
                   textTransform: "none",
                   boxShadow: "0 4px 12px rgba(0, 53, 158, 0.3)",
                   "&:hover": {
@@ -146,21 +145,81 @@ export default function FourCards() {
               </Button>
             </CardContent>
 
-            <Box sx={{ mt: 3 }}>
+            {/* ENLARGED IMAGE SECTION - All images made much bigger */}
+            <Box 
+              sx={{ 
+                mt: 2, // Reduced top margin to make more space for image
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100%",
+                // Reduced height to allow images to overflow container
+                height: "auto",
+                minHeight: "220px", // Minimum height
+              }}
+            >
               <CardMedia
-                component="img"
-                image={card.img}
-                alt={card.title}
-                sx={{
-                  width: "70%",
-                  mx: "auto",
-                  transition: "0.3s ease",
-                  "&:hover": { transform: "scale(1.05)" },
-                }}
-              />
+  component="img"
+  image={card.img}
+  alt={card.title}
+  sx={{
+    /* MAKE ALL IMAGES BIG & DOMINANT */
+    width: "155%",
+    maxWidth: "520px",
+    height: "auto",
+    maxHeight: "480px",
+
+    objectFit: "contain",
+    display: "block",
+
+    /* Strong overflow like your 3rd card */
+    marginLeft: "-27%",
+    marginRight: "-27%",
+
+    transition: "all 0.35s ease",
+
+    "&:hover": {
+      transform: "scale(1.15)",
+    },
+  }}
+/>
+
             </Box>
           </Card>
         ))}
+      </Box>
+
+      {/* FOOTER CONTENT */}
+      <Box
+        sx={{
+          width: "100%",
+          textAlign: "center",
+          mt: { xs: 4, md: 10 },
+          px: { xs: 2, md: 4 },
+          pb: { xs: 2, md: 4 },
+
+        }}
+      >
+        <br></br>
+        <br></br>
+        
+        <Typography
+          variant="body2"
+          sx={{
+            fontSize: { xs: "0.7rem", sm: "0.75rem", md: "0.8rem" },
+            fontweight:{xs: 400, sm: 600},
+            color: "#00359E",
+            lineHeight: 1.5,
+            fontStyle: "italic",
+            maxWidth: "800px",
+            mx: "auto",
+          }}
+        >
+          Compounded drug products are not FDA-approved. FDA does not evaluate 
+          compounded products for safety, effectiveness, or quality. Prescription 
+          products require an online consultation with a healthcare provider who 
+          will determine if a prescription is appropriate.
+        </Typography>
       </Box>
     </Box>
   );

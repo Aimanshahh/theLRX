@@ -3,7 +3,7 @@ import { Box, Typography, Drawer, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import manImg from "../assets/images/aboutdoctor1.png"; 
-import videoFile from "../assets/Videos/medicalexperts.mp4";
+import videoFile from "../assets/Videos/motion2Fast_Abstract_pharmaceutical_laboratory_background_vide_0.mp4";
 
 // Import images for mosaic cards
 import img1 from "../assets/images/finalimg1.png";
@@ -31,7 +31,7 @@ export default function AboutUs() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // CardBlock component
+  // CardBlock component - Made responsive
   const CardBlock = ({ title, image, gradient, size = "large" }) => {
     const isLarge = size === "large";
 
@@ -39,9 +39,14 @@ export default function AboutUs() {
       <Box
         sx={{
           position: "relative",
-          borderRadius: "32px",
+          borderRadius: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
           overflow: "hidden",
-          height: isLarge ? "360px" : "220px",
+          height: { 
+            xs: isLarge ? "220px" : "160px", 
+            sm: isLarge ? "280px" : "180px", 
+            md: isLarge ? "320px" : "200px", 
+            lg: isLarge ? "360px" : "220px" 
+          },
           width: "100%",
           background: gradient,
           display: "flex",
@@ -70,14 +75,34 @@ export default function AboutUs() {
         <Typography
           sx={{
             position: "absolute",
-            top: isLarge ? 26 : 18,
-            left: isLarge ? 26 : 18,
-            fontSize: isLarge ? "32px" : "22px",
+            top: { 
+              xs: isLarge ? 16 : 12, 
+              sm: isLarge ? 20 : 14, 
+              md: isLarge ? 24 : 16, 
+              lg: isLarge ? 26 : 18 
+            },
+            left: { 
+              xs: isLarge ? 16 : 12, 
+              sm: isLarge ? 20 : 14, 
+              md: isLarge ? 24 : 16, 
+              lg: isLarge ? 26 : 18 
+            },
+            fontSize: { 
+              xs: isLarge ? "20px" : "16px", 
+              sm: isLarge ? "24px" : "18px", 
+              md: isLarge ? "28px" : "20px", 
+              lg: isLarge ? "32px" : "22px" 
+            },
             fontWeight: 700,
             color: "#ffffff",
             zIndex: 2,
             lineHeight: 1.05,
-            maxWidth: isLarge ? "240px" : "180px",
+            maxWidth: { 
+              xs: isLarge ? "160px" : "120px", 
+              sm: isLarge ? "200px" : "150px", 
+              md: isLarge ? "220px" : "160px", 
+              lg: isLarge ? "240px" : "180px" 
+            },
             textShadow: "0px 3px 6px rgba(0,0,0,0.25)",
             fontFamily: `"Inter", sans-serif`,
           }}
@@ -89,7 +114,7 @@ export default function AboutUs() {
   };
 
   return (
-    <Box sx={{ width: "100%", position: "relative" }}>
+    <Box sx={{ width: "100%", position: "relative", overflowX: "hidden" }}>
       {/* ====== FIXED NAVBAR ====== */}
       <Box
         sx={{
@@ -98,11 +123,11 @@ export default function AboutUs() {
           left: 0,
           width: "100%",
           zIndex: 9999,
-          padding: { xs: "8px 20px", sm: "12px 32px", md: "16px 40px" },
+          padding: { xs: "8px 16px", sm: "12px 24px", md: "16px 32px", lg: "16px 40px" },
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          gap: 2,
+          gap: { xs: 1, sm: 1.5, md: 2 },
           backgroundColor: "rgba(255, 255, 255, 0.98)",
           backdropFilter: "blur(10px)",
           borderBottom: "1px solid rgba(0, 0, 0, 0.1)",
@@ -114,9 +139,9 @@ export default function AboutUs() {
           sx={{
             display: "flex",
             alignItems: "center",
-            gap: 1.5,
-            padding: { xs: "6px 12px", sm: "8px 16px", md: "10px 20px" },
-            borderRadius: "12px",
+            gap: { xs: 1, sm: 1.25, md: 1.5 },
+            padding: { xs: "4px 8px", sm: "6px 12px", md: "8px 16px", lg: "10px 20px" },
+            borderRadius: { xs: "8px", sm: "10px", md: "12px" },
             backgroundColor: "rgba(255, 255, 255, 0.9)",
             border: "1px solid rgba(0, 0, 0, 0.08)",
             boxShadow: "0 2px 10px rgba(0, 0, 0, 0.05)",
@@ -136,7 +161,7 @@ export default function AboutUs() {
             src={logo}
             alt="TheLRX Logo"
             sx={{
-              height: { xs: "22px", sm: "26px", md: "30px" },
+              height: { xs: "20px", sm: "24px", md: "28px", lg: "30px" },
               width: "auto",
               objectFit: "contain",
             }}
@@ -145,12 +170,12 @@ export default function AboutUs() {
           {/* Explore Tag */}
           <Typography
             sx={{
-              fontSize: { xs: "0.55rem", sm: "0.65rem", md: "0.7rem" },
+              fontSize: { xs: "0.5rem", sm: "0.6rem", md: "0.65rem", lg: "0.7rem" },
               fontWeight: "600",
               color: "#FFFFFF",
               backgroundColor: "#00359E",
-              padding: { xs: "2px 5px", sm: "3px 7px" },
-              borderRadius: "8px",
+              padding: { xs: "1px 3px", sm: "2px 5px", md: "3px 6px", lg: "3px 7px" },
+              borderRadius: { xs: "4px", sm: "6px", md: "8px" },
               letterSpacing: "0.5px",
               textTransform: "uppercase",
               whiteSpace: "nowrap",
@@ -165,8 +190,8 @@ export default function AboutUs() {
           sx={{
             display: { xs: "none", md: "flex" },
             alignItems: "center",
-            gap: { md: 2, lg: 3 },
-            padding: { md: "6px 14px", lg: "8px 18px" },
+            gap: { md: 1.5, lg: 3 },
+            padding: { md: "6px 12px", lg: "8px 18px" },
             borderRadius: "10px",
             backgroundColor: "rgba(255, 255, 255, 0.9)",
             border: "1px solid rgba(0, 0, 0, 0.08)",
@@ -175,10 +200,10 @@ export default function AboutUs() {
         >
           {[
             { label: 'Home', path: '/' },
-            { label: 'How It Works', path: '/Howitworks' },
-            { label: 'Medical Experts', path: '/Medicalexperts' },
-            { label: 'Blog', path: '/Blog' },
-            { label: 'FAQs', path: '/FAQspage' }
+  { label: "FAQs", path: "/faqs" },                       // Changed from "/FAQspage"
+  { label: "How It Works", path: "/how-it-works" },       // Changed from "/Howitworks"
+  { label: "Blog", path: "/blog" },                       // Changed from "/Blog"
+  { label: "Medical Experts", path: "/medical-experts" }, // Changed from "/Medicalexperts"
           ].map((link) => (
             <Typography
               key={link.label}
@@ -186,11 +211,11 @@ export default function AboutUs() {
               onClick={() => handleNavigation(link.path)}
               sx={{
                 color: "#333333",
-                fontSize: { md: "0.8rem", lg: "0.85rem" },
+                fontSize: { md: "0.75rem", lg: "0.85rem" },
                 fontWeight: "500",
                 cursor: "pointer",
                 position: "relative",
-                padding: "4px 8px",
+                padding: "4px 6px",
                 transition: "all 0.3s ease",
                 whiteSpace: "nowrap",
                 borderRadius: "6px",
@@ -224,8 +249,8 @@ export default function AboutUs() {
           sx={{
             display: { xs: "flex", md: "none" },
             cursor: "pointer",
-            padding: "6px",
-            borderRadius: "8px",
+            padding: { xs: "4px", sm: "6px" },
+            borderRadius: "6px",
             backgroundColor: "rgba(255, 255, 255, 0.9)",
             border: "1px solid rgba(0, 0, 0, 0.08)",
             boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
@@ -250,28 +275,28 @@ export default function AboutUs() {
           display: { xs: "block", md: "none" },
           '& .MuiDrawer-paper': {
             boxSizing: 'border-box',
-            width: 280,
+            width: { xs: 260, sm: 280 },
             backgroundColor: "#FFFFFF",
             color: "#333333",
             boxShadow: "-4px 0 20px rgba(0,0,0,0.1)",
           },
         }}
       >
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ p: { xs: 2, sm: 3 } }}>
           {/* Drawer Header */}
           <Box sx={{ 
             display: "flex", 
             justifyContent: "space-between", 
             alignItems: "center",
-            mb: 4,
+            mb: { xs: 3, sm: 4 },
             borderBottom: "1px solid rgba(0,0,0,0.1)",
-            pb: 2
+            pb: { xs: 1.5, sm: 2 }
           }}>
             <Box 
               sx={{ 
                 display: "flex", 
                 alignItems: "center", 
-                gap: 1.5,
+                gap: 1.25,
                 cursor: "pointer"
               }}
               onClick={() => {
@@ -279,14 +304,14 @@ export default function AboutUs() {
                 toggleMobileMenu();
               }}
             >
-              <Box component="img" src={logo} alt="logo" sx={{ height: 28 }} />
+              <Box component="img" src={logo} alt="logo" sx={{ height: { xs: 24, sm: 28 } }} />
               <Typography
                 sx={{
-                  fontSize: "0.7rem",
+                  fontSize: { xs: "0.6rem", sm: "0.7rem" },
                   fontWeight: "600",
                   color: "#FFFFFF",
                   backgroundColor: "#00359E",
-                  padding: "3px 6px",
+                  padding: { xs: "2px 4px", sm: "3px 6px" },
                   borderRadius: "6px",
                   letterSpacing: "0.5px",
                   textTransform: "uppercase",
@@ -301,24 +326,27 @@ export default function AboutUs() {
           </Box>
 
           {/* Mobile Navigation Links */}
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 1.5, sm: 2 } }}>
             {[
               { label: 'Home', path: '/' },
-              { label: 'How It Works', path: '/Howitworks' },
-              { label: 'Medical Experts', path: '/Medicalexperts' },
-              { label: 'Blog', path: '/Blog' },
-              { label: 'FAQs', path: '/FAQspage' }
+              { label: 'How It Works', path: '/how-it-works' },
+              { label: 'Medical Experts', path: '/medical-experts' },
+              { label: 'Blog', path: '/blog' },
+              { label: 'FAQs', path: '/faqs' }
             ].map((link) => (
               <Typography
                 key={link.label}
-                onClick={() => handleNavigation(link.path)}
+                onClick={() => {
+                  handleNavigation(link.path);
+                  toggleMobileMenu();
+                }}
                 sx={{
                   cursor: "pointer",
                   fontWeight: "500",
-                  fontSize: "1rem",
+                  fontSize: { xs: "0.9rem", sm: "1rem" },
                   color: "#333333",
-                  py: 1.5,
-                  px: 2,
+                  py: { xs: 1.25, sm: 1.5 },
+                  px: { xs: 1.5, sm: 2 },
                   borderRadius: "8px",
                   transition: "all 0.3s ease",
                   border: "1px solid transparent",
@@ -338,309 +366,426 @@ export default function AboutUs() {
       </Drawer>
 
       {/* Main Content with Top Margin */}
-      <Box sx={{ mt: { xs: "60px", sm: "70px", md: "80px" } }}>
+      <Box sx={{ 
+        mt: { 
+          xs: "52px",  // xs: 0-599px
+          sm: "62px",  // sm: 600-899px
+          md: "72px",  // md: 900-1199px
+          lg: "80px"   // lg: 1200px+
+        } 
+      }}>
         {/* ====== UPPER BLUE SECTION ====== */}
-        <Box
-          sx={{
-            width: "100%",
-            height: { xs: 400, sm: 450, md: 550, lg: 650 },
-            background: "linear-gradient(75deg, #747578, #00359E, #8B8D8E, #003B9D)",
-            backgroundSize: "300% 300%",
-            animation: "gradientMove 12s ease infinite",
-            position: "relative",
-            display: "flex",
-            justifyContent: "center",
-            paddingTop: { xs: "80px", md: "100px" },
-            zIndex: 10,
-            overflow: "hidden",
-          }}
-        >
-          {/* ====== STATIC TEXT - ADJUSTED POSITION ====== */}
-          <Typography
-            sx={{
-              position: "absolute",
-              bottom: { 
-                xs: 220, 
-                sm: 250, 
-                md: 300, 
-                lg: 380 
-              },
-              left: "50%",
-              transform: "translateX(-50%)",
-              color: "#FFFFFF",
-              fontWeight: "900",
-              textAlign: "center",
-              textTransform: "uppercase",
-              letterSpacing: { 
-                xs: "1px", 
-                sm: "1.5px", 
-                md: "2px", 
-                lg: "3px" 
-              },
-              zIndex: 950,
-              fontSize: { 
-                xs: "1.3rem", 
-                sm: "1.6rem", 
-                md: "2rem", 
-                lg: "2.5rem" 
-              },
-              textShadow: "0 2px 4px rgba(0,0,0,0.5)",
-              whiteSpace: "nowrap",
-              width: "95%",
-              maxWidth: "1200px",
-              lineHeight: { xs: 1.3, md: 1.4 },
-            }}
-          >
-            Experience the Power of
-          </Typography>
+   <Box
+  sx={{
+    width: "100%",
+    height: { 
+      xs: "300px", 
+      sm: "380px", 
+      md: "480px", 
+      lg: "550px",
+      xl: "650px" 
+    },
+    background: "linear-gradient(75deg, #747578, #00359E, #8B8D8E, #003B9D)",
+    backgroundSize: "300% 300%",
+    animation: "gradientMove 12s ease infinite",
+    position: "relative",
+    display: "flex",
+    justifyContent: "center",
+    paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "100px" },
+    zIndex: 10,
+    overflow: "hidden",
+  }}
+>
+  {/* ====== STATIC TEXT - POSITIONED MUCH HIGHER ====== */}
+  <Typography
+    sx={{
+      position: "absolute",
+      top: { 
+        xs: "40px", // Much higher (was 80px)
+        sm: "60px", // Much higher (was 100px)
+        md: "80px", // Much higher (was 120px)
+        lg: "100px", // Much higher (was 140px)
+        xl: "120px"  // Much higher (was 160px)
+      },
+      left: "50%",
+      transform: "translateX(-50%)",
+      color: "#FFFFFF",
+      fontWeight: 900,
+      textAlign: "center",
+      textTransform: "uppercase",
+      letterSpacing: { 
+        xs: "1px", 
+        sm: "1.5px", 
+        md: "2px", 
+        lg: "2.5px",
+        xl: "3px" 
+      },
+      zIndex: 1050,
+      fontSize: { 
+        xs: "1.8rem", 
+        sm: "2.4rem", 
+        md: "3.2rem", 
+        lg: "3.8rem",
+        xl: "4.4rem" 
+      },
+      textShadow: "0 4px 8px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5)",
+      whiteSpace: { xs: "normal", sm: "nowrap" },
+      width: "95%",
+      maxWidth: "1200px",
+      lineHeight: { xs: 1.2, sm: 1.1 },
+      px: { xs: 2, sm: 3 },
+      fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
+    }}
+  >
+    Experience the Power of
+  </Typography>
 
-          {/* ====== SCROLLING TEXT - ADJUSTED POSITION ====== */}
-          <Box
-            sx={{
-              position: "absolute",
-              bottom: { 
-                xs: 100, 
-                sm: 120, 
-                md: 140, 
-                lg: 160 
-              },
-              left: 0,
-              right: 0,
-              zIndex: 900,
-              overflow: "hidden",
-              whiteSpace: "nowrap",
-            }}
-          >
-            <Box
-              sx={{
-                display: "inline-block",
-                animation: "scrollSmooth 25s linear infinite",
-                color: "rgba(255,255,255,0.25)",
-                fontSize: { 
-                  xs: "18px", 
-                  sm: "22px", 
-                  md: "28px", 
-                  lg: "34px" 
-                },
-                fontWeight: "800",
-                letterSpacing: { 
-                  xs: "4px", 
-                  sm: "6px", 
-                  md: "7px", 
-                  lg: "8px" 
-                },
-                textTransform: "uppercase",
-                paddingRight: { xs: "30px", md: "50px" },
-                lineHeight: 1.2,
-              }}
-            >
-              WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
-            </Box>
-            
-            <Box
-              sx={{
-                display: "inline-block",
-                animation: "scrollSmooth 25s linear infinite",
-                color: "rgba(255,255,255,0.25)",
-                fontSize: { 
-                  xs: "18px", 
-                  sm: "22px", 
-                  md: "28px", 
-                  lg: "34px" 
-                },
-                fontWeight: "800",
-                letterSpacing: { 
-                  xs: "4px", 
-                  sm: "6px", 
-                  md: "7px", 
-                  lg: "8px" 
-                },
-                textTransform: "uppercase",
-                paddingRight: { xs: "30px", md: "50px" },
-                lineHeight: 1.2,
-              }}
-            >
-              WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
-            </Box>
-          </Box>
+  {/* ====== SCROLLING TEXT - ADJUSTED POSITION ====== */}
+  <Box
+    sx={{
+      position: "absolute",
+      bottom: { 
+        xs: "60px", // Adjusted up slightly
+        sm: "80px", // Adjusted up slightly
+        md: "100px", // Adjusted up slightly
+        lg: "120px", // Adjusted up slightly
+        xl: "140px"  // Adjusted up slightly
+      },
+      left: 0,
+      right: 0,
+      zIndex: 900,
+      overflow: "hidden",
+      whiteSpace: "nowrap",
+    }}
+  >
+    <Box
+      sx={{
+        display: "inline-block",
+        animation: "scrollSmooth 25s linear infinite",
+        color: "rgba(255,255,255,0.25)",
+        fontSize: { 
+          xs: "14px", 
+          sm: "16px", 
+          md: "20px", 
+          lg: "24px",
+          xl: "28px" 
+        },
+        fontWeight: { xs: 800, md: 900 },
+        letterSpacing: { 
+          xs: "2px", 
+          sm: "3px", 
+          md: "4px", 
+          lg: "6px",
+          xl: "7px" 
+        },
+        textTransform: "uppercase",
+        paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+        lineHeight: 1.2,
+      }}
+    >
+      WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
+    </Box>
+    
+    <Box
+      sx={{
+        display: "inline-block",
+        animation: "scrollSmooth 25s linear infinite",
+        color: "rgba(255,255,255,0.25)",
+        fontSize: { 
+          xs: "14px", 
+          sm: "16px", 
+          md: "20px", 
+          lg: "24px",
+          xl: "28px" 
+        },
+        fontWeight: { xs: 800, md: 900 },
+        letterSpacing: { 
+          xs: "2px", 
+          sm: "3px", 
+          md: "4px", 
+          lg: "6px",
+          xl: "7px" 
+        },
+        textTransform: "uppercase",
+        paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+        lineHeight: 1.2,
+      }}
+    >
+      WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
+    </Box>
+  </Box>
 
-          {/* ====== MAN IMAGE - ADJUSTED SIZE AND POSITION ====== */}
-          <Box
-            component="img"
-            src={manImg}
-            alt="Man"
-            sx={{
-              position: "absolute",
-              bottom: 0,
-              height: { 
-                xs: 300, 
-                sm: 350, 
-                md: 420, 
-                lg: 500 
-              },
-              zIndex: 1000,
-              pointerEvents: "none",
-              userSelect: "none",
-              width: "auto",
-              maxWidth: "100%",
-              objectFit: "contain",
-            }}
-          />
-        </Box>
+  {/* ====== MAN IMAGE ====== */}
+  <Box
+    component="img"
+    src={manImg}
+    alt="Man"
+    sx={{
+      position: "absolute",
+      bottom: 0,
+      height: { 
+        xs: "200px", 
+        sm: "250px", 
+        md: "320px", 
+        lg: "380px",
+        xl: "450px" 
+      },
+      zIndex: 1000,
+      pointerEvents: "none",
+      userSelect: "none",
+      width: "auto",
+      maxWidth: "100%",
+      objectFit: "contain",
+    }}
+  />
+</Box>
 
         {/* ====== LARGER WHITE CONTENT SECTION ====== */}
+       <Box
+  sx={{
+    width: "100%",
+    backgroundColor: "#FFFFFF",
+    position: "relative",
+    zIndex: 20,
+    marginTop: { 
+      xs: "-30px", 
+      sm: "-40px", 
+      md: "-50px", 
+      lg: "-60px",
+      xl: "-70px" 
+    },
+    borderRadius: { 
+      xs: "30px 30px 0 0", 
+      sm: "40px 40px 0 0", 
+      md: "50px 50px 0 0",
+      lg: "60px 60px 0 0",
+      xl: "70px 70px 0 0"
+    },
+    boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
+    minHeight: { xs: "60vh", sm: "70vh", md: "80vh", lg: "90vh", xl: "100vh" },
+    display: "flex",
+    alignItems: "center",
+  }}
+>
+  <Box
+    sx={{
+      width: "100%",
+      maxWidth: { 
+        xs: "90%", 
+        sm: "88%", 
+        md: "85%", 
+        lg: "80%", 
+        xl: "1200px" 
+      },
+      margin: "0 auto",
+      padding: { 
+        xs: "60px 0", 
+        sm: "80px 0", 
+        md: "100px 0", 
+        lg: "120px 0",
+        xl: "140px 0" 
+      },
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      minHeight: "100%",
+    }}
+  >
+    {/* Single Paragraph with Colored Words */}
+    <Typography
+      component="div"
+      sx={{
+        color: "#000000",
+        fontWeight: { xs: 700, sm: 800, md: 900 },
+        fontSize: { 
+          xs: "1.4rem",      
+          sm: "1.8rem",      
+          md: "2.2rem",      
+          lg: "2.8rem",
+          xl: "3.2rem"        
+        },
+        lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
+        maxWidth: { 
+          xs: "100%", 
+          sm: "95%", 
+          md: "90%", 
+          lg: "85%", 
+          xl: "80%" 
+        },
+        margin: "0 auto",
+        px: { xs: 1, sm: 2, md: 3 },
+        letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
+      }}
+    >
+      We're on a mission to help everyone{" "}
+      <Box 
+        component="span" 
+        sx={{ 
+          color: "#00359E", 
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        live a healthier, happier life
+      </Box>{" "}
+      through accessible, personalized healthcare that puts{" "}
+      <Box 
+        component="span" 
+        sx={{ 
+          color: "#00359E", 
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        you first
+      </Box>{" "}
+      and makes feeling better{" "}
+      <Box 
+        component="span" 
+        sx={{ 
+          color: "#00359E", 
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        easier than ever.
+      </Box>
+    </Typography>
+    
+    {/* Optional decorative element or spacing */}
+    <Box
+      sx={{
+        mt: { xs: 4, sm: 6, md: 8, lg: 10 },
+        width: "60px",
+        height: "4px",
+        backgroundColor: "#00359E",
+        margin: "0 auto",
+        borderRadius: "2px",
+      }}
+    />
+  </Box>
+</Box>
+
+        {/* ====== VIDEO SECTION ====== */}
         <Box
-          sx={{
-            width: "100%",
-            backgroundColor: "#FFFFFF",
-            position: "relative",
-            zIndex: 20,
-            marginTop: { xs: "-40px", sm: "-50px", md: "-60px", lg: "-70px" },
-            borderRadius: { 
-              xs: "40px 40px 0 0", 
-              sm: "50px 50px 0 0", 
-              md: "60px 60px 0 0",
-              lg: "70px 70px 0 0"
-            },
-            boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
-            minHeight: { xs: "80vh", sm: "85vh", md: "90vh", lg: "100vh" },
-          }}
-        >
-          <Box
-            sx={{
-              maxWidth: { xs: "90%", sm: "85%", md: "80%", lg: "1100px" },
-              margin: "0 auto",
-              padding: { 
-                xs: "100px 0 80px", 
-                sm: "120px 0 100px", 
-                md: "140px 0 120px", 
-                lg: "160px 0 140px" 
-              },
-              textAlign: "center",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
-            {/* Single Paragraph with Colored Words like Hims */}
-            <Typography
-              sx={{
-                color: "#000000",
-                fontWeight: "1000",
-                fontSize: { 
-                 xs: "1.4rem",      
-                 sm: "1.7rem",      
-                 md: "2.1rem",      
-                 lg: "2.5rem"        
-                },
-                lineHeight: { xs: 1.6, sm: 1.7, md: 1.8 },
-                maxWidth: { xs: "100%", sm: "90%", md: "80%", lg: "70%" },
-                margin: "0 auto",
-              }}
-            >
-              We're on a mission to help everyone 
-              <Box component="span" sx={{ color: "#00359E", fontWeight: "700" }}> live a healthier, happier life </Box>
-              through accessible, personalized healthcare that puts 
-              <Box component="span" sx={{ color: "#00359E", fontWeight: "700" }}> you first </Box>
-              and makes feeling better 
-              <Box component="span" sx={{ color: "#00359E", fontWeight: "700" }}> easier than ever. </Box>
-            </Typography>
-          </Box>
-        </Box>
+  sx={{
+    width: "100%",
+    position: "relative",
+    backgroundColor: "#FFFFFF",
+    paddingTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
+    paddingBottom: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
+  }}
+>
+  {/* Video Container */}
+  <Box
+    sx={{
+      width: "100%",
+      borderRadius: 0,
+      overflow: "hidden",
+      position: "relative",
+      height: { 
+        xs: "250px", 
+        sm: "350px", 
+        md: "450px", 
+        lg: "550px",
+        xl: "650px" 
+      },
+    }}
+  >
+    {/* Video Element */}
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+      }}
+    >
+      <source src={videoFile} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
-           {/* ====== VIDEO SECTION ====== */}
-        <Box
-          sx={{
-            width: "100%",
-            position: "relative",
-            backgroundColor: "#FFFFFF",
-            paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "120px" },
-            paddingBottom: { xs: "60px", sm: "80px", md: "100px", lg: "120px" },
-          }}
-        >
-          {/* Video Container - Full Width */}
-          <Box
-            sx={{
-              width: "100%",
-              borderRadius: { xs: "0", sm: "0", md: "0", lg: "0" },
-              overflow: "hidden",
-              position: "relative",
-              height: { xs: "400px", sm: "500px", md: "600px", lg: "700px" },
-            }}
-          >
-            {/* Video Element */}
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-              }}
-            >
-              <source src={videoFile} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-
-            {/* Overlay Text - Clean like Hims */}
-            <Box
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#FFFFFF",
-                  fontWeight: "700",
-                  fontSize: { 
-                    xs: "1.8rem", 
-                    sm: "2.5rem", 
-                    md: "3.2rem", 
-                    lg: "4rem" 
-                  },
-                  textAlign: "center",
-                  textTransform: "uppercase",
-                  letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px" },
-                  lineHeight: { xs: 1.2, sm: 1.3, md: 1.4 },
-                  padding: { xs: "0 20px", sm: "0 30px", md: "0 40px" },
-                }}
-              >
-                THE LRX WAS BUILT FOR YOU
-              </Typography>
-            </Box>
-          </Box>
-        </Box>
-
-       
+    {/* Overlay Text */}
+    <Box
+      sx={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "rgba(0, 0, 0, 0.3)", // Darker overlay for better contrast
+        px: { xs: 2, sm: 3 },
+      }}
+    >
+      <Typography
+        sx={{
+          color: "#FFFFFF",
+          fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 }, // Much bolder
+          fontSize: { 
+            xs: "1.8rem",  // Larger on all sizes
+            sm: "2.5rem", 
+            md: "3.2rem", 
+            lg: "4rem",
+            xl: "4.5rem" 
+          },
+          textAlign: "center",
+          textTransform: "uppercase",
+          letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
+          lineHeight: 1,
+          px: { xs: 2, sm: 3, md: 4 },
+          textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)", // Text shadow for better readability
+          fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif", // Clean bold font
+          padding: "12px 20px",
+          borderRadius: "4px",
+        }}
+      >
+        THE LRX WAS BUILT FOR YOU
+      </Typography>
+    </Box>
+  </Box>
+</Box>
 
         {/* ====== HIMS STYLE ABOUT SECTION ====== */}
         <Box
           sx={{
             textAlign: "center",
-            maxWidth: "900px",
-            margin: { xs: "80px auto 100px auto", md: "120px auto 140px auto" },
-            px: 2,
+            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "900px" },
+            margin: { 
+              xs: "60px auto 80px auto", 
+              sm: "80px auto 100px auto", 
+              md: "100px auto 120px auto",
+              lg: "120px auto 140px auto" 
+            },
+            px: { xs: 2, sm: 3 },
             fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
           }}
         >
           {/* BIG HEADING */}
           <Typography
             sx={{
-              fontSize: { xs: "36px", md: "64px" },
+              fontSize: { 
+                xs: "28px", 
+                sm: "36px", 
+                md: "48px", 
+                lg: "56px",
+                xl: "64px" 
+              },
               fontWeight: 700,
-              lineHeight: { xs: "44px", md: "72px" },
+              lineHeight: { 
+                xs: "34px", 
+                sm: "42px", 
+                md: "56px", 
+                lg: "64px",
+                xl: "72px" 
+              },
               color: "#000",
             }}
           >
@@ -649,16 +794,27 @@ export default function AboutUs() {
             Now, so is your care.
           </Typography>
 
-
           {/* PARAGRAPH BELOW */}
           <Typography
             sx={{
-              mt: 4,
-              fontSize: { xs: "17px", md: "20px" },
-              fontWeight: 530,
-              lineHeight: { xs: "26px", md: "32px" },
+              mt: { xs: 3, sm: 4, md: 4 },
+              fontSize: { 
+                xs: "15px", 
+                sm: "16px", 
+                md: "18px", 
+                lg: "19px",
+                xl: "20px" 
+              },
+              fontWeight: { xs: 500, sm: 530 },
+              lineHeight: { 
+                xs: "22px", 
+                sm: "24px", 
+                md: "26px", 
+                lg: "28px",
+                xl: "32px" 
+              },
               color: "#2A2A2A",
-              maxWidth: "740px",
+              maxWidth: { xs: "100%", sm: "95%", md: "90%", lg: "85%", xl: "740px" },
               mx: "auto",
             }}
           >
@@ -673,25 +829,28 @@ export default function AboutUs() {
           </Typography>
         </Box>
 
-      
-
         {/* ====== MOSAIC CARDS SECTION ====== */}
-    <Box
+       <Box
   sx={{
     width: "100%",
-    maxWidth: "1500px",
+    maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
     mx: "auto",
-    display: "flex",
-    gap: 2,
-    alignItems: "flex-start",
-    px: 2,
-    pb: 2,
+    display: "grid",
+    gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+    gap: { xs: 2, sm: 2.5, md: 2 },
+    px: { xs: 2, sm: 3, md: 4 },
+    pb: { xs: 4, sm: 5, md: 6 },
+    alignItems: "stretch",
   }}
 >
   {/* LEFT COLUMN */}
-  <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 0.5 }}>
-    
-    {/* Sexual performance */}
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateRows: "auto auto auto",
+      gap: { xs: 1.5, sm: 2, md: 0.5 },
+    }}
+  >
     <CardBlock
       title="Sexual performance"
       image={img1}
@@ -699,7 +858,6 @@ export default function AboutUs() {
       size="large"
     />
 
-    {/* Skin care */}
     <CardBlock
       title="Skin care"
       image={img3}
@@ -707,7 +865,6 @@ export default function AboutUs() {
       size="small"
     />
 
-    {/* Mental health */}
     <CardBlock
       title="Mental health"
       image={img4}
@@ -717,9 +874,13 @@ export default function AboutUs() {
   </Box>
 
   {/* RIGHT COLUMN */}
-  <Box sx={{ flex: 1, display: "flex", flexDirection: "column", gap: 0.5 }}>
-    
-    {/* Weight loss */}
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateRows: "auto 1fr", // 🔥 THIS MAKES TALL CARD FILL SPACE
+      gap: { xs: 1.5, sm: 2, md: 0.5 },
+    }}
+  >
     <CardBlock
       title="Weight loss"
       image={img2}
@@ -727,18 +888,15 @@ export default function AboutUs() {
       size="large"
     />
 
-    {/* Hair growth (Tall card) */}
+    {/* HAIR GROWTH – GUARANTEED TALL */}
     <Box
       sx={{
         position: "relative",
-        borderRadius: "32px",
-        overflow: "hidden",
-        height: "444px",
         width: "100%",
+        height: "100%",
+        borderRadius: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
+        overflow: "hidden",
         background: "linear-gradient(135deg, #E9F0FF 0%, #FAFBFF 100%)",
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: "flex-start",
       }}
     >
       <Box
@@ -747,10 +905,10 @@ export default function AboutUs() {
         alt="Hair growth"
         sx={{
           position: "absolute",
-          bottom: 0,
-          right: 0,
+          inset: 0,
           height: "100%",
           width: "auto",
+          marginLeft: "auto",
           objectFit: "contain",
           zIndex: 1,
         }}
@@ -759,15 +917,15 @@ export default function AboutUs() {
       <Typography
         sx={{
           position: "absolute",
-          top: 26,
-          left: 26,
-          fontSize: "32px",
+          top: { xs: 16, sm: 20, md: 22, lg: 24, xl: 26 },
+          left: { xs: 16, sm: 20, md: 22, lg: 24, xl: 26 },
+          fontSize: { xs: "20px", sm: "24px", md: "28px", lg: "30px", xl: "32px" },
           fontWeight: 700,
           color: "#ffffff",
-          zIndex: 2,
           lineHeight: 1.05,
-          maxWidth: "240px",
+          maxWidth: { xs: "160px", sm: "200px", md: "220px", lg: "230px", xl: "240px" },
           fontFamily: `"Inter", sans-serif`,
+          zIndex: 2,
         }}
       >
         Hair growth
@@ -777,24 +935,39 @@ export default function AboutUs() {
 </Box>
 
 
-
-
         {/* ====== SUCCESS STANDARD SECTION ====== */}
         <Box
           sx={{
             textAlign: "center",
-            maxWidth: "900px",
-            margin: { xs: "80px auto 100px auto", md: "120px auto 140px auto" },
-            px: 2,
+            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "900px" },
+            margin: { 
+              xs: "60px auto 80px auto", 
+              sm: "80px auto 100px auto", 
+              md: "100px auto 120px auto",
+              lg: "120px auto 140px auto" 
+            },
+            px: { xs: 2, sm: 3 },
             fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
           }}
         >
           {/* BIG HEADING */}
           <Typography
             sx={{
-              fontSize: { xs: "36px", md: "64px" },
+              fontSize: { 
+                xs: "28px", 
+                sm: "36px", 
+                md: "48px", 
+                lg: "56px",
+                xl: "64px" 
+              },
               fontWeight: 700,
-              lineHeight: { xs: "44px", md: "72px" },
+              lineHeight: { 
+                xs: "34px", 
+                sm: "42px", 
+                md: "56px", 
+                lg: "64px",
+                xl: "72px" 
+              },
               color: "#000",
             }}
           >
@@ -806,12 +979,24 @@ export default function AboutUs() {
           {/* PARAGRAPH BELOW */}
           <Typography
             sx={{
-              mt: 4,
-              fontSize: { xs: "17px", md: "20px" },
-              fontWeight: 530,
-              lineHeight: { xs: "26px", md: "32px" },
+              mt: { xs: 3, sm: 4, md: 4 },
+              fontSize: { 
+                xs: "15px", 
+                sm: "16px", 
+                md: "18px", 
+                lg: "19px",
+                xl: "20px" 
+              },
+              fontWeight: { xs: 500, sm: 530 },
+              lineHeight: { 
+                xs: "22px", 
+                sm: "24px", 
+                md: "26px", 
+                lg: "28px",
+                xl: "32px" 
+              },
               color: "#2A2A2A",
-              maxWidth: "740px",
+              maxWidth: { xs: "100%", sm: "95%", md: "90%", lg: "85%", xl: "740px" },
               mx: "auto",
             }}
           >
@@ -827,20 +1012,37 @@ export default function AboutUs() {
         {/* ====== REVIEW CARDS SECTION ====== */}
         <Box
           sx={{
-            maxWidth: "1200px",
-            margin: { xs: "60px auto 80px auto", md: "80px auto 120px auto" },
-            px: 2,
+            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1000px", xl: "1200px" },
+            margin: { 
+              xs: "40px auto 60px auto", 
+              sm: "60px auto 80px auto", 
+              md: "70px auto 100px auto",
+              lg: "80px auto 120px auto" 
+            },
+            px: { xs: 2, sm: 3 },
           }}
         >
           {/* Section Header */}
           <Typography
             sx={{
-              fontSize: { xs: "28px", md: "40px" },
+              fontSize: { 
+                xs: "24px", 
+                sm: "28px", 
+                md: "32px", 
+                lg: "36px",
+                xl: "40px" 
+              },
               fontWeight: 700,
-              lineHeight: { xs: "36px", md: "48px" },
+              lineHeight: { 
+                xs: "30px", 
+                sm: "34px", 
+                md: "38px", 
+                lg: "42px",
+                xl: "48px" 
+              },
               color: "#000",
               textAlign: "center",
-              mb: { xs: 4, md: 6 },
+              mb: { xs: 3, sm: 4, md: 5, lg: 6 },
               fontFamily: `"Inter", sans-serif`,
             }}
           >
@@ -853,9 +1055,11 @@ export default function AboutUs() {
               display: "grid",
               gridTemplateColumns: { 
                 xs: "1fr", 
-                md: "1fr 1fr 1fr" 
+                sm: "1fr", 
+                md: "1fr 1fr", 
+                lg: "1fr 1fr 1fr" 
               },
-              gap: { xs: 3, md: 4 },
+              gap: { xs: 2.5, sm: 3, md: 3.5, lg: 4 },
               alignItems: "stretch",
             }}
           >
@@ -863,8 +1067,13 @@ export default function AboutUs() {
             <Box
               sx={{
                 backgroundColor: "#FFFFFF",
-                borderRadius: "16px",
-                padding: { xs: "24px", md: "32px" },
+                borderRadius: { xs: "12px", sm: "14px", md: "16px" },
+                padding: { 
+                  xs: "20px", 
+                  sm: "24px", 
+                  md: "28px", 
+                  lg: "32px" 
+                },
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)",
                 display: "flex",
                 flexDirection: "column",
@@ -879,11 +1088,21 @@ export default function AboutUs() {
               {/* Review Text */}
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", md: "17px" },
+                  fontSize: { 
+                    xs: "14px", 
+                    sm: "15px", 
+                    md: "16px", 
+                    lg: "17px" 
+                  },
                   fontWeight: 400,
-                  lineHeight: { xs: "24px", md: "26px" },
+                  lineHeight: { 
+                    xs: "20px", 
+                    sm: "22px", 
+                    md: "24px", 
+                    lg: "26px" 
+                  },
                   color: "#2A2A2A",
-                  mb: 3,
+                  mb: { xs: 2, sm: 2.5, md: 3 },
                   flex: 1,
                   fontStyle: "italic",
                 }}
@@ -895,7 +1114,7 @@ export default function AboutUs() {
               <Box>
                 <Typography
                   sx={{
-                    fontSize: "16px",
+                    fontSize: { xs: "14px", sm: "15px", md: "16px" },
                     fontWeight: 600,
                     color: "#000",
                     mb: 0.5,
@@ -905,7 +1124,7 @@ export default function AboutUs() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { xs: "12px", sm: "13px", md: "14px" },
                     fontWeight: 400,
                     color: "#666",
                   }}
@@ -919,8 +1138,13 @@ export default function AboutUs() {
             <Box
               sx={{
                 backgroundColor: "#FFFFFF",
-                borderRadius: "16px",
-                padding: { xs: "24px", md: "32px" },
+                borderRadius: { xs: "12px", sm: "14px", md: "16px" },
+                padding: { 
+                  xs: "20px", 
+                  sm: "24px", 
+                  md: "28px", 
+                  lg: "32px" 
+                },
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)",
                 display: "flex",
                 flexDirection: "column",
@@ -935,11 +1159,21 @@ export default function AboutUs() {
               {/* Review Text */}
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", md: "17px" },
+                  fontSize: { 
+                    xs: "14px", 
+                    sm: "15px", 
+                    md: "16px", 
+                    lg: "17px" 
+                  },
                   fontWeight: 400,
-                  lineHeight: { xs: "24px", md: "26px" },
+                  lineHeight: { 
+                    xs: "20px", 
+                    sm: "22px", 
+                    md: "24px", 
+                    lg: "26px" 
+                  },
                   color: "#2A2A2A",
-                  mb: 3,
+                  mb: { xs: 2, sm: 2.5, md: 3 },
                   flex: 1,
                   fontStyle: "italic",
                 }}
@@ -951,7 +1185,7 @@ export default function AboutUs() {
               <Box>
                 <Typography
                   sx={{
-                    fontSize: "16px",
+                    fontSize: { xs: "14px", sm: "15px", md: "16px" },
                     fontWeight: 600,
                     color: "#000",
                     mb: 0.5,
@@ -961,7 +1195,7 @@ export default function AboutUs() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { xs: "12px", sm: "13px", md: "14px" },
                     fontWeight: 400,
                     color: "#666",
                   }}
@@ -975,8 +1209,13 @@ export default function AboutUs() {
             <Box
               sx={{
                 backgroundColor: "#FFFFFF",
-                borderRadius: "16px",
-                padding: { xs: "24px", md: "32px" },
+                borderRadius: { xs: "12px", sm: "14px", md: "16px" },
+                padding: { 
+                  xs: "20px", 
+                  sm: "24px", 
+                  md: "28px", 
+                  lg: "32px" 
+                },
                 boxShadow: "0 4px 20px rgba(0, 0, 0, 0.08)",
                 display: "flex",
                 flexDirection: "column",
@@ -991,11 +1230,21 @@ export default function AboutUs() {
               {/* Review Text */}
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", md: "17px" },
+                  fontSize: { 
+                    xs: "14px", 
+                    sm: "15px", 
+                    md: "16px", 
+                    lg: "17px" 
+                  },
                   fontWeight: 400,
-                  lineHeight: { xs: "24px", md: "26px" },
+                  lineHeight: { 
+                    xs: "20px", 
+                    sm: "22px", 
+                    md: "24px", 
+                    lg: "26px" 
+                  },
                   color: "#2A2A2A",
-                  mb: 3,
+                  mb: { xs: 2, sm: 2.5, md: 3 },
                   flex: 1,
                   fontStyle: "italic",
                 }}
@@ -1007,7 +1256,7 @@ export default function AboutUs() {
               <Box>
                 <Typography
                   sx={{
-                    fontSize: "16px",
+                    fontSize: { xs: "14px", sm: "15px", md: "16px" },
                     fontWeight: 600,
                     color: "#000",
                     mb: 0.5,
@@ -1017,7 +1266,7 @@ export default function AboutUs() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: "14px",
+                    fontSize: { xs: "12px", sm: "13px", md: "14px" },
                     fontWeight: 400,
                     color: "#666",
                   }}
@@ -1045,6 +1294,17 @@ export default function AboutUs() {
             }
             100% {
               transform: translateX(-50%);
+            }
+          }
+
+          @media (max-width: 600px) {
+            @keyframes scrollSmooth {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
             }
           }
         `}

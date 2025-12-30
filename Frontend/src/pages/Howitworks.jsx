@@ -53,17 +53,18 @@ export default function Howitworks() {
           <img src={logo} alt="Logo" style={{ height: "55px", maxHeight: "100%" }} />
         </Box>
 
-        {/* Pages */}
-        <Box sx={{ display: "flex", gap: { xs: "20px", md: "40px" } }}>
+        {/* Navigation Items - Updated */}
+        <Box sx={{ display: "flex", alignItems: "center", gap: { xs: "15px", md: "30px" } }}>
           {[
-            { name: "About Us", link: "/AboutUs" },
-            { name: "FAQs", link: "/FAQspage" },
-            { name: "Medical Experts", link: "/Medicalexperts" },
-            { name: "Blog", link: "/Blog" },
+            { label: 'Home', path: '/' },
+            { label: "About Us", path: "/about-us" },
+            { label: "FAQs", path: "/faqs" },
+            { label: "Blog", path: "/blog" },
+            { label: "Medical Experts", path: "/medical-experts" },
           ].map((item) => (
             <Typography
-              key={item.name}
-              onClick={() => navigate(item.link)}
+              key={item.path}
+              onClick={() => navigate(item.path)}
               sx={{
                 cursor: "pointer",
                 fontSize: { xs: "12px", md: "15px" },
@@ -73,7 +74,7 @@ export default function Howitworks() {
                 "&:hover": { color: "#003B9D", textDecoration: "underline" },
               }}
             >
-              {item.name}
+              {item.label}
             </Typography>
           ))}
         </Box>

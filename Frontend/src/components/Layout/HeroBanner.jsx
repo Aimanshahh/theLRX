@@ -7,95 +7,196 @@ import Carousal from "./carousal";
 import LongCard from "./longCard";
 import Accordion from "./FAQs";
 import GuideBanner from "./GuideBanner";
+import TallBackgroundSection from "./section3";
 
 const rotatingHeadlines = [
-  { text: "Hair Care", color: "#00359E" },
+  { text: "Hair Care", color: "#003B9D" },
   { text: "Skin Health", color: "#747578" },
-  { text: "Sexual Wellness", color: "#003B9D" },
+  { text: "Sexual Wellness", color: "#00359E" },
   { text: "Treatments", color: "#8B8D8E" },
 ];
 
 export default function HeroBanner() {
   const [index, setIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFade(false);
+      setVisible(false);
       setTimeout(() => {
-        setIndex((prev) => (prev + 1) % rotatingHeadlines.length);
-        setFade(true);
-      }, 500);
+        setIndex((i) => (i + 1) % rotatingHeadlines.length);
+        setVisible(true);
+      }, 1000);
     }, 3000);
+
     return () => clearInterval(interval);
   }, []);
 
   const current = rotatingHeadlines[index];
 
   return (
-    <section
-      className="w-full bg-[#f7f7f7] flex flex-col items-start justify-center px-6 md:px-20 min-h-screen"
-      style={{ paddingTop: "80px" }}
-    >
-      {/* Hero Headline */}
-      <div className="max-w-5xl text-left w-full mb-12" style={{ marginLeft: '3.5rem' }}>
-        <h1
-          className={`font-black font-sans transition-all duration-700 ease-in-out leading-none ${
-            fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
-          style={{
-            color: current.color,
-            fontSize: "clamp(2.5rem, 6vw, 6rem)",
-            lineHeight: 0.9,
-            marginBottom: "1rem",
-          }}
-        >
-          {current.text}
-        </h1>
+    <>
+      <section className="w-full bg-white hero-section">
+        <style>
+          {`
+            @keyframes slideInUp {
+              0% { opacity: 0; transform: translateY(100%); }
+              50% { opacity: 1; transform: translateY(10%); }
+              100% { opacity: 1; transform: translateY(0%); }
+            }
 
-        <h2
-          className="text-black font-bold mt-6 leading-tight"
-          style={{
-            fontSize: "clamp(1.5rem, 4vw, 3.5rem)",
-            lineHeight: 0.9,
-          }}
-        >
-          Personalized care starts here.
-        </h2>
-      </div>
+            @keyframes slideOutUp {
+              0% { opacity: 1; transform: translateY(0%); }
+              50% { opacity: 0.5; transform: translateY(-40%); }
+              100% { opacity: 0; transform: translateY(-100%); }
+            }
 
-      {/* All Sections */}
-      <div className="w-full">
-        <HeroCards />
-      </div>
+            /* Mobile First Styles - KEEP EXISTING PADDING */
+            .hero-section { padding: 50px 16px 24px !important; }
 
-      <div className="w-full">
-        <FullWidthBanner />
-      </div>
+            .hero-headline {
+              color: ${current.color};
+              font-size: 2.8rem;
+              line-height: 1.1;
+              font-weight: 500;
+              overflow: hidden;
+              position: relative;
+              height: 3.2rem;
+              margin: 0;
+              /* Add only margin-top to push it down */
+              margin-top: 20px !important; /* This pushes just the rotating text down */
+            }
 
-      <div className="w-full">
-        <Herostyle />
-      </div>
+            .hero-subtitle {
+              color: #3B3B3B;
+              font-size: 2.4rem;
+              font-weight: 600;
+              margin-top: 12px;
+              line-height: 1.2;
+              word-wrap: break-word;
+              overflow-wrap: break-word;
+              white-space: normal;
+            }
 
-      <div className="w-full">
-        <Fourcard />
-      </div>
+            .hero-description {
+              margin-top: 16px;
+              font-size: 1rem;
+              color: #3B3B3B;
+              line-height: 1.4;
+            }
 
-      <div className="w-full">
-        <Carousal />
-      </div>
-<br></br>
-      <div className="w-full">
-        <LongCard />
-      </div>
+            .hero-container {
+              max-width: 1100px;
+              width: 100%;
+            }
 
-      <div className="w-full">
-        <Accordion />
-      </div>
+            /* Tablet Styles - MINIMAL CHANGES */
+            @media (min-width: 768px) {
+              .hero-section { padding: 60px 24px 30px !important; }
+              .hero-headline { 
+                font-size: 3.8rem; 
+                height: 4rem; 
+                line-height: 1;
+                margin-top: 25px !important; /* Slightly more on tablet */
+              }
+              .hero-subtitle { font-size: 3.5rem; margin-top: 16px; white-space: nowrap; }
+              .hero-description { margin-top: 20px; font-size: 1.05rem; }
+            }
 
-      <div className="w-full">
-        <GuideBanner />
-      </div>
-    </section>
+            /* Desktop Styles - MINIMAL CHANGES */
+            @media (min-width: 1024px) {
+              .hero-section { padding: 88px 40px 40px !important; }
+              
+              /* Push text tightly to left */
+              .hero-container {
+                max-width: 1100px;
+                margin: 0;
+                padding-left: 0;
+              }
+              
+              .hero-headline { 
+                font-size: 4.8rem; 
+                height: 4.8rem; 
+                line-height: 0.96;
+                margin-top: 30px !important; /* More on desktop */
+              }
+              .hero-subtitle { font-size: 5.2rem; margin-top: 4px; }
+              .hero-description { margin-top: 10px; font-size: 1rem; }
+            }
+
+            /* Large Desktop */
+            @media (min-width: 1200px) {
+              .hero-container {
+                max-width: 1100px;
+                margin: 0;
+                padding-left: 0;
+              }
+              .hero-headline {
+                margin-top: 35px !important;
+              }
+            }
+
+            /* Extra Large Desktop */
+            @media (min-width: 1440px) {
+              .hero-container {
+                max-width: 1100px;
+                margin: 0;
+                padding-left: 0;
+              }
+              .hero-headline {
+                margin-top: 40px !important;
+              }
+            }
+
+            /* Small Mobile Adjustments */
+            @media (max-width: 360px) {
+              .hero-headline { 
+                font-size: 2.5rem; 
+                height: 2.8rem; 
+                margin-top: 15px !important;
+              }
+              .hero-subtitle { font-size: 2.1rem; }
+            }
+          `}
+        </style>
+
+        <div className="hero-container">
+          <h1 className="hero-headline">
+            <span
+              style={{
+                display: "inline-block",
+                animation: visible
+                  ? "slideInUp 1s ease-out forwards"
+                  : "slideOutUp 1s ease-in forwards",
+              }}
+            >
+              {current.text}
+            </span>
+          </h1>
+
+          <h2 className="hero-subtitle">Personalized care starts here</h2>
+
+          <p className="hero-description">Customized care starts here</p>
+        </div>
+      </section>
+
+      <HeroCards />
+      <br></br>
+      <FullWidthBanner />
+      <Herostyle />
+       <br></br>
+      <TallBackgroundSection />
+      <Fourcard />
+      <Carousal /> 
+      <br></br>
+       <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+      <LongCard />
+      
+      <Accordion />
+      <GuideBanner />
+    </>
   );
 }

@@ -3,7 +3,16 @@ import { Box, Typography, IconButton, Collapse, Divider } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
-// Dummy FAQ data
+/* ===== COLOR PALETTE ===== */
+const palette = {
+  greyDark: "#747578",
+  greyLight: "#8B8D8E",
+  blueDark: "#00359E",
+  blueLight: "#003B9D",
+  charcoal: "#36454F ",
+};
+
+/* ===== FAQ DATA ===== */
 const faqData = [
   {
     id: 1,
@@ -37,7 +46,7 @@ const faqData = [
   },
 ];
 
-// Accordion Item
+/* ===== ACCORDION ITEM ===== */
 const AccordionItem = ({ item, isOpen, onClick }) => {
   return (
     <Box sx={{ width: "100%", fontFamily: "Roboto, sans-serif" }}>
@@ -47,38 +56,38 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          py: { xs: 4, sm: 4.5 }, // more vertical padding
+          py: { xs: 4, sm: 4.5 },
           px: 1,
           cursor: "pointer",
-          transition: "background 0.3s",
-          "&:hover": {
-            "& .icon-button": {
-              bgcolor: "black",
-              color: "white",
-            },
-          },
         }}
       >
         <Typography
           variant="h5"
           sx={{
             fontWeight: 600,
-            fontSize: { xs: "1.5rem", sm: "1.75rem" }, // larger question text
+            fontSize: { xs: "1.5rem", sm: "1.75rem" },
+            color: isOpen ? palette.greyDark : palette.blueDark,
+            transition: "color 0.3s ease",
           }}
         >
           {item.question}
         </Typography>
 
         <IconButton
-          className="icon-button"
           sx={{
-            bgcolor: "gray.300",
-            color: "gray.800",
             width: 48,
             height: 48,
+            borderRadius: "50%",
+            border: `2px solid ${
+              isOpen ? palette.greyLight : palette.blueDark
+            }`,
+            color: isOpen ? palette.greyDark : palette.blueDark,
+            bgcolor: isOpen ? palette.greyLight : "transparent",
+            transition: "all 0.3s ease",
             "&:hover": {
-              bgcolor: "black",
-              color: "white",
+              bgcolor: isOpen ? palette.greyLight : palette.blueLight,
+              color: "#fff",
+              borderColor: isOpen ? palette.greyLight : palette.blueLight,
             },
           }}
         >
@@ -90,8 +99,8 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
         <Typography
           sx={{
             py: 2,
-            color: "gray.700",
-            fontSize: { xs: "1.25rem", sm: "1.35rem" }, // larger answer text
+            color: palette.greyDark,
+            fontSize: { xs: "1.25rem", sm: "1.35rem" },
             lineHeight: 1.9,
           }}
         >
@@ -99,12 +108,12 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
         </Typography>
       </Collapse>
 
-      <Divider sx={{ borderColor: "gray.300" }} />
+      <Divider sx={{ borderColor: palette.greyLight }} />
     </Box>
   );
 };
 
-// Main Accordion Component
+/* ===== MAIN ACCORDION ===== */
 const Accordion = () => {
   const [openItems, setOpenItems] = useState([]);
 
@@ -118,25 +127,26 @@ const Accordion = () => {
     <Box
       sx={{
         width: "100%",
-        maxWidth: "1000px", // bigger accordion width
+        maxWidth: "1000px",
         mx: "auto",
-        mt: 12,
+        mt: 2,
         mb: 12,
         px: 2,
         fontFamily: "Roboto, sans-serif",
       }}
     >
-      <Typography
+      {/* <Typography
         variant="h3"
         sx={{
           fontWeight: 700,
           mb: 8,
           textAlign: "center",
-          fontSize: { xs: "2.25rem", sm: "2.75rem", md: "3.25rem" }, // bigger FAQ title
+          fontSize: { xs: "2.25rem", sm: "2.75rem", md: "3.25rem" },
+          color: palette.charcoal,
         }}
       >
         Frequently Asked Questions
-      </Typography>
+      </Typography> */}
 
       {faqData.map((item) => (
         <AccordionItem
