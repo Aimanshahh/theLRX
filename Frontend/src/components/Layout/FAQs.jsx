@@ -16,33 +16,51 @@ const palette = {
 const faqData = [
   {
     id: 1,
-    question: "What is Hims/Hers?",
+    question: "How does the online consultation process work?",
     answer:
-      "Hims & Hers is a telehealth platform focused on health and wellness. It connects you with licensed medical providers for consultation, diagnosis, and prescription fulfillment.",
+      "Our streamlined process begins with a detailed health assessment questionnaire reviewed by licensed medical providers. Following evaluation, you may receive personalized treatment recommendations, prescription fulfillment when clinically appropriate, and continuous support through our secure messaging platform for efficient, confidential care management.",
   },
   {
     id: 2,
-    question: "How does online consultation work?",
+    question: "Who are the healthcare providers on the platform?",
     answer:
-      "You fill out a questionnaire, a licensed provider reviews it asynchronously, and may send prescriptions or message you for follow-up. Efficient, private care.",
+      "All medical consultations are conducted by board-certified physicians, licensed nurse practitioners, and physician assistants who maintain active state licensure. Our providers specialize in preventive health, hormone optimization, metabolic health, and comprehensive wellness management, ensuring clinical excellence in every interaction.",
   },
   {
     id: 3,
-    question: "Who are the providers?",
+    question: "Are services covered by insurance?",
     answer:
-      "All consultations are done by licensed physicians, nurse practitioners, or physician assistants licensed in your state.",
+      "Our platform operates primarily on a direct-pay model with transparent, subscription-based pricing, making high-quality healthcare accessible without insurance barriers. Some lab testing services may be eligible for insurance reimbursement, and our team can provide documentation to support potential claims.",
   },
   {
     id: 4,
-    question: "Do Hims/Hers services require insurance?",
+    question: "How are medication quality and safety ensured?",
     answer:
-      "No, most services are direct-pay or subscription-based, affordable without insurance.",
+      "All partner pharmacies and compounding facilities maintain full state licensure, adhere to FDA guidelines, and follow rigorous quality control standards. We partner exclusively with facilities that implement strict sterility testing, potency verification, and comprehensive quality assurance protocols.",
   },
   {
     id: 5,
-    question: "Are partner pharmacies FDA regulated?",
+    question: "What types of health conditions do you address?",
     answer:
-      "Yes, all partner pharmacies are licensed, regulated, and adhere to strict safety and quality standards.",
+      "We focus on preventive health, chronic condition management, hormone balance, metabolic health, sexual wellness, and overall wellness optimization. Our approach combines evidence-based medicine with personalized treatment plans tailored to individual health goals and needs.",
+  },
+  {
+    id: 6,
+    question: "How does LiquidRX ensure patient privacy and data security?",
+    answer:
+      "We implement HIPAA-compliant encryption protocols, secure data storage, and strict access controls to protect patient information. All consultations and communications occur through our encrypted platform, ensuring complete confidentiality and compliance with healthcare privacy regulations.",
+  },
+  {
+    id: 7,
+    question: "What is the typical timeframe for treatment plan development?",
+    answer:
+      "Initial consultations are typically reviewed within 24-48 hours. Comprehensive treatment plans that require lab analysis may take 3-5 business days. Our providers prioritize thorough evaluation to ensure safe, effective recommendations based on complete health assessment.",
+  },
+  {
+    id: 8,
+    question: "Can I continue seeing my primary care physician while using your services?",
+    answer:
+      "Absolutely. Our services are designed to complement, not replace, your existing healthcare relationships. We encourage coordination with your primary care provider and can share relevant health information with your consent to ensure comprehensive, integrated care.",
   },
 ];
 
@@ -81,7 +99,7 @@ const AccordionItem = ({ item, isOpen, onClick }) => {
             border: `2px solid ${
               isOpen ? palette.greyLight : palette.blueDark
             }`,
-            color: isOpen ? palette.greyDark : palette.blueDark,
+            color: isOpen ? palette.greyLight : palette.blueDark,
             bgcolor: isOpen ? palette.greyLight : "transparent",
             transition: "all 0.3s ease",
             "&:hover": {
@@ -135,19 +153,6 @@ const Accordion = () => {
         fontFamily: "Roboto, sans-serif",
       }}
     >
-      {/* <Typography
-        variant="h3"
-        sx={{
-          fontWeight: 700,
-          mb: 8,
-          textAlign: "center",
-          fontSize: { xs: "2.25rem", sm: "2.75rem", md: "3.25rem" },
-          color: palette.charcoal,
-        }}
-      >
-        Frequently Asked Questions
-      </Typography> */}
-
       {faqData.map((item) => (
         <AccordionItem
           key={item.id}

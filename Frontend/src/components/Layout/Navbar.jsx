@@ -150,8 +150,7 @@ const exploreItems = [
 const meetLRXLinks = [
   { label: "About Us", path: "/about-us" },               // Changed from "/AboutUs"
   { label: "FAQs", path: "/faqs" },                       // Changed from "/FAQspage"
-  { label: "How It Works", path: "/how-it-works" },       // Changed from "/Howitworks"
-  { label: "Blog", path: "/blog" },                       // Changed from "/Blog"
+  { label: "How It Works", path: "/how-it-works" },       // Changed from "/Howitworks"                 // Changed from "/Blog"
   { label: "Medical Experts", path: "/medical-experts" }, // Changed from "/Medicalexperts"
 ];
   // Responsive dropdown width

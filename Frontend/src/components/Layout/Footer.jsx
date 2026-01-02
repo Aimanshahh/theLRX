@@ -12,7 +12,6 @@ const LRX_ROUTES = {
   "About Us": "/about-us",
   "How it Works": "/how-it-works",
   "Medical Experts": "/medical-experts",
-  "Blog": "/blog",
   "Frequently Asked Questions": "/faqs",
 };
 
@@ -226,7 +225,6 @@ export default function Footer() {
               "About Us",
               "How it Works",
               "Medical Experts",
-              "Blog",
               "Frequently Asked Questions",
             ]}
             routes={LRX_ROUTES}

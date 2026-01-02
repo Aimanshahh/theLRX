@@ -740,19 +740,21 @@ const TerzepatideInjectablePage = () => {
               </Typography>
 
               {/* Primary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.1rem", md: "1.25rem" },
-                  lineHeight: 2.1,
-                  color: colors.darkGrey,
-                  textAlign: "center",
-                  fontWeight: 400,
-                }}
-              >
-                Terzepatide is a first-in-class dual GLP-1 and GIP receptor agonist that provides 
-                superior weight loss and glycemic control by targeting multiple metabolic pathways 
-                through weekly subcutaneous injection.
-              </Typography>
+             <Typography
+  sx={{
+    fontSize: { xs: "1.1rem", md: "1.25rem" },
+    lineHeight: 2.1,
+    color: colors.darkGrey,
+    textAlign: "center",
+    fontWeight: 400,
+  }}
+>
+  Tirzepatide is a dual GLP-1 and GIP receptor agonist designed to engage multiple hormonal
+  pathways involved in metabolic regulation. Its dual-receptor activity and injectable
+  delivery method are being studied to better understand their pharmacologic effects and
+  clinical considerations under the supervision of a licensed healthcare provider.
+</Typography>
+
 
               {/* Divider */}
               <Box
@@ -768,18 +770,19 @@ const TerzepatideInjectablePage = () => {
               />
 
               {/* Secondary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  lineHeight: 1.95,
-                  color: alpha(colors.black, 0.75),
-                  textAlign: "center",
-                }}
-              >
-                Clinical studies demonstrate significantly greater weight reduction compared to 
-                single agonists, making it the most effective injectable therapy for comprehensive 
-                metabolic management.
-              </Typography>
+             <Typography
+  sx={{
+    fontSize: { xs: "1.05rem", md: "1.15rem" },
+    lineHeight: 1.95,
+    color: alpha(colors.black, 0.75),
+    textAlign: "center",
+  }}
+>
+  Tirzepatide continues to be evaluated in clinical research settings to assess its safety
+  profile and its impact on metabolic-related parameters. Ongoing treatment decisions,
+  monitoring, and follow-up should occur only with appropriate medical oversight.
+</Typography>
+
             </Box>
           </motion.div>
         </Container>

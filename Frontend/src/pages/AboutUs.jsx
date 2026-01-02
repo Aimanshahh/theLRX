@@ -31,8 +31,8 @@ export default function AboutUs() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // CardBlock component - Made responsive
-  const CardBlock = ({ title, image, gradient, size = "large" }) => {
+  // Updated CardBlock component with 0.5px gap and enhanced styling
+  const CardBlock = ({ title, image, size = "large" }) => {
     const isLarge = size === "large";
 
     return (
@@ -42,16 +42,18 @@ export default function AboutUs() {
           borderRadius: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
           overflow: "hidden",
           height: { 
-            xs: isLarge ? "220px" : "160px", 
-            sm: isLarge ? "280px" : "180px", 
-            md: isLarge ? "320px" : "200px", 
-            lg: isLarge ? "360px" : "220px" 
+            xs: isLarge ? "280px" : "200px", 
+            sm: isLarge ? "350px" : "220px", 
+            md: isLarge ? "400px" : "250px", 
+            lg: isLarge ? "450px" : "280px" 
           },
           width: "100%",
-          background: gradient,
+          backgroundColor: "#B0C4DE",
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "flex-start",
+          // Remove margin to eliminate gaps
+          margin: 0,
         }}
       >
         {/* IMAGE */}
@@ -71,40 +73,46 @@ export default function AboutUs() {
           }}
         />
 
-        {/* TITLE */}
+        {/* TITLE - Enhanced with better font and styling */}
         <Typography
           sx={{
             position: "absolute",
             top: { 
-              xs: isLarge ? 16 : 12, 
-              sm: isLarge ? 20 : 14, 
-              md: isLarge ? 24 : 16, 
-              lg: isLarge ? 26 : 18 
+              xs: isLarge ? 20 : 16, 
+              sm: isLarge ? 24 : 18, 
+              md: isLarge ? 28 : 20, 
+              lg: isLarge ? 32 : 22 
             },
             left: { 
-              xs: isLarge ? 16 : 12, 
-              sm: isLarge ? 20 : 14, 
-              md: isLarge ? 24 : 16, 
-              lg: isLarge ? 26 : 18 
+              xs: isLarge ? 20 : 16, 
+              sm: isLarge ? 24 : 18, 
+              md: isLarge ? 28 : 20, 
+              lg: isLarge ? 32 : 22 
             },
             fontSize: { 
-              xs: isLarge ? "20px" : "16px", 
-              sm: isLarge ? "24px" : "18px", 
-              md: isLarge ? "28px" : "20px", 
-              lg: isLarge ? "32px" : "22px" 
+              xs: isLarge ? "24px" : "20px", 
+              sm: isLarge ? "28px" : "22px", 
+              md: isLarge ? "32px" : "24px", 
+              lg: isLarge ? "36px" : "26px" 
             },
-            fontWeight: 700,
-            color: "#ffffff",
+            fontWeight: 900, // Increased to 900 for bolder text
+            color: "#000000",
             zIndex: 2,
             lineHeight: 1.05,
             maxWidth: { 
-              xs: isLarge ? "160px" : "120px", 
-              sm: isLarge ? "200px" : "150px", 
-              md: isLarge ? "220px" : "160px", 
-              lg: isLarge ? "240px" : "180px" 
+              xs: isLarge ? "180px" : "140px", 
+              sm: isLarge ? "220px" : "160px", 
+              md: isLarge ? "260px" : "180px", 
+              lg: isLarge ? "300px" : "200px" 
             },
-            textShadow: "0px 3px 6px rgba(0,0,0,0.25)",
-            fontFamily: `"Inter", sans-serif`,
+            fontFamily: `"Montserrat", "Inter", sans-serif`, // Changed to Montserrat for better impact
+            letterSpacing: "-0.02em",
+            textTransform: "uppercase", // Make all titles uppercase
+            // Enhanced text styling without white shadow
+            background: "linear-gradient(180deg, #000000 0%, #333333 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
           }}
         >
           {title}
@@ -200,10 +208,10 @@ export default function AboutUs() {
         >
           {[
             { label: 'Home', path: '/' },
-  { label: "FAQs", path: "/faqs" },                       // Changed from "/FAQspage"
-  { label: "How It Works", path: "/how-it-works" },       // Changed from "/Howitworks"
-  { label: "Blog", path: "/blog" },                       // Changed from "/Blog"
-  { label: "Medical Experts", path: "/medical-experts" }, // Changed from "/Medicalexperts"
+            { label: "FAQs", path: "/faqs" },
+            { label: "How It Works", path: "/how-it-works" },
+            { label: "Blog", path: "/blog" },
+            { label: "Medical Experts", path: "/medical-experts" },
           ].map((link) => (
             <Typography
               key={link.label}
@@ -375,383 +383,383 @@ export default function AboutUs() {
         } 
       }}>
         {/* ====== UPPER BLUE SECTION ====== */}
-   <Box
-  sx={{
-    width: "100%",
-    height: { 
-      xs: "300px", 
-      sm: "380px", 
-      md: "480px", 
-      lg: "550px",
-      xl: "650px" 
-    },
-    background: "linear-gradient(75deg, #747578, #00359E, #8B8D8E, #003B9D)",
-    backgroundSize: "300% 300%",
-    animation: "gradientMove 12s ease infinite",
-    position: "relative",
-    display: "flex",
-    justifyContent: "center",
-    paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "100px" },
-    zIndex: 10,
-    overflow: "hidden",
-  }}
->
-  {/* ====== STATIC TEXT - POSITIONED MUCH HIGHER ====== */}
-  <Typography
-    sx={{
-      position: "absolute",
-      top: { 
-        xs: "40px", // Much higher (was 80px)
-        sm: "60px", // Much higher (was 100px)
-        md: "80px", // Much higher (was 120px)
-        lg: "100px", // Much higher (was 140px)
-        xl: "120px"  // Much higher (was 160px)
-      },
-      left: "50%",
-      transform: "translateX(-50%)",
-      color: "#FFFFFF",
-      fontWeight: 900,
-      textAlign: "center",
-      textTransform: "uppercase",
-      letterSpacing: { 
-        xs: "1px", 
-        sm: "1.5px", 
-        md: "2px", 
-        lg: "2.5px",
-        xl: "3px" 
-      },
-      zIndex: 1050,
-      fontSize: { 
-        xs: "1.8rem", 
-        sm: "2.4rem", 
-        md: "3.2rem", 
-        lg: "3.8rem",
-        xl: "4.4rem" 
-      },
-      textShadow: "0 4px 8px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5)",
-      whiteSpace: { xs: "normal", sm: "nowrap" },
-      width: "95%",
-      maxWidth: "1200px",
-      lineHeight: { xs: 1.2, sm: 1.1 },
-      px: { xs: 2, sm: 3 },
-      fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
-    }}
-  >
-    Experience the Power of
-  </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            height: { 
+              xs: "300px", 
+              sm: "380px", 
+              md: "480px", 
+              lg: "550px",
+              xl: "650px" 
+            },
+            background: "linear-gradient(75deg, #747578, #00359E, #8B8D8E, #003B9D)",
+            backgroundSize: "300% 300%",
+            animation: "gradientMove 12s ease infinite",
+            position: "relative",
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "100px" },
+            zIndex: 10,
+            overflow: "hidden",
+          }}
+        >
+          {/* ====== STATIC TEXT - POSITIONED MUCH HIGHER ====== */}
+          <Typography
+            sx={{
+              position: "absolute",
+              top: { 
+                xs: "40px",
+                sm: "60px",
+                md: "80px",
+                lg: "100px",
+                xl: "120px"
+              },
+              left: "50%",
+              transform: "translateX(-50%)",
+              color: "#FFFFFF",
+              fontWeight: 900,
+              textAlign: "center",
+              textTransform: "uppercase",
+              letterSpacing: { 
+                xs: "1px", 
+                sm: "1.5px", 
+                md: "2px", 
+                lg: "2.5px",
+                xl: "3px" 
+              },
+              zIndex: 1050,
+              fontSize: { 
+                xs: "1.8rem", 
+                sm: "2.4rem", 
+                md: "3.2rem", 
+                lg: "3.8rem",
+                xl: "4.4rem" 
+              },
+              textShadow: "0 4px 8px rgba(0,0,0,0.7), 0 6px 20px rgba(0,0,0,0.5)",
+              whiteSpace: { xs: "normal", sm: "nowrap" },
+              width: "95%",
+              maxWidth: "1200px",
+              lineHeight: { xs: 1.2, sm: 1.1 },
+              px: { xs: 2, sm: 3 },
+              fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
+            }}
+          >
+            Experience the Power of
+          </Typography>
 
-  {/* ====== SCROLLING TEXT - ADJUSTED POSITION ====== */}
-  <Box
-    sx={{
-      position: "absolute",
-      bottom: { 
-        xs: "60px", // Adjusted up slightly
-        sm: "80px", // Adjusted up slightly
-        md: "100px", // Adjusted up slightly
-        lg: "120px", // Adjusted up slightly
-        xl: "140px"  // Adjusted up slightly
-      },
-      left: 0,
-      right: 0,
-      zIndex: 900,
-      overflow: "hidden",
-      whiteSpace: "nowrap",
-    }}
-  >
-    <Box
-      sx={{
-        display: "inline-block",
-        animation: "scrollSmooth 25s linear infinite",
-        color: "rgba(255,255,255,0.25)",
-        fontSize: { 
-          xs: "14px", 
-          sm: "16px", 
-          md: "20px", 
-          lg: "24px",
-          xl: "28px" 
-        },
-        fontWeight: { xs: 800, md: 900 },
-        letterSpacing: { 
-          xs: "2px", 
-          sm: "3px", 
-          md: "4px", 
-          lg: "6px",
-          xl: "7px" 
-        },
-        textTransform: "uppercase",
-        paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
-        lineHeight: 1.2,
-      }}
-    >
-      WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
-    </Box>
-    
-    <Box
-      sx={{
-        display: "inline-block",
-        animation: "scrollSmooth 25s linear infinite",
-        color: "rgba(255,255,255,0.25)",
-        fontSize: { 
-          xs: "14px", 
-          sm: "16px", 
-          md: "20px", 
-          lg: "24px",
-          xl: "28px" 
-        },
-        fontWeight: { xs: 800, md: 900 },
-        letterSpacing: { 
-          xs: "2px", 
-          sm: "3px", 
-          md: "4px", 
-          lg: "6px",
-          xl: "7px" 
-        },
-        textTransform: "uppercase",
-        paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
-        lineHeight: 1.2,
-      }}
-    >
-      WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
-    </Box>
-  </Box>
+          {/* ====== SCROLLING TEXT - ADJUSTED POSITION ====== */}
+          <Box
+            sx={{
+              position: "absolute",
+              bottom: { 
+                xs: "60px",
+                sm: "80px",
+                md: "100px",
+                lg: "120px",
+                xl: "140px"
+              },
+              left: 0,
+              right: 0,
+              zIndex: 900,
+              overflow: "hidden",
+              whiteSpace: "nowrap",
+            }}
+          >
+            <Box
+              sx={{
+                display: "inline-block",
+                animation: "scrollSmooth 25s linear infinite",
+                color: "rgba(255,255,255,0.25)",
+                fontSize: { 
+                  xs: "14px", 
+                  sm: "16px", 
+                  md: "20px", 
+                  lg: "24px",
+                  xl: "28px" 
+                },
+                fontWeight: { xs: 800, md: 900 },
+                letterSpacing: { 
+                  xs: "2px", 
+                  sm: "3px", 
+                  md: "4px", 
+                  lg: "6px",
+                  xl: "7px" 
+                },
+                textTransform: "uppercase",
+                paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+                lineHeight: 1.2,
+              }}
+            >
+              WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
+            </Box>
+            
+            <Box
+              sx={{
+                display: "inline-block",
+                animation: "scrollSmooth 25s linear infinite",
+                color: "rgba(255,255,255,0.25)",
+                fontSize: { 
+                  xs: "14px", 
+                  sm: "16px", 
+                  md: "20px", 
+                  lg: "24px",
+                  xl: "28px" 
+                },
+                fontWeight: { xs: 800, md: 900 },
+                letterSpacing: { 
+                  xs: "2px", 
+                  sm: "3px", 
+                  md: "4px", 
+                  lg: "6px",
+                  xl: "7px" 
+                },
+                textTransform: "uppercase",
+                paddingRight: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+                lineHeight: 1.2,
+              }}
+            >
+              WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
+            </Box>
+          </Box>
 
-  {/* ====== MAN IMAGE ====== */}
-  <Box
-    component="img"
-    src={manImg}
-    alt="Man"
-    sx={{
-      position: "absolute",
-      bottom: 0,
-      height: { 
-        xs: "200px", 
-        sm: "250px", 
-        md: "320px", 
-        lg: "380px",
-        xl: "450px" 
-      },
-      zIndex: 1000,
-      pointerEvents: "none",
-      userSelect: "none",
-      width: "auto",
-      maxWidth: "100%",
-      objectFit: "contain",
-    }}
-  />
-</Box>
+          {/* ====== MAN IMAGE ====== */}
+          <Box
+            component="img"
+            src={manImg}
+            alt="Man"
+            sx={{
+              position: "absolute",
+              bottom: 0,
+              height: { 
+                xs: "200px", 
+                sm: "250px", 
+                md: "320px", 
+                lg: "380px",
+                xl: "450px" 
+              },
+              zIndex: 1000,
+              pointerEvents: "none",
+              userSelect: "none",
+              width: "auto",
+              maxWidth: "100%",
+              objectFit: "contain",
+            }}
+          />
+        </Box>
 
         {/* ====== LARGER WHITE CONTENT SECTION ====== */}
-       <Box
-  sx={{
-    width: "100%",
-    backgroundColor: "#FFFFFF",
-    position: "relative",
-    zIndex: 20,
-    marginTop: { 
-      xs: "-30px", 
-      sm: "-40px", 
-      md: "-50px", 
-      lg: "-60px",
-      xl: "-70px" 
-    },
-    borderRadius: { 
-      xs: "30px 30px 0 0", 
-      sm: "40px 40px 0 0", 
-      md: "50px 50px 0 0",
-      lg: "60px 60px 0 0",
-      xl: "70px 70px 0 0"
-    },
-    boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
-    minHeight: { xs: "60vh", sm: "70vh", md: "80vh", lg: "90vh", xl: "100vh" },
-    display: "flex",
-    alignItems: "center",
-  }}
->
-  <Box
-    sx={{
-      width: "100%",
-      maxWidth: { 
-        xs: "90%", 
-        sm: "88%", 
-        md: "85%", 
-        lg: "80%", 
-        xl: "1200px" 
-      },
-      margin: "0 auto",
-      padding: { 
-        xs: "60px 0", 
-        sm: "80px 0", 
-        md: "100px 0", 
-        lg: "120px 0",
-        xl: "140px 0" 
-      },
-      textAlign: "center",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      minHeight: "100%",
-    }}
-  >
-    {/* Single Paragraph with Colored Words */}
-    <Typography
-      component="div"
-      sx={{
-        color: "#000000",
-        fontWeight: { xs: 700, sm: 800, md: 900 },
-        fontSize: { 
-          xs: "1.4rem",      
-          sm: "1.8rem",      
-          md: "2.2rem",      
-          lg: "2.8rem",
-          xl: "3.2rem"        
-        },
-        lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
-        maxWidth: { 
-          xs: "100%", 
-          sm: "95%", 
-          md: "90%", 
-          lg: "85%", 
-          xl: "80%" 
-        },
-        margin: "0 auto",
-        px: { xs: 1, sm: 2, md: 3 },
-        letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
-      }}
-    >
-      We're on a mission to help everyone{" "}
-      <Box 
-        component="span" 
-        sx={{ 
-          color: "#00359E", 
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        live a healthier, happier life
-      </Box>{" "}
-      through accessible, personalized healthcare that puts{" "}
-      <Box 
-        component="span" 
-        sx={{ 
-          color: "#00359E", 
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        you first
-      </Box>{" "}
-      and makes feeling better{" "}
-      <Box 
-        component="span" 
-        sx={{ 
-          color: "#00359E", 
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        easier than ever.
-      </Box>
-    </Typography>
-    
-    {/* Optional decorative element or spacing */}
-    <Box
-      sx={{
-        mt: { xs: 4, sm: 6, md: 8, lg: 10 },
-        width: "60px",
-        height: "4px",
-        backgroundColor: "#00359E",
-        margin: "0 auto",
-        borderRadius: "2px",
-      }}
-    />
-  </Box>
-</Box>
+        <Box
+          sx={{
+            width: "100%",
+            backgroundColor: "#FFFFFF",
+            position: "relative",
+            zIndex: 20,
+            marginTop: { 
+              xs: "-30px", 
+              sm: "-40px", 
+              md: "-50px", 
+              lg: "-60px",
+              xl: "-70px" 
+            },
+            borderRadius: { 
+              xs: "30px 30px 0 0", 
+              sm: "40px 40px 0 0", 
+              md: "50px 50px 0 0",
+              lg: "60px 60px 0 0",
+              xl: "70px 70px 0 0"
+            },
+            boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
+            minHeight: { xs: "60vh", sm: "70vh", md: "80vh", lg: "90vh", xl: "100vh" },
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: { 
+                xs: "90%", 
+                sm: "88%", 
+                md: "85%", 
+                lg: "80%", 
+                xl: "1200px" 
+              },
+              margin: "0 auto",
+              padding: { 
+                xs: "60px 0", 
+                sm: "80px 0", 
+                md: "100px 0", 
+                lg: "120px 0",
+                xl: "140px 0" 
+              },
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "100%",
+            }}
+          >
+            {/* Single Paragraph with Colored Words */}
+            <Typography
+              component="div"
+              sx={{
+                color: "#000000",
+                fontWeight: { xs: 700, sm: 800, md: 900 },
+                fontSize: { 
+                  xs: "1.4rem",      
+                  sm: "1.8rem",      
+                  md: "2.2rem",      
+                  lg: "2.8rem",
+                  xl: "3.2rem"        
+                },
+                lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
+                maxWidth: { 
+                  xs: "100%", 
+                  sm: "95%", 
+                  md: "90%", 
+                  lg: "85%", 
+                  xl: "80%" 
+                },
+                margin: "0 auto",
+                px: { xs: 1, sm: 2, md: 3 },
+                letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
+              }}
+            >
+              We're on a mission to help everyone{" "}
+              <Box 
+                component="span" 
+                sx={{ 
+                  color: "#00359E", 
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                live a healthier, happier life
+              </Box>{" "}
+              through accessible, personalized healthcare that puts{" "}
+              <Box 
+                component="span" 
+                sx={{ 
+                  color: "#00359E", 
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                you first
+              </Box>{" "}
+              and makes feeling better{" "}
+              <Box 
+                component="span" 
+                sx={{ 
+                  color: "#00359E", 
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                easier than ever.
+              </Box>
+            </Typography>
+            
+            {/* Optional decorative element or spacing */}
+            <Box
+              sx={{
+                mt: { xs: 4, sm: 6, md: 8, lg: 10 },
+                width: "60px",
+                height: "4px",
+                backgroundColor: "#00359E",
+                margin: "0 auto",
+                borderRadius: "2px",
+              }}
+            />
+          </Box>
+        </Box>
 
         {/* ====== VIDEO SECTION ====== */}
         <Box
-  sx={{
-    width: "100%",
-    position: "relative",
-    backgroundColor: "#FFFFFF",
-    paddingTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
-    paddingBottom: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
-  }}
->
-  {/* Video Container */}
-  <Box
-    sx={{
-      width: "100%",
-      borderRadius: 0,
-      overflow: "hidden",
-      position: "relative",
-      height: { 
-        xs: "250px", 
-        sm: "350px", 
-        md: "450px", 
-        lg: "550px",
-        xl: "650px" 
-      },
-    }}
-  >
-    {/* Video Element */}
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-      }}
-    >
-      <source src={videoFile} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+          sx={{
+            width: "100%",
+            position: "relative",
+            backgroundColor: "#FFFFFF",
+            paddingTop: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
+            paddingBottom: { xs: "40px", sm: "60px", md: "80px", lg: "100px", xl: "120px" },
+          }}
+        >
+          {/* Video Container */}
+          <Box
+            sx={{
+              width: "100%",
+              borderRadius: 0,
+              overflow: "hidden",
+              position: "relative",
+              height: { 
+                xs: "250px", 
+                sm: "350px", 
+                md: "450px", 
+                lg: "550px",
+                xl: "650px" 
+              },
+            }}
+          >
+            {/* Video Element */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                display: "block",
+              }}
+            >
+              <source src={videoFile} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-    {/* Overlay Text */}
-    <Box
-      sx={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.3)", // Darker overlay for better contrast
-        px: { xs: 2, sm: 3 },
-      }}
-    >
-      <Typography
-        sx={{
-          color: "#FFFFFF",
-          fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 }, // Much bolder
-          fontSize: { 
-            xs: "1.8rem",  // Larger on all sizes
-            sm: "2.5rem", 
-            md: "3.2rem", 
-            lg: "4rem",
-            xl: "4.5rem" 
-          },
-          textAlign: "center",
-          textTransform: "uppercase",
-          letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
-          lineHeight: 1,
-          px: { xs: 2, sm: 3, md: 4 },
-          textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)", // Text shadow for better readability
-          fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif", // Clean bold font
-          padding: "12px 20px",
-          borderRadius: "4px",
-        }}
-      >
-        THE LRX WAS BUILT FOR YOU
-      </Typography>
-    </Box>
-  </Box>
-</Box>
+            {/* Overlay Text */}
+            <Box
+              sx={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.3)",
+                px: { xs: 2, sm: 3 },
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#FFFFFF",
+                  fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 },
+                  fontSize: { 
+                    xs: "1.8rem",
+                    sm: "2.5rem", 
+                    md: "3.2rem", 
+                    lg: "4rem",
+                    xl: "4.5rem" 
+                  },
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
+                  lineHeight: 1,
+                  px: { xs: 2, sm: 3, md: 4 },
+                  textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)",
+                  fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
+                  padding: "12px 20px",
+                  borderRadius: "4px",
+                }}
+              >
+                THE LRX WAS BUILT FOR YOU
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
 
         {/* ====== HIMS STYLE ABOUT SECTION ====== */}
         <Box
@@ -829,111 +837,71 @@ export default function AboutUs() {
           </Typography>
         </Box>
 
-        {/* ====== MOSAIC CARDS SECTION ====== */}
-       <Box
-  sx={{
-    width: "100%",
-    maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
-    mx: "auto",
-    display: "grid",
-    gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-    gap: { xs: 2, sm: 2.5, md: 2 },
-    px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 4, sm: 5, md: 6 },
-    alignItems: "stretch",
-  }}
->
-  {/* LEFT COLUMN */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateRows: "auto auto auto",
-      gap: { xs: 1.5, sm: 2, md: 0.5 },
-    }}
-  >
-    <CardBlock
-      title="Sexual performance"
-      image={img1}
-      gradient="linear-gradient(135deg, #E9F0FF 0%, #EEF4FF 100%)"
-      size="large"
-    />
+        {/* ====== MOSAIC CARDS SECTION WITH 0.5px GAP ====== */}
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
+            mx: "auto",
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            gap: "4px", // 0.5px gap between columns
+            px: { xs: 2, sm: 3, md: 4 },
+            pb: { xs: 4, sm: 5, md: 6 },
+            alignItems: "stretch",
+            backgroundColor: "#FFFFFF", // Background color to show the gap
+          }}
+        >
+          {/* LEFT COLUMN */}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateRows: "auto auto auto",
+              gap: "4px", // 0.5px gap between cards in left column
+              backgroundColor: "#FFFFFF", // Background to show gaps
+            }}
+          >
+            <CardBlock
+              title="Sexual performance"
+              image={img1}
+              size="large"
+            />
 
-    <CardBlock
-      title="Skin care"
-      image={img3}
-      gradient="linear-gradient(135deg, #F5F6F7 0%, #E8E9EA 100%)"
-      size="small"
-    />
+            <CardBlock
+              title="Skin care"
+              image={img3}
+              size="small"
+            />
 
-    <CardBlock
-      title="Mental health"
-      image={img4}
-      gradient="linear-gradient(135deg, #EEF3FF 0%, #F7F8FF 100%)"
-      size="small"
-    />
-  </Box>
+            <CardBlock
+              title="Mental health"
+              image={img4}
+              size="small"
+            />
+          </Box>
 
-  {/* RIGHT COLUMN */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateRows: "auto 1fr", // 🔥 THIS MAKES TALL CARD FILL SPACE
-      gap: { xs: 1.5, sm: 2, md: 0.5 },
-    }}
-  >
-    <CardBlock
-      title="Weight loss"
-      image={img2}
-      gradient="linear-gradient(135deg, #FAFBFF 0%, #F0F2FF 100%)"
-      size="large"
-    />
+          {/* RIGHT COLUMN */}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateRows: "auto 1fr",
+              gap: "4px", // 0.5px gap between cards in right column
+              backgroundColor: "#FFFFFF", // Background to show gaps
+            }}
+          >
+            <CardBlock
+              title="Weight loss"
+              image={img2}
+              size="large"
+            />
 
-    {/* HAIR GROWTH – GUARANTEED TALL */}
-    <Box
-      sx={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        borderRadius: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
-        overflow: "hidden",
-        background: "linear-gradient(135deg, #E9F0FF 0%, #FAFBFF 100%)",
-      }}
-    >
-      <Box
-        component="img"
-        src={img5}
-        alt="Hair growth"
-        sx={{
-          position: "absolute",
-          inset: 0,
-          height: "100%",
-          width: "auto",
-          marginLeft: "auto",
-          objectFit: "contain",
-          zIndex: 1,
-        }}
-      />
-
-      <Typography
-        sx={{
-          position: "absolute",
-          top: { xs: 16, sm: 20, md: 22, lg: 24, xl: 26 },
-          left: { xs: 16, sm: 20, md: 22, lg: 24, xl: 26 },
-          fontSize: { xs: "20px", sm: "24px", md: "28px", lg: "30px", xl: "32px" },
-          fontWeight: 700,
-          color: "#ffffff",
-          lineHeight: 1.05,
-          maxWidth: { xs: "160px", sm: "200px", md: "220px", lg: "230px", xl: "240px" },
-          fontFamily: `"Inter", sans-serif`,
-          zIndex: 2,
-        }}
-      >
-        Hair growth
-      </Typography>
-    </Box>
-  </Box>
-</Box>
-
+            <CardBlock
+              title="Hair growth"
+              image={img5}
+              size="large"
+            />
+          </Box>
+        </Box>
 
         {/* ====== SUCCESS STANDARD SECTION ====== */}
         <Box
@@ -1311,4 +1279,4 @@ export default function AboutUs() {
       </style>
     </Box>
   );
-}
+}n

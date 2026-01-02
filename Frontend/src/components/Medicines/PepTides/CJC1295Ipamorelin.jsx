@@ -130,15 +130,15 @@ const CJC1295IpamorelinPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade CJC-1295 & Ipamorelin peptide blend</Box> is a revolutionary combination that synergistically stimulates natural growth hormone release for enhanced muscle growth, fat loss, and anti-aging benefits.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade CJC-1295 & Ipamorelin peptide blend</Box> is a compounded medication being studied for its potential to support growth hormone release. This combination is used under medical supervision to potentially support various wellness goals.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Stimulates natural GH release",
-                  "Promotes lean muscle growth",
-                  "Accelerates fat metabolism",
+                  "Growth hormone support being studied",
+                  "Potential muscle support",
+                  "Metabolic support research",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -172,12 +172,12 @@ const CJC1295IpamorelinPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Start Your Transformation - $199
+                Start Research Protocol - $199
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Synergistic Blend • Physician-Supervised
+              <CheckCircle size={14} color={palette.white} /> Compounded Medication • Medical Supervision • Research-Based
             </Typography>
           </motion.div>
 
@@ -192,7 +192,7 @@ const CJC1295IpamorelinPage = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Growth Hormone Secretagogue
+              Growth Hormone Research
             </Box>
           </motion.div>
         </Box>
@@ -251,17 +251,17 @@ const CJC1295IpamorelinPage = () => {
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  CJC-1295 is a growth hormone-releasing hormone (GHRH) analog that increases the duration of growth hormone pulses, while Ipamorelin is a growth hormone secretagogue (GHS) that stimulates GH release. Together, they create a synergistic effect that mimics the body's natural pulsatile GH secretion, promoting muscle growth, fat loss, and tissue repair.
+                  CJC-1295 is a growth hormone-releasing hormone (GHRH) analog that is being studied for its potential to extend growth hormone pulses, while Ipamorelin is a growth hormone secretagogue (GHS) being studied for GH release stimulation. Research continues to investigate their combined potential effects under medical supervision.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "CJC-1295 extends GH pulse duration by binding to GHRH receptors",
-                    "Ipamorelin selectively stimulates GH release without affecting cortisol or prolactin",
-                    "Synergistic effect mimics natural pulsatile GH secretion",
-                    "Promotes increased lean muscle mass and reduced body fat",
-                    "Enhances collagen synthesis for improved skin and joint health",
-                    "Supports cellular repair and anti-aging processes"
+                    "CJC-1295 being studied for GHRH receptor interaction",
+                    "Ipamorelin research focusing on selective GH stimulation",
+                    "Combination effects continue to be studied",
+                    "Potential support for various wellness goals under investigation",
+                    "Research on collagen synthesis support ongoing",
+                    "Cellular processes support being studied"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -353,7 +353,7 @@ const CJC1295IpamorelinPage = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Potential Benefits Being Studied
               </Typography>
               
               <Typography
@@ -366,9 +366,9 @@ const CJC1295IpamorelinPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Research on{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  Growth Hormone Optimization
+                  Growth Hormone Support
                 </Box>
               </Typography>
               
@@ -381,7 +381,7 @@ const CJC1295IpamorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Experience comprehensive rejuvenation through natural growth hormone stimulation
+                Ongoing research continues to investigate potential wellness support through growth hormone modulation
               </Typography>
             </Box>
           </motion.div>
@@ -390,26 +390,26 @@ const CJC1295IpamorelinPage = () => {
             {[
               {
                 icon: Dumbbell,
-                title: "Lean Muscle Growth",
-                description: "Increases protein synthesis & muscle mass",
+                title: "Muscle Support",
+                description: "Muscle support research ongoing",
                 color: palette.darkBlue,
               },
               {
                 icon: Flame,
-                title: "Fat Metabolism",
-                description: "Enhances lipolysis & reduces body fat",
+                title: "Metabolic Support",
+                description: "Metabolic processes under study",
                 color: palette.lightBlue,
               },
               {
                 icon: RefreshCw,
-                title: "Anti-Aging Effects",
-                description: "Promotes cellular repair & regeneration",
+                title: "Cellular Processes",
+                description: "Cellular support being researched",
                 color: palette.darkBlue,
               },
               {
                 icon: Brain,
-                title: "Cognitive Enhancement",
-                description: "Improves memory & mental clarity",
+                title: "Cognitive Research",
+                description: "Cognitive support studies ongoing",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -508,9 +508,9 @@ const CJC1295IpamorelinPage = () => {
               }}
             >
               {[
-                { value: "Synergistic", label: "Enhanced GH Release" },
-                { value: "Natural", label: "Mimics Body's Rhythm" },
-                { value: "Selective", label: "Minimal Side Effects" },
+                { value: "Research", label: "Ongoing Studies" },
+                { value: "Medical", label: "Supervision Required" },
+                { value: "Compounded", label: "Medication Status" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -558,7 +558,7 @@ const CJC1295IpamorelinPage = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Transform?
+                Ready to Learn More?
               </Typography>
               <Typography
                 sx={{
@@ -569,7 +569,7 @@ const CJC1295IpamorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands optimizing their growth hormone levels for peak performance
+                Consult with our medical team about research protocols under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -653,7 +653,7 @@ const CJC1295IpamorelinPage = () => {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Synergistic Blend
+                      Compounded Medication
                     </Box>
 
                     {/* Price Bar at Bottom */}
@@ -700,7 +700,7 @@ const CJC1295IpamorelinPage = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Peptide Therapy Kit
+                      Compounded Medication Kit
                     </Typography>
 
                     <Typography
@@ -722,13 +722,13 @@ const CJC1295IpamorelinPage = () => {
 
                     <Box sx={{ mb: 4 }}>
                       {[
-                        "CJC-1295 (2mg) & Ipamorelin (3mg) pharmaceutical-grade blend",
+                        "CJC-1295 (2mg) & Ipamorelin (3mg) compounded blend",
                         "Bacteriostatic water for injection",
                         "Sterile insulin syringes with ultra-fine needles",
                         "Comprehensive subcutaneous injection guide",
                         "Alcohol swabs and sharps container",
-                        "Personalized dosing protocol from our medical team",
-                        "Access to 24/7 clinical support"
+                        "Medical supervision and dosing guidance",
+                        "Access to clinical support team"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -787,7 +787,7 @@ const CJC1295IpamorelinPage = () => {
                   textAlign: "center",
                 }}
               >
-                Our synergistic peptide blend provides optimal growth hormone stimulation with minimal side effects. The combined action of CJC-1295 (extending GH pulses) and Ipamorelin (stimulating GH release) creates a powerful yet natural approach to hormone optimization.
+                This compounded medication is prepared in licensed compounding pharmacies. The combination continues to be studied for various potential applications under medical supervision.
               </Typography>
               
               <Typography
@@ -801,7 +801,7 @@ const CJC1295IpamorelinPage = () => {
                   textAlign: "center",
                 }}
               >
-                Manufactured in FDA-registered facilities following strict cGMP guidelines.
+                Manufactured following strict compounding pharmacy standards and quality controls.
               </Typography>
 
               <Box
@@ -819,7 +819,7 @@ const CJC1295IpamorelinPage = () => {
                     { label: "Active Ingredients", value: "CJC-1295 & Ipamorelin" },
                     { label: "Blend Ratio", value: "2mg : 3mg" },
                     { label: "Administration", value: "Subcutaneous" },
-                    { label: "Therapy Duration", value: "6-12 weeks" },
+                    { label: "Status", value: "Compounded Medication" },
                   ].map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                       <Box>
@@ -907,7 +907,7 @@ const CJC1295IpamorelinPage = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Protocol
+                Medical Protocol
               </Typography>
 
               <Typography
@@ -921,7 +921,7 @@ const CJC1295IpamorelinPage = () => {
                 >
                 Your Path to{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Peak Performance
+                  Medical Supervision
                 </Box>
               </Typography>
 
@@ -934,7 +934,7 @@ const CJC1295IpamorelinPage = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience comprehensive benefits through our physician-guided growth hormone optimization protocol
+                This compounded medication requires comprehensive medical evaluation and ongoing supervision
               </Typography>
             </Box>
           </motion.div>
@@ -952,28 +952,28 @@ const CJC1295IpamorelinPage = () => {
                 step: 1,
                 icon: Shield,
                 title: "Medical Evaluation",
-                description: "Comprehensive assessment of GH levels & health markers",
+                description: "Comprehensive health assessment required",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
                 title: "Personalized Protocol",
-                description: "Customized dosing schedule based on your goals",
+                description: "Individualized dosing under medical supervision",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Droplets,
-                title: "Daily Administration",
-                description: "Simple subcutaneous injection before bedtime",
+                title: "Supervised Administration",
+                description: "Medical guidance for administration",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: Activity,
-                title: "Optimal Results",
-                description: "Experience improved body composition & vitality",
+                title: "Ongoing Monitoring",
+                description: "Regular medical follow-up and monitoring",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1078,22 +1078,22 @@ const CJC1295IpamorelinPage = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                Timeline of{" "}
+                Medical Monitoring{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  Results
+                  Timeline
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                Growth hormone optimization provides cumulative benefits over time:
+                Comprehensive medical supervision is required throughout the protocol:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "2-4 weeks", improvement: "Improved sleep quality & energy levels", icon: Moon, color: palette.darkBlue },
-                  { time: "4-8 weeks", improvement: "Noticeable fat loss & muscle definition", icon: TrendingUp, color: palette.lightBlue },
-                  { time: "8-12 weeks", improvement: "Enhanced recovery & joint health", icon: RefreshCw, color: palette.darkBlue},
-                  { time: "3-6 months", improvement: "Optimal body recomposition & vitality", icon: Sparkles, color: palette.lightBlue },
+                  { time: "Initial Phase", improvement: "Baseline labs & medical evaluation", icon: Shield, color: palette.darkBlue },
+                  { time: "Early Monitoring", improvement: "Regular follow-up appointments", icon: Clock, color: palette.lightBlue },
+                  { time: "Ongoing Care", improvement: "Lab monitoring & dose adjustments", icon: RefreshCw, color: palette.darkBlue},
+                  { time: "Long-term", improvement: "Continuous medical supervision", icon: Activity, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1210,7 +1210,7 @@ const CJC1295IpamorelinPage = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Transformation
+                  Begin Medical Consultation
                 </Typography>
               </motion.div>
 
@@ -1224,13 +1224,13 @@ const CJC1295IpamorelinPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Optimize Your
+                Ready to Consult About
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Growth Hormone?
+                  Compounded Medications?
                 </Box>
               </Typography>
 
@@ -1244,8 +1244,8 @@ const CJC1295IpamorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Get your CJC-1295 / Ipamorelin blend therapy kit for $199.00. Includes medical consultation, 
-                personalized protocol, discreet delivery, and ongoing clinical support throughout your journey.
+                Schedule a medical consultation for $199.00. Includes comprehensive evaluation, 
+                medical supervision, and access to compounded medications under physician guidance.
               </Typography>
 
               <Box sx={{ 
@@ -1283,7 +1283,7 @@ const CJC1295IpamorelinPage = () => {
                       },
                     }}
                   >
-                    Start Therapy - $199.00
+                    Schedule Consultation - $199.00
                   </Button>
                 </motion.div>
 
@@ -1310,17 +1310,17 @@ const CJC1295IpamorelinPage = () => {
                       },
                     }}
                   >
-                    Schedule a confidential consultation with our hormone optimization specialists
+                    Schedule a confidential consultation with our medical team
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Comprehensive Lab Analysis" },
-                  { text: "Synergistic Peptide Blend" },
-                  { text: "Personalized Dosing Protocol" },
-                  { text: "Clinical Support Team Access" },
+                  { text: "Medical Evaluation Required" },
+                  { text: "Compounded Medication Access" },
+                  { text: "Physician Supervision" },
+                  { text: "Clinical Support Team" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1410,7 +1410,7 @@ const CJC1295IpamorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Requires Medical Supervision
+                      Compounded Medication
                     </Typography>
                     <Typography
                       sx={{
@@ -1422,7 +1422,7 @@ const CJC1295IpamorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not for Cancer Patients
+                       FDA-Approved
                     </Typography>
                     <Typography
                       sx={{
@@ -1434,7 +1434,7 @@ const CJC1295IpamorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Regular Monitoring Required
+                      Medical Supervision Required
                     </Typography>
                   </Box>
                   <Typography
@@ -1447,7 +1447,7 @@ const CJC1295IpamorelinPage = () => {
                       mx: "auto",
                     }}
                   >
-                    CJC-1295/Ipamorelin is a compounded medication that requires a prescription. It should not be used by individuals with active cancer or a history of cancer. May cause mild water retention, joint stiffness, or carpal tunnel symptoms in some individuals. Regular monitoring of IGF-1 levels is recommended. Not for use by pregnant or nursing women.
+                    CJC-1295/Ipamorelin is a compounded medication that requires a prescription and is  FDA-approved. It should not be used by individuals with active cancer or a history of cancer. Regular medical monitoring is required. May cause side effects including water retention, joint stiffness, or carpal tunnel symptoms. Not for use by pregnant or nursing women. Individual responses may vary and outcomes are not guaranteed.
                   </Typography>
                 </Box>
               </motion.div>

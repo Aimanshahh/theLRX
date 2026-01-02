@@ -130,15 +130,15 @@ const BPC157Page = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade BPC-157 (Body Protection Compound-157)</Box> is a revolutionary peptide that accelerates healing, reduces inflammation, and promotes tissue repair throughout the body.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade BPC-157 (Body Protection Compound-157)</Box> is a peptide compound being studied for its potential to support healing processes, modulate inflammation, and support tissue repair throughout the body.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Accelerates tissue healing & repair",
-                  "Powerful anti-inflammatory effects",
-                  "Supports gut & joint health",
+                  "Potential tissue healing support",
+                  "Inflammation modulation being studied",
+                  "Gut & joint health support",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -172,12 +172,12 @@ const BPC157Page = () => {
                   fontWeight: 700,
                 }}
               >
-                Accelerate Healing - $189
+                Support Healing Processes - $189
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Multi-System Healing • Research-Backed
+              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Research-Backed • Medical Supervision
             </Typography>
           </motion.div>
 
@@ -192,7 +192,7 @@ const BPC157Page = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Systemic Healing
+              Potential Systemic Effects
             </Box>
           </motion.div>
         </Box>
@@ -251,17 +251,17 @@ const BPC157Page = () => {
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  BPC-157 is a synthetic peptide derived from a protective protein found in human gastric juice. It promotes healing through multiple mechanisms including angiogenesis (formation of new blood vessels), collagen synthesis, and modulation of growth factor expression. Unlike localized treatments, BPC-157 exhibits systemic healing effects throughout the body.
+                  BPC-157 is a synthetic peptide derived from a protective protein found in human gastric juice. Clinical studies continue to investigate its potential to support healing through multiple mechanisms including angiogenesis (formation of new blood vessels), collagen synthesis, and modulation of growth factor expression. Unlike localized treatments, BPC-157 is being studied for potential systemic effects throughout the body.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Stimulates angiogenesis for improved blood flow to injured tissues",
-                    "Promotes collagen synthesis and connective tissue repair",
-                    "Modulates inflammatory cytokines to reduce inflammation",
-                    "Accelerates healing of tendons, ligaments, muscles, and nerves",
-                    "Protects and heals gastrointestinal lining (stomach and intestines)",
-                    "Exhibits systemic effects when administered via injection"
+                    "Being studied for angiogenesis to support blood flow to tissues",
+                    "Potential collagen synthesis and connective tissue support",
+                    "Inflammatory cytokine modulation being researched",
+                    "Tendon, ligament, muscle, and nerve support under investigation",
+                    "Gastrointestinal lining support being studied",
+                    "Potential systemic effects when administered via injection"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -353,7 +353,7 @@ const BPC157Page = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Potential Benefits
               </Typography>
               
               <Typography
@@ -366,7 +366,7 @@ const BPC157Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Potential Benefits of{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   BPC-157 Therapy
                 </Box>
@@ -381,7 +381,7 @@ const BPC157Page = () => {
                   mx: "auto",
                 }}
               >
-                Experience accelerated healing and reduced inflammation throughout your body
+                Support your body's natural processes with potential systemic effects
               </Typography>
             </Box>
           </motion.div>
@@ -390,26 +390,26 @@ const BPC157Page = () => {
             {[
               {
                 icon: HeartPulse,
-                title: "Tissue Repair",
-                description: "Accelerates healing of tendons & ligaments",
+                title: "Tissue Support",
+                description: "May support tendons & ligaments",
                 color: palette.darkBlue,
               },
               {
                 icon: Shield,
-                title: "Anti-Inflammatory",
-                description: "Reduces inflammation systemically",
+                title: "Inflammation Modulation",
+                description: "Inflammation support being studied",
                 color: palette.lightBlue,
               },
               {
                 icon: Bone,
                 title: "Joint Support",
-                description: "Promotes cartilage & joint health",
+                description: "May support cartilage & joint health",
                 color: palette.darkBlue,
               },
               {
                 icon: Brain,
                 title: "Gut-Brain Axis",
-                description: "Supports gastrointestinal health",
+                description: "Gastrointestinal support being studied",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -508,9 +508,9 @@ const BPC157Page = () => {
               }}
             >
               {[
-                { value: "Systemic", label: "Whole Body Effects" },
-                { value: "Angiogenesis", label: "New Blood Vessel Formation" },
-                { value: "Versatile", label: "Multiple Healing Pathways" },
+                { value: "Systemic", label: "Whole Body Effects Being Studied" },
+                { value: "Angiogenesis", label: "Blood Vessel Formation Research" },
+                { value: "Versatile", label: "Multiple Pathways Under Study" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -558,7 +558,7 @@ const BPC157Page = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Heal?
+                Ready to Begin?
               </Typography>
               <Typography
                 sx={{
@@ -569,7 +569,7 @@ const BPC157Page = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands experiencing accelerated recovery with BPC-157
+                Join others exploring BPC-157 under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -700,7 +700,7 @@ const BPC157Page = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Healing Peptide
+                      Research Peptide Compound
                     </Typography>
 
                     <Typography
@@ -727,7 +727,7 @@ const BPC157Page = () => {
                         "Sterile insulin syringes with ultra-fine needles",
                         "Comprehensive subcutaneous injection guide",
                         "Alcohol swabs and sharps container",
-                        "Personalized dosing protocol for healing optimization",
+                        "Personalized dosing protocol under medical supervision",
                         "Access to clinical support team for guidance"
                       ].map((feature, index) => (
                         <motion.div
@@ -787,7 +787,7 @@ const BPC157Page = () => {
                   textAlign: "center",
                 }}
               >
-                Our BPC-157 peptide is manufactured to the highest purity standards and provides systemic healing effects. Each 5mg vial provides multiple doses for comprehensive healing protocols targeting tendons, ligaments, joints, and gastrointestinal health.
+                Our BPC-157 peptide is manufactured to the highest purity standards and is being studied for potential systemic effects. Each 5mg vial provides multiple doses for research protocols with potential application for various tissues.
               </Typography>
               
               <Typography
@@ -818,7 +818,7 @@ const BPC157Page = () => {
                   {[
                     { label: "Active Ingredient", value: "BPC-157 (15 amino acids)" },
                     { label: "Strength", value: "5 mg" },
-                    { label: "Typical Dose", value: "200-300 mcg" },
+                    { label: "Typical Research Dose", value: "200-300 mcg" },
                     { label: "Administration", value: "Subcutaneous" },
                   ].map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
@@ -907,7 +907,7 @@ const BPC157Page = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Healing Protocol
+                Research Protocol
               </Typography>
 
               <Typography
@@ -921,7 +921,7 @@ const BPC157Page = () => {
                 >
                 Your Path to{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Accelerated Recovery
+                  Potential Recovery Support
                 </Box>
               </Typography>
 
@@ -934,7 +934,7 @@ const BPC157Page = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience comprehensive healing through our physician-guided BPC-157 therapy protocol
+                Support your recovery journey through our physician-guided BPC-157 research protocol
               </Typography>
             </Box>
           </motion.div>
@@ -952,28 +952,28 @@ const BPC157Page = () => {
                 step: 1,
                 icon: Shield,
                 title: "Medical Assessment",
-                description: "Evaluation of healing needs and injury assessment",
+                description: "Evaluation under medical supervision",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
                 title: "Personalized Protocol",
-                description: "Customized BPC-157 dosing for your specific needs",
+                description: "Customized BPC-157 dosing for research",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Droplets,
                 title: "Daily Administration",
-                description: "Simple subcutaneous injection for systemic effects",
+                description: "Subcutaneous injection as studied",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: RefreshCw,
-                title: "Enhanced Healing",
-                description: "Experience accelerated tissue repair and reduced inflammation",
+                title: "Potential Recovery Support",
+                description: "May support tissue repair processes under medical supervision",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1078,22 +1078,22 @@ const BPC157Page = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                Healing Timeline with{" "}
+                Potential Timeline with{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   BPC-157
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                BPC-157 provides progressive healing benefits over time:
+                BPC-157's potential timeline is being studied in research settings:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 1-2 weeks", improvement: "Reduced pain & inflammation", icon: Bandage, color: palette.darkBlue },
-                  { time: "2-4 weeks", improvement: "Improved mobility & function", icon: Activity, color: palette.lightBlue },
-                  { time: "4-8 weeks", improvement: "Tissue remodeling & strengthening", icon: Bone, color: palette.darkBlue},
-                  { time: "8-12 weeks", improvement: "Complete tissue repair", icon: HeartPulse, color: palette.lightBlue },
+                  { time: "Within 1-2 weeks", improvement: "Potential inflammation modulation", icon: Bandage, color: palette.darkBlue },
+                  { time: "2-4 weeks", improvement: "Potential mobility support", icon: Activity, color: palette.lightBlue },
+                  { time: "4-8 weeks", improvement: "Potential tissue support", icon: Bone, color: palette.darkBlue},
+                  { time: "8-12 weeks", improvement: "Potential ongoing support", icon: HeartPulse, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1210,7 +1210,7 @@ const BPC157Page = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Healing Journey
+                  Begin Your Research Journey
                 </Typography>
               </motion.div>
 
@@ -1224,13 +1224,13 @@ const BPC157Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Accelerate
+                Ready to Support
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Your Recovery?
+                  Your Recovery Journey?
                 </Box>
               </Typography>
 
@@ -1244,8 +1244,8 @@ const BPC157Page = () => {
                   mx: "auto",
                 }}
               >
-                Get your BPC-157 5mg healing peptide vial for $189.00. Includes medical consultation, 
-                personalized healing protocol, discreet delivery, and ongoing clinical support.
+                Access BPC-157 5mg peptide compound for $189.00. Includes medical consultation, 
+                personalized guidance, discreet delivery, and ongoing clinical support.
               </Typography>
 
               <Box sx={{ 
@@ -1283,7 +1283,7 @@ const BPC157Page = () => {
                       },
                     }}
                   >
-                    Start Healing - $189.00
+                    Start Research - $189.00
                   </Button>
                 </motion.div>
 
@@ -1310,7 +1310,7 @@ const BPC157Page = () => {
                       },
                     }}
                   >
-                    Schedule a consultation with our healing specialists
+                    Schedule a consultation with our research specialists
                   </Typography>
                 </motion.div>
               </Box>
@@ -1319,7 +1319,7 @@ const BPC157Page = () => {
                 {[
                   { text: "Medical Assessment Included" },
                   { text: "5mg Multi-Dose Vial" },
-                  { text: "Systemic Healing Effects" },
+                  { text: "Potential Systemic Effects" },
                   { text: "Clinical Support Team Access" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
@@ -1422,7 +1422,7 @@ const BPC157Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not FDA-Approved
+                       FDA-Approved
                     </Typography>
                     <Typography
                       sx={{
@@ -1434,7 +1434,7 @@ const BPC157Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Medical Supervision
+                      Medical Supervision Required
                     </Typography>
                   </Box>
                   <Typography
@@ -1447,7 +1447,7 @@ const BPC157Page = () => {
                       mx: "auto",
                     }}
                   >
-                    BPC-157 is a research peptide with demonstrated healing properties in preclinical studies. It is not FDA-approved for human use and should be used under medical supervision. May interact with certain medications. Not for use by pregnant or nursing women. Discontinue use if adverse reactions occur. Results may vary based on individual health status and injury type.
+                    BPC-157 is a research peptide with demonstrated properties in preclinical studies. It is not FDA-approved for human therapeutic use and should be used under medical supervision for research purposes. May interact with certain medications. Not for use by pregnant or nursing women. Discontinue use if adverse reactions occur. Individual results in clinical settings continue to be studied.
                   </Typography>
                 </Box>
               </motion.div>

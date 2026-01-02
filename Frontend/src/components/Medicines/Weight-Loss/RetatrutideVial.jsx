@@ -719,18 +719,20 @@ const RetatrutidePage = () => {
               </Typography>
 
               {/* Primary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.1rem", md: "1.25rem" },
-                  lineHeight: 2.1,
-                  color: colors.darkGrey,
-                  textAlign: "center",
-                  fontWeight: 400,
-                }}
-              >
-                Retatrutide uniquely targets GIP, GLP-1, and glucagon receptors simultaneously, 
-                providing superior weight loss and metabolic benefits compared to single or dual agonists.
-              </Typography>
+             <Typography
+  sx={{
+    fontSize: { xs: "1.1rem", md: "1.25rem" },
+    lineHeight: 2.1,
+    color: colors.darkGrey,
+    textAlign: "center",
+    fontWeight: 400,
+  }}
+>
+  Retatrutide is an investigational compound that acts on the GIP, GLP-1, and glucagon receptors.
+  This multi-receptor activity is being studied for its potential role in metabolic regulation
+  under the supervision of a licensed healthcare provider.
+</Typography>
+
 
               {/* Divider */}
               <Box
@@ -746,17 +748,19 @@ const RetatrutidePage = () => {
               />
 
               {/* Secondary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  lineHeight: 1.95,
-                  color: alpha(colors.black, 0.75),
-                  textAlign: "center",
-                }}
-              >
-                Clinical studies show significant reductions in body weight, improved glycemic control, 
-                and positive effects on cardiovascular markers, making it a comprehensive metabolic health solution.
-              </Typography>
+            <Typography
+  sx={{
+    fontSize: { xs: "1.05rem", md: "1.15rem" },
+    lineHeight: 1.95,
+    color: alpha(colors.black, 0.75),
+    textAlign: "center",
+  }}
+>
+  Retatrutide is currently being studied in clinical research settings to better understand
+  its effects on body weight, glycemic parameters, and other metabolic markers.
+  Use and evaluation should occur only with appropriate medical oversight.
+</Typography>
+
             </Box>
           </motion.div>
         </Container>
@@ -982,14 +986,17 @@ const RetatrutidePage = () => {
                       Treatment Timeline
                     </Typography>
                     <Typography
-                      sx={{
-                        fontSize: "14px",
-                        color: colors.darkGrey,
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      Most patients notice weight reduction in 4-6 weeks, with optimal results after 12-16 weeks of consistent treatment. Regular follow-ups ensure proper dosage and monitor progress.
-                    </Typography>
+  sx={{
+    fontSize: "14px",
+    color: colors.darkGrey,
+    lineHeight: 1.6,
+  }}
+>
+  The effects and appropriate duration of Retatrutide use are currently being studied in
+  clinical research settings. Ongoing evaluation, dosage considerations, and monitoring
+  should be conducted through regular follow-ups with a licensed healthcare provider.
+</Typography>
+
                   </Box>
                 </Box>
               </motion.div>

@@ -738,19 +738,21 @@ const SemaglutideInjectablePage = () => {
               </Typography>
 
               {/* Primary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.1rem", md: "1.25rem" },
-                  lineHeight: 2.1,
-                  color: colors.darkGrey,
-                  textAlign: "center",
-                  fontWeight: 400,
-                }}
-              >
-                Semaglutide injection is a highly effective GLP-1 receptor agonist that significantly 
-                reduces appetite, slows gastric emptying, and promotes weight loss through 
-                weekly subcutaneous administration with extensive clinical validation.
-              </Typography>
+             <Typography
+  sx={{
+    fontSize: { xs: "1.1rem", md: "1.25rem" },
+    lineHeight: 2.1,
+    color: colors.darkGrey,
+    textAlign: "center",
+    fontWeight: 400,
+  }}
+>
+  Semaglutide injection is a GLP-1 receptor agonist that acts on pathways involved in appetite
+  signaling and gastric function. Its pharmacologic effects and clinical use are well
+  characterized in research settings and should be evaluated and managed under the
+  supervision of a licensed healthcare provider.
+</Typography>
+
 
               {/* Divider */}
               <Box
@@ -766,18 +768,19 @@ const SemaglutideInjectablePage = () => {
               />
 
               {/* Secondary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  lineHeight: 1.95,
-                  color: alpha(colors.black, 0.75),
-                  textAlign: "center",
-                }}
-              >
-                Clinical trials demonstrate significant weight reduction of 15% or more and proven 
-                cardiovascular benefits, establishing it as the gold standard in GLP-1 therapy 
-                for comprehensive metabolic management.
-              </Typography>
+             <Typography
+  sx={{
+    fontSize: { xs: "1.05rem", md: "1.15rem" },
+    lineHeight: 1.95,
+    color: alpha(colors.black, 0.75),
+    textAlign: "center",
+  }}
+>
+  Semaglutide injection continues to be studied in clinical trials to further assess its
+  safety profile and effects on metabolic-related parameters. Treatment decisions,
+  monitoring, and ongoing evaluation should occur only with appropriate medical oversight.
+</Typography>
+
             </Box>
           </motion.div>
         </Container>

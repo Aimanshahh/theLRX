@@ -122,15 +122,15 @@ const GHKCuPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade GHK-Cu (Copper Tripeptide-1)</Box> is a revolutionary peptide that supports collagen synthesis, skin rejuvenation, and tissue repair for a more youthful appearance.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade GHK-Cu (Copper Tripeptide-1)</Box> is a peptide compound being studied for its potential to support collagen production and skin health through topical application.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Stimulates collagen & elastin production",
-                  "Powerful antioxidant & anti-inflammatory",
-                  "Supports wound healing & skin repair",
+                  "Collagen support being studied",
+                  "Skin health research",
+                  "Topical application research",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -164,7 +164,7 @@ const GHKCuPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Revitalize Your Skin - $179
+                Explore Formulations - $179
               </Button>
             </motion.div>
 
@@ -184,7 +184,7 @@ const GHKCuPage = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Skin Regenerative
+              Skin Support Research
             </Box>
           </motion.div>
         </Box>
@@ -243,17 +243,17 @@ const GHKCuPage = () => {
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  GHK-Cu is a naturally occurring copper-binding tripeptide first isolated from human plasma. Its levels in the body decline with age, coinciding with reduced regenerative capacity. As a key regulator, it influences numerous genes involved in tissue repair, inflammation, and antioxidant defense.
+                  GHK-Cu is a naturally occurring copper-binding tripeptide first isolated from human plasma. Research continues to investigate its potential applications in topical formulations for various skin health applications.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Stimulates collagen and elastin synthesis in skin fibroblasts",
-                    "Modulates gene expression towards a healthier, younger state",
-                    "Exerts potent antioxidant and anti-inflammatory effects",
-                    "Promotes angiogenesis (new blood vessel formation) for healing",
-                    "Supports wound healing and tissue remodeling",
-                    "Used in topical anti-aging and reparative skincare"
+                    "Being studied for collagen and elastin synthesis support",
+                    "Research on gene expression modulation continues",
+                    "Antioxidant properties under investigation",
+                    "Angiogenesis research for topical applications",
+                    "Tissue support studies ongoing",
+                    "Topical application research continues"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -345,7 +345,7 @@ const GHKCuPage = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Potential Benefits Being Studied
               </Typography>
               
               <Typography
@@ -358,7 +358,7 @@ const GHKCuPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Research on{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   GHK-Cu Peptide
                 </Box>
@@ -373,7 +373,7 @@ const GHKCuPage = () => {
                   mx: "auto",
                 }}
               >
-                Experience skin rejuvenation and enhanced tissue repair through this naturally occurring regenerative peptide
+                Ongoing research continues to explore potential applications of this peptide compound
               </Typography>
             </Box>
           </motion.div>
@@ -382,26 +382,26 @@ const GHKCuPage = () => {
             {[
               {
                 icon: "Sparkles",
-                title: "Skin Rejuvenation",
-                description: "Reduces wrinkles, improves elasticity",
+                title: "Skin Research",
+                description: "Skin health studies ongoing",
                 color: palette.darkBlue,
               },
               {
                 icon: "Heart",
-                title: "Wound Healing",
-                description: "Accelerates tissue repair & regeneration",
+                title: "Tissue Support",
+                description: "Tissue support being studied",
                 color: palette.lightBlue,
               },
               {
                 icon: "Shield",
-                title: "Antioxidant",
-                description: "Protects against oxidative stress",
+                title: "Antioxidant Research",
+                description: "Antioxidant properties under study",
                 color: palette.darkBlue,
               },
               {
                 icon: "Activity",
-                title: "Collagen Boost",
-                description: "Stimulates collagen synthesis",
+                title: "Collagen Studies",
+                description: "Collagen research continues",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -503,9 +503,9 @@ const GHKCuPage = () => {
               }}
             >
               {[
-                { value: "Naturally Occurring", label: "Found in Human Plasma" },
-                { value: "Gene Expression", label: "Modulates 30%+ of Human Genes" },
-                { value: "Topical Use", label: "Primary Application Method" },
+                { value: "Naturally", label: "Found in Human Plasma" },
+                { value: "Research", label: "Ongoing Studies" },
+                { value: "Topical", label: "Application Method" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -553,7 +553,7 @@ const GHKCuPage = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Rejuvenate?
+                Ready to Learn More?
               </Typography>
               <Typography
                 sx={{
@@ -564,7 +564,7 @@ const GHKCuPage = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands who have transformed their skin with GHK-Cu
+                Explore GHK-Cu formulations for skin health research
               </Typography>
             </Box>
           </motion.div>
@@ -721,8 +721,8 @@ const GHKCuPage = () => {
                         "Manufactured in cGMP and ISO 9001-registered U.S. facilities",
                         "Certificate of Analysis (COA) available for every batch",
                         "Third-party tested for purity, sterility, and endotoxin levels",
-                        "Intended for topical formulation in skincare products",
-                        "Can be reconstituted for custom serums, creams, or gels"
+                        "Intended for topical formulation research",
+                        "Can be reconstituted for custom formulations"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -781,7 +781,7 @@ const GHKCuPage = () => {
                   textAlign: "center",
                 }}
               >
-                Our GHK-Cu peptide is sourced from FDA Green List APIs and undergoes rigorous testing to ensure the highest quality standards. Each vial provides multiple doses for custom topical formulations targeting skin rejuvenation and repair.
+                Our GHK-Cu peptide is manufactured following strict quality standards. Each vial is designed for research purposes in topical formulation development.
               </Typography>
               
               <Typography
@@ -795,7 +795,7 @@ const GHKCuPage = () => {
                   textAlign: "center",
                 }}
               >
-                Prepared in licensed compounding pharmacies following strict quality standards.
+                Prepared in licensed facilities following established quality standards.
               </Typography>
 
               <Box
@@ -813,7 +813,7 @@ const GHKCuPage = () => {
                     { label: "Active Ingredient", value: "GHK-Cu (Copper Tripeptide-1)" },
                     { label: "Strength", value: "50 mg" },
                     { label: "Purity", value: "99%+" },
-                    { label: "Primary Use", value: "Topical Skincare" },
+                    { label: "Primary Use", value: "Topical Research" },
                   ].map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                       <Box>
@@ -901,7 +901,7 @@ const GHKCuPage = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Process
+                Formulation Process
               </Typography>
 
               <Typography
@@ -915,7 +915,7 @@ const GHKCuPage = () => {
                 >
                 Your Path to{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Youthful Skin
+                  Skin Support
                 </Box>
               </Typography>
 
@@ -928,7 +928,7 @@ const GHKCuPage = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience transformative results through our physician-guided GHK-Cu therapy protocol
+                Research process for developing topical formulations with GHK-Cu
               </Typography>
             </Box>
           </motion.div>
@@ -945,29 +945,29 @@ const GHKCuPage = () => {
               {
                 step: 1,
                 icon: Shield,
-                title: "Medical Consultation",
-                description: "Confidential evaluation with our medical team",
+                title: "Research Preparation",
+                description: "Preparation for formulation research",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
-                title: "Prescription & Delivery",
-                description: "Physician-prescribed GHK-Cu shipped discreetly",
+                title: "Formulation Development",
+                description: "Development of topical formulations",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Sparkles,
-                title: "Topical Application",
-                description: "Simple topical formulation application",
+                title: "Application Research",
+                description: "Research on topical application methods",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: Activity,
-                title: "Enhanced Rejuvenation",
-                description: "Experience improved skin texture and elasticity",
+                title: "Ongoing Studies",
+                description: "Continued research on potential applications",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1072,22 +1072,22 @@ const GHKCuPage = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                What to Expect
+                Research Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  {" "}After Application
+                  {" "}for Topical Studies
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                GHK-Cu works gradually to enhance your skin's natural regenerative processes:
+                Research on topical formulations continues to explore potential applications:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 4-8 weeks", improvement: "Improved skin texture & hydration", icon: Sparkles, color: palette.darkBlue },
-                  { time: "8-12 weeks", improvement: "Reduced fine lines & wrinkles", icon: Thermometer, color: palette.lightBlue },
-                  { time: "12-16 weeks", improvement: "Enhanced collagen production", icon: Activity, color: palette.darkBlue},
-                  { time: "Ongoing use", improvement: "Sustained skin rejuvenation", icon: Moon, color: palette.lightBlue },
+                  { time: "Initial Phase", improvement: "Formulation development research", icon: Sparkles, color: palette.darkBlue },
+                  { time: "Early Studies", improvement: "Application method research", icon: Thermometer, color: palette.lightBlue },
+                  { time: "Ongoing Research", improvement: "Potential applications studies", icon: Activity, color: palette.darkBlue},
+                  { time: "Long-term Studies", improvement: "Continued research efforts", icon: Moon, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1204,7 +1204,7 @@ const GHKCuPage = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Transformation
+                  Begin Your Research
                 </Typography>
               </motion.div>
 
@@ -1218,13 +1218,13 @@ const GHKCuPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Experience
+                Ready to Explore
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Youthful Skin?
+                  Skin Support?
                 </Box>
               </Typography>
 
@@ -1238,8 +1238,8 @@ const GHKCuPage = () => {
                   mx: "auto",
                 }}
               >
-                Get your GHK-Cu 50mg peptide vial for $179.00. Includes Certificate of Analysis, 
-                manufactured in cGMP facilities, and ideal for creating custom topical rejuvenating formulations.
+                Access GHK-Cu 50mg peptide for $179.00. Includes Certificate of Analysis, 
+                manufactured in cGMP facilities, and designed for topical formulation research.
               </Typography>
 
               <Box sx={{ 
@@ -1277,7 +1277,7 @@ const GHKCuPage = () => {
                       },
                     }}
                   >
-                    Order Now - $179.00
+                    Order for Research - $179.00
                   </Button>
                 </motion.div>
 
@@ -1304,7 +1304,7 @@ const GHKCuPage = () => {
                       },
                     }}
                   >
-                    Download formulation guide for custom serums and creams
+                    Download formulation guide for research purposes
                   </Typography>
                 </motion.div>
               </Box>
@@ -1313,8 +1313,8 @@ const GHKCuPage = () => {
                 {[
                   { text: "Certificate of Analysis Included" },
                   { text: "cGMP & ISO 9001 Manufacturing" },
-                  { text: "99%+ Purity Guarantee" },
-                  { text: "Third-Party Lab Tested" },
+                  { text: "99%+ Purity Standards" },
+                  { text: "Third-Party Lab Testing" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1385,7 +1385,7 @@ const GHKCuPage = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Important Medical Information
+                    Important Information
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1416,7 +1416,7 @@ const GHKCuPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Consult Healthcare Provider
+                      Research Purposes
                     </Typography>
                     <Typography
                       sx={{
@@ -1441,7 +1441,7 @@ const GHKCuPage = () => {
                       mx: "auto",
                     }}
                   >
-                    GHK-Cu is a peptide compound intended for topical use in skincare formulations. Not for injection. Discontinue use if irritation occurs. Always perform a patch test before full application. Not for use by pregnant or nursing women without consulting a healthcare provider. Results may vary based on individual skin type and condition.
+                    GHK-Cu is a peptide compound intended for topical use in research formulations. Not for injection. Discontinue use if irritation occurs. Always perform a patch test before application. Consult with a healthcare provider for guidance. Results in research settings continue to be studied.
                   </Typography>
                 </Box>
               </motion.div>

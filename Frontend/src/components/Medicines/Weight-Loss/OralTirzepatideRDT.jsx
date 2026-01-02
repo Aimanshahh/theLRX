@@ -731,18 +731,20 @@ const OralTirzepatidePage = () => {
               </Typography>
 
               {/* Primary Description */}
-              <Typography
-                sx={{
-                  fontSize: { xs: "1.1rem", md: "1.25rem" },
-                  lineHeight: 2.1,
-                  color: colors.darkGrey,
-                  textAlign: "center",
-                  fontWeight: 400,
-                }}
-              >
-                Oral Tirzepatide RDT combines GLP-1 and GIP receptor agonism in a convenient 
-                rapid-dissolve tablet format, offering effective weight management without injections.
-              </Typography>
+          <Typography
+  sx={{
+    fontSize: { xs: "1.1rem", md: "1.25rem" },
+    lineHeight: 2.1,
+    color: colors.darkGrey,
+    textAlign: "center",
+    fontWeight: 400,
+  }}
+>
+  Oral Tirzepatide RDT is an investigational formulation designed to deliver tirzepatide
+  through a rapid-dissolve tablet. It acts on the GLP-1 and GIP receptors and is currently
+  being studied to better understand its pharmacologic characteristics and potential
+  applications under the guidance of a licensed healthcare provider.
+</Typography>
 
               {/* Divider */}
               <Box

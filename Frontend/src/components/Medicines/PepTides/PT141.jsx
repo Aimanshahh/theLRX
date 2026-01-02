@@ -122,15 +122,15 @@ const PT141Page = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade PT-141 (Bremelanotide)</Box> is a revolutionary peptide that targets the central nervous system to enhance sexual desire and arousal in both men and women.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>compounded PT-141 (Bremelanotide)</Box> is available under provider oversight. PT-141 is a synthetic peptide analog that activates melanocortin receptors, which are being studied for their role in sexual response pathways.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Enhances libido & sexual desire",
-                  "Works in 2-4 hours",
-                  "Safe for both men & women",
+                  "Clinical peptide formulation",
+                  "Central nervous system activity",
+                  "Medical supervision required",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -153,6 +153,7 @@ const PT141Page = () => {
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button
                 variant="contained"
+                onClick={handleCtaClick}
                 sx={{
                   px: 4.5,
                   py: 1.6,
@@ -163,12 +164,12 @@ const PT141Page = () => {
                   fontWeight: 700,
                 }}
               >
-                Start Your Journey - $189
+                Begin Consultation - $229
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Physician-prescribed • Fast-acting • Non-hormonal
+              <CheckCircle size={14} color={palette.white} /> Physician consultation required • Compounded formulation
             </Typography>
           </motion.div>
 
@@ -183,7 +184,7 @@ const PT141Page = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Fast-Acting
+              Provider-Supervised
             </Box>
           </motion.div>
         </Box>
@@ -222,7 +223,7 @@ const PT141Page = () => {
                     borderRadius: "20px",
                   }}
                 >
-                  How It Works
+                  Scientific Basis
                 </Typography>
 
                 <Typography
@@ -235,24 +236,24 @@ const PT141Page = () => {
                     lineHeight: 1.2,
                   }}
                 >
-                  The Science of{" "}
+                  Understanding{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
-                    PT-141
+                    PT-141 Mechanisms
                   </Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  PT-141 (Bremelanotide) is a synthetic peptide analog of α-MSH that activates melanocortin receptors in the brain. Unlike traditional ED medications, PT-141 works on the central nervous system to increase sexual desire and arousal, making it effective for both men and women with hypoactive sexual desire disorder (HSDD).
+                  PT-141 (Bremelanotide) is a synthetic peptide analog of α-MSH that activates melanocortin receptors in the brain. These receptors are involved in various physiological processes. Individual responses may vary, and this treatment requires medical supervision and appropriate clinical evaluation.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Activates melanocortin receptors in the brain",
-                    "Increases sexual desire in both men and women",
-                    "Works independently of hormonal pathways",
-                    "Effects typically felt within 2-4 hours",
-                    "Subcutaneous injection for optimal absorption",
-                    "Can be used as needed, not daily"
+                    "Activates melanocortin receptors in central nervous system pathways",
+                    "Is being studied for its potential effects on sexual response mechanisms",
+                    "Functions independently of traditional hormonal pathways",
+                    "Typically administered via subcutaneous injection",
+                    "Requires medical supervision and appropriate patient evaluation",
+                    "Is a compounded medication requiring prescription"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -344,7 +345,7 @@ const PT141Page = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Clinical Applications
               </Typography>
               
               <Typography
@@ -357,7 +358,7 @@ const PT141Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Investigational Applications of{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   PT-141 Therapy
                 </Box>
@@ -372,7 +373,7 @@ const PT141Page = () => {
                   mx: "auto",
                 }}
               >
-                Experience enhanced intimacy and sexual wellness through targeted peptide therapy
+                PT-141 is being studied for potential applications under medical supervision. Individual experiences may vary.
               </Typography>
             </Box>
           </motion.div>
@@ -381,26 +382,26 @@ const PT141Page = () => {
             {[
               {
                 icon: "Flame",
-                title: "Enhanced Libido",
-                description: "Increased sexual desire & arousal",
+                title: "Neurochemical Activity",
+                description: "Activates CNS receptor pathways",
                 color: palette.darkBlue,
               },
               {
                 icon: "Heart",
-                title: "For Both Genders",
-                description: "Effective for men and women",
+                title: "Clinical Research",
+                description: "Being studied in clinical settings",
                 color: palette.lightBlue,
               },
               {
                 icon: "Zap",
-                title: "Fast Acting",
-                description: "Effects in 2-4 hours",
+                title: "Receptor Targeting",
+                description: "Melanocortin receptor activation",
                 color: palette.darkBlue,
               },
               {
                 icon: "Shield",
                 title: "Non-Hormonal",
-                description: "Works on nervous system",
+                description: "Different mechanism than hormones",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -502,9 +503,9 @@ const PT141Page = () => {
               }}
             >
               {[
-                { value: "2-4 Hours", label: "Time to Effect" },
-                { value: "Non-Hormonal", label: "Mechanism of Action" },
-                { value: "As Needed", label: "Usage Frequency" },
+                { value: "Clinical", label: "Medical Formulation" },
+                { value: "Prescription", label: "Required" },
+                { value: "Provider", label: "Oversight Included" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -552,7 +553,7 @@ const PT141Page = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Rekindle?
+                Medical Evaluation Required
               </Typography>
               <Typography
                 sx={{
@@ -563,7 +564,7 @@ const PT141Page = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands who have transformed their intimate lives with PT-141
+                Speak with a medical professional about whether PT-141 may be appropriate for your clinical needs
               </Typography>
             </Box>
           </motion.div>
@@ -647,7 +648,7 @@ const PT141Page = () => {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Pharmaceutical Grade
+                      Compounded Formulation
                     </Box>
 
                     {/* Price Bar at Bottom */}
@@ -694,7 +695,7 @@ const PT141Page = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Therapy Kit
+                      Clinical Therapy Protocol
                     </Typography>
 
                     <Typography
@@ -707,21 +708,20 @@ const PT141Page = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      The{" "}
+                      Medical-Grade{" "}
                       <Box component="span" sx={{ color: palette.darkBlue }}>
-                        PT-141 50mg
-                      </Box>{" "}
-                      Kit
+                        PT-141 50mg Kit
+                      </Box>
                     </Typography>
 
                     <Box sx={{ mb: 4 }}>
                       {[
-                        "50mg PT-141 (Bremelanotide) pharmaceutical-grade powder",
-                        "Bacteriostatic water for injection",
-                        "Sterile insulin syringes with ultra-fine needles",
-                        "Comprehensive self-administration guide",
-                        "Alcohol swabs and sharps container",
-                        "Access to clinical support team"
+                        "50mg PT-141 (Bremelanotide) compounded peptide formulation",
+                        "Bacteriostatic water for injection (sterile diluent)",
+                        "Clinical-grade insulin syringes with ultra-fine needles",
+                        "Comprehensive clinical administration guide",
+                        "Medical-grade alcohol swabs and sharps container",
+                        "Access to clinical support team for guidance"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -780,7 +780,7 @@ const PT141Page = () => {
                   textAlign: "center",
                 }}
               >
-                Our PT-141 therapy kit provides everything needed for safe, effective treatment. Each 50mg vial provides multiple doses, allowing for as-needed use to enhance sexual desire and arousal.
+                Our PT-141 clinical kit provides components for administration under medical supervision. This compounded formulation is prepared according to clinical standards.
               </Typography>
               
               <Typography
@@ -794,7 +794,7 @@ const PT141Page = () => {
                   textAlign: "center",
                 }}
               >
-                Prepared in licensed compounding pharmacies following strict quality standards.
+                Individual responses may vary, and this treatment requires appropriate medical evaluation and ongoing clinical oversight.
               </Typography>
 
               <Box
@@ -809,10 +809,10 @@ const PT141Page = () => {
               >
                 <Grid container spacing={2}>
                   {[
-                    { label: "Active Ingredient", value: "PT-141 (Bremelanotide)" },
-                    { label: "Strength", value: "50 mg" },
-                    { label: "Typical Dose", value: "1-2 mg" },
+                    { label: "Active Compound", value: "PT-141 (Bremelanotide)" },
+                    { label: "Formulation", value: "Compounded Peptide" },
                     { label: "Administration", value: "Subcutaneous" },
+                    { label: "Medical", value: "Supervision Required" },
                   ].map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                       <Box>
@@ -900,7 +900,7 @@ const PT141Page = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Process
+                Clinical Protocol
               </Typography>
 
               <Typography
@@ -912,9 +912,9 @@ const PT141Page = () => {
                   lineHeight: 1.1,
                 }}
                 >
-                Your Path to{" "}
+                Medical Process for{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Enhanced Intimacy
+                  PT-141 Administration
                 </Box>
               </Typography>
 
@@ -927,7 +927,7 @@ const PT141Page = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience transformative results through our physician-guided PT-141 therapy protocol
+                A structured clinical approach to PT-141 administration under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -944,29 +944,29 @@ const PT141Page = () => {
               {
                 step: 1,
                 icon: Shield,
-                title: "Medical Consultation",
-                description: "Confidential evaluation with our medical team",
+                title: "Clinical Evaluation",
+                description: "Medical assessment to determine appropriateness for your clinical needs",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
                 title: "Prescription & Delivery",
-                description: "Physician-prescribed PT-141 shipped discreetly",
+                description: "Physician-prescribed compounded PT-141 with clinical documentation",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Zap,
-                title: "As-Needed Administration",
-                description: "Simple subcutaneous injection 2-4 hours before desired effect",
+                title: "Supervised Administration",
+                description: "Clinical administration process under medical guidance",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: Flame,
-                title: "Enhanced Experience",
-                description: "Experience increased desire and arousal within hours",
+                title: "Clinical Monitoring",
+                description: "Ongoing assessment and follow-up with provider oversight",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1071,22 +1071,22 @@ const PT141Page = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                What to Expect
+                Clinical Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  {" "}After Administration
+                  {" "}of PT-141 Activity
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                PT-141 works rapidly to enhance your intimate experiences:
+                PT-141 activates central nervous system pathways. Individual experiences may vary:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 2-4 hours", improvement: "Increased sexual desire & arousal", icon: Flame, color: palette.darkBlue },
-                  { time: "4-6 hours", improvement: "Enhanced sensitivity & response", icon: Thermometer, color: palette.lightBlue },
-                  { time: "6-8 hours", improvement: "Peak effects & satisfaction", icon: Sparkles, color: palette.darkBlue},
-                  { time: "Up to 12 hours", improvement: "Sustained intimate benefits", icon: Moon, color: palette.lightBlue },
+                  { time: "Administration", mechanism: "Subcutaneous injection delivery", icon: Zap, color: palette.darkBlue },
+                  { time: "2-4 Hours", mechanism: "CNS receptor activation processes", icon: Flame, color: palette.lightBlue },
+                  { time: "4-6 Hours", mechanism: "Neurochemical pathway engagement", icon: Thermometer, color: palette.darkBlue},
+                  { time: "Clinical", mechanism: "Provider monitoring & follow-up", icon: Shield, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1124,7 +1124,7 @@ const PT141Page = () => {
                           {milestone.time}
                         </Typography>
                         <Typography sx={{ color: palette.darkGrey, fontSize: 14, lineHeight: 1.4 }}>
-                          {milestone.improvement}
+                          {milestone.mechanism}
                         </Typography>
                       </Box>
                     </motion.div>
@@ -1203,7 +1203,7 @@ const PT141Page = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Transformation
+                  Clinical Program Available
                 </Typography>
               </motion.div>
 
@@ -1217,13 +1217,13 @@ const PT141Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Experience
+                Begin Your Clinical
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Enhanced Intimacy?
+                  PT-141 Journey
                 </Box>
               </Typography>
 
@@ -1237,8 +1237,8 @@ const PT141Page = () => {
                   mx: "auto",
                 }}
               >
-                Get your PT-141 50mg therapy kit for $229.00. Includes confidential medical consultation, 
-                discreet delivery, and ongoing clinical support throughout your journey.
+                Start with our PT-141 50mg clinical kit at $229. Includes medical evaluation, 
+                clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
               <Box sx={{ 
@@ -1258,6 +1258,7 @@ const PT141Page = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <Button
+                    onClick={handleCtaClick}
                     sx={{
                       backgroundColor: palette.white,
                       color: palette.darkBlue,
@@ -1275,7 +1276,7 @@ const PT141Page = () => {
                       },
                     }}
                   >
-                    Start Therapy - $229.00
+                    Begin Clinical Process - $229
                   </Button>
                 </motion.div>
 
@@ -1302,17 +1303,17 @@ const PT141Page = () => {
                       },
                     }}
                   >
-                    Schedule a confidential consultation with our medical team
+                    Start with medical consultation
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Confidential Medical Evaluation" },
-                  { text: "50mg Multi-Dose Vial" },
+                  { text: "Required Medical Evaluation" },
+                  { text: "50mg Compounded Formulation" },
                   { text: "Clinical Support Team Access" },
-                  { text: "Discreet Shipping" },
+                  { text: "Medical Oversight Program" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1383,7 +1384,7 @@ const PT141Page = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Important Medical Information
+                    Important Clinical Information
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1402,7 +1403,7 @@ const PT141Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Requires Prescription
+                      Requires Medical Prescription
                     </Typography>
                     <Typography
                       sx={{
@@ -1414,7 +1415,7 @@ const PT141Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not for Cardiovascular Patients
+                      Compounded Formulation
                     </Typography>
                     <Typography
                       sx={{
@@ -1426,7 +1427,7 @@ const PT141Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Monitor with Physician
+                      Medical Supervision Required
                     </Typography>
                   </Box>
                   <Typography
@@ -1439,7 +1440,7 @@ const PT141Page = () => {
                       mx: "auto",
                     }}
                   >
-                    PT-141 is a compounded medication that requires a prescription. It is FDA-approved for hypoactive sexual desire disorder (HSDD) in premenopausal women. May cause nausea, flushing, or headache in some individuals. Not for use by individuals with uncontrolled hypertension or cardiovascular disease.
+                    PT-141 is a compounded peptide medication that requires a prescription. Bremelanotide (the active metabolite) is FDA-approved for hypoactive sexual desire disorder (HSDD) in premenopausal women. This compounded formulation is prepared according to clinical standards. May cause side effects including nausea, flushing, or headache in some individuals. Not for use by individuals with uncontrolled hypertension or cardiovascular disease. Individual responses may vary.
                   </Typography>
                 </Box>
               </motion.div>

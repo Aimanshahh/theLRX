@@ -123,15 +123,15 @@ const SermorelinPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade sermorelin acetate</Box> stimulates your body's natural growth hormone production for cellular regeneration and vitality.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>compounded sermorelin acetate</Box> is available under provider oversight. Sermorelin is a synthetic peptide that stimulates growth hormone-releasing hormone receptors, which are involved in various physiological processes.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Natural HGH stimulation",
-                  "Improved body composition",
-                  "Enhanced recovery & sleep",
+                  "Clinical peptide therapy",
+                  "Pituitary gland stimulation",
+                  "Medical supervision required",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -165,12 +165,12 @@ const SermorelinPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Start Your Journey - $189
+                Begin Consultation - $189
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Physician-prescribed • Free medical consultation
+              <CheckCircle size={14} color={palette.white} /> Physician consultation required • Compounded formulation
             </Typography>
           </motion.div>
 
@@ -185,7 +185,7 @@ const SermorelinPage = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Pulsatile Release
+              Provider-Supervised
             </Box>
           </motion.div>
         </Box>
@@ -224,7 +224,7 @@ const SermorelinPage = () => {
                     borderRadius: "20px",
                   }}
                 >
-                  How It Works
+                  Scientific Basis
                 </Typography>
 
                 <Typography
@@ -237,24 +237,24 @@ const SermorelinPage = () => {
                     lineHeight: 1.2,
                   }}
                 >
-                  Stimulate Your Body's{" "}
+                  Understanding{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
-                    Natural HGH
+                    Sermorelin Mechanisms
                   </Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  Sermorelin is a synthetic peptide composed of the first 29 amino acids of human growth hormone-releasing hormone (GHRH). Unlike synthetic HGH, it stimulates your pituitary gland to produce and release growth hormone in its natural, pulsatile pattern[citation:2][citation:4]. This makes sermorelin a more physiological approach to restoring youthful hormone levels.
+                  Sermorelin is a synthetic peptide composed of amino acids that stimulates growth hormone-releasing hormone receptors. These receptors are involved in various physiological processes. Individual responses may vary, and this treatment requires medical supervision and appropriate clinical evaluation.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Stimulates pituitary gland to release natural HGH[citation:4]",
-                    "Promotes natural pulsatile hormone release[citation:1]",
-                    "May increase lean body mass and reduce body fat[citation:5]",
-                    "Can support improved skin elasticity and collagen[citation:7]",
-                    "May enhance recovery from exercise and injury[citation:9]",
-                    "Typically administered as nightly subcutaneous injections[citation:3]"
+                    "Stimulates growth hormone-releasing hormone receptor pathways",
+                    "Is being studied for its role in various physiological processes",
+                    "Typically administered via subcutaneous injection",
+                    "Requires medical supervision and appropriate patient evaluation",
+                    "Is a compounded medication requiring prescription",
+                    "Involves natural hormone regulation mechanisms"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -346,7 +346,7 @@ const SermorelinPage = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Clinical Applications
               </Typography>
               
               <Typography
@@ -359,7 +359,7 @@ const SermorelinPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Investigational Applications of{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   Sermorelin Therapy
                 </Box>
@@ -374,7 +374,7 @@ const SermorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Experience cellular regeneration and restored vitality through natural growth hormone stimulation
+                Sermorelin is being studied for potential applications under medical supervision. Individual experiences may vary.
               </Typography>
             </Box>
           </motion.div>
@@ -383,26 +383,26 @@ const SermorelinPage = () => {
             {[
               {
                 icon: "Sparkles",
-                title: "Body Recomposition",
-                description: "Increased lean muscle, reduced fat[citation:5]",
+                title: "Physiological Approach",
+                description: "Involves natural hormone regulation",
                 color: palette.darkBlue,
               },
               {
                 icon: "Moon",
-                title: "Improved Sleep",
-                description: "Deeper, more restorative sleep cycles[citation:8]",
+                title: "Circadian Patterns",
+                description: "Aligns with natural biological rhythms",
                 color: palette.lightBlue,
               },
               {
                 icon: "Leaf",
-                title: "Skin Health",
-                description: "Enhanced collagen & elasticity[citation:7]",
+                title: "Cellular Processes",
+                description: "Involved in various biological functions",
                 color: palette.darkBlue,
               },
               {
                 icon: "Activity",
-                title: "Energy & Recovery",
-                description: "Increased vitality, faster recovery[citation:9]",
+                title: "Metabolic Function",
+                description: "Plays role in metabolic pathways",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -504,9 +504,9 @@ const SermorelinPage = () => {
               }}
             >
               {[
-                { value: "Natural", label: "Physiological Approach[citation:4]" },
-                { value: "3-6 Months", label: "Optimal Results Timeline[citation:8]" },
-                { value: "Nightly", label: "Recommended Administration[citation:3]" },
+                { value: "Clinical", label: "Medical Formulation" },
+                { value: "Prescription", label: "Required" },
+                { value: "Provider", label: "Oversight Included" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -554,7 +554,7 @@ const SermorelinPage = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Rejuvenate?
+                Medical Evaluation Required
               </Typography>
               <Typography
                 sx={{
@@ -565,7 +565,7 @@ const SermorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Join those who have restored their vitality with sermorelin therapy
+                Speak with a medical professional about whether sermorelin may be appropriate for your clinical needs
               </Typography>
             </Box>
           </motion.div>
@@ -649,7 +649,7 @@ const SermorelinPage = () => {
                         letterSpacing: "0.5px",
                       }}
                     >
-                      Pharmaceutical Grade
+                      Compounded Formulation
                     </Box>
 
                     {/* Price Bar at Bottom */}
@@ -696,7 +696,7 @@ const SermorelinPage = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Therapy Kit
+                      Clinical Therapy Protocol
                     </Typography>
 
                     <Typography
@@ -709,21 +709,20 @@ const SermorelinPage = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      The{" "}
+                      Medical-Grade{" "}
                       <Box component="span" sx={{ color: palette.darkBlue }}>
-                        Sermorelin 20mg
-                      </Box>{" "}
-                      Kit
+                        Sermorelin 20mg Kit
+                      </Box>
                     </Typography>
 
                     <Box sx={{ mb: 4 }}>
                       {[
-                        "20mg sermorelin acetate pharmaceutical-grade powder",
-                        "Bacteriostatic water for injection",
-                        "Sterile insulin syringes with ultra-fine needles",
-                        "Comprehensive self-administration guide",
-                        "Alcohol swabs and sharps container",
-                        "Access to clinical support team"
+                        "20mg sermorelin acetate compounded peptide formulation",
+                        "Bacteriostatic water for injection (sterile diluent)",
+                        "Clinical-grade insulin syringes with ultra-fine needles",
+                        "Comprehensive clinical administration guide",
+                        "Medical-grade alcohol swabs and sharps container",
+                        "Access to clinical support team for guidance"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -782,7 +781,7 @@ const SermorelinPage = () => {
       textAlign: "center",
     }}
   >
-    Our sermorelin therapy kit provides everything needed for safe, effective treatment. Each 20mg vial is sufficient for approximately 2-3 months of therapy at standard dosing[citation:4].
+    Our sermorelin clinical kit provides components for administration under medical supervision. This compounded formulation is prepared according to clinical standards.
   </Typography>
   
   <Typography
@@ -796,7 +795,7 @@ const SermorelinPage = () => {
       textAlign: "center",
     }}
   >
-    Prepared in licensed compounding pharmacies following strict quality standards[citation:2][citation:4].
+    Individual responses may vary, and this treatment requires appropriate medical evaluation and ongoing clinical oversight.
   </Typography>
 
   <Box
@@ -811,12 +810,12 @@ const SermorelinPage = () => {
   >
     <Grid container spacing={2}>
       {[
-        { label: "Active Ingredient", value: "Sermorelin Acetate" },
-        { label: "Strength", value: "20 mg" },
-        { label: "Typical Dose", value: "200-300 mcg" },
+        { label: "Active Compound", value: "Sermorelin Acetate" },
+        { label: "Formulation", value: "Compounded Peptide" },
         { label: "Administration", value: "Subcutaneous" },
+        { label: "Medical", value: "Supervision Required" },
       ].map((spec, index) => (
-        <Grid item xs={12} sm={6} md={3} key={index}> {/* Changed to responsive grid */}
+        <Grid item xs={12} sm={6} md={3} key={index}>
           <Box>
             <Typography
               sx={{
@@ -902,7 +901,7 @@ const SermorelinPage = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Process
+                Clinical Protocol
               </Typography>
 
               <Typography
@@ -914,9 +913,9 @@ const SermorelinPage = () => {
                   lineHeight: 1.1,
                 }}
                 >
-                Your Path to{" "}
+                Medical Process for{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Cellular Rejuvenation
+                  Sermorelin Administration
                 </Box>
               </Typography>
 
@@ -929,7 +928,7 @@ const SermorelinPage = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience transformative results through our physician-guided sermorelin therapy protocol
+                A structured clinical approach to sermorelin administration under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -946,29 +945,29 @@ const SermorelinPage = () => {
               {
                 step: 1,
                 icon: Brain,
-                title: "Medical Consultation",
-                description: "Comprehensive evaluation with our medical team including health assessment",
+                title: "Clinical Evaluation",
+                description: "Medical assessment to determine appropriateness for your clinical needs",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Shield,
                 title: "Prescription & Delivery",
-                description: "Physician-prescribed sermorelin shipped discreetly to your door",
+                description: "Physician-prescribed compounded sermorelin with clinical documentation",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Moon,
-                title: "Nightly Administration",
-                description: "Simple subcutaneous injection before bedtime (takes less than 5 minutes)",
+                title: "Supervised Administration",
+                description: "Clinical administration process under medical guidance",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: TrendingUp,
-                title: "Transformative Results",
-                description: "Gradual improvement in body composition, energy, and vitality over 3-6 months[citation:8]",
+                title: "Clinical Monitoring",
+                description: "Ongoing assessment and follow-up with provider oversight",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1073,22 +1072,22 @@ const SermorelinPage = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                What to Expect
+                Clinical Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  {" "}During Therapy
+                  {" "}of Sermorelin Therapy
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                Sermorelin works gradually to restore your natural hormone patterns[citation:8]:
+                Sermorelin involves gradual physiological processes. Individual experiences may vary:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Weeks 1-3", improvement: "Improved sleep quality & mood enhancement", icon: Moon, color: palette.darkBlue },
-                  { time: "Weeks 4-6", improvement: "Increased energy & appetite regulation", icon: Activity, color: palette.lightBlue },
-                  { time: "Months 2-3", improvement: "Noticeable body composition changes", icon: Sparkles, color: palette.darkBlue},
-                  { time: "Months 3-6", improvement: "Optimal skin & vitality improvements", icon: Leaf, color: palette.lightBlue },
+                  { time: "Initial Phase", mechanism: "Clinical assessment and baseline establishment", icon: Brain, color: palette.darkBlue },
+                  { time: "Administration", mechanism: "Regular subcutaneous injection protocol", icon: Moon, color: palette.lightBlue },
+                  { time: "Monitoring", mechanism: "Ongoing clinical evaluation and adjustment", icon: TrendingUp, color: palette.darkBlue},
+                  { time: "Clinical", mechanism: "Provider oversight and follow-up care", icon: Shield, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1126,7 +1125,7 @@ const SermorelinPage = () => {
                           {milestone.time}
                         </Typography>
                         <Typography sx={{ color: palette.darkGrey, fontSize: 14, lineHeight: 1.4 }}>
-                          {milestone.improvement}
+                          {milestone.mechanism}
                         </Typography>
                       </Box>
                     </motion.div>
@@ -1205,7 +1204,7 @@ const SermorelinPage = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Transformation
+                  Clinical Program Available
                 </Typography>
               </motion.div>
 
@@ -1219,13 +1218,13 @@ const SermorelinPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Experience
+                Begin Your Clinical
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Cellular Renewal?
+                  Sermorelin Journey
                 </Box>
               </Typography>
 
@@ -1239,8 +1238,8 @@ const SermorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Get your Sermorelin 20mg therapy kit for $189. Includes medical consultation, 
-                discreet delivery, and ongoing clinical support throughout your journey.
+                Start with our Sermorelin 20mg clinical kit at $189. Includes medical evaluation, 
+                clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
               <Box sx={{ 
@@ -1278,7 +1277,7 @@ const SermorelinPage = () => {
                       },
                     }}
                   >
-                    Start Therapy - $189
+                    Begin Clinical Process - $189
                   </Button>
                 </motion.div>
 
@@ -1305,17 +1304,17 @@ const SermorelinPage = () => {
                       },
                     }}
                   >
-                    Schedule a free consultation with our medical team
+                    Start with medical consultation
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Medical Evaluation Included" },
-                  { text: "3-Month Supply (20mg)" },
+                  { text: "Required Medical Evaluation" },
+                  { text: "20mg Compounded Formulation" },
                   { text: "Clinical Support Team Access" },
-                  { text: "Discreet Shipping" },
+                  { text: "Medical Oversight Program" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1386,7 +1385,7 @@ const SermorelinPage = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Important Medical Information
+                    Important Clinical Information
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1405,7 +1404,7 @@ const SermorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Requires Prescription
+                      Requires Medical Prescription
                     </Typography>
                     <Typography
                       sx={{
@@ -1417,7 +1416,7 @@ const SermorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not for Cancer Patients[citation:4]
+                      Compounded Formulation
                     </Typography>
                     <Typography
                       sx={{
@@ -1429,7 +1428,7 @@ const SermorelinPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Monitor with Physician[citation:3]
+                      Medical Supervision Required
                     </Typography>
                   </Box>
                   <Typography
@@ -1442,7 +1441,7 @@ const SermorelinPage = () => {
                       mx: "auto",
                     }}
                   >
-                    Sermorelin is a compounded medication that requires a prescription. It is not FDA-approved for anti-aging but may be prescribed off-label[citation:2][citation:4]. Not for use by individuals with active malignancy, untreated hypothyroidism, or pregnant/nursing women[citation:3][citation:4].
+                    Sermorelin is a compounded peptide medication that requires a prescription. This compounded formulation is prepared according to clinical standards. Not for use by individuals with active malignancy, untreated endocrine disorders, or pregnant/nursing women. Individual responses may vary, and appropriate medical evaluation is required before use.
                   </Typography>
                 </Box>
               </motion.div>

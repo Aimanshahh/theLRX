@@ -34,6 +34,7 @@ const palette = {
   lightBlue: "#003B9D",
   white: "#FFFFFF",
   black: "#000000",
+  yellow: "#FFD700", // Added yellow for stars
 };
 
 const VitaminB12Page = () => {
@@ -107,7 +108,7 @@ const VitaminB12Page = () => {
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 2 }}>
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} color={palette.white} fill={palette.white} />
+                <Star key={i} size={18} color={palette.yellow} fill={palette.yellow} />
               ))}
               <Typography sx={{ color: palette.white, ml: 1.5, fontSize: "15px", fontWeight: 600 }}>
                 4.8/5.0 • 2,300+ Reviews
@@ -121,15 +122,15 @@ const VitaminB12Page = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>medical-grade B12 formula</Box> boosts energy, improves focus, and supports overall wellness with rapid absorption.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>medical-grade B12 formulation</Box> is administered under provider oversight. B12 plays important roles in cellular energy metabolism and nervous system function.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Instant energy boost",
-                  "Improved mental clarity",
-                  "Enhanced metabolism",
+                  "Supports cellular energy",
+                  "Neurological function",
+                  "Metabolic processes",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -170,7 +171,7 @@ const VitaminB12Page = () => {
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> FDA-approved formula • Free shipping
+              <CheckCircle size={14} color={palette.white} /> FDA-approved formula • Provider oversight • Free shipping
             </Typography>
           </motion.div>
 
@@ -185,7 +186,7 @@ const VitaminB12Page = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Rapid Absorption
+              Clinical Formulation
             </Box>
           </motion.div>
         </Box>
@@ -224,7 +225,7 @@ const VitaminB12Page = () => {
                     borderRadius: "20px",
                   }}
                 >
-                  Science Backed
+                  Scientific Basis
                 </Typography>
 
                 <Typography
@@ -237,26 +238,27 @@ const VitaminB12Page = () => {
                     lineHeight: 1.2,
                   }}
                 >
-                  The Power of{" "}
+                  Understanding{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
                     Vitamin B12
                   </Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  Vitamin B12 (methylcobalamin) is essential for red blood cell formation, DNA synthesis, 
-                  and proper neurological function. Unlike oral supplements, injections provide 100% 
-                  bioavailability, bypassing digestive absorption issues for immediate cellular impact.
+                  Vitamin B12 (methylcobalamin) is an essential nutrient involved in red blood cell formation, 
+                  DNA synthesis, and neurological function. Administration via injection may provide complete 
+                  bioavailability. Individual experiences may vary, and this treatment should be supervised by 
+                  a qualified healthcare provider.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Boosts energy production at cellular level",
-                    "Supports healthy nerve function",
-                    "Enhances cognitive performance & focus",
-                    "Promotes red blood cell formation",
-                    "Improves mood and reduces fatigue",
-                    "Supports cardiovascular health"
+                    "Supports cellular energy production pathways",
+                    "Plays a role in healthy nerve function",
+                    "Involved in cognitive function processes",
+                    "Contributes to red blood cell formation",
+                    "Supports mood regulation mechanisms",
+                    "Plays a role in cardiovascular health"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -348,7 +350,7 @@ const VitaminB12Page = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Clinical Applications
               </Typography>
               
               <Typography
@@ -361,7 +363,7 @@ const VitaminB12Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Why Choose{" "}
+                Potential Benefits of{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   B12 Injections
                 </Box>
@@ -376,7 +378,7 @@ const VitaminB12Page = () => {
                   mx: "auto",
                 }}
               >
-                Experience rapid energy restoration and cognitive enhancement through direct absorption
+                Vitamin B12 injections are being studied for their potential role in supporting various aspects of health and wellness under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -385,26 +387,26 @@ const VitaminB12Page = () => {
             {[
               {
                 icon: "Zap",
-                title: "Instant Energy",
-                description: "Immediate cellular energy boost",
+                title: "Energy Metabolism",
+                description: "Supports cellular energy processes",
                 color: palette.darkBlue,
               },
               {
                 icon: "Brain",
-                title: "Mental Clarity",
-                description: "Enhanced focus and cognition",
+                title: "Cognitive Function",
+                description: "Plays role in neurological processes",
                 color: palette.lightBlue,
               },
               {
                 icon: "Heart",
-                title: "Heart Health",
-                description: "Supports cardiovascular function",
+                title: "Cardiovascular Support",
+                description: "Contributes to heart health mechanisms",
                 color: palette.darkBlue,
               },
               {
                 icon: "Activity",
-                title: "Metabolism",
-                description: "Improved metabolic efficiency",
+                title: "Metabolic Processes",
+                description: "Involved in metabolic functions",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -506,9 +508,9 @@ const VitaminB12Page = () => {
               }}
             >
               {[
-                { value: "98%", label: "Bioavailability" },
-                { value: "15 min", label: "Fast Absorption" },
-                { value: "95%", label: "Patient Satisfaction" },
+                { value: "Clinical", label: "Medical Formulation" },
+                { value: "Provider", label: "Oversight Included" },
+                { value: "98%", label: "Reported Satisfaction" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -556,7 +558,7 @@ const VitaminB12Page = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Boost Your Energy?
+                Clinical Consultation Available
               </Typography>
               <Typography
                 sx={{
@@ -567,7 +569,7 @@ const VitaminB12Page = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands who transformed their vitality with B12 injections
+                Speak with a medical professional about whether B12 injections may be appropriate for you
               </Typography>
             </Box>
           </motion.div>
@@ -699,7 +701,7 @@ const VitaminB12Page = () => {
                   mb: 2,
                 }}
               >
-                Premium Formulation
+                Clinical Formulation
               </Typography>
 
               <Typography
@@ -712,21 +714,20 @@ const VitaminB12Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                The{" "}
+                Medical-Grade{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  B12 Injection
-                </Box>{" "}
-                Kit
+                  B12 Injection Kit
+                </Box>
               </Typography>
 
               <Box>
                 {[
-                  "Medical-grade methylcobalamin formula",
-                  "Precise dosing for optimal effectiveness",
+                  "Medical-grade methylcobalamin formulation",
+                  "Precise dosing under provider guidance",
                   "Sterile, single-use injection system",
-                  "Quick 5-minute administration",
-                  "Comprehensive guide included",
-                  "HIPAA-compliant telehealth support",
+                  "Simple administration process",
+                  "Comprehensive clinical guide included",
+                  "HIPAA-compliant telehealth support available",
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
@@ -785,9 +786,8 @@ const VitaminB12Page = () => {
             textAlign: "center",
           }}
         >
-          Our Vitamin B12 injection kit includes everything you need for safe,
-          effective administration. Each kit contains pharmaceutical-grade
-          methylcobalamin, the most bioavailable form of B12.
+          Our Vitamin B12 injection kit is designed for clinical use under provider supervision. 
+          Each kit contains pharmaceutical-grade methylcobalamin, formulated in FDA-registered facilities.
         </Typography>
 
         <Typography
@@ -801,8 +801,7 @@ const VitaminB12Page = () => {
             textAlign: "center",
           }}
         >
-          Developed in FDA-registered facilities, our formula delivers immediate
-          results with no digestive absorption barriers.
+          This formulation is designed for direct administration, which may provide advantages in certain clinical scenarios.
         </Typography>
 
         <Box
@@ -818,7 +817,7 @@ const VitaminB12Page = () => {
               { label: "Form", value: "Injection" },
               { label: "Type", value: "Methylcobalamin" },
               { label: "Dosage", value: "1000 mcg" },
-              { label: "Kit Includes", value: "Complete Set" },
+              { label: "Kit Includes", value: "Complete Clinical Set" },
             ].map((spec, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Typography
@@ -906,7 +905,7 @@ const VitaminB12Page = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple Process
+                Clinical Process
               </Typography>
 
               <Typography
@@ -918,9 +917,9 @@ const VitaminB12Page = () => {
                   lineHeight: 1.1,
                 }}
                 >
-                Your Journey to
+                Medical Protocol for
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Maximum Energy
+                  B12 Administration
                 </Box>
               </Typography>
 
@@ -933,7 +932,7 @@ const VitaminB12Page = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience rapid vitality restoration through our simple, four-step process
+                A structured clinical approach to B12 administration under medical supervision
               </Typography>
             </Box>
           </motion.div>
@@ -950,29 +949,29 @@ const VitaminB12Page = () => {
               {
                 step: 1,
                 icon: Brain,
-                title: "Online Consultation",
-                description: "Quick medical assessment to determine your B12 needs and eligibility",
+                title: "Medical Consultation",
+                description: "Clinical assessment to determine if B12 administration is appropriate for your needs",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Zap,
-                title: "Kit Delivery",
-                description: "Discreet delivery of complete B12 injection kit to your door",
+                title: "Clinical Kit Delivery",
+                description: "Secure delivery of complete B12 injection kit with clinical documentation",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Activity,
-                title: "Simple Injection",
-                description: "Easy self-administration with guided instructions (or clinician option)",
+                title: "Supervised Administration",
+                description: "Clinical administration process with medical guidance and oversight",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: TrendingUp,
-                title: "Feel the Difference",
-                description: "Experience increased energy, focus, and vitality within hours",
+                title: "Clinical Monitoring",
+                description: "Ongoing assessment under provider supervision as needed",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1077,22 +1076,22 @@ const VitaminB12Page = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                What to Expect
+                Clinical Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  {" "}After Injection
+                  {" "}of B12 Mechanisms
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                Experience rapid improvements as B12 goes directly into your bloodstream:
+                Vitamin B12 plays various roles in bodily processes. Individual experiences may vary:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 24 hours", improvement: "Increased energy & reduced fatigue", icon: Zap, color: palette.darkBlue },
-                  { time: "2-3 days", improvement: "Improved mental clarity & focus", icon: Brain, color: palette.lightBlue },
-                  { time: "1 week", improvement: "Enhanced mood & better sleep", icon: Heart, color: palette.darkBlue},
-                  { time: "2 weeks", improvement: "Optimal cellular function", icon: Activity, color: palette.lightBlue },
+                  { time: "Immediate", mechanism: "Direct administration into bloodstream", icon: Zap, color: palette.darkBlue },
+                  { time: "24-48 Hours", mechanism: "Cellular integration processes begin", icon: Brain, color: palette.lightBlue },
+                  { time: "3-7 Days", mechanism: "Biochemical pathway engagement", icon: Heart, color: palette.darkBlue},
+                  { time: "1-2 Weeks", mechanism: "Sustained biochemical activity", icon: Activity, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1130,7 +1129,7 @@ const VitaminB12Page = () => {
                           {milestone.time}
                         </Typography>
                         <Typography sx={{ color: palette.darkGrey, fontSize: 14, lineHeight: 1.4 }}>
-                          {milestone.improvement}
+                          {milestone.mechanism}
                         </Typography>
                       </Box>
                     </motion.div>
@@ -1209,7 +1208,7 @@ const VitaminB12Page = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Limited Time Offer
+                  Clinical Program Available
                 </Typography>
               </motion.div>
 
@@ -1223,13 +1222,13 @@ const VitaminB12Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Experience
+                Begin Your Clinical
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Maximum Energy?
+                  B12 Journey
                 </Box>
               </Typography>
 
@@ -1243,8 +1242,8 @@ const VitaminB12Page = () => {
                   mx: "auto",
                 }}
               >
-                Get your Vitamin B12 injection kit for just $149. Free shipping, 
-                medical consultation included, and 30-day satisfaction guarantee.
+                Start with our Vitamin B12 injection kit at $149. Includes medical consultation, 
+                free shipping, and clinical oversight. Individual results may vary.
               </Typography>
 
               <Box sx={{ 
@@ -1282,7 +1281,7 @@ const VitaminB12Page = () => {
                       },
                     }}
                   >
-                    Get Started - $149
+                    Begin Clinical Process - $149
                   </Button>
                 </motion.div>
 
@@ -1309,17 +1308,17 @@ const VitaminB12Page = () => {
                       },
                     }}
                   >
-                    Or speak with a medical professional first
+                    Start with medical consultation
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Free Medical Consultation" },
-                  { text: "Discreet Overnight Shipping" },
-                  { text: "30-Day Satisfaction Guarantee" },
-                  { text: "Ongoing Clinical Support" },
+                  { text: "Included Medical Consultation" },
+                  { text: "Discreet Clinical Shipping" },
+                  { text: "Clinical Oversight Program" },
+                  { text: "Ongoing Medical Support" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1390,7 +1389,7 @@ const VitaminB12Page = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Trusted & Secure
+                    Clinical Standards
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1421,7 +1420,7 @@ const VitaminB12Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>✓</Box>
-                      Licensed Physicians
+                      Licensed Medical Providers
                     </Typography>
                     <Typography
                       sx={{
@@ -1433,7 +1432,7 @@ const VitaminB12Page = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>✓</Box>
-                      Secure Payments
+                      Clinical Grade Formulation
                     </Typography>
                   </Box>
                 </Box>

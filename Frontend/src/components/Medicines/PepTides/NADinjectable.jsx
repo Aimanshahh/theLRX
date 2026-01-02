@@ -127,19 +127,19 @@ const NADInjectablePage = () => {
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
               NAD+ Injectable
               <br />
-              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$189.00</Box>
+              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$299.00</Box>
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Injectable</Box> delivers systemic cellular energy for whole-body rejuvenation, enhanced metabolism, and comprehensive anti-aging benefits.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Injectable</Box> is being studied for its potential applications in cellular processes through systemic administration.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Systemic cellular energy boost",
-                  "Whole-body anti-aging effects",
-                  "Enhanced metabolism & recovery",
+                  "Cellular processes research",
+                  "Systemic administration studies",
+                  "Cellular mechanism investigation",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -173,12 +173,12 @@ const NADInjectablePage = () => {
                   fontWeight: 700,
                 }}
               >
-                Rejuvenate Your Cells - $299
+                Start Research - $299
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • 100% Bioavailability • Physician-Supervised
+              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Research Focus • Physician-Supervised
             </Typography>
           </motion.div>
 
@@ -193,7 +193,7 @@ const NADInjectablePage = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Cellular Rejuvenation
+              Research Formulation
             </Box>
           </motion.div>
         </Box>
@@ -245,24 +245,24 @@ const NADInjectablePage = () => {
                     lineHeight: 1.2,
                   }}
                 >
-                  The Science of{" "}
+                  Research on{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
-                    NAD+ Injectable Therapy
+                    NAD+ Injectable
                   </Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  NAD+ Injectable therapy delivers 100% bioavailability directly into your bloodstream, providing immediate systemic benefits. This coenzyme is essential for converting nutrients into cellular energy (ATP), activating longevity genes (sirtuins), repairing DNA damage, and supporting mitochondrial function throughout your entire body.
+                  NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme being studied for its role in cellular processes. Research continues to investigate systemic administration methods and potential applications in various cellular mechanisms.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "100% bioavailability for immediate systemic effects",
-                    "Fuels mitochondrial ATP production in every cell",
-                    "Activates sirtuin proteins for DNA repair and longevity",
-                    "Supports cellular metabolism and energy production",
-                    "Enhances neurotransmitter function and brain health",
-                    "Promotes detoxification and cellular repair processes"
+                    "Being studied for cellular energy processes",
+                    "Research on DNA repair mechanisms continues",
+                    "Cellular communication studies ongoing",
+                    "Mitochondrial function research",
+                    "Systemic administration methods under investigation",
+                    "Cellular process research continues"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -354,7 +354,7 @@ const NADInjectablePage = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Potential Benefits Being Studied
               </Typography>
               
               <Typography
@@ -367,9 +367,9 @@ const NADInjectablePage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Research on{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  NAD+ Injectable Therapy
+                  NAD+ Injectable
                 </Box>
               </Typography>
               
@@ -382,7 +382,7 @@ const NADInjectablePage = () => {
                   mx: "auto",
                 }}
               >
-                Experience whole-body cellular rejuvenation and enhanced vitality through systemic NAD+ delivery
+                Ongoing research continues to explore potential applications of systemic NAD+ administration
               </Typography>
             </Box>
           </motion.div>
@@ -391,26 +391,26 @@ const NADInjectablePage = () => {
             {[
               {
                 icon: Battery,
-                title: "Cellular Energy",
-                description: "Boosts ATP production in every cell",
+                title: "Cellular Processes",
+                description: "Cellular mechanism research",
                 color: palette.darkBlue,
               },
               {
                 icon: RefreshCw,
-                title: "Anti-Aging",
-                description: "Activates longevity genes & repairs DNA",
+                title: "Cellular Research",
+                description: "Cellular function studies",
                 color: palette.lightBlue,
               },
               {
                 icon: HeartPulse,
-                title: "Metabolic Health",
-                description: "Enhances metabolism & cardiovascular function",
+                title: "Systemic Studies",
+                description: "Systemic administration research",
                 color: palette.darkBlue,
               },
               {
                 icon: Shield,
-                title: "Detoxification",
-                description: "Supports cellular repair & detox processes",
+                title: "Research Focus",
+                description: "Ongoing scientific investigation",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -509,9 +509,9 @@ const NADInjectablePage = () => {
               }}
             >
               {[
-                { value: "100% Bioavailable", label: "Immediate Systemic Effects" },
-                { value: "Systemic", label: "Whole Body Benefits" },
-                { value: "Longevity", label: "DNA Repair & Protection" },
+                { value: "Systemic", label: "Administration Method" },
+                { value: "Research", label: "Ongoing Studies" },
+                { value: "Injectable", label: "Delivery Format" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -559,7 +559,7 @@ const NADInjectablePage = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Rejuvenate?
+                Ready to Research?
               </Typography>
               <Typography
                 sx={{
@@ -570,7 +570,7 @@ const NADInjectablePage = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands experiencing cellular-level rejuvenation with NAD+
+                Explore NAD+ formulations for cellular processes research
               </Typography>
             </Box>
           </motion.div>
@@ -701,7 +701,7 @@ const NADInjectablePage = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Cellular Rejuvenation Kit
+                      Research Formulation Kit
                     </Typography>
 
                     <Typography
@@ -726,10 +726,10 @@ const NADInjectablePage = () => {
                         "500mg NAD+ (Nicotinamide Adenine Dinucleotide) pharmaceutical-grade powder",
                         "Bacteriostatic water for injection",
                         "Sterile insulin syringes with ultra-fine needles",
-                        "Comprehensive subcutaneous injection guide",
+                        "Comprehensive subcutaneous injection guide for research",
                         "Alcohol swabs and sharps container",
-                        "Personalized dosing protocol for optimal results",
-                        "Access to 24/7 clinical support team"
+                        "Research dosing protocol",
+                        "Access to research support resources"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -788,7 +788,7 @@ const NADInjectablePage = () => {
                   textAlign: "center",
                 }}
               >
-                Our NAD+ Injectable provides the highest bioavailability for systemic cellular rejuvenation. Each 500mg vial provides multiple doses for comprehensive therapy targeting mitochondrial function, energy production, and anti-aging benefits throughout your entire body.
+                Our NAD+ Injectable is formulated following established quality standards for research purposes. Each vial is designed for research applications in cellular processes studies.
               </Typography>
               
               <Typography
@@ -802,7 +802,7 @@ const NADInjectablePage = () => {
                   textAlign: "center",
                 }}
               >
-                Manufactured in FDA-registered facilities following strict cGMP guidelines for purity and potency.
+                Manufactured following established quality standards for research formulations.
               </Typography>
 
               <Box
@@ -819,7 +819,7 @@ const NADInjectablePage = () => {
                   {[
                     { label: "Active Ingredient", value: "NAD+" },
                     { label: "Strength", value: "500 mg" },
-                    { label: "Typical Dose", value: "50-100 mg" },
+                    { label: "Research Dose", value: "50-100 mg" },
                     { label: "Administration", value: "Subcutaneous/IM" },
                   ].map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
@@ -908,7 +908,7 @@ const NADInjectablePage = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Protocol
+                Research Protocol
               </Typography>
 
               <Typography
@@ -922,7 +922,7 @@ const NADInjectablePage = () => {
                 >
                 Your Path to{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Cellular Rejuvenation
+                  Cellular Research
                 </Box>
               </Typography>
 
@@ -935,7 +935,7 @@ const NADInjectablePage = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience whole-body vitality and anti-aging benefits through our physician-guided NAD+ protocol
+                Research process for studying systemic administration methods
               </Typography>
             </Box>
           </motion.div>
@@ -952,29 +952,29 @@ const NADInjectablePage = () => {
               {
                 step: 1,
                 icon: Shield,
-                title: "Medical Assessment",
-                description: "Comprehensive evaluation of cellular health goals",
+                title: "Research Planning",
+                description: "Preparation for study protocols",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
-                title: "Personalized Protocol",
-                description: "Customized NAD+ dosing for your specific needs",
+                title: "Formulation Research",
+                description: "Study of injectable formulations",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Droplets,
-                title: "Weekly Administration",
-                description: "Simple subcutaneous injection 1-2 times weekly",
+                title: "Administration Studies",
+                description: "Research on systemic delivery methods",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: Battery,
-                title: "Enhanced Vitality",
-                description: "Experience increased energy and cellular function",
+                title: "Ongoing Research",
+                description: "Continued scientific investigation",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1079,22 +1079,22 @@ const NADInjectablePage = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                Timeline of{" "}
+                Research Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  Systemic Benefits
+                  {" "}for Systemic Studies
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                NAD+ Injectable therapy provides progressive whole-body benefits over time:
+                Research on systemic formulations continues to explore potential applications:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 1-2 hours", improvement: "Immediate energy boost & mental clarity", icon: Lightning, color: palette.darkBlue },
-                  { time: "1-2 weeks", improvement: "Improved sleep quality & recovery", icon: Moon, color: palette.lightBlue },
-                  { time: "3-4 weeks", improvement: "Enhanced metabolism & endurance", icon: Activity, color: palette.darkBlue},
-                  { time: "2-3 months", improvement: "Long-term cellular rejuvenation", icon: RefreshCw, color: palette.lightBlue },
+                  { time: "Initial Phase", improvement: "Formulation development research", icon: Lightning, color: palette.darkBlue },
+                  { time: "Early Studies", improvement: "Delivery method research", icon: Moon, color: palette.lightBlue },
+                  { time: "Ongoing Research", improvement: "Potential applications studies", icon: Activity, color: palette.darkBlue},
+                  { time: "Long-term Studies", improvement: "Continued scientific investigation", icon: RefreshCw, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1211,7 +1211,7 @@ const NADInjectablePage = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Cellular Transformation
+                  Begin Your Research
                 </Typography>
               </motion.div>
 
@@ -1225,13 +1225,13 @@ const NADInjectablePage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Rejuvenate Your
+                Ready to Study
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Cellular Energy?
+                  Systemic Administration?
                 </Box>
               </Typography>
 
@@ -1245,8 +1245,7 @@ const NADInjectablePage = () => {
                   mx: "auto",
                 }}
               >
-                Get your NAD+ Injectable kit for $299.00. Includes medical consultation, 
-                personalized protocol, discreet delivery, and ongoing cellular health support.
+                Access NAD+ Injectable for $299.00 for research purposes. Includes comprehensive formulation details and research guidance.
               </Typography>
 
               <Box sx={{ 
@@ -1284,7 +1283,7 @@ const NADInjectablePage = () => {
                       },
                     }}
                   >
-                    Start Therapy - $299.00
+                    Start Research - $299.00
                   </Button>
                 </motion.div>
 
@@ -1311,17 +1310,17 @@ const NADInjectablePage = () => {
                       },
                     }}
                   >
-                    Schedule a consultation with our cellular health specialists
+                    Access research protocols and formulation details
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Medical Assessment Included" },
                   { text: "500mg NAD+ Multi-Dose Vial" },
-                  { text: "100% Bioavailability" },
-                  { text: "Cellular Support Team Access" },
+                  { text: "Pharmaceutical Grade" },
+                  { text: "Research Documentation" },
+                  { text: "Injectable Administration" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1392,7 +1391,7 @@ const NADInjectablePage = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Important Medical Information
+                    Important Information
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1411,7 +1410,7 @@ const NADInjectablePage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Requires Medical Supervision
+                      Research Formulation
                     </Typography>
                     <Typography
                       sx={{
@@ -1423,7 +1422,7 @@ const NADInjectablePage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Research Compound
+                      For Research Purposes
                     </Typography>
                     <Typography
                       sx={{
@@ -1435,7 +1434,7 @@ const NADInjectablePage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not FDA-Approved
+                      Medical Guidance Recommended
                     </Typography>
                   </Box>
                   <Typography
@@ -1448,7 +1447,7 @@ const NADInjectablePage = () => {
                       mx: "auto",
                     }}
                   >
-                    NAD+ Injectable is a research compound with demonstrated cellular benefits in preclinical studies. It is not FDA-approved for human use and should be used under medical supervision. May cause temporary flushing or warmth after injection. Not for use by pregnant or nursing women. Results may vary based on individual health status and genetics.
+                    NAD+ is a natural coenzyme, and this formulation is being studied for research purposes. May cause temporary reactions after administration. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary.
                   </Typography>
                 </Box>
               </motion.div>

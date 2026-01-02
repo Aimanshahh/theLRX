@@ -131,15 +131,15 @@ const NADNasalSprayPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Nasal Spray</Box> delivers cellular energy directly to the brain for enhanced cognitive function, mental clarity, and anti-aging benefits.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Nasal Spray</Box> is being studied for its potential applications in cellular processes through nasal administration.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Boosts cellular energy & metabolism",
-                  "Enhances cognitive function & focus",
-                  "Promotes cellular repair & longevity",
+                  "Cellular process research",
+                  "Nasal delivery studies",
+                  "Compound research ongoing",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -173,12 +173,12 @@ const NADNasalSprayPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Boost Your Brain - $149
+                Explore Formulations - $149
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Rapid Absorption • Non-Invasive
+              <CheckCircle size={14} color={palette.white} /> Pharmaceutical Grade • Research Focus • Non-Invasive
             </Typography>
           </motion.div>
 
@@ -193,7 +193,7 @@ const NADNasalSprayPage = () => {
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Brain Optimizer
+              Research Compound
             </Box>
           </motion.div>
         </Box>
@@ -247,22 +247,22 @@ const NADNasalSprayPage = () => {
                 >
                   The Science of{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
-                    NAD+ Therapy
+                    NAD+
                   </Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  NAD+ (Nicotinamide Adenine Dinucleotide) is a crucial coenzyme found in every cell of your body, essential for energy production, DNA repair, and cellular communication. Nasal administration provides direct access to the brain via the olfactory pathway, bypassing the digestive system for rapid absorption and immediate cognitive benefits.
+                  NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme being studied for its role in cellular processes. Research continues to investigate nasal administration methods and potential applications.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "NAD+ fuels the electron transport chain for ATP (cellular energy) production",
-                    "Activates sirtuins - longevity proteins that repair DNA and regulate aging",
-                    "Supports mitochondrial function and cellular metabolism",
-                    "Enhances neurotransmitter production and brain function",
-                    "Nasal delivery provides 10x higher brain bioavailability than oral routes",
-                    "Promotes neuroprotection and cognitive resilience"
+                    "Being studied for cellular energy processes",
+                    "Research on DNA repair mechanisms continues",
+                    "Cellular communication studies ongoing",
+                    "Mitochondrial function research",
+                    "Nasal delivery methods under investigation",
+                    "Cellular process research continues"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -354,7 +354,7 @@ const NADNasalSprayPage = () => {
                   display: "inline-block",
                 }}
               >
-                Key Benefits
+                Potential Benefits Being Studied
               </Typography>
               
               <Typography
@@ -367,7 +367,7 @@ const NADNasalSprayPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Transformative Benefits of{" "}
+                Research on{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
                   NAD+ Nasal Spray
                 </Box>
@@ -382,7 +382,7 @@ const NADNasalSprayPage = () => {
                   mx: "auto",
                 }}
               >
-                Experience enhanced cognitive function and cellular rejuvenation through direct brain delivery
+                Ongoing research continues to explore potential applications of this compound
               </Typography>
             </Box>
           </motion.div>
@@ -391,26 +391,26 @@ const NADNasalSprayPage = () => {
             {[
               {
                 icon: Brain,
-                title: "Cognitive Enhancement",
-                description: "Improves focus, memory & mental clarity",
+                title: "Cellular Research",
+                description: "Cellular process studies ongoing",
                 color: palette.darkBlue,
               },
               {
                 icon: Lightning,
-                title: "Energy Boost",
-                description: "Increases cellular ATP production",
+                title: "Energy Studies",
+                description: "Cellular energy research",
                 color: palette.lightBlue,
               },
               {
                 icon: RefreshCw,
-                title: "Anti-Aging",
-                description: "Activates longevity proteins (sirtuins)",
+                title: "Cellular Processes",
+                description: "Cellular mechanism research",
                 color: palette.darkBlue,
               },
               {
                 icon: Shield,
-                title: "Neuroprotection",
-                description: "Protects & repairs brain cells",
+                title: "Research Focus",
+                description: "Ongoing scientific studies",
                 color: palette.darkBlue,
               },
             ].map((benefit, index) => (
@@ -509,9 +509,9 @@ const NADNasalSprayPage = () => {
               }}
             >
               {[
-                { value: "Within 15 min", label: "Rapid Brain Absorption" },
-                { value: "10x Bioavailability", label: "vs Oral Administration" },
-                { value: "Non-Invasive", label: "Easy Nasal Delivery" },
+                { value: "Nasal", label: "Delivery Method" },
+                { value: "Research", label: "Ongoing Studies" },
+                { value: "Non-Invasive", label: "Administration" },
               ].map((stat, index) => (
                 <Box key={index}>
                   <Typography
@@ -559,7 +559,7 @@ const NADNasalSprayPage = () => {
                   letterSpacing: "1px",
                 }}
               >
-                Ready to Optimize?
+                Ready to Research?
               </Typography>
               <Typography
                 sx={{
@@ -570,7 +570,7 @@ const NADNasalSprayPage = () => {
                   mx: "auto",
                 }}
               >
-                Join thousands enhancing their cognitive performance with NAD+
+                Explore NAD+ formulations 
               </Typography>
             </Box>
           </motion.div>
@@ -701,7 +701,7 @@ const NADNasalSprayPage = () => {
                         display: "inline-block",
                       }}
                     >
-                      Complete Brain Optimization Kit
+                      Research Formulation Kit
                     </Typography>
 
                     <Typography
@@ -726,10 +726,10 @@ const NADNasalSprayPage = () => {
                         "30ml NAD+ Nasal Spray (300mg total, 10mg/ml concentration)",
                         "Medical-grade glass bottle with precision nasal sprayer",
                         "Pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide)",
-                        "Preservative-free, isotonic solution for optimal absorption",
-                        "Comprehensive usage guide and dosing protocol",
-                        "Travel case for convenient daily use",
-                        "Access to cognitive optimization support team"
+                        "Preservative-free, isotonic solution for research use",
+                        "Comprehensive usage guide for research purposes",
+                        "Travel case for convenient transport",
+                        "Access to research support resources"
                       ].map((feature, index) => (
                         <motion.div
                           key={index}
@@ -788,7 +788,7 @@ const NADNasalSprayPage = () => {
                   textAlign: "center",
                 }}
               >
-                Our NAD+ Nasal Spray is formulated for maximum brain bioavailability and cognitive enhancement. Each spray delivers approximately 0.5mg of NAD+, with 1-2 sprays per nostril providing optimal daily dosing for cognitive benefits.
+                Our NAD+ Nasal Spray is formulated following established quality standards for research purposes. Each spray delivers a consistent dose for research applications.
               </Typography>
               
               <Typography
@@ -802,7 +802,7 @@ const NADNasalSprayPage = () => {
                   textAlign: "center",
                 }}
               >
-                Manufactured in FDA-registered facilities following strict cGMP guidelines for purity and potency.
+                Manufactured following established quality standards for research formulations.
               </Typography>
 
               <Box
@@ -908,7 +908,7 @@ const NADNasalSprayPage = () => {
                   letterSpacing: "2px",
                 }}
               >
-                Simple 4-Step Protocol
+                Research Protocol
               </Typography>
 
               <Typography
@@ -922,7 +922,7 @@ const NADNasalSprayPage = () => {
                 >
                 Your Path to{" "}
                 <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>
-                  Peak Cognitive Performance
+                  Cellular Research
                 </Box>
               </Typography>
 
@@ -935,7 +935,7 @@ const NADNasalSprayPage = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Experience enhanced mental clarity and cellular rejuvenation through our physician-guided NAD+ protocol
+                Research process for studying nasal administration methods
               </Typography>
             </Box>
           </motion.div>
@@ -952,29 +952,29 @@ const NADNasalSprayPage = () => {
               {
                 step: 1,
                 icon: Shield,
-                title: "Medical Assessment",
-                description: "Comprehensive evaluation of cognitive health goals",
+                title: "Research Planning",
+                description: "Preparation for study protocols",
                 color: palette.darkBlue,
               },
               {
                 step: 2,
                 icon: Target,
-                title: "Personalized Protocol",
-                description: "Customized NAD+ dosing for your specific needs",
+                title: "Formulation Research",
+                description: "Study of nasal formulations",
                 color: palette.lightBlue,
               },
               {
                 step: 3,
                 icon: Cloud,
-                title: "Daily Administration",
-                description: "Simple nasal spray 1-2 times daily",
+                title: "Administration Studies",
+                description: "Research on nasal delivery methods",
                 color: palette.darkBlue,
               },
               {
                 step: 4,
                 icon: Brain,
-                title: "Enhanced Cognition",
-                description: "Experience improved focus and mental energy",
+                title: "Ongoing Research",
+                description: "Continued scientific investigation",
                 color: palette.lightBlue,
               },
             ].map((item, index) => (
@@ -1079,22 +1079,22 @@ const NADNasalSprayPage = () => {
               }}
             >
               <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 900, color: palette.black, mb: 4, textAlign: "center" }}>
-                Timeline of{" "}
+                Research Timeline
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  Cognitive Benefits
+                  {" "}for Nasal Studies
                 </Box>
               </Typography>
               
               <Typography sx={{ fontSize: "18px", color: palette.darkGrey, lineHeight: 1.6, mb: 6, textAlign: "center", maxWidth: "800px", mx: "auto" }}>
-                NAD+ nasal spray provides progressive cognitive enhancement over time:
+                Research on nasal formulations continues to explore potential applications:
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
                 {[
-                  { time: "Within 15-30 min", improvement: "Immediate mental clarity & focus", icon: Zap, color: palette.darkBlue },
-                  { time: "1-2 weeks", improvement: "Improved memory & concentration", icon: Brain, color: palette.lightBlue },
-                  { time: "3-4 weeks", improvement: "Enhanced energy & mood stabilization", icon: Lightning, color: palette.darkBlue},
-                  { time: "2-3 months", improvement: "Long-term neuroprotection benefits", icon: Shield, color: palette.lightBlue },
+                  { time: "Initial Phase", improvement: "Formulation development research", icon: Zap, color: palette.darkBlue },
+                  { time: "Early Studies", improvement: "Delivery method research", icon: Brain, color: palette.lightBlue },
+                  { time: "Ongoing Research", improvement: "Potential applications studies", icon: Lightning, color: palette.darkBlue},
+                  { time: "Long-term Studies", improvement: "Continued scientific investigation", icon: Shield, color: palette.lightBlue },
                 ].map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
@@ -1211,7 +1211,7 @@ const NADNasalSprayPage = () => {
                     border: "1px solid rgba(255, 255, 255, 0.2)",
                   }}
                 >
-                  Begin Your Cognitive Transformation
+                  Begin Your Research
                 </Typography>
               </motion.div>
 
@@ -1225,13 +1225,13 @@ const NADNasalSprayPage = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Ready to Optimize Your
+                Ready to Study
                 <Box component="span" sx={{ 
                   color: palette.white,
                   ml: 2,
                   opacity: 0.9
                 }}>
-                  Brain Function?
+                  Cellular Processes?
                 </Box>
               </Typography>
 
@@ -1245,8 +1245,7 @@ const NADNasalSprayPage = () => {
                   mx: "auto",
                 }}
               >
-                Get your NAD+ Nasal Spray kit for $149.00. Includes medical consultation, 
-                personalized protocol, discreet delivery, and ongoing cognitive optimization support.
+                Access NAD+ Nasal Spray for $149.00 for research purposes. Includes comprehensive formulation details and research guidance.
               </Typography>
 
               <Box sx={{ 
@@ -1266,6 +1265,7 @@ const NADNasalSprayPage = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <Button
+                    onClick={handleCtaClick}
                     sx={{
                       backgroundColor: palette.white,
                       color: palette.darkBlue,
@@ -1283,7 +1283,7 @@ const NADNasalSprayPage = () => {
                       },
                     }}
                   >
-                    Start Therapy - $149.00
+                    Start Research - $149.00
                   </Button>
                 </motion.div>
 
@@ -1310,17 +1310,17 @@ const NADNasalSprayPage = () => {
                       },
                     }}
                   >
-                    Schedule a consultation with our cognitive optimization specialists
+                    Access research protocols and formulation details
                   </Typography>
                 </motion.div>
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
-                  { text: "Medical Assessment Included" },
                   { text: "300mg NAD+ Total" },
                   { text: "Precision Nasal Sprayer" },
-                  { text: "Cognitive Support Team Access" },
+                  { text: "Pharmaceutical Grade" },
+                  { text: "Research Documentation" },
                 ].map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
@@ -1391,7 +1391,7 @@ const NADNasalSprayPage = () => {
                       letterSpacing: "1px",
                     }}
                   >
-                    Important Medical Information
+                    Important Information
                   </Typography>
                   <Box sx={{ 
                     display: "flex", 
@@ -1422,7 +1422,7 @@ const NADNasalSprayPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Not FDA-Approved
+                      For Research Purposes
                     </Typography>
                     <Typography
                       sx={{
@@ -1434,7 +1434,7 @@ const NADNasalSprayPage = () => {
                       }}
                     >
                       <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>
-                      Medical Supervision
+                      Medical Guidance Recommended
                     </Typography>
                   </Box>
                   <Typography
@@ -1447,7 +1447,7 @@ const NADNasalSprayPage = () => {
                       mx: "auto",
                     }}
                   >
-                    NAD+ nasal spray is a research compound with demonstrated cognitive benefits in preclinical studies. It is not FDA-approved for human use and should be used under medical supervision. May cause mild nasal irritation in some individuals. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Results may vary based on individual health status and genetics.
+                    NAD+ nasal spray is a compound being studied for research purposes. May cause mild nasal irritation in some individuals. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary.
                   </Typography>
                 </Box>
               </motion.div>

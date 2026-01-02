@@ -737,18 +737,20 @@ const OralSemaglutidePage = () => {
 
               {/* Primary Description */}
               <Typography
-                sx={{
-                  fontSize: { xs: "1.1rem", md: "1.25rem" },
-                  lineHeight: 2.1,
-                  color: colors.darkGrey,
-                  textAlign: "center",
-                  fontWeight: 400,
-                }}
-              >
-                Oral Semaglutide RDT is a GLP-1 receptor agonist that mimics the natural hormone 
-                to regulate appetite, slow gastric emptying, and support weight loss through 
-                convenient oral administration.
-              </Typography>
+  sx={{
+    fontSize: { xs: "1.1rem", md: "1.25rem" },
+    lineHeight: 2.1,
+    color: colors.darkGrey,
+    textAlign: "center",
+    fontWeight: 400,
+  }}
+>
+  Oral Semaglutide RDT is an investigational formulation of a GLP-1 receptor agonist designed
+  for oral administration. Its mechanism of action, which involves GLP-1 receptor activity
+  related to appetite signaling and gastric function, is currently being studied under the
+  supervision of a licensed healthcare provider.
+</Typography>
+
 
               {/* Divider */}
               <Box
@@ -765,16 +767,18 @@ const OralSemaglutidePage = () => {
 
               {/* Secondary Description */}
               <Typography
-                sx={{
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  lineHeight: 1.95,
-                  color: alpha(colors.black, 0.75),
-                  textAlign: "center",
-                }}
-              >
-                Clinical trials show significant weight reduction and cardiovascular benefits, 
-                making it an effective option for comprehensive metabolic health management.
-              </Typography>
+  sx={{
+    fontSize: { xs: "1.05rem", md: "1.15rem" },
+    lineHeight: 1.95,
+    color: alpha(colors.black, 0.75),
+    textAlign: "center",
+  }}
+>
+   Semaglutide RDT is being studied in clinical research settings to further evaluate its
+  safety profile and its effects on metabolic-related parameters. Ongoing assessment and
+  use should occur only with appropriate medical oversight.
+</Typography>
+
             </Box>
           </motion.div>
         </Container>
@@ -814,7 +818,7 @@ const OralSemaglutidePage = () => {
                       mb: 3,
                     }}
                   >
-                    How Oral Semaglutide Works
+                    How Semaglutide Works
                   </Typography>
 
                   <Typography
@@ -1001,16 +1005,19 @@ const OralSemaglutidePage = () => {
                       <Clock size={20} color={colors.darkBlue} />
                       Treatment Timeline
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: "14px",
-                        color: colors.darkGrey,
-                        lineHeight: 1.6,
-                      }}
-                    >
-                      Weight loss typically begins within 4-8 weeks. Maximum benefits are seen 
-                      after 16-20 weeks of consistent treatment. Take once daily on an empty stomach.
-                    </Typography>
+                  <Typography
+  sx={{
+    fontSize: "14px",
+    color: colors.darkGrey,
+    lineHeight: 1.6,
+  }}
+>
+  The effects, appropriate use, and administration of Oral Semaglutide RDT are currently
+  being studied in clinical research settings. Any decisions regarding dosing, timing,
+  and ongoing evaluation should be determined by a licensed healthcare provider with
+  appropriate medical oversight.
+</Typography>
+
                   </Box>
                 </Box>
               </motion.div>
