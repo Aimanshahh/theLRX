@@ -21,33 +21,43 @@ const fadeIn = keyframes`
 const questions = [
   { 
     id: 1, 
-    question: "How long does delivery take?",
-    answer: "2–5 business days for most U.S. locations." 
+    question: "How long does prescription medication delivery typically take?",
+    answer: "Most FDA-approved prescription deliveries arrive within 2–5 business days to U.S. locations. Shipping times vary based on pharmacy processing, carrier schedules, and geographic location, with expedited options available for time-sensitive medications when medically appropriate." 
   },
   { 
     id: 2, 
-    question: "Do I get tracking?",
-    answer: "Yes. Tracking information is sent via email once your order ships." 
+    question: "Do I receive prescription shipping tracking information?",
+    answer: "Yes, comprehensive tracking information is sent via email and SMS once your medication ships from our licensed pharmacy partners. Tracking includes carrier details, estimated delivery windows, and real-time updates to ensure you're informed throughout the delivery process." 
   },
   { 
     id: 3, 
-    question: "Can I update my address?",
-    answer: "Addresses can be updated before a shipment is processed." 
+    question: "Can I update my shipping address for medication delivery?",
+    answer: "Shipping addresses can be updated before medication processing begins. For prescription medications, address changes may require additional verification to comply with pharmacy regulations and ensure proper chain-of-custody for controlled substances when applicable." 
   },
   { 
     id: 4, 
-    question: "What if my package is lost?",
-    answer: "Support will work with the carrier and provide a replacement if necessary." 
+    question: "What happens if my prescription package is lost or delayed?",
+    answer: "Our support team works directly with licensed pharmacies and carriers to resolve shipping issues. For lost medications, we coordinate with pharmacy partners for replacements following proper protocols for prescription re-dispensing and regulatory compliance." 
   },
   { 
     id: 5, 
-    question: "Is international shipping available?",
-    answer: "Not currently — services are limited to the U.S." 
+    question: "Is international shipping available for prescription medications?",
+    answer: "Currently, we only ship within the United States due to FDA regulations, pharmacy licensing requirements, and controlled substance laws. All medications are dispensed from U.S.-licensed pharmacies following state and federal regulations." 
   },
   { 
     id: 6, 
-    question: "Does delivery require a signature?",
-    answer: "No, packages are discreet and do not require a signature." 
+    question: "Does prescription delivery require a signature upon arrival?",
+    answer: "Packages are discreet and typically do not require signatures for standard deliveries. However, certain medications or higher-value shipments may require adult signature confirmation per pharmacy policies or state regulations for controlled substances." 
+  },
+  { 
+    id: 7, 
+    question: "How are temperature-sensitive medications shipped and stored?",
+    answer: "Temperature-controlled medications are shipped with appropriate packaging, ice packs, or thermal insulation as required by FDA stability guidelines. Our pharmacy partners follow proper cold chain protocols to maintain medication integrity during transit and storage." 
+  },
+  { 
+    id: 8, 
+    question: "What shipping carriers are used for prescription medication delivery?",
+    answer: "We work with reputable carriers including USPS, UPS, and FedEx that understand pharmacy shipping requirements. Carrier selection is based on medication type, shipping speed, and geographic considerations while maintaining compliance with prescription delivery regulations." 
   }
 ];
 
@@ -57,6 +67,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
   return (
     <Box 
+      component="article"
       sx={{ 
         width: "100%", 
         fontFamily: "Roboto, sans-serif",
@@ -85,6 +96,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
       >
         <Typography
           className="question-text"
+          component="h2"
           variant="h5"
           sx={{
             fontWeight: 600,
@@ -101,6 +113,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
         <IconButton
           className="icon-button"
+          aria-label={isOpen ? "Collapse shipping information" : "Expand shipping information"}
           sx={{
             bgcolor: "grey.100",
             color: "grey.700",
@@ -120,6 +133,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
         <Typography
+          component="div"
           sx={{
             py: { xs: 2, sm: 3 },
             px: { xs: 1, sm: 2 },
@@ -141,7 +155,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 };
 
 const Shipping = () => {
-  const [openItems, setOpenItems] = useState([]); // Empty array - no items open by default
+  const [openItems, setOpenItems] = useState([]);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -153,6 +167,8 @@ const Shipping = () => {
 
   return (
     <Box
+      component="section"
+      aria-label="Prescription Medication Shipping FAQ"
       sx={{
         width: "100%",
         maxWidth: "1200px",
@@ -163,9 +179,10 @@ const Shipping = () => {
         fontFamily: "Roboto, sans-serif",
       }}
     >
-      {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as other components */}
+      {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as MedicalCare */}
       <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
         <Typography
+          component="h1"
           variant="h1"
           sx={{
             fontWeight: 800,
@@ -178,7 +195,7 @@ const Shipping = () => {
             display: "inline-block",
           }}
         >
-          Shipping
+          Prescription Medication Shipping
         </Typography>
 
         <Box
@@ -186,13 +203,21 @@ const Shipping = () => {
             height: "12px",
             backgroundColor: "#00359E",
             borderRadius: "999px",
-            width: "40%",     // Adjusted width to fit "Shipping" text perfectly
+            width: "100%",     // Adjusted for longer title
             ml: "3px",
           }}
         />
       </Box>
 
-      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 1, sm: 2 }, mt: 8 }}>
+      <Box 
+        component="div"
+        sx={{ 
+          display: "flex", 
+          flexDirection: "column", 
+          gap: { xs: 1, sm: 2 }, 
+          mt: 8 
+        }}
+      >
         {questions.map((item, index) => (
           <AccordionItem
             key={item.id}
@@ -202,6 +227,42 @@ const Shipping = () => {
             onClick={() => handleToggle(item.id)}
           />
         ))}
+      </Box>
+
+      {/* SEO-rich summary - Same as MedicalCare */}
+      <Box
+        component="div"
+        sx={{
+          mt: 8,
+          p: { xs: 3, sm: 4 },
+          bgcolor: "rgba(0, 53, 158, 0.03)",
+          borderRadius: 3,
+          borderLeft: "4px solid #00359E",
+          animation: `${fadeIn} 0.8s ease-out 0.5s both`,
+          opacity: 0,
+        }}
+      >
+        <Typography
+          component="h3"
+          sx={{
+            fontWeight: 700,
+            fontSize: { xs: "1.4rem", sm: "1.6rem" },
+            mb: 2,
+            color: "#00359E",
+          }}
+        >
+          Secure Prescription Delivery
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "1.1rem", sm: "1.3rem" },
+            lineHeight: 1.7,
+            color: "grey.700",
+          }}
+        >
+          Our prescription medication shipping follows strict pharmacy regulations and FDA guidelines to ensure safe, discreet delivery. We partner with licensed pharmacies that maintain proper chain-of-custody, use temperature-controlled packaging when needed, and provide comprehensive tracking. All shipments comply with state and federal regulations for prescription medication delivery, with support available for any shipping concerns.
+        </Typography>
       </Box>
     </Box>
   );

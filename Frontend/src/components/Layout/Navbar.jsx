@@ -121,31 +121,31 @@ const exploreItems = [
       { label: "Drive Pluse-18 Tablets", path: "/sexual-health/drive-plus-18" },
     ]
   },
-  { 
-    label: "Testosterone", 
-    subsections: [
-      { label: "Enclomiphene", path: "/enclomiphene" },
-      { label: "Tadalafil", path: "/tadalafil" }
-    ]
-  },
-  { 
-    label: "Mental Health", 
-    subsections: [
-      { label: "Anxiety", path: "/Anxiety" },
-      { label: "Stress", path: "/Stress" },
-      { label: "Depression", path: "/Depression" },
-      { label: "Trouble Sleeping", path: "/TroubleSleeping" }
-    ]
-  },
-  { 
-    label: "Skin", 
-    subsections: [
-      { label: "Anti Aging Cream", path: "/AntiAgingcream" },
-      { label: "Acne Cream", path: "/Acnecream" },
-      { label: "Cold Sore", path: "/Coldsore" },
-      { label: "High Tide Cleanser", path: "/Hightidecleanser" }
-    ]
-  }
+  // { 
+  //   label: "Testosterone", 
+  //   subsections: [
+  //     { label: "Enclomiphene", path: "/enclomiphene" },
+  //     { label: "Tadalafil", path: "/tadalafil" }
+  //   ]
+  // },
+  // { 
+  //   label: "Mental Health", 
+  //   subsections: [
+  //     { label: "Anxiety", path: "/Anxiety" },
+  //     { label: "Stress", path: "/Stress" },
+  //     { label: "Depression", path: "/Depression" },
+  //     { label: "Trouble Sleeping", path: "/TroubleSleeping" }
+  //   ]
+  // },
+  // { 
+  //   label: "Skin", 
+  //   subsections: [
+  //     { label: "Anti Aging Cream", path: "/AntiAgingcream" },
+  //     { label: "Acne Cream", path: "/Acnecream" },
+  //     { label: "Cold Sore", path: "/Coldsore" },
+  //     { label: "High Tide Cleanser", path: "/Hightidecleanser" }
+  //   ]
+  // }
 ];
 const meetLRXLinks = [
   { label: "About Us", path: "/about-us" },               // Changed from "/AboutUs"

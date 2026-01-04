@@ -47,7 +47,7 @@ export default function HeroSection() {
         >
           Get Your Edge Back With
           <br />
-          Testosterone By LRX
+          Testosterone By LiquidRX
         </Typography>
       </Box>
 

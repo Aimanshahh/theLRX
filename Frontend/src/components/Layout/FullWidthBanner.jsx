@@ -43,7 +43,7 @@ const SimpleHimsBackground = () => {
             mb: { xs: 1, sm: 1.25 },
           }}
         >
-          labs by theLRX
+          labs by LiquidRX
         </Typography>
 
         <Typography

@@ -39,112 +39,119 @@ export default function HeroBanner() {
       <section className="w-full bg-white hero-section">
         <style>
           {`
-            @keyframes slideInUp {
-              0% { opacity: 0; transform: translateY(100%); }
-              50% { opacity: 1; transform: translateY(10%); }
-              100% { opacity: 1; transform: translateY(0%); }
-            }
-
-            @keyframes slideOutUp {
-              0% { opacity: 1; transform: translateY(0%); }
-              50% { opacity: 0.5; transform: translateY(-40%); }
-              100% { opacity: 0; transform: translateY(-100%); }
-            }
-
-            /* Mobile First Styles - KEEP EXISTING PADDING */
-            .hero-section { padding: 50px 16px 24px !important; }
-
-            .hero-headline {
-              color: ${current.color};
-              font-size: 2.8rem;
-              line-height: 1.1;
-              font-weight: 500;
-              overflow: hidden;
-              position: relative;
-              height: 3.2rem;
-              margin: 0;
-              /* Add only margin-top to push it down */
-              margin-top: 20px !important; /* This pushes just the rotating text down */
-            }
-
-            .hero-subtitle {
-              color: #3B3B3B;
-              font-size: 2.4rem;
-              font-weight: 600;
-              margin-top: 12px;
-              line-height: 1.2;
-              word-wrap: break-word;
-              overflow-wrap: break-word;
-              white-space: normal;
-            }
-
-            .hero-description {
-              margin-top: 16px;
-              font-size: 1rem;
-              color: #3B3B3B;
-              line-height: 1.4;
+            /* SIMPLE FIX: Use grid layout with fixed rows */
+            .hero-section { 
+              padding: 50px 16px 24px !important; 
             }
 
             .hero-container {
               max-width: 1100px;
               width: 100%;
+              display: grid;
+              grid-template-rows: auto auto auto; /* 3 fixed rows */
+              gap: 0; /* No gap between rows */
+              align-items: start; /* Align to top of each row */
             }
 
-            /* Tablet Styles - MINIMAL CHANGES */
+            /* ROW 1: Rotating text */
+            .hero-headline {
+              color: ${current.color};
+              font-size: 2.8rem;
+              line-height: 1;
+              font-weight: 500;
+              margin: 0;
+              padding: 0;
+              min-height: 3.2rem; /* FIXED HEIGHT */
+              display: flex;
+              align-items: flex-end; /* Align text to bottom */
+              grid-row: 1;
+            }
+
+            /* ROW 2: Subtitle */
+            .hero-subtitle {
+              color: #3B3B3B;
+              font-size: 2.4rem;
+              font-weight: 600;
+              line-height: 1;
+              margin: 0;
+              padding: 0;
+              margin-top: 0.5rem;
+              min-height: 2.6rem; /* FIXED HEIGHT */
+              display: flex;
+              align-items: flex-end; /* Align text to bottom */
+              grid-row: 2;
+            }
+
+            /* ROW 3: Description */
+            .hero-description {
+              font-size: 1rem;
+              color: #3B3B3B;
+              line-height: 1.4;
+              margin: 0;
+              padding: 0;
+              margin-top: 0.75rem;
+              min-height: 1.4rem; /* FIXED HEIGHT */
+              display: flex;
+              align-items: flex-start; /* Align text to top */
+              grid-row: 3;
+            }
+
+            /* Animation */
+            @keyframes fadeIn {
+              from { opacity: 0; }
+              to { opacity: 1; }
+            }
+
+            @keyframes fadeOut {
+              from { opacity: 1; }
+              to { opacity: 0; }
+            }
+
+            /* Tablet Styles */
             @media (min-width: 768px) {
-              .hero-section { padding: 60px 24px 30px !important; }
+              .hero-section { 
+                padding: 60px 24px 30px !important; 
+              }
+              
               .hero-headline { 
                 font-size: 3.8rem; 
-                height: 4rem; 
-                line-height: 1;
-                margin-top: 25px !important; /* Slightly more on tablet */
+                min-height: 4rem;
               }
-              .hero-subtitle { font-size: 3.5rem; margin-top: 16px; white-space: nowrap; }
-              .hero-description { margin-top: 20px; font-size: 1.05rem; }
+              
+              .hero-subtitle { 
+                font-size: 3.5rem; 
+                min-height: 3.5rem;
+                margin-top: 0.5rem;
+              }
+              
+              .hero-description { 
+                font-size: 1.05rem; 
+                min-height: 1.6rem;
+                margin-top: 0.75rem;
+              }
             }
 
-            /* Desktop Styles - MINIMAL CHANGES */
+            /* Desktop Styles */
             @media (min-width: 1024px) {
-              .hero-section { padding: 88px 40px 40px !important; }
-              
-              /* Push text tightly to left */
-              .hero-container {
-                max-width: 1100px;
-                margin: 0;
-                padding-left: 0;
+              .hero-section { 
+                padding: 88px 40px 40px !important; 
               }
               
               .hero-headline { 
                 font-size: 4.8rem; 
-                height: 4.8rem; 
-                line-height: 0.96;
-                margin-top: 30px !important; /* More on desktop */
+                min-height: 4.8rem;
               }
-              .hero-subtitle { font-size: 5.2rem; margin-top: 4px; }
-              .hero-description { margin-top: 10px; font-size: 1rem; }
-            }
-
-            /* Large Desktop */
-            @media (min-width: 1200px) {
-              .hero-container {
-                max-width: 1100px;
-                margin: 0;
-                padding-left: 0;
+              
+              .hero-subtitle { 
+                font-size: 5.2rem; 
+                min-height: 5.2rem;
+                margin-top: 0.5rem;
               }
-              .hero-headline {
-                margin-top: 35px !important;
-              }
-            }
-
-            /* Extra Large Desktop */
-            @media (min-width: 1440px) {
-              .hero-container {
-                max-width: 1100px;
-                margin: 0;
-                padding-left: 0;
-              }
-              .hero-headline {
-                margin-top: 40px !important;
+              
+              .hero-description { 
+                font-size: 1rem; 
+                min-height: 1.4rem;
+                margin-top: 0.75rem;
               }
             }
 
@@ -152,10 +159,13 @@ export default function HeroBanner() {
             @media (max-width: 360px) {
               .hero-headline { 
                 font-size: 2.5rem; 
-                height: 2.8rem; 
-                margin-top: 15px !important;
+                min-height: 2.8rem;
               }
-              .hero-subtitle { font-size: 2.1rem; }
+              
+              .hero-subtitle { 
+                font-size: 2.1rem; 
+                min-height: 2.3rem;
+              }
             }
           `}
         </style>
@@ -166,17 +176,17 @@ export default function HeroBanner() {
               style={{
                 display: "inline-block",
                 animation: visible
-                  ? "slideInUp 1s ease-out forwards"
-                  : "slideOutUp 1s ease-in forwards",
+                  ? "fadeIn 0.8s ease-out forwards"
+                  : "fadeOut 0.8s ease-in forwards",
               }}
             >
               {current.text}
             </span>
           </h1>
 
-          <h2 className="hero-subtitle">Personalized care starts here</h2>
+          <h2 className="hero-subtitle">Your path to better health</h2>
 
-          <p className="hero-description">Customized care starts here</p>
+          <p className="hero-description">Your custom healthcare plan</p>
         </div>
       </section>
 
@@ -184,17 +194,16 @@ export default function HeroBanner() {
       <br></br>
       <FullWidthBanner />
       <Herostyle />
-       <br></br>
+      <br></br>
       <TallBackgroundSection />
       <Fourcard />
       <Carousal /> 
       <br></br>
-       <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <LongCard />
-      
       <Accordion />
       <GuideBanner />
     </>

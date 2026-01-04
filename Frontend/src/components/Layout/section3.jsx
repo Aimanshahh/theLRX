@@ -5,6 +5,8 @@ import foodImg from "../../assets/images/card6-removebg-preview.png";
 import myVideo from '../../assets/Videos/video2.mp4';
 
 export default function HeroTextSection() {
+  const rimoFormUrl = "https://try.thelrx.com/intake/wm-ltaaov";
+
   return (
     <Box
       sx={{
@@ -47,9 +49,9 @@ export default function HeroTextSection() {
             position: "relative",
           }}
         >
-          Access a Range Of
+          Access FDA-Compliant
           <br />
-          Doctor -Trusted Weight Loss Medications
+          Doctor-Prescribed Weight Loss Solutions
         </Typography>
       </Box>
 
@@ -95,6 +97,7 @@ export default function HeroTextSection() {
         }}
       >
         <Button
+          onClick={() => window.open(rimoFormUrl, "_blank")}
           sx={{
             px: { xs: 3, sm: 4, md: 4 },
             py: { xs: 1, sm: 1.25, md: 1.5 },
@@ -107,9 +110,10 @@ export default function HeroTextSection() {
             "&:hover": { backgroundColor: "#8B8D8E" },
           }}
         >
-          Get Started
+          Start Your Journey
         </Button>
         <Button
+          onClick={() => window.open(rimoFormUrl, "_blank")}
           sx={{
             px: { xs: 3, sm: 4, md: 4 },
             py: { xs: 1, sm: 1.25, md: 1.5 },
@@ -123,11 +127,10 @@ export default function HeroTextSection() {
             "&:hover": { background: "rgba(255, 255, 255, 0.22)" },
           }}
         >
-          View Treatments
+          Explore Treatments
         </Button>
       </Box>
 
-      {/* The rest of your code remains exactly the same... */}
       <Box
         sx={{
           width: "100%",
@@ -182,13 +185,13 @@ export default function HeroTextSection() {
               textAlign: "center",
             }}
           >
-            Moving in the
+            Personalized Medical
           </Typography>
 
           <Box
             component="img"
             src={phoneImg}
-            alt="phone demo"
+            alt="telemedicine consultation"
             sx={{
               width: { 
                 xs: "250px", 
@@ -221,7 +224,7 @@ export default function HeroTextSection() {
               textAlign: "center",
             }}
           >
-            Right Direction
+            Weight Loss Plans
           </Typography>
 
           <Typography
@@ -240,10 +243,11 @@ export default function HeroTextSection() {
               px: { xs: 1, sm: 0 },
             }}
           >
-            Get a personalized weight loss plan designed with one goal in mind: helping you feel happy in your body.
+            Receive a customized medical weight loss plan developed by licensed healthcare providers, with FDA-approved medications and continuous provider monitoring.
           </Typography>
 
           <Button
+            onClick={() => window.open(rimoFormUrl, "_blank")}
             sx={{
               px: { xs: 3, sm: 3.5, md: 4 },
               py: { xs: 1, sm: 1.2, md: 1.3 },
@@ -258,7 +262,7 @@ export default function HeroTextSection() {
               zIndex: 2,
             }}
           >
-            Get Results
+            Begin Medical Assessment
           </Button>
         </Box>
 
@@ -298,7 +302,7 @@ export default function HeroTextSection() {
       lineHeight: 1.05,
     }}
   >
-    Eat Healthy,
+    Comprehensive
   </Typography>
 
   <Typography
@@ -315,7 +319,7 @@ export default function HeroTextSection() {
       mt: { xs: -0.25, sm: -0.5 },
     }}
   >
-    get strong
+    Wellness Support
   </Typography>
 
   <Typography
@@ -334,14 +338,15 @@ export default function HeroTextSection() {
     }}
   >
     <Box component="span" sx={{ color: "#FFFFFF" }}>
-      Find nutritional, protein-packed recipes
+      Access nutritional guidance, healthy recipes, and lifestyle coaching
     </Box>{" "}
     <Box component="span" sx={{ color: "#8B8D8E" }}>
-      in the Hims app, to help you maintain muscle mass.
+      alongside your medical treatment for holistic weight management.
     </Box>
   </Typography>
 
   <Button
+    onClick={() => window.open(rimoFormUrl, "_blank")}
     sx={{
       px: { xs: 3, sm: 3.5, md: 4 },
       py: { xs: 1, sm: 1.2, md: 1.3 },
@@ -356,13 +361,13 @@ export default function HeroTextSection() {
       zIndex: 2,
     }}
   >
-    Get started
+    Start Wellness Program
   </Button>
 
   <Box
     component="img"
     src={foodImg}
-    alt="food"
+    alt="healthy nutrition"
     sx={{
       width: "100%",
       height: "100%",
@@ -419,14 +424,14 @@ export default function HeroTextSection() {
             mt: { xs: 0, sm: 1, md: 2, lg: 4 },
           }}
         >
-          It's More Than A Plan
+          Medical-Grade Telemedicine
         </Typography>
 
         {/* VIDEO PLAYER */}
         <Box
           component="video"
           src={myVideo}
-          alt="My Video"
+          alt="Medical telemedicine consultation"
           autoPlay
           muted
           loop
@@ -459,7 +464,7 @@ export default function HeroTextSection() {
             mt: { xs: -1, sm: -1.5, md: -2, lg: -3 },
           }}
         >
-          It's Personal
+          Personalized Care
         </Typography>
 
         <Typography
@@ -478,18 +483,19 @@ export default function HeroTextSection() {
           }}
         >
           <Box component="span" sx={{ color: "#ffffff" }}>
-            A provider licensed in your state will review your information, so that they can combine guidance on  
+            A licensed healthcare provider will review your medical profile and create a comprehensive treatment plan including
           </Box>{" "}
           <Box component="span" sx={{ color: "#7D8FACFF" }}>
-             nutrition, activity, sleep, and more
+            FDA-approved medications, nutritional guidance, activity plans
           </Box>
           <Box component="span" sx={{ color: "#ffffff" }}>
-            {" "}into a plan designed around your body's needs.
+            , and ongoing medical supervision tailored to your health needs.
           </Box>
         </Typography>
 
         {/* CTA BUTTON */}
         <Button
+          onClick={() => window.open(rimoFormUrl, "_blank")}
           sx={{
             px: { xs: 4, sm: 5, md: 5.5, lg: 6 },
             py: { xs: 1.2, sm: 1.5, md: 1.6, lg: 1.8 },
@@ -505,7 +511,7 @@ export default function HeroTextSection() {
             },
           }}
         >
-          Get Started
+          Begin Medical Consultation
         </Button>
       </Box>
 
@@ -528,7 +534,7 @@ export default function HeroTextSection() {
   }}
 >
   Compounded drug products are not approved or evaluated for safety, effectiveness, or quality by the FDA.<br/>
-  Prescription required.
+  Prescription medications require provider evaluation and medical approval. Telemedicine services available where permitted by law.
 </Typography>
       
       <Box sx={{ flexGrow: 1 }} />

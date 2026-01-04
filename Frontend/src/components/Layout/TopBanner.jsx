@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function TopBanner() {
   const messages = [
-    { text: "Why choose LRX? Better care, better results.", icon: "check" },
+    { text: "Why choose LiquidRX? Better care, better results.", icon: "check" },
     { text: "Online medical support trusted by thousands.", icon: "users" },
     { text: "Fast delivery — right to your doorstep.", icon: "truck" },
     { text: "FDA-approved treatments that really work.", icon: "badge" },
@@ -141,7 +141,7 @@ export default function TopBanner() {
               fontWeight: 530,
             }}
           >
-            Why LRX?
+            Why LiquidRX?
           </span>
         </div>
 

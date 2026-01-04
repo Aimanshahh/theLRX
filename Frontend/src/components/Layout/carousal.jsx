@@ -165,7 +165,7 @@ const CarousalWithCards = () => {
                 </Typography>
 
                 {/* BIGGER BUTTON */}
-                <Button
+                {/* <Button
                   sx={{
                     position: "absolute",
                     bottom: { xs: 16, sm: 22, md: 28 },
@@ -185,7 +185,7 @@ const CarousalWithCards = () => {
                   }}
                 >
                   Explore
-                </Button>
+                </Button> */}
               </Card>
             </Box>
           ))}

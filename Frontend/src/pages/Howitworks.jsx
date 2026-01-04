@@ -208,8 +208,8 @@ export default function Howitworks() {
             Get professional guidance, lab-grade testing, and science-backed treatments—delivered discreetly to your doorstep.
           </Typography>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} style={{ marginTop: "35px" }}>
-            <Box onClick={() => navigate("/AllProducts")} sx={{ backgroundColor: "#FFFFFF", color: "#00359E", padding: "14px 32px", fontSize: "18px", fontWeight: 700, borderRadius: "12px", cursor: "pointer", display: "inline-block", boxShadow: "0 10px 25px rgba(0,0,0,0.25)", transition: "0.3s", "&:hover": { backgroundColor: "#F0F4FF" } }}>
-              Explore Products
+            <Box onClick={() => navigate("/")} sx={{ backgroundColor: "#FFFFFF", color: "#00359E", padding: "14px 32px", fontSize: "18px", fontWeight: 700, borderRadius: "12px", cursor: "pointer", display: "inline-block", boxShadow: "0 10px 25px rgba(0,0,0,0.25)", transition: "0.3s", "&:hover": { backgroundColor: "#F0F4FF" } }}>
+              Explore
             </Box>
           </motion.div>
         </motion.div>
@@ -233,28 +233,153 @@ export default function Howitworks() {
         </Box>
       </Box>
 
-      {/* -------------------- NEWSLETTER SIGNUP -------------------- */}
-      <Box sx={{ width: "100%", display: "flex", justifyContent: "center", marginTop: { xs: "80px", md: "120px" }, padding: { xs: "40px 20px", md: "60px 40px" }, backgroundColor: "#f9f9f9" }}>
-        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} style={{ maxWidth: "800px", width: "100%", textAlign: "center" }}>
-          <Typography sx={{ fontSize: { xs: "28px", md: "36px" }, fontWeight: 700, color: "#00359E" }}>Stay Updated</Typography>
-          <Typography sx={{ fontSize: { xs: "16px", md: "20px" }, color: "#555555", marginTop: "12px" }}>
-            Subscribe to our newsletter and get the latest health tips, updates, and offers.
-          </Typography>
+  {/* -------------------- HOW IT WORKS SUMMARY -------------------- */}
+<Box
+  sx={{
+    width: "100%",
+    display: "flex",
+    justifyContent: "center",
+    mt: { xs: "80px", md: "120px" },
+    px: { xs: "20px", md: "40px" },
+    py: { xs: "60px", md: "80px" },
+    background: "linear-gradient(180deg, #F7F9FC 0%, #FFFFFF 100%)",
+  }}
+>
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    style={{ maxWidth: "1100px", width: "100%" }}
+  >
+    {/* Heading */}
+    <Typography
+      sx={{
+        fontSize: { xs: "28px", md: "36px" },
+        fontWeight: 700,
+        color: "#00359E",
+        textAlign: "center",
+      }}
+    >
+      How It Works
+    </Typography>
 
-          {/* Email Input + Button */}
-          <Box sx={{ marginTop: "25px", display: "flex", justifyContent: "center", flexDirection: { xs: "column", sm: "row" }, gap: "12px" }}>
-            <input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} style={{ padding: "14px 18px", borderRadius: "10px", border: "1px solid #ccc", fontSize: "16px", flex: 1, minWidth: "220px" }} />
-            <button onClick={handleSubscribe} style={{ padding: "14px 28px", borderRadius: "10px", border: "none", backgroundColor: "#00359E", color: "#fff", fontWeight: 700, fontSize: "16px", cursor: "pointer", transition: "0.3s" }} onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#00296B")} onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#00359E")}>
-              Subscribe
-            </button>
+    <Typography
+      sx={{
+        fontSize: { xs: "16px", md: "20px" },
+        color: "#555555",
+        textAlign: "center",
+        mt: "12px",
+        maxWidth: "700px",
+        mx: "auto",
+      }}
+    >
+      A simple, guided process designed to help you move forward with clarity and confidence.
+    </Typography>
+
+    {/* Steps */}
+    <Box
+      sx={{
+        mt: "50px",
+        display: "grid",
+        gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
+        gap: "24px",
+      }}
+    >
+      {[
+        {
+          step: "01",
+          title: "Explore",
+          desc: "Browse information and understand how our approach works for your needs.",
+        },
+        {
+          step: "02",
+          title: "Learn",
+          desc: "Get clear, easy-to-understand guidance without complicated steps or jargon.",
+        },
+        {
+          step: "03",
+          title: "Take Action",
+          desc: "Use the insights to make informed decisions at your own pace.",
+        },
+      ].map((item, index) => (
+        <motion.div
+          key={index}
+          whileHover={{ y: -6 }}
+          transition={{ duration: 0.3 }}
+        >
+          <Box
+            sx={{
+              p: "30px",
+              height: "100%",
+              borderRadius: "18px",
+              background: "rgba(255, 255, 255, 0.85)",
+              boxShadow: "0px 10px 30px rgba(0,0,0,0.06)",
+              border: "1px solid rgba(0,0,0,0.05)",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "14px",
+                fontWeight: 700,
+                color: "#00359E",
+                mb: "8px",
+              }}
+            >
+              STEP {item.step}
+            </Typography>
+
+            <Typography
+              sx={{
+                fontSize: "22px",
+                fontWeight: 700,
+                color: "#111",
+                mb: "10px",
+              }}
+            >
+              {item.title}
+            </Typography>
+
+            <Typography
+              sx={{
+                fontSize: "16px",
+                color: "#555",
+                lineHeight: 1.7,
+              }}
+            >
+              {item.desc}
+            </Typography>
           </Box>
-
-          {/* Snackbar Feedback */}
-          <Snackbar open={snackbar.open} autoHideDuration={3000} onClose={() => setSnackbar({ ...snackbar, open: false })} anchorOrigin={{ vertical: "bottom", horizontal: "center" }}>
-            <Alert severity={snackbar.severity} sx={{ width: "100%" }}>{snackbar.message}</Alert>
-          </Snackbar>
         </motion.div>
-      </Box>
+      ))}
+    </Box>
+
+    {/* CTA */}
+    {/* <Box sx={{ textAlign: "center", mt: "50px" }}>
+      <button
+        style={{
+          padding: "14px 34px",
+          borderRadius: "12px",
+          border: "none",
+          backgroundColor: "#00359E",
+          color: "#fff",
+          fontWeight: 700,
+          fontSize: "16px",
+          cursor: "pointer",
+          transition: "0.3s",
+        }}
+        onMouseOver={(e) =>
+          (e.currentTarget.style.backgroundColor = "#00296B")
+        }
+        onMouseOut={(e) =>
+          (e.currentTarget.style.backgroundColor = "#00359E")
+        }
+      >
+        Learn More
+      </button>
+    </Box> */}
+  </motion.div>
+</Box>
+
     </>
   );
 }

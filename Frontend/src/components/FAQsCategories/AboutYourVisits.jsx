@@ -21,33 +21,43 @@ const fadeIn = keyframes`
 const questions = [
   { 
     id: 1, 
-    question: "How long does a visit take?",
-    answer: "Most visits take less than 5 minutes to complete." 
+    question: "How long does an online medical consultation typically take?",
+    answer: "Most online medical visits are completed in under 5 minutes. The streamlined digital format eliminates waiting room time while ensuring comprehensive evaluation through structured medical questionnaires designed to capture essential health information for proper diagnosis." 
   },
   { 
     id: 2, 
-    question: "Do I speak to a doctor live?",
-    answer: "Not always. Many visits are asynchronous, meaning the provider reviews your details and responds soon after." 
+    question: "Do patients speak directly with healthcare providers during telemedicine visits?",
+    answer: "Our platform offers both synchronous (live) and asynchronous consultations. Many visits utilize asynchronous review, where board-certified medical providers thoroughly evaluate your submitted information and medical history before determining appropriate treatment. This approach allows for careful consideration of FDA guidelines and ensures evidence-based medical decisions." 
   },
   { 
     id: 3, 
-    question: "Can I update my visit answers?",
-    answer: "Yes, you can revise your medical answers anytime before submitting the form." 
+    question: "Can I modify my medical questionnaire responses after starting a consultation?",
+    answer: "Yes, you can review and update all medical information, symptoms, and health history anytime before final submission. We encourage complete accuracy as providers base treatment decisions on this information while adhering to FDA regulations and clinical guidelines." 
   },
   { 
     id: 4, 
-    question: "What happens after I submit my visit?",
-    answer: "A licensed provider reviews your form and determines whether treatment is appropriate." 
+    question: "What is the process after submitting a telemedicine consultation request?",
+    answer: "After submission, a licensed healthcare provider reviews your comprehensive health profile, including medical history and symptoms. They assess eligibility for treatment based on FDA-approved indications, contraindications, and clinical appropriateness. If suitable, FDA-approved medications may be prescribed following established telehealth regulations." 
   },
   { 
     id: 5, 
-    question: "Will I need photos?",
-    answer: "Some categories may require clear photos for your provider to properly evaluate your case." 
+    question: "Are medical photographs required for telemedicine diagnosis?",
+    answer: "Certain medical conditions may require clear, well-lit photographs for accurate assessment, particularly for dermatological concerns. Photo requirements follow FDA guidelines for remote diagnosis and help ensure patient safety through proper visual evaluation when medically necessary." 
   },
   { 
     id: 6, 
-    question: "Is my visit information private?",
-    answer: "Yes, all information is encrypted and protected according to HIPAA standards." 
+    question: "How is patient privacy and medical data security maintained in telehealth?",
+    answer: "We employ HIPAA-compliant encryption, secure data storage, and rigorous privacy protocols. All patient-provider communications and medical records are protected according to FDA digital health guidelines and healthcare privacy regulations, ensuring confidentiality throughout your telehealth experience." 
+  },
+  { 
+    id: 7, 
+    question: "What FDA regulations govern online prescription services?",
+    answer: "Our platform operates under FDA telehealth regulations, including the Ryan Haight Act provisions for telemedicine prescribing. We comply with state-specific medical board requirements, maintain proper patient-provider relationships, and only prescribe FDA-approved medications for appropriate indications following comprehensive medical evaluation." 
+  },
+  { 
+    id: 8, 
+    question: "How do providers ensure medication safety in online consultations?",
+    answer: "Providers conduct thorough medication reviews, check for interactions, assess contraindications, and follow FDA risk evaluation and mitigation strategies (REMS) when applicable. All prescriptions consider patient-specific factors including medical history, current medications, and FDA safety guidelines." 
   }
 ];
 
@@ -85,6 +95,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
       >
         <Typography
           className="question-text"
+          component="h2"
           variant="h5"
           sx={{
             fontWeight: 600,
@@ -101,6 +112,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
         <IconButton
           className="icon-button"
+          aria-label={isOpen ? "Collapse answer" : "Expand answer"}
           sx={{
             bgcolor: "grey.100",
             color: "grey.700",
@@ -120,6 +132,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
         <Typography
+          component="div"
           sx={{
             py: { xs: 2, sm: 3 },
             px: { xs: 1, sm: 2 },
@@ -153,6 +166,8 @@ const AboutYourVisit = () => {
 
   return (
     <Box
+      component="section"
+      aria-label="Telemedicine Frequently Asked Questions"
       sx={{
         width: "100%",
         maxWidth: "1200px",
@@ -166,6 +181,7 @@ const AboutYourVisit = () => {
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as TheBasics */}
       <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
         <Typography
+          component="h1"
           variant="h1"
           sx={{
             fontWeight: 800,
@@ -178,7 +194,7 @@ const AboutYourVisit = () => {
             display: "inline-block",
           }}
         >
-          About Your Visit
+          Telemedicine Visit FAQ: Online Medical Consultation Process
         </Typography>
 
         <Box
@@ -192,7 +208,15 @@ const AboutYourVisit = () => {
         />
       </Box>
 
-      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 1, sm: 2 }, mt: 8 }}>
+      <Box 
+        component="div"
+        sx={{ 
+          display: "flex", 
+          flexDirection: "column", 
+          gap: { xs: 1, sm: 2 }, 
+          mt: 8 
+        }}
+      >
         {questions.map((item, index) => (
           <AccordionItem
             key={item.id}
@@ -202,6 +226,42 @@ const AboutYourVisit = () => {
             onClick={() => handleToggle(item.id)}
           />
         ))}
+      </Box>
+
+      {/* SEO-rich summary */}
+      <Box
+        component="div"
+        sx={{
+          mt: 8,
+          p: { xs: 3, sm: 4 },
+          bgcolor: "rgba(0, 53, 158, 0.03)",
+          borderRadius: 3,
+          borderLeft: "4px solid #00359E",
+          animation: `${fadeIn} 0.8s ease-out 0.5s both`,
+          opacity: 0,
+        }}
+      >
+        <Typography
+          component="h3"
+          sx={{
+            fontWeight: 700,
+            fontSize: { xs: "1.4rem", sm: "1.6rem" },
+            mb: 2,
+            color: "#00359E",
+          }}
+        >
+          Understanding FDA-Compliant Telemedicine
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "1.1rem", sm: "1.3rem" },
+            lineHeight: 1.7,
+            color: "grey.700",
+          }}
+        >
+          Our telemedicine platform operates under strict FDA regulations and healthcare guidelines to ensure patient safety and compliance. We provide secure, HIPAA-compliant online medical consultations with licensed healthcare providers who follow evidence-based practices and FDA-approved treatment protocols. All prescriptions are issued only after comprehensive medical evaluation and consideration of FDA safety guidelines.
+        </Typography>
       </Box>
     </Box>
   );

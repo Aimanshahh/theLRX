@@ -6,11 +6,11 @@ import manImg from "../assets/images/aboutdoctor1.png";
 import videoFile from "../assets/Videos/motion2Fast_Abstract_pharmaceutical_laboratory_background_vide_0.mp4";
 
 // Import images for mosaic cards
-import img1 from "../assets/images/finalimg1.png";
-import img2 from "../assets/images/finalimg2.png";
-import img3 from "../assets/images/finalimg3.png";
-import img4 from "../assets/images/finalimg4.png";
-import img5 from "../assets/images/finalimg5.png";
+import img1 from "../assets/Aboutus/img4.png";
+import img2 from "../assets/Aboutus/img1.png";
+import img3 from "../assets/Aboutus/img3.png";
+import img4 from "../assets/Aboutus/img5.png";
+import img5 from "../assets/Aboutus/img2.png";
 
 // Import your logo image
 import logo from "../assets/LRXLOGOS/LOGO-3.png";
@@ -31,8 +31,8 @@ export default function AboutUs() {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  // Updated CardBlock component with 0.5px gap and enhanced styling
-  const CardBlock = ({ title, image, size = "large" }) => {
+  // Updated CardBlock component with sx prop and imagePosition support
+  const CardBlock = ({ title, image, size = "large", sx, imagePosition = "right bottom" }) => {
     const isLarge = size === "large";
 
     return (
@@ -52,8 +52,8 @@ export default function AboutUs() {
           display: "flex",
           alignItems: "flex-start",
           justifyContent: "flex-start",
-          // Remove margin to eliminate gaps
           margin: 0,
+          ...sx, // Spread the sx prop here
         }}
       >
         {/* IMAGE */}
@@ -68,7 +68,7 @@ export default function AboutUs() {
             height: "100%",
             width: "auto",
             objectFit: "contain",
-            objectPosition: "right bottom",
+            objectPosition: imagePosition, // Use the imagePosition prop
             zIndex: 1,
           }}
         />
@@ -95,7 +95,7 @@ export default function AboutUs() {
               md: isLarge ? "32px" : "24px", 
               lg: isLarge ? "36px" : "26px" 
             },
-            fontWeight: 900, // Increased to 900 for bolder text
+            fontWeight: 900,
             color: "#000000",
             zIndex: 2,
             lineHeight: 1.05,
@@ -105,10 +105,9 @@ export default function AboutUs() {
               md: isLarge ? "260px" : "180px", 
               lg: isLarge ? "300px" : "200px" 
             },
-            fontFamily: `"Montserrat", "Inter", sans-serif`, // Changed to Montserrat for better impact
+            fontFamily: `"Montserrat", "Inter", sans-serif`,
             letterSpacing: "-0.02em",
-            textTransform: "uppercase", // Make all titles uppercase
-            // Enhanced text styling without white shadow
+            textTransform: "uppercase",
             background: "linear-gradient(180deg, #000000 0%, #333333 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
@@ -827,7 +826,7 @@ export default function AboutUs() {
             }}
           >
             Whether you're looking for an innovative treatment or a tried-and-true
-            generic option, TheLRX connects you with a licensed medical
+            generic option, LiquidRX connects you with a licensed medical
             provider in your state to assess your symptoms and health history on a
             1-to-1 basis to determine what is right for you. Your provider
             recommends a personalized treatment plan based on your unique needs and
@@ -837,72 +836,155 @@ export default function AboutUs() {
           </Typography>
         </Box>
 
-        {/* ====== MOSAIC CARDS SECTION WITH 0.5px GAP ====== */}
-        <Box
-          sx={{
-            width: "100%",
-            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
-            mx: "auto",
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-            gap: "4px", // 0.5px gap between columns
-            px: { xs: 2, sm: 3, md: 4 },
-            pb: { xs: 4, sm: 5, md: 6 },
-            alignItems: "stretch",
-            backgroundColor: "#FFFFFF", // Background color to show the gap
-          }}
-        >
-          {/* LEFT COLUMN */}
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateRows: "auto auto auto",
-              gap: "4px", // 0.5px gap between cards in left column
-              backgroundColor: "#FFFFFF", // Background to show gaps
-            }}
-          >
-            <CardBlock
-              title="Sexual performance"
-              image={img1}
-              size="large"
-            />
+        {/* ====== MOSAIC CARDS SECTION WITH PROPER HEIGHT ALIGNMENT ====== */}
+<Box
+  sx={{
+    width: "100%",
+    maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
+    mx: "auto",
+    display: "grid",
+    gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+    gap: "4px",
+    px: { xs: 2, sm: 3, md: 4 },
+    pb: { xs: 4, sm: 5, md: 6 },
+    alignItems: "stretch",
+    backgroundColor: "#FFFFFF",
+  }}
+>
+  {/* LEFT COLUMN */}
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateRows: "auto 1fr",
+      gap: "4px",
+      backgroundColor: "#FFFFFF",
+    }}
+  >
+    {/* Sexual Performance - LARGE card */}
+    <CardBlock
+      title="Sexual performance"
+      image={img1}
+      size="large"
+      sx={{
+        height: { 
+          xs: "280px", 
+          sm: "350px", 
+          md: "400px", 
+          lg: "450px" 
+        },
+        "& img": {
+          position: "absolute",
+          bottom: { xs: "-30px", sm: "-40px", md: "-50px", lg: "-60px" },
+          left: { xs: "50px", sm: "80px", md: "120px", lg: "150px" },
+          height: "auto",
+          width: { xs: "80%", sm: "85%", md: "90%", lg: "100%" },
+          maxHeight: { xs: "200%", sm: "220%", md: "240%", lg: "250%" },
+          objectFit: "contain",
+          objectPosition: "left bottom",
+          zIndex: 1,
+        }
+      }}
+    />
 
-            <CardBlock
-              title="Skin care"
-              image={img3}
-              size="small"
-            />
+    {/* This Box wraps Skincare + Mental Health - SMALL cards */}
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateRows: "1fr 1fr",
+        gap: "4px",
+        height: "100%",
+      }}
+    >
+      {/* Skincare - SMALL card */}
+      <CardBlock
+        title="Skin care"
+        image={img3}
+        size="small"
+        sx={{
+          height: "200px",
+          "& img": {
+            position: "absolute",
+            bottom: { xs: "-30px", sm: "-40px", md: "-45px", lg: "-50px" },
+            left: { xs: "120px", sm: "150px", md: "180px", lg: "230px" },
+            height: { xs: "280px", sm: "320px", md: "350px", lg: "380px" },
+            width: "auto",
+            maxWidth: "100%",
+            objectFit: "contain",
+            objectPosition: "left bottom",
+            zIndex: 1,
+          }
+        }}
+      />
 
-            <CardBlock
-              title="Mental health"
-              image={img4}
-              size="small"
-            />
-          </Box>
+      {/* Mental Health - SMALL card */}
+      <CardBlock
+        title="Mental health"
+        image={img4}
+        size="small"
+        sx={{
+          height: "200px",
+          "& img": {
+            position: "absolute",
+            bottom: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
+            left: { xs: "40px", sm: "60px", md: "75px", lg: "90px" },
+            height: { xs: "200px", sm: "220px", md: "240px", lg: "250px" },
+            width: "auto",
+            maxWidth: { xs: "85%", sm: "87%", md: "89%", lg: "90%" },
+            objectFit: "contain",
+            objectPosition: "left bottom",
+            zIndex: 1,
+          }
+        }}
+      />
+    </Box>
+  </Box>
 
-          {/* RIGHT COLUMN */}
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateRows: "auto 1fr",
-              gap: "4px", // 0.5px gap between cards in right column
-              backgroundColor: "#FFFFFF", // Background to show gaps
-            }}
-          >
-            <CardBlock
-              title="Weight loss"
-              image={img2}
-              size="large"
-            />
+  {/* RIGHT COLUMN */}
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateRows: "auto 1fr",
+      gap: "4px",
+      backgroundColor: "#FFFFFF",
+    }}
+  >
+    {/* Weight Loss - LARGE card */}
+    <CardBlock
+      title="Weight loss"
+      image={img2}
+      size="large"
+      sx={{
+        height: { 
+          xs: "280px", 
+          sm: "350px", 
+          md: "400px", 
+          lg: "450px" 
+        },
+      }}
+    />
 
-            <CardBlock
-              title="Hair growth"
-              image={img5}
-              size="large"
-            />
-          </Box>
-        </Box>
-
+    {/* Hair Growth - LARGE card */}
+    <CardBlock
+      title="Hair growth"
+      image={img5}
+      size="large"
+      sx={{
+        height: "400px",
+        "& img": {
+          position: "absolute",
+          bottom: { xs: "-60px", sm: "-80px", md: "-100px", lg: "-113px" },
+          left: { xs: "0px", sm: "5px", md: "8px", lg: "11px" },
+          height: "auto",
+          width: { xs: "95%", sm: "97%", md: "99%", lg: "100%" },
+          maxHeight: { xs: "150%", sm: "170%", md: "185%", lg: "200%" },
+          objectFit: "contain",
+          objectPosition: "left bottom",
+          zIndex: 1,
+        }
+      }}
+    />
+  </Box>
+</Box>
         {/* ====== SUCCESS STANDARD SECTION ====== */}
         <Box
           sx={{
@@ -968,7 +1050,7 @@ export default function AboutUs() {
               mx: "auto",
             }}
           >
-            At TheLRX, we believe exceptional results should be accessible to everyone. 
+            At LiquidRX, we believe exceptional results should be accessible to everyone. 
             Our proven treatments and dedicated care teams work together to deliver 
             consistent, measurable outcomes. With personalized plans tailored to your 
             specific needs and continuous support from our medical professionals, 
@@ -1075,7 +1157,7 @@ export default function AboutUs() {
                   fontStyle: "italic",
                 }}
               >
-                "TheLRX made getting treatment so simple. The medical provider really listened to my concerns and the 24/7 care team support is incredible."
+                "LiquidRX made getting treatment so simple. The medical provider really listened to my concerns and the 24/7 care team support is incredible."
               </Typography>
 
               {/* Reviewer Info */}
@@ -1146,7 +1228,7 @@ export default function AboutUs() {
                   fontStyle: "italic",
                 }}
               >
-                "I was skeptical about online healthcare, but TheLRX proved me wrong. The personalized treatment plan actually worked for my specific needs."
+                "I was skeptical about online healthcare, but LiquidRX proved me wrong. The personalized treatment plan actually worked for my specific needs."
               </Typography>
 
               {/* Reviewer Info */}
@@ -1279,4 +1361,4 @@ export default function AboutUs() {
       </style>
     </Box>
   );
-}n
+}

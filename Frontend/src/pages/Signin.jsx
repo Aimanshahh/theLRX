@@ -185,7 +185,7 @@ export default function Signin() {
                   fontWeight="400"
                   sx={{ fontSize: { xs: "1rem", sm: "1.1rem" } }}
                 >
-                  Sign in to your TheLRX account
+                  Sign in to your LiquidRX account
                 </Typography>
               </Box>
             </Fade>

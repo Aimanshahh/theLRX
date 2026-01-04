@@ -135,7 +135,7 @@ export default function Register() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setIsLoading(false);
-      setSuccessMessage("Account created successfully! Welcome to TheLRX.");
+      setSuccessMessage("Account created successfully! Welcome to LiquidRX.");
       
       // Redirect to signin after successful registration
       setTimeout(() => {
@@ -275,7 +275,7 @@ export default function Register() {
                     mb: 1
                   }}
                 >
-                  Join TheLRX Today
+                  Join LiquidRX Today
                 </Typography>
                 <Typography 
                   variant="h6" 
@@ -703,24 +703,7 @@ export default function Register() {
                   )}
                 </Box>
 
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      name="subscribeToNewsletter"
-                      checked={formData.subscribeToNewsletter}
-                      onChange={handleChange}
-                      sx={{
-                        color: "#00359E",
-                        '&.Mui-checked': {
-                          color: "#00359E",
-                        },
-                      }}
-                    />
-                  }
-                  label="Send me health tips, special offers, and updates from TheLRX"
-                />
-
-                {/* Register Button */}
+             {/* Register Button */}
                 <Button
                   type="submit"
                   fullWidth
@@ -769,7 +752,7 @@ export default function Register() {
                     "Account Created Successfully!"
                   ) : (
                     <>
-                      Create My TheLRX Account
+                      Create My LiquidRX Account
                       <ArrowRight size={20} style={{ marginLeft: 8 }} />
                     </>
                   )}
@@ -823,7 +806,7 @@ export default function Register() {
                 }}
               >
                 <Typography variant="h6" sx={{ mb: 2, color: "#00359E", fontWeight: 600 }}>
-                  Why Join TheLRX?
+                  Why Join LiquidRX?
                 </Typography>
                 <Box sx={{ display: "flex", flexDirection: "column", gap: 1 }}>
                   <Typography variant="body2" color="text.secondary">
@@ -840,6 +823,9 @@ export default function Register() {
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
                     ✓ Ongoing support from our dedicated care team
+                  </Typography>
+                   <Typography variant="body2" color="text.secondary">
+                    ✓ First access to innovation and Med releases
                   </Typography>
                 </Box>
               </Box>

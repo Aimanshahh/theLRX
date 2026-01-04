@@ -34,7 +34,7 @@ const Logo = () => (
   >
     <img
       src={logo}
-      alt="logo"
+      alt="LiquidRX Logo"
       style={{ height: "55px", marginLeft: "22px", cursor: "pointer" }}
       onClick={() => window.location.href = "/"}
     />
@@ -98,7 +98,7 @@ const SearchBar = ({ allQuestions }) => {
     >
       <TextField
         fullWidth
-        placeholder="How can we help you?"
+        placeholder="Search FDA-compliant telemedicine answers..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         variant="standard"
@@ -178,12 +178,12 @@ const CategoryCards = () => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
 const cards = [
-    { title: "The Basics", image: basicsImg, route: "/faqs/basics" },
+    { title: "Telemedicine Basics", image: basicsImg, route: "/faqs/basics" },
     { title: "About Your Visit", image: accountImg, route: "/faqs/visits" },
-    { title: "Medical Care", image: medicalImg, route: "/faqs/medical-care" },
-    { title: "Shipping", image: shippingImg, route: "/faqs/shipping" },
-    { title: "Privacy & Security", image: privacyImg, route: "/faqs/privacy-security" },
-    { title: "Troubleshooting", image: troubleImg, route: "/faqs/troubleshooting" },
+    { title: "Costs & Payment", image: medicalImg, route: "/faqs/medical-care" },
+    { title: "Prescription Shipping", image: shippingImg, route: "/faqs/shipping" },
+    { title: "HIPAA Security", image: privacyImg, route: "/faqs/privacy-security" },
+    { title: "Billing Support", image: troubleImg, route: "/faqs/troubleshooting" },
 ]; 
   return (
     <Box
@@ -273,33 +273,144 @@ export default function FAQspage() {
  const allQuestions = [
   {
     id: 1,
-    question: "What is Hims/Hers?",
-    category: "The Basics",
-    keywords: ["what","hims","hers","definition","explanation","about"],
-    route: "/faqs/basics"  // Changed from "/TheBasics"
+    question: "What is LiquidRX telemedicine platform?",
+    category: "Telemedicine Basics",
+    keywords: ["what","liquidrx","telemedicine","definition","explanation","about","platform","service"],
+    route: "/faqs/basics"
   },
   {
     id: 2,
-    question: "How does consultation work?",
-    category: "The Basics",
-    keywords: ["how","consultation","process","work","steps"],
-    route: "/faqs/basics"  // Changed from "/TheBasics"
+    question: "How does telemedicine consultation work?",
+    category: "Telemedicine Basics",
+    keywords: ["how","telemedicine","consultation","process","work","steps","online","visit","appointment"],
+    route: "/faqs/basics"
   },
   {
     id: 3,
-    question: "Who are the providers?",
-    category: "My Account",
-    keywords: ["providers","doctors","physicians"],
-    route: "/faqs/visits"  // Changed from "/AboutYourVisits"
+    question: "How long does a telemedicine visit take?",
+    category: "About Your Visit",
+    keywords: ["how","long","visit","time","duration","consultation","appointment"],
+    route: "/faqs/visits"
   },
   {
     id: 4,
-    question: "Do you require insurance?",
-    category: "Medical Care",
-    keywords: ["insurance","payment"],
-    route: "/faqs/medical-care"  // Changed from "/Medicalcare"
+    question: "Are telemedicine providers properly licensed?",
+    category: "Telemedicine Basics",
+    keywords: ["providers","doctors","physicians","licensed","certified","credentials"],
+    route: "/faqs/basics"
   },
-  // ... update ALL other routes similarly
+  {
+    id: 5,
+    question: "How much does telemedicine treatment cost?",
+    category: "Costs & Payment",
+    keywords: ["cost","price","payment","fee","how much","expensive","affordable","insurance"],
+    route: "/faqs/medical-care"
+  },
+  {
+    id: 6,
+    question: "Do I need health insurance for telemedicine?",
+    category: "Costs & Payment",
+    keywords: ["insurance","health insurance","coverage","payment","cash pay","out of pocket"],
+    route: "/faqs/medical-care"
+  },
+  {
+    id: 7,
+    question: "How long does prescription delivery take?",
+    category: "Prescription Shipping",
+    keywords: ["shipping","delivery","time","how long","medication","prescription","arrive","tracking"],
+    route: "/faqs/shipping"
+  },
+  {
+    id: 8,
+    question: "Is my medical information HIPAA protected?",
+    category: "HIPAA Security",
+    keywords: ["privacy","security","hipaa","data","medical information","protected","confidential","secure"],
+    route: "/faqs/privacy-security"
+  },
+  {
+    id: 9,
+    question: "What payment methods are accepted?",
+    category: "Billing Support",
+    keywords: ["payment","credit card","debit","hsa","fsa","methods","billing","invoice"],
+    route: "/faqs/troubleshooting"
+  },
+  {
+    id: 10,
+    question: "Can I get a refund for telemedicine services?",
+    category: "Billing Support",
+    keywords: ["refund","return","cancel","money back","reimbursement","policy"],
+    route: "/faqs/troubleshooting"
+  },
+  {
+    id: 11,
+    question: "Are telemedicine prescriptions FDA-approved?",
+    category: "Telemedicine Basics",
+    keywords: ["fda","approved","medication","prescription","safety","regulation","compliant"],
+    route: "/faqs/basics"
+  },
+  {
+    id: 12,
+    question: "How do I update my shipping address?",
+    category: "Prescription Shipping",
+    keywords: ["address","shipping","delivery","change","update","modify","location"],
+    route: "/faqs/shipping"
+  },
+  {
+    id: 13,
+    question: "What if my prescription package is lost?",
+    category: "Prescription Shipping",
+    keywords: ["lost","package","missing","delivery","medication","prescription","tracking"],
+    route: "/faqs/shipping"
+  },
+  {
+    id: 14,
+    question: "Are there hidden fees for telemedicine?",
+    category: "Costs & Payment",
+    keywords: ["hidden","fees","cost","price","transparent","billing","charges"],
+    route: "/faqs/medical-care"
+  },
+  {
+    id: 15,
+    question: "Can I change my treatment plan?",
+    category: "About Your Visit",
+    keywords: ["change","modify","update","treatment","plan","medication","prescription"],
+    route: "/faqs/visits"
+  },
+  {
+    id: 16,
+    question: "Who can access my medical records?",
+    category: "HIPAA Security",
+    keywords: ["access","medical records","privacy","security","hipaa","data","confidential"],
+    route: "/faqs/privacy-security"
+  },
+  {
+    id: 17,
+    question: "Are prescription refills automatic?",
+    category: "Costs & Payment",
+    keywords: ["refill","automatic","subscription","renew","prescription","medication"],
+    route: "/faqs/medical-care"
+  },
+  {
+    id: 18,
+    question: "What shipping carriers do you use?",
+    category: "Prescription Shipping",
+    keywords: ["shipping","carrier","delivery","usps","ups","fedex","tracking"],
+    route: "/faqs/shipping"
+  },
+  {
+    id: 19,
+    question: "Can I delete my medical account?",
+    category: "HIPAA Security",
+    keywords: ["delete","account","medical records","privacy","data","remove","close"],
+    route: "/faqs/privacy-security"
+  },
+  {
+    id: 20,
+    question: "How do I contact billing support?",
+    category: "Billing Support",
+    keywords: ["contact","support","billing","payment","help","customer service","invoice"],
+    route: "/faqs/troubleshooting"
+  }
 ];
 
   return (
@@ -326,14 +437,14 @@ export default function FAQspage() {
           sx={{
             fontWeight: 900,
             fontSize: { xs: "3rem", sm: "3.5rem", md: "4rem" },
-            color: "#000",
+            color: "#00359E",
             mb: 2,
             opacity: 0,
             transform: "translateY(20px)",
             animation: "fadeInUp 0.8s ease-out 0.5s forwards"
           }}
         >
-          Help Center
+          LiquidRX Help Center
         </Typography>
 
         <Typography
@@ -346,7 +457,7 @@ export default function FAQspage() {
             animation: "fadeInUp 0.8s ease-out 0.6s forwards"
           }}
         >
-          Everything you need to know, all in one place.
+          FDA-compliant telemedicine answers from licensed healthcare providers.
         </Typography>
       </Box>
 

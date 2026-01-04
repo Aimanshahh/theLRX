@@ -21,33 +21,43 @@ const fadeIn = keyframes`
 const questions = [
   { 
     id: 1, 
-    question: "How much do treatments cost?",
-    answer: "Pricing varies by category, but many subscriptions start as low as $20–$40 per month." 
+    question: "How much does telemedicine treatment cost with insurance?",
+    answer: "Telemedicine treatment costs vary based on the condition and prescribed medication. Many FDA-approved medication subscriptions start at $20–$40 per month. We offer transparent cash-pay pricing, and while we don't bill insurance directly, you may use HSA/FSA funds for eligible treatments." 
   },
   { 
     id: 2, 
-    question: "Are there hidden fees?",
-    answer: "No. Pricing is transparent and shown before you confirm your purchase." 
+    question: "Are there any hidden fees for online medical consultations?",
+    answer: "No hidden fees. All costs—including medical consultation, provider review, and FDA-approved medications—are displayed upfront before purchase. We comply with healthcare transparency regulations and provide clear billing statements for all telemedicine services." 
   },
   { 
     id: 3, 
-    question: "Can I change my treatment?",
-    answer: "Yes, you can update or modify treatments anytime after provider approval." 
+    question: "Can I change my prescription treatment plan after starting?",
+    answer: "Yes, you can modify your treatment plan after consultation with your healthcare provider. Any changes to FDA-regulated medications require provider approval to ensure safety, proper dosing, and compliance with medical guidelines. Simply message your provider through our secure platform." 
   },
   { 
     id: 4, 
-    question: "Do I need insurance?",
-    answer: "No insurance is required. All visits and treatments are cash-pay." 
+    question: "Do I need health insurance for telemedicine prescriptions?",
+    answer: "Health insurance is not required for our telemedicine services. We operate on a transparent cash-pay model, making FDA-approved treatments accessible. You may submit receipts to your insurance for potential out-of-network reimbursement, though coverage varies by plan." 
   },
   { 
     id: 5, 
-    question: "Is shipping included?",
-    answer: "Most plans include free shipping unless otherwise stated." 
+    question: "Is prescription medication shipping included in treatment costs?",
+    answer: "Most subscription plans include free discreet shipping of FDA-approved medications to your door. Shipping methods comply with pharmacy regulations and ensure medication integrity. Expedited shipping options are available for additional fees when medically appropriate." 
   },
   { 
     id: 6, 
-    question: "Are refills automatic?",
-    answer: "Subscriptions renew automatically but can be paused or canceled at any time." 
+    question: "Are prescription refills automatic in telemedicine subscriptions?",
+    answer: "Yes, subscriptions include automatic refills of FDA-approved medications after provider review. You can pause, modify, or cancel anytime. Providers conduct periodic check-ins to ensure continued safety and appropriateness of treatment per FDA guidelines." 
+  },
+  { 
+    id: 7, 
+    question: "How are medication costs determined for online prescriptions?",
+    answer: "Pricing reflects FDA-approved medication costs, pharmacy dispensing, provider oversight, and platform services. We work with licensed pharmacies to ensure competitive pricing while maintaining quality standards and regulatory compliance for all prescription medications." 
+  },
+  { 
+    id: 8, 
+    question: "What payment methods are accepted for telemedicine treatments?",
+    answer: "We accept major credit cards, HSA/FSA cards, and digital payment methods. All transactions are secure and HIPAA-compliant. Receipts include necessary details for insurance reimbursement or tax documentation when applicable." 
   }
 ];
 
@@ -57,6 +67,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
   return (
     <Box 
+      component="article"
       sx={{ 
         width: "100%", 
         fontFamily: "Roboto, sans-serif",
@@ -85,6 +96,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
       >
         <Typography
           className="question-text"
+          component="h2"
           variant="h5"
           sx={{
             fontWeight: 600,
@@ -101,6 +113,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
         <IconButton
           className="icon-button"
+          aria-label={isOpen ? "Collapse pricing information" : "Expand pricing information"}
           sx={{
             bgcolor: "grey.100",
             color: "grey.700",
@@ -120,6 +133,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 
       <Collapse in={isOpen} timeout="auto" unmountOnExit>
         <Typography
+          component="div"
           sx={{
             py: { xs: 2, sm: 3 },
             px: { xs: 1, sm: 2 },
@@ -141,7 +155,7 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
 };
 
 const MedicalCare = () => {
-const [openItems, setOpenItems] = useState([]);
+  const [openItems, setOpenItems] = useState([]);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
@@ -153,6 +167,8 @@ const [openItems, setOpenItems] = useState([]);
 
   return (
     <Box
+      component="section"
+      aria-label="Telemedicine Pricing and Payment FAQ"
       sx={{
         width: "100%",
         maxWidth: "1200px",
@@ -166,6 +182,7 @@ const [openItems, setOpenItems] = useState([]);
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as TheBasics */}
       <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
         <Typography
+          component="h1"
           variant="h1"
           sx={{
             fontWeight: 800,
@@ -178,7 +195,7 @@ const [openItems, setOpenItems] = useState([]);
             display: "inline-block",
           }}
         >
-          Medical Care
+          Telemedicine Costs & Payment
         </Typography>
 
         <Box
@@ -192,7 +209,15 @@ const [openItems, setOpenItems] = useState([]);
         />
       </Box>
 
-      <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 1, sm: 2 }, mt: 8 }}>
+      <Box 
+        component="div"
+        sx={{ 
+          display: "flex", 
+          flexDirection: "column", 
+          gap: { xs: 1, sm: 2 }, 
+          mt: 8 
+        }}
+      >
         {questions.map((item, index) => (
           <AccordionItem
             key={item.id}
@@ -202,6 +227,42 @@ const [openItems, setOpenItems] = useState([]);
             onClick={() => handleToggle(item.id)}
           />
         ))}
+      </Box>
+
+      {/* SEO-rich summary */}
+      <Box
+        component="div"
+        sx={{
+          mt: 8,
+          p: { xs: 3, sm: 4 },
+          bgcolor: "rgba(0, 53, 158, 0.03)",
+          borderRadius: 3,
+          borderLeft: "4px solid #00359E",
+          animation: `${fadeIn} 0.8s ease-out 0.5s both`,
+          opacity: 0,
+        }}
+      >
+        <Typography
+          component="h3"
+          sx={{
+            fontWeight: 700,
+            fontSize: { xs: "1.4rem", sm: "1.6rem" },
+            mb: 2,
+            color: "#00359E",
+          }}
+        >
+          Transparent Telemedicine Pricing
+        </Typography>
+        <Typography
+          component="p"
+          sx={{
+            fontSize: { xs: "1.1rem", sm: "1.3rem" },
+            lineHeight: 1.7,
+            color: "grey.700",
+          }}
+        >
+          Our telemedicine platform offers clear, upfront pricing for FDA-approved treatments without hidden fees. We provide affordable access to prescription medications through licensed healthcare providers, with transparent costs covering medical consultations, provider oversight, and pharmacy dispensing. All treatments comply with FDA regulations and healthcare transparency standards.
+        </Typography>
       </Box>
     </Box>
   );

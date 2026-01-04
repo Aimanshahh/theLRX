@@ -13,6 +13,7 @@ const LRX_ROUTES = {
   "How it Works": "/how-it-works",
   "Medical Experts": "/medical-experts",
   "Frequently Asked Questions": "/faqs",
+  "About Our Labs": "/DetailedLab",
 };
 
 const POPULAR_ROUTES = {
@@ -226,6 +227,7 @@ export default function Footer() {
               "How it Works",
               "Medical Experts",
               "Frequently Asked Questions",
+              "About Our Labs"
             ]}
             routes={LRX_ROUTES}
           />
