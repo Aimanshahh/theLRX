@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import weightloss1 from "../../assets/Herocards/herocard2.png";
 import Tackleanxiety from "../../assets/Herocards/MEDICINE1.png";
 import Intimicy from "../../assets/Herocards/HeroCards.png";
-import hair2 from "../../assets/Herocards/herocard3.png";
+import hair2 from "../../assets/Herocards/HEROCARD.png";
 import skin2 from "../../assets/Herocards/herocard4.png";
 import testosterene from "../../assets/Herocards/Herocard1.png";
 
@@ -24,7 +24,7 @@ const menuData = {
     { title: "Tirzepatide Injectable", route: "/weight-loss/tirzepatide-injectable" },
   ],
 
-  "Peptides": [
+  "Precision BioActives": [
     { title: "BPC-157", route: "/peptides/bpc-157" },
     { title: "CJC-1295 Ipamorelin", route: "/peptides/cjc-1295-ipamorelin" },
     { title: "GHK-CU", route: "/peptides/ghk-cu" },
@@ -56,42 +56,6 @@ const menuData = {
   ],
 };
 
-/* ================= RIMO FORM URLs ================= */
-const rimoUrls = {
-  // Top cards URLs
-  "Have better sex": "https://try.thelrx.com/intake/ed-fmmbgk", // Replace with actual URL
-  "Lose weight": "https://try.thelrx.com/intake/wm-ltaaov", // Replace with actual URL
-  "Regrow hair": "https://try.thelrx.com/intake/gh-0ce9zd", // Replace with actual URL
-  "Boost testosterone": "https://try.thelrx.com/intake/cj-r201jp", // Your provided URL
-  
-  // Bottom cards URLs
-  "Tackle anxiety": "https://try.thelrx.com/intake/mb-qdl7pe", // Replace with actual URL
-  "Get smooth skin": "https://try.thelrx.com/intake/na-a4kt74", // Your provided URL
-};
-
-/* ================= OPEN RIMO FORM ================= */
-const openRimoForm = (cardTitle) => {
-  const url = rimoUrls[cardTitle];
-  if (url) {
-    // Open in new tab
-    window.open(url, "_blank", "noopener,noreferrer");
-    
-    // OR open in popup window (uncomment if preferred)
-    /*
-    const width = 500;
-    const height = 700;
-    const left = window.screenX + (window.outerWidth - width) / 2;
-    const top = window.screenY + (window.outerHeight - height) / 2;
-    
-    window.open(
-      url,
-      "RimoForm",
-      `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes`
-    );
-    */
-  }
-};
-
 /* ================= COLORS ================= */
 const palette = {
   greyDark: "#747578",
@@ -104,53 +68,41 @@ const palette = {
 /* ================= DATA ================= */
 const topCards = [
   { 
-    first: "Have better", 
-    second: "sex", 
-    image: Intimicy, 
-    route: "/better-sex",
-    fullTitle: "Have better sex"
-  },
-  { 
-    first: "Lose", 
-    second: "weight", 
+    first: "Drop Body", 
+    second: "Weight", 
     image: weightloss1, 
-    route: "/lose-weight", 
     popular: true,
-    fullTitle: "Lose weight"
   },
   { 
-    first: "Regrow", 
-    second: "hair", 
-    image: hair2, 
-    route: "/regrow-hair",
-    fullTitle: "Regrow hair"
+    first: "Build Real", 
+    second: "Muscle", 
+    image: hair2,
   },
   { 
-    first: "Boost", 
-    second: "testosterone", 
-    image: testosterene, 
-    route: "/boost-testosterone",
-    fullTitle: "Boost testosterone"
+    first: "Fix Your", 
+    second: "Recovery", 
+    image: testosterene,
+  },
+  { 
+    first: "Stop Low", 
+    second: "Energy", 
+    image: Intimicy,
   },
 ];
 
 const bottomCards = [
   { 
-    first: "Tackle", 
-    second: "anxiety", 
-    image: Tackleanxiety, 
-    route: "/tackle-anxiety",
-    fullTitle: "Tackle anxiety"
+    first: "Fix Your ", 
+    second: "Skin", 
+    image: skin2,
   },
   { 
-    first: "Get smooth", 
-    second: "skin", 
-    image: skin2, 
-    route: "/smooth-skin",
-    fullTitle: "Get smooth skin"
+    first: "Want More", 
+    second: "Sex", 
+    image: Tackleanxiety,
   },
   { 
-    title: "Browse all treatments", 
+    title: "Explore All Treatments", 
     browse: true 
   },
 ];
@@ -171,10 +123,8 @@ export default function HeroCards() {
   const handleCardClick = (card) => {
     if (card.browse) {
       setIsSidebarOpen(true);
-    } else {
-      // Open specific Rimo form for each card
-      openRimoForm(card.fullTitle);
     }
+    // Cards are no longer clickable - removed the Rimo form opening
   };
 
   return (
@@ -280,14 +230,14 @@ export default function HeroCards() {
                 key={i}
                 onMouseEnter={() => setHoverTop(i)}
                 onMouseLeave={() => setHoverTop(null)}
-                onClick={() => handleCardClick(c)}
+                onClick={() => card.browse ? setIsSidebarOpen(true) : null}
                 whileHover={{ y: -6, scale: 1.04 }}
                 style={{
                   borderRadius: "22px",
                   padding: "22px",
                   height: isSmallMobile ? "220px" : "260px",
                   position: "relative",
-                  cursor: "pointer",
+                  cursor: c.browse ? "pointer" : "default", // Only "Explore All Treatments" is clickable
                   overflow: "hidden",
                   background: hovered
                     ? "linear-gradient(150deg, #00359E, #747578)"
@@ -302,7 +252,7 @@ export default function HeroCards() {
                   style={{
                     position: "absolute",
                     top: "16px",
-                    right: "16px",
+                    right: "-17px",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
@@ -313,7 +263,7 @@ export default function HeroCards() {
                       style={{
                         fontSize: "11px",
                         fontWeight: 700,
-                        padding: "4px 8px",
+                        padding: "4px 10px",
                         borderRadius: "999px",
                         background: "#2DBE60",
                         color: "#fff",
@@ -326,6 +276,7 @@ export default function HeroCards() {
                     style={{
                       fontSize: "22px",
                       color: hovered ? "#fff" : palette.greyLight,
+                      opacity: c.browse ? 1 : 0, // Hide arrow for non-clickable cards
                     }}
                   />
                 </div>
@@ -379,20 +330,21 @@ export default function HeroCards() {
         >
           {bottomCards.map((c, i) => {
             const hovered = hoverBottom === i;
+            const isClickable = c.browse;
 
             return (
               <motion.div
                 key={i}
                 onMouseEnter={() => setHoverBottom(i)}
                 onMouseLeave={() => setHoverBottom(null)}
-                onClick={() => handleCardClick(c)}
-                whileHover={{ y: -4, scale: 1.03 }}
+                onClick={isClickable ? () => setIsSidebarOpen(true) : undefined}
+                whileHover={isClickable ? { y: -4, scale: 1.03 } : {}}
                 style={{
                   borderRadius: "22px",
                   padding: "20px",
                   display: "flex",
                   alignItems: "center",
-                  cursor: "pointer",
+                  cursor: isClickable ? "pointer" : "default",
                   background: hovered
                     ? "linear-gradient(150deg, #00359E, #747578)"
                     : "#fff",
@@ -446,6 +398,7 @@ export default function HeroCards() {
                     marginLeft: "auto",
                     fontSize: "24px",
                     color: hovered ? "#fff" : palette.greyLight,
+                    opacity: isClickable ? 1 : 0, // Hide arrow for non-clickable cards
                   }}
                 />
               </motion.div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { 
-  Box, 
-  Container, 
-  Typography, 
-  Grid, 
-  Card, 
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Card,
   Chip,
-  Button 
+  Button
 } from '@mui/material';
 import { motion } from 'framer-motion';
 import { alpha } from '@mui/material/styles';
@@ -44,248 +44,229 @@ const Lust6Page = () => {
     <>
       {/* HERO SECTION */}
       <Box
-  sx={{
-    py: { xs: 6, md: 10 },
-    background: "linear-gradient(135deg, #ffffff, #f7f9fc)",
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center"
-  }}
->
-  <Container maxWidth="lg">
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: { xs: "column", md: "row" },
-        alignItems: "center",
-        gap: { xs: 4, md: 8 }
-      }}
-    >
-      {/* LEFT TEXT SECTION */}
-      <Box
         sx={{
-          flex: 1,
-          maxWidth: { md: "50%" }
+          py: { xs: 6, md: 10 },
+          background: "linear-gradient(135deg, #ffffff, #f7f9fc)",
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center"
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          <Chip
-            label="PREMIUM INTIMACY TABLETS - 6 PACK"
-            icon={<Flame size={16} />}
-            sx={{
-              bgcolor: alpha("#00359E", 0.12),
-              color: "#00359E",
-              fontWeight: 700,
-              mb: 3,
-              py: 1.5,
-              px: 2
-            }}
-          />
-
-          <Typography
-            variant="h1"
-            sx={{
-              fontSize: { xs: "2.2rem", md: "3.8rem" },
-              fontWeight: 900,
-              mb: 3,
-              lineHeight: 1.1,
-              color: "#000000"
-            }}
-          >
-            Enhance Your{" "}
-            <Box
-              component="span"
-              sx={{
-                background: "linear-gradient(135deg, #00359E, #003B9D)",
-                backgroundClip: "text",
-                WebkitBackgroundClip: "text",
-                color: "transparent",
-                display: "block"
-              }}
-            >
-              Intimacy Naturally
-            </Box>
-          </Typography>
-
-          <Typography
-            variant="h6"
-            sx={{
-              color: "#747578",
-              mb: 4,
-              lineHeight: 1.7,
-              fontSize: { xs: "1rem", md: "1.2rem" }
-            }}
-          >
-            Lust-6 Tablets — premium natural formula designed to enhance intimacy and desire.
-            Experience heightened passion and connection in just 2–4 weeks.
-          </Typography>
-
-          {/* FEATURES */}
-          <Box sx={{ mb: 5 }}>
-            {[
-              "6 natural aphrodisiac ingredients",
-              "Safe, non-synthetic formulation",
-              "Enhances libido and desire",
-              "30-day satisfaction guarantee",
-              "Improves intimate connection"
-            ].map((item, i) => (
-              <Box
-                key={i}
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 2,
-                  mb: 2.5
-                }}
-              >
-                <CheckCircle size={22} color="#00359E" />
-                <Typography sx={{ fontSize: { xs: "1rem", md: "1.1rem" }, fontWeight: 500 }}>
-                  {item}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
-
-          {/* PRICING */}
-          <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
-            <Box>
-              <Typography
-                variant="h3"
-                sx={{
-                  color: "#00359E",
-                  fontWeight: 900,
-                  fontSize: { xs: "2.5rem", md: "3rem" }
-                }}
-              >
-                $49.00
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#8B8D8E",
-                  textDecoration: "line-through",
-                  fontSize: "1.2rem"
-                }}
-              >
-                $99.00
-              </Typography>
-            </Box>
-            <Chip
-              label="50% OFF"
-              size="small"
-              sx={{
-                bgcolor: "#00359E",
-                color: "white",
-                fontWeight: 700
-              }}
-            />
-          </Box>
-
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              variant="contained"
-              size="large"
-              endIcon={<ArrowRight />}
-              href={ctaUrl}
-              sx={{
-                px: { xs: 3, md: 5 },
-                py: 1.8,
-                fontWeight: 700,
-                fontSize: { xs: "1rem", md: "1.1rem" },
-                background: "linear-gradient(135deg, #00359E, #003B9D)",
-                borderRadius: "10px",
-                boxShadow: "0 12px 30px rgba(0, 53, 158, 0.3)",
-                "&:hover": {
-                  background: "linear-gradient(135deg, #003B9D, #00359E)",
-                  boxShadow: "0 16px 40px rgba(0, 53, 158, 0.4)"
-                }
-              }}
-            >
-              Start Your Journey
-            </Button>
-          </motion.div>
-        </motion.div>
-      </Box>
-
-      {/* RIGHT IMAGE SECTION (PUSHED UP) */}
-      <Box
-        sx={{
-          flex: 1,
-          maxWidth: { md: "50%" },
-          width: "100%",
-          mt: { xs: -6, md: -20 }
-        }}
-      >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
+        <Container maxWidth="lg">
           <Box
             sx={{
-              borderRadius: "24px",
-              overflow: "hidden",
-              boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
-              position: "relative"
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: "center",
+              gap: { xs: 4, md: 8 }
             }}
           >
-            <Box
-              component="img"
-              src={heroImage}
-              alt="Lust-6 Tablets"
-              sx={{
-                width: "100%",
-                height: { xs: "300px", md: "500px" },
-                objectFit: "cover",
-                display: "block"
-              }}
-            />
-
+            {/* LEFT TEXT SECTION */}
             <Box
               sx={{
-                position: "absolute",
-                top: 20,
-                left: 20,
-                bgcolor: "#00359E",
-                color: "#FFFFFF",
-                px: 2.5,
-                py: 1,
-                borderRadius: "20px",
-                fontSize: "0.875rem",
-                fontWeight: 700
+                flex: 1,
+                maxWidth: { md: "50%" }
               }}
             >
-              6-POWER INGREDIENTS
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Chip
+                  label="COMPOUNDED INTIMATE WELLNESS"
+                  icon={<Flame size={16} />}
+                  sx={{
+                    bgcolor: alpha("#00359E", 0.12),
+                    color: "#00359E",
+                    fontWeight: 700,
+                    mb: 3,
+                    py: 1.5,
+                    px: 2
+                  }}
+                />
+
+                <Typography
+                  variant="h1"
+                  sx={{
+                    fontSize: { xs: "2.2rem", md: "3.8rem" },
+                    fontWeight: 900,
+                    mb: 3,
+                    lineHeight: 1.1,
+                    color: "#000000"
+                  }}
+                >
+                  Lust
+                  <Box
+                    component="span"
+                    sx={{
+                      background: "linear-gradient(135deg, #00359E, #003B9D)",
+                      backgroundClip: "text",
+                      WebkitBackgroundClip: "text",
+                      color: "transparent",
+                      display: "block"
+                    }}
+                  >
+                    – 6 Tablets
+                  </Box>
+                </Typography>
+
+                <Typography
+                  variant="h6"
+                  sx={{
+                    color: "#747578",
+                    mb: 4,
+                    lineHeight: 1.7,
+                    fontSize: { xs: "1rem", md: "1.2rem" }
+                  }}
+                >
+                  A compounded formula blending gentle circulatory enhancement with balanced neuro-hormonal support to elevate desire, sensitivity, and emotional connection naturally.
+                </Typography>
+
+                {/* FEATURES */}
+                <Box sx={{ mb: 5 }}>
+                  {[
+                    "Elevates desire, sensitivity, and emotional connection",
+                    "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
+                    "For amplified arousal, deeper vitality, and a more complete intimate experience",
+                    "Compounded formula (Tadalafil 10mg / Pregnenolone 10mg)"
+                  ].map((item, i) => (
+                    <Box
+                      key={i}
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 2,
+                        mb: 2.5
+                      }}
+                    >
+                      <CheckCircle size={22} color="#00359E" />
+                      <Typography sx={{ fontSize: { xs: "1rem", md: "1.1rem" }, fontWeight: 500 }}>
+                        {item}
+                      </Typography>
+                    </Box>
+                  ))}
+                </Box>
+
+                {/* PRICING */}
+                <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
+                  <Box>
+                    <Typography
+                      variant="h3"
+                      sx={{
+                        color: "#00359E",
+                        fontWeight: 900,
+                        fontSize: { xs: "2.5rem", md: "3rem" }
+                      }}
+                    >
+                      $49.00
+                    </Typography>
+                    <Typography
+                      sx={{
+                        color: "#8B8D8E",
+                        textDecoration: "line-through",
+                        fontSize: "1.2rem"
+                      }}
+                    >
+                      $99.00
+                    </Typography>
+                  </Box>
+                  <Chip
+                    label="50% OFF"
+                    size="small"
+                    sx={{
+                      bgcolor: "#00359E",
+                      color: "white",
+                      fontWeight: 700
+                    }}
+                  />
+                </Box>
+
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Button
+                    variant="contained"
+                    size="large"
+                    endIcon={<ArrowRight />}
+                    href={ctaUrl}
+                    sx={{
+                      px: { xs: 3, md: 5 },
+                      py: 1.8,
+                      fontWeight: 700,
+                      fontSize: { xs: "1rem", md: "1.1rem" },
+                      background: "linear-gradient(135deg, #00359E, #003B9D)",
+                      borderRadius: "10px",
+                      boxShadow: "0 12px 30px rgba(0, 53, 158, 0.3)",
+                      "&:hover": {
+                        background: "linear-gradient(135deg, #003B9D, #00359E)",
+                        boxShadow: "0 16px 40px rgba(0, 53, 158, 0.4)"
+                      }
+                    }}
+                  >
+                    Order Lust-6 Tablets
+                  </Button>
+                </motion.div>
+              </motion.div>
             </Box>
 
+            {/* RIGHT IMAGE SECTION (PUSHED UP) */}
             <Box
               sx={{
-                position: "absolute",
-                bottom: 20,
-                right: 20,
-                bgcolor: "#00359E",
-                color: "#FFFFFF",
-                px: 2.5,
-                py: 1.5,
-                borderRadius: "12px",
-                fontSize: "1.5rem",
-                fontWeight: 900
+                flex: 1,
+                maxWidth: { md: "50%" },
+                width: "100%",
+                mt: { xs: -6, md: -20 }
               }}
             >
-              $49
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                <Box
+                  sx={{
+                    borderRadius: "24px",
+                    overflow: "hidden",
+                    boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
+                    position: "relative"
+                  }}
+                >
+                  <Box
+                    component="img"
+                    src={heroImage}
+                    alt="Lust-6 Tablets"
+                    sx={{
+                      width: "100%",
+                      height: { xs: "300px", md: "500px" },
+                      objectFit: "cover",
+                      display: "block"
+                    }}
+                  />
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      top: 20,
+                      left: 20,
+                      bgcolor: "#00359E",
+                      color: "#FFFFFF",
+                      px: 2.5,
+                      py: 1,
+                      borderRadius: "20px",
+                      fontSize: "0.875rem",
+                      fontWeight: 700
+                    }}
+                  >
+                    COMPOUNDED FORMULA
+                  </Box>
+
+                </Box>
+              </motion.div>
             </Box>
           </Box>
-        </motion.div>
+        </Container>
       </Box>
-    </Box>
-  </Container>
-</Box>
 
-
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* COMPOUNDED FORMULA SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -306,26 +287,24 @@ const Lust6Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            The Compounded Formula
           </Typography>
-          
+
           <Grid container spacing={6} alignItems="stretch">
             {/* Left Column - Text Content */}
             <Grid item xs={12} md={7}>
-              <Box sx={{ 
-                display: "flex", 
+              <Box sx={{
+                display: "flex",
                 flexDirection: "column",
                 height: "100%"
               }}>
-                <Typography sx={{ 
-                  color: "#747578", 
-                  mb: 4, 
+                <Typography sx={{
+                  color: "#747578",
+                  mb: 4,
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Lust-6 Tablets are formulated based on extensive clinical research and scientific studies. 
-                  Our 6-ingredient synergistic formula has been validated through multiple independent studies 
-                  for enhancing intimacy, desire, and emotional connection.
+                  Lust is specifically compounded for women's intimate wellness. This dual-ingredient formula works synergistically to provide gentle circulatory enhancement and balanced neuro-hormonal support for a natural elevation of desire and connection.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -338,21 +317,20 @@ const Lust6Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Active Ingredients:
                   </Typography>
-                  
+
                   <Grid container spacing={3}>
                     <Grid item xs={12} sm={6}>
-                      <Box sx={{ 
-                        display: "flex", 
+                      <Box sx={{
+                        display: "flex",
                         flexDirection: "column",
                         gap: 2,
-                        mb: 3 
+                        mb: 3
                       }}>
                         {[
-                          "91% reported enhanced libido within 4 weeks",
-                          "86% experienced improved intimate satisfaction",
-                          "89% noticed increased desire and passion"
+                          "Tadalafil 10mg - Gentle circulatory enhancement",
+                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -370,8 +348,8 @@ const Lust6Page = () => {
                             >
                               <CheckCircle size={14} color="#00359E" />
                             </Box>
-                            <Typography sx={{ 
-                              color: "#000000", 
+                            <Typography sx={{
+                              color: "#000000",
                               fontSize: "0.95rem",
                               lineHeight: 1.5
                             }}>
@@ -381,17 +359,17 @@ const Lust6Page = () => {
                         ))}
                       </Box>
                     </Grid>
-                    
+
                     <Grid item xs={12} sm={6}>
-                      <Box sx={{ 
-                        display: "flex", 
+                      <Box sx={{
+                        display: "flex",
                         flexDirection: "column",
-                        gap: 2 
+                        gap: 2
                       }}>
                         {[
-                          "93% of users reported better emotional connection",
-                          "87% experienced improved sexual wellness",
-                          "90% would recommend to partners"
+                          "Elevates desire and sensitivity naturally",
+                          "Enhances emotional and physical connection",
+                          "Optimal stacking with PT-141, NAD+ Injectable, GHK-Cu"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -409,8 +387,8 @@ const Lust6Page = () => {
                             >
                               <CheckCircle size={14} color="#00359E" />
                             </Box>
-                            <Typography sx={{ 
-                              color: "#000000", 
+                            <Typography sx={{
+                              color: "#000000",
                               fontSize: "0.95rem",
                               lineHeight: 1.5
                             }}>
@@ -421,37 +399,36 @@ const Lust6Page = () => {
                       </Box>
                     </Grid>
                   </Grid>
-                  
-                  {/* Study Details */}
-                  <Box sx={{ 
+
+                  {/* Stacking Details */}
+                  <Box sx={{
                     mt: 4,
                     p: 3,
                     bgcolor: alpha("#00359E", 0.05),
                     borderRadius: "12px",
                     borderLeft: `4px solid ${alpha("#00359E", 0.2)}`
                   }}>
-                    <Typography sx={{ 
-                      color: "#00359E", 
+                    <Typography sx={{
+                      color: "#00359E",
                       fontWeight: 600,
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💫 Optimal Stacking:
                     </Typography>
-                    <Typography sx={{ 
-                      color: "#747578", 
+                    <Typography sx={{
+                      color: "#747578",
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 500 participants aged 25-65 • 
-                      Double-blind placebo-controlled • Independent research institution
+                      For a more complete women's intimate wellness experience: Stack Lust with PT-141 for amplified arousal, NAD+ Injectable for deeper vitality, and GHK-Cu for comprehensive support.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
-            
-            {/* Right Column - Statistics Card */}
+
+            {/* Right Column - Formula Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -475,7 +452,7 @@ const Lust6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Clinical Results
+                    Compounded Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -483,69 +460,48 @@ const Lust6Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive study data
+                    Each tablet contains
                   </Typography>
                 </Box>
-                
-                <Box sx={{ 
-                  display: "flex", 
-                  flexDirection: "column", 
+
+                <Box sx={{
+                  display: "flex",
+                  flexDirection: "column",
                   gap: 3,
                   flex: 1
                 }}>
                   {[
-                    { 
-                      label: "Libido Enhancement", 
-                      value: "91%", 
+                    {
+                      label: "Tadalafil",
+                      value: "10mg",
                       color: "#00359E",
-                      description: "Reported increased desire",
-                      trend: "+25% vs placebo"
+                      description: "Gentle circulatory support",
+                      purpose: "Enhances blood flow"
                     },
-                    { 
-                      label: "Intimate Satisfaction", 
-                      value: "86%", 
+                    {
+                      label: "Pregnenolone",
+                      value: "10mg",
                       color: "#003B9D",
-                      description: "Improved intimate experiences",
-                      trend: "+20% vs placebo"
+                      description: "Neuro-hormonal balance",
+                      purpose: "Supports desire pathways"
                     },
-                    { 
-                      label: "Passion Increase", 
-                      value: "89%", 
+                    {
+                      label: "Total Active",
+                      value: "20mg",
                       color: "#00359E",
-                      description: "Enhanced romantic passion",
-                      trend: "+23% vs placebo"
-                    },
-                    { 
-                      label: "Emotional Connection", 
-                      value: "93%", 
-                      color: "#003B9D",
-                      description: "Better emotional bonding",
-                      trend: "+28% vs placebo"
-                    },
-                    { 
-                      label: "Sexual Wellness", 
-                      value: "87%", 
-                      color: "#00359E",
-                      description: "Improved sexual health",
-                      trend: "+21% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "95%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+32% vs placebo"
+                      description: "Per tablet",
+                      purpose: "Dual-action intimate wellness"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
+                      <Box sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
                         alignItems: "center",
                         mb: 0.5
                       }}>
-                        <Typography sx={{ 
-                          color: "#000000", 
+                        <Typography sx={{
+                          color: "#000000",
                           fontWeight: 600,
                           fontSize: "1rem"
                         }}>
@@ -561,9 +517,9 @@ const Lust6Page = () => {
                           {stat.value}
                         </Typography>
                       </Box>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
+                      <Box sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
                         alignItems: "center"
                       }}>
                         <Typography
@@ -575,7 +531,7 @@ const Lust6Page = () => {
                           {stat.description}
                         </Typography>
                         <Chip
-                          label={stat.trend}
+                          label={stat.purpose}
                           size="small"
                           sx={{
                             bgcolor: alpha(stat.color, 0.1),
@@ -589,54 +545,51 @@ const Lust6Page = () => {
                     </Box>
                   ))}
                 </Box>
-                
-                {/* Study Conclusion */}
-                <Box sx={{ 
+
+                {/* Formula Conclusion */}
+                <Box sx={{
                   mt: 4,
                   pt: 3,
                   borderTop: `1px dashed ${alpha("#00359E", 0.1)}`,
                   textAlign: "center"
                 }}>
-                  <Typography sx={{ 
-                    color: "#00359E", 
+                  <Typography sx={{
+                    color: "#00359E",
                     fontWeight: 600,
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all measured parameters
+                    Specifically compounded for natural elevation of women's intimate desire and connection
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
-          
-          {/* Additional Research Info */}
-          <Box sx={{ 
-            mt: 6, 
+
+          {/* Stacking Info */}
+          <Box sx={{
+            mt: 6,
             p: 4,
             bgcolor: alpha("#00359E", 0.05),
             borderRadius: "16px",
             textAlign: "center"
           }}>
-            <Typography sx={{ 
-              color: "#00359E", 
+            <Typography sx={{
+              color: "#00359E",
               fontWeight: 700,
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🔄 Enhanced Stacking Potential
             </Typography>
-            <Typography sx={{ 
-              color: "#747578", 
+            <Typography sx={{
+              color: "#747578",
               fontSize: "1rem",
               lineHeight: 1.7,
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Lust-6's formula is supported by 15 peer-reviewed studies published in 
-              leading journals including the Journal of Sexual Medicine, International 
-              Journal of Impotence Research, and Archives of Sexual Behavior.
+              Lust is designed to stack optimally with PT-141 (for amplified arousal), NAD+ Injectable (for deeper vitality), and GHK-Cu (for comprehensive intimate wellness). This combination creates a more complete women's intimate wellness experience.
             </Typography>
           </Box>
         </Container>
@@ -667,7 +620,7 @@ const Lust6Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Lust
                 <Box
                   component="span"
                   sx={{
@@ -677,7 +630,7 @@ const Lust6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Lust-6 Tablet
+                  – 6 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -691,7 +644,7 @@ const Lust6Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium natural intimacy tablets designed to enhance desire and passion
+                Compounded intimate wellness tablets designed to naturally elevate desire, sensitivity, and emotional connection
               </Typography>
             </motion.div>
           </Box>
@@ -729,7 +682,7 @@ const Lust6Page = () => {
                       display: "block"
                     }}
                   />
-                  
+
                   {/* Floating Badges */}
                   <Box
                     sx={{
@@ -752,7 +705,7 @@ const Lust6Page = () => {
                     <Package size={12} />
                     6-TABLET PACK
                   </Box>
-                  
+
                   <Box
                     sx={{
                       position: "absolute",
@@ -771,7 +724,7 @@ const Lust6Page = () => {
                     }}
                   >
                     <Pill size={12} />
-                    NATURAL APHRODISIACS
+                    COMPOUNDED FORMULA
                   </Box>
 
                   {/* Price Badge */}
@@ -822,7 +775,7 @@ const Lust6Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Lust-6 Tablets
+                    Compounded Lust Tablets
                   </Typography>
                   <Typography
                     sx={{
@@ -832,7 +785,7 @@ const Lust6Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Lust-6 tablets combine 6 natural ingredients to safely enhance intimacy, desire, and passion without synthetic hormones.
+                    Lust blends gentle circulatory enhancement with balanced neuro-hormonal support to elevate desire, sensitivity, and emotional connection in a beautifully natural way.
                   </Typography>
                 </Box>
 
@@ -841,26 +794,26 @@ const Lust6Page = () => {
                   {[
                     {
                       icon: <Heart size={24} color="#00359E" />,
-                      title: "Enhances Desire",
-                      description: "Boosts libido naturally",
+                      title: "Elevates Desire",
+                      description: "Enhances natural libido",
                       color: "#00359E"
                     },
                     {
-                      icon: <Clock size={24} color="#003B9D" />,
-                      title: "Any Time",
-                      description: "Take with or without food",
+                      icon: <Droplet size={24} color="#003B9D" />,
+                      title: "Gentle Circulation",
+                      description: "Supports blood flow",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Optimal monthly supply",
+                      icon: <Brain size={24} color="#00359E" />,
+                      title: "Hormonal Balance",
+                      description: "Neuro-hormonal support",
                       color: "#00359E"
                     },
                     {
-                      icon: <Calendar size={24} color="#003B9D" />,
-                      title: "2-4 Weeks",
-                      description: "For optimal results",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Stackable Formula",
+                      description: "Optimal with PT-141, NAD+, GHK-Cu",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -923,15 +876,15 @@ const Lust6Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Intimacy Benefits
+                    Intimate Wellness Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "6 natural aphrodisiac ingredients for enhanced desire",
-                      "Improves libido and sexual wellness",
-                      "Enhances emotional and physical connection",
-                      "Supports healthy intimate relationships",
-                      "Made in pharmaceutical-grade facility"
+                      "Elevates desire, sensitivity, and emotional connection naturally",
+                      "Provides balanced neuro-hormonal support",
+                      "Offers gentle circulatory enhancement",
+                      "Stacks optimally with PT-141, NAD+ Injectable, GHK-Cu",
+                      "Compounded for a more complete women's intimate wellness experience"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -942,37 +895,6 @@ const Lust6Page = () => {
                     ))}
                   </Box>
                 </Card>
-
-                {/* CTA Button in Product Section */}
-                <motion.div 
-                  whileHover={{ scale: 1.05 }} 
-                  whileTap={{ scale: 0.95 }}
-                  style={{ display: 'inline-block' }}
-                >
-                  <Button
-                    variant="contained"
-                    size="large"
-                    endIcon={<ArrowRight />}
-                    href={ctaUrl}
-                    sx={{
-                      px: 5,
-                      py: 1.8,
-                      fontWeight: 800,
-                      fontSize: "1.1rem",
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      color: "#FFFFFF",
-                      borderRadius: "12px",
-                      boxShadow: "0 12px 30px rgba(0, 53, 158, 0.3)",
-                      "&:hover": {
-                        background: "linear-gradient(135deg, #003B9D, #00359E)",
-                        boxShadow: "0 16px 40px rgba(0, 53, 158, 0.4)",
-                        transform: "translateY(-2px)"
-                      }
-                    }}
-                  >
-                    Get Your Tablets Now
-                  </Button>
-                </motion.div>
               </motion.div>
             </Grid>
           </Grid>
@@ -1003,7 +925,7 @@ const Lust6Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Experience{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1013,7 +935,7 @@ const Lust6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Natural Connection
                 </Box>
               </Typography>
               <Typography
@@ -1027,7 +949,7 @@ const Lust6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal intimacy enhancement
+                Lust works to create a more natural and complete intimate wellness experience
               </Typography>
             </motion.div>
           </Box>
@@ -1036,42 +958,42 @@ const Lust6Page = () => {
             {[
               {
                 step: "01",
-                title: "Take Daily",
-                description: "One tablet with water",
-                icon: "💊",
+                title: "Gentle Circulation",
+                description: "Enhanced blood flow support with Tadalafil",
+                icon: "💓",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "Evening Use",
-                description: "Best taken in evening",
-                icon: "🌙",
+                title: "Desire Elevation",
+                description: "Natural libido support with Pregnenolone",
+                icon: "🔥",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "With Food",
-                description: "Take with meal for absorption",
-                icon: "🍽️",
+                title: "Emotional Connection",
+                description: "Enhanced sensitivity and bonding",
+                icon: "💞",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Stay Consistent",
-                description: "Continue for 2-4 weeks",
-                icon: "📅",
+                title: "Stacking Potential",
+                description: "Optimal with PT-141, NAD+ Injectable, GHK-Cu",
+                icon: "🔄",
                 color: "#003B9D"
               }
             ].map((item, index) => (
-              <Grid 
-                item 
-                xs={12} 
-                sm={6} 
-                md={3} 
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={3}
                 key={index}
-                sx={{ 
-                  display: "flex", 
-                  justifyContent: "center" 
+                sx={{
+                  display: "flex",
+                  justifyContent: "center"
                 }}
               >
                 <motion.div
@@ -1081,8 +1003,8 @@ const Lust6Page = () => {
                   transition={{ delay: index * 0.1 }}
                   style={{ width: "100%", maxWidth: "280px" }}
                 >
-                  <Box sx={{ 
-                    textAlign: "center", 
+                  <Box sx={{
+                    textAlign: "center",
                     p: 3,
                     display: "flex",
                     flexDirection: "column",
@@ -1130,41 +1052,6 @@ const Lust6Page = () => {
               </Grid>
             ))}
           </Grid>
-
-          {/* CTA Button in How It Works Section */}
-          <Box sx={{ textAlign: "center", mt: 8 }}>
-            <motion.div 
-              whileHover={{ scale: 1.05 }} 
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
-              <Button
-                variant="contained"
-                size="large"
-                endIcon={<ArrowRight />}
-                href={ctaUrl}
-                sx={{
-                  px: 6,
-                  py: 2,
-                  fontWeight: 800,
-                  fontSize: "1.1rem",
-                  background: "linear-gradient(135deg, #00359E, #003B9D)",
-                  color: "#FFFFFF",
-                  borderRadius: "12px",
-                  boxShadow: "0 12px 30px rgba(0, 53, 158, 0.3)",
-                  "&:hover": {
-                    background: "linear-gradient(135deg, #003B9D, #00359E)",
-                    boxShadow: "0 16px 40px rgba(0, 53, 158, 0.4)",
-                    transform: "translateY(-2px)"
-                  }
-                }}
-              >
-                Begin Your Intimacy Journey
-              </Button>
-            </motion.div>
-          </Box>
         </Container>
       </Box>
 
@@ -1198,7 +1085,7 @@ const Lust6Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Enhance Your{" "}
+                Order Lust
                 <Box
                   component="span"
                   sx={{
@@ -1209,10 +1096,10 @@ const Lust6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Intimacy Today
+                  – 6 Tablets
                 </Box>
               </Typography>
-              
+
               <Typography
                 variant="h6"
                 sx={{
@@ -1224,10 +1111,9 @@ const Lust6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join thousands of satisfied users with clinically studied Lust-6 Tablets. 
-                Experience enhanced desire and passion in just 2-4 weeks with consistent use.
+                Elevate desire, sensitivity, and emotional connection with our compounded Lust-6 Tablets. Beautifully designed for a more natural and complete women's intimate wellness experience.
               </Typography>
-              
+
               {/* Pricing Display */}
               <Box sx={{ mb: 4, display: "inline-block" }}>
                 <Typography
@@ -1242,11 +1128,11 @@ const Lust6Page = () => {
                   $49.00
                 </Typography>
               </Box>
-              
+
               {/* Single Start Now Button */}
               <Box sx={{ mb: 6 }}>
-                <motion.div 
-                  whileHover={{ scale: 1.05 }} 
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   style={{ display: "inline-block" }}
                 >
@@ -1272,24 +1158,24 @@ const Lust6Page = () => {
                       }
                     }}
                   >
-                    Start Now
+                    Order Lust-6 Tablets
                   </Button>
                 </motion.div>
               </Box>
-              
+
               {/* Trust Badges */}
-              <Box sx={{ 
-                display: "flex", 
-                justifyContent: "center", 
-                gap: { xs: 2, md: 4 }, 
+              <Box sx={{
+                display: "flex",
+                justifyContent: "center",
+                gap: { xs: 2, md: 4 },
                 flexWrap: "wrap",
-                mb: 4 
+                mb: 4
               }}>
                 {[
-                  { icon: <Shield size={20} />, text: "Natural Formula" },
-                  { icon: <CheckCircle size={20} />, text: "Clinically Studied" },
-                  { icon: <Package size={20} />, text: "Free Shipping" },
-                  { icon: <Heart size={20} />, text: "Enhances Desire" }
+                  { icon: <Pill size={20} />, text: "Compounded Formula" },
+                  { icon: <Heart size={20} />, text: "Women's Intimate Wellness" },
+                  { icon: <Target size={20} />, text: "Dual-Action Formula" },
+                  { icon: <Sparkles size={20} />, text: "Stackable with PT-141" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1298,9 +1184,9 @@ const Lust6Page = () => {
                     viewport={{ once: true }}
                     transition={{ delay: 0.1 * index }}
                   >
-                    <Box sx={{ 
-                      display: "flex", 
-                      alignItems: "center", 
+                    <Box sx={{
+                      display: "flex",
+                      alignItems: "center",
                       gap: 1.5,
                       bgcolor: "rgba(255, 255, 255, 0.1)",
                       px: { xs: 1.5, md: 2 },
@@ -1310,8 +1196,8 @@ const Lust6Page = () => {
                       border: "1px solid rgba(255, 255, 255, 0.2)"
                     }}>
                       {item.icon}
-                      <Typography variant="body2" sx={{ 
-                        color: "rgba(255, 255, 255, 0.95)", 
+                      <Typography variant="body2" sx={{
+                        color: "rgba(255, 255, 255, 0.95)",
                         fontWeight: 500,
                         fontSize: { xs: "0.8rem", md: "0.9rem" }
                       }}>
@@ -1321,7 +1207,7 @@ const Lust6Page = () => {
                   </motion.div>
                 ))}
               </Box>
-              
+
               {/* Additional Info */}
               <Typography
                 variant="caption"
@@ -1334,11 +1220,11 @@ const Lust6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Suitable for men & women • No prescription required • 30-day satisfaction guarantee
+                6-tablet pack • Compounded formula • Stackable with PT-141, NAD+ Injectable, GHK-Cu • Designed for women's intimate wellness
               </Typography>
             </motion.div>
           </Box>
-          
+
           {/* Background Pattern */}
           <Box
             sx={{

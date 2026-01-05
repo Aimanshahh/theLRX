@@ -52,7 +52,7 @@ const questions = [
   { 
     id: 7, 
     question: "What FDA regulations govern online prescription services?",
-    answer: "Our platform operates under FDA telehealth regulations, including the Ryan Haight Act provisions for telemedicine prescribing. We comply with state-specific medical board requirements, maintain proper patient-provider relationships, and only prescribe FDA-approved medications for appropriate indications following comprehensive medical evaluation." 
+    answer: "Online prescribing is governed by a combination of federal and state laws, including provisions of the Federal Food, Drug, and Cosmetic Act, the Ryan Haight Online Pharmacy Consumer Protection Act, and applicable DEA regulations. Our platform is designed to support telemedicine encounters only where permitted by law and does not replace the independent clinical judgment of the treating physician.\n\nPrescribing decisions are made solely by licensed medical doctors in compliance with applicable federal requirements, including Ryan Haight Act telemedicine exceptions where applicable, and state-specific medical board and telehealth regulations. Medications are prescribed only following an individualized medical evaluation, the establishment of a valid patient-physician relationship as required by law, and a determination that treatment is appropriate for delivery through telemedicine. Only FDA-approved medications are prescribed for FDA-approved indications."
   },
   { 
     id: 8, 

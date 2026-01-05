@@ -85,7 +85,7 @@ const DrivePlus6Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="PREMIUM ENERGY FORMULA - 6 TABLETS"
+                  label="COMPOUNDED ED MEDICATION - 6 TABLETS"
                   icon={<Zap size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -107,7 +107,7 @@ const DrivePlus6Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Boost Your{" "}
+                  Drive Plus{" "}
                   <Box
                     component="span"
                     sx={{
@@ -118,7 +118,7 @@ const DrivePlus6Page = () => {
                       display: "block"
                     }}
                   >
-                    Daily Energy
+                    – 6 Tablets
                   </Box>
                 </Typography>
 
@@ -131,19 +131,17 @@ const DrivePlus6Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Drive Plus 6 Tablets — premium energy formula designed to enhance 
-                  vitality, boost mental clarity, and sustain energy levels throughout 
-                  your busy day.
+                  Drive Plus combines enhanced blood-flow support, elevated desire pathways, and potent antioxidant synergy to create a more responsive, energized, and deeply connected intimate experience.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Sustained energy without crashes",
-                    "Enhanced mental focus and clarity",
-                    "Natural energy boost formula",
-                    "Perfect for busy professionals",
-                    "30-day satisfaction guarantee"
+                    "Enhanced blood-flow and nitric-oxide support",
+                    "Increased responsiveness and intimate vitality",
+                    "Powerful antioxidant synergy (Pycnogenol 50mg)",
+                    "Compounded for personalized efficacy (Sildenafil 80mg)",
+                    "Stacks with other treatments for amplified results"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -182,11 +180,11 @@ const DrivePlus6Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $119.00
+                      $297.00
                     </Typography>
                   </Box>
                   <Chip
-                    label="42% OFF"
+                    label="SPECIAL OFFER"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -216,7 +214,7 @@ const DrivePlus6Page = () => {
                       }
                     }}
                   >
-                    Boost Energy Now
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </motion.div>
@@ -273,8 +271,8 @@ const DrivePlus6Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Battery size={12} />
-                    SUSTAINED ENERGY
+                    <Pill size={12} />
+                    COMPOUNDED FORMULA
                   </Box>
                   
                 </Box>
@@ -305,7 +303,7 @@ const DrivePlus6Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            Personalized ED Treatment
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -322,10 +320,7 @@ const DrivePlus6Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Drive Plus 6 Tablets are formulated based on extensive research in 
-                  energy metabolism and cognitive function. Our premium formula has been 
-                  clinically validated for providing sustained energy without the crashes 
-                  associated with traditional stimulants.
+                  Liquid Rx provides customized solutions to help you achieve better performance and satisfaction. Whether you're facing occasional challenges or ongoing difficulties, our treatments are tailored to your specific needs for optimal results. Drive Plus is part of a complete wellness approach.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -338,7 +333,7 @@ const DrivePlus6Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    How It Works:
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -350,9 +345,9 @@ const DrivePlus6Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "92% reported sustained energy for 6+ hours",
-                          "88% experienced enhanced mental focus",
-                          "87% reported no energy crashes"
+                          "Consultation with a licensed provider",
+                          "Personalized treatment plans tailored to your unique needs",
+                          "Medications delivered privately and discreetly to your door"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -389,9 +384,9 @@ const DrivePlus6Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "90% of users reported improved productivity",
-                          "86% experienced better mood and motivation",
-                          "94% would recommend for daily energy"
+                          "Enhanced blood flow and nitric-oxide support",
+                          "Powerful antioxidant synergy with Pycnogenol",
+                          "Stacks with NAD+ and other treatments for full optimization"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -436,15 +431,14 @@ const DrivePlus6Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      📊 Formula Composition:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      8-week randomized controlled trial • 300 participants aged 25-55 • 
-                      Double-blind placebo-controlled • Independent energy research center
+                      Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
                     </Typography>
                   </Box>
                 </Box>
@@ -475,7 +469,7 @@ const DrivePlus6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    8-Week Energy Results
+                    Treatment in 3 Steps
                   </Typography>
                   <Typography
                     sx={{
@@ -483,7 +477,7 @@ const DrivePlus6Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive daily energy study data
+                    Simple. Convenient. Effective.
                   </Typography>
                 </Box>
                 
@@ -495,46 +489,46 @@ const DrivePlus6Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Sustained Energy", 
-                      value: "92%", 
+                      label: "Step 1: Fill Out Form", 
+                      value: "Online", 
                       color: "#00359E",
-                      description: "6+ hours of energy",
-                      trend: "+38% vs placebo"
+                      description: "Complete a simple medical form",
+                      trend: "5-10 minutes"
                     },
                     { 
-                      label: "Mental Focus", 
-                      value: "88%", 
+                      label: "Step 2: Telehealth Visit", 
+                      value: "Virtual", 
                       color: "#003B9D",
-                      description: "Enhanced concentration",
-                      trend: "+32% vs placebo"
+                      description: "Consult with a licensed provider",
+                      trend: "15-20 minutes"
                     },
                     { 
-                      label: "Crash-Free", 
-                      value: "87%", 
+                      label: "Step 3: Receive Medicine", 
+                      value: "Delivered", 
                       color: "#00359E",
-                      description: "No energy crashes",
-                      trend: "+40% vs caffeine"
+                      description: "Discreet shipping to your door",
+                      trend: "Free shipping"
                     },
                     { 
-                      label: "Productivity", 
-                      value: "90%", 
+                      label: "Personalized Plan", 
+                      value: "Custom", 
                       color: "#003B9D",
-                      description: "Improved work output",
-                      trend: "+35% vs placebo"
+                      description: "Treatment tailored to your needs",
+                      trend: "Ongoing support"
                     },
                     { 
-                      label: "Mood & Motivation", 
-                      value: "86%", 
+                      label: "Total Monthly Cost", 
+                      value: "$297", 
                       color: "#00359E",
-                      description: "Better daily mood",
-                      trend: "+30% vs placebo"
+                      description: "Full program access",
+                      trend: "First month $109"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "94%", 
+                      label: "Patient Satisfaction", 
+                      value: "Highly", 
                       color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+42% vs placebo"
+                      description: "Recommended by patients",
+                      trend: "Trusted care"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -603,8 +597,7 @@ const DrivePlus6Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    in sustained energy and mental focus
+                    Empowering men's health and wellness with discreet, personalized care.
                   </Typography>
                 </Box>
               </Box>
@@ -625,7 +618,7 @@ const DrivePlus6Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🎯 Stack for Amplified Results
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -634,9 +627,7 @@ const DrivePlus6Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Drive Plus's formula is supported by 14 peer-reviewed studies published in 
-              leading journals including Journal of Nutrition, Psychopharmacology, 
-              and International Journal of Food Sciences and Nutrition.
+              Drive Plus stacks best with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141 for amplified stamina, heightened sensitivity, and a fully optimized performance and wellness profile.
             </Typography>
           </Box>
         </Container>
@@ -666,7 +657,7 @@ const DrivePlus6Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Drive Plus{" "}
                 <Box
                   component="span"
                   sx={{
@@ -676,9 +667,8 @@ const DrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Drive Plus
+                  – 6 Tablets
                 </Box>
-                {" "}6 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -691,7 +681,7 @@ const DrivePlus6Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium energy tablets for sustained vitality, enhanced focus, and crash-free performance
+                Compounded formula for enhanced blood flow, responsiveness, and intimate vitality.
               </Typography>
             </motion.div>
           </Box>
@@ -801,7 +791,7 @@ const DrivePlus6Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Drive Plus Formula
+                    Compounded Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -811,9 +801,7 @@ const DrivePlus6Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Drive Plus tablets provide sustained 
-                    energy, enhanced mental focus, and crash-free performance for your 
-                    busy lifestyle.
+                    Drive blends elevated nitric-oxide support with powerful antioxidant synergy to enhance blood flow, responsiveness, and overall intimate vitality with a smooth, confident feel.
                   </Typography>
                 </Box>
 
@@ -821,27 +809,27 @@ const DrivePlus6Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Zap size={24} color="#00359E" />,
-                      title: "6+ Hour Energy",
-                      description: "Sustained vitality",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Blood Flow",
+                      description: "Enhanced nitric-oxide",
                       color: "#00359E"
                     },
                     {
-                      icon: <Brain size={24} color="#003B9D" />,
-                      title: "Mental Clarity",
-                      description: "Enhanced focus",
+                      icon: <Zap size={24} color="#003B9D" />,
+                      title: "Energy & Vitality",
+                      description: "Responsive experience",
                       color: "#003B9D"
                     },
                     {
                       icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Perfect starter pack",
+                      title: "6 Tablets",
+                      description: "Starter pack",
                       color: "#00359E"
                     },
                     {
-                      icon: <Battery size={24} color="#003B9D" />,
-                      title: "Crash-Free",
-                      description: "No energy dips",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Antioxidant Synergy",
+                      description: "Pycnogenol 50mg",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -903,16 +891,16 @@ const DrivePlus6Page = () => {
                       gap: 1
                     }}
                   >
-                    <Bolt size={20} />
-                    Energy Benefits
+                    <Target size={20} />
+                    Key Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Sustained energy release for 6+ hours",
-                      "Enhanced mental focus and cognitive function",
-                      "Crash-free energy without sudden dips",
-                      "Improved productivity and daily performance",
-                      "Made in pharmaceutical-grade facility"
+                      "Sildenafil 80mg for enhanced blood-flow support",
+                      "Bremelanotide 10mg for elevated desire pathways",
+                      "Pycnogenol 50mg for potent antioxidant synergy",
+                      "Creates a more responsive, energized intimate experience",
+                      "Stacks with NAD+ and peptides for optimized performance"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -978,7 +966,7 @@ const DrivePlus6Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Start Treatment in{" "}
                 <Box
                   component="span"
                   sx={{
@@ -988,7 +976,7 @@ const DrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  3 Easy Steps
                 </Box>
               </Typography>
               <Typography
@@ -1002,7 +990,7 @@ const DrivePlus6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal energy enhancement
+                Simple telehealth process for personalized ED treatment.
               </Typography>
             </motion.div>
           </Box>
@@ -1011,30 +999,30 @@ const DrivePlus6Page = () => {
             {[
               {
                 step: "01",
-                title: "Morning Dose",
-                description: "Take with breakfast",
-                icon: "🌅",
+                title: "Medical Forms",
+                description: "Complete a simple online medical form",
+                icon: "📋",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "With Water",
-                description: "One tablet with water",
-                icon: "💧",
+                title: "Telehealth Visit",
+                description: "Speak to your clinician virtually",
+                icon: "👨‍⚕️",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Daily Use",
-                description: "For consistent energy",
-                icon: "📅",
+                title: "Receive Medicine",
+                description: "Discreet delivery to your door",
+                icon: "📦",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "6+ Hours",
-                description: "Sustained energy",
-                icon: "⏰",
+                title: "Ongoing Care",
+                description: "Continued support and adjustments",
+                icon: "💪",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1138,7 +1126,7 @@ const DrivePlus6Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Boost Your{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1149,7 +1137,7 @@ const DrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Daily Energy
+                  Restored. Life Reimagined.
                 </Box>
               </Typography>
               
@@ -1164,8 +1152,7 @@ const DrivePlus6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Experience sustained energy and enhanced focus with Drive Plus 6 Tablets. 
-                Perfect for busy professionals, students, and anyone needing reliable daily energy.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $109 for your first month.
               </Typography>
               
               {/* Pricing Display */}
@@ -1180,6 +1167,14 @@ const DrivePlus6Page = () => {
                   }}
                 >
                   $109.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    fontSize: "1.1rem"
+                  }}
+                >
+                  first month (Regularly $297/month)
                 </Typography>
               </Box>
               
@@ -1212,7 +1207,7 @@ const DrivePlus6Page = () => {
                       }
                     }}
                   >
-                    Boost Energy Now
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </Box>
@@ -1226,10 +1221,10 @@ const DrivePlus6Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Zap size={20} />, text: "6+ Hour Energy" },
-                  { icon: <CheckCircle size={20} />, text: "Crash-Free" },
+                  { icon: <Shield size={20} />, text: "Licensed Providers" },
+                  { icon: <Truck size={20} />, text: "Discreet Delivery" },
                   { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Brain size={20} />, text: "Mental Focus" }
+                  { icon: <Users size={20} />, text: "Patient Recommended" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1274,7 +1269,7 @@ const DrivePlus6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Premium energy formula • No prescription required • 30-day satisfaction guarantee
+                Drive Plus 6 Tablets • Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded formula • Telehealth consultation included • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

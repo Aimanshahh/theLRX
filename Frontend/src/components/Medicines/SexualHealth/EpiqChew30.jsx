@@ -16,30 +16,16 @@ import {
   Star,
   Package,
   CheckCircle,
-  Clock,
-  Calendar,
   ArrowRight,
   Shield,
   Users,
-  TrendingUp,
-  Brain,
-  Eye,
-  Focus,
   Heart,
   Pill,
   Sparkles,
-  Droplet,
   Leaf,
   Zap,
-  Battery,
-  Rocket,
-  Target,
-  Flame,
   Truck,
-  Award,
-  Crown,
-  Diamond,
-  Gem
+  Target
 } from "lucide-react";
 
 // Images
@@ -87,7 +73,7 @@ const EpiqChew30Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="PREMIUM CHEWABLE FORMULA - 30 TABLETS"
+                  label="COMPOUNDED CHEWABLE ED MEDICATION"
                   icon={<Star size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -109,7 +95,7 @@ const EpiqChew30Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Discover{" "}
+                  Epiq Chew{" "}
                   <Box
                     component="span"
                     sx={{
@@ -120,7 +106,7 @@ const EpiqChew30Page = () => {
                       display: "block"
                     }}
                   >
-                    Epiq Chew Experience
+                    – 30 Tablets
                   </Box>
                 </Typography>
 
@@ -133,18 +119,19 @@ const EpiqChew30Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Epiq Chew 30 Tablets — premium chewable formula for enhanced wellness and vitality. 
-                  Experience the convenience of chewable tablets with maximum absorption and great taste.
+                  Epic Chew blends refined vascular support with targeted performance enhancement 
+                  and essential nutrient synergy, helping you feel steady, energized, and confidently 
+                  connected whenever the moment matters.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Great-tasting chewable tablets",
-                    "Fast absorption without water",
-                    "30-tablet monthly supply",
-                    "Enhanced bioavailability",
-                    "30-day satisfaction guarantee"
+                    "Compounded chewable formula (Tadalafil 5mg / Vardenafil 5mg)",
+                    "Essential nutrient synergy (Vitamin D3 200IU / Vitamin K2 1mg)",
+                    "Consultation with a licensed provider included",
+                    "Personalized treatment plans tailored to your needs",
+                    "Medications delivered discreetly to your door"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -183,11 +170,11 @@ const EpiqChew30Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $129.00
+                      $297.00
                     </Typography>
                   </Box>
                   <Chip
-                    label="39% OFF"
+                    label="SPECIAL OFFER"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -217,7 +204,7 @@ const EpiqChew30Page = () => {
                       }
                     }}
                   >
-                    Try Epiq Chew Now
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </motion.div>
@@ -274,8 +261,8 @@ const EpiqChew30Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Star size={12} />
-                    CHEWABLE FORMULA
+                    <Pill size={12} />
+                    COMPOUNDED FORMULA
                   </Box>
                   
                   <Box
@@ -301,7 +288,7 @@ const EpiqChew30Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* TREATMENT & EVIDENCE SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -322,7 +309,7 @@ const EpiqChew30Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            Personalized ED Treatment Plans
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -339,10 +326,7 @@ const EpiqChew30Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Epiq Chew 30 Tablets are formulated based on advanced research in 
-                  bioavailability and absorption science. Our chewable formula has been 
-                  clinically validated for enhanced absorption and superior convenience 
-                  compared to traditional tablets.
+                  Liquid Rx provides customized solutions to help you achieve better performance and satisfaction. Whether you're facing occasional challenges or ongoing difficulties, our treatments are tailored to your specific needs for optimal results. Epic Chew is designed to help you feel steady, energized, and confidently connected.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -355,7 +339,7 @@ const EpiqChew30Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    How It Works:
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -367,9 +351,9 @@ const EpiqChew30Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "94% reported faster absorption compared to pills",
-                          "91% preferred chewable format over traditional tablets",
-                          "89% reported great taste and easy consumption"
+                          "Refined vascular support for steady performance",
+                          "Targeted performance enhancement when needed",
+                          "Essential nutrient synergy for overall wellness"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -406,9 +390,9 @@ const EpiqChew30Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "93% reported enhanced convenience",
-                          "87% experienced improved wellness",
-                          "95% would recommend to friends and family"
+                          "Stacks with NAD+ Injectable and B-12 for elevated stamina",
+                          "Works with CJC-1295/Ipamorelin for smoother recovery",
+                          "Provides a fully optimized daily wellness experience"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -439,7 +423,7 @@ const EpiqChew30Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Formula Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -453,15 +437,14 @@ const EpiqChew30Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      📊 Formula Composition:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      90-day randomized controlled trial • 350 participants aged 25-65 • 
-                      Comparative study vs traditional tablets • Independent research facility
+                      Tadalafil 5mg / Vardenafil 5mg / Vitamin D3 200IU / Vitamin K2 1mg • Compounded chewable tablet • Designed to stack with NAD+ Injectable, B-12, and CJC-1295/Ipamorelin
                     </Typography>
                   </Box>
                 </Box>
@@ -492,7 +475,7 @@ const EpiqChew30Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    90-Day Chewable Results
+                    ED Treatment in 3 Steps
                   </Typography>
                   <Typography
                     sx={{
@@ -500,7 +483,7 @@ const EpiqChew30Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive chewable formulation study
+                    Simple. Convenient. Effective.
                   </Typography>
                 </Box>
                 
@@ -512,46 +495,46 @@ const EpiqChew30Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Faster Absorption", 
-                      value: "94%", 
+                      label: "Step 1: Fill Out Form", 
+                      value: "Online", 
                       color: "#00359E",
-                      description: "Enhanced bioavailability",
-                      trend: "+42% vs tablets"
+                      description: "Complete a simple medical form",
+                      trend: "5-10 minutes"
                     },
                     { 
-                      label: "Taste Satisfaction", 
-                      value: "89%", 
+                      label: "Step 2: Telehealth Visit", 
+                      value: "Virtual", 
                       color: "#003B9D",
-                      description: "Great taste reported",
-                      trend: "+38% vs tablets"
+                      description: "Consult with a licensed provider",
+                      trend: "15-20 minutes"
                     },
                     { 
-                      label: "Convenience", 
-                      value: "93%", 
+                      label: "Step 3: Start Treatment", 
+                      value: "Begin", 
                       color: "#00359E",
-                      description: "Easy consumption",
-                      trend: "+45% vs tablets"
+                      description: "Receive your personalized plan",
+                      trend: "Immediate start"
                     },
                     { 
-                      label: "Overall Preference", 
-                      value: "91%", 
+                      label: "Personalized Care", 
+                      value: "Custom", 
                       color: "#003B9D",
-                      description: "Prefer chewable format",
-                      trend: "+40% vs tablets"
+                      description: "Treatment tailored to your needs",
+                      trend: "Ongoing support"
                     },
                     { 
-                      label: "Wellness Improvement", 
-                      value: "87%", 
+                      label: "Program Cost", 
+                      value: "$297", 
                       color: "#00359E",
-                      description: "Enhanced wellness",
-                      trend: "+35% vs placebo"
+                      description: "Full monthly program",
+                      trend: "First month $79"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "95%", 
+                      label: "Patient Trust", 
+                      value: "Highly", 
                       color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+48% vs tablets"
+                      description: "Recommended by patients",
+                      trend: "Reliable care"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -607,7 +590,7 @@ const EpiqChew30Page = () => {
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Section Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -620,15 +603,14 @@ const EpiqChew30Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    in absorption and convenience
+                    Empowering men's health and wellness with discreet, personalized care.
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Stacking Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -642,7 +624,7 @@ const EpiqChew30Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              ⚡ Stack for Enhanced Results
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -651,9 +633,7 @@ const EpiqChew30Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Epiq Chew's formulation is supported by 15 peer-reviewed studies published in 
-              leading journals including Journal of Pharmaceutical Sciences, 
-              International Journal of Pharmaceutics, and Drug Development and Industrial Pharmacy.
+              Epic Chew stacks best with NAD+ Injectable, B-12, and the CJC-1295/Ipamorelin blend for elevated stamina, smoother recovery, and a fully optimized daily wellness experience.
             </Typography>
           </Box>
         </Container>
@@ -683,7 +663,7 @@ const EpiqChew30Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Epiq Chew{" "}
                 <Box
                   component="span"
                   sx={{
@@ -693,9 +673,8 @@ const EpiqChew30Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Epiq Chew
+                  – 30 Tablets
                 </Box>
-                {" "}30 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -708,7 +687,7 @@ const EpiqChew30Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium chewable tablets for enhanced absorption, convenience, and great taste
+                Compounded chewable formula for vascular support, performance, and daily wellness.
               </Typography>
             </motion.div>
           </Box>
@@ -767,10 +746,10 @@ const EpiqChew30Page = () => {
                     }}
                   >
                     <Package size={12} />
-                    30-TABLET PACK
+                    30 CHEWABLE TABLETS
                   </Box>
                   
-                  {/* Taste Badge */}
+                  {/* Formula Badge */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -788,8 +767,8 @@ const EpiqChew30Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Star size={12} />
-                    GREAT TASTE
+                    <Heart size={12} />
+                    VASCULAR SUPPORT
                   </Box>
 
                   {/* Price Badge */}
@@ -840,7 +819,7 @@ const EpiqChew30Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Chewable Formula
+                    Compounded Chewable Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -850,9 +829,7 @@ const EpiqChew30Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Epiq Chew tablets combine convenience 
-                    with enhanced absorption. Great-tasting chewable format that doesn't 
-                    require water for maximum convenience.
+                    Epic Chew blends refined vascular support with targeted performance enhancement and essential nutrient synergy, helping you feel steady, energized, and confidently connected whenever the moment matters.
                   </Typography>
                 </Box>
 
@@ -860,27 +837,27 @@ const EpiqChew30Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Star size={24} color="#00359E" />,
-                      title: "Great Taste",
-                      description: "Pleasant chewable",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Vascular Support",
+                      description: "Tadalafil & Vardenafil",
                       color: "#00359E"
                     },
                     {
                       icon: <Zap size={24} color="#003B9D" />,
-                      title: "Fast Absorption",
-                      description: "Enhanced bioavailability",
+                      title: "Energy & Performance",
+                      description: "Targeted enhancement",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "30-Tablet Pack",
-                      description: "Monthly supply",
+                      icon: <Leaf size={24} color="#00359E" />,
+                      title: "Nutrient Synergy",
+                      description: "Vitamin D3 & K2",
                       color: "#00359E"
                     },
                     {
-                      icon: <Sparkles size={24} color="#003B9D" />,
-                      title: "No Water Needed",
-                      description: "Convenient anywhere",
+                      icon: <Package size={24} color="#003B9D" />,
+                      title: "30 Chewable Tablets",
+                      description: "Convenient format",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -942,16 +919,16 @@ const EpiqChew30Page = () => {
                       gap: 1
                     }}
                   >
-                    <Crown size={20} />
-                    Chewable Benefits
+                    <Target size={20} />
+                    Key Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Great-tasting chewable formula for easy consumption",
-                      "Enhanced absorption compared to traditional tablets",
-                      "No water needed - convenient for on-the-go use",
-                      "30-tablet monthly supply for consistent wellness",
-                      "Made in pharmaceutical-grade facility"
+                      "Tadalafil 5mg / Vardenafil 5mg for refined vascular support",
+                      "Vitamin D3 200IU / Vitamin K2 1mg for essential nutrient synergy",
+                      "Helps you feel steady, energized, and confidently connected",
+                      "Chewable format for convenience and ease of use",
+                      "Stacks with other treatments for fully optimized wellness"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -1017,7 +994,7 @@ const EpiqChew30Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Start Treatment in{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1027,7 +1004,7 @@ const EpiqChew30Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  3 Easy Steps
                 </Box>
               </Typography>
               <Typography
@@ -1041,7 +1018,7 @@ const EpiqChew30Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal chewable experience
+                Simple telehealth process for personalized ED treatment.
               </Typography>
             </motion.div>
           </Box>
@@ -1050,30 +1027,30 @@ const EpiqChew30Page = () => {
             {[
               {
                 step: "01",
-                title: "Chew Thoroughly",
-                description: "Chew tablet completely",
-                icon: "😋",
+                title: "Fill Out Form",
+                description: "Complete a simple online medical form",
+                icon: "📋",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "No Water Needed",
-                description: "Convenient anywhere",
-                icon: "💧",
+                title: "Telehealth Consultation",
+                description: "Attend your virtual consultation",
+                icon: "👨‍⚕️",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Daily Use",
-                description: "Once daily for best results",
-                icon: "📅",
+                title: "Start Your ED Treatment",
+                description: "Begin your personalized plan",
+                icon: "💪",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Enjoy Taste",
-                description: "Great flavor experience",
-                icon: "⭐",
+                title: "Ongoing Support",
+                description: "Continued care and adjustments",
+                icon: "🔄",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1177,7 +1154,7 @@ const EpiqChew30Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Discover{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1188,7 +1165,7 @@ const EpiqChew30Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Epiq Chew Experience
+                  Restored. Life Reimagined.
                 </Box>
               </Typography>
               
@@ -1203,8 +1180,7 @@ const EpiqChew30Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Experience the convenience of chewable wellness with Epiq Chew 30 Tablets. 
-                Great taste, enhanced absorption, and maximum convenience in one premium formula.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $79 for your first month.
               </Typography>
               
               {/* Pricing Display */}
@@ -1219,6 +1195,14 @@ const EpiqChew30Page = () => {
                   }}
                 >
                   $79.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    fontSize: "1.1rem"
+                  }}
+                >
+                  first month (Regularly $297/month)
                 </Typography>
               </Box>
               
@@ -1251,7 +1235,7 @@ const EpiqChew30Page = () => {
                       }
                     }}
                   >
-                    Try Epiq Chew Now
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </Box>
@@ -1265,10 +1249,10 @@ const EpiqChew30Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Star size={20} />, text: "Great Taste" },
-                  { icon: <CheckCircle size={20} />, text: "Fast Absorption" },
-                  { icon: <Package size={20} />, text: "30-Tablet Pack" },
-                  { icon: <Sparkles size={20} />, text: "No Water Needed" }
+                  { icon: <Shield size={20} />, text: "Licensed Providers" },
+                  { icon: <Truck size={20} />, text: "Discreet Delivery" },
+                  { icon: <Package size={20} />, text: "30 Chewable Tablets" },
+                  { icon: <Users size={20} />, text: "Patient Recommended" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1313,7 +1297,7 @@ const EpiqChew30Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                30-tablet monthly supply • Chewable convenience formula • No prescription required • 30-day satisfaction guarantee
+                Epiq Chew 30 Tablets • Tadalafil 5mg / Vardenafil 5mg / Vit D3 200IU / Vit K2 1mg • Compounded chewable formula • Telehealth consultation included • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

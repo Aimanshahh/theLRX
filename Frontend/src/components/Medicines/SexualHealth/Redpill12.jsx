@@ -11,21 +11,18 @@ import {
 import { alpha } from "@mui/material/styles";
 import { motion } from "framer-motion";
 
-// Lucide icons
+// Updated Lucide icons for men's health focus
 import {
-  Target,
   CheckCircle,
   Package,
-  Brain,
-  Eye,
-  Focus,
   ArrowRight,
-  Zap,
-  Clock,
-  Calendar,
+  Heart,
+  Shield,
+  Truck,
   Users,
-  Star,
-  Shield
+  Stethoscope,
+  UserCheck,
+  Clock
 } from "lucide-react";
 
 // Images
@@ -40,7 +37,7 @@ const Redpill12Page = () => {
   };
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -72,8 +69,8 @@ const Redpill12Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="MENTAL CLARITY FORMULA - 12 TABLETS"
-                  icon={<Target size={16} />}
+                  label="COMPOUNDED ED MEDICATION - 12 TABLETS"
+                  icon={<Package size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
                     color: "#00359E",
@@ -94,19 +91,7 @@ const Redpill12Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Unlock Your{" "}
-                  <Box
-                    component="span"
-                    sx={{
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      color: "transparent",
-                      display: "block"
-                    }}
-                  >
-                    Mental Potential
-                  </Box>
+                  Redpill – 12 Tablets
                 </Typography>
 
                 <Typography
@@ -118,18 +103,20 @@ const Redpill12Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Redpill 6 Tablets — advanced nootropic formula for enhanced mental clarity, focus, and cognitive performance.
-                  Perfect starter pack for peak mental performance.
+                  Redpill pairs refined vascular support with antioxidant-driven circulation enhancement to promote smoother performance, heightened responsiveness, and a naturally confident intimate experience.
+                  <Box component="span" sx={{ display: 'block', mt: 1, fontWeight: 600, color: "#00359E" }}>
+                    (Tadalafil 20mg / Pycnogenol 25mg)
+                  </Box>
                 </Typography>
 
-                {/* FEATURES */}
+                {/* UPDATED FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Enhanced mental clarity and focus",
-                    "Improved memory retention",
-                    "Reduced brain fog and fatigue",
-                    "Increased productivity and concentration",
-                    "30-day satisfaction guarantee"
+                    "Designed to help men overcome erectile challenges and restore confidence",
+                    "Consultation with a licensed provider",
+                    "Personalized treatment plans tailored to your unique needs",
+                    "Medications delivered privately and discreetly to your door",
+                    "Convenient telehealth platform for easy and ongoing access to care"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -148,7 +135,7 @@ const Redpill12Page = () => {
                   ))}
                 </Box>
 
-                {/* PRICING */}
+                {/* UPDATED PRICING */}
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
                   <Box>
                     <Typography
@@ -164,15 +151,14 @@ const Redpill12Page = () => {
                     <Typography
                       sx={{
                         color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
+                        fontSize: "1rem"
                       }}
                     >
-                      $150.00
+                      Complete 12-tablet treatment
                     </Typography>
                   </Box>
                   <Chip
-                    label="38% OFF"
+                    label="COMPOUNDED"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -202,13 +188,13 @@ const Redpill12Page = () => {
                       }
                     }}
                   >
-                    Enhance Focus
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </motion.div>
             </Box>
 
-            {/* RIGHT IMAGE SECTION */}
+            {/* RIGHT IMAGE SECTION - UPDATED */}
             <Box
               sx={{
                 flex: 1,
@@ -259,10 +245,35 @@ const Redpill12Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Brain size={12} />
-                    MENTAL CLARITY
+                    <Heart size={12} />
+                    ED MEDICATION
                   </Box>
                   
+                  {/* UPDATED PRICE BADGE */}
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: 20,
+                      right: 20,
+                      bgcolor: "#00359E",
+                      color: "#FFFFFF",
+                      px: 2.5,
+                      py: 1.5,
+                      borderRadius: "12px",
+                      fontSize: "1.5rem",
+                      fontWeight: 900,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center"
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
+                      12 Tablets
+                    </Typography>
+                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
+                      $119
+                    </Typography>
+                  </Box>
                 </Box>
               </motion.div>
             </Box>
@@ -270,7 +281,7 @@ const Redpill12Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* TELEHEALTH PROCESS SECTION - REPLACED SCIENTIFIC SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -291,7 +302,7 @@ const Redpill12Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            ED Treatment in 3 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -308,9 +319,7 @@ const Redpill12Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Redpill 12 Tablets are formulated based on extensive neuroscientific research and clinical studies. 
-                  Our nootropic formula has been validated through multiple independent studies for enhancing 
-                  cognitive function, focus, and mental clarity.
+                  LiquidRX makes it simple to access expert care. Our telehealth platform ensures privacy and convenience, allowing you to take charge of your health with confidence. From consultation to treatment, we're here to support you every step of the way.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -323,7 +332,7 @@ const Redpill12Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Simple. Convenient. Effective.
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -335,9 +344,9 @@ const Redpill12Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "94% reported enhanced mental clarity within 60 minutes",
-                          "89% experienced improved focus and concentration",
-                          "87% noticed reduced brain fog and fatigue"
+                          "Fill out the medical form online",
+                          "Attend your telehealth consultation with a licensed provider",
+                          "Start your personalized ED treatment plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -374,9 +383,9 @@ const Redpill12Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "92% of users reported better memory retention",
-                          "88% experienced increased productivity",
-                          "91% would recommend for cognitive enhancement"
+                          "Receive medications discreetly at your door",
+                          "Get ongoing support from experienced providers",
+                          "Enjoy customized solutions for optimal results"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -407,7 +416,7 @@ const Redpill12Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Service Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -421,22 +430,21 @@ const Redpill12Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💊 Treatment Program:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 450 participants aged 20-65 • 
-                      Double-blind placebo-controlled • Independent neuroscience institute
+                      $297 first month for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Steps Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -460,7 +468,7 @@ const Redpill12Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Cognitive Results
+                    Complete Treatment Plan
                   </Typography>
                   <Typography
                     sx={{
@@ -468,7 +476,7 @@ const Redpill12Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive cognitive study data
+                    Everything you need for confidence restored
                   </Typography>
                 </Box>
                 
@@ -480,102 +488,91 @@ const Redpill12Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Mental Clarity", 
-                      value: "94%", 
+                      label: "Telehealth Consultation", 
+                      value: "Included", 
                       color: "#00359E",
-                      description: "Reported clear thinking",
-                      trend: "+28% vs placebo"
+                      description: "With licensed provider",
+                      icon: "👨‍⚕️"
                     },
                     { 
-                      label: "Focus & Concentration", 
-                      value: "89%", 
+                      label: "Personalized Plan", 
+                      value: "Custom", 
                       color: "#003B9D",
-                      description: "Improved attention span",
-                      trend: "+22% vs placebo"
+                      description: "Tailored to your needs",
+                      icon: "📋"
                     },
                     { 
-                      label: "Memory Retention", 
-                      value: "92%", 
+                      label: "Medication Delivery", 
+                      value: "Discreet", 
                       color: "#00359E",
-                      description: "Enhanced recall ability",
-                      trend: "+25% vs placebo"
+                      description: "To your door",
+                      icon: "📦"
                     },
                     { 
-                      label: "Productivity", 
-                      value: "88%", 
+                      label: "Ongoing Support", 
+                      value: "24/7", 
                       color: "#003B9D",
-                      description: "Increased work output",
-                      trend: "+24% vs placebo"
+                      description: "Provider access",
+                      icon: "🔄"
                     },
                     { 
-                      label: "Brain Fog Reduction", 
-                      value: "87%", 
+                      label: "Wellness Profile", 
+                      value: "Complete", 
                       color: "#00359E",
-                      description: "Reduced mental fatigue",
-                      trend: "+26% vs placebo"
+                      description: "Performance focused",
+                      icon: "💪"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "96%", 
+                      label: "Shipping", 
+                      value: "All 50 States", 
                       color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+30% vs placebo"
+                      description: "Nationwide delivery",
+                      icon: "🇺🇸"
                     }
                   ].map((stat, index) => (
-                    <Box key={index} sx={{ mb: 2 }}>
+                    <Box key={index} sx={{ mb: 2, p: 2, borderRadius: "8px", bgcolor: alpha(stat.color, 0.05) }}>
                       <Box sx={{ 
                         display: "flex", 
                         justifyContent: "space-between", 
                         alignItems: "center",
                         mb: 0.5
                       }}>
-                        <Typography sx={{ 
-                          color: "#000000", 
-                          fontWeight: 600,
-                          fontSize: "1rem"
-                        }}>
-                          {stat.label}
-                        </Typography>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                          <Typography sx={{ fontSize: "1.2rem" }}>
+                            {stat.icon}
+                          </Typography>
+                          <Typography sx={{ 
+                            color: "#000000", 
+                            fontWeight: 600,
+                            fontSize: "1rem"
+                          }}>
+                            {stat.label}
+                          </Typography>
+                        </Box>
                         <Typography
                           sx={{
                             color: stat.color,
                             fontWeight: 900,
-                            fontSize: "1.5rem"
+                            fontSize: "1.1rem"
                           }}
                         >
                           {stat.value}
                         </Typography>
                       </Box>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
-                        alignItems: "center"
-                      }}>
-                        <Typography
-                          sx={{
-                            color: "#8B8D8E",
-                            fontSize: "0.85rem"
-                          }}
-                        >
-                          {stat.description}
-                        </Typography>
-                        <Chip
-                          label={stat.trend}
-                          size="small"
-                          sx={{
-                            bgcolor: alpha(stat.color, 0.1),
-                            color: stat.color,
-                            fontWeight: 600,
-                            fontSize: "0.75rem",
-                            height: "22px"
-                          }}
-                        />
-                      </Box>
+                      <Typography
+                        sx={{
+                          color: "#8B8D8E",
+                          fontSize: "0.85rem",
+                          pl: 3
+                        }}
+                      >
+                        {stat.description}
+                      </Typography>
                     </Box>
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Service Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -588,15 +585,14 @@ const Redpill12Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all cognitive parameters
+                    Empowering Men's Health and Wellness
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Additional Service Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -610,7 +606,7 @@ const Redpill12Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚚 We Proudly Ship to All 50 States
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -619,15 +615,13 @@ const Redpill12Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Redpill's formula is supported by 18 peer-reviewed studies published in 
-              leading journals including Journal of Cognitive Neuroscience, 
-              Neuropsychopharmacology, and Brain Research Bulletin.
+              Order your medications anytime — 24/7/365. Private, discreet packaging with nationwide delivery.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      {/* PRODUCT SHOWCASE SECTION */}
+      {/* SERVICE BENEFITS SECTION - REPLACED PRODUCT SHOWCASE */}
       <Box
         sx={{
           py: { xs: 10, md: 14 },
@@ -651,7 +645,7 @@ const Redpill12Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Personalized{" "}
                 <Box
                   component="span"
                   sx={{
@@ -661,9 +655,8 @@ const Redpill12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Redpill
+                  ED Treatment Plans
                 </Box>
-                {" "}12 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -676,13 +669,13 @@ const Redpill12Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Advanced nootropic tablets for enhanced mental clarity, focus, and cognitive performance
+                Liquid Rx provides customized solutions to help you achieve better performance and satisfaction.
               </Typography>
             </motion.div>
           </Box>
 
           <Grid container spacing={6} alignItems="center">
-            {/* Product Image */}
+            {/* Service Image */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -696,17 +689,16 @@ const Redpill12Page = () => {
                     borderRadius: "24px",
                     overflow: "hidden",
                     boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
-                    transform: "perspective(1000px) rotateY(-5deg)",
-                    transition: "transform 0.5s ease",
                     "&:hover": {
-                      transform: "perspective(1000px) rotateY(0deg)"
+                      transform: "translateY(-5px)",
+                      transition: "transform 0.3s ease"
                     }
                   }}
                 >
                   <Box
                     component="img"
                     src={productImage}
-                    alt="Redpill 12 Tablets"
+                    alt="Men's Health Telemedicine Service"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -715,7 +707,7 @@ const Redpill12Page = () => {
                     }}
                   />
                   
-                  {/* Floating Badges */}
+                  {/* UPDATED Floating Badges */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -735,10 +727,10 @@ const Redpill12Page = () => {
                     }}
                   >
                     <Package size={12} />
-                    6-TABLET PACK
+                    12-TABLET PACK
                   </Box>
                   
-                  {/* Price Badge */}
+                  {/* UPDATED Info Badge */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -758,17 +750,17 @@ const Redpill12Page = () => {
                     }}
                   >
                     <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
-                      Only
+                      Best Value
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $119
+                      12 Tablets
                     </Typography>
                   </Box>
                 </Box>
               </motion.div>
             </Grid>
 
-            {/* Product Details */}
+            {/* Service Details */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
@@ -786,7 +778,7 @@ const Redpill12Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Redpill Formula
+                    Direct Access to Your Health Provider
                   </Typography>
                   <Typography
                     sx={{
@@ -796,36 +788,35 @@ const Redpill12Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Redpill tablets enhance cognitive function, 
-                    improve memory retention, and boost mental clarity for peak performance.
+                    With Liquid Rx, you'll have ongoing support from experienced providers through virtual consultations. We'll be with you every step of the way, ensuring your treatment plan delivers the results you're looking for.
                   </Typography>
                 </Box>
 
-                {/* Key Features */}
+                {/* UPDATED Key Features */}
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Brain size={24} color="#00359E" />,
-                      title: "Mental Clarity",
-                      description: "Enhanced focus",
+                      icon: <UserCheck size={24} color="#00359E" />,
+                      title: "Licensed Providers",
+                      description: "Experienced medical professionals",
                       color: "#00359E"
                     },
                     {
-                      icon: <Target size={24} color="#003B9D" />,
-                      title: "Improved Focus",
-                      description: "Better concentration",
+                      icon: <Shield size={24} color="#003B9D" />,
+                      title: "Private & Discreet",
+                      description: "Confidential treatment",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Perfect starter pack",
+                      icon: <Stethoscope size={24} color="#00359E" />,
+                      title: "Customized Plans",
+                      description: "Tailored to your needs",
                       color: "#00359E"
                     },
                     {
-                      icon: <Eye size={24} color="#003B9D" />,
-                      title: "Memory Boost",
-                      description: "Enhanced retention",
+                      icon: <Truck size={24} color="#003B9D" />,
+                      title: "Doorstep Delivery",
+                      description: "Nationwide shipping",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -866,7 +857,7 @@ const Redpill12Page = () => {
                   ))}
                 </Grid>
 
-                {/* Formula Benefits */}
+                {/* UPDATED Service Benefits */}
                 <Card
                   sx={{
                     p: 3,
@@ -887,16 +878,16 @@ const Redpill12Page = () => {
                       gap: 1
                     }}
                   >
-                    <Focus size={20} />
-                    Cognitive Benefits
+                    <Heart size={20} />
+                    Complete Wellness Stack
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Enhanced mental clarity and focus within 60 minutes",
-                      "Improved memory retention and recall",
-                      "Reduced mental fatigue and brain fog",
-                      "Increased productivity and concentration",
-                      "Made in pharmaceutical-grade facility"
+                      "Stacks best with NAD+ Injectable for elevated stamina",
+                      "Pairs with PT-141 for enhanced performance",
+                      "Combines with CJC-1295/Ipamorelin for deeper vitality",
+                      "Creates complete performance-focused wellness profile",
+                      "Provides refined vascular support with antioxidant enhancement"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -913,7 +904,7 @@ const Redpill12Page = () => {
         </Container>
       </Box>
 
-      {/* HOW IT WORKS SECTION */}
+      {/* HOW IT WORKS SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -937,7 +928,7 @@ const Redpill12Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -947,7 +938,7 @@ const Redpill12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Restored
                 </Box>
               </Typography>
               <Typography
@@ -961,7 +952,7 @@ const Redpill12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal cognitive enhancement
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works.
               </Typography>
             </motion.div>
           </Box>
@@ -970,30 +961,30 @@ const Redpill12Page = () => {
             {[
               {
                 step: "01",
-                title: "Morning Dose",
-                description: "One tablet with water",
-                icon: "🌅",
+                title: "Complete Medical Form",
+                description: "Simple online assessment",
+                icon: "📋",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "With Breakfast",
-                description: "Take with morning meal",
-                icon: "🍽️",
+                title: "Virtual Consultation",
+                description: "With licensed provider",
+                icon: "👨‍⚕️",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Daily Use",
-                description: "Consistent daily intake",
-                icon: "📅",
+                title: "Personalized Treatment",
+                description: "Customized plan for you",
+                icon: "💊",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "60 Minutes",
-                description: "Effects within hour",
-                icon: "⏰",
+                title: "Discreet Delivery",
+                description: "Medications to your door",
+                icon: "📦",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1067,7 +1058,7 @@ const Redpill12Page = () => {
         </Container>
       </Box>
 
-      {/* FINAL CTA SECTION */}
+      {/* FINAL CTA SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -1097,7 +1088,7 @@ const Redpill12Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Unlock Your{" "}
+                Life{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1108,7 +1099,7 @@ const Redpill12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Mental Potential
+                  Reimagined
                 </Box>
               </Typography>
               
@@ -1123,11 +1114,10 @@ const Redpill12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Experience enhanced mental clarity and focus with Redpill 12 Tablets. 
-                Perfect starter pack for peak cognitive performance and productivity.
+                Our ED treatments provide discreet, effective solutions to help men overcome challenges and restore confidence. Designed to improve performance and support overall wellness.
               </Typography>
               
-              {/* Pricing Display */}
+              {/* UPDATED Pricing Display */}
               <Box sx={{ mb: 4, display: "inline-block" }}>
                 <Typography
                   variant="h3"
@@ -1140,9 +1130,12 @@ const Redpill12Page = () => {
                 >
                   $119.00
                 </Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                  Redpill 12 Tablets • Telehealth Included • 24/7 Support
+                </Typography>
               </Box>
               
-              {/* Single Start Now Button */}
+              {/* UPDATED Single Start Now Button */}
               <Box sx={{ mb: 6 }}>
                 <motion.div 
                   whileHover={{ scale: 1.05 }} 
@@ -1171,12 +1164,12 @@ const Redpill12Page = () => {
                       }
                     }}
                   >
-                    Boost Mental Clarity
+                    Start Treatment Now
                   </Button>
                 </motion.div>
               </Box>
               
-              {/* Trust Badges */}
+              {/* UPDATED Trust Badges */}
               <Box sx={{ 
                 display: "flex", 
                 justifyContent: "center", 
@@ -1185,10 +1178,12 @@ const Redpill12Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Brain size={20} />, text: "Mental Clarity" },
-                  { icon: <CheckCircle size={20} />, text: "Enhanced Focus" },
-                  { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Target size={20} />, text: "Cognitive Boost" }
+                  { icon: <Shield size={20} />, text: "Licensed Providers" },
+                  { icon: <Truck size={20} />, text: "50 States Delivery" },
+                  { icon: <UserCheck size={20} />, text: "Personalized Plans" },
+                  { icon: <Heart size={20} />, text: "Men's Health Focus" },
+                  { icon: <Clock size={20} />, text: "24/7 Access" },
+                  { icon: <Package size={20} />, text: "Discreet Packaging" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1221,7 +1216,7 @@ const Redpill12Page = () => {
                 ))}
               </Box>
               
-              {/* Additional Info */}
+              {/* UPDATED Additional Info */}
               <Typography
                 variant="caption"
                 sx={{
@@ -1233,7 +1228,8 @@ const Redpill12Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Advanced nootropic formula • No prescription required • 30-day satisfaction guarantee
+                12-tablet pack • Compounded medication (Tadalafil 20mg/Pycnogenol 25mg) • Telehealth consultation required • 
+                $297 first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

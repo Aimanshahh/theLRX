@@ -1,8 +1,8 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import manImg from "../../assets/images/card3-removebg-preview.png";
-import phoneImg from "../../assets/medical experts/img1removed.png";
-import bioAgeImg from "../../assets/images/card11.jpeg";
+import manImg from "../../assets/section/img6.png";
+import phoneImg from "../../assets/section/img3.png";
+import bioAgeImg from "../../assets/section/img5.jpeg";
 import biomarkersImg from "../../assets/images/card4-removebg-preview.png";
 
 const SimpleHimsBackground = () => {
@@ -16,63 +16,64 @@ const SimpleHimsBackground = () => {
     <Box
       sx={{
         width: "100%",
-        background: "linear-gradient(180deg, #1A57C8 0%, #003B9D 100%)",
+       background: "#0A2F6F",
         position: "relative",
         overflow: "hidden",
         borderRadius: 7,
       }}
     >
-      {/* TOP TEXT */}
-      <Box
-        sx={{
-          position: "relative",
-          zIndex: 5,
-          textAlign: "center",
-          color: "#fff",
-          maxWidth: { xs: "90%", sm: 680 },
-          mx: "auto",
-          mt: { xs: 1, sm: 2, md: 3 },
-          px: { xs: 1, sm: 3 },
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: { xs: "0.6rem", sm: "0.75rem" },
-            letterSpacing: "0.06em",
-            opacity: 0.85,
-            mb: { xs: 1, sm: 1.25 },
-          }}
-        >
-          labs by LiquidRX
-        </Typography>
+{/* TOP TEXT */}
+<Box
+  sx={{
+    position: "relative",
+    zIndex: 5,
+    textAlign: "center",
+    color: "#fff",
+    maxWidth: { xs: "90%", sm: 680 },
+    mx: "auto",
+    mt: { xs: 1, sm: 2, md: 2 },
+    mb: { xs: 8, sm: 12, md: 16 }, // Add bottom margin to create space
+    px: { xs: 1, sm: 3 },
+  }}
+>
+  <Typography
+    sx={{
+      fontSize: { xs: "0.6rem", sm: "0.75rem" },
+      letterSpacing: "0.06em",
+      opacity: 0.85,
+      mb: { xs: 1, sm: 1.25 },
+    }}
+  >
+    labs by LiquidRX
+  </Typography>
 
-        <Typography
-          sx={{
-            fontWeight: 550,
-            lineHeight: 1.15,
-            fontSize: { xs: "1.4rem", sm: "2.05rem", md: "2.4rem" },
-          }}
-        >
-          Get Your Labs.
-          <br />
-          Go For Your Optimal.
-        </Typography>
-      </Box>
+  <Typography
+    sx={{
+      fontWeight: 650,
+      lineHeight: 1.15,
+      fontSize: { xs: "1.4rem", sm: "3.05rem", md: "3.4rem" },
+    }}
+  >
+    Get Your Labs.
+    <br />
+    Go For Your Optimal.
+  </Typography>
+</Box>
 
-      {/* MAN IMAGE */}
-      <Box
-        component="img"
-        src={manImg}
-        alt="Man"
-        sx={{
-          display: "block",
-          mx: "auto",
-          mt: { xs: -4, sm: -10, md: -12 },
-          height: { xs: "55vh", sm: "90vh", md: "110vh" },
-          zIndex: 2,
-          maxWidth: "100%",
-        }}
-      />
+{/* MAN IMAGE */}
+<Box
+  component="img"
+  src={manImg}
+  alt="Man"
+  sx={{
+    display: "block",
+    mx: "auto",
+    mt: { xs: -12, sm: -20, md: -24 }, // Adjust negative margin to bring image closer to text
+    height: { xs: "55vh", sm: "90vh", md: "105vh" },
+    zIndex: 2,
+    maxWidth: "90%",
+  }}
+/>
 
       {/* CTA BUTTONS */}
       <Box
@@ -81,9 +82,11 @@ const SimpleHimsBackground = () => {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 2,
-          mt: { xs: -6, sm: -12, md: -14 },
+          mt: { xs: -10, sm: -12, md: -14 }, // Increased overlap on xs from -6 to -10
           mb: { xs: 6, md: 8 },
           px: 2,
+          position: "relative",
+          zIndex: 3, // Ensure buttons are above image
         }}
       >
         <Button
@@ -203,6 +206,25 @@ const SimpleHimsBackground = () => {
               marginBottom: { xs: "0 !important", sm: "-32px !important" },
               position: "relative",
               bottom: { xs: "0", sm: "0" },
+              // Add emerging effect for mobile only
+              boxShadow: {
+                xs: "0 -15px 30px rgba(0, 0, 0, 0.25)", // Bottom shadow
+                sm: "none",
+                md: "none",
+              },
+              // Add border/bottom effect for mobile
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "110%",
+                height: "12px",
+                background: "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%)",
+                borderRadius: "50% 50% 0 0",
+                display: { xs: "block", sm: "none" },
+              },
             }}
           />
 
@@ -238,7 +260,7 @@ const SimpleHimsBackground = () => {
                   textAlign: { xs: "center", sm: "center" },
                 }}
               >
-                Optimize your health with a doctor-developed Action Plan.
+                Improve your health with a doctor-designed Action Plan
               </Typography>
             </Box>
 

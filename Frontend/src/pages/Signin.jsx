@@ -8,10 +8,14 @@ import {
   Container,
   Link,
   Fade,
-  Slide
+  Slide,
+  Alert
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+// IMPORT YOUR API SERVICE INSTEAD OF AXIOS
+import { loginUser as loginUserAPI } from "../services/api";
 import { Mail, Lock, ArrowRight, Eye, EyeOff, UserPlus } from "lucide-react";
+
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -60,13 +64,35 @@ export default function Signin() {
     if (validateForm()) {
       setIsLoading(true);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setIsLoading(false);
-      // In real app, you would handle actual authentication here
-      console.log("Signin attempt with:", formData);
-      navigate("/");
+      try {
+        console.log("Attempting login with:", formData);
+        
+        // USE YOUR API SERVICE - THIS WAS THE BUG!
+        const response = await loginUserAPI(formData);
+        console.log("Login response:", response);
+        
+        // Store token and user data in localStorage
+        if (response.token) {
+          localStorage.setItem("token", response.token);
+          localStorage.setItem("user", JSON.stringify({
+            id: response._id,
+            firstName: response.firstName,
+            lastName: response.lastName,
+            email: response.email
+          }));
+        }
+        
+        setIsLoading(false);
+        
+        // Redirect to home or dashboard
+        navigate("/");
+      } catch (error) {
+        console.error("Login error:", error);
+        setIsLoading(false);
+        setErrors({ 
+          form: error.message || "Invalid email or password. Please try again." 
+        });
+      }
     }
   };
 
@@ -141,6 +167,21 @@ export default function Signin() {
               }
             }}
           >
+            {/* Error Message */}
+            {errors.form && (
+              <Fade in={true}>
+                <Alert 
+                  severity="error" 
+                  sx={{ 
+                    mb: 3,
+                    borderRadius: 2,
+                  }}
+                >
+                  {errors.form}
+                </Alert>
+              </Fade>
+            )}
+
             {/* Header Section */}
             <Fade in={true} timeout={1000}>
               <Box textAlign="center" mb={4}>

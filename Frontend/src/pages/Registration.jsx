@@ -14,6 +14,7 @@ import {
   Alert
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { registerUser as registerUserAPI } from "../services/api";
 import { 
   Mail, 
   Lock, 
@@ -41,8 +42,7 @@ export default function Register() {
     zipCode: "",
     password: "",
     confirmPassword: "",
-    agreeToTerms: false,
-    subscribeToNewsletter: true
+    agreeToTerms: false
   });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
@@ -125,22 +125,80 @@ export default function Register() {
     return Object.keys(newErrors).length === 0;
   };
 
+  // const registerUser = async (userData) => {
+  //   try {
+  //     console.log("Sending registration data:", userData);
+  //     const response = await axios.post('http://localhost:5000/api/auth/register', userData, {
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       }
+  //     });
+  //     return response.data;
+  //   } catch (error) {
+  //     console.error("Registration API error:", error);
+  //     throw new Error(error.response?.data?.message || 'Registration failed. Please try again.');
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (validateForm()) {
       setIsLoading(true);
       
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setIsLoading(false);
-      setSuccessMessage("Account created successfully! Welcome to LiquidRX.");
-      
-      // Redirect to signin after successful registration
-      setTimeout(() => {
-        navigate("/signin");
-      }, 3000);
+      try {
+        // Prepare data for API - MATCHING BACKEND EXPECTATIONS
+        const userData = {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone.replace(/\D/g, ''), // Remove formatting
+          dateOfBirth: formData.dateOfBirth,
+          address: formData.address,
+          city: formData.city,
+          state: formData.state,
+          zipCode: formData.zipCode,
+          password: formData.password,
+          confirmPassword: formData.confirmPassword,
+          agreeToTerms: formData.agreeToTerms
+        };
+
+        console.log("Attempting registration with:", userData);
+        
+        // API call
+        const response = await registerUserAPI(userData);
+        console.log("Registration response:", response);
+        
+        setIsLoading(false);
+        setSuccessMessage("Account created successfully! Welcome to LiquidRX.");
+        
+        // Clear form
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          dateOfBirth: "",
+          address: "",
+          city: "",
+          state: "",
+          zipCode: "",
+          password: "",
+          confirmPassword: "",
+          agreeToTerms: false
+        });
+        
+        // Redirect to signin after successful registration
+        setTimeout(() => {
+          navigate("/signin");
+        }, 3000);
+      } catch (error) {
+        console.error("Registration error:", error);
+        setIsLoading(false);
+        setErrors({ 
+          form: error.message || "An error occurred. Please try again." 
+        });
+      }
     }
   };
 
@@ -221,6 +279,21 @@ export default function Register() {
               }
             }}
           >
+            {/* Error Message */}
+            {errors.form && (
+              <Fade in={true}>
+                <Alert 
+                  severity="error" 
+                  sx={{ 
+                    mb: 3,
+                    borderRadius: 2,
+                  }}
+                >
+                  {errors.form}
+                </Alert>
+              </Fade>
+            )}
+
             {/* Success Message */}
             {successMessage && (
               <Fade in={true}>
@@ -703,7 +776,7 @@ export default function Register() {
                   )}
                 </Box>
 
-             {/* Register Button */}
+                {/* Register Button */}
                 <Button
                   type="submit"
                   fullWidth
@@ -824,7 +897,7 @@ export default function Register() {
                   <Typography variant="body2" color="text.secondary">
                     ✓ Ongoing support from our dedicated care team
                   </Typography>
-                   <Typography variant="body2" color="text.secondary">
+                  <Typography variant="body2" color="text.secondary">
                     ✓ First access to innovation and Med releases
                   </Typography>
                 </Box>

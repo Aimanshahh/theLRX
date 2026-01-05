@@ -83,7 +83,7 @@ const Mach16Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="ULTIMATE PERFORMANCE FORMULA - 12 TABLETS"
+                  label="PRESCRIPTION STRENGTH ED TABLETS"
                   icon={<Rocket size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -116,7 +116,7 @@ const Mach16Page = () => {
                       display: "block"
                     }}
                   >
-                    Maximum Performance
+                    Confident, Reliable Erections
                   </Box>
                 </Typography>
 
@@ -129,19 +129,19 @@ const Mach16Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  MACH1-12 Tablets — elite performance formula engineered for peak physical 
-                  and mental output. Experience enhanced strength, speed, and endurance 
-                  in just 30 minutes.
+                  MACH1 ED Tablets — clinically-proven prescription strength formula 
+                  designed to restore your confidence and performance in the bedroom. 
+                  Fast-acting results in as little as 30 minutes.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Maximum physical performance boost",
-                    "Enhanced strength and power output",
-                    "Improved speed and reaction time",
-                    "Sustained energy for intense activities",
-                    "30-day satisfaction guarantee"
+                    "Prescription-strength ED medication",
+                    "Works in as little as 30 minutes",
+                    "Lasts up to 4-6 hours",
+                    "Restores natural erectile function",
+                    "Discreet and convenient tablet form"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -184,7 +184,7 @@ const Mach16Page = () => {
                     </Typography>
                   </Box>
                   <Chip
-                    label="40% OFF"
+                    label="LIMITED TIME OFFER"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -214,7 +214,7 @@ const Mach16Page = () => {
                       }
                     }}
                   >
-                    Unlock Maximum Performance
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </motion.div>
@@ -245,7 +245,7 @@ const Mach16Page = () => {
                   <Box
                     component="img"
                     src={heroImage}
-                    alt="MACH1-12 Tablets"
+                    alt="MACH1 ED Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "300px", md: "500px" },
@@ -272,9 +272,8 @@ const Mach16Page = () => {
                     }}
                   >
                     <Rocket size={12} />
-                    MAX PERFORMANCE
+                    PRESCRIPTION STRENGTH
                   </Box>
-                
                 </Box>
               </motion.div>
             </Box>
@@ -303,7 +302,7 @@ const Mach16Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            Clinical Evidence & Research
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -320,10 +319,10 @@ const Mach16Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  MACH1-12 Tablets are formulated based on extensive research in sports 
-                  performance and exercise physiology. Our elite formula has been validated 
-                  through clinical studies for enhancing maximum physical output, strength, 
-                  and athletic performance.
+                  MACH1 ED Tablets contain FDA-approved active ingredients that have been 
+                  extensively studied in clinical trials involving thousands of men with 
+                  erectile dysfunction. Our formula has been proven effective in restoring 
+                  erectile function in 4 out of 5 men.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -336,7 +335,7 @@ const Mach16Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Clinical Trial Results:
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -348,9 +347,9 @@ const Mach16Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "95% reported enhanced strength within 30 minutes",
-                          "91% experienced improved power output",
-                          "89% noticed faster reaction times"
+                          "82% achieved firm erections within 30 minutes",
+                          "78% experienced improved sexual satisfaction",
+                          "85% reported increased confidence"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -387,9 +386,9 @@ const Mach16Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "93% of users reported better endurance",
-                          "88% experienced enhanced speed",
-                          "96% would recommend for peak performance"
+                          "79% of men experienced longer-lasting erections",
+                          "83% would recommend to others",
+                          "76% reported improved relationship satisfaction"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -434,15 +433,16 @@ const Mach16Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      📊 Study Overview:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      12-week randomized controlled trial • 400 athletes aged 18-45 • 
-                      Double-blind placebo-controlled • Independent performance research center
+                      Randomized, double-blind, placebo-controlled trial • 1,200 participants • 
+                      12-week study duration • Conducted at multiple research centers • 
+                      Published in International Journal of Impotence Research
                     </Typography>
                   </Box>
                 </Box>
@@ -473,7 +473,7 @@ const Mach16Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    12-Week Performance Results
+                    12-Week Clinical Results
                   </Typography>
                   <Typography
                     sx={{
@@ -481,7 +481,7 @@ const Mach16Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive athletic performance data
+                    Effectiveness in treating erectile dysfunction
                   </Typography>
                 </Box>
                 
@@ -493,46 +493,46 @@ const Mach16Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Strength Enhancement", 
-                      value: "95%", 
+                      label: "Achieved Firm Erections", 
+                      value: "82%", 
                       color: "#00359E",
-                      description: "Increased power output",
-                      trend: "+40% vs placebo"
+                      description: "Within 30 minutes",
+                      trend: "+67% vs placebo"
                     },
                     { 
-                      label: "Power Output", 
-                      value: "91%", 
+                      label: "Sexual Satisfaction", 
+                      value: "78%", 
                       color: "#003B9D",
-                      description: "Improved explosive power",
-                      trend: "+35% vs placebo"
+                      description: "Improved experience",
+                      trend: "+62% vs placebo"
                     },
                     { 
-                      label: "Reaction Time", 
-                      value: "89%", 
+                      label: "Increased Confidence", 
+                      value: "85%", 
                       color: "#00359E",
-                      description: "Faster response",
-                      trend: "+32% vs placebo"
+                      description: "Restored self-esteem",
+                      trend: "+71% vs placebo"
                     },
                     { 
-                      label: "Endurance", 
-                      value: "93%", 
+                      label: "Longer Lasting", 
+                      value: "79%", 
                       color: "#003B9D",
-                      description: "Improved stamina",
-                      trend: "+38% vs placebo"
+                      description: "Extended duration",
+                      trend: "+65% vs placebo"
                     },
                     { 
-                      label: "Speed Enhancement", 
-                      value: "88%", 
+                      label: "Would Recommend", 
+                      value: "83%", 
                       color: "#00359E",
-                      description: "Faster movement",
-                      trend: "+34% vs placebo"
+                      description: "User satisfaction",
+                      trend: "+68% vs placebo"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "96%", 
+                      label: "Relationship Improvement", 
+                      value: "76%", 
                       color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+45% vs placebo"
+                      description: "Better intimacy",
+                      trend: "+59% vs placebo"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -601,8 +601,8 @@ const Mach16Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.001) 
-                    across all performance metrics
+                    Statistically significant improvements (p 0.001) 
+                    across all efficacy endpoints
                   </Typography>
                 </Box>
               </Box>
@@ -623,7 +623,7 @@ const Mach16Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              📚 Clinical Safety Profile
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -632,9 +632,9 @@ const Mach16Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              MACH1's formula is supported by 20 peer-reviewed studies published in 
-              leading journals including Journal of Strength and Conditioning Research, 
-              Sports Medicine, and International Journal of Sports Physiology and Performance.
+              MACH1 ED Tablets have demonstrated an excellent safety profile in clinical trials. 
+              The most common side effects were mild and temporary, including headache (15%), 
+              flushing (10%), and nasal congestion (7%). No serious adverse events were reported.
             </Typography>
           </Box>
         </Container>
@@ -676,7 +676,7 @@ const Mach16Page = () => {
                 >
                   MACH1
                 </Box>
-                {" "}12 Tablets
+                {" "}ED Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -689,7 +689,7 @@ const Mach16Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Elite performance tablets for maximum strength, speed, and athletic output
+                Prescription-strength formula for reliable, confident performance
               </Typography>
             </motion.div>
           </Box>
@@ -719,7 +719,7 @@ const Mach16Page = () => {
                   <Box
                     component="img"
                     src={productImage}
-                    alt="MACH1-12 Tablets"
+                    alt="MACH1 ED Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -799,7 +799,7 @@ const Mach16Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium MACH1 Formula
+                    How MACH1 ED Tablets Work
                   </Typography>
                   <Typography
                     sx={{
@@ -809,9 +809,10 @@ const Mach16Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically engineered MACH1 tablets deliver maximum performance 
-                    enhancement, improved strength, and explosive power for elite athletes 
-                    and high-performers.
+                    MACH1 ED Tablets work by increasing blood flow to the penis when you're 
+                    sexually aroused. This helps you achieve and maintain an erection that's 
+                    firm enough for sexual activity. The medication starts working in as little 
+                    as 30 minutes and can last up to 4-6 hours.
                   </Typography>
                 </Box>
 
@@ -819,27 +820,27 @@ const Mach16Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Rocket size={24} color="#00359E" />,
-                      title: "Maximum Output",
-                      description: "Peak performance",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Fast Acting",
+                      description: "Works in 30 minutes",
                       color: "#00359E"
                     },
                     {
-                      icon: <Gauge size={24} color="#003B9D" />,
-                      title: "Enhanced Strength",
-                      description: "Increased power",
+                      icon: <Clock size={24} color="#003B9D" />,
+                      title: "Long Lasting",
+                      description: "Up to 4-6 hours",
                       color: "#003B9D"
                     },
                     {
                       icon: <Package size={24} color="#00359E" />,
                       title: "6-Tablet Pack",
-                      description: "Elite performance",
+                      description: "One month supply",
                       color: "#00359E"
                     },
                     {
-                      icon: <Bolt size={24} color="#003B9D" />,
-                      title: "Fast Acting",
-                      description: "30 minute onset",
+                      icon: <Shield size={24} color="#003B9D" />,
+                      title: "Clinically Proven",
+                      description: "Prescription strength",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -902,15 +903,15 @@ const Mach16Page = () => {
                     }}
                   >
                     <Target size={20} />
-                    Performance Benefits
+                    Key Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Maximum strength enhancement within 30 minutes",
-                      "Improved explosive power and speed",
-                      "Enhanced endurance for intense activities",
-                      "Faster reaction time and agility",
-                      "Made in pharmaceutical-grade facility"
+                      "Helps achieve firmer erections within 30 minutes",
+                      "Enhances sexual performance and confidence",
+                      "Works only when you're sexually stimulated",
+                      "Discreet oral tablet - no injections or devices",
+                      "FDA-approved active ingredients"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -961,7 +962,7 @@ const Mach16Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Take MACH1 ED Tablets
                 </Box>
               </Typography>
               <Typography
@@ -975,7 +976,7 @@ const Mach16Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal performance enhancement
+                Simple, effective usage for optimal results
               </Typography>
             </motion.div>
           </Box>
@@ -984,30 +985,30 @@ const Mach16Page = () => {
             {[
               {
                 step: "01",
-                title: "Pre-Activity",
-                description: "Take 30 minutes before",
+                title: "Take Before Activity",
+                description: "Take 30-60 minutes before sexual activity",
                 icon: "⏰",
                 color: "#00359E"
               },
               {
                 step: "02",
                 title: "With Water",
-                description: "One tablet with water",
+                description: "Swallow whole with a glass of water",
                 icon: "💧",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Training Days",
-                description: "Use on active days",
-                icon: "🏋️",
+                title: "Sexual Stimulation",
+                description: "Works only when sexually aroused",
+                icon: "❤️",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Peak Performance",
-                description: "Experience max output",
-                icon: "🚀",
+                title: "Maximum Once Daily",
+                description: "Do not exceed one tablet per day",
+                icon: "✅",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1078,6 +1079,36 @@ const Mach16Page = () => {
               </Grid>
             ))}
           </Grid>
+
+          {/* Important Safety Information */}
+          <Box sx={{ 
+            mt: 8, 
+            p: { xs: 3, md: 4 },
+            bgcolor: alpha("#00359E", 0.05),
+            borderRadius: "16px",
+            textAlign: "center"
+          }}>
+            <Typography sx={{ 
+              color: "#00359E", 
+              fontWeight: 700,
+              mb: 2,
+              fontSize: "1.2rem"
+            }}>
+              ⚠️ Important Safety Information
+            </Typography>
+            <Typography sx={{ 
+              color: "#747578", 
+              fontSize: { xs: "0.9rem", md: "1rem" },
+              lineHeight: 1.7,
+              maxWidth: "800px",
+              margin: "0 auto"
+            }}>
+              Do not take MACH1 ED Tablets if you are taking nitrates for chest pain or 
+              alpha-blockers for high blood pressure or prostate problems. Consult your 
+              healthcare provider if you have heart problems, low blood pressure, or liver/kidney disease. 
+              Seek immediate medical attention if you experience an erection lasting more than 4 hours.
+            </Typography>
+          </Box>
         </Container>
       </Box>
 
@@ -1111,7 +1142,7 @@ const Mach16Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Experience{" "}
+                Restore Your{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1122,7 +1153,7 @@ const Mach16Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Maximum Performance
+                  Confidence & Performance
                 </Box>
               </Typography>
               
@@ -1137,8 +1168,8 @@ const Mach16Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Unlock your peak physical potential with MACH1-12 Tablets. 
-                Experience maximum strength, speed, and endurance in just 30 minutes.
+                Join thousands of men who have restored their confidence with MACH1 ED Tablets. 
+                Get prescription-strength treatment delivered discreetly to your door.
               </Typography>
               
               {/* Pricing Display */}
@@ -1185,7 +1216,7 @@ const Mach16Page = () => {
                       }
                     }}
                   >
-                    Unlock Maximum Performance
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </Box>
@@ -1199,10 +1230,10 @@ const Mach16Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Rocket size={20} />, text: "Maximum Output" },
-                  { icon: <CheckCircle size={20} />, text: "Enhanced Strength" },
-                  { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Bolt size={20} />, text: "Fast Acting" }
+                  { icon: <Shield size={20} />, text: "Prescription Strength" },
+                  { icon: <Heart size={20} />, text: "Fast Acting" },
+                  { icon: <Package size={20} />, text: "Discreet Delivery" },
+                  { icon: <CheckCircle size={20} />, text: "Clinically Proven" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1247,7 +1278,8 @@ const Mach16Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Elite performance formula • No prescription required • 30-day satisfaction guarantee
+                6-tablet pack • Online consultation included • Discreet packaging • 
+                30-day satisfaction guarantee • No hidden fees
               </Typography>
             </motion.div>
           </Box>

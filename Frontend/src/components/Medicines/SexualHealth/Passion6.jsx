@@ -74,7 +74,7 @@ const Passion6Page = () => {
           transition={{ duration: 0.8 }}
         >
           <Chip
-            label="PREMIUM VITALITY TABLETS"
+            label="COMPOUNDED INTIMATE WELLNESS"
             icon={<Flame size={16} />}
             sx={{
               bgcolor: alpha("#00359E", 0.12),
@@ -96,7 +96,7 @@ const Passion6Page = () => {
               color: "#000000"
             }}
           >
-            Boost Your{" "}
+            Passion
             <Box
               component="span"
               sx={{
@@ -107,7 +107,7 @@ const Passion6Page = () => {
                 display: "block"
               }}
             >
-              Passion Naturally
+              6 Tablets
             </Box>
           </Typography>
 
@@ -120,17 +120,16 @@ const Passion6Page = () => {
               fontSize: { xs: "1rem", md: "1.2rem" }
             }}
           >
-            Passion-6 Tablets — premium natural formula with 6 powerful ingredients.
-            Experience enhanced energy and vitality in just 2–4 weeks.
+            A compounded formula that artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support.
           </Typography>
 
           {/* FEATURES */}
           <Box sx={{ mb: 5 }}>
             {[
-              "6 natural ingredients for optimal performance",
-              "Non-hormonal, safe formulation",
-              "Suitable for both men & women",
-              "30-day satisfaction guarantee"
+              "Creates a richer, more responsive intimate experience",
+              "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
+              "For heightened arousal, sustained vitality, and fully elevated intimate wellness",
+              "Compounded formula (Tadalafil 10mg / Bremelanotide 10mg / Pregnenolone 10mg)"
             ].map((item, i) => (
               <Box
                 key={i}
@@ -203,7 +202,7 @@ const Passion6Page = () => {
                 }
               }}
             >
-              Start Your Journey
+              Order Passion-6 Tablets
             </Button>
           </motion.div>
         </motion.div>
@@ -257,7 +256,7 @@ const Passion6Page = () => {
                 fontWeight: 700
               }}
             >
-              POWER INGREDIENTS
+              COMPOUNDED FORMULA
             </Box>
           </Box>
         </motion.div>
@@ -267,7 +266,7 @@ const Passion6Page = () => {
 </Box>
 
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* COMPOUNDED FORMULA SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -288,7 +287,7 @@ const Passion6Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            The Compounded Formula
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -305,9 +304,7 @@ const Passion6Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Passion-6 Tablets are formulated based on extensive clinical research and scientific studies. 
-                  Our 6-ingredient synergistic formula has been validated through multiple independent studies 
-                  for natural vitality enhancement and overall well-being improvement.
+                  Passion is specifically compounded for women's intimate wellness. This unique combination of three active ingredients works synergistically to enhance circulation, elevate desire pathways, and provide balanced neuro-hormonal support.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -320,7 +317,7 @@ const Passion6Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Active Ingredients:
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -332,9 +329,9 @@ const Passion6Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "92% reported significant energy increase within 4 weeks",
-                          "85% experienced improved mood and reduced stress",
-                          "88% noticed enhanced physical stamina"
+                          "Tadalafil 10mg - Enhanced circulation",
+                          "Bremelanotide 10mg - Elevated desire pathways",
+                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -371,9 +368,9 @@ const Passion6Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "94% of users reported better sleep quality",
-                          "87% experienced improved focus and concentration",
-                          "89% would recommend to friends and family"
+                          "Creates deeper, more connected intimate experiences",
+                          "Designed for heightened arousal and sustained vitality",
+                          "Optimal stacking with PT-141, NAD+ Injectable, GHK-Cu"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -404,7 +401,7 @@ const Passion6Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Stacking Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -418,22 +415,21 @@ const Passion6Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💫 Optimal Stacking:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 500 participants aged 25-65 • 
-                      Double-blind placebo-controlled • Independent research institution
+                      For fully elevated women's intimate wellness: Stack Passion with PT-141 for heightened arousal, NAD+ Injectable for sustained vitality, and GHK-Cu for comprehensive intimate wellness support.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Formula Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -457,7 +453,7 @@ const Passion6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Clinical Results
+                    Compounded Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -465,7 +461,7 @@ const Passion6Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive study data
+                    Each tablet contains
                   </Typography>
                 </Box>
                 
@@ -477,46 +473,32 @@ const Passion6Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Energy Increase", 
-                      value: "92%", 
+                      label: "Tadalafil", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Reported higher daily energy",
-                      trend: "+24% vs placebo"
+                      description: "Enhanced circulation support",
+                      purpose: "Improves blood flow"
                     },
                     { 
-                      label: "Mood Enhancement", 
-                      value: "85%", 
+                      label: "Bremelanotide", 
+                      value: "10mg", 
                       color: "#003B9D",
-                      description: "Improved emotional well-being",
-                      trend: "+19% vs placebo"
+                      description: "Elevates desire pathways",
+                      purpose: "Heightens arousal"
                     },
                     { 
-                      label: "Physical Stamina", 
-                      value: "88%", 
+                      label: "Pregnenolone", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Better endurance & performance",
-                      trend: "+22% vs placebo"
+                      description: "Neuro-hormonal balance",
+                      purpose: "Supports hormonal pathways"
                     },
                     { 
-                      label: "Sleep Quality", 
-                      value: "94%", 
+                      label: "Total Active", 
+                      value: "30mg", 
                       color: "#003B9D",
-                      description: "Enhanced rest & recovery",
-                      trend: "+27% vs placebo"
-                    },
-                    { 
-                      label: "Mental Focus", 
-                      value: "87%", 
-                      color: "#00359E",
-                      description: "Improved concentration",
-                      trend: "+20% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "96%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+31% vs placebo"
+                      description: "Per tablet",
+                      purpose: "Complete intimate wellness"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -557,7 +539,7 @@ const Passion6Page = () => {
                           {stat.description}
                         </Typography>
                         <Chip
-                          label={stat.trend}
+                          label={stat.purpose}
                           size="small"
                           sx={{
                             bgcolor: alpha(stat.color, 0.1),
@@ -572,7 +554,7 @@ const Passion6Page = () => {
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Formula Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -585,15 +567,14 @@ const Passion6Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all measured parameters
+                    Specifically compounded for women's intimate wellness enhancement
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Stacking Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -607,7 +588,7 @@ const Passion6Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚀 Enhanced Stacking Potential
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -616,9 +597,7 @@ const Passion6Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Passion-6's formula is supported by 12 peer-reviewed studies published in 
-              leading journals including the Journal of Natural Medicine, International 
-              Journal of Complementary Medicine, and Evidence-Based Complementary Medicine.
+              Passion is designed to stack optimally with PT-141 (for heightened arousal), NAD+ Injectable (for sustained vitality), and GHK-Cu (for comprehensive intimate wellness). This combination creates a fully elevated women's intimate wellness profile.
             </Typography>
           </Box>
         </Container>
@@ -649,7 +628,7 @@ const Passion6Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Passion
                 <Box
                   component="span"
                   sx={{
@@ -659,7 +638,7 @@ const Passion6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Passion-6 Tablet
+                  – 6 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -673,7 +652,7 @@ const Passion6Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium natural vitality tablets designed for optimal energy and performance
+                Compounded intimate wellness tablets designed for a richer, more responsive, and deeply connected experience
               </Typography>
             </motion.div>
           </Box>
@@ -753,7 +732,7 @@ const Passion6Page = () => {
                     }}
                   >
                     <Pill size={12} />
-                    NATURAL FORMULA
+                    COMPOUNDED FORMULA
                   </Box>
 
                   {/* Price Badge */}
@@ -804,7 +783,7 @@ const Passion6Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Passion-6 Tablets
+                    Compounded Passion Tablets
                   </Typography>
                   <Typography
                     sx={{
@@ -814,7 +793,7 @@ const Passion6Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Passion-6 tablets combine 6 natural ingredients to safely enhance energy, stamina, and overall vitality without synthetic hormones.
+                    Passion artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support to create a richer, more responsive, and deeply connected intimate experience.
                   </Typography>
                 </Box>
 
@@ -822,27 +801,27 @@ const Passion6Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Pill size={24} color="#00359E" />,
-                      title: "Daily Use",
-                      description: "Simple tablet regimen",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Enhanced Desire",
+                      description: "Elevates arousal pathways",
                       color: "#00359E"
                     },
                     {
-                      icon: <Clock size={24} color="#003B9D" />,
-                      title: "Any Time",
-                      description: "Take with or without food",
+                      icon: <Droplet size={24} color="#003B9D" />,
+                      title: "Improved Circulation",
+                      description: "Better blood flow support",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Optimal monthly supply",
+                      icon: <Brain size={24} color="#00359E" />,
+                      title: "Hormonal Balance",
+                      description: "Neuro-hormonal support",
                       color: "#00359E"
                     },
                     {
-                      icon: <Calendar size={24} color="#003B9D" />,
-                      title: "2-4 Weeks",
-                      description: "For optimal results",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Stackable Formula",
+                      description: "Optimal with PT-141, NAD+, GHK-Cu",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -905,15 +884,15 @@ const Passion6Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Treatment Benefits
+                    Intimate Wellness Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "6 natural ingredients - Optimal blend for vitality",
-                      "Enhances energy and stamina naturally",
-                      "Supports mood and overall well-being",
-                      "Can be combined with healthy lifestyle for enhanced results",
-                      "Made in pharmaceutical-grade facility"
+                      "Creates richer, more responsive intimate experiences",
+                      "Provides balanced neuro-hormonal support",
+                      "Enhances circulation and desire pathways",
+                      "Stacks optimally with PT-141, NAD+ Injectable, GHK-Cu",
+                      "Compounded for women's intimate wellness enhancement"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -955,7 +934,7 @@ const Passion6Page = () => {
             mb: 2
           }}
         >
-          How to{" "}
+          Experience{" "}
           <Box
             component="span"
             sx={{
@@ -965,7 +944,7 @@ const Passion6Page = () => {
               color: "transparent"
             }}
           >
-            Use Properly
+            Enhanced Intimacy
           </Box>
         </Typography>
         <Typography
@@ -979,7 +958,7 @@ const Passion6Page = () => {
             margin: "0 auto"
           }}
         >
-          Follow these simple steps for optimal results
+          Passion creates a comprehensive intimate wellness experience
         </Typography>
       </motion.div>
     </Box>
@@ -988,30 +967,30 @@ const Passion6Page = () => {
       {[
         {
           step: "01",
-          title: "Take Daily",
-          description: "One tablet with water",
-          icon: "💊",
+          title: "Enhanced Circulation",
+          description: "Improved blood flow support with Tadalafil",
+          icon: "💓",
           color: "#00359E"
         },
         {
           step: "02",
-          title: "Consistent Time",
-          description: "Same time each day",
-          icon: "🕐",
+          title: "Elevated Desire",
+          description: "Heightened arousal with Bremelanotide",
+          icon: "🔥",
           color: "#003B9D"
         },
         {
           step: "03",
-          title: "With Food",
-          description: "Take with meal for absorption",
-          icon: "🍽️",
+          title: "Hormonal Balance",
+          description: "Neuro-hormonal support with Pregnenolone",
+          icon: "⚖️",
           color: "#00359E"
         },
         {
           step: "04",
-          title: "Stay Consistent",
-          description: "Continue for 2-4 weeks",
-          icon: "📅",
+          title: "Stacking Potential",
+          description: "Optimal with PT-141, NAD+ Injectable, GHK-Cu",
+          icon: "🚀",
           color: "#003B9D"
         }
       ].map((item, index) => (
@@ -1115,7 +1094,7 @@ const Passion6Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Start Your Vitality
+                Order Passion
                 <Box
                   component="span"
                   sx={{
@@ -1126,7 +1105,7 @@ const Passion6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Journey Today
+                  – 6 Tablets
                 </Box>
               </Typography>
               
@@ -1141,8 +1120,7 @@ const Passion6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join thousands of satisfied users with clinically studied Passion-6 Tablets. 
-                Experience enhanced energy and vitality in just 2-4 weeks with consistent use.
+                Experience a richer, more responsive, and deeply connected intimate experience with our compounded Passion-6 Tablets. Artfully designed for women's intimate wellness enhancement.
               </Typography>
               <br></br>
               {/* Pricing Display */}
@@ -1189,7 +1167,7 @@ const Passion6Page = () => {
                       }
                     }}
                   >
-                    Start Now
+                    Order Passion-6 Tablets
                   </Button>
                 </motion.div>
               </Box>
@@ -1203,10 +1181,10 @@ const Passion6Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Shield size={20} />, text: "Natural Formula" },
-                  { icon: <CheckCircle size={20} />, text: "Clinically Studied" },
-                  { icon: <Package size={20} />, text: "Free Shipping" },
-                  { icon: <Clock size={20} />, text: "Fast Results" }
+                  { icon: <Pill size={20} />, text: "Compounded Formula" },
+                  { icon: <Heart size={20} />, text: "Women's Intimate Wellness" },
+                  { icon: <Target size={20} />, text: "Triple-Action Formula" },
+                  { icon: <Sparkles size={20} />, text: "Stackable with PT-141" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1251,7 +1229,7 @@ const Passion6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Suitable for men & women • No prescription required • 30-day satisfaction guarantee
+                6-tablet pack • Compounded formula • Stackable with PT-141, NAD+ Injectable, GHK-Cu • Designed for women's intimate wellness
               </Typography>
             </motion.div>
           </Box>

@@ -5,6 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa";
 
 import appPreview from "../../assets/medical experts/img1removed.png";
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
+import legitScriptLogo from "../../assets/images/legitscript.png"; // Add this import
 
 /* ---------------- ROUTE MAPS ---------------- */
 
@@ -237,7 +238,7 @@ export default function Footer() {
         </Box>
       </Box>
 
-      {/* LEGAL */}
+      {/* LEGAL - Updated with LegitScript Logo */}
       <Box sx={{ textAlign: "center", mt: 8 }}>
         <Box sx={{ mt: 4, fontSize: "0.9rem" }}>
           {["Terms & Conditions", "Privacy Policy", "Sitemap"].map((x) => (
@@ -249,6 +250,20 @@ export default function Footer() {
               {x}
             </Box>
           ))}
+        </Box>
+
+        {/* Added LegitScript Logo - INCREASED SIZE */}
+        <Box sx={{ mt: 3, display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+          <Box sx={{ flex: 1 }}></Box>
+          <img 
+            src={legitScriptLogo} 
+            alt="LegitScript Certified" 
+            style={{ 
+              height: "160px",  // Increased from 40px to 60px
+              width: "auto",
+              opacity: 0.9 
+            }} 
+          />
         </Box>
 
         <Box sx={{ mt: 3, fontSize: "0.85rem", opacity: 0.8 }}>

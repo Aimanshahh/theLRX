@@ -6,26 +6,29 @@ import {
   Button,
   Chip,
   Grid,
-  Card
+  Card,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText
 } from "@mui/material";
 import { alpha } from "@mui/material/styles";
 import { motion } from "framer-motion";
 
 // Lucide icons
 import {
-  Target,
   CheckCircle,
   Package,
-  Brain,
-  Eye,
-  Focus,
+  Heart,
   ArrowRight,
-  Zap,
   Clock,
   Calendar,
   Users,
   Star,
-  Shield
+  Shield,
+  Truck,
+  UserCheck,
+  Stethoscope
 } from "lucide-react";
 
 // Images
@@ -42,7 +45,7 @@ const Redpill6Page = () => {
   
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -74,8 +77,8 @@ const Redpill6Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="MENTAL CLARITY FORMULA - 6 TABLETS"
-                  icon={<Target size={16} />}
+                  label="COMPOUNDED ED MEDICATION - 6 TABLETS"
+                  icon={<Package size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
                     color: "#00359E",
@@ -96,19 +99,7 @@ const Redpill6Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Unlock Your{" "}
-                  <Box
-                    component="span"
-                    sx={{
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      color: "transparent",
-                      display: "block"
-                    }}
-                  >
-                    Mental Potential
-                  </Box>
+                  Redpill – 6 Tablets
                 </Typography>
 
                 <Typography
@@ -120,18 +111,20 @@ const Redpill6Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Redpill 6 Tablets — advanced nootropic formula for enhanced mental clarity, focus, and cognitive performance.
-                  Perfect starter pack for peak mental performance.
+                  Redpill pairs refined vascular support with antioxidant-driven circulation enhancement to promote smoother performance, heightened responsiveness, and a naturally confident intimate experience.
+                  <Box component="span" sx={{ display: 'block', mt: 2, fontWeight: 600, color: "#00359E" }}>
+                    (Tadalafil 20mg / Pycnogenol 25mg)
+                  </Box>
                 </Typography>
 
-                {/* FEATURES */}
+                {/* UPDATED FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Enhanced mental clarity and focus",
-                    "Improved memory retention",
-                    "Reduced brain fog and fatigue",
-                    "Increased productivity and concentration",
-                    "30-day satisfaction guarantee"
+                    "Consultation with a licensed provider",
+                    "Personalized treatment plans tailored to your unique needs",
+                    "Medications delivered privately and discreetly to your door",
+                    "A convenient telehealth platform for easy and ongoing access to care",
+                    "Designed to help men overcome erectile challenges and restore confidence"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -150,7 +143,7 @@ const Redpill6Page = () => {
                   ))}
                 </Box>
 
-                {/* PRICING */}
+                {/* PRICING - UPDATED */}
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
                   <Box>
                     <Typography
@@ -163,25 +156,7 @@ const Redpill6Page = () => {
                     >
                       $49.00
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
-                      }}
-                    >
-                      $79.00
-                    </Typography>
                   </Box>
-                  <Chip
-                    label="38% OFF"
-                    size="small"
-                    sx={{
-                      bgcolor: "#00359E",
-                      color: "white",
-                      fontWeight: 700
-                    }}
-                  />
                 </Box>
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -204,7 +179,7 @@ const Redpill6Page = () => {
                       }
                     }}
                   >
-                    Enhance Focus
+                    Start Your ED Treatment
                   </Button>
                 </motion.div>
               </motion.div>
@@ -261,8 +236,8 @@ const Redpill6Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Brain size={12} />
-                    MENTAL CLARITY
+                    <Heart size={12} />
+                    ED MEDICATION
                   </Box>
                   
                   <Box
@@ -288,7 +263,7 @@ const Redpill6Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* TREATMENT PROCESS SECTION - REPLACED SCIENTIFIC SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -309,7 +284,7 @@ const Redpill6Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            ED Treatment in 3 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -326,9 +301,9 @@ const Redpill6Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Redpill 6 Tablets are formulated based on extensive neuroscientific research and clinical studies. 
-                  Our nootropic formula has been validated through multiple independent studies for enhancing 
-                  cognitive function, focus, and mental clarity.
+                  Liquid Rx makes it simple to access expert care for erectile dysfunction. 
+                  Our telehealth platform ensures privacy and convenience, allowing you to 
+                  take charge of your health with confidence.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -341,7 +316,7 @@ const Redpill6Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Simple. Convenient. Effective.
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -353,9 +328,9 @@ const Redpill6Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "94% reported enhanced mental clarity within 60 minutes",
-                          "89% experienced improved focus and concentration",
-                          "87% noticed reduced brain fog and fatigue"
+                          "Fill out the medical form online",
+                          "Attend your telehealth consultation",
+                          "Start your ED treatment with personalized plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -392,9 +367,9 @@ const Redpill6Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "92% of users reported better memory retention",
-                          "88% experienced increased productivity",
-                          "91% would recommend for cognitive enhancement"
+                          "Medications delivered discreetly to your door",
+                          "Ongoing support from experienced providers",
+                          "Customized solutions for optimal results"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -425,7 +400,7 @@ const Redpill6Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Service Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -439,22 +414,21 @@ const Redpill6Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💊 Compounded Medication Info:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 450 participants aged 20-65 • 
-                      Double-blind placebo-controlled • Independent neuroscience institute
+                      Redpill contains Tadalafil 20mg / Pycnogenol 25mg. Compounded medications are prescribed by licensed healthcare providers based on individual patient needs after a telehealth consultation.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Steps Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -478,7 +452,7 @@ const Redpill6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Cognitive Results
+                    $297 First Month
                   </Typography>
                   <Typography
                     sx={{
@@ -486,7 +460,7 @@ const Redpill6Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive cognitive study data
+                    Complete ED treatment program
                   </Typography>
                 </Box>
                 
@@ -498,102 +472,71 @@ const Redpill6Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Mental Clarity", 
-                      value: "94%", 
-                      color: "#00359E",
-                      description: "Reported clear thinking",
-                      trend: "+28% vs placebo"
+                      step: "1",
+                      title: "Medical Forms", 
+                      description: "Complete online health assessment",
+                      icon: "📋"
                     },
                     { 
-                      label: "Focus & Concentration", 
-                      value: "89%", 
-                      color: "#003B9D",
-                      description: "Improved attention span",
-                      trend: "+22% vs placebo"
+                      step: "2", 
+                      title: "Telehealth Visit", 
+                      description: "Consult with licensed provider",
+                      icon: "👨‍⚕️"
                     },
                     { 
-                      label: "Memory Retention", 
-                      value: "92%", 
-                      color: "#00359E",
-                      description: "Enhanced recall ability",
-                      trend: "+25% vs placebo"
+                      step: "3", 
+                      title: "Receive Medicine", 
+                      description: "Discreet delivery to your door",
+                      icon: "📦"
                     },
                     { 
-                      label: "Productivity", 
-                      value: "88%", 
-                      color: "#003B9D",
-                      description: "Increased work output",
-                      trend: "+24% vs placebo"
-                    },
-                    { 
-                      label: "Brain Fog Reduction", 
-                      value: "87%", 
-                      color: "#00359E",
-                      description: "Reduced mental fatigue",
-                      trend: "+26% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "96%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+30% vs placebo"
+                      step: "4", 
+                      title: "Ongoing Care", 
+                      description: "Continuous provider support",
+                      icon: "🔄"
                     }
-                  ].map((stat, index) => (
-                    <Box key={index} sx={{ mb: 2 }}>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
-                        alignItems: "center",
-                        mb: 0.5
-                      }}>
-                        <Typography sx={{ 
-                          color: "#000000", 
-                          fontWeight: 600,
+                  ].map((item, index) => (
+                    <Box key={index} sx={{ mb: 3, p: 2, borderRadius: "12px", bgcolor: alpha("#00359E", 0.03) }}>
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 2, mb: 1 }}>
+                        <Box sx={{
+                          width: "32px",
+                          height: "32px",
+                          borderRadius: "50%",
+                          bgcolor: "#00359E",
+                          color: "white",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontWeight: 700,
                           fontSize: "1rem"
                         }}>
-                          {stat.label}
+                          {item.step}
+                        </Box>
+                        <Typography sx={{ 
+                          color: "#00359E", 
+                          fontWeight: 700,
+                          fontSize: "1.1rem"
+                        }}>
+                          {item.title}
                         </Typography>
-                        <Typography
-                          sx={{
-                            color: stat.color,
-                            fontWeight: 900,
-                            fontSize: "1.5rem"
-                          }}
-                        >
-                          {stat.value}
-                        </Typography>
+                        <Box sx={{ fontSize: "1.2rem", ml: "auto" }}>
+                          {item.icon}
+                        </Box>
                       </Box>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
-                        alignItems: "center"
-                      }}>
-                        <Typography
-                          sx={{
-                            color: "#8B8D8E",
-                            fontSize: "0.85rem"
-                          }}
-                        >
-                          {stat.description}
-                        </Typography>
-                        <Chip
-                          label={stat.trend}
-                          size="small"
-                          sx={{
-                            bgcolor: alpha(stat.color, 0.1),
-                            color: stat.color,
-                            fontWeight: 600,
-                            fontSize: "0.75rem",
-                            height: "22px"
-                          }}
-                        />
-                      </Box>
+                      <Typography
+                        sx={{
+                          color: "#747578",
+                          fontSize: "0.9rem",
+                          pl: 4
+                        }}
+                      >
+                        {item.description}
+                      </Typography>
                     </Box>
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Service Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -606,15 +549,14 @@ const Redpill6Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all cognitive parameters
+                    Join thousands of men who trust Liquid Rx for discreet, reliable care
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Additional Service Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -628,7 +570,7 @@ const Redpill6Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚚 We Ship to All 50 States
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -637,15 +579,13 @@ const Redpill6Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Redpill's formula is supported by 18 peer-reviewed studies published in 
-              leading journals including Journal of Cognitive Neuroscience, 
-              Neuropsychopharmacology, and Brain Research Bulletin.
+              Order your medications anytime — 24/7/365. We proudly ship to all 50 states with private, discreet packaging.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      {/* PRODUCT SHOWCASE SECTION */}
+      {/* SERVICE BENEFITS SECTION - REPLACED PRODUCT SHOWCASE */}
       <Box
         sx={{
           py: { xs: 10, md: 14 },
@@ -669,7 +609,7 @@ const Redpill6Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Empowering{" "}
                 <Box
                   component="span"
                   sx={{
@@ -679,9 +619,8 @@ const Redpill6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Redpill
+                  Men's Health
                 </Box>
-                {" "}6 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -694,13 +633,13 @@ const Redpill6Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Advanced nootropic tablets for enhanced mental clarity, focus, and cognitive performance
+                Confidence Restored. Life Reimagined.
               </Typography>
             </motion.div>
           </Box>
 
           <Grid container spacing={6} alignItems="center">
-            {/* Product Image */}
+            {/* Service Image */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -714,17 +653,16 @@ const Redpill6Page = () => {
                     borderRadius: "24px",
                     overflow: "hidden",
                     boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
-                    transform: "perspective(1000px) rotateY(-5deg)",
-                    transition: "transform 0.5s ease",
                     "&:hover": {
-                      transform: "perspective(1000px) rotateY(0deg)"
+                      transform: "translateY(-5px)",
+                      transition: "transform 0.3s ease"
                     }
                   }}
                 >
                   <Box
                     component="img"
                     src={productImage}
-                    alt="Redpill 6 Tablets"
+                    alt="Men's Health Telemedicine"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -752,11 +690,11 @@ const Redpill6Page = () => {
                       boxShadow: "0 8px 24px rgba(0, 0, 0, 0.1)"
                     }}
                   >
-                    <Package size={12} />
-                    6-TABLET PACK
+                    <Truck size={12} />
+                    50 STATES DELIVERY
                   </Box>
                   
-                  {/* Price Badge */}
+                  {/* Info Badge */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -776,17 +714,17 @@ const Redpill6Page = () => {
                     }}
                   >
                     <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
-                      Only
+                      Telehealth
                     </Typography>
-                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $49
+                    <Typography sx={{ fontSize: "1.1rem", lineHeight: 1 }}>
+                      Available
                     </Typography>
                   </Box>
                 </Box>
               </motion.div>
             </Grid>
 
-            {/* Product Details */}
+            {/* Service Details */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
@@ -804,7 +742,7 @@ const Redpill6Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Redpill Formula
+                    Personalized ED Treatment
                   </Typography>
                   <Typography
                     sx={{
@@ -814,8 +752,7 @@ const Redpill6Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Redpill tablets enhance cognitive function, 
-                    improve memory retention, and boost mental clarity for peak performance.
+                    Liquid Rx provides customized solutions to help you achieve better performance and satisfaction. Whether you're facing occasional challenges or ongoing difficulties, our treatments are tailored to your specific needs.
                   </Typography>
                 </Box>
 
@@ -823,27 +760,27 @@ const Redpill6Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Brain size={24} color="#00359E" />,
-                      title: "Mental Clarity",
-                      description: "Enhanced focus",
+                      icon: <UserCheck size={24} color="#00359E" />,
+                      title: "Licensed Providers",
+                      description: "Experienced medical professionals",
                       color: "#00359E"
                     },
                     {
-                      icon: <Target size={24} color="#003B9D" />,
-                      title: "Improved Focus",
-                      description: "Better concentration",
+                      icon: <Shield size={24} color="#003B9D" />,
+                      title: "Discreet & Private",
+                      description: "Confidential treatment",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Perfect starter pack",
+                      icon: <Stethoscope size={24} color="#00359E" />,
+                      title: "Personalized Plans",
+                      description: "Customized for your needs",
                       color: "#00359E"
                     },
                     {
-                      icon: <Eye size={24} color="#003B9D" />,
-                      title: "Memory Boost",
-                      description: "Enhanced retention",
+                      icon: <Truck size={24} color="#003B9D" />,
+                      title: "Doorstep Delivery",
+                      description: "Convenient shipping",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -884,7 +821,7 @@ const Redpill6Page = () => {
                   ))}
                 </Grid>
 
-                {/* Formula Benefits */}
+                {/* Service Benefits */}
                 <Card
                   sx={{
                     p: 3,
@@ -905,16 +842,16 @@ const Redpill6Page = () => {
                       gap: 1
                     }}
                   >
-                    <Focus size={20} />
-                    Cognitive Benefits
+                    <Heart size={20} />
+                    Complete Wellness Profile
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Enhanced mental clarity and focus within 60 minutes",
-                      "Improved memory retention and recall",
-                      "Reduced mental fatigue and brain fog",
-                      "Increased productivity and concentration",
-                      "Made in pharmaceutical-grade facility"
+                      "Stacks best with NAD+ Injectable for elevated stamina",
+                      "Pairs with PT-141 for enhanced performance",
+                      "Combines with CLC-1295/Ipamorelin for deeper vitality",
+                      "Creates complete performance-focused wellness",
+                      "Provides refined vascular support with antioxidant enhancement"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -931,7 +868,7 @@ const Redpill6Page = () => {
         </Container>
       </Box>
 
-      {/* HOW IT WORKS SECTION */}
+      {/* HOW IT WORKS SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -955,7 +892,7 @@ const Redpill6Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Direct Access to{" "}
                 <Box
                   component="span"
                   sx={{
@@ -965,7 +902,7 @@ const Redpill6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Your Health Provider
                 </Box>
               </Typography>
               <Typography
@@ -979,7 +916,7 @@ const Redpill6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal cognitive enhancement
+                With Liquid Rx, you'll have ongoing support from experienced providers through virtual consultations
               </Typography>
             </motion.div>
           </Box>
@@ -988,30 +925,30 @@ const Redpill6Page = () => {
             {[
               {
                 step: "01",
-                title: "Morning Dose",
-                description: "One tablet with water",
-                icon: "🌅",
+                title: "Virtual Consultation",
+                description: "Speak with licensed provider",
+                icon: "👨‍⚕️",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "With Breakfast",
-                description: "Take with morning meal",
-                icon: "🍽️",
+                title: "Personalized Plan",
+                description: "Tailored treatment for you",
+                icon: "📋",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Daily Use",
-                description: "Consistent daily intake",
-                icon: "📅",
+                title: "Discreet Delivery",
+                description: "Medication to your door",
+                icon: "📦",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "60 Minutes",
-                description: "Effects within hour",
-                icon: "⏰",
+                title: "Ongoing Support",
+                description: "Continuous care available",
+                icon: "🔄",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1085,7 +1022,7 @@ const Redpill6Page = () => {
         </Container>
       </Box>
 
-      {/* FINAL CTA SECTION */}
+      {/* FINAL CTA SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -1115,7 +1052,7 @@ const Redpill6Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Unlock Your{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1126,7 +1063,7 @@ const Redpill6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Mental Potential
+                  Restored
                 </Box>
               </Typography>
               
@@ -1141,8 +1078,7 @@ const Redpill6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Experience enhanced mental clarity and focus with Redpill 6 Tablets. 
-                Perfect starter pack for peak cognitive performance and productivity.
+                Our ED treatments provide discreet, effective solutions to help men overcome challenges and restore confidence. Join the growing number of men who trust Liquid Rx.
               </Typography>
               
               {/* Pricing Display */}
@@ -1157,6 +1093,9 @@ const Redpill6Page = () => {
                   }}
                 >
                   $49.00
+                </Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                  Redpill 6 Tablets • Telehealth Included
                 </Typography>
               </Box>
               
@@ -1189,7 +1128,7 @@ const Redpill6Page = () => {
                       }
                     }}
                   >
-                    Boost Mental Clarity
+                    Start Consultation Now
                   </Button>
                 </motion.div>
               </Box>
@@ -1203,10 +1142,10 @@ const Redpill6Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Brain size={20} />, text: "Mental Clarity" },
-                  { icon: <CheckCircle size={20} />, text: "Enhanced Focus" },
-                  { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Target size={20} />, text: "Cognitive Boost" }
+                  { icon: <Shield size={20} />, text: "Licensed Providers" },
+                  { icon: <Truck size={20} />, text: "50 States Delivery" },
+                  { icon: <UserCheck size={20} />, text: "Personalized Plans" },
+                  { icon: <Heart size={20} />, text: "Men's Health Focus" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1251,7 +1190,7 @@ const Redpill6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Advanced nootropic formula • No prescription required • 30-day satisfaction guarantee
+                6-tablet pack • Compounded medication • Telehealth consultation required • 24/7 support • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

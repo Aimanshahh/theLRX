@@ -75,7 +75,7 @@ const Passion12Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="PREMIUM VITALITY TABLETS - 12 PACK"
+                  label="COMPOUNDED INTIMATE WELLNESS - 12 PACK"
                   icon={<Flame size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -97,7 +97,7 @@ const Passion12Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Boost Your{" "}
+                  Passion
                   <Box
                     component="span"
                     sx={{
@@ -108,7 +108,7 @@ const Passion12Page = () => {
                       display: "block"
                     }}
                   >
-                    Passion Naturally
+                    – 12 Tablets
                   </Box>
                 </Typography>
 
@@ -121,18 +121,17 @@ const Passion12Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Passion-12 Tablets — premium natural formula with 12 powerful ingredients.
-                  Experience enhanced energy and vitality in just 2–4 weeks with extended supply.
+                  A compounded formula that artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support with extended 12-tablet supply.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "12 natural ingredients for optimal performance",
-                    "Non-hormonal, safe formulation",
-                    "Suitable for both men & women",
-                    "30-day satisfaction guarantee",
-                    "Extended 12-tablet supply"
+                    "Creates a richer, more responsive intimate experience",
+                    "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
+                    "For heightened arousal, sustained vitality, and fully elevated intimate wellness",
+                    "Compounded formula (Tadalafil 10mg / Bremelanotide 10mg / Pregnenolone 10mg)",
+                    "Extended 12-tablet supply for continued wellness"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -205,7 +204,7 @@ const Passion12Page = () => {
                       }
                     }}
                   >
-                    Start Your Journey
+                    Order Passion-12 Tablets
                   </Button>
                 </motion.div>
               </motion.div>
@@ -259,7 +258,7 @@ const Passion12Page = () => {
                       fontWeight: 700
                     }}
                   >
-                    POWER INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
                 </Box>
               </motion.div>
@@ -268,7 +267,7 @@ const Passion12Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* COMPOUNDED FORMULA SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -289,7 +288,7 @@ const Passion12Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            The Compounded Formula - 12 Tablets
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -306,9 +305,7 @@ const Passion12Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Passion-12 Tablets are formulated based on extensive clinical research and scientific studies. 
-                  Our 12-ingredient synergistic formula has been validated through multiple independent studies 
-                  for natural vitality enhancement and overall well-being improvement.
+                  Passion is specifically compounded for women's intimate wellness. This unique combination of three active ingredients works synergistically to enhance circulation, elevate desire pathways, and provide balanced neuro-hormonal support, now with extended 12-tablet supply.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -321,7 +318,7 @@ const Passion12Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Active Ingredients (per tablet):
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -333,9 +330,9 @@ const Passion12Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "94% reported significant energy increase within 4 weeks",
-                          "88% experienced improved mood and reduced stress",
-                          "90% noticed enhanced physical stamina"
+                          "Tadalafil 10mg - Enhanced circulation",
+                          "Bremelanotide 10mg - Elevated desire pathways",
+                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -372,9 +369,10 @@ const Passion12Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "96% of users reported better sleep quality",
-                          "90% experienced improved focus and concentration",
-                          "92% would recommend to friends and family"
+                          "Creates deeper, more connected intimate experiences",
+                          "Designed for heightened arousal and sustained vitality",
+                          "Optimal stacking with PT-141, NAD+ Injectable, GHK-Cu",
+                          "12-tablet extended supply"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -405,7 +403,7 @@ const Passion12Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Stacking Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -419,22 +417,21 @@ const Passion12Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💫 Optimal Stacking:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 500 participants aged 25-65 • 
-                      Double-blind placebo-controlled • Independent research institution
+                      For fully elevated women's intimate wellness: Stack Passion with PT-141 for heightened arousal, NAD+ Injectable for sustained vitality, and GHK-Cu for comprehensive intimate wellness support. Perfect with our 12-tablet extended supply.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Formula Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -458,7 +455,7 @@ const Passion12Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Clinical Results
+                    12-Tablet Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -466,7 +463,7 @@ const Passion12Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive study data
+                    Extended supply compounded wellness
                   </Typography>
                 </Box>
                 
@@ -478,46 +475,32 @@ const Passion12Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Energy Increase", 
-                      value: "94%", 
+                      label: "Tadalafil", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Reported higher daily energy",
-                      trend: "+26% vs placebo"
+                      description: "Enhanced circulation support",
+                      purpose: "Improves blood flow"
                     },
                     { 
-                      label: "Mood Enhancement", 
-                      value: "88%", 
+                      label: "Bremelanotide", 
+                      value: "10mg", 
                       color: "#003B9D",
-                      description: "Improved emotional well-being",
-                      trend: "+22% vs placebo"
+                      description: "Elevates desire pathways",
+                      purpose: "Heightens arousal"
                     },
                     { 
-                      label: "Physical Stamina", 
-                      value: "90%", 
+                      label: "Pregnenolone", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Better endurance & performance",
-                      trend: "+24% vs placebo"
+                      description: "Neuro-hormonal balance",
+                      purpose: "Supports hormonal pathways"
                     },
                     { 
-                      label: "Sleep Quality", 
-                      value: "96%", 
+                      label: "Total Supply", 
+                      value: "12 Tablets", 
                       color: "#003B9D",
-                      description: "Enhanced rest & recovery",
-                      trend: "+29% vs placebo"
-                    },
-                    { 
-                      label: "Mental Focus", 
-                      value: "90%", 
-                      color: "#00359E",
-                      description: "Improved concentration",
-                      trend: "+23% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "97%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+33% vs placebo"
+                      description: "Extended wellness supply",
+                      purpose: "Continued intimate wellness"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -558,7 +541,7 @@ const Passion12Page = () => {
                           {stat.description}
                         </Typography>
                         <Chip
-                          label={stat.trend}
+                          label={stat.purpose}
                           size="small"
                           sx={{
                             bgcolor: alpha(stat.color, 0.1),
@@ -573,7 +556,7 @@ const Passion12Page = () => {
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Formula Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -586,15 +569,14 @@ const Passion12Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all measured parameters
+                    Specifically compounded for extended women's intimate wellness enhancement
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Stacking Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -608,7 +590,7 @@ const Passion12Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚀 Enhanced Stacking Potential with Extended Supply
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -617,9 +599,7 @@ const Passion12Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Passion-12's formula is supported by 18 peer-reviewed studies published in 
-              leading journals including the Journal of Natural Medicine, International 
-              Journal of Complementary Medicine, and Evidence-Based Complementary Medicine.
+              Passion is designed to stack optimally with PT-141 (for heightened arousal), NAD+ Injectable (for sustained vitality), and GHK-Cu (for comprehensive intimate wellness). This 12-tablet combination creates a fully elevated women's intimate wellness profile with extended supply.
             </Typography>
           </Box>
         </Container>
@@ -650,7 +630,7 @@ const Passion12Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Passion
                 <Box
                   component="span"
                   sx={{
@@ -660,7 +640,7 @@ const Passion12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Passion-12 Tablet
+                  – 12 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -674,7 +654,7 @@ const Passion12Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium natural vitality tablets with extended 12-tablet supply for optimal energy and performance
+                Compounded intimate wellness tablets with extended 12-tablet supply for a richer, more responsive, and deeply connected experience
               </Typography>
             </motion.div>
           </Box>
@@ -754,7 +734,7 @@ const Passion12Page = () => {
                     }}
                   >
                     <Pill size={12} />
-                    12 NATURAL INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
 
                   {/* Price Badge */}
@@ -805,7 +785,7 @@ const Passion12Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Passion-12 Tablets
+                    Compounded Passion Tablets - 12 Pack
                   </Typography>
                   <Typography
                     sx={{
@@ -815,7 +795,7 @@ const Passion12Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Passion-12 tablets combine 12 natural ingredients to safely enhance energy, stamina, and overall vitality with extended supply.
+                    Passion artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support to create a richer, more responsive, and deeply connected intimate experience. Now with extended 12-tablet supply.
                   </Typography>
                 </Box>
 
@@ -823,27 +803,27 @@ const Passion12Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Pill size={24} color="#00359E" />,
-                      title: "Daily Use",
-                      description: "Simple tablet regimen",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Enhanced Desire",
+                      description: "Elevates arousal pathways",
                       color: "#00359E"
                     },
                     {
-                      icon: <Clock size={24} color="#003B9D" />,
-                      title: "Any Time",
-                      description: "Take with or without food",
+                      icon: <Droplet size={24} color="#003B9D" />,
+                      title: "Improved Circulation",
+                      description: "Better blood flow support",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "12-Tablet Pack",
-                      description: "Extended monthly supply",
+                      icon: <Brain size={24} color="#00359E" />,
+                      title: "Hormonal Balance",
+                      description: "Neuro-hormonal support",
                       color: "#00359E"
                     },
                     {
-                      icon: <Calendar size={24} color="#003B9D" />,
-                      title: "2-4 Weeks",
-                      description: "For optimal results",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Extended Supply",
+                      description: "12-tablet wellness pack",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -906,15 +886,16 @@ const Passion12Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Treatment Benefits
+                    Intimate Wellness Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "12 natural ingredients - Comprehensive blend for vitality",
-                      "Enhanced energy and stamina with extended supply",
-                      "Supports mood and overall well-being",
-                      "Perfect for those preferring longer-term supply",
-                      "Made in pharmaceutical-grade facility"
+                      "Creates richer, more responsive intimate experiences",
+                      "Provides balanced neuro-hormonal support",
+                      "Enhances circulation and desire pathways",
+                      "Stacks optimally with PT-141, NAD+ Injectable, GHK-Cu",
+                      "Compounded for extended women's intimate wellness enhancement",
+                      "12-tablet supply for continued wellness journey"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -955,7 +936,7 @@ const Passion12Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Experience{" "}
                 <Box
                   component="span"
                   sx={{
@@ -965,7 +946,7 @@ const Passion12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Enhanced Intimacy
                 </Box>
               </Typography>
               <Typography
@@ -979,7 +960,7 @@ const Passion12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal results with your 12-tablet pack
+                Passion creates a comprehensive intimate wellness experience with extended 12-tablet supply
               </Typography>
             </motion.div>
           </Box>
@@ -988,29 +969,29 @@ const Passion12Page = () => {
             {[
               {
                 step: "01",
-                title: "Take Daily",
-                description: "One tablet with water",
-                icon: "💊",
+                title: "Enhanced Circulation",
+                description: "Improved blood flow support with Tadalafil",
+                icon: "💓",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "Consistent Time",
-                description: "Same time each day",
-                icon: "🕐",
+                title: "Elevated Desire",
+                description: "Heightened arousal with Bremelanotide",
+                icon: "🔥",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "With Food",
-                description: "Take with meal for absorption",
-                icon: "🍽️",
+                title: "Hormonal Balance",
+                description: "Neuro-hormonal support with Pregnenolone",
+                icon: "⚖️",
                 color: "#00359E"
               },
               {
                 step: "04",
                 title: "Extended Supply",
-                description: "12 tablets for continued use",
+                description: "12-tablets for continued wellness",
                 icon: "📦",
                 color: "#003B9D"
               }
@@ -1115,7 +1096,7 @@ const Passion12Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Start Your Vitality
+                Order Passion
                 <Box
                   component="span"
                   sx={{
@@ -1126,7 +1107,7 @@ const Passion12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Journey Today
+                  – 12 Tablets
                 </Box>
               </Typography>
               
@@ -1141,8 +1122,7 @@ const Passion12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join thousands of satisfied users with clinically studied Passion-12 Tablets. 
-                Experience enhanced energy and vitality with our extended 12-tablet supply.
+                Experience a richer, more responsive, and deeply connected intimate experience with our compounded Passion-12 Tablets. Artfully designed for extended women's intimate wellness enhancement.
               </Typography>
               <br></br>
               {/* Pricing Display */}
@@ -1157,6 +1137,15 @@ const Passion12Page = () => {
                   }}
                 >
                   $99.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    fontSize: "1.2rem",
+                    textDecoration: "line-through"
+                  }}
+                >
+                  $129.00
                 </Typography>
               </Box>
               
@@ -1189,7 +1178,7 @@ const Passion12Page = () => {
                       }
                     }}
                   >
-                    Start Now
+                    Order Passion-12 Tablets
                   </Button>
                 </motion.div>
               </Box>
@@ -1203,10 +1192,10 @@ const Passion12Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Shield size={20} />, text: "12 Natural Ingredients" },
-                  { icon: <CheckCircle size={20} />, text: "Clinically Studied" },
-                  { icon: <Package size={20} />, text: "Extended Supply" },
-                  { icon: <Clock size={20} />, text: "Fast Results" }
+                  { icon: <Pill size={20} />, text: "Compounded Formula" },
+                  { icon: <Heart size={20} />, text: "Women's Intimate Wellness" },
+                  { icon: <Package size={20} />, text: "12-Tablet Extended Supply" },
+                  { icon: <Sparkles size={20} />, text: "Stackable with PT-141" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1251,7 +1240,7 @@ const Passion12Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                12-tablet pack • Suitable for men & women • No prescription required • 30-day satisfaction guarantee
+                12-tablet pack • Compounded formula • Stackable with PT-141, NAD+ Injectable, GHK-Cu • Extended supply for women's intimate wellness
               </Typography>
             </motion.div>
           </Box>

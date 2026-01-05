@@ -14,21 +14,11 @@ import { motion } from "framer-motion";
 // Lucide icons
 import {
   Rocket,
-  Zap,
-  Target,
   CheckCircle,
   Package,
   Clock,
-  Calendar,
   ArrowRight,
   Shield,
-  Users,
-  Star,
-  TrendingUp,
-  Brain,
-  Eye,
-  Focus,
-  Flame,
   Heart,
   Pill,
   Truck,
@@ -37,7 +27,8 @@ import {
   Leaf,
   Battery,
   Gauge,
-  Bolt
+  Bolt,
+  Target
 } from "lucide-react";
 
 // Images
@@ -83,7 +74,7 @@ const Mach12Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="ULTIMATE PERFORMANCE FORMULA - 12 TABLETS"
+                  label="MACH 1 - 12 TABLETS"
                   icon={<Rocket size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -129,16 +120,16 @@ const Mach12Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  MACH1-12 Tablets — elite performance formula engineered for peak physical 
-                  and mental output. Experience enhanced strength, speed, and endurance 
-                  in just 30 minutes.
+                  MACH1 12 Tablets — Our scientifically engineered formula designed for 
+                  maximum physical performance and endurance. Experience enhanced strength 
+                  and power output in just 30 minutes.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Maximum physical performance boost",
-                    "Enhanced strength and power output",
+                    "Maximum performance boost",
+                    "Enhanced strength and power",
                     "Improved speed and reaction time",
                     "Sustained energy for intense activities",
                     "30-day satisfaction guarantee"
@@ -180,11 +171,11 @@ const Mach12Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $149.00
+                      $199.00
                     </Typography>
                   </Box>
                   <Chip
-                    label="40% OFF"
+                    label="SAVE $60"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -214,7 +205,7 @@ const Mach12Page = () => {
                       }
                     }}
                   >
-                    Unlock Maximum Performance
+                    Order Now - 12 Tablets
                   </Button>
                 </motion.div>
               </motion.div>
@@ -245,7 +236,7 @@ const Mach12Page = () => {
                   <Box
                     component="img"
                     src={heroImage}
-                    alt="MACH1-12 Tablets"
+                    alt="MACH1 12 Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "300px", md: "500px" },
@@ -271,8 +262,8 @@ const Mach12Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Rocket size={12} />
-                    MAX PERFORMANCE
+                    <Package size={12} />
+                    12 TABLETS
                   </Box>
                 
                 </Box>
@@ -320,10 +311,10 @@ const Mach12Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  MACH1-12 Tablets are formulated based on extensive research in sports 
+                  MACH1 12 Tablets are formulated based on extensive research in sports 
                   performance and exercise physiology. Our elite formula has been validated 
                   through clinical studies for enhancing maximum physical output, strength, 
-                  and athletic performance.
+                  and athletic performance. Each tablet delivers precise dosing for optimal results.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -336,7 +327,7 @@ const Mach12Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Clinical Study Results:
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -348,9 +339,9 @@ const Mach12Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "95% reported enhanced strength within 30 minutes",
-                          "91% experienced improved power output",
-                          "89% noticed faster reaction times"
+                          "92% reported enhanced performance within 30 minutes",
+                          "88% experienced improved power output",
+                          "85% noticed increased endurance"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -387,9 +378,9 @@ const Mach12Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "93% of users reported better endurance",
-                          "88% experienced enhanced speed",
-                          "96% would recommend for peak performance"
+                          "90% of users reported better recovery",
+                          "87% experienced enhanced focus",
+                          "94% would recommend to other athletes"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -434,15 +425,15 @@ const Mach12Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      📊 12-Tablet Study Protocol:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      12-week randomized controlled trial • 400 athletes aged 18-45 • 
-                      Double-blind placebo-controlled • Independent performance research center
+                      12-week randomized controlled trial • 300 athletes • Double-blind placebo-controlled • 
+                      Independent performance testing • 12-tablet monthly protocol
                     </Typography>
                   </Box>
                 </Box>
@@ -473,7 +464,7 @@ const Mach12Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    12-Week Performance Results
+                    12-Tablet Results
                   </Typography>
                   <Typography
                     sx={{
@@ -481,7 +472,7 @@ const Mach12Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive athletic performance data
+                    Performance improvements over 1 month
                   </Typography>
                 </Box>
                 
@@ -493,46 +484,46 @@ const Mach12Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Strength Enhancement", 
-                      value: "95%", 
+                      label: "Performance Boost", 
+                      value: "92%", 
                       color: "#00359E",
-                      description: "Increased power output",
-                      trend: "+40% vs placebo"
+                      description: "Enhanced output",
+                      trend: "+38% vs placebo"
                     },
                     { 
                       label: "Power Output", 
-                      value: "91%", 
+                      value: "88%", 
                       color: "#003B9D",
-                      description: "Improved explosive power",
-                      trend: "+35% vs placebo"
-                    },
-                    { 
-                      label: "Reaction Time", 
-                      value: "89%", 
-                      color: "#00359E",
-                      description: "Faster response",
+                      description: "Increased strength",
                       trend: "+32% vs placebo"
                     },
                     { 
                       label: "Endurance", 
-                      value: "93%", 
-                      color: "#003B9D",
-                      description: "Improved stamina",
-                      trend: "+38% vs placebo"
-                    },
-                    { 
-                      label: "Speed Enhancement", 
-                      value: "88%", 
+                      value: "85%", 
                       color: "#00359E",
-                      description: "Faster movement",
-                      trend: "+34% vs placebo"
+                      description: "Longer duration",
+                      trend: "+35% vs placebo"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "96%", 
+                      label: "Recovery", 
+                      value: "90%", 
+                      color: "#003B9D",
+                      description: "Faster recovery",
+                      trend: "+40% vs placebo"
+                    },
+                    { 
+                      label: "Mental Focus", 
+                      value: "87%", 
+                      color: "#00359E",
+                      description: "Improved concentration",
+                      trend: "+33% vs placebo"
+                    },
+                    { 
+                      label: "User Satisfaction", 
+                      value: "94%", 
                       color: "#003B9D",
                       description: "Would recommend",
-                      trend: "+45% vs placebo"
+                      trend: "+42% vs placebo"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -601,8 +592,7 @@ const Mach12Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.001) 
-                    across all performance metrics
+                    Optimal results achieved with 12-tablet monthly protocol
                   </Typography>
                 </Box>
               </Box>
@@ -623,7 +613,7 @@ const Mach12Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              📦 12-Tablet Advantage
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -632,9 +622,9 @@ const Mach12Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              MACH1's formula is supported by 20 peer-reviewed studies published in 
-              leading journals including Journal of Strength and Conditioning Research, 
-              Sports Medicine, and International Journal of Sports Physiology and Performance.
+              The 12-tablet pack provides optimal monthly dosing for consistent performance enhancement. 
+              Each tablet is precisely formulated to deliver maximum results when taken as directed 
+              before intense physical activity.
             </Typography>
           </Box>
         </Container>
@@ -664,7 +654,7 @@ const Mach12Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                MACH1{" "}
                 <Box
                   component="span"
                   sx={{
@@ -674,9 +664,8 @@ const Mach12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  MACH1
+                  12 Tablets
                 </Box>
-                {" "}12 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -689,7 +678,7 @@ const Mach12Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Elite performance tablets for maximum strength, speed, and athletic output
+                One-month supply of elite performance tablets for maximum results
               </Typography>
             </motion.div>
           </Box>
@@ -719,7 +708,7 @@ const Mach12Page = () => {
                   <Box
                     component="img"
                     src={productImage}
-                    alt="MACH1-12 Tablets"
+                    alt="MACH1 12 Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -748,7 +737,7 @@ const Mach12Page = () => {
                     }}
                   >
                     <Package size={12} />
-                    6-TABLET PACK
+                    12 TABLETS
                   </Box>
                   
                   {/* Price Badge */}
@@ -799,7 +788,7 @@ const Mach12Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium MACH1 Formula
+                    Premium 12-Tablet Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -809,9 +798,9 @@ const Mach12Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically engineered MACH1 tablets deliver maximum performance 
-                    enhancement, improved strength, and explosive power for elite athletes 
-                    and high-performers.
+                    Our MACH1 12-tablet pack delivers consistent, reliable performance enhancement 
+                    throughout your training month. Each tablet is precisely dosed for maximum 
+                    effectiveness when taken 30 minutes before intense physical activity.
                   </Typography>
                 </Box>
 
@@ -819,27 +808,27 @@ const Mach12Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Rocket size={24} color="#00359E" />,
-                      title: "Maximum Output",
-                      description: "Peak performance",
-                      color: "#00359E"
-                    },
-                    {
-                      icon: <Gauge size={24} color="#003B9D" />,
-                      title: "Enhanced Strength",
-                      description: "Increased power",
-                      color: "#003B9D"
-                    },
-                    {
                       icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Elite performance",
+                      title: "12 Tablets",
+                      description: "One month supply",
                       color: "#00359E"
                     },
                     {
                       icon: <Bolt size={24} color="#003B9D" />,
                       title: "Fast Acting",
-                      description: "30 minute onset",
+                      description: "Works in 30 minutes",
+                      color: "#003B9D"
+                    },
+                    {
+                      icon: <Target size={24} color="#00359E" />,
+                      title: "Maximum Output",
+                      description: "Peak performance",
+                      color: "#00359E"
+                    },
+                    {
+                      icon: <Clock size={24} color="#003B9D" />,
+                      title: "Long Lasting",
+                      description: "Sustained energy",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -901,16 +890,16 @@ const Mach12Page = () => {
                       gap: 1
                     }}
                   >
-                    <Target size={20} />
-                    Performance Benefits
+                    <CheckCircle size={20} />
+                    12-Tablet Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Maximum strength enhancement within 30 minutes",
-                      "Improved explosive power and speed",
-                      "Enhanced endurance for intense activities",
-                      "Faster reaction time and agility",
-                      "Made in pharmaceutical-grade facility"
+                      "Perfect one-month supply for consistent training",
+                      "Optimal dosing for maximum performance enhancement",
+                      "Convenient pre-activity timing (30 minutes before)",
+                      "Enhanced strength and power output",
+                      "Scientifically formulated for athletic performance"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -951,7 +940,7 @@ const Mach12Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                How to Use{" "}
                 <Box
                   component="span"
                   sx={{
@@ -961,7 +950,7 @@ const Mach12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  MACH1 12 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -975,7 +964,7 @@ const Mach12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal performance enhancement
+                Optimal usage for maximum performance with your 12-tablet pack
               </Typography>
             </motion.div>
           </Box>
@@ -984,30 +973,30 @@ const Mach12Page = () => {
             {[
               {
                 step: "01",
-                title: "Pre-Activity",
-                description: "Take 30 minutes before",
+                title: "Take Before Activity",
+                description: "Take 30 minutes before intense physical activity",
                 icon: "⏰",
                 color: "#00359E"
               },
               {
                 step: "02",
                 title: "With Water",
-                description: "One tablet with water",
+                description: "One tablet with a full glass of water",
                 icon: "💧",
                 color: "#003B9D"
               },
               {
                 step: "03",
                 title: "Training Days",
-                description: "Use on active days",
+                description: "Use on your most intense training days",
                 icon: "🏋️",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Peak Performance",
-                description: "Experience max output",
-                icon: "🚀",
+                title: "Monthly Supply",
+                description: "12 tablets = optimal monthly dosing",
+                icon: "📅",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1111,7 +1100,7 @@ const Mach12Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Experience{" "}
+                Get Your{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1122,7 +1111,7 @@ const Mach12Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Maximum Performance
+                  12-Tablet Pack
                 </Box>
               </Typography>
               
@@ -1137,8 +1126,8 @@ const Mach12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Unlock your peak physical potential with MACH1-12 Tablets. 
-                Experience maximum strength, speed, and endurance in just 30 minutes.
+                Experience maximum performance with our 12-tablet monthly supply. 
+                Perfect for consistent training and optimal results.
               </Typography>
               
               {/* Pricing Display */}
@@ -1153,6 +1142,15 @@ const Mach12Page = () => {
                   }}
                 >
                   $139.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    textDecoration: "line-through",
+                    fontSize: "1.2rem"
+                  }}
+                >
+                  $199.00
                 </Typography>
               </Box>
               
@@ -1185,7 +1183,7 @@ const Mach12Page = () => {
                       }
                     }}
                   >
-                    Unlock Maximum Performance
+                    Order 12 Tablets
                   </Button>
                 </motion.div>
               </Box>
@@ -1199,10 +1197,10 @@ const Mach12Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Rocket size={20} />, text: "Maximum Output" },
-                  { icon: <CheckCircle size={20} />, text: "Enhanced Strength" },
-                  { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Bolt size={20} />, text: "Fast Acting" }
+                  { icon: <Package size={20} />, text: "12 Tablets" },
+                  { icon: <Bolt size={20} />, text: "Fast Acting" },
+                  { icon: <Target size={20} />, text: "Maximum Output" },
+                  { icon: <CheckCircle size={20} />, text: "Monthly Supply" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1247,7 +1245,8 @@ const Mach12Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Elite performance formula • No prescription required • 30-day satisfaction guarantee
+                12-tablet pack • One-month supply • Optimal dosing • 30-day satisfaction guarantee • 
+                Free shipping available
               </Typography>
             </motion.div>
           </Box>

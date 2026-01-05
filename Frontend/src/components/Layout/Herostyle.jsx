@@ -1,10 +1,21 @@
 import React from "react";
 import { Box, Typography, Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import heroImage from "../../assets/images/section.png";
 import cardImage1 from "../../assets/images/card-removebg-preview.png";
 import cardImage2 from "../../assets/medical experts/imgremoved4.png";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
+
+  const handleExternalNavigation = (url) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleInternalNavigation = (path) => {
+    navigate(path);
+  };
+
   return (
     <Box
       sx={{
@@ -14,7 +25,6 @@ export default function HeroSection() {
         background:
           "linear-gradient(135deg,#00359E,#003B9D 30%,#8B8D8E 70%,#747578 100%)",
         position: "relative",
-        // Reduced bottom padding to eliminate extra space
         pb: { xs: 4, sm: 6, md: 8 },
       }}
     >
@@ -47,7 +57,7 @@ export default function HeroSection() {
         >
           Get Your Edge Back With
           <br />
-          Testosterone By LiquidRX
+          Precision BioActives By LiquidRX
         </Typography>
       </Box>
 
@@ -88,6 +98,7 @@ export default function HeroSection() {
           }}
         >
           <Button
+            onClick={() => handleExternalNavigation("https://try.thelrx.com/intake/se-jd9om9")}
             sx={{
               px: { xs: 3, sm: 4 },
               py: { xs: 1.4, sm: 1.6 },
@@ -104,10 +115,11 @@ export default function HeroSection() {
               whiteSpace: "nowrap",
             }}
           >
-            Get started
+            Get Started with Sermolin
           </Button>
 
           <Button
+            onClick={() => handleInternalNavigation("/peptides/pt-141")}
             sx={{
               px: { xs: 3, sm: 4 },
               py: { xs: 1.4, sm: 1.6 },
@@ -125,7 +137,7 @@ export default function HeroSection() {
               whiteSpace: "nowrap",
             }}
           >
-            Do I have low T?
+            View PT-141
           </Button>
         </Box>
       </Box>
@@ -135,7 +147,6 @@ export default function HeroSection() {
         sx={{
           position: "relative",
           zIndex: 3,
-          // Reduced top margin to eliminate extra space
           mt: { xs: 0, sm: 2, md: -8 },
           display: "flex",
           justifyContent: "center",
@@ -158,7 +169,7 @@ export default function HeroSection() {
             },
           }}
         >
-          {/* CARD 1 */}
+          {/* CARD 1 - PRECISION BIOACTIVES */}
           <Box
             sx={{
               borderRadius: 3,
@@ -195,7 +206,7 @@ export default function HeroSection() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Doctor-guided care
+                Precision BioActives Collection
               </Typography>
 
               <Typography
@@ -206,7 +217,7 @@ export default function HeroSection() {
                   lineHeight: 1.4,
                 }}
               >
-                Personalized testosterone therapy designed by licensed clinicians.
+                Premium bioactive compounds including Vitamin B12 Injection, Sermolin 20mg, Pt-141 50mg, and more.
               </Typography>
             </Box>
 
@@ -237,7 +248,7 @@ export default function HeroSection() {
                 <Box
                   component="img"
                   src={cardImage1}
-                  alt="Doctor-guided care"
+                  alt="Precision BioActives"
                   sx={{
                     width: "100%",
                     height: "100%",
@@ -257,6 +268,7 @@ export default function HeroSection() {
             >
               <Button
                 variant="contained"
+                onClick={() => handleInternalNavigation("/peptides/cjc-1295-ipamorelin")}
                 sx={{
                   backgroundColor: "#4A90E2",
                   color: "#FFFFFF",
@@ -282,7 +294,7 @@ export default function HeroSection() {
             </Box>
           </Box>
 
-          {/* CARD 2 */}
+          {/* CARD 2 - MEDICAL EXPERTISE */}
           <Box
             sx={{
               borderRadius: 3,
@@ -319,7 +331,7 @@ export default function HeroSection() {
                   letterSpacing: "-0.02em",
                 }}
               >
-                Delivered to you
+                Medical Expert Formulations
               </Typography>
 
               <Typography
@@ -330,7 +342,7 @@ export default function HeroSection() {
                   lineHeight: 1.4,
                 }}
               >
-                Discreet shipping, automatic refills, no clinic visits required.
+                Pharmaceutical-grade bioactive compounds designed by licensed medical professionals for optimal results.
               </Typography>
             </Box>
 
@@ -361,7 +373,7 @@ export default function HeroSection() {
                 <Box
                   component="img"
                   src={cardImage2}
-                  alt="Delivered to you"
+                  alt="Medical expertise"
                   sx={{
                     width: "100%",
                     height: "100%",
@@ -381,6 +393,7 @@ export default function HeroSection() {
             >
               <Button
                 variant="contained"
+                onClick={() => handleExternalNavigation("https://try.thelrx.com/intake/bp-8xpx3w")}
                 sx={{
                   backgroundColor: "#4A90E2",
                   color: "#FFFFFF",
@@ -401,7 +414,7 @@ export default function HeroSection() {
                   minWidth: "140px",
                 }}
               >
-                Get Started
+                Get Started with BPC-157
               </Button>
             </Box>
           </Box>
@@ -414,9 +427,7 @@ export default function HeroSection() {
           position: "relative",
           zIndex: 3,
           textAlign: "center",
-          // Reduced top margin to eliminate extra space
           mt: { xs: 4, sm: 6, md: 8 },
-          // Equal horizontal spacing using padding
           px: { xs: 2, sm: 3, md: 4 },
           maxWidth: "900px",
           mx: "auto",
@@ -432,9 +443,10 @@ export default function HeroSection() {
             fontWeight: 700,
           }}
         >
-          Image is for illustrative purposes only. Individual lab results may vary. 
-          Compounded products are not approved nor evaluated for safety, effectiveness, 
-          or quality by the FDA.
+          Pharmaceutical-grade bioactive compounds including Vitamin B12 Injection, Sermolin 20mg, 
+          Pt-141 50mg, CJC-1295/Ipamorelin Blend, GHK-CU, BPC-157 Vial, NAD+ Nasal Spray, 
+          and NAD+ Injectable. Individual results may vary. Consult with a healthcare provider 
+          before starting any new supplement regimen.
         </Typography>
       </Box>
     </Box>

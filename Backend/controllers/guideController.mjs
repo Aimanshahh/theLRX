@@ -26,7 +26,7 @@ export const subscribeGuide = async (req, res) => {
     // PDF path
     const pdfPath = path.join(
       process.cwd(),
-      "guide",
+      "guides",
       "LiquidRX_Protein_Weight_Loss_Guide.pdf"
     );
 

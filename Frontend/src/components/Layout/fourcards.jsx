@@ -52,7 +52,7 @@ const MedicineSidebar = ({ open, onClose }) => {
     },
    
     {
-      name: "Peptides",
+      name: "Precision BioActives",
       icon: <BiotechIcon />,
       color: "#00359E",
       bgColor: alpha("#00359E", 0.08),

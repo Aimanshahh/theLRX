@@ -28,22 +28,22 @@ const faqData = [
   { 
     id: 2, 
     question: "How does the telemedicine consultation process work?",
-    answer: "You complete a detailed medical questionnaire based on FDA guidelines, licensed providers conduct a thorough review following medical protocols, and treatment decisions are made based on comprehensive assessment with adherence to telehealth regulations and patient safety standards." 
+    answer: "You complete a detailed medical intake form developed by licensed medical doctors in accordance with FDA guidelines. Your information is carefully reviewed by licensed providers using established medical protocols, and any treatment decisions are made following a comprehensive clinical assessment, in full compliance with telehealth regulations and patient safety standards." 
   },
   { 
     id: 3, 
     question: "Are your healthcare providers properly licensed and certified?",
-    answer: "All providers are board-certified physicians, nurse practitioners, or physician assistants licensed to practice in your state. They maintain current certifications, follow FDA guidelines for telemedicine, and adhere to state-specific telehealth regulations for safe prescription practices." 
+    answer: "All providers are board-certified medical doctors licensed to practice in your state. Each physician maintains current board certification, follows FDA guidelines for telemedicine, and adheres to all applicable state-specific telehealth regulations to ensure safe, compliant prescribing practices." 
   },
   { 
     id: 4, 
     question: "Do I need health insurance for LiquidRX services?",
-    answer: "Health insurance is not required. We operate on a transparent direct-pay model making FDA-approved treatments accessible. You can submit receipts to insurance for potential reimbursement, and HSA/FSA funds are accepted for eligible medical expenses." 
+    answer: "Health insurance is not required. Services are offered through a transparent direct-pay model. In some cases, patients may choose to submit receipts to their insurance provider for possible reimbursement at their discretion. Certain HSA or FSA funds may be used for eligible medical expenses, depending on individual plan rules." 
   },
   { 
     id: 5, 
     question: "Are partner pharmacies properly licensed and regulated?",
-    answer: "All partner pharmacies are fully licensed, DEA-registered facilities that comply with FDA Good Manufacturing Practices, state pharmacy board regulations, and strict safety protocols for medication dispensing and quality assurance." 
+    answer: "Partner pharmacies are appropriately licensed and registered with the U.S. Food and Drug Administration (FDA) and applicable state pharmacy boards. Medications are dispensed by pharmacies operating under Section 503A of the Federal Food, Drug, and Cosmetic Act, or manufactured by FDA-registered outsourcing facilities operating under Section 503B, as applicable. These pharmacies follow current good manufacturing practices (cGMPs), DEA requirements when applicable, and established quality and safety standards for compounding, dispensing, and quality assurance." 
   },
   { 
     id: 6, 
@@ -58,7 +58,7 @@ const faqData = [
   { 
     id: 8, 
     question: "How does LiquidRX ensure medication safety and quality?",
-    answer: "We work exclusively with licensed pharmacies that follow FDA regulations, conduct quality testing, maintain proper storage conditions, and ensure chain-of-custody for all medications dispensed through our platform." 
+    answer: "We provide care for certain conditions that may be appropriate for evaluation and management through telemedicine, in accordance with evidence-based clinical guidelines and applicable state regulations. Services are offered only when a condition can be reasonably assessed and managed remotely using established telehealth protocols." 
   }
 ];
 
@@ -262,7 +262,9 @@ const TheBasics = () => {
             color: "grey.700",
           }}
         >
-          LiquidRX provides FDA-compliant telemedicine services through licensed healthcare providers, ensuring safe, regulated access to prescription medications. Our platform follows strict medical protocols, partners with licensed pharmacies, and maintains full compliance with telehealth regulations across all states we serve. We prioritize patient safety, quality care, and transparent healthcare delivery through modern digital solutions.
+          LiquidRX offers telemedicine services that facilitate access to care through independently licensed medical doctors, where permitted by applicable law. Services are provided in accordance with established clinical standards, applicable federal and state regulations, and recognized telehealth practices. Any prescription decisions are made solely by the treating physician based on an individual clinical evaluation and determination of appropriateness for telemedicine.
+
+LiquidRX utilizes technology to support compliant telehealth encounters and works with appropriately licensed pharmacies, as applicable, to fulfill prescriptions. Services are offered only in jurisdictions where permitted, and only when a patient’s condition may be reasonably evaluated and managed through remote care. Patient safety, regulatory compliance, and transparency are foundational to the platform’s operation.
         </Typography>
       </Box>
     </Box>

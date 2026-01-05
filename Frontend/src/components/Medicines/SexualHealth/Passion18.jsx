@@ -75,7 +75,7 @@ const Passion18Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="PREMIUM VITALITY TABLETS - 18 PACK"
+                  label="COMPOUNDED INTIMATE WELLNESS - 18 PACK"
                   icon={<Flame size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -97,7 +97,7 @@ const Passion18Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Boost Your{" "}
+                  Passion
                   <Box
                     component="span"
                     sx={{
@@ -108,7 +108,7 @@ const Passion18Page = () => {
                       display: "block"
                     }}
                   >
-                    Passion Naturally
+                    – 18 Tablets
                   </Box>
                 </Typography>
 
@@ -121,18 +121,17 @@ const Passion18Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Passion-18 Tablets — premium natural formula with 18 powerful ingredients.
-                  Experience enhanced energy and vitality with our best-value extended supply.
+                  A compounded formula that artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support with best-value 18-tablet supply.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "18 natural ingredients for optimal performance",
-                    "Non-hormonal, safe formulation",
-                    "Suitable for both men & women",
-                    "30-day satisfaction guarantee",
-                    "Best-value 18-tablet supply"
+                    "Creates a richer, more responsive intimate experience",
+                    "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
+                    "For heightened arousal, sustained vitality, and fully elevated intimate wellness",
+                    "Compounded formula (Tadalafil 10mg / Bremelanotide 10mg / Pregnenolone 10mg)",
+                    "Best-value 18-tablet extended supply for continued wellness"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -205,7 +204,7 @@ const Passion18Page = () => {
                       }
                     }}
                   >
-                    Start Your Journey
+                    Order Passion-18 Tablets
                   </Button>
                 </motion.div>
               </motion.div>
@@ -259,9 +258,8 @@ const Passion18Page = () => {
                       fontWeight: 700
                     }}
                   >
-                    POWER INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
-
                 </Box>
               </motion.div>
             </Box>
@@ -269,7 +267,7 @@ const Passion18Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* COMPOUNDED FORMULA SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -290,7 +288,7 @@ const Passion18Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            The Compounded Formula - 18 Tablets
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -307,9 +305,7 @@ const Passion18Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Passion-18 Tablets are formulated based on extensive clinical research and scientific studies. 
-                  Our 18-ingredient synergistic formula has been validated through multiple independent studies 
-                  for natural vitality enhancement and overall well-being improvement.
+                  Passion is specifically compounded for women's intimate wellness. This unique combination of three active ingredients works synergistically to enhance circulation, elevate desire pathways, and provide balanced neuro-hormonal support, now with best-value 18-tablet supply.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -322,7 +318,7 @@ const Passion18Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Active Ingredients (per tablet):
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -334,9 +330,9 @@ const Passion18Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "95% reported significant energy increase within 4 weeks",
-                          "89% experienced improved mood and reduced stress",
-                          "91% noticed enhanced physical stamina"
+                          "Tadalafil 10mg - Enhanced circulation",
+                          "Bremelanotide 10mg - Elevated desire pathways",
+                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -373,9 +369,10 @@ const Passion18Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "97% of users reported better sleep quality",
-                          "91% experienced improved focus and concentration",
-                          "93% would recommend to friends and family"
+                          "Creates deeper, more connected intimate experiences",
+                          "Designed for heightened arousal and sustained vitality",
+                          "Optimal stacking with PT-141, NAD+ Injectable, GHK-Cu",
+                          "Best-value 18-tablet extended supply"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -406,7 +403,7 @@ const Passion18Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Stacking Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -420,22 +417,21 @@ const Passion18Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💫 Optimal Stacking:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 500 participants aged 25-65 • 
-                      Double-blind placebo-controlled • Independent research institution
+                      For fully elevated women's intimate wellness: Stack Passion with PT-141 for heightened arousal, NAD+ Injectable for sustained vitality, and GHK-Cu for comprehensive intimate wellness support. Perfect with our 18-tablet best-value supply.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Formula Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -459,7 +455,7 @@ const Passion18Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Clinical Results
+                    18-Tablet Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -467,7 +463,7 @@ const Passion18Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive study data
+                    Best-value compounded wellness
                   </Typography>
                 </Box>
                 
@@ -479,46 +475,32 @@ const Passion18Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Energy Increase", 
-                      value: "95%", 
+                      label: "Tadalafil", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Reported higher daily energy",
-                      trend: "+27% vs placebo"
+                      description: "Enhanced circulation support",
+                      purpose: "Improves blood flow"
                     },
                     { 
-                      label: "Mood Enhancement", 
-                      value: "89%", 
+                      label: "Bremelanotide", 
+                      value: "10mg", 
                       color: "#003B9D",
-                      description: "Improved emotional well-being",
-                      trend: "+23% vs placebo"
+                      description: "Elevates desire pathways",
+                      purpose: "Heightens arousal"
                     },
                     { 
-                      label: "Physical Stamina", 
-                      value: "91%", 
+                      label: "Pregnenolone", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Better endurance & performance",
-                      trend: "+25% vs placebo"
+                      description: "Neuro-hormonal balance",
+                      purpose: "Supports hormonal pathways"
                     },
                     { 
-                      label: "Sleep Quality", 
-                      value: "97%", 
+                      label: "Total Supply", 
+                      value: "18 Tablets", 
                       color: "#003B9D",
-                      description: "Enhanced rest & recovery",
-                      trend: "+30% vs placebo"
-                    },
-                    { 
-                      label: "Mental Focus", 
-                      value: "91%", 
-                      color: "#00359E",
-                      description: "Improved concentration",
-                      trend: "+24% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "98%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+35% vs placebo"
+                      description: "Best-value extended supply",
+                      purpose: "Continued intimate wellness"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -559,7 +541,7 @@ const Passion18Page = () => {
                           {stat.description}
                         </Typography>
                         <Chip
-                          label={stat.trend}
+                          label={stat.purpose}
                           size="small"
                           sx={{
                             bgcolor: alpha(stat.color, 0.1),
@@ -574,7 +556,7 @@ const Passion18Page = () => {
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Formula Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -587,15 +569,14 @@ const Passion18Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p 0.01) 
-                    across all measured parameters
+                    Specifically compounded for best-value women's intimate wellness enhancement
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Stacking Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -609,7 +590,7 @@ const Passion18Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚀 Enhanced Stacking Potential with Best-Value Supply
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -618,9 +599,7 @@ const Passion18Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Passion-18's formula is supported by 24 peer-reviewed studies published in 
-              leading journals including the Journal of Natural Medicine, International 
-              Journal of Complementary Medicine, and Evidence-Based Complementary Medicine.
+              Passion is designed to stack optimally with PT-141 (for heightened arousal), NAD+ Injectable (for sustained vitality), and GHK-Cu (for comprehensive intimate wellness). This 18-tablet best-value combination creates a fully elevated women's intimate wellness profile.
             </Typography>
           </Box>
         </Container>
@@ -651,7 +630,7 @@ const Passion18Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Passion
                 <Box
                   component="span"
                   sx={{
@@ -661,7 +640,7 @@ const Passion18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Passion-18 Tablet
+                  – 18 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -675,7 +654,7 @@ const Passion18Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium natural vitality tablets with extended 18-tablet supply for optimal energy and performance
+                Compounded intimate wellness tablets with best-value 18-tablet supply for a richer, more responsive, and deeply connected experience
               </Typography>
             </motion.div>
           </Box>
@@ -755,7 +734,7 @@ const Passion18Page = () => {
                     }}
                   >
                     <Pill size={12} />
-                    18 NATURAL INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
 
                   {/* Price Badge */}
@@ -806,7 +785,7 @@ const Passion18Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Passion-18 Tablets
+                    Compounded Passion Tablets - 18 Pack
                   </Typography>
                   <Typography
                     sx={{
@@ -816,7 +795,7 @@ const Passion18Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Passion-18 tablets combine 18 natural ingredients to safely enhance energy, stamina, and overall vitality with our best-value extended supply.
+                    Passion artfully combines enhanced circulation, elevated desire pathways, and balanced neuro-hormonal support to create a richer, more responsive, and deeply connected intimate experience. Now with best-value 18-tablet supply.
                   </Typography>
                 </Box>
 
@@ -824,27 +803,27 @@ const Passion18Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Pill size={24} color="#00359E" />,
-                      title: "Daily Use",
-                      description: "Simple tablet regimen",
+                      icon: <Heart size={24} color="#00359E" />,
+                      title: "Enhanced Desire",
+                      description: "Elevates arousal pathways",
                       color: "#00359E"
                     },
                     {
-                      icon: <Clock size={24} color="#003B9D" />,
-                      title: "Any Time",
-                      description: "Take with or without food",
+                      icon: <Droplet size={24} color="#003B9D" />,
+                      title: "Improved Circulation",
+                      description: "Better blood flow support",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "18-Tablet Pack",
-                      description: "Best-value extended supply",
+                      icon: <Brain size={24} color="#00359E" />,
+                      title: "Hormonal Balance",
+                      description: "Neuro-hormonal support",
                       color: "#00359E"
                     },
                     {
-                      icon: <Calendar size={24} color="#003B9D" />,
-                      title: "2-4 Weeks",
-                      description: "For optimal results",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Best-Value Supply",
+                      description: "18-tablet wellness pack",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -907,15 +886,16 @@ const Passion18Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Treatment Benefits
+                    Intimate Wellness Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "18 natural ingredients - Comprehensive blend for vitality",
-                      "Enhanced energy and stamina with best-value supply",
-                      "Supports mood and overall well-being",
-                      "Perfect for long-term wellness journey",
-                      "Made in pharmaceutical-grade facility"
+                      "Creates richer, more responsive intimate experiences",
+                      "Provides balanced neuro-hormonal support",
+                      "Enhances circulation and desire pathways",
+                      "Stacks optimally with PT-141, NAD+ Injectable, GHK-Cu",
+                      "Compounded for women's intimate wellness enhancement",
+                      "18-tablet best-value supply for extended wellness journey"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -956,7 +936,7 @@ const Passion18Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Experience{" "}
                 <Box
                   component="span"
                   sx={{
@@ -966,7 +946,7 @@ const Passion18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Enhanced Intimacy
                 </Box>
               </Typography>
               <Typography
@@ -980,7 +960,7 @@ const Passion18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal results with your 18-tablet pack
+                Passion creates a comprehensive intimate wellness experience with best-value 18-tablet supply
               </Typography>
             </motion.div>
           </Box>
@@ -989,30 +969,30 @@ const Passion18Page = () => {
             {[
               {
                 step: "01",
-                title: "Take Daily",
-                description: "One tablet with water",
-                icon: "💊",
+                title: "Enhanced Circulation",
+                description: "Improved blood flow support with Tadalafil",
+                icon: "💓",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "Consistent Time",
-                description: "Same time each day",
-                icon: "🕐",
+                title: "Elevated Desire",
+                description: "Heightened arousal with Bremelanotide",
+                icon: "🔥",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "With Food",
-                description: "Take with meal for absorption",
-                icon: "🍽️",
+                title: "Hormonal Balance",
+                description: "Neuro-hormonal support with Pregnenolone",
+                icon: "⚖️",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Extended Supply",
-                description: "18 tablets for continued use",
-                icon: "📦",
+                title: "Best-Value Supply",
+                description: "18-tablets for extended wellness",
+                icon: "💎",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1116,7 +1096,7 @@ const Passion18Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Start Your Vitality
+                Order Passion
                 <Box
                   component="span"
                   sx={{
@@ -1127,7 +1107,7 @@ const Passion18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Journey Today
+                  – 18 Tablets
                 </Box>
               </Typography>
               
@@ -1142,8 +1122,7 @@ const Passion18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join thousands of satisfied users with clinically studied Passion-18 Tablets. 
-                Experience enhanced energy and vitality with our best-value 18-tablet supply.
+                Experience a richer, more responsive, and deeply connected intimate experience with our compounded Passion-18 Tablets. Artfully designed for best-value women's intimate wellness enhancement.
               </Typography>
               
               {/* Pricing Display */}
@@ -1158,6 +1137,15 @@ const Passion18Page = () => {
                   }}
                 >
                   $129.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    fontSize: "1.2rem",
+                    textDecoration: "line-through"
+                  }}
+                >
+                  $189.00
                 </Typography>
               </Box>
               
@@ -1190,7 +1178,7 @@ const Passion18Page = () => {
                       }
                     }}
                   >
-                    Start Now
+                    Order Passion-18 Tablets
                   </Button>
                 </motion.div>
               </Box>
@@ -1204,10 +1192,10 @@ const Passion18Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Shield size={20} />, text: "18 Natural Ingredients" },
-                  { icon: <CheckCircle size={20} />, text: "Clinically Studied" },
-                  { icon: <Package size={20} />, text: "Best-Value Supply" },
-                  { icon: <Clock size={20} />, text: "Fast Results" }
+                  { icon: <Pill size={20} />, text: "Compounded Formula" },
+                  { icon: <Heart size={20} />, text: "Women's Intimate Wellness" },
+                  { icon: <Package size={20} />, text: "18-Tablet Best Value" },
+                  { icon: <Sparkles size={20} />, text: "Stackable with PT-141" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1252,7 +1240,7 @@ const Passion18Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                18-tablet pack • Suitable for men & women • No prescription required • 30-day satisfaction guarantee
+                18-tablet pack • Compounded formula • Stackable with PT-141, NAD+ Injectable, GHK-Cu • Best-value supply for women's intimate wellness
               </Typography>
             </motion.div>
           </Box>

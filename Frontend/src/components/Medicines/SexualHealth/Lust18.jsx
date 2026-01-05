@@ -75,7 +75,7 @@ const Lust18Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="PREMIUM INTIMACY TABLETS - 18 PACK"
+                  label="COMPOUNDED INTIMATE WELLNESS - 18 PACK"
                   icon={<Flame size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
@@ -97,7 +97,7 @@ const Lust18Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Enhance Your{" "}
+                  Lust
                   <Box
                     component="span"
                     sx={{
@@ -108,7 +108,7 @@ const Lust18Page = () => {
                       display: "block"
                     }}
                   >
-                    Intimacy Naturally
+                    – 18 Tablets
                   </Box>
                 </Typography>
 
@@ -121,18 +121,17 @@ const Lust18Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Lust-18 Tablets — premium natural formula designed to enhance intimacy and desire.
-                  Experience heightened passion and connection with our best-value extended supply.
+                  A compounded formula blending gentle circulatory enhancement with balanced neuro-hormonal support to elevate desire, sensitivity, and emotional connection naturally. Now with best-value 18-tablet supply.
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "18 natural aphrodisiac ingredients",
-                    "Safe, non-synthetic formulation",
-                    "Enhances libido and desire",
-                    "30-day satisfaction guarantee",
-                    "Best-value 18-tablet supply"
+                    "Elevates desire, sensitivity, and emotional connection",
+                    "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
+                    "For amplified arousal, deeper vitality, and a more complete intimate experience",
+                    "Compounded formula (Tadalafil 10mg / Pregnenolone 10mg)",
+                    "Best-value 18-tablet supply for continued wellness"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -205,7 +204,7 @@ const Lust18Page = () => {
                       }
                     }}
                   >
-                    Start Your Journey
+                    Order Lust-18 Tablets
                   </Button>
                 </motion.div>
               </motion.div>
@@ -259,7 +258,7 @@ const Lust18Page = () => {
                       fontWeight: 700
                     }}
                   >
-                    18-POWER INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
                 </Box>
               </motion.div>
@@ -268,7 +267,7 @@ const Lust18Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* COMPOUNDED FORMULA SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -289,7 +288,7 @@ const Lust18Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            The Compounded Formula - 18 Tablets
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -306,9 +305,7 @@ const Lust18Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Lust-18 Tablets are formulated based on extensive clinical research and scientific studies. 
-                  Our 18-ingredient synergistic formula has been validated through multiple independent studies 
-                  for enhancing intimacy, desire, and emotional connection.
+                  Lust is specifically compounded for women's intimate wellness. This dual-ingredient formula works synergistically to provide gentle circulatory enhancement and balanced neuro-hormonal support for a natural elevation of desire and connection, now with best-value 18-tablet supply.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -321,7 +318,7 @@ const Lust18Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Active Ingredients (per tablet):
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -333,9 +330,8 @@ const Lust18Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "95% reported enhanced libido within 4 weeks",
-                          "90% experienced improved intimate satisfaction",
-                          "92% noticed increased desire and passion"
+                          "Tadalafil 10mg - Gentle circulatory enhancement",
+                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -372,9 +368,10 @@ const Lust18Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "97% of users reported better emotional connection",
-                          "91% experienced improved sexual wellness",
-                          "94% would recommend to partners"
+                          "Elevates desire and sensitivity naturally",
+                          "Enhances emotional and physical connection",
+                          "Optimal stacking with PT-141, NAD+ Injectable, GHK-Cu",
+                          "Best-value 18-tablet extended supply"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -405,7 +402,7 @@ const Lust18Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Stacking Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -419,22 +416,21 @@ const Lust18Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💫 Optimal Stacking:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      6-month randomized controlled trial • 500 participants aged 25-65 • 
-                      Double-blind placebo-controlled • Independent research institution
+                      For a more complete women's intimate wellness experience: Stack Lust with PT-141 for amplified arousal, NAD+ Injectable for deeper vitality, and GHK-Cu for comprehensive support. Perfect with our 18-tablet best-value supply.
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Formula Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -458,7 +454,7 @@ const Lust18Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    6-Month Clinical Results
+                    18-Tablet Formula
                   </Typography>
                   <Typography
                     sx={{
@@ -466,7 +462,7 @@ const Lust18Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive study data
+                    Best-value compounded wellness
                   </Typography>
                 </Box>
                 
@@ -478,46 +474,25 @@ const Lust18Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Libido Enhancement", 
-                      value: "95%", 
+                      label: "Tadalafil", 
+                      value: "10mg", 
                       color: "#00359E",
-                      description: "Reported increased desire",
-                      trend: "+27% vs placebo"
+                      description: "Gentle circulatory support",
+                      purpose: "Enhances blood flow"
                     },
                     { 
-                      label: "Intimate Satisfaction", 
-                      value: "90%", 
+                      label: "Pregnenolone", 
+                      value: "10mg", 
                       color: "#003B9D",
-                      description: "Improved intimate experiences",
-                      trend: "+23% vs placebo"
+                      description: "Neuro-hormonal balance",
+                      purpose: "Supports desire pathways"
                     },
                     { 
-                      label: "Passion Increase", 
-                      value: "92%", 
+                      label: "Total Supply", 
+                      value: "18 Tablets", 
                       color: "#00359E",
-                      description: "Enhanced romantic passion",
-                      trend: "+25% vs placebo"
-                    },
-                    { 
-                      label: "Emotional Connection", 
-                      value: "97%", 
-                      color: "#003B9D",
-                      description: "Better emotional bonding",
-                      trend: "+30% vs placebo"
-                    },
-                    { 
-                      label: "Sexual Wellness", 
-                      value: "91%", 
-                      color: "#00359E",
-                      description: "Improved sexual health",
-                      trend: "+24% vs placebo"
-                    },
-                    { 
-                      label: "Overall Satisfaction", 
-                      value: "98%", 
-                      color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+35% vs placebo"
+                      description: "Best-value extended supply",
+                      purpose: "Continued intimate wellness"
                     }
                   ].map((stat, index) => (
                     <Box key={index} sx={{ mb: 2 }}>
@@ -558,7 +533,7 @@ const Lust18Page = () => {
                           {stat.description}
                         </Typography>
                         <Chip
-                          label={stat.trend}
+                          label={stat.purpose}
                           size="small"
                           sx={{
                             bgcolor: alpha(stat.color, 0.1),
@@ -573,7 +548,7 @@ const Lust18Page = () => {
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Formula Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -586,15 +561,14 @@ const Lust18Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all measured parameters
+                    Specifically compounded for best-value natural elevation of women's intimate desire and connection
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Stacking Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -608,7 +582,7 @@ const Lust18Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🔄 Enhanced Stacking Potential with Best-Value Supply
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -617,9 +591,7 @@ const Lust18Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Lust-18's formula is supported by 25 peer-reviewed studies published in 
-              leading journals including the Journal of Sexual Medicine, International 
-              Journal of Impotence Research, and Archives of Sexual Behavior.
+              Lust is designed to stack optimally with PT-141 (for amplified arousal), NAD+ Injectable (for deeper vitality), and GHK-Cu (for comprehensive intimate wellness). This 18-tablet best-value combination creates a more complete women's intimate wellness experience.
             </Typography>
           </Box>
         </Container>
@@ -650,7 +622,7 @@ const Lust18Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Lust
                 <Box
                   component="span"
                   sx={{
@@ -660,7 +632,7 @@ const Lust18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Lust-18 Tablet
+                  – 18 Tablets
                 </Box>
               </Typography>
               <Typography
@@ -674,7 +646,7 @@ const Lust18Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium natural intimacy tablets with best-value 18-tablet supply for enhanced desire
+                Compounded intimate wellness tablets with best-value 18-tablet supply to naturally elevate desire, sensitivity, and emotional connection
               </Typography>
             </motion.div>
           </Box>
@@ -754,7 +726,7 @@ const Lust18Page = () => {
                     }}
                   >
                     <Pill size={12} />
-                    18 NATURAL INGREDIENTS
+                    COMPOUNDED FORMULA
                   </Box>
 
                   {/* Price Badge */}
@@ -805,7 +777,7 @@ const Lust18Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium Lust-18 Tablets
+                    Compounded Lust Tablets - 18 Pack
                   </Typography>
                   <Typography
                     sx={{
@@ -815,7 +787,7 @@ const Lust18Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated Lust-18 tablets combine 18 natural ingredients to safely enhance intimacy, desire, and passion with our best-value extended supply.
+                    Lust blends gentle circulatory enhancement with balanced neuro-hormonal support to elevate desire, sensitivity, and emotional connection in a beautifully natural way. Now with best-value 18-tablet supply.
                   </Typography>
                 </Box>
 
@@ -824,26 +796,26 @@ const Lust18Page = () => {
                   {[
                     {
                       icon: <Heart size={24} color="#00359E" />,
-                      title: "Enhances Desire",
-                      description: "Boosts libido naturally",
+                      title: "Elevates Desire",
+                      description: "Enhances natural libido",
                       color: "#00359E"
                     },
                     {
-                      icon: <Clock size={24} color="#003B9D" />,
-                      title: "Any Time",
-                      description: "Take with or without food",
+                      icon: <Droplet size={24} color="#003B9D" />,
+                      title: "Gentle Circulation",
+                      description: "Supports blood flow",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "18-Tablet Pack",
-                      description: "Best-value extended supply",
+                      icon: <Brain size={24} color="#00359E" />,
+                      title: "Hormonal Balance",
+                      description: "Neuro-hormonal support",
                       color: "#00359E"
                     },
                     {
-                      icon: <Calendar size={24} color="#003B9D" />,
-                      title: "2-4 Weeks",
-                      description: "For optimal results",
+                      icon: <Sparkles size={24} color="#003B9D" />,
+                      title: "Best-Value Supply",
+                      description: "18-tablet wellness pack",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -906,15 +878,16 @@ const Lust18Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Intimacy Benefits
+                    Intimate Wellness Benefits
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "18 natural aphrodisiac ingredients for enhanced desire",
-                      "Improves libido and sexual wellness",
-                      "Enhances emotional and physical connection",
-                      "Supports healthy intimate relationships",
-                      "Made in pharmaceutical-grade facility"
+                      "Elevates desire, sensitivity, and emotional connection naturally",
+                      "Provides balanced neuro-hormonal support",
+                      "Offers gentle circulatory enhancement",
+                      "Stacks optimally with PT-141, NAD+ Injectable, GHK-Cu",
+                      "Compounded for a more complete women's intimate wellness experience",
+                      "18-tablet best-value supply for continued wellness journey"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -955,7 +928,7 @@ const Lust18Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Experience{" "}
                 <Box
                   component="span"
                   sx={{
@@ -965,7 +938,7 @@ const Lust18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Natural Connection
                 </Box>
               </Typography>
               <Typography
@@ -979,7 +952,7 @@ const Lust18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal intimacy enhancement
+                Lust works to create a more natural and complete intimate wellness experience with best-value 18-tablet supply
               </Typography>
             </motion.div>
           </Box>
@@ -988,30 +961,30 @@ const Lust18Page = () => {
             {[
               {
                 step: "01",
-                title: "Take Daily",
-                description: "One tablet with water",
-                icon: "💊",
+                title: "Gentle Circulation",
+                description: "Enhanced blood flow support with Tadalafil",
+                icon: "💓",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "Evening Use",
-                description: "Best taken in evening",
-                icon: "🌙",
+                title: "Desire Elevation",
+                description: "Natural libido support with Pregnenolone",
+                icon: "🔥",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "With Food",
-                description: "Take with meal for absorption",
-                icon: "🍽️",
+                title: "Emotional Connection",
+                description: "Enhanced sensitivity and bonding",
+                icon: "💞",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Extended Supply",
-                description: "18 tablets for continued use",
-                icon: "📦",
+                title: "Best-Value Supply",
+                description: "18-tablets for extended wellness",
+                icon: "💎",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1115,7 +1088,7 @@ const Lust18Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Enhance Your{" "}
+                Order Lust
                 <Box
                   component="span"
                   sx={{
@@ -1126,7 +1099,7 @@ const Lust18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Intimacy Today
+                  – 18 Tablets
                 </Box>
               </Typography>
               
@@ -1141,8 +1114,7 @@ const Lust18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join thousands of satisfied users with clinically studied Lust-18 Tablets. 
-                Experience enhanced desire and passion with our best-value 18-tablet supply.
+                Elevate desire, sensitivity, and emotional connection with our compounded Lust-18 Tablets. Beautifully designed for a more natural and complete women's intimate wellness experience with best-value supply.
               </Typography>
               
               {/* Pricing Display */}
@@ -1157,6 +1129,15 @@ const Lust18Page = () => {
                   }}
                 >
                   $89.00
+                </Typography>
+                <Typography
+                  sx={{
+                    color: "rgba(255, 255, 255, 0.7)",
+                    fontSize: "1.2rem",
+                    textDecoration: "line-through"
+                  }}
+                >
+                  $169.00
                 </Typography>
               </Box>
               
@@ -1189,7 +1170,7 @@ const Lust18Page = () => {
                       }
                     }}
                   >
-                    Start Now
+                    Order Lust-18 Tablets
                   </Button>
                 </motion.div>
               </Box>
@@ -1203,10 +1184,10 @@ const Lust18Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Shield size={20} />, text: "Natural Formula" },
-                  { icon: <CheckCircle size={20} />, text: "Clinically Studied" },
-                  { icon: <Package size={20} />, text: "Best-Value Supply" },
-                  { icon: <Heart size={20} />, text: "Enhances Desire" }
+                  { icon: <Pill size={20} />, text: "Compounded Formula" },
+                  { icon: <Heart size={20} />, text: "Women's Intimate Wellness" },
+                  { icon: <Package size={20} />, text: "18-Tablet Best Value" },
+                  { icon: <Sparkles size={20} />, text: "Stackable with PT-141" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1251,7 +1232,7 @@ const Lust18Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                18-tablet pack • Suitable for men & women • No prescription required • 30-day satisfaction guarantee
+                18-tablet pack • Compounded formula • Stackable with PT-141, NAD+ Injectable, GHK-Cu • Best-value supply for women's intimate wellness
               </Typography>
             </motion.div>
           </Box>

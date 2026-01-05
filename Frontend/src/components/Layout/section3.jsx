@@ -1,5 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
-import heroImage from "../../assets/images/card9.png";
+import heroImage from "../../assets/section/img2.png";
 import phoneImg from "../../assets/medical experts/img1removed.png";
 import foodImg from "../../assets/images/card6-removebg-preview.png";
 import myVideo from '../../assets/Videos/video2.mp4';
@@ -29,7 +29,7 @@ export default function HeroTextSection() {
           position: "relative",
           zIndex: 3,
           width: "100%",
-          mt: { xs: 0, sm: 0, md: 0, lg: 0 },
+          mt: { xs: "-5px", sm: "-8px", md: "-10px", lg: "-12px" },
         }}
       >
         <Typography
@@ -47,6 +47,7 @@ export default function HeroTextSection() {
             px: { xs: 2, sm: 3 },
             mx: "auto",
             position: "relative",
+            mb: { xs: 2, sm: 3, md: 4, lg: 5 },
           }}
         >
           Access FDA-Compliant
@@ -61,7 +62,7 @@ export default function HeroTextSection() {
           position: "relative",
           zIndex: 1,
           width: "100%",
-          mt: { xs: -4, sm: -6, md: -8, lg: -10 }, // Negative margin to pull image up
+          mt: { xs: 0, sm: -2, md: -4, lg: -6 },
         }}
       >
         <Box
@@ -89,7 +90,7 @@ export default function HeroTextSection() {
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           gap: { xs: 1.5, sm: 2 },
-          mt: { xs: -6, sm: -8, md: -10, lg: -14 }, // More negative margin
+          mt: { xs: -6, sm: -8, md: -10, lg: -14 },
           zIndex: 4,
           px: { xs: 2, sm: 3 },
           width: { xs: "90%", sm: "auto" },
@@ -256,7 +257,7 @@ export default function HeroTextSection() {
               color: "#ffffff",
               fontWeight: 500,
               textTransform: "none",
-              mt: { xs: 2, sm: 2.5, md: 3 },
+              mt: { xs: 2, sm: 2.5, md: 2 },
               fontSize: { xs: "13px", sm: "14px", md: "15px" },
               "&:hover": { backgroundColor: "#003B9D" },
               zIndex: 2,
@@ -266,118 +267,118 @@ export default function HeroTextSection() {
           </Button>
         </Box>
 
-       {/* CARD 2 */}
-<Box
-  sx={{
-    flex: 1,
-    minHeight: { 
-      xs: "400px", 
-      sm: "450px", 
-      md: "520px", 
-      lg: "600px" 
-    },
-    borderRadius: { xs: "16px", sm: "18px", md: "20px" },
-    background: "rgba(255, 255, 255, 0.12)",
-    backdropFilter: "blur(14px)",
-    border: "1px solid rgba(255, 255, 255, 0.25)",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    overflow: "hidden",
-    pt: { xs: 3, sm: 3.5, md: 4, lg: 6 },
-    px: { xs: 1.5, sm: 2, md: 2 },
-  }}
->
-  <Typography
-    sx={{
-      fontSize: { 
-        xs: "22px", 
-        sm: "24px", 
-        md: "28px", 
-        lg: "48px" 
-      },
-      fontWeight: 400,
-      color: "#ffffff",
-      lineHeight: 1.05,
-    }}
-  >
-    Comprehensive
-  </Typography>
+        {/* CARD 2 */}
+        <Box
+          sx={{
+            flex: 1,
+            minHeight: { 
+              xs: "400px", 
+              sm: "450px", 
+              md: "520px", 
+              lg: "600px" 
+            },
+            borderRadius: { xs: "16px", sm: "18px", md: "20px" },
+            background: "rgba(255, 255, 255, 0.12)",
+            backdropFilter: "blur(14px)",
+            border: "1px solid rgba(255, 255, 255, 0.25)",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            overflow: "hidden",
+            pt: { xs: 3, sm: 3.5, md: 4, lg: 6 },
+            px: { xs: 1.5, sm: 2, md: 2 },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: { 
+                xs: "22px", 
+                sm: "24px", 
+                md: "28px", 
+                lg: "48px" 
+              },
+              fontWeight: 400,
+              color: "#ffffff",
+              lineHeight: 1.05,
+            }}
+          >
+            Comprehensive
+          </Typography>
 
-  <Typography
-    sx={{
-      fontSize: { 
-        xs: "28px", 
-        sm: "32px", 
-        md: "36px", 
-        lg: "38px" 
-      },
-      fontWeight: 600,
-      color: "#8B8D8E",
-      lineHeight: 1.25,
-      mt: { xs: -0.25, sm: -0.5 },
-    }}
-  >
-    Wellness Support
-  </Typography>
+          <Typography
+            sx={{
+              fontSize: { 
+                xs: "28px", 
+                sm: "32px", 
+                md: "36px", 
+                lg: "38px" 
+              },
+              fontWeight: 600,
+              color: "#8B8D8E",
+              lineHeight: 1.25,
+              mt: { xs: -0.25, sm: -0.5 },
+            }}
+          >
+            Wellness Support
+          </Typography>
 
-  <Typography
-    sx={{
-      mt: { xs: 1.5, sm: 1.75, md: 2 },
-      fontSize: { 
-        xs: "13px", 
-        sm: "14px", 
-        md: "15px", 
-        lg: "17px" 
-      },
-      maxWidth: { xs: "90%", sm: "85%", md: "360px" },
-      lineHeight: 1.4,
-      textAlign: "center",
-      px: { xs: 1, sm: 0 },
-    }}
-  >
-    <Box component="span" sx={{ color: "#FFFFFF" }}>
-      Access nutritional guidance, healthy recipes, and lifestyle coaching
-    </Box>{" "}
-    <Box component="span" sx={{ color: "#8B8D8E" }}>
-      alongside your medical treatment for holistic weight management.
-    </Box>
-  </Typography>
+          <Typography
+            sx={{
+              mt: { xs: 1.5, sm: 1.75, md: 2 },
+              fontSize: { 
+                xs: "13px", 
+                sm: "14px", 
+                md: "15px", 
+                lg: "17px" 
+              },
+              maxWidth: { xs: "90%", sm: "85%", md: "360px" },
+              lineHeight: 1.4,
+              textAlign: "center",
+              px: { xs: 1, sm: 0 },
+            }}
+          >
+            <Box component="span" sx={{ color: "#FFFFFF" }}>
+              Access nutritional guidance, healthy recipes, and lifestyle coaching
+            </Box>{" "}
+            <Box component="span" sx={{ color: "#8B8D8E" }}>
+              alongside your medical treatment for holistic weight management.
+            </Box>
+          </Typography>
 
-  <Button
-    onClick={() => window.open(rimoFormUrl, "_blank")}
-    sx={{
-      px: { xs: 3, sm: 3.5, md: 4 },
-      py: { xs: 1, sm: 1.2, md: 1.3 },
-      borderRadius: "999px",
-      backgroundColor: "#8B8D8E",
-      color: "#ffffff",
-      fontWeight: 500,
-      textTransform: "none",
-      mt: { xs: 2, sm: 2.5, md: 3 },
-      fontSize: { xs: "13px", sm: "14px", md: "15px" },
-      "&:hover": { backgroundColor: "#003B9D" },
-      zIndex: 2,
-    }}
-  >
-    Start Wellness Program
-  </Button>
+          <Button
+            onClick={() => window.open(rimoFormUrl, "_blank")}
+            sx={{
+              px: { xs: 3, sm: 3.5, md: 4 },
+              py: { xs: 1, sm: 1.2, md: 1.3 },
+              borderRadius: "999px",
+              backgroundColor: "#8B8D8E",
+              color: "#ffffff",
+              fontWeight: 500,
+              textTransform: "none",
+              mt: { xs: 2, sm: 2.5, md: 3 },
+              fontSize: { xs: "13px", sm: "14px", md: "15px" },
+              "&:hover": { backgroundColor: "#003B9D" },
+              zIndex: 2,
+            }}
+          >
+            Start Wellness Program
+          </Button>
 
-  <Box
-    component="img"
-    src={foodImg}
-    alt="healthy nutrition"
-    sx={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      mt: { xs: 2, sm: 2.5, md: 3 },
-      flex: 1,
-      position: "relative",
-    }}
-  />
-</Box>
+          <Box
+            component="img"
+            src={foodImg}
+            alt="healthy nutrition"
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              mt: { xs: 2, sm: 2.5, md: 3 },
+              flex: 1,
+              position: "relative",
+            }}
+          />
+        </Box>
       </Box>
 
       {/* HUGE ROUND-CORNERED CARD */}
@@ -461,7 +462,7 @@ export default function HeroTextSection() {
             fontWeight: 700,
             color: "#7D8FACFF",
             textAlign: "center",
-            mt: { xs: -1, sm: -1.5, md: -2, lg: -3 },
+           mt: { xs: 0.5, sm: 0.5, md: 0.5, lg: 0.5 }  // All breakpoints get 0.5
           }}
         >
           Personalized Care
@@ -516,26 +517,26 @@ export default function HeroTextSection() {
       </Box>
 
       {/* FOOTER TEXT */}
-     <Typography
-  sx={{
-    fontSize: { 
-      xs: "10px", 
-      sm: "11px", 
-      md: "14px", 
-      lg: "16px" 
-    },
-    color: "#ffffff",
-    textAlign: "center",
-    mt: { xs: 4, sm: 5, md: 5.5, lg: 6 },
-    mb: { xs: 3, sm: 3.5, md: 4, lg: 4 },
-    px: { xs: 2, sm: 3, md: 4, lg: 2 },
-    maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "900px" },
-    lineHeight: 1.4,
-  }}
->
-  Compounded drug products are not approved or evaluated for safety, effectiveness, or quality by the FDA.<br/>
-  Prescription medications require provider evaluation and medical approval. Telemedicine services available where permitted by law.
-</Typography>
+      <Typography
+        sx={{
+          fontSize: { 
+            xs: "10px", 
+            sm: "11px", 
+            md: "14px", 
+            lg: "16px" 
+          },
+          color: "#ffffff",
+          textAlign: "center",
+          mt: { xs: 4, sm: 5, md: 5.5, lg: 6 },
+          mb: { xs: 3, sm: 3.5, md: 4, lg: 4 },
+          px: { xs: 2, sm: 3, md: 4, lg: 2 },
+          maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "900px" },
+          lineHeight: 1.4,
+        }}
+      >
+        Compounded drug products are not approved or evaluated for safety, effectiveness, or quality by the FDA.<br/>
+        Prescription medications require provider evaluation and medical approval. Telemedicine services available where permitted by law.
+      </Typography>
       
       <Box sx={{ flexGrow: 1 }} />
     </Box>

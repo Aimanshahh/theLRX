@@ -11,31 +11,18 @@ import {
 import { alpha } from "@mui/material/styles";
 import { motion } from "framer-motion";
 
-// Lucide icons
+// Updated Lucide icons for ED/telehealth focus
 import {
-  Zap,
-  Battery,
-  Rocket,
   CheckCircle,
   Package,
-  Clock,
-  Calendar,
   ArrowRight,
+  Heart,
   Shield,
   Users,
-  Star,
-  Target,
-  TrendingUp,
-  Brain,
-  Eye,
-  Focus,
-  Flame,
-  Heart,
-  Pill,
   Truck,
-  Sparkles,
-  Droplet,
-  Leaf
+  Stethoscope,
+  UserCheck,
+  Zap
 } from "lucide-react";
 
 // Images
@@ -43,9 +30,15 @@ import heroImage from "../../../assets/Medicines/menintimacy.png";
 import productImage from "../../../assets/Medicines/menintimacy.png";
 
 const OverdrivePlus6Page = () => {
+  const rimioUrl = "https://try.thelrx.com/intake/ed-fmmbgk";
+
+  const handleCtaClick = () => {
+    window.open(rimioUrl, "_blank", "noopener,noreferrer");
+  };
+  
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -77,8 +70,8 @@ const OverdrivePlus6Page = () => {
                 transition={{ duration: 0.8 }}
               >
                 <Chip
-                  label="ENERGY & PERFORMANCE FORMULA - 6 TABLETS"
-                  icon={<Zap size={16} />}
+                  label="COMPOUNDED ED MEDICATION - 6 TABLETS"
+                  icon={<Package size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
                     color: "#00359E",
@@ -99,19 +92,7 @@ const OverdrivePlus6Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Unleash Your{" "}
-                  <Box
-                    component="span"
-                    sx={{
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      color: "transparent",
-                      display: "block"
-                    }}
-                  >
-                    Peak Performance
-                  </Box>
+                  Overdrive Plus – 6 Tablets
                 </Typography>
 
                 <Typography
@@ -123,19 +104,20 @@ const OverdrivePlus6Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  OverDrive Plus 6 Tablets — premium energy and performance formula designed 
-                  to boost energy levels, enhance endurance, and maximize physical performance.
-                  Experience sustained energy for 8+ hours.
+                  Overdrive Plus unites elevated circulation support, desire-enhancing neuroactivation, and antioxidant-fortified blood-flow synergy to create a more responsive, energized, and deeply connected intimate experience.
+                  <Box component="span" sx={{ display: 'block', mt: 1, fontWeight: 600, color: "#00359E" }}>
+                    (Tadalafil 20mg / Bremelanotide 5mg / Pycnogenol 25mg)
+                  </Box>
                 </Typography>
 
-                {/* FEATURES */}
+                {/* UPDATED FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Sustained energy for 8+ hours",
-                    "Enhanced physical endurance",
-                    "Reduces fatigue and lethargy",
-                    "Improves focus and alertness",
-                    "30-day satisfaction guarantee"
+                    "Designed to help men overcome erectile challenges and restore confidence",
+                    "Consultation with a licensed provider",
+                    "Personalized treatment plans tailored to your unique needs",
+                    "Medications delivered privately and discreetly to your door",
+                    "Convenient telehealth platform for easy and ongoing access to care"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -154,7 +136,7 @@ const OverdrivePlus6Page = () => {
                   ))}
                 </Box>
 
-                {/* PRICING */}
+                {/* UPDATED PRICING */}
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
                   <Box>
                     <Typography
@@ -170,15 +152,14 @@ const OverdrivePlus6Page = () => {
                     <Typography
                       sx={{
                         color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
+                        fontSize: "1rem"
                       }}
                     >
-                      $129.00
+                      6-tablet treatment pack
                     </Typography>
                   </Box>
                   <Chip
-                    label="39% OFF"
+                    label="COMPOUNDED"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -193,7 +174,7 @@ const OverdrivePlus6Page = () => {
                     variant="contained"
                     size="large"
                     endIcon={<ArrowRight />}
-                    href="https://try.thelrx.com/intake/ed-fmmbgk"
+                    onClick={handleCtaClick}
                     sx={{
                       px: { xs: 3, md: 5 },
                       py: 1.8,
@@ -208,13 +189,13 @@ const OverdrivePlus6Page = () => {
                       }
                     }}
                   >
-                    Boost Energy Now
+                    Start Your Consultation
                   </Button>
                 </motion.div>
               </motion.div>
             </Box>
 
-            {/* RIGHT IMAGE SECTION */}
+            {/* RIGHT IMAGE SECTION - UPDATED */}
             <Box
               sx={{
                 flex: 1,
@@ -239,7 +220,7 @@ const OverdrivePlus6Page = () => {
                   <Box
                     component="img"
                     src={heroImage}
-                    alt="OverDrive Plus 6 Tablets"
+                    alt="Overdrive Plus 6 Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "300px", md: "500px" },
@@ -265,10 +246,35 @@ const OverdrivePlus6Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Zap size={12} />
-                    MAX ENERGY
+                    <Heart size={12} />
+                    ED MEDICATION
                   </Box>
                   
+                  {/* UPDATED PRICE BADGE */}
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: 20,
+                      right: 20,
+                      bgcolor: "#00359E",
+                      color: "#FFFFFF",
+                      px: 2.5,
+                      py: 1.5,
+                      borderRadius: "12px",
+                      fontSize: "1.5rem",
+                      fontWeight: 900,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center"
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
+                      6 Tablets
+                    </Typography>
+                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
+                      $79
+                    </Typography>
+                  </Box>
                 </Box>
               </motion.div>
             </Box>
@@ -276,7 +282,7 @@ const OverdrivePlus6Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* TELEHEALTH PROCESS SECTION - REPLACED SCIENTIFIC SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -297,7 +303,7 @@ const OverdrivePlus6Page = () => {
               textAlign: "center"
             }}
           >
-            Scientific Evidence & Research
+            ED Treatment in 3 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -314,10 +320,7 @@ const OverdrivePlus6Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  OverDrive Plus 6 Tablets are formulated based on extensive research in sports 
-                  nutrition and energy metabolism. Our scientifically-backed formula has been 
-                  validated through clinical studies for enhancing energy, endurance, and 
-                  physical performance.
+                  LiquidRX makes it simple to access expert care. Our telehealth platform ensures privacy and convenience, allowing you to take charge of your health with confidence. From consultation to treatment, we're here to support you every step of the way.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -330,7 +333,7 @@ const OverdrivePlus6Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    Key Research Findings:
+                    Simple. Convenient. Effective.
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -342,9 +345,9 @@ const OverdrivePlus6Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "92% reported sustained energy for 8+ hours",
-                          "88% experienced improved physical endurance",
-                          "87% noticed reduced fatigue and tiredness"
+                          "Fill out the medical form online",
+                          "Attend your telehealth consultation with a licensed provider",
+                          "Start your personalized ED treatment plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -381,9 +384,9 @@ const OverdrivePlus6Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "90% of users reported better workout performance",
-                          "86% experienced enhanced mental alertness",
-                          "94% would recommend for energy boost"
+                          "Receive medications discreetly at your door",
+                          "Get ongoing support from experienced providers",
+                          "Enjoy customized solutions for optimal results"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -414,7 +417,7 @@ const OverdrivePlus6Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Service Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -428,22 +431,21 @@ const OverdrivePlus6Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Study Parameters:
+                      💊 Treatment Program:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      8-week randomized controlled trial • 300 active participants aged 18-55 • 
-                      Double-blind placebo-controlled • Independent sports science institute
+                      $297 first month for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Steps Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -467,7 +469,7 @@ const OverdrivePlus6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    8-Week Performance Results
+                    Complete Treatment Plan
                   </Typography>
                   <Typography
                     sx={{
@@ -475,7 +477,7 @@ const OverdrivePlus6Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Based on comprehensive energy study data
+                    Everything you need for confidence restored
                   </Typography>
                 </Box>
                 
@@ -487,102 +489,91 @@ const OverdrivePlus6Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Sustained Energy", 
-                      value: "92%", 
+                      label: "Telehealth Consultation", 
+                      value: "Included", 
                       color: "#00359E",
-                      description: "8+ hours of energy",
-                      trend: "+35% vs placebo"
+                      description: "With licensed provider",
+                      icon: "👨‍⚕️"
                     },
                     { 
-                      label: "Physical Endurance", 
-                      value: "88%", 
+                      label: "Personalized Plan", 
+                      value: "Custom", 
                       color: "#003B9D",
-                      description: "Improved stamina",
-                      trend: "+28% vs placebo"
+                      description: "Tailored to your needs",
+                      icon: "📋"
                     },
                     { 
-                      label: "Fatigue Reduction", 
-                      value: "87%", 
+                      label: "Medication Delivery", 
+                      value: "Discreet", 
                       color: "#00359E",
-                      description: "Less tiredness",
-                      trend: "+32% vs placebo"
+                      description: "To your door",
+                      icon: "📦"
                     },
                     { 
-                      label: "Workout Performance", 
-                      value: "90%", 
+                      label: "Ongoing Support", 
+                      value: "24/7", 
                       color: "#003B9D",
-                      description: "Better exercise output",
-                      trend: "+30% vs placebo"
+                      description: "Provider access",
+                      icon: "🔄"
                     },
                     { 
-                      label: "Mental Alertness", 
-                      value: "86%", 
+                      label: "Wellness Profile", 
+                      value: "Optimized", 
                       color: "#00359E",
-                      description: "Enhanced focus",
-                      trend: "+26% vs placebo"
+                      description: "Performance focused",
+                      icon: "💪"
                     },
                     { 
-                      label: "Overall Satisfaction", 
-                      value: "94%", 
+                      label: "Shipping", 
+                      value: "All 50 States", 
                       color: "#003B9D",
-                      description: "Would recommend",
-                      trend: "+38% vs placebo"
+                      description: "Nationwide delivery",
+                      icon: "🇺🇸"
                     }
                   ].map((stat, index) => (
-                    <Box key={index} sx={{ mb: 2 }}>
+                    <Box key={index} sx={{ mb: 2, p: 2, borderRadius: "8px", bgcolor: alpha(stat.color, 0.05) }}>
                       <Box sx={{ 
                         display: "flex", 
                         justifyContent: "space-between", 
                         alignItems: "center",
                         mb: 0.5
                       }}>
-                        <Typography sx={{ 
-                          color: "#000000", 
-                          fontWeight: 600,
-                          fontSize: "1rem"
-                        }}>
-                          {stat.label}
-                        </Typography>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                          <Typography sx={{ fontSize: "1.2rem" }}>
+                            {stat.icon}
+                          </Typography>
+                          <Typography sx={{ 
+                            color: "#000000", 
+                            fontWeight: 600,
+                            fontSize: "1rem"
+                          }}>
+                            {stat.label}
+                          </Typography>
+                        </Box>
                         <Typography
                           sx={{
                             color: stat.color,
                             fontWeight: 900,
-                            fontSize: "1.5rem"
+                            fontSize: "1.1rem"
                           }}
                         >
                           {stat.value}
                         </Typography>
                       </Box>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
-                        alignItems: "center"
-                      }}>
-                        <Typography
-                          sx={{
-                            color: "#8B8D8E",
-                            fontSize: "0.85rem"
-                          }}
-                        >
-                          {stat.description}
-                        </Typography>
-                        <Chip
-                          label={stat.trend}
-                          size="small"
-                          sx={{
-                            bgcolor: alpha(stat.color, 0.1),
-                            color: stat.color,
-                            fontWeight: 600,
-                            fontSize: "0.75rem",
-                            height: "22px"
-                          }}
-                        />
-                      </Box>
+                      <Typography
+                        sx={{
+                          color: "#8B8D8E",
+                          fontSize: "0.85rem",
+                          pl: 3
+                        }}
+                      >
+                        {stat.description}
+                      </Typography>
                     </Box>
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Service Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -595,15 +586,14 @@ const OverdrivePlus6Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Statistically significant improvements (p  0.01) 
-                    across all performance parameters
+                    Empowering Men's Health and Wellness
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Additional Service Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -617,7 +607,7 @@ const OverdrivePlus6Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              📚 Peer-Reviewed Publications
+              🚚 We Proudly Ship to All 50 States
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -626,15 +616,13 @@ const OverdrivePlus6Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              OverDrive Plus's formula is supported by 12 peer-reviewed studies published in 
-              leading journals including Journal of Sports Sciences, Medicine & Science in 
-              Sports & Exercise, and International Journal of Sport Nutrition.
+              Order your medications anytime — 24/7/365. Private, discreet packaging with nationwide delivery.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      {/* PRODUCT SHOWCASE SECTION */}
+      {/* SERVICE BENEFITS SECTION - REPLACED PRODUCT SHOWCASE */}
       <Box
         sx={{
           py: { xs: 10, md: 14 },
@@ -658,7 +646,7 @@ const OverdrivePlus6Page = () => {
                   mb: 2
                 }}
               >
-                The{" "}
+                Personalized{" "}
                 <Box
                   component="span"
                   sx={{
@@ -668,9 +656,8 @@ const OverdrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  OverDrive Plus
+                  ED Treatment Plans
                 </Box>
-                {" "}6 Tablets
               </Typography>
               <Typography
                 variant="h6"
@@ -683,13 +670,13 @@ const OverdrivePlus6Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Premium energy tablets for sustained performance, enhanced endurance, and maximum output
+                Liquid Rx provides customized solutions to help you achieve better performance and satisfaction.
               </Typography>
             </motion.div>
           </Box>
 
           <Grid container spacing={6} alignItems="center">
-            {/* Product Image */}
+            {/* Service Image */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -703,17 +690,16 @@ const OverdrivePlus6Page = () => {
                     borderRadius: "24px",
                     overflow: "hidden",
                     boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
-                    transform: "perspective(1000px) rotateY(-5deg)",
-                    transition: "transform 0.5s ease",
                     "&:hover": {
-                      transform: "perspective(1000px) rotateY(0deg)"
+                      transform: "translateY(-5px)",
+                      transition: "transform 0.3s ease"
                     }
                   }}
                 >
                   <Box
                     component="img"
                     src={productImage}
-                    alt="OverDrive Plus 6 Tablets"
+                    alt="Men's Health Telemedicine Service"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -722,7 +708,7 @@ const OverdrivePlus6Page = () => {
                     }}
                   />
                   
-                  {/* Floating Badges */}
+                  {/* UPDATED Floating Badges */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -745,7 +731,7 @@ const OverdrivePlus6Page = () => {
                     6-TABLET PACK
                   </Box>
                   
-                  {/* Price Badge */}
+                  {/* UPDATED Info Badge */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -765,17 +751,17 @@ const OverdrivePlus6Page = () => {
                     }}
                   >
                     <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
-                      Only
+                      Advanced
                     </Typography>
-                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $79
+                    <Typography sx={{ fontSize: "1.1rem", lineHeight: 1 }}>
+                      Formula
                     </Typography>
                   </Box>
                 </Box>
               </motion.div>
             </Grid>
 
-            {/* Product Details */}
+            {/* Service Details */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
@@ -793,7 +779,7 @@ const OverdrivePlus6Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Premium OverDrive Plus Formula
+                    Direct Access to Your Health Provider
                   </Typography>
                   <Typography
                     sx={{
@@ -803,36 +789,35 @@ const OverdrivePlus6Page = () => {
                       mb: 3
                     }}
                   >
-                    Our scientifically formulated OverDrive Plus tablets provide sustained energy, 
-                    enhanced physical performance, and reduced fatigue for peak daily output.
+                    With Liquid Rx, you'll have ongoing support from experienced providers through virtual consultations. We'll be with you every step of the way, ensuring your treatment plan delivers the results you're looking for.
                   </Typography>
                 </Box>
 
-                {/* Key Features */}
+                {/* UPDATED Key Features */}
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Zap size={24} color="#00359E" />,
-                      title: "8+ Hour Energy",
-                      description: "Sustained performance",
+                      icon: <UserCheck size={24} color="#00359E" />,
+                      title: "Licensed Providers",
+                      description: "Experienced medical professionals",
                       color: "#00359E"
                     },
                     {
-                      icon: <Battery size={24} color="#003B9D" />,
-                      title: "Enhanced Endurance",
-                      description: "Improved stamina",
+                      icon: <Shield size={24} color="#003B9D" />,
+                      title: "Private & Discreet",
+                      description: "Confidential treatment",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "6-Tablet Pack",
-                      description: "Optimal monthly supply",
+                      icon: <Stethoscope size={24} color="#00359E" />,
+                      title: "Customized Plans",
+                      description: "Tailored to your needs",
                       color: "#00359E"
                     },
                     {
-                      icon: <Rocket size={24} color="#003B9D" />,
-                      title: "Peak Performance",
-                      description: "Maximum output",
+                      icon: <Truck size={24} color="#003B9D" />,
+                      title: "Doorstep Delivery",
+                      description: "Nationwide shipping",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -873,7 +858,7 @@ const OverdrivePlus6Page = () => {
                   ))}
                 </Grid>
 
-                {/* Formula Benefits */}
+                {/* UPDATED Service Benefits */}
                 <Card
                   sx={{
                     p: 3,
@@ -895,15 +880,15 @@ const OverdrivePlus6Page = () => {
                     }}
                   >
                     <Zap size={20} />
-                    Performance Benefits
+                    Optimized Performance Stack
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Sustained energy release for 8+ hours",
-                      "Enhanced physical endurance and stamina",
-                      "Reduced fatigue and mental tiredness",
-                      "Improved focus and mental alertness",
-                      "Made in pharmaceutical-grade facility"
+                      "Stacks best with NAD+ Injectable for amplified stamina",
+                      "Combines with CJC-1295/Ipamorelin for optimized profile",
+                      "Pairs with PT-141 for heightened sensitivity",
+                      "Creates fully optimized performance and wellness profile",
+                      "Provides elevated circulation with desire-enhancing neuroactivation"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -920,7 +905,7 @@ const OverdrivePlus6Page = () => {
         </Container>
       </Box>
 
-      {/* HOW IT WORKS SECTION */}
+      {/* HOW IT WORKS SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -944,7 +929,7 @@ const OverdrivePlus6Page = () => {
                   mb: 2
                 }}
               >
-                How to{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -954,7 +939,7 @@ const OverdrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Use Properly
+                  Restored
                 </Box>
               </Typography>
               <Typography
@@ -968,7 +953,7 @@ const OverdrivePlus6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Follow these simple steps for optimal energy and performance
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works.
               </Typography>
             </motion.div>
           </Box>
@@ -977,30 +962,30 @@ const OverdrivePlus6Page = () => {
             {[
               {
                 step: "01",
-                title: "Morning Dose",
-                description: "One tablet with water",
-                icon: "🌅",
+                title: "Complete Medical Form",
+                description: "Simple online assessment",
+                icon: "📋",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "With Breakfast",
-                description: "Take with morning meal",
-                icon: "🍽️",
+                title: "Virtual Consultation",
+                description: "With licensed provider",
+                icon: "👨‍⚕️",
                 color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Pre-Workout",
-                description: "30 minutes before exercise",
-                icon: "💪",
+                title: "Personalized Treatment",
+                description: "Customized plan for you",
+                icon: "💊",
                 color: "#00359E"
               },
               {
                 step: "04",
-                title: "Daily Energy",
-                description: "Sustained 8+ hours",
-                icon: "⚡",
+                title: "Discreet Delivery",
+                description: "Medications to your door",
+                icon: "📦",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1074,7 +1059,7 @@ const OverdrivePlus6Page = () => {
         </Container>
       </Box>
 
-      {/* FINAL CTA SECTION */}
+      {/* FINAL CTA SECTION - UPDATED */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -1104,7 +1089,7 @@ const OverdrivePlus6Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Unleash Your{" "}
+                Life{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1115,7 +1100,7 @@ const OverdrivePlus6Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Peak Performance
+                  Reimagined
                 </Box>
               </Typography>
               
@@ -1130,11 +1115,10 @@ const OverdrivePlus6Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Experience sustained energy and enhanced performance with OverDrive Plus 6 Tablets. 
-                Get 8+ hours of focused energy and improved endurance for your busy lifestyle.
+                Our ED treatments provide discreet, effective solutions to help men overcome challenges and restore confidence. Designed to improve performance and support overall wellness.
               </Typography>
               
-              {/* Pricing Display */}
+              {/* UPDATED Pricing Display */}
               <Box sx={{ mb: 4, display: "inline-block" }}>
                 <Typography
                   variant="h3"
@@ -1147,9 +1131,12 @@ const OverdrivePlus6Page = () => {
                 >
                   $79.00
                 </Typography>
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                  Overdrive Plus 6 Tablets • Telehealth Included • 24/7 Support
+                </Typography>
               </Box>
               
-              {/* Single Start Now Button */}
+              {/* UPDATED Single Start Now Button */}
               <Box sx={{ mb: 6 }}>
                 <motion.div 
                   whileHover={{ scale: 1.05 }} 
@@ -1160,7 +1147,7 @@ const OverdrivePlus6Page = () => {
                     variant="contained"
                     size="large"
                     endIcon={<ArrowRight />}
-                    href="https://try.thelrx.com/intake/ed-fmmbgk"
+                    onClick={handleCtaClick}
                     sx={{
                       px: { xs: 6, md: 8 },
                       py: 2,
@@ -1178,12 +1165,12 @@ const OverdrivePlus6Page = () => {
                       }
                     }}
                   >
-                    Boost Energy Now
+                    Start Treatment Now
                   </Button>
                 </motion.div>
               </Box>
               
-              {/* Trust Badges */}
+              {/* UPDATED Trust Badges */}
               <Box sx={{ 
                 display: "flex", 
                 justifyContent: "center", 
@@ -1192,10 +1179,12 @@ const OverdrivePlus6Page = () => {
                 mb: 4 
               }}>
                 {[
-                  { icon: <Zap size={20} />, text: "8+ Hour Energy" },
-                  { icon: <CheckCircle size={20} />, text: "Enhanced Endurance" },
-                  { icon: <Package size={20} />, text: "6-Tablet Pack" },
-                  { icon: <Battery size={20} />, text: "Sustained Performance" }
+                  { icon: <Shield size={20} />, text: "Licensed Providers" },
+                  { icon: <Truck size={20} />, text: "50 States Delivery" },
+                  { icon: <UserCheck size={20} />, text: "Personalized Plans" },
+                  { icon: <Heart size={20} />, text: "Men's Health Focus" },
+                  { icon: <Zap size={20} />, text: "Advanced Formula" },
+                  { icon: <Package size={20} />, text: "Discreet Packaging" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1228,7 +1217,7 @@ const OverdrivePlus6Page = () => {
                 ))}
               </Box>
               
-              {/* Additional Info */}
+              {/* UPDATED Additional Info */}
               <Typography
                 variant="caption"
                 sx={{
@@ -1240,7 +1229,8 @@ const OverdrivePlus6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Sustained energy formula • No prescription required • 30-day satisfaction guarantee
+                6-tablet pack • Compounded medication (Tadalafil 20mg/Bremelanotide 5mg/Pycnogenol 25mg) • Telehealth consultation required • 
+                $297 first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

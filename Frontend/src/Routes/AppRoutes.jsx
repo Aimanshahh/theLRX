@@ -20,6 +20,7 @@ import Medicalexperts from "../pages/Medicalexperts";
 import Signin from "../pages/Signin";
 import Register from "../pages/Registration";
 import DetailedLab from "../pages/DetailedLab";
+import Profile from "../pages/profilepage";
 
 // FAQ Categories
 import TheBasics from "../components/FAQscategories/TheBasics";
@@ -90,6 +91,7 @@ function LayoutWithFooter({ children }) {
   const hideFooter =
     pathname === "/signin" ||
     pathname === "/register" ||
+    pathname === "/profile" ||
     pathname.startsWith("/Labs");
 
   return (
@@ -145,6 +147,7 @@ export default function AppRoutes() {
               <Route path="/blog" element={<Blog />} />
               <Route path="/medical-experts" element={<Medicalexperts />} />
               <Route path="/DetailedLab" element={<DetailedLab/>} />
+              <Route path="/profile" element={<Profile/>} />
 
               <Route path="/faqs/basics" element={<TheBasics />} />
               <Route path="/faqs/visits" element={<AboutYourVisits />} />
