@@ -143,7 +143,7 @@ export default function HeroSection() {
       </Box>
 
       {/* ===== UPDATED INFO CARDS SECTION ===== */}
-      <Box
+<Box
         sx={{
           position: "relative",
           zIndex: 3,
@@ -228,7 +228,7 @@ export default function HeroSection() {
                 alignItems: "flex-end",
                 justifyContent: "center",
                 mt: 2,
-                mb: "-24px",
+                mb: { xs: "-8px", sm: "-12px", md: "-24px" }, // Changed: Reduced negative margin on xs/sm
               }}
             >
               <Box
@@ -263,7 +263,8 @@ export default function HeroSection() {
               sx={{
                 display: "flex",
                 justifyContent: "flex-end",
-                mt: 6,
+                mt: { xs: 2, sm: 3, md: 6 }, // Changed: Reduced top margin on xs/sm
+                mb: { xs: 1, sm: 1, md: 0 }, // Added: Small bottom margin on xs/sm
               }}
             >
               <Button
@@ -353,7 +354,7 @@ export default function HeroSection() {
                 alignItems: "flex-end",
                 justifyContent: "center",
                 mt: 2,
-                mb: "-24px",
+                mb: { xs: "-8px", sm: "-12px", md: "-24px" }, // Changed: Reduced negative margin on xs/sm
               }}
             >
               <Box
@@ -388,7 +389,8 @@ export default function HeroSection() {
               sx={{
                 display: "flex",
                 justifyContent: "flex-end",
-                mt: 6,
+                mt: { xs: 2, sm: 3, md: 6 }, // Changed: Reduced top margin on xs/sm
+                mb: { xs: 1, sm: 1, md: 0 }, // Added: Small bottom margin on xs/sm
               }}
             >
               <Button

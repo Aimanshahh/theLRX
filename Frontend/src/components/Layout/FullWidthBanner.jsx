@@ -51,7 +51,7 @@ const SimpleHimsBackground = () => {
     sx={{
       fontWeight: 650,
       lineHeight: 1.15,
-      fontSize: { xs: "1.4rem", sm: "3.05rem", md: "3.4rem" },
+      fontSize: { xs: "1.2rem", sm: "3.05rem", md: "3.4rem" },
     }}
   >
     Get Your Labs.
@@ -68,10 +68,12 @@ const SimpleHimsBackground = () => {
   sx={{
     display: "block",
     mx: "auto",
-    mt: { xs: -12, sm: -20, md: -24 }, // Adjust negative margin to bring image closer to text
-    height: { xs: "55vh", sm: "90vh", md: "105vh" },
-    zIndex: 2,
+    mt: { xs: -12, sm: -20, md: -24 },
+    height: { xs: "auto", sm: "auto", md: "105vh" },
+    maxHeight: { xs: "75vh", sm: "95vh", md: "none" }, // Increased from 55vh/70vh
     maxWidth: "90%",
+    objectFit: "contain",
+    zIndex: 2,
   }}
 />
 
