@@ -130,7 +130,7 @@ const CJC1295IpamorelinPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade CJC-1295 & Ipamorelin peptide blend</Box> is a compounded medication being studied for its potential to support growth hormone release. This combination is used under medical supervision to potentially support various wellness goals.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade CJC-1295 & Ipamorelin peptide blend</Box> is designed for advanced growth hormone optimization research. This synergistic combination of growth hormone-releasing hormone (GHRH) analog and selective growth hormone secretagogue represents cutting-edge peptide research for metabolic enhancement, body composition improvement, and longevity applications.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
@@ -251,17 +251,17 @@ const CJC1295IpamorelinPage = () => {
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
-                  CJC-1295 is a growth hormone-releasing hormone (GHRH) analog that is being studied for its potential to extend growth hormone pulses, while Ipamorelin is a growth hormone secretagogue (GHS) being studied for GH release stimulation. Research continues to investigate their combined potential effects under medical supervision.
+                  CJC-1295 is a growth hormone-releasing hormone (GHRH) analog designed to extend the half-life of natural growth hormone pulses, while Ipamorelin is a selective growth hormone secretagogue (GHS) that stimulates GH release without affecting cortisol or prolactin levels. This combination creates a powerful synergistic effect for growth hormone optimization research, mimicking the body's natural pulsatile release patterns while minimizing unwanted side effects associated with traditional GH therapies.
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "CJC-1295 being studied for GHRH receptor interaction",
-                    "Ipamorelin research focusing on selective GH stimulation",
-                    "Combination effects continue to be studied",
-                    "Potential support for various wellness goals under investigation",
-                    "Research on collagen synthesis support ongoing",
-                    "Cellular processes support being studied"
+                    "Extended growth hormone half-life for sustained effects",
+                    "Selective GH stimulation without cortisol elevation",
+                    "Synergistic pulsatile release pattern",
+                    "Enhanced collagen synthesis for skin and joint health",
+                    "Increased IGF-1 production for metabolic optimization",
+                    "Improved sleep quality and recovery mechanisms"
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}

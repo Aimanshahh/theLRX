@@ -122,15 +122,15 @@ const PT141Page = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>compounded PT-141 (Bremelanotide)</Box> is available under provider oversight. PT-141 is a synthetic peptide analog that activates melanocortin receptors, which are being studied for their role in sexual response pathways.
+              PT-141 enhances desire and arousal by activating central pathways involved in sexual responsiveness, supporting a deeper sense of connection and intimacy. It stacks harmoniously with women’s blend therapies, NAD+, and Tadalafil/Sildenafil combinations to elevate both physical and emotional intimacy.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Clinical peptide formulation",
-                  "Central nervous system activity",
-                  "Medical supervision required",
+                  "Enhances Desire & Arousal",
+                  "Activates Central Pathways",
+                  "Deepens Connection & Intimacy",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -695,7 +695,7 @@ const PT141Page = () => {
                         display: "inline-block",
                       }}
                     >
-                      Clinical Therapy Protocol
+                      Official Product Description
                     </Typography>
 
                     <Typography
@@ -708,10 +708,18 @@ const PT141Page = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      Medical-Grade{" "}
-                      <Box component="span" sx={{ color: palette.darkBlue }}>
-                        PT-141 50mg Kit
-                      </Box>
+                      PT-141 50mg
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontSize: "16px",
+                        color: palette.darkGrey,
+                        lineHeight: 1.7,
+                        mb: 4,
+                      }}
+                    >
+                      PT-141 enhances desire and arousal by activating central pathways involved in sexual responsiveness, supporting a deeper sense of connection and intimacy. It stacks harmoniously with women’s blend therapies, NAD+, and Tadalafil/Sildenafil combinations to elevate both physical and emotional intimacy.
                     </Typography>
 
                     <Box sx={{ mb: 4 }}>

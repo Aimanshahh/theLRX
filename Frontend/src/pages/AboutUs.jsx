@@ -209,7 +209,6 @@ export default function AboutUs() {
             { label: 'Home', path: '/' },
             { label: "FAQs", path: "/faqs" },
             { label: "How It Works", path: "/how-it-works" },
-            { label: "Blog", path: "/blog" },
             { label: "Medical Experts", path: "/medical-experts" },
           ].map((link) => (
             <Typography
@@ -548,131 +547,138 @@ export default function AboutUs() {
         </Box>
 
         {/* ====== LARGER WHITE CONTENT SECTION ====== */}
-        <Box
-          sx={{
-            width: "100%",
-            backgroundColor: "#FFFFFF",
-            position: "relative",
-            zIndex: 20,
-            marginTop: { 
-              xs: "-30px", 
-              sm: "-40px", 
-              md: "-50px", 
-              lg: "-60px",
-              xl: "-70px" 
-            },
-            borderRadius: { 
-              xs: "30px 30px 0 0", 
-              sm: "40px 40px 0 0", 
-              md: "50px 50px 0 0",
-              lg: "60px 60px 0 0",
-              xl: "70px 70px 0 0"
-            },
-            boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
-            minHeight: { xs: "60vh", sm: "70vh", md: "80vh", lg: "90vh", xl: "100vh" },
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <Box
-            sx={{
-              width: "100%",
-              maxWidth: { 
-                xs: "90%", 
-                sm: "88%", 
-                md: "85%", 
-                lg: "80%", 
-                xl: "1200px" 
-              },
-              margin: "0 auto",
-              padding: { 
-                xs: "60px 0", 
-                sm: "80px 0", 
-                md: "100px 0", 
-                lg: "120px 0",
-                xl: "140px 0" 
-              },
-              textAlign: "center",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              minHeight: "100%",
-            }}
-          >
-            {/* Single Paragraph with Colored Words */}
-            <Typography
-              component="div"
-              sx={{
-                color: "#000000",
-                fontWeight: { xs: 700, sm: 800, md: 900 },
-                fontSize: { 
-                  xs: "1.4rem",      
-                  sm: "1.8rem",      
-                  md: "2.2rem",      
-                  lg: "2.8rem",
-                  xl: "3.2rem"        
-                },
-                lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
-                maxWidth: { 
-                  xs: "100%", 
-                  sm: "95%", 
-                  md: "90%", 
-                  lg: "85%", 
-                  xl: "80%" 
-                },
-                margin: "0 auto",
-                px: { xs: 1, sm: 2, md: 3 },
-                letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
-              }}
-            >
-              We're on a mission to help everyone{" "}
-              <Box 
-                component="span" 
-                sx={{ 
-                  color: "#00359E", 
-                  fontWeight: { xs: 800, sm: 900 },
-                  display: "inline",
-                }}
-              >
-                live a healthier, happier life
-              </Box>{" "}
-              through accessible, personalized healthcare that puts{" "}
-              <Box 
-                component="span" 
-                sx={{ 
-                  color: "#00359E", 
-                  fontWeight: { xs: 800, sm: 900 },
-                  display: "inline",
-                }}
-              >
-                you first
-              </Box>{" "}
-              and makes feeling better{" "}
-              <Box 
-                component="span" 
-                sx={{ 
-                  color: "#00359E", 
-                  fontWeight: { xs: 800, sm: 900 },
-                  display: "inline",
-                }}
-              >
-                easier than ever.
-              </Box>
-            </Typography>
-            
-            {/* Optional decorative element or spacing */}
-            <Box
-              sx={{
-                mt: { xs: 4, sm: 6, md: 8, lg: 10 },
-                width: "60px",
-                height: "4px",
-                backgroundColor: "#00359E",
-                margin: "0 auto",
-                borderRadius: "2px",
-              }}
-            />
-          </Box>
-        </Box>
+      <Box
+  sx={{
+    width: "100%",
+    backgroundColor: "#FFFFFF",
+    position: "relative",
+    zIndex: 20,
+    marginTop: {
+      xs: "-30px",
+      sm: "-40px",
+      md: "-50px",
+      lg: "-60px",
+      xl: "-70px",
+    },
+    borderRadius: {
+      xs: "30px 30px 0 0",
+      sm: "40px 40px 0 0",
+      md: "50px 50px 0 0",
+      lg: "60px 60px 0 0",
+      xl: "70px 70px 0 0",
+    },
+    boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
+    minHeight: {
+      xs: "60vh",
+      sm: "70vh",
+      md: "80vh",
+      lg: "90vh",
+      xl: "100vh",
+    },
+    display: "flex",
+    alignItems: "center",
+  }}
+>
+  <Box
+    sx={{
+      width: "100%",
+      maxWidth: {
+        xs: "90%",
+        sm: "88%",
+        md: "85%",
+        lg: "80%",
+        xl: "1200px",
+      },
+      margin: "0 auto",
+      padding: {
+        xs: "60px 0",
+        sm: "80px 0",
+        md: "100px 0",
+        lg: "120px 0",
+        xl: "140px 0",
+      },
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      minHeight: "100%",
+    }}
+  >
+    <Typography
+      component="div"
+      sx={{
+        color: "#000000",
+        fontWeight: { xs: 700, sm: 800, md: 900 },
+        fontSize: {
+          xs: "1.4rem",
+          sm: "1.8rem",
+          md: "2.2rem",
+          lg: "2.8rem",
+          xl: "3.2rem",
+        },
+        lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
+        maxWidth: {
+          xs: "100%",
+          sm: "95%",
+          md: "90%",
+          lg: "85%",
+          xl: "80%",
+        },
+        margin: "0 auto",
+        px: { xs: 1, sm: 2, md: 3 },
+        letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
+      }}
+    >
+      Our goal is simple: to help people take control of their health through care
+      that feels{" "}
+      <Box
+        component="span"
+        sx={{
+          color: "#00359E",
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        personal, accessible, and human
+      </Box>{" "}
+      — built around real needs, not one-size-fits-all solutions. We focus on
+      delivering treatment that{" "}
+      <Box
+        component="span"
+        sx={{
+          color: "#00359E",
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        puts you in control
+      </Box>{" "}
+      and removes the friction from getting care, so improving your health feels{" "}
+      <Box
+        component="span"
+        sx={{
+          color: "#00359E",
+          fontWeight: { xs: 800, sm: 900 },
+          display: "inline",
+        }}
+      >
+        clear, simple, and achievable.
+      </Box>
+    </Typography>
+
+    <Box
+      sx={{
+        mt: { xs: 4, sm: 6, md: 8, lg: 10 },
+        width: "60px",
+        height: "4px",
+        backgroundColor: "#00359E",
+        margin: "0 auto",
+        borderRadius: "2px",
+      }}
+    />
+  </Box>
+</Box>
+
 
         {/* ====== VIDEO SECTION ====== */}
         <Box
@@ -796,10 +802,8 @@ export default function AboutUs() {
               color: "#000",
             }}
           >
-            Your health is personal.
-            <br />
-            Now, so is your care.
-          </Typography>
+Your health journey is unique.            <br />
+ treatment should be too.          </Typography>
 
           {/* PARAGRAPH BELOW */}
           <Typography
@@ -825,14 +829,7 @@ export default function AboutUs() {
               mx: "auto",
             }}
           >
-            Whether you're looking for an innovative treatment or a tried-and-true
-            generic option, LiquidRX connects you with a licensed medical
-            provider in your state to assess your symptoms and health history on a
-            1-to-1 basis to determine what is right for you. Your provider
-            recommends a personalized treatment plan based on your unique needs and
-            goals. This customer-centric approach doesn't stop at delivery—through
-            our platform you can message your Care Team 24/7 at no
-            additional cost.
+            Whether you’re exploring the latest medical options or choosing a reliable, proven solution, LiquidRX helps you get care that’s built around you. We connect you with a licensed healthcare professional in your state who reviews your health background and concerns in a private, one-on-one consultation. Based on that evaluation, your provider designs a treatment plan tailored specifically to your body, lifestyle, and goals. And the support doesn’t end once your order arrives — our Care Team is always available through the platform, giving you access to guidance and answers whenever you need them, at no extra cost.
           </Typography>
         </Box>
 
@@ -1021,9 +1018,9 @@ export default function AboutUs() {
               color: "#000",
             }}
           >
-            Success is the standard.
+Good results are what we do.
             <br />
-            Not the exception.
+Every single time.
           </Typography>
 
           {/* PARAGRAPH BELOW */}
@@ -1050,12 +1047,7 @@ export default function AboutUs() {
               mx: "auto",
             }}
           >
-            At LiquidRX, we believe exceptional results should be accessible to everyone. 
-            Our proven treatments and dedicated care teams work together to deliver 
-            consistent, measurable outcomes. With personalized plans tailored to your 
-            specific needs and continuous support from our medical professionals, 
-            we've helped thousands achieve their health goals. Your success story 
-            starts here—backed by science, powered by innovation, and delivered with care.
+               At LiquidRX, we think everyone should get great results. Our treatments work, and our team is here to help you. We make a plan just for you and support you every step of the way. We've already helped thousands of people feel better. Your journey to feeling good starts with us—we use proven methods, new ideas, and real care to help you succeed.
           </Typography>
         </Box>
 

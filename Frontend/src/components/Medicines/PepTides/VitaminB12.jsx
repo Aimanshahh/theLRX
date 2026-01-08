@@ -122,15 +122,16 @@ const VitaminB12Page = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>medical-grade B12 formulation</Box> is administered under provider oversight. B12 plays important roles in cellular energy metabolism and nervous system function.
+              Vitamin B-12 provides a clean, elevated boost in natural energy, mental clarity, and metabolic support, helping you feel vibrant, focused, and restored from the inside out. Its refined, fast-acting nourishment makes it an essential foundation for daily vitality and overall wellness.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Supports cellular energy",
-                  "Neurological function",
-                  "Metabolic processes",
+                  "Elevated Natural Energy",
+                  "Enhanced Mental Clarity",
+                  "Metabolic Support",
+                  "Fast-Acting Nourishment",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -701,7 +702,7 @@ const VitaminB12Page = () => {
                   mb: 2,
                 }}
               >
-                Clinical Formulation
+                Official Product Description
               </Typography>
 
               <Typography
@@ -714,10 +715,29 @@ const VitaminB12Page = () => {
                   lineHeight: 1.2,
                 }}
               >
-                Medical-Grade{" "}
-                <Box component="span" sx={{ color: palette.darkBlue }}>
-                  B12 Injection Kit
-                </Box>
+                Vitamin B12 Injection
+              </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: "16px",
+                  color: palette.darkGrey,
+                  lineHeight: 1.7,
+                  mb: 4,
+                }}
+              >
+                Vitamin B-12 provides a clean, elevated boost in natural energy, mental clarity, and metabolic support, helping you feel vibrant, focused, and restored from the inside out. Its refined, fast-acting nourishment makes it an essential foundation for daily vitality and overall wellness.
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: "15px",
+                  color: palette.darkBlue,
+                  fontWeight: 600,
+                  mb: 4,
+                  fontStyle: "italic",
+                }}
+              >
+                Stacks Best With: Semaglutide, Tirzepatide, NAD+, and CJC-1295/Ipamorelin for enhanced energy and overall metabolic balance.
               </Typography>
 
               <Box>
@@ -816,7 +836,7 @@ const VitaminB12Page = () => {
             {[
               { label: "Form", value: "Injection" },
               { label: "Type", value: "Methylcobalamin" },
-              { label: "Dosage", value: "1000 mcg" },
+              { label: "Dosage", value: "Clinician Determined" },
               { label: "Kit Includes", value: "Complete Clinical Set" },
             ].map((spec, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>

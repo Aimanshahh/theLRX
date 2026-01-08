@@ -98,7 +98,7 @@ export default function HeroSection() {
           }}
         >
           <Button
-            onClick={() => handleExternalNavigation("https://try.thelrx.com/intake/se-jd9om9")}
+            onClick={() => handleExternalNavigation("https://try.thelrx.com/intake/bp-8xpx3w")}
             sx={{
               px: { xs: 3, sm: 4 },
               py: { xs: 1.4, sm: 1.6 },
@@ -115,11 +115,11 @@ export default function HeroSection() {
               whiteSpace: "nowrap",
             }}
           >
-            Get Started with Sermolin
+            Get Started with BPC-157
           </Button>
 
           <Button
-            onClick={() => handleInternalNavigation("/peptides/pt-141")}
+            onClick={() => handleInternalNavigation("/peptides/sermolin-20mg")}
             sx={{
               px: { xs: 3, sm: 4 },
               py: { xs: 1.4, sm: 1.6 },
@@ -137,7 +137,7 @@ export default function HeroSection() {
               whiteSpace: "nowrap",
             }}
           >
-            View PT-141
+            View Sermolin
           </Button>
         </Box>
       </Box>

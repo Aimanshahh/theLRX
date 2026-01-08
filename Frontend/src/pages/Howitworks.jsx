@@ -56,7 +56,6 @@ export default function Howitworks() {
         {/* Navigation Items - Updated */}
         <Box sx={{ display: "flex", alignItems: "center", gap: { xs: "15px", md: "30px" } }}>
           {[
-            { label: 'Home', path: '/' },
             { label: "About Us", path: "/about-us" },
             { label: "FAQs", path: "/faqs" },
             { label: "Blog", path: "/blog" },

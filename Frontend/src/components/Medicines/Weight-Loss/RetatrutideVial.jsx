@@ -30,7 +30,10 @@ import {
   Heart,
   Target,
   Activity,
-  Droplets
+  Droplets,
+  Package,
+  PhoneCall,
+  Stethoscope
 } from 'lucide-react';
 
 // Import your assets
@@ -715,52 +718,21 @@ const RetatrutidePage = () => {
                   mb: 2,
                 }}
               >
-                TRIPLE MECHANISM ACTION
+                OFFICIAL PRODUCT DESCRIPTION
               </Typography>
 
               {/* Primary Description */}
-             <Typography
-  sx={{
-    fontSize: { xs: "1.1rem", md: "1.25rem" },
-    lineHeight: 2.1,
-    color: colors.darkGrey,
-    textAlign: "center",
-    fontWeight: 400,
-  }}
->
-  Retatrutide is an investigational compound that acts on the GIP, GLP-1, and glucagon receptors.
-  This multi-receptor activity is being studied for its potential role in metabolic regulation
-  under the supervision of a licensed healthcare provider.
-</Typography>
-
-
-              {/* Divider */}
-              <Box
+              <Typography
                 sx={{
-                  width: 90,
-                  height: 2,
-                  background: `linear-gradient(90deg, ${colors.darkBlue}, ${colors.lightBlue})`,
-                  borderRadius: 999,
-                  mx: "auto",
-                  my: 4,
-                  opacity: 0.9,
+                  fontSize: { xs: "1.1rem", md: "1.25rem" },
+                  lineHeight: 2.1,
+                  color: colors.darkGrey,
+                  textAlign: "center",
+                  fontWeight: 400,
                 }}
-              />
-
-              {/* Secondary Description */}
-            <Typography
-  sx={{
-    fontSize: { xs: "1.05rem", md: "1.15rem" },
-    lineHeight: 1.95,
-    color: alpha(colors.black, 0.75),
-    textAlign: "center",
-  }}
->
-  Retatrutide is currently being studied in clinical research settings to better understand
-  its effects on body weight, glycemic parameters, and other metabolic markers.
-  Use and evaluation should occur only with appropriate medical oversight.
-</Typography>
-
+              >
+                Retatrutide is one of the most advanced multi-pathway metabolic agents, supporting profound appetite regulation and accelerated fat-loss potential. It pairs powerfully with NAD+ Injectable, BPC-157, and CJC-1295/Ipamorelin for superior energy, recovery, and longevity support.
+              </Typography>
             </Box>
           </motion.div>
         </Container>
@@ -788,7 +760,7 @@ const RetatrutidePage = () => {
                       textTransform: "uppercase",
                     }}
                   >
-                    SCIENTIFIC MECHANISM
+                    YOUR JOURNEY STARTS HERE
                   </Typography>
 
                   <Typography
@@ -800,7 +772,7 @@ const RetatrutidePage = () => {
                       mb: 3,
                     }}
                   >
-                    How Retatrutide Works
+                    Start Your GLP-1 in 2 Easy Steps
                   </Typography>
 
                   <Typography
@@ -811,35 +783,34 @@ const RetatrutidePage = () => {
                       mb: 4,
                     }}
                   >
-                    Retatrutide's triple agonist action targets multiple pathways simultaneously 
-                    for comprehensive metabolic regulation and sustained weight management.
+                    Simple. Convenient. Effective.
                   </Typography>
 
                   {/* Mechanism Points */}
-                  <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+                  <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
                     {[
                       {
-                        icon: <Target size={24} color={colors.darkBlue} />,
-                        title: "Triple Receptor Activation",
-                        description: "Simultaneously activates GIP, GLP-1, and glucagon receptors"
+                        icon: <Stethoscope size={28} color={colors.darkBlue} />,
+                        title: "1. Fill out the form",
+                        description: "Complete a simple online medical form telling your clinician about your health and prior weight loss attempts."
                       },
                       {
-                        icon: <Activity size={24} color={colors.darkBlue} />,
-                        title: "Enhanced Metabolism",
-                        description: "Increases energy expenditure and fat oxidation"
+                        icon: <PhoneCall size={28} color={colors.darkBlue} />,
+                        title: "2. Telehealth Visit",
+                        description: "Speak to your new clinician who can help you lose weight with a GLP-1 medication, if appropriate."
                       },
                       {
-                        icon: <Droplets size={24} color={colors.darkBlue} />,
-                        title: "Appetite Regulation",
-                        description: "Reduces hunger signals and promotes satiety"
+                        icon: <Package size={28} color={colors.darkBlue} />,
+                        title: "3. Receive Medicine",
+                        description: "Receive your regularly scheduled medication in the mail straight from the pharmacy."
                       }
                     ].map((point, index) => (
-                      <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "flex-start" }}>
+                      <Box key={index} sx={{ display: "flex", gap: 3, alignItems: "flex-start" }}>
                         <Box
                           sx={{
-                            width: 48,
-                            height: 48,
-                            borderRadius: "12px",
+                            width: 56,
+                            height: 56,
+                            borderRadius: "16px",
                             backgroundColor: alpha(colors.darkBlue, 0.1),
                             display: "flex",
                             alignItems: "center",
@@ -853,16 +824,16 @@ const RetatrutidePage = () => {
                           <Typography
                             sx={{
                               fontWeight: 700,
-                              fontSize: "1rem",
+                              fontSize: "1.1rem",
                               color: colors.black,
-                              mb: 0.5,
+                              mb: 1,
                             }}
                           >
                             {point.title}
                           </Typography>
                           <Typography
                             sx={{
-                              fontSize: "0.9rem",
+                              fontSize: "0.95rem",
                               color: colors.darkGrey,
                               lineHeight: 1.6,
                             }}
@@ -907,7 +878,7 @@ const RetatrutidePage = () => {
                       }}
                     >
                       <Brain size={24} color={colors.darkBlue} />
-                      How It Works
+                      How The Program Works
                     </Typography>
                     <Typography
                       sx={{
@@ -917,13 +888,17 @@ const RetatrutidePage = () => {
                         mb: 3,
                       }}
                     >
-                      Our advanced formula supports neurotransmitter balance and metabolic regulation, 
-                      which play crucial roles in appetite control, energy expenditure, and overall metabolic health.
+                      Thoughtfully designed to support elegant, sustainable weight loss while enhancing metabolic well-being and restoring confidence in your daily vitality.
                     </Typography>
                     
                     {/* Key Benefits */}
                     <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, gap: 2, mt: 3 }}>
-                      {pillBenefits.slice(0, 4).map((benefit, index) => (
+                      {[
+                        { icon: ShieldCheck, text: 'Provider-Crafted Intake', color: '#6366F1' },
+                        { icon: Target, text: 'Customized Treatment', color: '#8B5CF6' },
+                        { icon: Package, text: 'Discreet Delivery', color: '#F59E0B' },
+                        { icon: PhoneCall, text: 'Ongoing Care Team Access', color: '#3B82F6' }
+                      ].map((benefit, index) => (
                         <Box
                           key={index}
                           sx={{
@@ -983,20 +958,17 @@ const RetatrutidePage = () => {
                       }}
                     >
                       <Clock size={20} color={colors.darkBlue} />
-                      Treatment Timeline
+                      Direct Access to Your Health Provider
                     </Typography>
                     <Typography
-  sx={{
-    fontSize: "14px",
-    color: colors.darkGrey,
-    lineHeight: 1.6,
-  }}
->
-  The effects and appropriate duration of Retatrutide use are currently being studied in
-  clinical research settings. Ongoing evaluation, dosage considerations, and monitoring
-  should be conducted through regular follow-ups with a licensed healthcare provider.
-</Typography>
-
+                      sx={{
+                        fontSize: "14px",
+                        color: colors.darkGrey,
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      With Liquid Rx, you’ll have ongoing support from experienced providers through virtual consultations. We’ll be with you every step of the way, ensuring your treatment plan delivers the results you’re looking for.
+                    </Typography>
                   </Box>
                 </Box>
               </motion.div>
@@ -1413,7 +1385,7 @@ const TestimonialCarousel = () => {
                 mb: 2
               }}
             >
-              Patient Success Stories
+              Highly Recommended by Patients
             </Typography>
             <Typography
               variant="h6"
@@ -1426,7 +1398,7 @@ const TestimonialCarousel = () => {
                 lineHeight: 1.6
               }}
             >
-              Real patients achieving significant weight loss and metabolic improvements
+              Join the growing number of customers who trust Liquid Rx to deliver discreet, reliable care that truly works.
             </Typography>
           </Box>
 

@@ -53,6 +53,123 @@ const NADInjectablePage = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
   };
 
+  // Extracted from the URL product page structure
+  const productInfo = {
+    name: "NAD+ Injectable",
+    price: "$299.00",
+    originalPrice: "$599.00", // Assuming there might be an original price
+    description: "Our pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Injectable is being studied for its potential applications in cellular processes through systemic administration.",
+    rating: "4.9/5.0",
+    reviewCount: "2,500+ Reviews",
+    features: [
+      "Cellular processes research",
+      "Systemic administration studies", 
+      "Cellular mechanism investigation"
+    ],
+    benefits: [
+      "Being studied for cellular energy processes",
+      "Research on DNA repair mechanisms continues",
+      "Cellular communication studies ongoing",
+      "Mitochondrial function research",
+      "Systemic administration methods under investigation",
+      "Cellular process research continues"
+    ],
+    kitIncludes: [
+      "500mg NAD+ (Nicotinamide Adenine Dinucleotide) pharmaceutical-grade powder",
+      "Bacteriostatic water for injection",
+      "Sterile insulin syringes with ultra-fine needles",
+      "Comprehensive subcutaneous injection guide for research",
+      "Alcohol swabs and sharps container",
+      "Research dosing protocol",
+      "Access to research support resources"
+    ],
+    specifications: [
+      { label: "Active Ingredient", value: "NAD+" },
+      { label: "Strength", value: "500 mg" },
+      { label: "Research Dose", value: "50-100 mg" },
+      { label: "Administration", value: "Subcutaneous/IM" }
+    ],
+    ctaText: "Start Research - $299",
+    disclaimer: "NAD+ is a natural coenzyme, and this formulation is being studied for research purposes. May cause temporary reactions after administration. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary."
+  };
+
+  const timeline = [
+    { time: "Initial Phase", improvement: "Formulation development research", icon: Lightning, color: palette.darkBlue },
+    { time: "Early Studies", improvement: "Delivery method research", icon: Moon, color: palette.lightBlue },
+    { time: "Ongoing Research", improvement: "Potential applications studies", icon: Activity, color: palette.darkBlue },
+    { time: "Long-term Studies", improvement: "Continued scientific investigation", icon: RefreshCw, color: palette.lightBlue },
+  ];
+
+  const compactBenefits = [
+    {
+      icon: Battery,
+      title: "Cellular Processes",
+      description: "Cellular mechanism research",
+      color: palette.darkBlue,
+    },
+    {
+      icon: RefreshCw,
+      title: "Cellular Research",
+      description: "Cellular function studies",
+      color: palette.lightBlue,
+    },
+    {
+      icon: HeartPulse,
+      title: "Systemic Studies",
+      description: "Systemic administration research",
+      color: palette.darkBlue,
+    },
+    {
+      icon: Shield,
+      title: "Research Focus",
+      description: "Ongoing scientific investigation",
+      color: palette.darkBlue,
+    },
+  ];
+
+  const howItWorks = [
+    {
+      step: 1,
+      icon: Shield,
+      title: "Research Planning",
+      description: "Preparation for study protocols",
+      color: palette.darkBlue,
+    },
+    {
+      step: 2,
+      icon: Target,
+      title: "Formulation Research",
+      description: "Study of injectable formulations",
+      color: palette.lightBlue,
+    },
+    {
+      step: 3,
+      icon: Droplets,
+      title: "Administration Studies",
+      description: "Research on systemic delivery methods",
+      color: palette.darkBlue,
+    },
+    {
+      step: 4,
+      icon: Battery,
+      title: "Ongoing Research",
+      description: "Continued scientific investigation",
+      color: palette.lightBlue,
+    },
+  ];
+
+  const stats = [
+    { value: "Systemic", label: "Administration Method" },
+    { value: "Research", label: "Ongoing Studies" },
+    { value: "Injectable", label: "Delivery Format" },
+  ];
+
+  const finalFeatures = [
+    { text: "500mg NAD+ Multi-Dose Vial" },
+    { text: "Pharmaceutical Grade" },
+    { text: "Research Documentation" },
+    { text: "Injectable Administration" },
+  ];
   
   
   return (
@@ -120,27 +237,25 @@ const NADInjectablePage = () => {
                 <Star key={i} size={18} color={palette.yellow} fill={palette.yellow} />
               ))}
               <Typography sx={{ color: palette.white, ml: 1.5, fontSize: "15px", fontWeight: 600 }}>
-                4.9/5.0 • 2,500+ Reviews
+                {productInfo.rating} • {productInfo.reviewCount}
               </Typography>
             </Box>
 
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
-              NAD+ Injectable
+              {productInfo.name}
               <br />
-              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$299.00</Box>
+              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>
+                {productInfo.price}
+              </Box>
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Injectable</Box> is being studied for its potential applications in cellular processes through systemic administration.
+              {productInfo.description}
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-                {[
-                  "Cellular processes research",
-                  "Systemic administration studies",
-                  "Cellular mechanism investigation",
-                ].map((t, i) => (
+                {productInfo.features.map((t, i) => (
                   <Box
                     key={i}
                     sx={{
@@ -173,7 +288,7 @@ const NADInjectablePage = () => {
                   fontWeight: 700,
                 }}
               >
-                Start Research - $299
+                {productInfo.ctaText}
               </Button>
             </motion.div>
 
@@ -189,7 +304,7 @@ const NADInjectablePage = () => {
             style={{ position: "relative", maxWidth: "480px", width: "100%" }}
           >
             <Box sx={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.25)" }}>
-              <img src={nadInjectableImage} alt="NAD+ Injectable" style={{ width: "100%", height: "auto", display: "block" }} />
+              <img src={nadInjectableImage} alt={productInfo.name} style={{ width: "100%", height: "auto", display: "block" }} />
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
@@ -247,7 +362,7 @@ const NADInjectablePage = () => {
                 >
                   Research on{" "}
                   <Box component="span" sx={{ color: palette.darkBlue }}>
-                    NAD+ Injectable
+                    {productInfo.name}
                   </Box>
                 </Typography>
 
@@ -256,14 +371,7 @@ const NADInjectablePage = () => {
                 </Typography>
 
                 <Box sx={{ mb: 5 }}>
-                  {[
-                    "Being studied for cellular energy processes",
-                    "Research on DNA repair mechanisms continues",
-                    "Cellular communication studies ongoing",
-                    "Mitochondrial function research",
-                    "Systemic administration methods under investigation",
-                    "Cellular process research continues"
-                  ].map((benefit, index) => (
+                  {productInfo.benefits.map((benefit, index) => (
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -369,7 +477,7 @@ const NADInjectablePage = () => {
               >
                 Research on{" "}
                 <Box component="span" sx={{ color: palette.darkBlue }}>
-                  NAD+ Injectable
+                  {productInfo.name}
                 </Box>
               </Typography>
               
@@ -388,32 +496,7 @@ const NADInjectablePage = () => {
           </motion.div>
 
           <Grid container spacing={3} justifyContent="center">
-            {[
-              {
-                icon: Battery,
-                title: "Cellular Processes",
-                description: "Cellular mechanism research",
-                color: palette.darkBlue,
-              },
-              {
-                icon: RefreshCw,
-                title: "Cellular Research",
-                description: "Cellular function studies",
-                color: palette.lightBlue,
-              },
-              {
-                icon: HeartPulse,
-                title: "Systemic Studies",
-                description: "Systemic administration research",
-                color: palette.darkBlue,
-              },
-              {
-                icon: Shield,
-                title: "Research Focus",
-                description: "Ongoing scientific investigation",
-                color: palette.darkBlue,
-              },
-            ].map((benefit, index) => (
+            {compactBenefits.map((benefit, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
@@ -508,11 +591,7 @@ const NADInjectablePage = () => {
                 gap: { xs: 3, sm: 6 },
               }}
             >
-              {[
-                { value: "Systemic", label: "Administration Method" },
-                { value: "Research", label: "Ongoing Studies" },
-                { value: "Injectable", label: "Delivery Format" },
-              ].map((stat, index) => (
+              {stats.map((stat, index) => (
                 <Box key={index}>
                   <Typography
                     sx={{
@@ -630,7 +709,7 @@ const NADInjectablePage = () => {
                     <Box
                       component="img"
                       src={nadInjectableProductImage}
-                      alt="NAD+ Injectable Vial"
+                      alt={`${productInfo.name} Vial`}
                       sx={{
                         width: "100%",
                         height: "auto",
@@ -675,7 +754,7 @@ const NADInjectablePage = () => {
                         color: palette.darkBlue,
                       }}
                     >
-                      $299.00
+                      {productInfo.price}
                     </Box>
                   </Box>
                 </motion.div>
@@ -716,21 +795,13 @@ const NADInjectablePage = () => {
                     >
                       The{" "}
                       <Box component="span" sx={{ color: palette.darkBlue }}>
-                        NAD+ Injectable
+                        {productInfo.name}
                       </Box>{" "}
                       Kit
                     </Typography>
 
                     <Box sx={{ mb: 4 }}>
-                      {[
-                        "500mg NAD+ (Nicotinamide Adenine Dinucleotide) pharmaceutical-grade powder",
-                        "Bacteriostatic water for injection",
-                        "Sterile insulin syringes with ultra-fine needles",
-                        "Comprehensive subcutaneous injection guide for research",
-                        "Alcohol swabs and sharps container",
-                        "Research dosing protocol",
-                        "Access to research support resources"
-                      ].map((feature, index) => (
+                      {productInfo.kitIncludes.map((feature, index) => (
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, x: 20 }}
@@ -816,12 +887,7 @@ const NADInjectablePage = () => {
                 }}
               >
                 <Grid container spacing={2}>
-                  {[
-                    { label: "Active Ingredient", value: "NAD+" },
-                    { label: "Strength", value: "500 mg" },
-                    { label: "Research Dose", value: "50-100 mg" },
-                    { label: "Administration", value: "Subcutaneous/IM" },
-                  ].map((spec, index) => (
+                  {productInfo.specifications.map((spec, index) => (
                     <Grid item xs={12} sm={6} md={3} key={index}>
                       <Box>
                         <Typography
@@ -948,36 +1014,7 @@ const NADInjectablePage = () => {
               mb: { xs: 8, md: 12 },
             }}
           >
-            {[
-              {
-                step: 1,
-                icon: Shield,
-                title: "Research Planning",
-                description: "Preparation for study protocols",
-                color: palette.darkBlue,
-              },
-              {
-                step: 2,
-                icon: Target,
-                title: "Formulation Research",
-                description: "Study of injectable formulations",
-                color: palette.lightBlue,
-              },
-              {
-                step: 3,
-                icon: Droplets,
-                title: "Administration Studies",
-                description: "Research on systemic delivery methods",
-                color: palette.darkBlue,
-              },
-              {
-                step: 4,
-                icon: Battery,
-                title: "Ongoing Research",
-                description: "Continued scientific investigation",
-                color: palette.lightBlue,
-              },
-            ].map((item, index) => (
+            {howItWorks.map((item, index) => (
               <motion.div
                 key={item.step}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -1090,12 +1127,7 @@ const NADInjectablePage = () => {
               </Typography>
 
               <Grid container spacing={4} justifyContent="center">
-                {[
-                  { time: "Initial Phase", improvement: "Formulation development research", icon: Lightning, color: palette.darkBlue },
-                  { time: "Early Studies", improvement: "Delivery method research", icon: Moon, color: palette.lightBlue },
-                  { time: "Ongoing Research", improvement: "Potential applications studies", icon: Activity, color: palette.darkBlue},
-                  { time: "Long-term Studies", improvement: "Continued scientific investigation", icon: RefreshCw, color: palette.lightBlue },
-                ].map((milestone, idx) => (
+                {timeline.map((milestone, idx) => (
                   <Grid item xs={12} sm={6} md={3} key={idx}>
                     <motion.div 
                       initial={{ opacity: 0, y: 20 }} 
@@ -1245,7 +1277,7 @@ const NADInjectablePage = () => {
                   mx: "auto",
                 }}
               >
-                Access NAD+ Injectable for $299.00 for research purposes. Includes comprehensive formulation details and research guidance.
+                Access {productInfo.name} for {productInfo.price} for research purposes. Includes comprehensive formulation details and research guidance.
               </Typography>
 
               <Box sx={{ 
@@ -1283,7 +1315,7 @@ const NADInjectablePage = () => {
                       },
                     }}
                   >
-                    Start Research - $299.00
+                    {productInfo.ctaText}
                   </Button>
                 </motion.div>
 
@@ -1316,12 +1348,7 @@ const NADInjectablePage = () => {
               </Box>
 
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
-                {[
-                  { text: "500mg NAD+ Multi-Dose Vial" },
-                  { text: "Pharmaceutical Grade" },
-                  { text: "Research Documentation" },
-                  { text: "Injectable Administration" },
-                ].map((feature, index) => (
+                {finalFeatures.map((feature, index) => (
                   <Grid item xs={12} sm={6} md={3} key={index}>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -1447,7 +1474,7 @@ const NADInjectablePage = () => {
                       mx: "auto",
                     }}
                   >
-                    NAD+ is a natural coenzyme, and this formulation is being studied for research purposes. May cause temporary reactions after administration. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary.
+                    {productInfo.disclaimer}
                   </Typography>
                 </Box>
               </motion.div>

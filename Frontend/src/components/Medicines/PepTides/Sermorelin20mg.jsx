@@ -123,15 +123,15 @@ const SermorelinPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>compounded sermorelin acetate</Box> is available under provider oversight. Sermorelin is a synthetic peptide that stimulates growth hormone-releasing hormone receptors, which are involved in various physiological processes.
+            Sermorelin gently amplifies natural growth-hormone production, improving energy, recovery, sleep quality, and long-term wellness. It pairs seamlessly with Ipamorelin, BPC-157, and NAD+ for a refined longevity and performance stack.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
               <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
                 {[
-                  "Clinical peptide therapy",
-                  "Pituitary gland stimulation",
-                  "Medical supervision required",
+                  "Amplifies Natural Production",
+                  "Improves Recovery & Sleep",
+                  "Longevity Performance Stack",
                 ].map((t, i) => (
                   <Box
                     key={i}
@@ -696,7 +696,7 @@ const SermorelinPage = () => {
                         display: "inline-block",
                       }}
                     >
-                      Clinical Therapy Protocol
+                      Official Product Description
                     </Typography>
 
                     <Typography
@@ -709,10 +709,18 @@ const SermorelinPage = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      Medical-Grade{" "}
-                      <Box component="span" sx={{ color: palette.darkBlue }}>
-                        Sermorelin 20mg Kit
-                      </Box>
+                      Sermorelin 20mg
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontSize: "16px",
+                        color: palette.darkGrey,
+                        lineHeight: 1.7,
+                        mb: 4,
+                      }}
+                    >
+                      Sermorelin gently amplifies natural growth-hormone production, improving energy, recovery, sleep quality, and long-term wellness. It pairs seamlessly with Ipamorelin, BPC-157, and NAD+ for a refined longevity and performance stack.
                     </Typography>
 
                     <Box sx={{ mb: 4 }}>

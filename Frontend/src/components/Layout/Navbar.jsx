@@ -10,6 +10,11 @@ import Backdrop from "@mui/material/Backdrop";
 import Menu from "@mui/material/Menu";
 import Divider from "@mui/material/Divider";
 import ListItemIcon from "@mui/material/ListItemIcon";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
 import { useNavigate } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
 
@@ -39,6 +44,7 @@ export default function Navbar() {
   const [bannerHidden, setBannerHidden] = useState(false);
   const [expandedItems, setExpandedItems] = useState({});
   const [anchorEl, setAnchorEl] = useState(null);
+  const [logoutDialogOpen, setLogoutDialogOpen] = useState(false);
   const profileMenuOpen = Boolean(anchorEl);
 
   // Check if user is logged in on component mount
@@ -69,12 +75,21 @@ export default function Navbar() {
     setAnchorEl(null);
   };
 
-  const handleLogout = () => {
+  const handleLogoutClick = () => {
+    handleProfileMenuClose();
+    setLogoutDialogOpen(true);
+  };
+
+  const handleLogoutCancel = () => {
+    setLogoutDialogOpen(false);
+  };
+
+  const handleLogoutConfirm = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
     setIsLoggedIn(false);
     setUser(null);
-    handleProfileMenuClose();
+    setLogoutDialogOpen(false);
     navigate("/");
   };
 
@@ -322,13 +337,64 @@ export default function Navbar() {
           My Profile
         </MenuItem>
         <Divider />
-        <MenuItem onClick={handleLogout} sx={{ py: 1.5, color: "#d32f2f" }}>
+        <MenuItem onClick={handleLogoutClick} sx={{ py: 1.5, color: "#d32f2f" }}>
           <ListItemIcon>
             <LogoutIcon fontSize="small" sx={{ color: "#d32f2f" }} />
           </ListItemIcon>
           Logout
         </MenuItem>
       </Menu>
+
+      {/* Logout Confirmation Dialog */}
+      <Dialog
+        open={logoutDialogOpen}
+        onClose={handleLogoutCancel}
+        aria-labelledby="logout-dialog-title"
+        aria-describedby="logout-dialog-description"
+        PaperProps={{
+          sx: {
+            borderRadius: "12px",
+            padding: "8px",
+          }
+        }}
+      >
+        <DialogTitle id="logout-dialog-title" sx={{ fontWeight: 600 }}>
+          Confirm Logout
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="logout-dialog-description">
+            Are you sure you want to log out? You'll need to sign in again to access your account.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions sx={{ padding: "8px 16px 16px" }}>
+          <Button 
+            onClick={handleLogoutCancel}
+            sx={{
+              color: "#555",
+              fontWeight: 500,
+              "&:hover": {
+                backgroundColor: "rgba(0, 0, 0, 0.04)"
+              }
+            }}
+          >
+            Cancel
+          </Button>
+          <Button 
+            onClick={handleLogoutConfirm}
+            variant="contained"
+            sx={{
+              backgroundColor: "#d32f2f",
+              fontWeight: 600,
+              "&:hover": {
+                backgroundColor: "#b71c1c"
+              }
+            }}
+            autoFocus
+          >
+            Logout
+          </Button>
+        </DialogActions>
+      </Dialog>
 
       {/* Full-screen Dropdown */}
       <Slide

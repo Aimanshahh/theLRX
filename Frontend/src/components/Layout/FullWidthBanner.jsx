@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import manImg from "../../assets/section/img8.png";
 import phoneImg from "../../assets/section/img3.png";
 import bioAgeImg from "../../assets/section/img5.jpeg";
-import biomarkersImg from "../../assets/images/card4-removebg-preview.png";
+import biomarkersImg from "../../assets/section/biomarker.jpeg";
 
 const SimpleHimsBackground = () => {
   const navigate = useNavigate();
@@ -384,73 +384,71 @@ const SimpleHimsBackground = () => {
         </Box>
 
         {/* CARD 2 */}
-        <Box
-          sx={{
-            flex: 1,
-            borderRadius: { xs: "16px", sm: "24px" },
-            backgroundColor: "#072A6EFF",
-            position: "relative",
-            overflow: "hidden",
-            minHeight: { xs: "65vh", sm: "75vh", md: "92vh" },
-            p: { xs: 2.5, sm: 3.5, md: 4.5 },
-            color: "#fff",
-          }}
-        >
-          <Typography
-            sx={{
-              textAlign: "center",
-              fontSize: { xs: "1.8rem", sm: "2.6rem", md: "3.6rem" },
-              fontWeight: 600,
-              zIndex: 2,
-              position: "relative",
-              lineHeight: 1.1,
-              mb: { xs: 2, sm: 0 },
-            }}
-          >
-            Test 130+ Biomarkers
-          </Typography>
+  <Box
+  sx={{
+    flex: 1,
+    borderRadius: { xs: "16px", sm: "24px" },
+    backgroundColor: "#072A6EFF",
+    position: "relative",
+    overflow: "hidden",
+    minHeight: { xs: "65vh", sm: "75vh", md: "92vh" },
+    p: { xs: 2.5, sm: 3.5, md: 4.5 },
+    color: "#fff",
+  }}
+>
+  <Typography
+    sx={{
+      textAlign: "center",
+      fontSize: { xs: "1.8rem", sm: "2.6rem", md: "3.6rem" },
+      fontWeight: 600,
+      zIndex: 2,
+      position: "relative",
+      lineHeight: 1.1,
+      mb: { xs: 2, sm: 0 },
+    }}
+  >
+    Test 130+ Biomarkers
+  </Typography>
 
-          <Box
-            component="img"
-            src={biomarkersImg}
-            alt="Biomarkers"
-            sx={{
-              position: { xs: "relative", sm: "absolute" },
-              top: { xs: "auto", sm: "20%" },
-              left: { xs: "auto", sm: "50%" },
-              transform: { xs: "none", sm: "translateX(-50%)" },
-              height: { xs: "45vh", sm: "80%" },
-              width: { xs: "100%", sm: "auto" },
-              zIndex: 1,
-              mt: { xs: 2, sm: 0 },
-              display: "block",
-              mx: { xs: "auto", sm: "0" },
-            }}
-          />
+  <Box
+    component="img"
+    src={biomarkersImg}
+    alt="Biomarkers"
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      zIndex: 1,
+      display: "block",
+    }}
+  />
 
-          <Button
-            onClick={handleButtonClick}
-            sx={{
-              mt: { xs: 3, sm: 0 },
-              width: { xs: "100%", sm: "auto" },
-              px: { xs: 3, sm: 4.6 },
-              py: { xs: 1, sm: 1.25 },
-              borderRadius: "999px",
-              backgroundColor: "#00359E",
-              color: "#fff",
-              fontSize: { xs: "0.9rem", sm: "1rem" },
-              textTransform: "none",
-              position: { xs: "static", sm: "absolute" },
-              bottom: { sm: "5%" },
-              left: { xs: "auto", sm: "50%" },
-              transform: { xs: "none", sm: "translateX(-50%)" },
-              zIndex: 2,
-              fontWeight: 600,
-            }}
-          >
-            Meet The Markers
-          </Button>
-        </Box>
+  <Button
+    onClick={handleButtonClick}
+    sx={{
+      mt: { xs: 3, sm: 0 },
+      width: { xs: "100%", sm: "auto" },
+      px: { xs: 3, sm: 4.6 },
+      py: { xs: 1, sm: 1.25 },
+      borderRadius: "999px",
+      backgroundColor: "#00359E",
+      color: "#fff",
+      fontSize: { xs: "0.9rem", sm: "1rem" },
+      textTransform: "none",
+      position: "absolute",
+      bottom: { xs: "20px", sm: "5%" },
+      left: "50%",
+      transform: "translateX(-50%)",
+      zIndex: 2,
+      fontWeight: 600,
+    }}
+  >
+    Meet The Markers
+  </Button>
+</Box>
       </Box>
 
       {/* FOOTER */}
