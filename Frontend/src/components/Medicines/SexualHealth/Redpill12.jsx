@@ -1228,8 +1228,7 @@ const Redpill12Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                12-tablet pack • Compounded medication (Tadalafil 20mg/Pycnogenol 25mg) • Telehealth consultation required • 
-                $297 first month treatment program • Ships to all 50 states • 24/7/365 ordering
+                12-tablet pack • Compounded medication (Tadalafil 20mg/Pycnogenol 25mg) • Telehealth consultation required • first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

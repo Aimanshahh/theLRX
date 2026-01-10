@@ -1174,7 +1174,7 @@ const DrivePlus12Page = () => {
                     fontSize: "1.1rem"
                   }}
                 >
-                  first month (Regularly $297/month)
+                  first month 
                 </Typography>
               </Box>
               

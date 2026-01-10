@@ -1230,7 +1230,7 @@ const OverdrivePlus6Page = () => {
                 }}
               >
                 6-tablet pack • Compounded medication (Tadalafil 20mg/Bremelanotide 5mg/Pycnogenol 25mg) • Telehealth consultation required • 
-                $297 first month treatment program • Ships to all 50 states • 24/7/365 ordering
+                first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

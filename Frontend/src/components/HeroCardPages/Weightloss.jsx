@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import { TrendingDown, Users, Award, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom"; // Added for navigation
 import bannerVideo from "../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4";
 
 // PRODUCT IMAGES
-import wegovyPill from "../../assets/medicines/herocard4.jpeg";
-import zepboundVial from "../../assets/medicines/B12.png";
-import ozempicPen from "../../assets/medicines/B12.png";
-import wegovyPen from "../../assets/medicines/B12.png";
-import zepboundPen from "../../assets/medicines/B12.png";
-import semaglutideVial from "../../assets/medicines/B12.png";
+import wegovyPill from "../../assets/Herocardspages/img1.jpeg";
+import zepboundVial from "../../assets/Herocardspages/img2.jpeg";
+import ozempicPen from "../../assets/Herocardspages/img6.jpeg";
+import zepboundPen from "../../assets/Herocardspages/img4.jpeg";
+import semaglutideVial from "../../assets/Herocardspages/img3.jpeg";
 
 export default function Weightloss() {
   const theme = useTheme();
@@ -17,12 +17,68 @@ export default function Weightloss() {
   const isSmallMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "lg"));
+  const navigate = useNavigate(); // Hook for navigation
+
+  // Product data with URLs
+  const products = [
+    { 
+      img: wegovyPill, 
+      name: "Retatrutide® Vial", 
+      sub: "$449.00",
+      buyNowUrl: "https://try.thelrx.com/intake/rt-76aoce",
+      learnMorePath: "/weight-loss/retatrutide-vial"
+    },
+    { 
+      img: zepboundVial, 
+      name: "Oral Tirzepatide® RDT", 
+      sub: "$379.00",
+      buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
+      learnMorePath: "/weight-loss/oral-tirzepatide-rdt"
+    },
+    { 
+      img: ozempicPen, 
+      name: "Oral Semaglutide RDT", 
+      sub: "$249.00",
+      buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
+      learnMorePath: "/weight-loss/oral-semaglutide-rdt"
+    },
+    { 
+      img: zepboundPen, 
+      name: "Tirzepatide Injectable", 
+      sub: "$289.00",
+      buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
+      learnMorePath: "/weight-loss/tirzepatide-injectable"
+    },
+    { 
+      img: semaglutideVial, 
+      name: "Semaglutide Injectable", 
+      sub: "$189.00",
+      buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
+      learnMorePath: "/weight-loss/semaglutide-injectable"
+    },
+    
+  ];
+
+  // Handler for Buy Now button (opens external URL)
+  const handleBuyNow = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  // Handler for Learn More button (navigates internally)
+  const handleLearnMore = (path) => {
+    navigate(path);
+  };
+
+  // Handler for Start Your Journey button
+  const handleStartJourney = () => {
+    // You can set this to navigate to a specific page or open a modal
+    navigate("/weight-loss-program");
+  };
 
   return (
     <>
       {/* ================= VIDEO BANNER SECTION ================= */}
       <Box sx={{
-        minHeight: "100vh",
         bgcolor: "#000000",
         position: "relative",
       }}>
@@ -134,6 +190,7 @@ export default function Weightloss() {
               
               {/* Enhanced Button for mobile/medium screens */}
               <Button
+                onClick={handleStartJourney}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",
@@ -164,10 +221,9 @@ export default function Weightloss() {
                 }}
               >
                 <span>Start Your Journey</span>
-                <ArrowRight sx={{
-                  width: { xs: "1rem", sm: "1.1rem", md: "1rem" },
-                  height: { xs: "1rem", sm: "1.1rem", md: "1rem" },
-                  transition: "transform 0.3s ease",
+                <ArrowRight style={{
+                  width: "1rem",
+                  height: "1rem",
                 }} />
               </Button>
             </Box>
@@ -181,13 +237,13 @@ export default function Weightloss() {
               gap: { xs: 2, sm: 3, md: 2, lg: 3 },
               width: { xs: "100%", md: "auto" },
               mt: { xs: 0, md: isLargeScreen ? 55 : "auto" },
-              mb: { xs: 3, sm: 4, md: "auto" },
+              mb: { xs: 5, sm: 5, md: "auto" },
               alignSelf: { md: isLargeScreen ? "flex-start" : "flex-end" },
               position: { xs: "relative", md: isLargeScreen ? "relative" : "absolute" },
               bottom: { md: isLargeScreen ? "auto" : 40 },
               right: { md: isLargeScreen ? "auto" : 40 },
             }}>
-              {/* Card 1 - Enhanced for mobile */}
+              {/* Card 1 */}
               <Box sx={{
                 backdropFilter: "blur(15px)",
                 bgcolor: "rgba(255, 255, 255, 0.12)",
@@ -210,10 +266,10 @@ export default function Weightloss() {
                 },
               }}>
                 <TrendingDown style={{ 
-                  width: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
-                  height: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
+                  width: "28px",
+                  height: "28px",
                   color: "#FFFFFF", 
-                  strokeWidth: { xs: 2.5, sm: 2.5, md: 2 }
+                  strokeWidth: 2.5
                 }} />
               </Box>
 
@@ -240,10 +296,10 @@ export default function Weightloss() {
                 },
               }}>
                 <Users style={{ 
-                  width: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
-                  height: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
+                  width: "28px",
+                  height: "28px",
                   color: "#FFFFFF", 
-                  strokeWidth: { xs: 2.5, sm: 2.5, md: 2 }
+                  strokeWidth: 2.5
                 }} />
               </Box>
 
@@ -270,176 +326,236 @@ export default function Weightloss() {
                 },
               }}>
                 <Award style={{ 
-                  width: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
-                  height: { xs: "28px", sm: "32px", md: "26px", lg: "28px" }, 
+                  width: "28px",
+                  height: "28px",
                   color: "#FFFFFF", 
-                  strokeWidth: { xs: 2.5, sm: 2.5, md: 2 }
+                  strokeWidth: 2.5
                 }} />
               </Box>
             </Box>
-          </Box>
-        </Box>
 
-        {/* Enhanced Disclaimer - Overlay on Video */}
-        <Box sx={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          px: { xs: 2, sm: 3, md: 4, lg: 6 },
-          py: { xs: 2, sm: 2.5, md: 2 },
-          zIndex: 10,
-          background: { 
-            xs: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%)",
-            sm: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)" 
-          },
-        }}>
-          <Typography
-            sx={{
-              textAlign: "center",
-              fontSize: { 
-                xs: "0.7rem", 
-                sm: "0.8rem", 
-                md: "0.8125rem", 
-                lg: "0.875rem" 
+            {/* Disclaimer at bottom */}
+            <Box sx={{
+              position: "absolute",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              px: { xs: 2, sm: 3, md: 4, lg: 6 },
+              py: { xs: 1, sm: 3.5, md: 2 },
+              zIndex: 10,
+              background: { 
+                xs: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, transparent 100%)",
+                sm: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)" 
               },
-              fontWeight: { xs: 400, sm: 400, md: 400 },
-              color: "rgba(255, 255, 255, 0.85)",
-              lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
-              maxWidth: { xs: "100%", sm: "95%", md: "900px" },
-              mx: "auto",
-              textShadow: "0 1px 3px rgba(0, 0, 0, 0.8)",
-              letterSpacing: { xs: "0.01em", sm: "0.005em" },
-            }}
-          >
-            * These statements have not been evaluated by the Food and Drug Administration.  
-            Individual results may vary. Consult with a healthcare professional before starting any weight loss program.
-          </Typography>
+            }}>
+              <Typography
+                sx={{
+                  textAlign: "center",
+                  fontSize: { 
+                    xs: "0.7rem", 
+                    sm: "0.8rem", 
+                    md: "0.8125rem", 
+                    lg: "0.875rem" 
+                  },
+                  fontWeight: { xs: 400, sm: 400, md: 400 },
+                  color: "rgba(255, 255, 255, 0.85)",
+                  lineHeight: { xs: 1.4, sm: 1.5, md: 1.6 },
+                  maxWidth: { xs: "100%", sm: "95%", md: "900px" },
+                  mx: "auto",
+                  textShadow: "0 1px 3px rgba(0, 0, 0, 0.8)",
+                  letterSpacing: { xs: "0.01em", sm: "0.005em" },
+                }}
+              >
+                * These statements have not been evaluated by the Food and Drug Administration.  
+                Individual results may vary. Consult with a healthcare professional before starting any weight loss program.
+              </Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
       {/* ================= END VIDEO BANNER SECTION ================= */}
-
-{/* ================= PRODUCTS GRID SECTION ================= */}
-<Box
-  sx={{
-    bgcolor: "#F7F7F7",
-    py: { xs: 6, sm: 8, md: 10 },
-    px: { xs: 2, sm: 3, md: 6 },
-  }}
->
-  <Box
-    sx={{
-      maxWidth: "1440px",
-      mx: "auto",
-      display: "grid",
-      gridTemplateColumns: {
-        xs: "repeat(2, 1fr)",
-        sm: "repeat(3, 1fr)",
-        md: "repeat(6, 1fr)",
-      },
-      gap: { xs: 3, sm: 4 },
-    }}
-  >
-    {[
-      { img: wegovyPill, name: "Wegovy® pill", sub: "semaglutide" },
-      { img: zepboundVial, name: "Zepbound® vials", sub: "tirzepatide" },
-      { img: ozempicPen, name: "Ozempic®", sub: "semaglutide" },
-      { img: wegovyPen, name: "Wegovy® pen", sub: "semaglutide" },
-      { img: zepboundPen, name: "Zepbound®", sub: "tirzepatide" },
-      { img: semaglutideVial, name: "Semaglutide", sub: "injection" },
-    ].map((item, index) => (
+      
+      {/* ================= PRODUCTS GRID SECTION ================= */}
       <Box
-        key={index}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "stretch",
+          bgcolor: "#F7F7F7",
+          py: { xs: 8, sm: 10, md: 12 },
+          px: { xs: 2, sm: 4, md: 8 },
         }}
       >
-        {/* IMAGE — FREE, SQUARE, NO CONTAINER */}
         <Box
-          component="img"
-          src={item.img}
-          alt={item.name}
           sx={{
-            width: "100%",
-            aspectRatio: "1 / 1",
-            objectFit: "contain",
-            display: "block",
-            mb: 1.5,
-          }}
-        />
-
-        {/* SUPPLY */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: 1, mb: 0.75 }}>
-          <Box
-            sx={{
-              width: 8,
-              height: 8,
-              borderRadius: "50%",
-              bgcolor: "#22C55E",
-            }}
-          />
-          <Typography
-            sx={{
-              fontSize: "0.75rem",
-              color: "#22C55E",
-              fontWeight: 500,
-            }}
-          >
-            Supply available
-          </Typography>
-        </Box>
-
-        {/* PRODUCT NAME */}
-        <Typography
-          sx={{
-            fontSize: "1rem",
-            fontWeight: 600,
-            color: "#111827",
-            lineHeight: 1.3,
-          }}
-        >
-          {item.name}
-        </Typography>
-
-        {/* SUB NAME */}
-        <Typography
-          sx={{
-            fontSize: "0.8rem",
-            color: "#6B7280",
-            mb: 1.5,
-          }}
-        >
-          {item.sub}
-        </Typography>
-
-        {/* BUTTON */}
-        <Button
-          sx={{
-            alignSelf: "flex-start",
-            borderRadius: "999px",
-            textTransform: "none",
-            fontWeight: 600,
-            fontSize: "0.85rem",
-            px: 3,
-            py: 0.75,
-            bgcolor: "#111827",
-            color: "#FFFFFF",
-            "&:hover": {
-              bgcolor: "#000000",
+            maxWidth: "1640px",
+            mx: "auto",
+            display: "grid",
+            gridTemplateColumns: {
+              xs: "1fr",
+              sm: "repeat(2, minmax(0, 1fr))",
+              md: "repeat(3, minmax(0, 1fr))",
+              lg: "repeat(4, minmax(0, 1fr))",
+            },
+            columnGap: { 
+              xs: 3,
+              sm: 4, 
+              md: 5, 
+              lg: 6
+            },
+            rowGap: { 
+              xs: 4,
+              sm: 5, 
+              md: 6, 
+              lg: 6
             },
           }}
         >
-          Buy now
-        </Button>
+          {/* Map through products array */}
+          {products.map((item, index) => (
+            <Box key={index} sx={{ display: "flex", flexDirection: "column" }}>
+
+              {/* IMAGE */}
+              <Box
+                sx={{
+                  width: "100%",
+                  aspectRatio: "1 / 1",
+                  overflow: "hidden",
+                  mb: { xs: 1.5, md: 2 },
+                }}
+              >
+                <Box
+                  component="img"
+                  src={item.img}
+                  alt={item.name}
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    transition: "transform 0.3s ease",
+                    "&:hover": { transform: "scale(1.06)" },
+                  }}
+                />
+              </Box>
+
+              {/* SUPPLY BADGE WITH DOT */}
+              <Box
+                sx={{
+                  alignSelf: "flex-start",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 0.75,
+                  bgcolor: "#DCFCE7",
+                  color: "#16A34A",
+                  px: { xs: 1, md: 1.25 },
+                  py: "2px",
+                  borderRadius: "999px",
+                  fontSize: { xs: "0.65rem", md: "0.7rem" },
+                  fontWeight: 600,
+                  mb: { xs: 0.75, md: 1 },
+                }}
+              >
+                <Box
+                  sx={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    bgcolor: "#22C55E",
+                  }}
+                />
+                Supply available
+              </Box>
+
+              {/* PRODUCT NAME */}
+              <Typography
+                sx={{
+                  fontSize: { xs: "0.95rem", md: "1.05rem" },
+                  fontWeight: 700,
+                  color: "#111827",
+                  lineHeight: 1.25,
+                }}
+              >
+                {item.name}
+              </Typography>
+
+              {/* SUB NAME */}
+              <Typography
+                sx={{
+                  fontSize: { xs: "0.8rem", md: "0.85rem" },
+                  color: "#6B7280",
+                  mb: { xs: 1.5, md: 2 },
+                }}
+              >
+                {item.sub}
+              </Typography>
+
+              {/* BUTTONS */}
+              <Box sx={{ 
+                display: "flex", 
+                gap: { xs: 1, md: 2 },
+                mt: "auto"
+              }}>
+                <Button
+                  onClick={() => handleBuyNow(item.buyNowUrl)}
+                  disableRipple
+                  sx={{
+                    flex: 1,
+                    height: { xs: 32, md: 36 },
+                    minWidth: 0,
+                    px: { xs: 2, md: 5 },
+                    borderRadius: "999px",
+                    fontSize: { xs: "0.75rem", md: "0.85rem" },
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    textTransform: "none",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    bgcolor: "#111827",
+                    color: "#FFFFFF",
+                    "&:hover": { bgcolor: "#000000" },
+                  }}
+                >
+                  Buy now
+                </Button>
+
+                <Button
+                  onClick={() => handleLearnMore(item.learnMorePath)}
+                  disableRipple
+                  sx={{
+                    flex: 1,
+                    height: { xs: 32, md: 36 },
+                    minWidth: 0,
+                    px: { xs: 2, md: 5 },
+                    borderRadius: "999px",
+                    fontSize: { xs: "0.75rem", md: "0.85rem" },
+                    fontWeight: 600,
+                    lineHeight: 1,
+                    textTransform: "none",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    bgcolor: "#F9FAFB",
+                    color: "#111827",
+                    border: "1px solid #E5E7EB",
+                    "&:hover": {
+                      bgcolor: "#F3F4F6",
+                      borderColor: "#D1D5DB",
+                    },
+                  }}
+                >
+                  Learn more
+                </Button>
+              </Box>
+
+            </Box>
+          ))}
+        </Box>
       </Box>
-    ))}
-  </Box>
-</Box>
-{/* ================= END PRODUCTS GRID ================= */}
-
-
+      {/* ================= END PRODUCTS GRID ================= */}
     </>
   );
 }
