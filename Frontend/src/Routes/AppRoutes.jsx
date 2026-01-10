@@ -30,15 +30,6 @@ import Shipping from "../components/FAQsCategories/Shipping";
 import Troubleshooting from "../components/FAQsCategories/Troubleshooting";
 import PrivacyAndSecurity from "../components/FAQscategories/PrivacyAndSecurity";
 
-// Mental / Skin
-import Anxiety from "../components/Medicines/Anxiety";
-import Stress from "../components/Medicines/Stress";
-import Depression from "../components/Medicines/Depression";
-import TroubleSleeping from "../components/Medicines/TroubleSleeping";
-import AntiAgingcream from "../components/Medicines/AntiAgingcream";
-import Acnecream from "../components/Medicines/Acnecream";
-import Coldsore from "../components/Medicines/Coldsore";
-import Hightidecleanser from "../components/Medicines/hightidecleanser";
 
 // Weight Loss
 import RetatrutideVial from "../components/Medicines/Weight-Loss/RetatrutideVial";
@@ -79,6 +70,14 @@ import DrivePlus18 from "../components/Medicines/SexualHealth/DrivePlus18";
 // Labs
 import Lab1 from "../components/Medicines/Labs/Lab1";
 import Lab2 from "../components/Medicines/Labs/Lab2";
+
+// HeroCardsPages
+import Buildmuscle from "../components/HeroCardPages/Buildmuscle.jsx";
+import Weightloss from "../components/HeroCardPages/Weightloss.jsx";
+import Fixyourskin from "../components/HeroCardPages/fixyourskin.jsx";
+import Fixyourrecovery from "../components/HeroCardPages/Fixyourrecovery.jsx";
+import Wantmoresex from "../components/HeroCardPages/wantmoresex.jsx";
+import Stoplowenergy from "../components/HeroCardPages/Stoplowenergy.jsx";
 
 /* ------------------- LAYOUT ------------------- */
 
@@ -159,16 +158,6 @@ export default function AppRoutes() {
               <Route path="/labs/lab1" element={<Lab1 />} />
               <Route path="/labs/lab2" element={<Lab2 />} />
 
-              <Route path="/mental-health/anxiety" element={<Anxiety />} />
-              <Route path="/mental-health/stress" element={<Stress />} />
-              <Route path="/mental-health/depression" element={<Depression />} />
-              <Route path="/mental-health/trouble-sleeping" element={<TroubleSleeping />} />
-
-              <Route path="/skin/anti-aging-cream" element={<AntiAgingcream />} />
-              <Route path="/skin/acne-cream" element={<Acnecream />} />
-              <Route path="/skin/cold-sore" element={<Coldsore />} />
-              <Route path="/skin/hightide-cleanser" element={<Hightidecleanser />} />
-
               <Route path="/weight-loss/retatrutide-vial" element={<RetatrutideVial />} />
               <Route path="/weight-loss/oral-tirzepatide-rdt" element={<OralTirzepatideRDT />} />
               <Route path="/weight-loss/oral-semaglutide-rdt" element={<OralSemaglutideRDT />} />
@@ -201,6 +190,15 @@ export default function AppRoutes() {
               <Route path="/sexual-health/drive-plus-6" element={<DrivePlus6 />} />
               <Route path="/sexual-health/drive-plus-12" element={<DrivePlus12 />} />
               <Route path="/sexual-health/drive-plus-18" element={<DrivePlus18 />} />
+
+              {/* Hero Card Pages */}
+<Route path="/build-muscle" element={<Buildmuscle />} />
+<Route path="/weight-loss-program" element={<Weightloss />} />
+<Route path="/fix-your-skin" element={<Fixyourskin />} />
+<Route path="/fix-your-recovery" element={<Fixyourrecovery />} />
+<Route path="/want-more-sex" element={<Wantmoresex />} />
+<Route path="/stop-low-energy" element={<Stoplowenergy />} />
+
 
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>

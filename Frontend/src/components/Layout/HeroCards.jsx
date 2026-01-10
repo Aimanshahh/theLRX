@@ -72,21 +72,25 @@ const topCards = [
     second: "Weight", 
     image: weightloss1, 
     popular: true,
+    route: "/weight-loss-program"  // Added route
   },
   { 
     first: "Build Real", 
     second: "Muscle", 
     image: hair2,
+    route: "/build-muscle"  // Added route
   },
   { 
     first: "Fix Your", 
     second: "Recovery", 
     image: testosterene,
+    route: "/fix-your-recovery"  // Added route
   },
   { 
     first: "Stop Low", 
     second: "Energy", 
     image: Intimicy,
+    route: "/stop-low-energy"  // Added route
   },
 ];
 
@@ -95,11 +99,13 @@ const bottomCards = [
     first: "Fix Your ", 
     second: "Skin", 
     image: skin2,
+    route: "/fix-your-skin"  // Added route
   },
   { 
     first: "Want More", 
     second: "Sex", 
     image: Tackleanxiety,
+    route: "/want-more-sex"  // Added route
   },
   { 
     title: "Explore All Treatments", 
@@ -123,8 +129,9 @@ export default function HeroCards() {
   const handleCardClick = (card) => {
     if (card.browse) {
       setIsSidebarOpen(true);
+    } else if (card.route) {
+      navigate(card.route);  // Navigate to the card's route
     }
-    // Cards are no longer clickable - removed the Rimo form opening
   };
 
   return (
@@ -224,22 +231,23 @@ export default function HeroCards() {
         >
           {topCards.map((c, i) => {
             const hovered = hoverTop === i;
+            const isClickable = c.route || c.browse;
 
             return (
               <motion.div
                 key={i}
                 onMouseEnter={() => setHoverTop(i)}
                 onMouseLeave={() => setHoverTop(null)}
-                onClick={() => card.browse ? setIsSidebarOpen(true) : null}
-                whileHover={{ y: -6, scale: 1.04 }}
+                onClick={() => handleCardClick(c)}
+                whileHover={isClickable ? { y: -6, scale: 1.04 } : {}}
                 style={{
                   borderRadius: "22px",
                   padding: "22px",
                   height: isSmallMobile ? "220px" : "260px",
                   position: "relative",
-                  cursor: c.browse ? "pointer" : "default", // Only "Explore All Treatments" is clickable
+                  cursor: isClickable ? "pointer" : "default",
                   overflow: "hidden",
-                  background: hovered
+                  background: hovered && isClickable
                     ? "linear-gradient(150deg, #00359E, #747578)"
                     : "#fff",
                   border: "1px solid rgba(0,0,0,0.08)",
@@ -275,26 +283,26 @@ export default function HeroCards() {
                   <ChevronRightIcon
                     style={{
                       fontSize: "22px",
-                      color: hovered ? "#fff" : palette.greyLight,
-                      opacity: c.browse ? 1 : 0, // Hide arrow for non-clickable cards
+                      color: hovered && isClickable ? "#fff" : palette.greyLight,
+                      opacity: isClickable ? 1 : 0,
                     }}
                   />
                 </div>
 
                 <motion.h3
-                  animate={{ y: hovered ? -4 : 0 }}
+                  animate={{ y: hovered && isClickable ? -4 : 0 }}
                   transition={{ stiffness: 220, damping: 18 }}
                   style={{
                     fontSize: topTitleSize,
                     fontWeight: 700,
                     margin: 0,
-                    color: hovered ? "#fff" : palette.greyDark,
+                    color: hovered && isClickable ? "#fff" : palette.greyDark,
                   }}
                 >
                   {c.first}{" "}
                   <span
                     style={{
-                      color: hovered ? "#fff" : palette.blueDark,
+                      color: hovered && isClickable ? "#fff" : palette.blueDark,
                       fontWeight: 800,
                     }}
                   >
@@ -306,7 +314,10 @@ export default function HeroCards() {
                 <motion.img
                   src={c.image}
                   alt=""
-                  animate={{ y: hovered ? -8 : 0, scale: hovered ? 1.08 : 1 }}
+                  animate={{ 
+                    y: hovered && isClickable ? -8 : 0, 
+                    scale: hovered && isClickable ? 1.08 : 1 
+                  }}
                   transition={{ stiffness: 220, damping: 18 }}
                   style={{
                     width: isSmallMobile ? "120px" : "150px",
@@ -330,14 +341,14 @@ export default function HeroCards() {
         >
           {bottomCards.map((c, i) => {
             const hovered = hoverBottom === i;
-            const isClickable = c.browse;
+            const isClickable = c.browse || c.route;
 
             return (
               <motion.div
                 key={i}
                 onMouseEnter={() => setHoverBottom(i)}
                 onMouseLeave={() => setHoverBottom(null)}
-                onClick={isClickable ? () => setIsSidebarOpen(true) : undefined}
+                onClick={() => handleCardClick(c)}
                 whileHover={isClickable ? { y: -4, scale: 1.03 } : {}}
                 style={{
                   borderRadius: "22px",
@@ -345,7 +356,7 @@ export default function HeroCards() {
                   display: "flex",
                   alignItems: "center",
                   cursor: isClickable ? "pointer" : "default",
-                  background: hovered
+                  background: hovered && isClickable
                     ? "linear-gradient(150deg, #00359E, #747578)"
                     : "#fff",
                   border: "1px solid rgba(0,0,0,0.08)",
@@ -355,7 +366,7 @@ export default function HeroCards() {
                   <motion.img
                     src={c.image}
                     alt=""
-                    animate={{ y: hovered ? -6 : 0 }}
+                    animate={{ y: hovered && isClickable ? -6 : 0 }}
                     transition={{ stiffness: 220, damping: 18 }}
                     style={{
                       width: "80px",
@@ -367,13 +378,13 @@ export default function HeroCards() {
                 )}
 
                 <motion.h4
-                  animate={{ y: hovered ? -4 : 0 }}
+                  animate={{ y: hovered && isClickable ? -4 : 0 }}
                   transition={{ stiffness: 220, damping: 18 }}
                   style={{
                     fontSize: bottomTitleSize,
                     fontWeight: 700,
                     margin: 0,
-                    color: hovered ? "#fff" : palette.greyDark,
+                    color: hovered && isClickable ? "#fff" : palette.greyDark,
                   }}
                 >
                   {c.first ? (
@@ -381,7 +392,7 @@ export default function HeroCards() {
                       {c.first}{" "}
                       <span
                         style={{
-                          color: hovered ? "#fff" : palette.blueDark,
+                          color: hovered && isClickable ? "#fff" : palette.blueDark,
                           fontWeight: 800,
                         }}
                       >
@@ -397,8 +408,8 @@ export default function HeroCards() {
                   style={{
                     marginLeft: "auto",
                     fontSize: "24px",
-                    color: hovered ? "#fff" : palette.greyLight,
-                    opacity: isClickable ? 1 : 0, // Hide arrow for non-clickable cards
+                    color: hovered && isClickable ? "#fff" : palette.greyLight,
+                    opacity: isClickable ? 1 : 0,
                   }}
                 />
               </motion.div>
