@@ -69,11 +69,7 @@ export default function Weightloss() {
     navigate(path);
   };
 
-  // Handler for Start Your Journey button
-  const handleStartJourney = () => {
-    // You can set this to navigate to a specific page or open a modal
-    navigate("/weight-loss-program");
-  };
+
 
   return (
     <>
@@ -190,7 +186,6 @@ export default function Weightloss() {
               
               {/* Enhanced Button for mobile/medium screens */}
               <Button
-                onClick={handleStartJourney}
                 sx={{
                   display: "inline-flex",
                   alignItems: "center",

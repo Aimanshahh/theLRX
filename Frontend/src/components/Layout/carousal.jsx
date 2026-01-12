@@ -25,11 +25,18 @@ const carouselData = [
 
 const issuesData = [
   { title: "Premature Ejaculation" },
-  { title: "Hair Loss" },
   { title: "Erectile Dysfunction" },
+  { title: "Intimacy Boost" },
+  { title: "Hair Loss" },
+  { title: "Weight Loss" },
+  { title: "Muscle Building" },
+  { title: "Fatigue & Energy" },
+  { title: "Skin Health" },
+  { title: "Confidence Boost" },
   { title: "Delayed Ejaculation" },
-  { title: "Low Testosterone" },
+  { title: "Metabolism Support" },
 ];
+
 
 const CarousalWithCards = () => {
   const theme = useTheme();
@@ -164,28 +171,7 @@ const CarousalWithCards = () => {
                   {item.title}
                 </Typography>
 
-                {/* BIGGER BUTTON */}
-                {/* <Button
-                  sx={{
-                    position: "absolute",
-                    bottom: { xs: 16, sm: 22, md: 28 },
-                    left: { xs: 16, sm: 22, md: 30 },
-                    backgroundColor: "#fff",
-                    borderRadius: "40px",
-                    textTransform: "none",
-                    fontSize: { xs: "0.85rem", sm: "1rem", md: "1.05rem" },
-                    px: { xs: 3, sm: 3.8, md: 4.5 },
-                    py: { xs: 0.9, sm: 1.1 },
-                    fontWeight: 700,
-                    "&:hover": {
-                      backgroundColor: "#f4f4f4",
-                      transform: "translateY(-2px)",
-                    },
-                    transition: "all 0.25s ease",
-                  }}
-                >
-                  Explore
-                </Button> */}
+
               </Card>
             </Box>
           ))}
@@ -193,65 +179,77 @@ const CarousalWithCards = () => {
       </Box>
 
       {/* ---------------- TILES ---------------- */}
-      <Box
-        sx={{
-          mt: 1,
-          overflowX: "hidden",
-          position: "relative",
-          py: 0.5,
-          px: { xs: 0.7, sm: 1 },
-          "&:hover .scroll-tiles": { animationPlayState: "paused" },
-        }}
-      >
-        <Box
-          className="scroll-tiles"
+<Box
+  sx={{
+    mt: 1,
+    overflowX: "hidden",
+    position: "relative",
+    py: 0.5,
+    px: { xs: 0.7, sm: 1 },
+    "&:hover .scroll-tiles": { animationPlayState: "paused" },
+  }}
+>
+  <Box
+    className="scroll-tiles"
+    sx={{
+      display: "flex",
+      gap: { xs: 1, sm: 1.4 },
+      animation: `scrollTiles ${scrollSpeed * 4}s linear infinite`,
+      width: "max-content",
+    }}
+  >
+    {issuesData.concat(issuesData).map((issue, i) => {
+      const colors = [
+        ["#00359E", "#003B9D"],
+        ["#002F8C", "#0050C1"],
+        ["#747578", "#5A5C5E"],
+        ["#8B8D8E", "#5A5C5E"],
+        ["#0046B3", "#0066E0"],
+        ["#1E2A47", "#00359E"],
+        ["#003B9D", "#0055D4"],
+      ];
+
+      const gradient = colors[i % colors.length];
+
+      return (
+        <Card
+          key={i}
           sx={{
+            minWidth: { xs: 145, sm: 175, md: 200 },
+            height: { xs: 75, sm: 90, md: 110 },
+            borderRadius: { xs: "12px", sm: "16px" },
             display: "flex",
-            gap: { xs: 1, sm: 1.4 },
-            animation: `scrollTiles ${scrollSpeed * 4}s linear infinite`,
-            width: "max-content",
+            alignItems: "flex-end",
+            p: { xs: 1.4, sm: 2 },
+            flexShrink: 0,
+            background: `linear-gradient(120deg, ${gradient[0]}, ${gradient[1]})`,
+            color: "#fff",
+            fontWeight: 700,
           }}
         >
-          {issuesData.concat(issuesData).map((issue, i) => (
-            <Card
-              key={i}
-              sx={{
-                minWidth: { xs: 145, sm: 175, md: 200 },
-                height: { xs: 75, sm: 90, md: 110 },
-                borderRadius: { xs: "12px", sm: "16px" },
-                display: "flex",
-                alignItems: "flex-end",
-                p: { xs: 1.4, sm: 2 },
-                flexShrink: 0,
-                background: `linear-gradient(120deg,
-                  ${["#A43BFF", "#FF6F3C", "#A43BFF", "#8A39E1", "#E4537A"][i % 5]},
-                  ${["#692BC7", "#D44724", "#692BC7", "#5B21B6", "#B02C5A"][i % 5]}
-                )`,
-                color: "#fff",
-                fontWeight: 700,
-              }}
-            >
-              <Typography
-                sx={{
-                  fontSize: { xs: "0.85rem", sm: "1rem" },
-                  fontWeight: 800,
-                }}
-              >
-                {issue.title}
-              </Typography>
-            </Card>
-          ))}
-        </Box>
+          <Typography
+            sx={{
+              fontSize: { xs: "0.85rem", sm: "1rem" },
+              fontWeight: 800,
+            }}
+          >
+            {issue.title}
+          </Typography>
+        </Card>
+      );
+    })}
+  </Box>
 
-        <style>
-          {`
-            @keyframes scrollTiles {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-          `}
-        </style>
-      </Box>
+  <style>
+    {`
+      @keyframes scrollTiles {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    `}
+  </style>
+</Box>
+
     </Box>
   );
 };

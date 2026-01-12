@@ -19,85 +19,58 @@ export default function PressTags() {
           maxWidth: "1200px",
           bgcolor: "#F5F5F5",
           borderRadius: "32px",
-          px: { xs: 3, md: 6 },
-          py: { xs: 4, md: 5 },
+          px: { xs: 2, md: 6 },
+          py: { xs: 2, md: 5 },
           display: "flex",
-          justifyContent: "space-between",
+          justifyContent: "center",
           alignItems: "center",
-          flexWrap: "wrap",
-          gap: 4,
+          flexWrap: { xs: "nowrap", md: "wrap" },
+          overflowX: { xs: "auto", md: "visible" },
+          gap: { xs: 3, md: 4 },
+          "&::-webkit-scrollbar": { display: "none" },
         }}
       >
-        <Typography
-          sx={{
-            fontFamily: "'Playfair Display', serif",
-            fontWeight: 700,
-            fontSize: { xs: "1.8rem", md: "2.2rem" },
-            letterSpacing: "-0.03em",
-            color: "#00359E",
-          }}
-        >
-          FORBES
-        </Typography>
-
-        <Typography
-          sx={{
-            fontFamily: "'Helvetica Neue', Arial, sans-serif",
-            fontWeight: 800,
-            fontSize: { xs: "1.7rem", md: "2.1rem" },
-            letterSpacing: "-0.02em",
-            color: "#00359E",
-          }}
-        >
-          GQ
-        </Typography>
-
-        <Typography
-          sx={{
-            fontFamily: "'Cormorant Garamond', serif",
-            fontWeight: 600,
-            fontSize: { xs: "1.8rem", md: "2.2rem" },
-            letterSpacing: "0.02em",
-            color: "#00359E",
-          }}
-        >
-          NEW&nbsp;YORK
-        </Typography>
-
-        <Typography
-          sx={{
-            fontFamily: "'Oswald', sans-serif",
-            fontWeight: 600,
-            fontSize: { xs: "1.9rem", md: "2.3rem" },
-            letterSpacing: "0.08em",
-            color: "#00359E",
-          }}
-        >
-          GEAR&nbsp;PATROL
-        </Typography>
-
-        <Typography
-          sx={{
-            fontFamily: "'Inter', sans-serif",
-            fontWeight: 700,
-            fontSize: { xs: "1.8rem", md: "2.2rem" },
-            letterSpacing: "-0.01em",
-            color: "#00359E",
-          }}
-        >
-          BLOOMBERG
-        </Typography>
+        {[
+          "FORBES",
+          "GQ",
+          "NEW YORK",
+          "GEAR PATROL",
+          "BLOOMBERG",
+        ].map((text, i) => (
+          <Typography
+            key={i}
+            sx={{
+              flex: "0 0 auto", // prevent shrinking
+              fontFamily:
+                i === 0
+                  ? "'Playfair Display', serif"
+                  : i === 1
+                  ? "'Helvetica Neue', Arial, sans-serif"
+                  : i === 2
+                  ? "'Cormorant Garamond', serif"
+                  : i === 3
+                  ? "'Oswald', sans-serif"
+                  : "'Inter', sans-serif",
+              fontWeight: 600,
+              fontSize: { xs: "1.3rem", sm: "1.5rem", md: "1.9rem" },
+              letterSpacing: { xs: "0", sm: "0.02em", md: "-0.03em" },
+              color: "#00359E",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {text}
+          </Typography>
+        ))}
       </Box>
-<br></br>
-<br></br>
+
       {/* DISCLAIMER — OUTSIDE CONTAINER */}
       <Typography
         sx={{
-          mt: 2,
+          mt: 3,
           fontSize: { xs: "0.75rem", sm: "0.8rem" },
           color: "#747578",
           textAlign: "center",
-           fontWeight: 700,
+          fontWeight: 700,
           lineHeight: 1.5,
           maxWidth: "1000px",
           px: 2,

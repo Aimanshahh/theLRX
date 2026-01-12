@@ -199,10 +199,6 @@ export default function HeroBanner() {
       <Fourcard />
       <Carousal /> 
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <LongCard />
       <Accordion />
       <GuideBanner />

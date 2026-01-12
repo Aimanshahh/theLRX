@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import { PillBottle, Users, HandHeart, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import bannerVideo from "../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4";
+import bannerVideo from "../../assets/Videos/intimacy.mp4";
 
 // PRODUCT IMAGES (Using existing images for now)
 import wegovyPill from "../../assets/Herocardspages/img8.jpeg";
