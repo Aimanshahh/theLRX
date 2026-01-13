@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Box, Typography, Snackbar, Alert } from "@mui/material";
+import { Box, Typography, Snackbar, Alert, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../assets/LRXLOGOS/LOGO-1.png";
-import { CheckCircle, User, Truck } from "lucide-react";
+import { CheckCircle, User, Truck, Menu, X } from "lucide-react";
 
 // Your image
 import mainImg from "../assets/images/doctor1.jpg";
@@ -15,6 +15,9 @@ export default function Howitworks() {
   // ---------------- Newsletter State ----------------
   const [email, setEmail] = useState("");
   const [snackbar, setSnackbar] = useState({ open: false, message: "", severity: "success" });
+  
+  // ---------------- Mobile Drawer State ----------------
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const handleSubscribe = () => {
     if (!email) {
@@ -33,6 +36,13 @@ export default function Howitworks() {
     setEmail(""); // Reset input
   };
 
+  const navItems = [
+    { label: "About Us", path: "/about-us" },
+    { label: "FAQs", path: "/faqs" },
+    { label: "Blog", path: "/blog" },
+    { label: "Medical Experts", path: "/medical-experts" },
+  ];
+
   return (
     <>
       {/* -------------------- TOP NAVBAR -------------------- */}
@@ -46,6 +56,7 @@ export default function Howitworks() {
           justifyContent: "space-between",
           padding: { xs: "0px 20px", md: "0px 45px" },
           borderBottom: "1px solid #E5E5E5",
+          position: "relative",
         }}
       >
         {/* Logo */}
@@ -53,14 +64,13 @@ export default function Howitworks() {
           <img src={logo} alt="Logo" style={{ height: "55px", maxHeight: "100%" }} />
         </Box>
 
-        {/* Navigation Items - Updated */}
-        <Box sx={{ display: "flex", alignItems: "center", gap: { xs: "15px", md: "30px" } }}>
-          {[
-            { label: "About Us", path: "/about-us" },
-            { label: "FAQs", path: "/faqs" },
-            { label: "Blog", path: "/blog" },
-            { label: "Medical Experts", path: "/medical-experts" },
-          ].map((item) => (
+        {/* Desktop Navigation Items */}
+        <Box sx={{ 
+          display: { xs: "none", md: "flex" }, 
+          alignItems: "center", 
+          gap: { xs: "15px", md: "30px" } 
+        }}>
+          {navItems.map((item) => (
             <Typography
               key={item.path}
               onClick={() => navigate(item.path)}
@@ -77,7 +87,69 @@ export default function Howitworks() {
             </Typography>
           ))}
         </Box>
+
+        {/* Mobile Menu Icon */}
+        <IconButton
+          sx={{ 
+            display: { xs: "flex", md: "none" },
+            color: "#747578"
+          }}
+          onClick={() => setDrawerOpen(true)}
+        >
+          <Menu size={28} />
+        </IconButton>
       </Box>
+
+      {/* -------------------- MOBILE DRAWER -------------------- */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => setDrawerOpen(false)}
+        PaperProps={{
+          sx: {
+            width: "280px",
+            paddingTop: "20px",
+          }
+        }}
+      >
+        <Box sx={{ display: "flex", justifyContent: "flex-end", padding: "0 20px" }}>
+          <IconButton onClick={() => setDrawerOpen(false)}>
+            <X size={28} color="#747578" />
+          </IconButton>
+        </Box>
+        
+        <List sx={{ padding: "20px" }}>
+          {navItems.map((item) => (
+            <ListItem
+              key={item.path}
+              onClick={() => {
+                navigate(item.path);
+                setDrawerOpen(false);
+              }}
+              sx={{
+                cursor: "pointer",
+                padding: "12px 0",
+                borderBottom: "1px solid #f0f0f0",
+                "&:hover": {
+                  backgroundColor: "#f5f5f5",
+                }
+              }}
+            >
+              <ListItemText 
+                primary={item.label}
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: "16px",
+                    fontWeight: 500,
+                    color: "#747578",
+                    "&:hover": { color: "#003B9D" }
+                  }
+                }}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Drawer>
 
       {/* -------------------- BREADCRUMB -------------------- */}
       <div
@@ -138,12 +210,12 @@ export default function Howitworks() {
               style={{
                 position: "absolute",
                 bottom: "-25px",
-                right: "-25px",
+                right: { xs: "0px", md: "-25px" },
                 background: "#fff",
                 padding: "18px 22px",
                 borderRadius: "16px",
                 boxShadow: "0 6px 20px rgba(0,0,0,0.15)",
-                width: "230px",
+                width: { xs: "200px", md: "230px" },
               }}
             >
               <Typography sx={{ fontSize: "18px", fontWeight: 700, color: "#00359E" }}>Test Kits</Typography>
@@ -181,6 +253,7 @@ export default function Howitworks() {
                     fontWeight: "700",
                     fontSize: "18px",
                     color: "#00359E",
+                    flexShrink: 0,
                   }}
                 >
                   {index + 1}
@@ -232,153 +305,143 @@ export default function Howitworks() {
         </Box>
       </Box>
 
-  {/* -------------------- HOW IT WORKS SUMMARY -------------------- */}
-<Box
-  sx={{
-    width: "100%",
-    display: "flex",
-    justifyContent: "center",
-    mt: { xs: "80px", md: "120px" },
-    px: { xs: "20px", md: "40px" },
-    py: { xs: "60px", md: "80px" },
-    background: "linear-gradient(180deg, #F7F9FC 0%, #FFFFFF 100%)",
-  }}
->
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.7 }}
-    style={{ maxWidth: "1100px", width: "100%" }}
-  >
-    {/* Heading */}
-    <Typography
-      sx={{
-        fontSize: { xs: "28px", md: "36px" },
-        fontWeight: 700,
-        color: "#00359E",
-        textAlign: "center",
-      }}
-    >
-      How It Works
-    </Typography>
-
-    <Typography
-      sx={{
-        fontSize: { xs: "16px", md: "20px" },
-        color: "#555555",
-        textAlign: "center",
-        mt: "12px",
-        maxWidth: "700px",
-        mx: "auto",
-      }}
-    >
-      A simple, guided process designed to help you move forward with clarity and confidence.
-    </Typography>
-
-    {/* Steps */}
-    <Box
-      sx={{
-        mt: "50px",
-        display: "grid",
-        gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
-        gap: "24px",
-      }}
-    >
-      {[
-        {
-          step: "01",
-          title: "Explore",
-          desc: "Browse information and understand how our approach works for your needs.",
-        },
-        {
-          step: "02",
-          title: "Learn",
-          desc: "Get clear, easy-to-understand guidance without complicated steps or jargon.",
-        },
-        {
-          step: "03",
-          title: "Take Action",
-          desc: "Use the insights to make informed decisions at your own pace.",
-        },
-      ].map((item, index) => (
+      {/* -------------------- HOW IT WORKS SUMMARY -------------------- */}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          mt: { xs: "80px", md: "120px" },
+          px: { xs: "20px", md: "40px" },
+          py: { xs: "60px", md: "80px" },
+          background: "linear-gradient(180deg, #F7F9FC 0%, #FFFFFF 100%)",
+        }}
+      >
         <motion.div
-          key={index}
-          whileHover={{ y: -6 }}
-          transition={{ duration: 0.3 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          style={{ maxWidth: "1100px", width: "100%" }}
         >
-          <Box
+          {/* Heading */}
+          <Typography
             sx={{
-              p: "30px",
-              height: "100%",
-              borderRadius: "18px",
-              background: "rgba(255, 255, 255, 0.85)",
-              boxShadow: "0px 10px 30px rgba(0,0,0,0.06)",
-              border: "1px solid rgba(0,0,0,0.05)",
+              fontSize: { xs: "28px", md: "36px" },
+              fontWeight: 700,
+              color: "#00359E",
+              textAlign: "center",
             }}
           >
-            <Typography
-              sx={{
-                fontSize: "14px",
-                fontWeight: 700,
-                color: "#00359E",
-                mb: "8px",
-              }}
-            >
-              STEP {item.step}
-            </Typography>
+            How It Works
+          </Typography>
 
-            <Typography
-              sx={{
-                fontSize: "22px",
-                fontWeight: 700,
-                color: "#111",
-                mb: "10px",
-              }}
-            >
-              {item.title}
-            </Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", md: "20px" },
+              color: "#555555",
+              textAlign: "center",
+              mt: "12px",
+              maxWidth: "700px",
+              mx: "auto",
+            }}
+          >
+            A simple, guided process designed to help you move forward with clarity and confidence.
+          </Typography>
 
-            <Typography
-              sx={{
-                fontSize: "16px",
-                color: "#555",
-                lineHeight: 1.7,
-              }}
-            >
-              {item.desc}
-            </Typography>
+          {/* Steps */}
+          <Box
+            sx={{
+              mt: "50px",
+              display: "grid",
+              gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
+              gap: "24px",
+            }}
+          >
+            {[
+              {
+                step: "01",
+                title: "Explore",
+                desc: "Browse information and understand how our approach works for your needs.",
+              },
+              {
+                step: "02",
+                title: "Learn",
+                desc: "Get clear, easy-to-understand guidance without complicated steps or jargon.",
+              },
+              {
+                step: "03",
+                title: "Take Action",
+                desc: "Use the insights to make informed decisions at your own pace.",
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.3 }}
+              >
+                <Box
+                  sx={{
+                    p: "30px",
+                    height: "100%",
+                    borderRadius: "18px",
+                    background: "rgba(255, 255, 255, 0.85)",
+                    boxShadow: "0px 10px 30px rgba(0,0,0,0.06)",
+                    border: "1px solid rgba(0,0,0,0.05)",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 700,
+                      color: "#00359E",
+                      mb: "8px",
+                    }}
+                  >
+                    STEP {item.step}
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontSize: "22px",
+                      fontWeight: 700,
+                      color: "#111",
+                      mb: "10px",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      fontSize: "16px",
+                      color: "#555",
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {item.desc}
+                  </Typography>
+                </Box>
+              </motion.div>
+            ))}
           </Box>
         </motion.div>
-      ))}
-    </Box>
+      </Box>
 
-    {/* CTA */}
-    {/* <Box sx={{ textAlign: "center", mt: "50px" }}>
-      <button
-        style={{
-          padding: "14px 34px",
-          borderRadius: "12px",
-          border: "none",
-          backgroundColor: "#00359E",
-          color: "#fff",
-          fontWeight: 700,
-          fontSize: "16px",
-          cursor: "pointer",
-          transition: "0.3s",
-        }}
-        onMouseOver={(e) =>
-          (e.currentTarget.style.backgroundColor = "#00296B")
-        }
-        onMouseOut={(e) =>
-          (e.currentTarget.style.backgroundColor = "#00359E")
-        }
+      {/* Snackbar for notifications */}
+      <Snackbar 
+        open={snackbar.open} 
+        autoHideDuration={3000} 
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        Learn More
-      </button>
-    </Box> */}
-  </motion.div>
-</Box>
-
+        <Alert 
+          onClose={() => setSnackbar({ ...snackbar, open: false })} 
+          severity={snackbar.severity} 
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </>
   );
 }

@@ -2,10 +2,10 @@ import React from "react";
 import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import { TrendingDown, Frown  , ShieldBan , ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // Added for navigation
-import bannerVideo from "../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4";
+import bannerVideo from "../../assets/Videos/stoplowenergy.mp4";
 
 // PRODUCT IMAGES
-import wegovyPill from "../../assets/Herocardspages/img11.jpeg";
+import wegovyPill from "../../assets/Herocardspages/img2.jpeg";
 import zepboundVial from "../../assets/Herocardspages/img3.jpeg";
 
 

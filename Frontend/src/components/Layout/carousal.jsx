@@ -13,7 +13,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import weightLossImg from "../../assets/Carousal/img1.jpg";
+import weightLossImg from "../../assets/Carousal/img4.jpg";
 import fitnessImg from "../../assets/Carousal/img2.jpg";
 import recedingHairImg from "../../assets/Carousal/img5.jpg";
 

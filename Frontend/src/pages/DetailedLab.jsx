@@ -989,72 +989,103 @@ const FullWidthCurvedBackground = () => {
       </Box>
 
       {/* ================= ANOTHER SECTION BELOW CARDS ================= */}
+   <Box
+  sx={{
+    maxWidth: "1320px",
+    mx: "auto",
+    px: { xs: 2, sm: 3, md: 5, lg: 6 },
+    py: { xs: 4, sm: 6, md: 8, lg: 10, xl: 12 }
+  }}
+>
+  {/* Grid container - unchanged structure */}
+  <Box
+    sx={{
+      display: "grid",
+      gridTemplateColumns: { xs: "1fr", md: "1.5fr 1fr" },
+      columnGap: { xs: 3, sm: 4, md: 6, lg: 8, xl: 10 },
+      rowGap: { xs: 4, sm: 5, md: 0 },
+      alignItems: { md: "start" }
+    }}
+  >
+    {/* Main heading */}
+    <Typography
+      sx={{
+        fontSize: {
+          xs: "28px",
+          sm: "36px",
+          md: "48px",
+          lg: "64px",
+          xl: "80px",
+          xxl: "90px"
+        },
+        fontWeight: 500,
+        lineHeight: {
+          xs: 1.1,
+          sm: 1.08,
+          md: 1.06
+        },
+        letterSpacing: "-0.03em",
+        textAlign: { xs: "center", md: "left" },
+        wordBreak: "break-word",
+        overflowWrap: "break-word",
+        hyphens: "auto"
+      }}
+    >
+      Unlock Your{" "}
       <Box
+        component="span"
         sx={{
-          maxWidth: "1320px",
-          mx: "auto",
-          px: { xs: 3, sm: 4, md: 6 },
-          py: { xs: 6, sm: 8, md: 10, lg: 14 },
+          background: "linear-gradient(90deg,#8B8D8E 0%,#00359E 65%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          display: "inline",
+          backgroundSize: "100%",
+          backgroundRepeat: "repeat"
         }}
       >
-        <Box
-          sx={{
-            display: "grid",
-            gridTemplateColumns: { xs: "1fr", md: "1.5fr 1fr" },
-            columnGap: { xs: "24px", md: "60px", lg: "88px" },
-            rowGap: { xs: "24px", md: 0 },
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: { xs: "32px", sm: "40px", md: "60px", lg: "90px" },
-              fontWeight: 500,
-              lineHeight: 1.06,
-              letterSpacing: "-0.03em",
-              textAlign: { xs: "center", md: "left" },
-            }}
-          >
-            Unlock Your{" "}
-            <Box
-              component="span"
-              sx={{
-                background: "linear-gradient(90deg,#8B8D8E 0%,#00359E 65%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Biological Age
-            </Box>
-          </Typography>
-
-          <Box sx={{ 
-            mt: { xs: 0, md: "35px" }, 
-            maxWidth: "460px",
-            textAlign: { xs: "center", md: "left" } 
-          }}>
-            <Typography sx={{ 
-              fontSize: { xs: "16px", md: "18px" }, 
-              fontWeight: 600, 
-              mb: 0.5 
-            }}>
-              Know more to live more.
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "16px", md: "18px" },
-                lineHeight: 1.2,
-                color: "rgba(0,0,0,0.75)",
-              }}
-            >
-              Your Biological Age reveals how fast your body is aging from what the calendar shows. Improving key markers linked to longevity could help you get aging on lock.
-            </Typography>
-          </Box>
-        </Box>
-
-        <Box sx={{ mt: { xs: 8, sm: 10, md: 12, lg: 14 } }}>
-          <ImageOnlyCardStrip />
-        </Box>
+        Biological Age
       </Box>
+    </Typography>
+
+    {/* Description box */}
+    <Box sx={{ 
+      mt: { xs: 0, md: "35px" },
+      maxWidth: { xs: "100%", md: "460px" },
+      textAlign: { xs: "center", md: "left" },
+      justifySelf: { xs: "center", md: "start" },
+      width: "100%"
+    }}>
+      <Typography sx={{ 
+        fontSize: { xs: "18px", sm: "20px", md: "22px", lg: "24px" }, 
+        fontWeight: 600, 
+        mb: { xs: 1, sm: 1.5 },
+        color: "#000"
+      }}>
+        Know more to live more.
+      </Typography>
+      <Typography
+        sx={{
+          fontSize: { xs: "16px", sm: "17px", md: "18px" },
+          lineHeight: { xs: 1.4, sm: 1.5 },
+          color: "rgba(0,0,0,0.75)",
+          wordBreak: "break-word"
+        }}
+      >
+        Your Biological Age reveals how fast your body is aging from what the calendar shows. Improving key markers linked to longevity could help you get aging on lock.
+      </Typography>
+    </Box>
+  </Box>
+
+  {/* Card strip with proper spacing */}
+  <Box sx={{ 
+    mt: { xs: 6, sm: 8, md: 10, lg: 12, xl: 14 },
+    width: "100%",
+    overflow: "hidden"
+  }}>
+    <ImageOnlyCardStrip />
+  </Box>
+</Box>
 
       {/* ================= NEW CENTERED HEADING SECTION ================= */}
       <Box sx={{ 

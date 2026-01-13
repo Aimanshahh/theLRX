@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
 import { PillBottle, Users, HandHeart, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import bannerVideo from "../../assets/Videos/intimacy.mp4";
+import bannerVideo from "../../assets/Videos/havebettersex.mp4";
 
 // PRODUCT IMAGES (Using existing images for now)
 import wegovyPill from "../../assets/Herocardspages/img8.jpeg";
@@ -10,7 +10,6 @@ import zepboundVial from "../../assets/Herocardspages/img9.jpeg";
 import ozempicPen from "../../assets/Herocardspages/img10.jpeg";
 import zepboundPen from "../../assets/Herocardspages/img13.jpeg";
 import semaglutideVial from "../../assets/Herocardspages/img12.jpeg";
-
 
 export default function Wantmoresex() {
   const theme = useTheme();
@@ -478,27 +477,43 @@ export default function Wantmoresex() {
           px: { xs: 2, sm: 4, md: 8 },
         }}
       >
-        {/* Female Products Section Header */}
-        <Box sx={{ mb: 4 }}>
+        {/* Female Products Section Header - ENHANCED */}
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.25rem" },
-              fontWeight: 700,
+              fontSize: { xs: "1.75rem", sm: "2.25rem", md: "2.5rem" },
+              fontWeight: 800,
               color: "#111827",
               textAlign: "center",
-              mb: 1,
+              mb: 2,
+              letterSpacing: { xs: "-0.02em", sm: "-0.01em" },
+              position: "relative",
+              "&::after": {
+                content: '""',
+                display: "block",
+                width: { xs: "80px", sm: "100px", md: "120px" },
+                height: "4px",
+                background: "linear-gradient(90deg, #00359E, #003B9D)",
+                borderRadius: "2px",
+                mx: "auto",
+                mt: { xs: 2, sm: 2.5 },
+                mb: 3,
+              }
             }}
           >
             Female Products
           </Typography>
           <Typography
             sx={{
-              fontSize: "1rem",
-              color: "#6B7280",
+              fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+              color: "#4B5563",
               textAlign: "center",
-              maxWidth: "600px",
+              maxWidth: "800px",
               mx: "auto",
+              fontWeight: 500,
+              lineHeight: 1.6,
+              letterSpacing: "0.01em",
             }}
           >
             Specially formulated for women's sexual health and intimacy
@@ -528,7 +543,7 @@ export default function Wantmoresex() {
               md: 6, 
               lg: 6
             },
-            mb: 10,
+            mb: 12,
           }}
         >
           {/* Map through female products */}
@@ -678,27 +693,43 @@ export default function Wantmoresex() {
             ))}
         </Box>
 
-        {/* Male Products Section Header */}
-        <Box sx={{ mb: 4 }}>
+        {/* Male Products Section Header - ENHANCED */}
+        <Box sx={{ mb: 6 }}>
           <Typography
             variant="h2"
             sx={{
-              fontSize: { xs: "1.5rem", sm: "2rem", md: "2.25rem" },
-              fontWeight: 700,
+              fontSize: { xs: "1.75rem", sm: "2.25rem", md: "2.5rem" },
+              fontWeight: 800,
               color: "#111827",
               textAlign: "center",
-              mb: 1,
+              mb: 2,
+              letterSpacing: { xs: "-0.02em", sm: "-0.01em" },
+              position: "relative",
+              "&::after": {
+                content: '""',
+                display: "block",
+                width: { xs: "80px", sm: "100px", md: "120px" },
+                height: "4px",
+                background: "linear-gradient(90deg, #00359E, #003B9D)",
+                borderRadius: "2px",
+                mx: "auto",
+                mt: { xs: 2, sm: 2.5 },
+                mb: 3,
+              }
             }}
           >
             Male Products
           </Typography>
           <Typography
             sx={{
-              fontSize: "1rem",
-              color: "#6B7280",
+              fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+              color: "#4B5563",
               textAlign: "center",
-              maxWidth: "600px",
+              maxWidth: "800px",
               mx: "auto",
+              fontWeight: 500,
+              lineHeight: 1.6,
+              letterSpacing: "0.01em",
             }}
           >
             Formulated for men's sexual performance and vitality

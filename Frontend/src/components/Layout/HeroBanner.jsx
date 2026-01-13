@@ -199,7 +199,7 @@ export default function HeroBanner() {
       <Fourcard />
       <Carousal /> 
       <br></br>
-      <LongCard />
+      {/* <LongCard /> */}
       <Accordion />
       <GuideBanner />
     </>

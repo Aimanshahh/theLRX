@@ -12,7 +12,7 @@ import medicalImg from "../assets/FAQs/img6.jpg";
 import shippingImg from "../assets/FAQs/img4.jpg";
 import privacyImg from "../assets/FAQs/img5.jpg";
 import troubleImg from "../assets/FAQs/img3.jpg";
-import logo from "../assets/LRXLOGOS/LOGO-3.png";
+import logo from "../assets/LRXLOGOS/LOGO-2.png";
 
 // ==============================
 // LOGO COMPONENT
