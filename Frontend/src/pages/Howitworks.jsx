@@ -39,7 +39,6 @@ export default function Howitworks() {
   const navItems = [
     { label: "About Us", path: "/about-us" },
     { label: "FAQs", path: "/faqs" },
-    { label: "Blog", path: "/blog" },
     { label: "Medical Experts", path: "/medical-experts" },
   ];
 

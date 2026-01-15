@@ -108,7 +108,7 @@ const injectionBenefits = [
   { icon: Shield, text: 'Weekly Convenience', color: colors.darkBlue }
 ];
 
-const TerzepatideInjectablePage = () => {
+const TirzepatideInjectablePage = () => {
 
    const rimioUrl = "https://try.thelrx.com/intake/wm-ltaaov";
 
@@ -249,7 +249,7 @@ const TerzepatideInjectablePage = () => {
   }}
        
                     >
-                      TERZEPATIDE INJECTABLE
+                      TIRZEPATIDE INJECTABLE
                     </Box>
                     <Box
                       component="span"

@@ -21,7 +21,7 @@ export default function Buildmuscle() {
   const products = [
     { 
       img: wegovyPill, 
-      name: "CJC-1295/Ipamorelin® Vial", 
+      name: "CJC-1295/Ipamorelin Vial", 
       sub: "$199.00",
       buyNowUrl: "https://try.thelrx.com/intake/cj-r201jp",
       learnMorePath: "/peptides/cjc-1295-ipamorelin"

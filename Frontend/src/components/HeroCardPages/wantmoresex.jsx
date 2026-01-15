@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
+import { Box, Typography, Button, useTheme, useMediaQuery, Chip } from "@mui/material";
 import { PillBottle, Users, HandHeart, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import bannerVideo from "../../assets/Videos/havebettersex.mp4";
@@ -574,32 +574,52 @@ export default function Wantmoresex() {
                   />
                 </Box>
 
-                {/* SUPPLY BADGE WITH DOT */}
-                <Box
-                  sx={{
-                    alignSelf: "flex-start",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 0.75,
-                    bgcolor: "#DCFCE7",
-                    color: "#16A34A",
-                    px: { xs: 1, md: 1.25 },
-                    py: "2px",
-                    borderRadius: "999px",
-                    fontSize: { xs: "0.65rem", md: "0.7rem" },
-                    fontWeight: 600,
-                    mb: { xs: 0.75, md: 1 },
-                  }}
-                >
-                  <Box
+                {/* BADGES ROW - Category tag + Supply badge side by side */}
+                <Box sx={{ 
+                  display: "flex", 
+                  alignItems: "center",
+                  gap: 1,
+                  mb: { xs: 0.75, md: 1 },
+                  flexWrap: "wrap"
+                }}>
+                  {/* Category Tag */}
+                  <Chip
+                    label={item.category}
+                    size="small"
                     sx={{
-                      width: 6,
-                      height: 6,
-                      borderRadius: "50%",
-                      bgcolor: "#22C55E",
+                      bgcolor: "#FCE7F3",
+                      color: "#9D174D",
+                      fontWeight: 600,
+                      fontSize: "0.65rem",
+                      height: "20px",
                     }}
                   />
-                  Supply available
+                  
+                  {/* SUPPLY BADGE WITH DOT */}
+                  <Box
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 0.75,
+                      bgcolor: "#DCFCE7",
+                      color: "#16A34A",
+                      px: 1,
+                      py: "2px",
+                      borderRadius: "999px",
+                      fontSize: "0.65rem",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        bgcolor: "#22C55E",
+                      }}
+                    />
+                    Supply available
+                  </Box>
                 </Box>
 
                 {/* PRODUCT NAME */}
@@ -789,32 +809,52 @@ export default function Wantmoresex() {
                   />
                 </Box>
 
-                {/* SUPPLY BADGE WITH DOT */}
-                <Box
-                  sx={{
-                    alignSelf: "flex-start",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: 0.75,
-                    bgcolor: "#DCFCE7",
-                    color: "#16A34A",
-                    px: { xs: 1, md: 1.25 },
-                    py: "2px",
-                    borderRadius: "999px",
-                    fontSize: { xs: "0.65rem", md: "0.7rem" },
-                    fontWeight: 600,
-                    mb: { xs: 0.75, md: 1 },
-                  }}
-                >
-                  <Box
+                {/* BADGES ROW - Category tag + Supply badge side by side */}
+                <Box sx={{ 
+                  display: "flex", 
+                  alignItems: "center",
+                  gap: 1,
+                  mb: { xs: 0.75, md: 1 },
+                  flexWrap: "wrap"
+                }}>
+                  {/* Category Tag */}
+                  <Chip
+                    label={item.category}
+                    size="small"
                     sx={{
-                      width: 6,
-                      height: 6,
-                      borderRadius: "50%",
-                      bgcolor: "#22C55E",
+                      bgcolor: "#E0F2FE",
+                      color: "#0369A1",
+                      fontWeight: 600,
+                      fontSize: "0.65rem",
+                      height: "20px",
                     }}
                   />
-                  Supply available
+                  
+                  {/* SUPPLY BADGE WITH DOT */}
+                  <Box
+                    sx={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 0.75,
+                      bgcolor: "#DCFCE7",
+                      color: "#16A34A",
+                      px: 1,
+                      py: "2px",
+                      borderRadius: "999px",
+                      fontSize: "0.65rem",
+                      fontWeight: 600,
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        bgcolor: "#22C55E",
+                      }}
+                    />
+                    Supply available
+                  </Box>
                 </Box>
 
                 {/* PRODUCT NAME */}

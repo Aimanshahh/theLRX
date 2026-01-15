@@ -23,14 +23,14 @@ export default function Weightloss() {
   const products = [
     { 
       img: wegovyPill, 
-      name: "Retatrutide® Vial", 
+      name: "Retatrutide Vial", 
       sub: "$449.00",
       buyNowUrl: "https://try.thelrx.com/intake/rt-76aoce",
       learnMorePath: "/weight-loss/retatrutide-vial"
     },
     { 
       img: zepboundVial, 
-      name: "Oral Tirzepatide® RDT", 
+      name: "Oral Tirzepatide RDT", 
       sub: "$379.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/oral-tirzepatide-rdt"
@@ -44,14 +44,14 @@ export default function Weightloss() {
     },
     { 
       img: zepboundPen, 
-      name: "Tirzepatide Injectable", 
+      name: "Tirzepatide Vial", 
       sub: "$289.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/tirzepatide-injectable"
     },
     { 
       img: semaglutideVial, 
-      name: "Semaglutide Injectable", 
+      name: "Semaglutide Vial", 
       sub: "$189.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/semaglutide-injectable"
