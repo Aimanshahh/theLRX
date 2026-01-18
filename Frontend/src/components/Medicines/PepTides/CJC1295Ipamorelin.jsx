@@ -681,97 +681,96 @@ const CJC1295IpamorelinPage = () => {
               </Grid>
 
               {/* RIGHT SIDE - Text Content (ONLY BULLET POINTS) */}
-              <Grid item xs={12} md={6}>
-                <motion.div
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <Box>
-                    <Typography
-                      sx={{
-                        fontSize: "12px",
-                        fontWeight: 600,
-                        letterSpacing: "2px",
-                        textTransform: "uppercase",
-                        color: palette.darkBlue,
-                        mb: 2,
-                        display: "inline-block",
-                      }}
-                    >
-                      Compounded Medication Kit
-                    </Typography>
+          <Grid item xs={12} md={6}>
+  <motion.div
+    initial={{ opacity: 0, x: 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+  >
+    <Box>
+      <Typography
+        sx={{
+          fontSize: "12px",
+          fontWeight: 600,
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+          color: palette.darkBlue,
+          mb: 2,
+          display: "inline-block",
+        }}
+      >
+        Compounded Medication
+      </Typography>
 
-                    <Typography
-                      variant="h3"
-                      sx={{
-                        fontWeight: 800,
-                        fontSize: { xs: "28px", md: "34px" },
-                        mb: 3,
-                        color: palette.black,
-                        lineHeight: 1.2,
-                      }}
-                    >
-                      The{" "}
-                      <Box component="span" sx={{ color: palette.darkBlue }}>
-                        CJC-1295 / Ipamorelin
-                      </Box>{" "}
-                      Kit
-                    </Typography>
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: 800,
+          fontSize: { xs: "28px", md: "34px" },
+          mb: 3,
+          color: palette.black,
+          lineHeight: 1.2,
+        }}
+      >
+        The{" "}
+        <Box component="span" sx={{ color: palette.darkBlue }}>
+          CJC-1295 & Ipamorelin
+        </Box>{" "}
+        Formulation
+      </Typography>
 
-                    <Box sx={{ mb: 4 }}>
-                      {[
-                        "CJC-1295 (2mg) & Ipamorelin (3mg) compounded blend",
-                        "Bacteriostatic water for injection",
-                        "Sterile insulin syringes with ultra-fine needles",
-                        "Comprehensive subcutaneous injection guide",
-                        "Alcohol swabs and sharps container",
-                        "Medical supervision and dosing guidance",
-                        "Access to clinical support team"
-                      ].map((feature, index) => (
-                        <motion.div
-                          key={index}
-                          initial={{ opacity: 0, x: 20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                          <Box
-                            sx={{
-                              display: "flex",
-                              alignItems: "flex-start",
-                              mb: 2,
-                            }}
-                          >
-                            <Box
-                              sx={{
-                                width: "6px",
-                                height: "6px",
-                                borderRadius: "50%",
-                                backgroundColor: palette.darkBlue,
-                                mt: 1,
-                                mr: 2,
-                                flexShrink: 0,
-                              }}
-                            />
-                            <Typography
-                              sx={{
-                                fontSize: "15px",
-                                color: palette.black,
-                                fontWeight: 500,
-                                lineHeight: 1.5,
-                              }}
-                            >
-                              {feature}
-                            </Typography>
-                          </Box>
-                        </motion.div>
-                      ))}
-                    </Box>
-                  </Box>
-                </motion.div>
-              </Grid>
+      <Box sx={{ mb: 4 }}>
+        {[
+          "CJC-1295 and Ipamorelin compounded blend",
+          "Medical-grade bacteriostatic water for injection",
+          "Professional medical supervision and dosing guidance",
+          "Access to clinical support team",
+          "Comprehensive injection protocol documentation",
+          "Ongoing treatment monitoring and adjustment"
+        ].map((feature, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "flex-start",
+                mb: 2,
+              }}
+            >
+              <Box
+                sx={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  backgroundColor: palette.darkBlue,
+                  mt: 1,
+                  mr: 2,
+                  flexShrink: 0,
+                }}
+              />
+              <Typography
+                sx={{
+                  fontSize: "15px",
+                  color: palette.black,
+                  fontWeight: 500,
+                  lineHeight: 1.5,
+                }}
+              >
+                {feature}
+              </Typography>
+            </Box>
+          </motion.div>
+        ))}
+      </Box>
+    </Box>
+  </motion.div>
+</Grid>
             </Grid>
 
             {/* BELOW CARD SECTION - Paragraphs and Spec Table */}
@@ -817,7 +816,6 @@ const CJC1295IpamorelinPage = () => {
                 <Grid container spacing={2}>
                   {[
                     { label: "Active Ingredients", value: "CJC-1295 & Ipamorelin" },
-                    { label: "Blend Ratio", value: "2mg : 3mg" },
                     { label: "Administration", value: "Subcutaneous" },
                     { label: "Status", value: "Compounded Medication" },
                   ].map((spec, index) => (

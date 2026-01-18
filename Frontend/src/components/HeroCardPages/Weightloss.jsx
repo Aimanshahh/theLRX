@@ -1,15 +1,14 @@
 import React from "react";
 import { Box, Typography, Button, useTheme, useMediaQuery } from "@mui/material";
-import { TrendingDown, Users, Award, ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom"; // Added for navigation
+import { useNavigate } from "react-router-dom";
 import bannerVideo from "../../assets/Videos/weightloss.mp4";
 
 // PRODUCT IMAGES
-import wegovyPill from "../../assets/Herocardspages/img1.jpeg";
-import zepboundVial from "../../assets/Herocardspages/img2.jpeg";
-import ozempicPen from "../../assets/Herocardspages/img6.jpeg";
-import zepboundPen from "../../assets/Herocardspages/img4.jpeg";
-import semaglutideVial from "../../assets/Herocardspages/img3.jpeg";
+import wegovyPill from "../../assets/Herocardspages/img20.jpeg";
+import zepboundVial from "../../assets/Herocardspages/img17.jpeg";
+import ozempicPen from "../../assets/Herocardspages/img21.jpeg";
+import zepboundPen from "../../assets/Herocardspages/img18.jpeg";
+import semaglutideVial from "../../assets/Herocardspages/img22.jpeg";
 
 export default function Weightloss() {
   const theme = useTheme();
@@ -17,7 +16,7 @@ export default function Weightloss() {
   const isSmallMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isLargeScreen = useMediaQuery(theme.breakpoints.up("lg"));
   const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "lg"));
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate();
 
   // Product data with URLs
   const products = [
@@ -56,7 +55,6 @@ export default function Weightloss() {
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/semaglutide-injectable"
     },
-    
   ];
 
   // Handler for Buy Now button (opens external URL)
@@ -68,8 +66,6 @@ export default function Weightloss() {
   const handleLearnMore = (path) => {
     navigate(path);
   };
-
-
 
   return (
     <>
@@ -160,10 +156,10 @@ export default function Weightloss() {
                   lineHeight: { xs: 1.15, sm: 1.2, md: 1.2 },
                   letterSpacing: { xs: "-0.02em", sm: "-0.01em", md: "normal" },
                   mb: 0,
-                  textShadow: { 
-                    xs: "0 2px 4px rgba(0,0,0,0.5)",
-                    sm: "0 2px 8px rgba(0,0,0,0.5)" 
-                  },
+                  // textShadow: { 
+                  //   xs: "0 2px 4px rgba(0,0,0,0.5)",
+                  //   sm: "0 2px 8px rgba(0,0,0,0.5)" 
+                  // },
                 }}
               >
                 Transform Your Body,
@@ -183,151 +179,9 @@ export default function Weightloss() {
                   Reclaim Your Life
                 </Box>
               </Typography>
-              
-              {/* Enhanced Button for mobile/medium screens */}
-              <Button
-                sx={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: { xs: 1, sm: 1.5, md: 1 },
-                  px: { xs: 4.5, sm: 5, md: 5 },
-                  py: { xs: 1.75, sm: 1.75, md: 1.5 },
-                  bgcolor: "rgba(255, 255, 255, 0.15)",
-                  backdropFilter: "blur(10px)",
-                  border: "1.5px solid rgba(255, 255, 255, 0.25)",
-                  borderRadius: "999px",
-                  color: "#FFFFFF",
-                  fontWeight: { xs: 600, sm: 600, md: 500 },
-                  textTransform: "none",
-                  fontSize: { xs: "1rem", sm: "1.05rem", md: "1rem" },
-                  minWidth: { xs: "220px", sm: "240px" },
-                  minHeight: { xs: "48px", sm: "52px" },
-                  "&:hover": {
-                    bgcolor: "rgba(255, 255, 255, 0.25)",
-                    borderColor: "rgba(255, 255, 255, 0.4)",
-                    transform: { xs: "translateY(-2px)", sm: "translateY(-2px)" },
-                  },
-                  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                  mt: { xs: 3, sm: 4, md: 0 },
-                  boxShadow: { 
-                    xs: "0 4px 20px rgba(0, 53, 158, 0.3)",
-                    sm: "0 6px 25px rgba(0, 53, 158, 0.4)" 
-                  },
-                }}
-              >
-                <span>Start Your Journey</span>
-                <ArrowRight style={{
-                  width: "1rem",
-                  height: "1rem",
-                }} />
-              </Button>
             </Box>
 
-            {/* Enhanced Right Side - Stat Icon Cards */}
-            <Box sx={{
-              display: "flex",
-              flexDirection: { xs: "row", md: "row" },
-              justifyContent: { xs: "center", md: "flex-end" },
-              alignItems: "center",
-              gap: { xs: 2, sm: 3, md: 2, lg: 3 },
-              width: { xs: "100%", md: "auto" },
-              mt: { xs: 0, md: isLargeScreen ? 55 : "auto" },
-              mb: { xs: 5, sm: 5, md: "auto" },
-              alignSelf: { md: isLargeScreen ? "flex-start" : "flex-end" },
-              position: { xs: "relative", md: isLargeScreen ? "relative" : "absolute" },
-              bottom: { md: isLargeScreen ? "auto" : 40 },
-              right: { md: isLargeScreen ? "auto" : 40 },
-            }}>
-              {/* Card 1 */}
-              <Box sx={{
-                backdropFilter: "blur(15px)",
-                bgcolor: "rgba(255, 255, 255, 0.12)",
-                border: "1px solid rgba(255, 255, 255, 0.25)",
-                borderRadius: "16px",
-                p: { xs: 1.5, sm: 2, md: 1.75, lg: 2 },
-                width: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                height: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.2)",
-                  transform: { xs: "scale(1.05)", md: "scale(1.05)" },
-                },
-                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                boxShadow: { 
-                  xs: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                  sm: "0 6px 20px rgba(0, 0, 0, 0.4)" 
-                },
-              }}>
-                <TrendingDown style={{ 
-                  width: "28px",
-                  height: "28px",
-                  color: "#FFFFFF", 
-                  strokeWidth: 2.5
-                }} />
-              </Box>
-
-              {/* Card 2 */}
-              <Box sx={{
-                backdropFilter: "blur(15px)",
-                bgcolor: "rgba(255, 255, 255, 0.12)",
-                border: "1px solid rgba(255, 255, 255, 0.25)",
-                borderRadius: "16px",
-                p: { xs: 1.5, sm: 2, md: 1.75, lg: 2 },
-                width: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                height: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.2)",
-                  transform: { xs: "scale(1.05)", md: "scale(1.05)" },
-                },
-                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                boxShadow: { 
-                  xs: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                  sm: "0 6px 20px rgba(0, 0, 0, 0.4)" 
-                },
-              }}>
-                <Users style={{ 
-                  width: "28px",
-                  height: "28px",
-                  color: "#FFFFFF", 
-                  strokeWidth: 2.5
-                }} />
-              </Box>
-
-              {/* Card 3 */}
-              <Box sx={{
-                backdropFilter: "blur(15px)",
-                bgcolor: "rgba(255, 255, 255, 0.12)",
-                border: "1px solid rgba(255, 255, 255, 0.25)",
-                borderRadius: "16px",
-                p: { xs: 1.5, sm: 2, md: 1.75, lg: 2 },
-                width: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                height: { xs: "72px", sm: "80px", md: "60px", lg: "64px" },
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                "&:hover": {
-                  bgcolor: "rgba(255, 255, 255, 0.2)",
-                  transform: { xs: "scale(1.05)", md: "scale(1.05)" },
-                },
-                transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                boxShadow: { 
-                  xs: "0 4px 12px rgba(0, 0, 0, 0.3)",
-                  sm: "0 6px 20px rgba(0, 0, 0, 0.4)" 
-                },
-              }}>
-                <Award style={{ 
-                  width: "28px",
-                  height: "28px",
-                  color: "#FFFFFF", 
-                  strokeWidth: 2.5
-                }} />
-              </Box>
-            </Box>
+            {/* Right Side - Removed Stat Icon Cards completely */}
 
             {/* Disclaimer at bottom */}
             <Box sx={{

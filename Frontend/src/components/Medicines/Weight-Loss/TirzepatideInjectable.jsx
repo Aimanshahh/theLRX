@@ -249,7 +249,7 @@ const TirzepatideInjectablePage = () => {
   }}
        
                     >
-                      TIRZEPATIDE INJECTABLE
+                      TIRZEPATIDE VIAL
                     </Box>
                     <Box
                       component="span"
@@ -408,7 +408,7 @@ const TirzepatideInjectablePage = () => {
                       }
                     }}
                   >
-                    Start Injectable Treatment Consultation
+                    Start Vial Treatment Consultation
                   </Button>
                 </motion.div>
 
@@ -552,7 +552,7 @@ const TirzepatideInjectablePage = () => {
                   lineHeight: 1.1,
                 }}
               >
-                Terzepatide Weekly Injection
+                Tirzepatide Weekly Injection
               </Typography>
             </Box>
           </motion.div>
@@ -822,7 +822,7 @@ const TirzepatideInjectablePage = () => {
                       mb: 3,
                     }}
                   >
-                    How Terzepatide Works
+                    How Tirzepatide Works
                   </Typography>
 
                   <Typography
@@ -833,7 +833,7 @@ const TirzepatideInjectablePage = () => {
                       mb: 4,
                     }}
                   >
-                    Terzepatide uniquely activates both GLP-1 and GIP receptors, providing 
+                    Tirzepatide uniquely activates both GLP-1 and GIP receptors, providing 
                     synergistic effects on appetite control, insulin sensitivity, and 
                     metabolic function for superior results.
                   </Typography>
@@ -940,7 +940,7 @@ const TirzepatideInjectablePage = () => {
                         mb: 3,
                       }}
                     >
-                      Terzepatide's dual action enhances insulin secretion, reduces glucagon production, 
+                      Tirzepatide's dual action enhances insulin secretion, reduces glucagon production, 
                       slows gastric emptying, and promotes satiety through activation of both GLP-1 
                       and GIP receptors in the brain and pancreas.
                     </Typography>
@@ -1138,7 +1138,7 @@ const TirzepatideInjectablePage = () => {
                   mx: "auto",
                 }}
               >
-                Experience the power of dual agonist therapy with Terzepatide. 
+                Experience the power of dual agonist therapy with Tirzepatide. 
                 Our weekly injection offers superior weight loss and glycemic control 
                 compared to single agonists. Start your personalized treatment today.
               </Typography>
@@ -1181,7 +1181,7 @@ const TirzepatideInjectablePage = () => {
         },
       }}
     >
-      Begin Injectable Treatment
+      Begin Vial Treatment
     </Button>
   </motion.div>
 
@@ -1358,7 +1358,7 @@ const TestimonialCarousel = () => {
       location: 'Dallas, TX',
       rating: 5,
       condition: 'Weight Management',
-      content: 'Terzepatide gave me results I never thought possible. Lost 35 pounds in 5 months with weekly injections. The dual action really works!',
+      content: 'Tirzepatide gave me results I never thought possible. Lost 35 pounds in 5 months with weekly injections. The dual action really works!',
       result: 'Lost 35 lbs',
       duration: '5 months of treatment',
       avatarColor: '#00359E'
@@ -1631,4 +1631,4 @@ const TestimonialCarousel = () => {
   );
 };
 
-export default TerzepatideInjectablePage;
+export default TirzepatideInjectablePage;

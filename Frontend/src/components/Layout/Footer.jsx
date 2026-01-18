@@ -19,7 +19,7 @@ const LRX_ROUTES = {
 
 const POPULAR_ROUTES = {
   "Retatrutide Vial": "/weight-loss/retatrutide-vial",
-  "Tirzepetide Injectable": "/weight-loss/tirzepatide-injectable",
+ "Tirzepetide Vial": "/weight-loss/tirzepatide-injectable",
   "Vitamin B-12": "/peptides/vitamin-b12",
   "Mach-1": "/sexual-health/mach1-6",
   "Drive Plus": "/sexual-health/drive-plus-6",
@@ -212,7 +212,7 @@ export default function Footer() {
             title="Popular"
             items={[
               "Retatrutide Vial",
-              "Tirzepetide Injectable",
+              "Tirzepetide Vial",
               "Vitamin B-12",
               "Mach-1",
               "Drive Plus",

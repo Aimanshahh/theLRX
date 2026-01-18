@@ -247,7 +247,7 @@ const SemaglutideInjectablePage = () => {
     fontWeight: 900
   }}
                     >
-                      SEMAGLUTIDE INJECTABLE
+                      SEMAGLUTIDE Vial
                     </Box>
                     <Box
                       component="span"
@@ -406,7 +406,7 @@ const SemaglutideInjectablePage = () => {
                       }
                     }}
                   >
-                    Start Injectable Treatment Consultation
+                    Start Vial Treatment Consultation
                   </Button>
                 </motion.div>
 
@@ -538,7 +538,7 @@ const SemaglutideInjectablePage = () => {
                   display: "block",
                 }}
               >
-                GLP-1 INJECTABLE THERAPY
+                GLP-1 Vial THERAPY
               </Typography>
 
               <Typography
@@ -1178,7 +1178,7 @@ const SemaglutideInjectablePage = () => {
                       },
                     }}
                   >
-                    Begin Injectable Treatment
+                    Begin Vial Treatment
                   </Button>
                 </motion.div>
 

@@ -124,8 +124,8 @@ export default function Navbar() {
         { label: "Retatrutide Vial", path: "/weight-loss/retatrutide-vial" },
         { label: "Oral Tirzepatide RDT", path: "/weight-loss/oral-tirzepatide-rdt" },
         { label: "Oral Semaglutide RDT", path: "/weight-loss/oral-semaglutide-rdt" },
-        { label: "Tirzepatide Injectable", path: "/weight-loss/tirzepatide-injectable" },
-        { label: "Semaglutide Injectable", path: "/weight-loss/semaglutide-injectable" },
+        { label: "Tirzepatide Vial", path: "/weight-loss/tirzepatide-injectable" },
+        { label: "Semaglutide Vial", path: "/weight-loss/semaglutide-injectable" },
       ]
     },
     { 

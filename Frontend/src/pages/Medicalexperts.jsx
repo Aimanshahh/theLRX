@@ -873,214 +873,235 @@ const medicalExecutives = [
 </Box>
 
       {/* MEDICAL ADVISORY BOARD SECTION */}
+  <Box
+  sx={{
+    width: "100%",
+    px: {
+      xs: "16px",
+      sm: "24px",
+      md: "32px",
+      lg: "48px",
+      xl: "64px"
+    },
+    py: {
+      xs: "48px",
+      sm: "64px",
+      md: "80px",
+      lg: "112px"
+    },
+    backgroundColor: "white",
+    display: "flex",
+    flexDirection: {
+      xs: "column",
+      md: "row"
+    },
+    gap: {
+      xs: "40px",
+      sm: "56px",
+      md: "64px",
+      lg: "80px"
+    },
+  }}
+>
+  <Box sx={{
+    flex: 1,
+    textAlign: { xs: "center", md: "left" }
+  }}>
+    <Typography sx={{
+      fontSize: {
+        xs: "1.875rem",
+        sm: "2.25rem",
+        md: "2.75rem",
+        lg: "3rem",
+        xl: "3.25rem"
+      },
+      fontWeight: 800,
+      mb: { xs: 3, md: 4 },
+      color: "#000",
+      letterSpacing: "-0.02em",
+      lineHeight: 1.2
+    }}>
+      Our medical <Box component="span" sx={{ color: "#00359E" }}>advisory</Box> 
+      <br></br>
+      board
+    </Typography>
+
+    <Typography
+      sx={{
+        fontSize: {
+          xs: "1.05rem",
+          sm: "1.15rem",
+          md: "1.2rem",
+          lg: "1.25rem"
+        },
+        color: "#2D3748",
+        lineHeight: 1.7,
+        mb: { xs: 4, md: 5 },
+        maxWidth: "480px",
+        mx: { xs: "auto", md: 0 },
+        fontWeight: 500
+      }}
+    >
+      LiquidRX is guided by a national network of U.S.-licensed medical doctors who actively practice across multiple specialties. Our medical advisory group includes physicians with backgrounds from leading academic institutions, clinical leadership roles, and research-focused environments. These licensed providers support physician-guided care across areas including:
+    </Typography>
+
+    <Box
+      component="ul"
+      sx={{
+        color: "#4E4E4E",
+        fontSize: {
+          xs: "1.15rem",
+          sm: "1.25rem",
+          md: "1.35rem",
+          lg: "1.4rem"
+        },
+        lineHeight: 1.9,
+        pl: { xs: 3, md: 4 },
+        textAlign: "left",
+        display: "inline-block",
+        mx: { xs: "auto", md: 0 },
+        fontWeight: 600,
+        listStylePosition: "inside",
+        "& li": {
+          mb: { xs: 2, sm: 2.5, md: 3 },
+          paddingLeft: "8px",
+          position: "relative"
+        }
+      }}
+    >
+      <li>Longevity</li>
+      <li>Hair health</li>
+      <li>Sexual wellness</li>
+      <li>Dermatologic care</li>
+      <li>And other related areas</li>
+    </Box>
+    
+    {/* Added Disclaimer */}
+    <Typography
+      sx={{
+        fontSize: {
+          xs: "0.85rem",
+          sm: "0.9rem",
+          md: "0.95rem"
+        },
+        color: "#6B7280",
+        lineHeight: 1.6,
+        mt: { xs: 3, sm: 4, md: 5 },
+        maxWidth: "480px",
+        mx: { xs: "auto", md: 0 },
+        fontWeight: 400,
+        fontStyle: "italic",
+        pt: 2,
+        borderTop: "1px solid #E5E7EB"
+      }}
+    >
+      All care is delivered through licensed clinicians in accordance with applicable federal and state regulations.
+    </Typography>
+  </Box>
+
+  <Box
+    sx={{
+      flex: 1.2,
+      display: "grid",
+      gridTemplateColumns: {
+        xs: "1fr",
+        sm: "1fr 1fr"
+      },
+      gap: {
+        xs: "20px",
+        sm: "16px",
+        md: "20px",
+        lg: "24px"
+      },
+      position: "relative",
+    }}
+  >
+    {[
+      { name: "Lawrence Jenkins", title: "MD, MBA | Urology", bg: "#F8F8F8", mt: 0 },
+      { name: "Sandy Skotnicki", title: "MD, FRCPC | Dermatology", bg: "#F0F0F0", mt: { xs: 0, sm: 4 } },
+      { name: "Dr. Crystal Broussard", title: "MD | Obesity Medicine", bg: "#F8F8F8", mt: 0 },
+      { name: "Sara Perkins", title: "MD | Dermatology", bg: "#F0F0F0", mt: { xs: 0, sm: 4 } },
+    ].map((doctor, index) => (
       <Box
+        key={index}
         sx={{
-          width: "100%",
-          px: {
-            xs: "16px",
+          backgroundColor: doctor.bg,
+          borderRadius: {
+            xs: "12px",
+            sm: "16px",
+            md: "20px"
+          },
+          p: {
+            xs: "20px",
             sm: "24px",
-            md: "32px",
-            lg: "48px",
-            xl: "64px"
+            md: "28px"
           },
-          py: {
-            xs: "48px",
-            sm: "64px",
-            md: "80px",
-            lg: "112px"
+          boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
+          height: {
+            xs: "300px",
+            sm: "320px",
+            md: "340px",
+            lg: "360px"
           },
-          backgroundColor: "white",
+          mt: doctor.mt,
           display: "flex",
-          flexDirection: {
-            xs: "column",
-            md: "row"
-          },
-          gap: {
-            xs: "40px",
-            sm: "56px",
-            md: "64px",
-            lg: "80px"
-          },
+          flexDirection: "column",
+          transition: "transform 0.3s ease",
+          "&:hover": {
+            transform: "translateY(-4px)",
+            boxShadow: "0 8px 25px rgba(0,0,0,0.12)"
+          }
         }}
       >
-        <Box sx={{
-          flex: 1,
-          textAlign: { xs: "center", md: "left" }
-        }}>
+        <Box sx={{ mb: 3 }}>
+          <Typography fontWeight={700} sx={{
+            mb: 1,
+            fontSize: {
+              xs: "1.1rem",
+              sm: "1.15rem",
+              md: "1.2rem"
+            },
+            color: "#000"
+          }}>
+            {doctor.name}
+          </Typography>
           <Typography sx={{
             fontSize: {
-              xs: "1.875rem",
-              sm: "2.25rem",
-              md: "2.75rem",
-              lg: "3rem",
-              xl: "3.25rem"
+              xs: "0.9rem",
+              sm: "0.95rem",
+              md: "1rem"
             },
-            fontWeight: 800,
-            mb: { xs: 3, md: 4 },
-            color: "#000",
-            letterSpacing: "-0.02em",
-            lineHeight: 1.2
+            color: "#00359E",
+            fontWeight: 600
           }}>
-            Our medical <Box component="span" sx={{ color: "#00359E" }}>advisory</Box> 
-            <br></br>
-            board
+            {doctor.title}
           </Typography>
-
-          <Typography
-            sx={{
-              fontSize: {
-                xs: "1.05rem",
-                sm: "1.15rem",
-                md: "1.2rem",
-                lg: "1.25rem"
-              },
-              color: "#2D3748",
-              lineHeight: 1.7,
-              mb: { xs: 4, md: 5 },
-              maxWidth: "480px",
-              mx: { xs: "auto", md: 0 },
-              fontWeight: 500
-            }}
-          >
-            LiquidRX was built with real doctors. Our board features advisors from Ivy League institutions,
-            department heads, and researchers who are on the cutting-edge of:
-          </Typography>
-
-          <Box
-            component="ul"
-            sx={{
-              color: "#4E4E4E",
-              fontSize: {
-                xs: "1.15rem",
-                sm: "1.25rem",
-                md: "1.35rem",
-                lg: "1.4rem"
-              },
-              lineHeight: 1.9,
-              pl: { xs: 3, md: 4 },
-              textAlign: "left",
-              display: "inline-block",
-              mx: { xs: "auto", md: 0 },
-              fontWeight: 600,
-              listStylePosition: "inside",
-              "& li": {
-                mb: { xs: 2, sm: 2.5, md: 3 },
-                paddingLeft: "8px",
-                position: "relative"
-              }
-            }}
-          >
-            <li>Hair loss</li>
-            <li>Sexual wellness</li>
-            <li>Skin care</li>
-            <li>Mental health</li>
-            <li>And more</li>
-          </Box>
         </Box>
-
         <Box
+          component="img"
+          src={index === 0 ? doc1 : index === 1 ? doc2 : index === 2 ? doc3 : doc4}
+          alt={`doctor ${index + 1}`}
           sx={{
-            flex: 1.2,
-            display: "grid",
-            gridTemplateColumns: {
-              xs: "1fr",
-              sm: "1fr 1fr"
+            width: "100%",
+            borderRadius: {
+              xs: "8px",
+              sm: "12px",
+              md: "16px"
             },
-            gap: {
-              xs: "20px",
-              sm: "16px",
-              md: "20px",
-              lg: "24px"
+            height: {
+              xs: "200px",
+              sm: "220px",
+              md: "240px"
             },
-            position: "relative",
+            objectFit: "cover",
+            flex: 1,
+            display: "block"
           }}
-        >
-          {[
-            { name: "Lawrence Jenkins", title: "MD, MBA | Urology", bg: "#F8F8F8", mt: 0 },
-            { name: "Sandy Skotnicki", title: "MD, FRCPC | Dermatology", bg: "#F0F0F0", mt: { xs: 0, sm: 4 } },
-            { name: "Dr. Crystal Broussard", title: "MD | Obesity Medicine", bg: "#F8F8F8", mt: 0 },
-            { name: "Sara Perkins", title: "MD | Dermatology", bg: "#F0F0F0", mt: { xs: 0, sm: 4 } },
-          ].map((doctor, index) => (
-            <Box
-              key={index}
-              sx={{
-                backgroundColor: doctor.bg,
-                borderRadius: {
-                  xs: "12px",
-                  sm: "16px",
-                  md: "20px"
-                },
-                p: {
-                  xs: "20px",
-                  sm: "24px",
-                  md: "28px"
-                },
-                boxShadow: "0 4px 18px rgba(0,0,0,0.08)",
-                height: {
-                  xs: "300px",
-                  sm: "320px",
-                  md: "340px",
-                  lg: "360px"
-                },
-                mt: doctor.mt,
-                display: "flex",
-                flexDirection: "column",
-                transition: "transform 0.3s ease",
-                "&:hover": {
-                  transform: "translateY(-4px)",
-                  boxShadow: "0 8px 25px rgba(0,0,0,0.12)"
-                }
-              }}
-            >
-              <Box sx={{ mb: 3 }}>
-                <Typography fontWeight={700} sx={{
-                  mb: 1,
-                  fontSize: {
-                    xs: "1.1rem",
-                    sm: "1.15rem",
-                    md: "1.2rem"
-                  },
-                  color: "#000"
-                }}>
-                  {doctor.name}
-                </Typography>
-                <Typography sx={{
-                  fontSize: {
-                    xs: "0.9rem",
-                    sm: "0.95rem",
-                    md: "1rem"
-                  },
-                  color: "#00359E", // CHANGED FROM #666 TO #00359E
-                  fontWeight: 600 // CHANGED FROM 500 TO 600
-                }}>
-                  {doctor.title}
-                </Typography>
-              </Box>
-              <Box
-                component="img"
-                src={index === 0 ? doc1 : index === 1 ? doc2 : index === 2 ? doc3 : doc4}
-                alt={`doctor ${index + 1}`}
-                sx={{
-                  width: "100%",
-                  borderRadius: {
-                    xs: "8px",
-                    sm: "12px",
-                    md: "16px"
-                  },
-                  height: {
-                    xs: "200px",
-                    sm: "220px",
-                    md: "240px"
-                  },
-                  objectFit: "cover",
-                  flex: 1,
-                  display: "block"
-                }}
-              />
-            </Box>
-          ))}
-        </Box>
+        />
       </Box>
+    ))}
+  </Box>
+</Box>
 
       {/* NEW MEDICAL EXECUTIVES SECTION */}
       <Box
@@ -1627,7 +1648,7 @@ const medicalExecutives = [
                 mb: 1.5 
               }}>
                 {idx === 0 ? "Answer a few questions" : 
-                 idx === 1 ? "Get a personalized treatment plan" : 
+                 idx === 1 ? "Get a personalized treatment" : 
                  idx === 2 ? "Free shipping" : "Free ongoing care"}
               </Typography>
 

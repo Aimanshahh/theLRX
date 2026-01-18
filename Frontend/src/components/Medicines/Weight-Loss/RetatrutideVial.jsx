@@ -731,7 +731,8 @@ const RetatrutidePage = () => {
                   fontWeight: 400,
                 }}
               >
-                Retatrutide is one of the most advanced multi-pathway metabolic agents, supporting profound appetite regulation and accelerated fat-loss potential. It pairs powerfully with NAD+ Injectable, BPC-157, and CJC-1295/Ipamorelin for superior energy, recovery, and longevity support.
+                Retatrutide is an investigational peptide-based compound studied for its interaction with multiple metabolic receptor pathways involved in energy balance and glucose regulation.
+It may be considered alongside other provider-directed therapies such as NAD+ Injectable, BPC-157, and CJC-1295/Ipamorelin.
               </Typography>
             </Box>
           </motion.div>
@@ -794,14 +795,10 @@ const RetatrutidePage = () => {
                         title: "1. Fill out the form",
                         description: "Complete a simple online medical form telling your clinician about your health and prior weight loss attempts."
                       },
-                      {
-                        icon: <PhoneCall size={28} color={colors.darkBlue} />,
-                        title: "2. Telehealth Visit",
-                        description: "Speak to your new clinician who can help you lose weight with a GLP-1 medication, if appropriate."
-                      },
+
                       {
                         icon: <Package size={28} color={colors.darkBlue} />,
-                        title: "3. Receive Medicine",
+                        title: "2. Receive Medicine",
                         description: "Receive your regularly scheduled medication in the mail straight from the pharmacy."
                       }
                     ].map((point, index) => (
