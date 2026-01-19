@@ -117,7 +117,7 @@ const SermorelinPage = () => {
             </Box>
 
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
-              Sermorelin 20mg
+              Sermorelin
               <br />
               <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$189.00</Box>
             </Typography>
@@ -181,7 +181,7 @@ const SermorelinPage = () => {
             style={{ position: "relative", maxWidth: "480px", width: "100%" }}
           >
             <Box sx={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.25)" }}>
-              <img src={sermorelinImage} alt="Sermorelin 20mg" style={{ width: "100%", height: "auto", display: "block" }} />
+              <img src={sermorelinImage} alt="Sermorelin" style={{ width: "100%", height: "auto", display: "block" }} />
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
@@ -625,7 +625,7 @@ const SermorelinPage = () => {
                     <Box
                       component="img"
                       src={sermorelinProductImage}
-                      alt="Sermorelin 20mg Injection Kit"
+                      alt="Sermorelin Vial"
                       sx={{
                         width: "100%",
                         height: "auto",
@@ -709,7 +709,7 @@ const SermorelinPage = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      Sermorelin 20mg
+                      Sermorelin Vial
                     </Typography>
 
                     <Typography
@@ -725,7 +725,7 @@ const SermorelinPage = () => {
 
                     <Box sx={{ mb: 4 }}>
                       {[
-                        "20mg sermorelin acetate compounded peptide formulation",
+                        "Sermorelin acetate compounded peptide formulation",
                         "Bacteriostatic water for injection (sterile diluent)",
                         "Clinical-grade insulin syringes with ultra-fine needles",
                         "Comprehensive clinical administration guide",
@@ -1246,7 +1246,7 @@ const SermorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Start with our Sermorelin 20mg clinical kit at $189. Includes medical evaluation, 
+                Start with our Sermorelin clinical kit at $189. Includes medical evaluation, 
                 clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
@@ -1320,7 +1320,7 @@ const SermorelinPage = () => {
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
                   { text: "Required Medical Evaluation" },
-                  { text: "20mg Compounded Formulation" },
+                  { text: "Compounded Formulation" },
                   { text: "Clinical Support Team Access" },
                   { text: "Medical Oversight Program" },
                 ].map((feature, index) => (

@@ -201,7 +201,7 @@ export default function Buildmuscle() {
       </Box>
     </Box>
   </Box>
-</Box>npm
+</Box>
       {/* ================= END VIDEO BANNER SECTION ================= */}
       
       {/* ================= PRODUCTS GRID SECTION ================= */}
