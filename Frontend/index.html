@@ -2,12 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/src/assets/LRXLOGOS/LOGO-10.png" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <title>LiquidRX</title>
   </head>
+  
   <body>
     <div id="root"></div>
+    
+    <!-- Add this script to prevent Vite from changing the title -->
+    <script>
+      // Store the original title and restore it if Vite changes it
+      const originalTitle = 'LiquidRX';
+      document.title = originalTitle;
+      
+      // Watch for title changes and revert if it's not LiquidRX
+      const observer = new MutationObserver(function(mutations) {
+        if (document.title !== originalTitle) {
+          document.title = originalTitle;
+        }
+      });
+      
+      observer.observe(
+        document.querySelector('title'), 
+        { subtree: true, characterData: true, childList: true }
+      );
+    </script>
+    
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
