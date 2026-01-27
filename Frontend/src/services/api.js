@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Base URL of your backend
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://backend.thelrx.com/api";
 
 // Get auth token from localStorage
 const getAuthHeader = () => {
