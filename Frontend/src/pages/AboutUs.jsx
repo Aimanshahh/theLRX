@@ -760,7 +760,7 @@ export default function AboutUs() {
                   borderRadius: "4px",
                 }}
               >
-                THE LRX WAS BUILT FOR YOU
+                THE LiquidRX WAS BUILT FOR YOU
               </Typography>
             </Box>
           </Box>

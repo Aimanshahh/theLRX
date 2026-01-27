@@ -585,527 +585,733 @@ export default function Profile() {
           <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
             {activeTab === 0 ? (
               /* Profile Information Tab - FORM SECTION */
-              <Box>
-                {/* Section Header */}
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-                  <Box>
-                    <Typography variant="h5" sx={{ fontWeight: 800, color: "#00359E" }}>
-                      Personal Information
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary">
-                      Update your personal details and contact information
-                    </Typography>
-                  </Box>
-                  {!isEditing && (
-                    <Button
-                      variant="contained"
-                      startIcon={<Edit />}
-                      onClick={() => setIsEditing(true)}
-                      sx={{
-                        background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
-                        borderRadius: 2,
-                        px: 3,
-                        boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
-                        "&:hover": {
-                          boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
-                        },
-                      }}
-                    >
-                      Edit Profile
-                    </Button>
-                  )}
-                </Box>
+           <Box>
+  {/* Section Header */}
+  <Box sx={{ 
+    display: 'flex', 
+    justifyContent: 'space-between', 
+    alignItems: { xs: 'flex-start', sm: 'center' }, 
+    mb: { xs: 3, sm: 4 },
+    flexDirection: { xs: 'column', sm: 'row' },
+    gap: { xs: 2, sm: 0 }
+  }}>
+    <Box sx={{ mb: { xs: 1, sm: 0 } }}>
+      <Typography 
+        variant="h5" 
+        sx={{ 
+          fontWeight: 800, 
+          color: "#00359E",
+          fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.75rem" }
+        }}
+      >
+        Personal Information
+      </Typography>
+      <Typography 
+        variant="body2" 
+        color="textSecondary"
+        sx={{ fontSize: { xs: "0.875rem", sm: "0.9375rem" } }}
+      >
+        Update your personal details and contact information
+      </Typography>
+    </Box>
+    {!isEditing && (
+      <Button
+        variant="contained"
+        startIcon={<Edit />}
+        onClick={() => setIsEditing(true)}
+        sx={{
+          background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
+          borderRadius: 2,
+          px: { xs: 2.5, sm: 3 },
+          py: { xs: 0.75, sm: 0.875 },
+          fontSize: { xs: "0.8125rem", sm: "0.875rem" },
+          boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
+          "&:hover": {
+            boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
+          },
+          width: { xs: '100%', sm: 'auto' }
+        }}
+      >
+        Edit Profile
+      </Button>
+    )}
+  </Box>
 
-                {/* Personal Information Section */}
-                <Box sx={{ mb: 4, p: 3, borderRadius: 2, border: "1px solid #e0e0e0", backgroundColor: "#fafafa" }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                    <Badge sx={{ color: "#00359E", mr: 2 }} />
-                    <Typography variant="h6" sx={{ fontWeight: 600, color: "#00359E" }}>
-                      Basic Information
-                    </Typography>
-                  </Box>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="First Name"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        error={!!errors.firstName}
-                        helperText={errors.firstName}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <PersonIcon sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                            "&:hover": {
-                              "& .MuiOutlinedInput-notchedOutline": {
-                                borderColor: "#00359E",
-                              },
-                            },
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="Last Name"
-                        name="lastName"
-                        value={formData.lastName}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        error={!!errors.lastName}
-                        helperText={errors.lastName}
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="Email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        error={!!errors.email}
-                        helperText={errors.email}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Mail sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="Phone Number"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handlePhoneChange}
-                        disabled={!isEditing}
-                        error={!!errors.phone}
-                        helperText={errors.phone}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Phone sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12}>
-                      <TextField
-                        fullWidth
-                        label="Date of Birth"
-                        name="dateOfBirth"
-                        type="date"
-                        value={formData.dateOfBirth}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        InputLabelProps={{ shrink: true }}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <CalendarToday sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Box>
+  {/* Personal Information Section */}
+  <Box sx={{ 
+    mb: { xs: 3, sm: 4 }, 
+    p: { xs: 2, sm: 3 }, 
+    borderRadius: 2, 
+    border: "1px solid #e0e0e0", 
+    backgroundColor: "#fafafa" 
+  }}>
+    <Box sx={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      mb: { xs: 2, sm: 3 } 
+    }}>
+      <Badge sx={{ 
+        color: "#00359E", 
+        mr: 2,
+        fontSize: { xs: 20, sm: 24 } 
+      }} />
+      <Typography 
+        variant="h6" 
+        sx={{ 
+          fontWeight: 600, 
+          color: "#00359E",
+          fontSize: { xs: "1.125rem", sm: "1.25rem" }
+        }}
+      >
+        Basic Information
+      </Typography>
+    </Box>
+    <Grid container spacing={2}>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="First Name"
+          name="firstName"
+          value={formData.firstName}
+          onChange={handleChange}
+          disabled={!isEditing}
+          error={!!errors.firstName}
+          helperText={errors.firstName}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <PersonIcon sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" },
+              "&:hover": {
+                "& .MuiOutlinedInput-notchedOutline": {
+                  borderColor: "#00359E",
+                },
+              },
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Last Name"
+          name="lastName"
+          value={formData.lastName}
+          onChange={handleChange}
+          disabled={!isEditing}
+          error={!!errors.lastName}
+          helperText={errors.lastName}
+          variant="outlined"
+          size="small"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Email"
+          name="email"
+          type="email"
+          value={formData.email}
+          onChange={handleChange}
+          disabled={!isEditing}
+          error={!!errors.email}
+          helperText={errors.email}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Mail sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Phone Number"
+          name="phone"
+          value={formData.phone}
+          onChange={handlePhoneChange}
+          disabled={!isEditing}
+          error={!!errors.phone}
+          helperText={errors.phone}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Phone sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Date of Birth"
+          name="dateOfBirth"
+          type="date"
+          value={formData.dateOfBirth}
+          onChange={handleChange}
+          disabled={!isEditing}
+          InputLabelProps={{ shrink: true }}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <CalendarToday sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+    </Grid>
+  </Box>
 
-                {/* Address Information Section */}
-                <Box sx={{ mb: 4, p: 3, borderRadius: 2, border: "1px solid #e0e0e0", backgroundColor: "#fafafa" }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                    <Home sx={{ color: "#00359E", mr: 2 }} />
-                    <Typography variant="h6" sx={{ fontWeight: 600, color: "#00359E" }}>
-                      Address Information
-                    </Typography>
-                  </Box>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12}>
-                      <TextField
-                        fullWidth
-                        label="Street Address"
-                        name="address"
-                        value={formData.address}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <LocationOn sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                      <TextField
-                        fullWidth
-                        label="City"
-                        name="city"
-                        value={formData.city}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                      <TextField
-                        fullWidth
-                        label="State"
-                        name="state"
-                        value={formData.state}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                    <Grid item xs={12} sm={4}>
-                      <TextField
-                        fullWidth
-                        label="ZIP Code"
-                        name="zipCode"
-                        value={formData.zipCode}
-                        onChange={handleChange}
-                        disabled={!isEditing}
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                            backgroundColor: isEditing ? "white" : "#f8f9fa",
-                          },
-                        }}
-                      />
-                    </Grid>
-                  </Grid>
-                </Box>
+  {/* Address Information Section */}
+  <Box sx={{ 
+    mb: { xs: 3, sm: 4 }, 
+    p: { xs: 2, sm: 3 }, 
+    borderRadius: 2, 
+    border: "1px solid #e0e0e0", 
+    backgroundColor: "#fafafa" 
+  }}>
+    <Box sx={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      mb: { xs: 2, sm: 3 } 
+    }}>
+      <Home sx={{ 
+        color: "#00359E", 
+        mr: 2,
+        fontSize: { xs: 20, sm: 24 } 
+      }} />
+      <Typography 
+        variant="h6" 
+        sx={{ 
+          fontWeight: 600, 
+          color: "#00359E",
+          fontSize: { xs: "1.125rem", sm: "1.25rem" }
+        }}
+      >
+        Address Information
+      </Typography>
+    </Box>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Street Address"
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          disabled={!isEditing}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <LocationOn sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <TextField
+          fullWidth
+          label="City"
+          name="city"
+          value={formData.city}
+          onChange={handleChange}
+          disabled={!isEditing}
+          variant="outlined"
+          size="small"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <TextField
+          fullWidth
+          label="State"
+          name="state"
+          value={formData.state}
+          onChange={handleChange}
+          disabled={!isEditing}
+          variant="outlined"
+          size="small"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+      <Grid item xs={12} md={4}>
+        <TextField
+          fullWidth
+          label="ZIP Code"
+          name="zipCode"
+          value={formData.zipCode}
+          onChange={handleChange}
+          disabled={!isEditing}
+          variant="outlined"
+          size="small"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              backgroundColor: isEditing ? "white" : "#f8f9fa",
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
+    </Grid>
+  </Box>
 
-                {/* Save/Cancel Buttons */}
-                {isEditing && (
-                  <Box sx={{ 
-                    display: 'flex', 
-                    gap: 2, 
-                    justifyContent: 'flex-end', 
-                    mt: 4,
-                    flexWrap: 'wrap' 
-                  }}>
-                    <Button
-                      variant="outlined"
-                      onClick={() => setIsEditing(false)}
-                      disabled={isLoading}
-                      sx={{
-                        px: 4,
-                        borderRadius: 1.5,
-                        borderColor: "#747578",
-                        color: "#747578",
-                        fontWeight: 600,
-                        minWidth: 120,
-                      }}
-                    >
-                      Cancel
-                    </Button>
-                    <Button
-                      variant="contained"
-                      startIcon={
-                        isLoading ? (
-                          <CircularProgress size={20} color="inherit" />
-                        ) : (
-                          <Save />
-                        )
-                      }
-                      onClick={handleSaveProfile}
-                      disabled={isLoading}
-                      sx={{
-                        px: 4,
-                        background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
-                        borderRadius: 1.5,
-                        fontWeight: 600,
-                        minWidth: 140,
-                        boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
-                        "&:hover": {
-                          boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
-                        },
-                      }}
-                    >
-                      {isLoading ? "Saving..." : "Save Changes"}
-                    </Button>
-                  </Box>
-                )}
-              </Box>
+  {/* Save/Cancel Buttons */}
+  {isEditing && (
+    <Box sx={{ 
+      display: 'flex', 
+      gap: { xs: 1, sm: 2 }, 
+      justifyContent: 'flex-end', 
+      mt: { xs: 3, sm: 4 },
+      flexWrap: 'wrap' 
+    }}>
+      <Button
+        variant="outlined"
+        onClick={() => setIsEditing(false)}
+        disabled={isLoading}
+        sx={{
+          px: { xs: 3, sm: 4 },
+          py: { xs: 0.75, sm: 0.875 },
+          borderRadius: 1.5,
+          borderColor: "#747578",
+          color: "#747578",
+          fontWeight: 600,
+          minWidth: { xs: 100, sm: 120 },
+          fontSize: { xs: "0.8125rem", sm: "0.875rem" },
+          width: { xs: 'calc(50% - 4px)', sm: 'auto' }
+        }}
+      >
+        Cancel
+      </Button>
+      <Button
+        variant="contained"
+        startIcon={
+          isLoading ? (
+            <CircularProgress size={20} color="inherit" />
+          ) : (
+            <Save />
+          )
+        }
+        onClick={handleSaveProfile}
+        disabled={isLoading}
+        sx={{
+          px: { xs: 3, sm: 4 },
+          py: { xs: 0.75, sm: 0.875 },
+          background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
+          borderRadius: 1.5,
+          fontWeight: 600,
+          minWidth: { xs: 100, sm: 140 },
+          fontSize: { xs: "0.8125rem", sm: "0.875rem" },
+          boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
+          "&:hover": {
+            boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
+          },
+          width: { xs: 'calc(50% - 4px)', sm: 'auto' }
+        }}
+      >
+        {isLoading ? "Saving..." : "Save Changes"}
+      </Button>
+    </Box>
+  )}
+</Box>
             ) : (
               /* Security Tab */
-              <Box>
-                <Box sx={{ mb: 4 }}>
-                  <Typography variant="h5" sx={{ fontWeight: 800, color: "#00359E" }}>
-                    Security Settings
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary">
-                    Manage your password and security preferences
-                  </Typography>
-                </Box>
+            <Box>
+  <Box sx={{ mb: { xs: 3, sm: 4 } }}>
+    <Typography 
+      variant="h5" 
+      sx={{ 
+        fontWeight: 800, 
+        color: "#00359E",
+        fontSize: { xs: "1.25rem", sm: "1.5rem", md: "1.75rem" }
+      }}
+    >
+      Security Settings
+    </Typography>
+    <Typography 
+      variant="body2" 
+      color="textSecondary"
+      sx={{ fontSize: { xs: "0.875rem", sm: "0.9375rem" } }}
+    >
+      Manage your password and security preferences
+    </Typography>
+  </Box>
 
-                <Box sx={{ p: 3, borderRadius: 2, border: "1px solid #e0e0e0", backgroundColor: "#fafafa" }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                    <Security sx={{ color: "#00359E", mr: 2 }} />
-                    <Typography variant="h6" sx={{ fontWeight: 600, color: "#00359E" }}>
-                      Change Password
-                    </Typography>
-                  </Box>
+  <Box sx={{ 
+    p: { xs: 2, sm: 3 }, 
+    borderRadius: 2, 
+    border: "1px solid #e0e0e0", 
+    backgroundColor: "#fafafa" 
+  }}>
+    <Box sx={{ 
+      display: 'flex', 
+      alignItems: 'center', 
+      mb: { xs: 2, sm: 3 } 
+    }}>
+      <Security sx={{ 
+        color: "#00359E", 
+        mr: 2,
+        fontSize: { xs: 20, sm: 24 } 
+      }} />
+      <Typography 
+        variant="h6" 
+        sx={{ 
+          fontWeight: 600, 
+          color: "#00359E",
+          fontSize: { xs: "1.125rem", sm: "1.25rem" }
+        }}
+      >
+        Change Password
+      </Typography>
+    </Box>
 
-                  <Grid container spacing={2}>
-                    <Grid item xs={12}>
-                      <TextField
-                        fullWidth
-                        label="Current Password"
-                        name="currentPassword"
-                        type={showCurrentPassword ? "text" : "password"}
-                        value={passwordData.currentPassword}
-                        onChange={handlePasswordChange}
-                        error={!!errors.currentPassword}
-                        helperText={errors.currentPassword}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          startAdornment: (
-                            <InputAdornment position="start">
-                              <Lock sx={{ color: "#00359E", fontSize: 20 }} />
-                            </InputAdornment>
-                          ),
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <IconButton
-                                onClick={() => setShowCurrentPassword(!showCurrentPassword)}
-                                edge="end"
-                                size="small"
-                              >
-                                {showCurrentPassword ? <VisibilityOff /> : <Visibility />}
-                              </IconButton>
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                          },
-                        }}
-                      />
-                    </Grid>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Current Password"
+          name="currentPassword"
+          type={showCurrentPassword ? "text" : "password"}
+          value={passwordData.currentPassword}
+          onChange={handlePasswordChange}
+          error={!!errors.currentPassword}
+          helperText={errors.currentPassword}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <Lock sx={{ 
+                  color: "#00359E", 
+                  fontSize: { xs: 18, sm: 20 } 
+                }} />
+              </InputAdornment>
+            ),
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={() => setShowCurrentPassword(!showCurrentPassword)}
+                  edge="end"
+                  size="small"
+                  sx={{ 
+                    padding: { xs: 0.5, sm: 0.75 },
+                    "& .MuiSvgIcon-root": {
+                      fontSize: { xs: 18, sm: 20 }
+                    }
+                  }}
+                >
+                  {showCurrentPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
 
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="New Password"
-                        name="newPassword"
-                        type={showNewPassword ? "text" : "password"}
-                        value={passwordData.newPassword}
-                        onChange={handlePasswordChange}
-                        error={!!errors.newPassword}
-                        helperText={errors.newPassword}
-                        variant="outlined"
-                        size="small"
-                        InputProps={{
-                          endAdornment: (
-                            <InputAdornment position="end">
-                              <IconButton
-                                onClick={() => setShowNewPassword(!showNewPassword)}
-                                edge="end"
-                                size="small"
-                              >
-                                {showNewPassword ? <VisibilityOff /> : <Visibility />}
-                              </IconButton>
-                            </InputAdornment>
-                          ),
-                        }}
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                          },
-                        }}
-                      />
-                    </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="New Password"
+          name="newPassword"
+          type={showNewPassword ? "text" : "password"}
+          value={passwordData.newPassword}
+          onChange={handlePasswordChange}
+          error={!!errors.newPassword}
+          helperText={errors.newPassword}
+          variant="outlined"
+          size="small"
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={() => setShowNewPassword(!showNewPassword)}
+                  edge="end"
+                  size="small"
+                  sx={{ 
+                    padding: { xs: 0.5, sm: 0.75 },
+                    "& .MuiSvgIcon-root": {
+                      fontSize: { xs: 18, sm: 20 }
+                    }
+                  }}
+                >
+                  {showNewPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
 
-                    <Grid item xs={12} sm={6}>
-                      <TextField
-                        fullWidth
-                        label="Confirm New Password"
-                        name="confirmPassword"
-                        type="password"
-                        value={passwordData.confirmPassword}
-                        onChange={handlePasswordChange}
-                        error={!!errors.confirmPassword}
-                        helperText={errors.confirmPassword}
-                        variant="outlined"
-                        size="small"
-                        sx={{
-                          "& .MuiOutlinedInput-root": {
-                            borderRadius: 1.5,
-                          },
-                        }}
-                      />
-                    </Grid>
+      <Grid item xs={12} sm={6}>
+        <TextField
+          fullWidth
+          label="Confirm New Password"
+          name="confirmPassword"
+          type="password"
+          value={passwordData.confirmPassword}
+          onChange={handlePasswordChange}
+          error={!!errors.confirmPassword}
+          helperText={errors.confirmPassword}
+          variant="outlined"
+          size="small"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              borderRadius: 1.5,
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            },
+            "& .MuiInputLabel-root": {
+              fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+            }
+          }}
+        />
+      </Grid>
 
-                    <Grid item xs={12}>
-                      <Box sx={{ 
-                        display: 'flex', 
-                        gap: 2, 
-                        justifyContent: 'flex-end', 
-                        mt: 2,
-                        flexWrap: 'wrap' 
-                      }}>
-                        <Button
-                          variant="outlined"
-                          onClick={() => {
-                            setPasswordData({
-                              currentPassword: "",
-                              newPassword: "",
-                              confirmPassword: "",
-                            });
-                            setErrors({});
-                            setActiveTab(0);
-                          }}
-                          disabled={isLoading}
-                          sx={{
-                            px: 4,
-                            borderRadius: 1.5,
-                            borderColor: "#747578",
-                            color: "#747578",
-                            fontWeight: 600,
-                            minWidth: 120,
-                          }}
-                        >
-                          Cancel
-                        </Button>
-                        <Button
-                          variant="contained"
-                          onClick={handleChangePassword}
-                          disabled={isLoading}
-                          sx={{
-                            px: 4,
-                            background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
-                            borderRadius: 1.5,
-                            fontWeight: 600,
-                            minWidth: 140,
-                            boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
-                            "&:hover": {
-                              boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
-                            },
-                          }}
-                        >
-                          {isLoading ? "Changing..." : "Update Password"}
-                        </Button>
-                      </Box>
-                    </Grid>
-                  </Grid>
-                </Box>
+      <Grid item xs={12}>
+        <Box sx={{ 
+          display: 'flex', 
+          gap: { xs: 1, sm: 2 },
+          justifyContent: 'flex-end', 
+          mt: { xs: 1, sm: 2 },
+          flexWrap: 'wrap' 
+        }}>
+          <Button
+            variant="outlined"
+            onClick={() => {
+              setPasswordData({
+                currentPassword: "",
+                newPassword: "",
+                confirmPassword: "",
+              });
+              setErrors({});
+              setActiveTab(0);
+            }}
+            disabled={isLoading}
+            sx={{
+              px: { xs: 3, sm: 4 },
+              py: { xs: 0.75, sm: 0.875 },
+              borderRadius: 1.5,
+              borderColor: "#747578",
+              color: "#747578",
+              fontWeight: 600,
+              minWidth: { xs: 100, sm: 120 },
+              fontSize: { xs: "0.8125rem", sm: "0.875rem" }
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            variant="contained"
+            onClick={handleChangePassword}
+            disabled={isLoading}
+            sx={{
+              px: { xs: 3, sm: 4 },
+              py: { xs: 0.75, sm: 0.875 },
+              background: "linear-gradient(135deg, #00359E 0%, #0052D4 100%)",
+              borderRadius: 1.5,
+              fontWeight: 600,
+              minWidth: { xs: 120, sm: 140 },
+              fontSize: { xs: "0.8125rem", sm: "0.875rem" },
+              boxShadow: "0 4px 12px rgba(0, 53, 158, 0.2)",
+              "&:hover": {
+                boxShadow: "0 6px 16px rgba(0, 53, 158, 0.3)",
+              },
+            }}
+          >
+            {isLoading ? "Changing..." : "Update Password"}
+          </Button>
+        </Box>
+      </Grid>
+    </Grid>
+  </Box>
 
-                {/* Password Requirements */}
-                <Box sx={{ 
-                  mt: 3, 
-                  p: 3, 
-                  borderRadius: 2, 
-                  border: "1px solid #e0e0e0", 
-                  backgroundColor: "#f8f9fa"
-                }}>
-                  <Typography variant="subtitle2" sx={{ fontWeight: 600, mb: 1, color: "#00359E" }}>
-                    Password Requirements:
-                  </Typography>
-                  <Grid container spacing={1}>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="body2" color="textSecondary">
-                        • Minimum 8 characters
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="body2" color="textSecondary">
-                        • At least one uppercase letter
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="body2" color="textSecondary">
-                        • At least one lowercase letter
-                      </Typography>
-                    </Grid>
-                    <Grid item xs={12} sm={6}>
-                      <Typography variant="body2" color="textSecondary">
-                        • At least one number
-                      </Typography>
-                    </Grid>
-                  </Grid>
-                </Box>
-              </Box>
+  {/* Password Requirements */}
+  <Box sx={{ 
+    mt: { xs: 2, sm: 3 }, 
+    p: { xs: 2, sm: 3 }, 
+    borderRadius: 2, 
+    border: "1px solid #e0e0e0", 
+    backgroundColor: "#f8f9fa"
+  }}>
+    <Typography 
+      variant="subtitle2" 
+      sx={{ 
+        fontWeight: 600, 
+        mb: { xs: 0.5, sm: 1 }, 
+        color: "#00359E",
+        fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+      }}
+    >
+      Password Requirements:
+    </Typography>
+    <Grid container spacing={{ xs: 0.5, sm: 1 }}>
+      <Grid item xs={12} md={6}>
+        <Typography 
+          variant="body2" 
+          color="textSecondary"
+          sx={{ fontSize: { xs: "0.8125rem", sm: "0.875rem" } }}
+        >
+          • Minimum 8 characters
+        </Typography>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Typography 
+          variant="body2" 
+          color="textSecondary"
+          sx={{ fontSize: { xs: "0.8125rem", sm: "0.875rem" } }}
+        >
+          • At least one uppercase letter
+        </Typography>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Typography 
+          variant="body2" 
+          color="textSecondary"
+          sx={{ fontSize: { xs: "0.8125rem", sm: "0.875rem" } }}
+        >
+          • At least one lowercase letter
+        </Typography>
+      </Grid>
+      <Grid item xs={12} md={6}>
+        <Typography 
+          variant="body2" 
+          color="textSecondary"
+          sx={{ fontSize: { xs: "0.8125rem", sm: "0.875rem" } }}
+        >
+          • At least one number
+        </Typography>
+      </Grid>
+    </Grid>
+  </Box>
+</Box>
             )}
           </Box>
         </Box>
