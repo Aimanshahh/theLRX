@@ -130,7 +130,7 @@ const Passion18Page = () => {
                     "Creates a richer, more responsive intimate experience",
                     "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
                     "For heightened arousal, sustained vitality, and fully elevated intimate wellness",
-                    "Compounded formula (Tadalafil 10mg / Bremelanotide 10mg / Pregnenolone 10mg)",
+                    "Compounded formula (Tadalafil / Bremelanotide / Pregnenolone)",
                     "Best-value 18-tablet extended supply for continued wellness"
                   ].map((item, i) => (
                     <Box
@@ -330,9 +330,9 @@ const Passion18Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "Tadalafil 10mg - Enhanced circulation",
-                          "Bremelanotide 10mg - Elevated desire pathways",
-                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
+                          "Tadalafil - Enhanced circulation",
+                          "Bremelanotide - Elevated desire pathways",
+                          "Pregnenolone - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -476,21 +476,21 @@ const Passion18Page = () => {
                   {[
                     { 
                       label: "Tadalafil", 
-                      value: "10mg", 
+                      value: "", 
                       color: "#00359E",
                       description: "Enhanced circulation support",
                       purpose: "Improves blood flow"
                     },
                     { 
                       label: "Bremelanotide", 
-                      value: "10mg", 
+                      value: "", 
                       color: "#003B9D",
                       description: "Elevates desire pathways",
                       purpose: "Heightens arousal"
                     },
                     { 
                       label: "Pregnenolone", 
-                      value: "10mg", 
+                      value: "", 
                       color: "#00359E",
                       description: "Neuro-hormonal balance",
                       purpose: "Supports hormonal pathways"

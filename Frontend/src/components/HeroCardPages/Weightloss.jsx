@@ -5,8 +5,8 @@ import bannerVideo from "../../assets/Videos/weightloss.mp4";
 
 // PRODUCT IMAGES
 import wegovyPill from "../../assets/Herocardspages/img20.jpeg";
-import zepboundVial from "../../assets/Herocardspages/img17.jpeg";
-import ozempicPen from "../../assets/Herocardspages/img21.jpeg";
+import zepboundVial from "../../assets/Herocardspages/img6.jpeg";
+import ozempicPen from "../../assets/Herocardspages/img11.jpeg";
 import zepboundPen from "../../assets/Herocardspages/img18.jpeg";
 import semaglutideVial from "../../assets/Herocardspages/img22.jpeg";
 

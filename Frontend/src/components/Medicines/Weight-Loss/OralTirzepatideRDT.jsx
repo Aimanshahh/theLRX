@@ -88,7 +88,7 @@ const PRICE = {
   amount: 379.00,
   currency: 'USD',
   display: '$379.00',
-  period: 'per treatment',
+  period: 'per Vial',
   treatmentType: 'Oral RDT'
 };
 
@@ -103,8 +103,7 @@ const pillBenefits = [
 ];
 
 const OralTirzepatidePage = () => {
-
- const rimioUrl = "https://try.thelrx.com/intake/wm-ltaaov";
+  const rimioUrl = "https://try.thelrx.com/intake/wm-ltaaov";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
@@ -128,7 +127,7 @@ const OralTirzepatidePage = () => {
   };
 
   return (
-    <>
+    <Box sx={{ mt: 8 }}> {/* ADDED: This wrapper pushes content below navbar */}
       {/* Hero Section with Video */}
       <Box
         sx={{
@@ -234,22 +233,22 @@ const OralTirzepatidePage = () => {
                   >
                     <Box
                       component="span"
-                    sx={{
-    display: 'block',
-    color: colors.white,
-    fontWeight: 900
-  }}
+                      sx={{
+                        display: 'block',
+                        color: colors.white,
+                        fontWeight: 900
+                      }}
                     >
                       ORAL TIRZEPATIDE
                     </Box>
                     <Box
                       component="span"
-                     sx={{
-    display: 'block',
-    color: colors.lightBlue,
-    fontWeight: 900,
-    mt: -1
-  }}
+                      sx={{
+                        display: 'block',
+                        color: colors.lightBlue,
+                        fontWeight: 900,
+                        mt: -1
+                      }}
                     >
                       RAPID DISSOLVE TABLET
                     </Box>
@@ -731,20 +730,20 @@ const OralTirzepatidePage = () => {
               </Typography>
 
               {/* Primary Description */}
-          <Typography
-  sx={{
-    fontSize: { xs: "1.1rem", md: "1.25rem" },
-    lineHeight: 2.1,
-    color: colors.darkGrey,
-    textAlign: "center",
-    fontWeight: 400,
-  }}
->
-  Oral Tirzepatide RDT is an investigational formulation designed to deliver tirzepatide
-  through a rapid-dissolve tablet. It acts on the GLP-1 and GIP receptors and is currently
-  being studied to better understand its pharmacologic characteristics and potential
-  applications under the guidance of a licensed healthcare provider.
-</Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "1.1rem", md: "1.25rem" },
+                  lineHeight: 2.1,
+                  color: colors.darkGrey,
+                  textAlign: "center",
+                  fontWeight: 400,
+                }}
+              >
+                Oral Tirzepatide RDT is an investigational formulation designed to deliver tirzepatide
+                through a rapid-dissolve tablet. It acts on the GLP-1 and GIP receptors and is currently
+                being studied to better understand its pharmacologic characteristics and potential
+                applications under the guidance of a licensed healthcare provider.
+              </Typography>
 
               {/* Divider */}
               <Box
@@ -1130,75 +1129,75 @@ const OralTirzepatidePage = () => {
               </Typography>
 
               {/* Single CTA Button */}
-             <Box sx={{ 
-  display: "flex", 
-  flexDirection: "column",
-  gap: 3,
-  justifyContent: "center",
-  alignItems: "center",
-  mb: 5
-}}>
-  {/* Primary CTA Button */}
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.2 }}
-  >
-    <Button
-      onClick={handleCtaClick}
-      sx={{
-        backgroundColor: colors.white,
-        color: colors.darkBlue,
-        px: 5,
-        py: 1.8,
-        fontSize: "15px",
-        fontWeight: 700,
-        borderRadius: "50px",
-        textTransform: "none",
-        minWidth: "200px",
-        boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
-        "&:hover": {
-          backgroundColor: "rgba(255, 255, 255, 0.95)",
-          boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
-        },
-      }}
-    >
-      Begin Oral Treatment
-    </Button>
-  </motion.div>
+              <Box sx={{ 
+                display: "flex", 
+                flexDirection: "column",
+                gap: 3,
+                justifyContent: "center",
+                alignItems: "center",
+                mb: 5
+              }}>
+                {/* Primary CTA Button */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Button
+                    onClick={handleCtaClick}
+                    sx={{
+                      backgroundColor: colors.white,
+                      color: colors.darkBlue,
+                      px: 5,
+                      py: 1.8,
+                      fontSize: "15px",
+                      fontWeight: 700,
+                      borderRadius: "50px",
+                      textTransform: "none",
+                      minWidth: "200px",
+                      boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.95)",
+                        boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
+                      },
+                    }}
+                  >
+                    Begin Oral Treatment
+                  </Button>
+                </motion.div>
 
-  {/* Text link in pill shape */}
-  <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.3 }}
-  >
-    <Typography
-      onClick={handleCtaClick}
-      sx={{
-        fontSize: "14px",
-        fontWeight: 500,
-        color: "rgba(255, 255, 255, 0.85)",
-        px: 4,
-        py: 1.2,
-        borderRadius: "50px",
-        display: "inline-block",
-        cursor: "pointer",
-        transition: "all 0.2s ease",
-        "&:hover": {
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
-          color: colors.white,
-        },
-      }}
-    >
-      Or explore our injection-free options
-    </Typography>
-  </motion.div>
-</Box>
+                {/* Text link in pill shape */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <Typography
+                    onClick={handleCtaClick}
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "rgba(255, 255, 255, 0.85)",
+                      px: 4,
+                      py: 1.2,
+                      borderRadius: "50px",
+                      display: "inline-block",
+                      cursor: "pointer",
+                      transition: "all 0.2s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        color: colors.white,
+                      },
+                    }}
+                  >
+                    Or explore our injection-free options
+                  </Typography>
+                </motion.div>
+              </Box>
 
               {/* Features/Guarantees */}
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
@@ -1330,7 +1329,7 @@ const OralTirzepatidePage = () => {
           </motion.div>
         </Container>
       </Box>
-    </>
+    </Box> // CLOSING the mt:8 wrapper Box
   );
 };
 

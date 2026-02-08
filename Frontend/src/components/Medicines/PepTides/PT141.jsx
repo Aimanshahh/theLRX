@@ -116,7 +116,7 @@ const PT141Page = () => {
             </Box>
 
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
-              PT-141 50mg
+              PT-141
               <br />
               <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$229.00</Box>
             </Typography>
@@ -180,7 +180,7 @@ const PT141Page = () => {
             style={{ position: "relative", maxWidth: "480px", width: "100%" }}
           >
             <Box sx={{ borderRadius: 20, overflow: "hidden", boxShadow: "0 20px 40px rgba(0,0,0,0.25)" }}>
-              <img src={pt141Image} alt="PT-141 50mg" style={{ width: "100%", height: "auto", display: "block" }} />
+              <img src={pt141Image} alt="PT-141" style={{ width: "100%", height: "auto", display: "block" }} />
             </Box>
 
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
@@ -624,7 +624,7 @@ const PT141Page = () => {
                     <Box
                       component="img"
                       src={pt141ProductImage}
-                      alt="PT-141 50mg Injection Kit"
+                      alt="PT-141 Vial"
                       sx={{
                         width: "100%",
                         height: "auto",
@@ -708,7 +708,7 @@ const PT141Page = () => {
                         lineHeight: 1.2,
                       }}
                     >
-                      PT-141 50mg
+                      PT-141
                     </Typography>
 
                     <Typography
@@ -724,7 +724,7 @@ const PT141Page = () => {
 
                     <Box sx={{ mb: 4 }}>
                       {[
-                        "50mg PT-141 (Bremelanotide) compounded peptide formulation",
+                        " PT-141 (Bremelanotide) compounded peptide formulation",
                         "Bacteriostatic water for injection (sterile diluent)",
                         "Clinical-grade insulin syringes with ultra-fine needles",
                         "Comprehensive clinical administration guide",
@@ -1245,7 +1245,7 @@ const PT141Page = () => {
                   mx: "auto",
                 }}
               >
-                Start with our PT-141 50mg clinical kit at $229. Includes medical evaluation, 
+                Start with our PT-141 clinical kit at $229. Includes medical evaluation, 
                 clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
@@ -1319,7 +1319,7 @@ const PT141Page = () => {
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
                   { text: "Required Medical Evaluation" },
-                  { text: "50mg Compounded Formulation" },
+                  { text: "Compounded Formulation" },
                   { text: "Clinical Support Team Access" },
                   { text: "Medical Oversight Program" },
                 ].map((feature, index) => (

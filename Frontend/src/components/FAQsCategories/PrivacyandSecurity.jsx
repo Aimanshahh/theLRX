@@ -12,6 +12,9 @@ import { keyframes } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+// Import your logo
+import logo from "../../assets/LRXLOGOS/LOGO-2.png";
+
 // Smooth fade-in animation
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }
@@ -173,14 +176,45 @@ const PrivacyandSecurity = () => {
         width: "100%",
         maxWidth: "1200px",
         mx: "auto",
-        mt: { xs: 8, sm: 10, md: 12 },
+        mt: { xs: 4, sm: 6, md: 8 }, // Reduced top margin for logo
         mb: { xs: 8, sm: 10, md: 12 },
         px: { xs: 2, sm: 3, md: 4 },
         fontFamily: "Roboto, sans-serif",
+        position: "relative", // Added for absolute positioning of logo
       }}
     >
+      {/* Logo at Top Left */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: -12, sm: -16, md: -20 }, // Positioned above content
+          left: { xs: 0, sm: 0, md: 0 },
+          zIndex: 10,
+        }}
+      >
+        <Box
+          component="img"
+          src={logo}
+          alt="LiquidRX Logo"
+          sx={{
+            height: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+            width: "auto",
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+          onClick={() => window.location.href = "/"} // Navigate to home page on click
+        />
+      </Box>
+
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as TheBasics */}
-      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
+      <Box sx={{ 
+        width: "fit-content", 
+        mb: { xs: 6, sm: 7, md: 8 },
+        pt: { xs: 4, sm: 5, md: 6 } // Added padding to accommodate logo
+      }}>
         <Typography
           component="h1"
           variant="h1"

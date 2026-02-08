@@ -469,7 +469,7 @@ const DrivePlus12Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    Treatment in 3 Steps
+                    Treatment in 2 Steps
                   </Typography>
                   <Typography
                     sx={{
@@ -496,14 +496,7 @@ const DrivePlus12Page = () => {
                       trend: "5-10 minutes"
                     },
                     { 
-                      label: "Step 2: Telehealth Visit", 
-                      value: "Virtual", 
-                      color: "#003B9D",
-                      description: "Consult with a licensed provider",
-                      trend: "15-20 minutes"
-                    },
-                    { 
-                      label: "Step 3: Receive Medicine", 
+                      label: "Step 2: Receive Medicine", 
                       value: "Delivered", 
                       color: "#00359E",
                       description: "Discreet shipping to your door",
@@ -515,13 +508,6 @@ const DrivePlus12Page = () => {
                       color: "#003B9D",
                       description: "Treatment tailored to your needs",
                       trend: "Ongoing support"
-                    },
-                    { 
-                      label: "Total Monthly Cost", 
-                      value: "$297", 
-                      color: "#00359E",
-                      description: "Full program access",
-                      trend: "First month $179"
                     },
                     { 
                       label: "Patient Satisfaction", 

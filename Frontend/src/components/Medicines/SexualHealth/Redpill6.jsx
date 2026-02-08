@@ -113,7 +113,7 @@ const Redpill6Page = () => {
                 >
                   Redpill pairs refined vascular support with antioxidant-driven circulation enhancement to promote smoother performance, heightened responsiveness, and a naturally confident intimate experience.
                   <Box component="span" sx={{ display: 'block', mt: 2, fontWeight: 600, color: "#00359E" }}>
-                    (Tadalafil 20mg / Pycnogenol 25mg)
+                    (Tadalafil / Pycnogenol)
                   </Box>
                 </Typography>
 
@@ -284,7 +284,7 @@ const Redpill6Page = () => {
               textAlign: "center"
             }}
           >
-            ED Treatment in 3 Easy Steps
+            ED Treatment in 2 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -329,7 +329,6 @@ const Redpill6Page = () => {
                       }}>
                         {[
                           "Fill out the medical form online",
-                          "Attend your telehealth consultation",
                           "Start your ED treatment with personalized plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
@@ -421,7 +420,7 @@ const Redpill6Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      Redpill contains Tadalafil 20mg / Pycnogenol 25mg. Compounded medications are prescribed by licensed healthcare providers based on individual patient needs after a telehealth consultation.
+                      Redpill contains Tadalafil / Pycnogenol. Compounded medications are prescribed by licensed healthcare providers based on individual patient needs after a telehealth consultation.
                     </Typography>
                   </Box>
                 </Box>
@@ -479,18 +478,12 @@ const Redpill6Page = () => {
                     },
                     { 
                       step: "2", 
-                      title: "Telehealth Visit", 
-                      description: "Consult with licensed provider",
-                      icon: "👨‍⚕️"
-                    },
-                    { 
-                      step: "3", 
                       title: "Receive Medicine", 
                       description: "Discreet delivery to your door",
                       icon: "📦"
                     },
                     { 
-                      step: "4", 
+                      step: "3", 
                       title: "Ongoing Care", 
                       description: "Continuous provider support",
                       icon: "🔄"

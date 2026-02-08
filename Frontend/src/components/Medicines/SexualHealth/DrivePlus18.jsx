@@ -139,8 +139,8 @@ const DrivePlus18Page = () => {
                   {[
                     "Enhanced blood-flow and nitric-oxide support",
                     "Increased responsiveness and intimate vitality",
-                    "Powerful antioxidant synergy (Pycnogenol 50mg)",
-                    "Compounded for personalized efficacy (Sildenafil 80mg)",
+                    "Powerful antioxidant synergy (Pycnogenol)",
+                    "Compounded for personalized efficacy (Sildenafil)",
                     "Stacks with other treatments for amplified results"
                   ].map((item, i) => (
                     <Box
@@ -438,7 +438,7 @@ const DrivePlus18Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
+                      Sildenafil / Bremelanotide / Pycnogenol • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
                     </Typography>
                   </Box>
                 </Box>
@@ -829,7 +829,7 @@ const DrivePlus18Page = () => {
                     {
                       icon: <Sparkles size={24} color="#003B9D" />,
                       title: "Antioxidant Synergy",
-                      description: "Pycnogenol 50mg",
+                      description: "Pycnogenol",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -896,9 +896,9 @@ const DrivePlus18Page = () => {
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Sildenafil 80mg for enhanced blood-flow support",
-                      "Bremelanotide 10mg for elevated desire pathways",
-                      "Pycnogenol 50mg for potent antioxidant synergy",
+                      "Sildenafil for enhanced blood-flow support",
+                      "Bremelanotide for elevated desire pathways",
+                      "Pycnogenol for potent antioxidant synergy",
                       "Creates a more responsive, energized intimate experience",
                       "Stacks with NAD+ and peptides for optimized performance"
                     ].map((benefit, index) => (
@@ -976,7 +976,7 @@ const DrivePlus18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  3 Easy Steps
+                  2 Easy Steps
                 </Box>
               </Typography>
               <Typography
@@ -1006,20 +1006,13 @@ const DrivePlus18Page = () => {
               },
               {
                 step: "02",
-                title: "Telehealth Visit",
-                description: "Speak to your clinician virtually",
-                icon: "👨‍⚕️",
-                color: "#003B9D"
-              },
-              {
-                step: "03",
                 title: "Receive Medicine",
                 description: "Discreet delivery to your door",
                 icon: "📦",
                 color: "#00359E"
               },
               {
-                step: "04",
+                step: "03",
                 title: "Ongoing Care",
                 description: "Continued support and adjustments",
                 icon: "💪",
@@ -1152,7 +1145,7 @@ const DrivePlus18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $239 for your first month.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works.
               </Typography>
               
               {/* Pricing Display */}
@@ -1269,7 +1262,7 @@ const DrivePlus18Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                Drive Plus 18 Tablets • Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded formula • Telehealth consultation included • Ships to all 50 states
+                Drive Plus 18 Tablets • Sildenafil / Bremelanotide / Pycnogenol • Compounded formula • Telehealth consultation included • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

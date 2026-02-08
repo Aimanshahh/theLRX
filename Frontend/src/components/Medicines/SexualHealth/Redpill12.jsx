@@ -105,7 +105,7 @@ const Redpill12Page = () => {
                 >
                   Redpill pairs refined vascular support with antioxidant-driven circulation enhancement to promote smoother performance, heightened responsiveness, and a naturally confident intimate experience.
                   <Box component="span" sx={{ display: 'block', mt: 1, fontWeight: 600, color: "#00359E" }}>
-                    (Tadalafil 20mg / Pycnogenol 25mg)
+                    (Tadalafil / Pycnogenol )
                   </Box>
                 </Typography>
 
@@ -302,7 +302,7 @@ const Redpill12Page = () => {
               textAlign: "center"
             }}
           >
-            ED Treatment in 3 Easy Steps
+            ED Treatment in 2 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -345,7 +345,6 @@ const Redpill12Page = () => {
                       }}>
                         {[
                           "Fill out the medical form online",
-                          "Attend your telehealth consultation with a licensed provider",
                           "Start your personalized ED treatment plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
@@ -1228,7 +1227,7 @@ const Redpill12Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                12-tablet pack • Compounded medication (Tadalafil 20mg/Pycnogenol 25mg) • Telehealth consultation required • first month treatment program • Ships to all 50 states • 24/7/365 ordering
+                12-tablet pack • Compounded medication (Tadalafil /Pycnogenol) • Telehealth consultation required • first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

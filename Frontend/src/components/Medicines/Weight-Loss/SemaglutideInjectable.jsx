@@ -94,8 +94,8 @@ const PRICE = {
   amount: 189.00,
   currency: 'USD',
   display: '$189.00',
-  period: 'per treatment',
-  treatmentType: 'Weekly Injection'
+  period: 'per Vial',
+  treatmentType: 'Injectable'
 };
 
 // Benefits for the "How It Works" section - Updated for Semaglutide Injectable
@@ -135,7 +135,7 @@ const SemaglutideInjectablePage = () => {
   };
 
   return (
-    <>
+    <Box sx={{ mt: 8 }}>
       {/* Hero Section with Video */}
       <Box
         sx={{
@@ -1341,7 +1341,7 @@ const SemaglutideInjectablePage = () => {
           </motion.div>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 };
 

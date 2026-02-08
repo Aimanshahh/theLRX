@@ -12,14 +12,14 @@ import Tackleanxiety from "../../assets/Herocards/MEDICINE1.png";
 import Intimicy from "../../assets/Herocards/HeroCards.png";
 import hair2 from "../../assets/Herocards/HEROCARD.png";
 import skin2 from "../../assets/Herocards/herocard4.png";
-import testosterene from "../../assets/Herocards/Herocard1.png";
+import testosterene from "../../assets/Herocards/img1.png";
 
 /* ================= SIDEBAR MENU ================= */
 const menuData = {
   "Weight Loss": [
     { title: "Oral Semaglutide RDT", route: "/weight-loss/oral-semaglutide-rdt" },
     { title: "Oral Tirzepatide RDT", route: "/weight-loss/oral-tirzepatide-rdt" },
-    { title: "Retatrutide Vial", route: "/weight-loss/retatrutide-vial" },
+    { title: "Retatrutide Injectable", route: "/weight-loss/retatrutide-vial" },
     { title: "Semaglutide Injectable", route: "/weight-loss/semaglutide-injectable" },
     { title: "Tirzepatide Injectable", route: "/weight-loss/tirzepatide-injectable" },
   ],
@@ -29,9 +29,9 @@ const menuData = {
     { title: "CJC-1295 Ipamorelin", route: "/peptides/cjc-1295-ipamorelin" },
     { title: "GHK-CU", route: "/peptides/ghk-cu" },
     { title: "NAD+", route: "/peptides/nad" },
-    { title: "NAD+ Injectable", route: "/peptides/nad-injectable" },
+    { title: "NAD+ Injectable", route: "/peptides/NADinjectable" },
     { title: "PT-141", route: "/peptides/pt-141" },
-    { title: "Sermorelin 20mg", route: "/peptides/sermorelin-20mg" },
+    { title: "Sermorelin", route: "/peptides/sermorelin" },
     { title: "Vitamin B12", route: "/peptides/vitamin-b12" },
   ],
 

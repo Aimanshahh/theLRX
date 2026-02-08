@@ -125,21 +125,6 @@ export default function Register() {
     return Object.keys(newErrors).length === 0;
   };
 
-  // const registerUser = async (userData) => {
-  //   try {
-  //     console.log("Sending registration data:", userData);
-  //     const response = await axios.post('http://localhost:5000/api/auth/register', userData, {
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       }
-  //     });
-  //     return response.data;
-  //   } catch (error) {
-  //     console.error("Registration API error:", error);
-  //     throw new Error(error.response?.data?.message || 'Registration failed. Please try again.');
-  //   }
-  // };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     
@@ -636,110 +621,120 @@ export default function Register() {
                 </Box>
 
                 {/* Security Section */}
-                <Typography variant="h6" sx={{ mb: 2, color: "#00359E", fontWeight: 600, mt: 4 }}>
-                  Security
-                </Typography>
+              {/* Security Section */}
+<Typography variant="h6" sx={{ mb: 2, color: "#00359E", fontWeight: 600, mt: 4 }}>
+  Security
+</Typography>
 
-                <Box sx={{ position: "relative", mb: 3 }}>
-                  <Lock 
-                    size={20} 
-                    color="#8B8D8E" 
-                    style={{
-                      position: "absolute",
-                      left: 16,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      zIndex: 1
-                    }} 
-                  />
-                  <TextField
-                    fullWidth
-                    placeholder="Create password"
-                    name="password"
-                    type={showPassword ? "text" : "password"}
-                    value={formData.password}
-                    onChange={handleChange}
-                    error={!!errors.password}
-                    helperText={errors.password || "Minimum 8 characters with uppercase, lowercase, and numbers"}
-                    variant="outlined"
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        paddingLeft: "52px",
-                        paddingRight: "52px",
-                        borderRadius: "12px",
-                        backgroundColor: "rgba(244, 245, 246, 0.5)",
-                      },
-                    }}
-                  />
-                  <Box
-                    onClick={() => setShowPassword(!showPassword)}
-                    sx={{
-                      position: "absolute",
-                      right: 16,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                      color: "#8B8D8E",
-                      transition: "color 0.3s ease",
-                      "&:hover": {
-                        color: "#00359E",
-                      }
-                    }}
-                  >
-                    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                  </Box>
-                </Box>
+{/* Create Password Field - EXACT SAME as Confirm Password */}
+<Box sx={{ position: "relative", mb: 3 }}>
+  <Box
+    sx={{
+      position: "absolute",
+      left: 16,
+      top: "16px", // Exact same as confirm password
+      zIndex: 1,
+      color: "#8B8D8E",
+    }}
+  >
+    <Lock size={20} />
+  </Box>
+  <TextField
+    fullWidth
+    placeholder="Create password"
+    name="password"
+    type={showPassword ? "text" : "password"}
+    value={formData.password}
+    onChange={handleChange}
+    error={!!errors.password}
+    helperText={errors.password || "Minimum 8 characters with uppercase, lowercase, and numbers"}
+    variant="outlined"
+    sx={{
+      "& .MuiOutlinedInput-root": {
+        paddingLeft: "52px",
+        paddingRight: "52px",
+        borderRadius: "12px",
+        backgroundColor: "rgba(244, 245, 246, 0.5)",
+      },
+      "& .MuiOutlinedInput-input": {
+        paddingTop: "14px",
+        paddingBottom: "14px",
+      }
+    }}
+  />
+  <Box
+    onClick={() => setShowPassword(!showPassword)}
+    sx={{
+      position: "absolute",
+      right: 16,
+      top: "16px", // Exact same as confirm password
+      cursor: "pointer",
+      color: "#8B8D8E",
+      transition: "color 0.3s ease",
+      zIndex: 1,
+      "&:hover": {
+        color: "#00359E",
+      }
+    }}
+  >
+    {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+  </Box>
+</Box>
 
-                <Box sx={{ position: "relative", mb: 3 }}>
-                  <Lock 
-                    size={20} 
-                    color="#8B8D8E" 
-                    style={{
-                      position: "absolute",
-                      left: 16,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      zIndex: 1
-                    }} 
-                  />
-                  <TextField
-                    fullWidth
-                    placeholder="Confirm password"
-                    name="confirmPassword"
-                    type={showConfirmPassword ? "text" : "password"}
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    error={!!errors.confirmPassword}
-                    helperText={errors.confirmPassword}
-                    variant="outlined"
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        paddingLeft: "52px",
-                        paddingRight: "52px",
-                        borderRadius: "12px",
-                        backgroundColor: "rgba(244, 245, 246, 0.5)",
-                      },
-                    }}
-                  />
-                  <Box
-                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                    sx={{
-                      position: "absolute",
-                      right: 16,
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                      color: "#8B8D8E",
-                      transition: "color 0.3s ease",
-                      "&:hover": {
-                        color: "#00359E",
-                      }
-                    }}
-                  >
-                    {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
-                  </Box>
-                </Box>
-
+{/* Confirm Password Field */}
+<Box sx={{ position: "relative", mb: 3 }}>
+  <Box
+    sx={{
+      position: "absolute",
+      left: 16,
+      top: "16px", // Same position as create password
+      zIndex: 1,
+      color: "#8B8D8E",
+    }}
+  >
+    <Lock size={20} />
+  </Box>
+  <TextField
+    fullWidth
+    placeholder="Confirm password"
+    name="confirmPassword"
+    type={showConfirmPassword ? "text" : "password"}
+    value={formData.confirmPassword}
+    onChange={handleChange}
+    error={!!errors.confirmPassword}
+    helperText={errors.confirmPassword}
+    variant="outlined"
+    sx={{
+      "& .MuiOutlinedInput-root": {
+        paddingLeft: "52px",
+        paddingRight: "52px",
+        borderRadius: "12px",
+        backgroundColor: "rgba(244, 245, 246, 0.5)",
+      },
+      "& .MuiOutlinedInput-input": {
+        paddingTop: "14px",
+        paddingBottom: "14px",
+      }
+    }}
+  />
+  <Box
+    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+    sx={{
+      position: "absolute",
+      right: 16,
+      top: "16px", // Same position as create password
+      cursor: "pointer",
+      color: "#8B8D8E",
+      transition: "color 0.3s ease",
+      zIndex: 1,
+      "&:hover": {
+        color: "#00359E",
+      }
+    }}
+  >
+    {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+  </Box>
+</Box>
                 {/* Terms and Conditions */}
                 <Box sx={{ mb: 3 }}>
                   <FormControlLabel
@@ -759,11 +754,11 @@ export default function Register() {
                     label={
                       <Typography variant="body2">
                         I agree to the{" "}
-                        <Link href="#" sx={{ color: "#00359E", fontWeight: 600 }}>
+                        <Link href="/terms-and-conditions" sx={{ color: "#00359E", fontWeight: 600 }}>
                           Terms of Service
                         </Link>{" "}
                         and{" "}
-                        <Link href="#" sx={{ color: "#00359E", fontWeight: 600 }}>
+                        <Link href="/privacy-policy" sx={{ color: "#00359E", fontWeight: 600 }}>
                           Privacy Policy
                         </Link>
                       </Typography>

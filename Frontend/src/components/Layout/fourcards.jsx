@@ -27,7 +27,7 @@ import ScienceIcon from "@mui/icons-material/Science";
 import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import ShieldIcon from "@mui/icons-material/Shield";
 
-import image1 from "../../assets/images/card12-removebg-preview.png";
+import image1 from "../../assets/images/card12.png";
 import image2 from "../../assets/images/4cardimg.png";
 import image3 from "../../assets/images/4cardimg4.png";
 import image4 from "../../assets/images/4cardimg3.png";
@@ -52,7 +52,7 @@ const MedicineSidebar = ({ open, onClose }) => {
     },
    
     {
-      name: "Precision BioActives",
+      name: "peptides",
       icon: <BiotechIcon />,
       color: "#00359E",
       bgColor: alpha("#00359E", 0.08),
@@ -94,13 +94,13 @@ const MedicineSidebar = ({ open, onClose }) => {
     },
    
     {
-      name: "Labs",
+      name: "labs",
       icon: <ScienceIcon />,
       color: "#00359E",
       bgColor: alpha("#00359E", 0.08),
       treatments: [
-        { name: "Lab1" },
-        { name: "Lab2" },
+        { name: "Functional Blood Test" },
+
       ],
     },
   ];
@@ -144,9 +144,9 @@ const MedicineSidebar = ({ open, onClose }) => {
         "Semaglutide Injectable": "/weight-loss/semaglutide-injectable",
         "Tirzepatide Injectable": "/weight-loss/tirzepatide-injectable"
       },
-      "Labs": {
-        "Lab1": "/labs/lab1",
-        "Lab2": "/labs/lab2"
+      "Functional Labs": {
+        "Functional Blood Test": "/labs/functional-blood-test"
+
       }
     };
 

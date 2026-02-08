@@ -30,7 +30,7 @@ const faqData = [
     id: 3,
     question: "Are services covered by insurance?",
     answer:
-      "Our platform operates primarily on a direct-pay model with transparent, subscription-based pricing, making high-quality healthcare accessible without insurance barriers. Some lab testing services may be eligible for insurance reimbursement, and our team can provide documentation to support potential claims.",
+      "Our platform operates primarily on a direct-pay model with transparent, subscription-based pricing, making high-quality healthcare accessible without insurance barriers.",
   },
   {
     id: 4,

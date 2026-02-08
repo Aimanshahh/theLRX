@@ -93,7 +93,7 @@ const PRICE = {
   amount: 249.00,
   currency: 'USD',
   display: '$249.00',
-  period: 'per treatment',
+  period: 'per Vial',
   treatmentType: 'Oral RDT'
 };
 
@@ -129,7 +129,7 @@ const OralSemaglutidePage = () => {
   };
 
   return (
-    <>
+    <Box sx={{ mt: 8 }}> {/* ADDED: Margin-top to push content below navbar */}
       {/* Hero Section with Video */}
       <Box
         sx={{
@@ -252,7 +252,7 @@ const OralSemaglutidePage = () => {
     mt: -1
   }}
                     >
-                      RAPID TABLET
+                      RAPID DISSOLVE TABLET
                     </Box>
                   </Typography>
                 </motion.div>
@@ -1348,7 +1348,7 @@ const OralSemaglutidePage = () => {
           </motion.div>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 };
 

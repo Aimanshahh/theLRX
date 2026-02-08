@@ -10,15 +10,8 @@ import {
   Star,
   CheckCircle,
   Activity,
-  TrendingUp,
-  Flame,
-  Heart,
-  Zap,
-  Sparkles,
-  Moon,
   Shield,
   Target,
-  Thermometer,
   CheckCircle as CheckCircleIcon,
 } from "lucide-react";
 
@@ -27,7 +20,7 @@ import ghkCuImage from "../../../assets/medicines/GHK-CU.png";
 import ghkCuScienceVideo from "../../../assets/Videos/peptide.mp4";
 import ghkCuProductImage from "../../../assets/medicines/GHK-CU.png";
 
-// Define your theme color palette (same as PT-141)
+// Define your theme color palette
 const palette = {
   darkGrey: "#747578",
   lightGrey: "#8B8D8E",
@@ -39,83 +32,82 @@ const palette = {
 };
 
 const GHKCuPage = () => {
- 
-      const rimioUrl = "https://try.thelrx.com/intake/gh-0ce9zd";
+  const rimioUrl = "https://try.thelrx.com/intake/gh-0ce9zd";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
   };
 
-  // Extracted and structured product data from the URL
+  // Updated product data - Direct and accurate
   const productInfo = {
-    name: "GHK-Cu 50mg",
+    name: "GHK-Cu Injection",
     price: "$179.00",
-    description: "GHK-Cu is a tripeptide-copper complex being studied for its potential in skin repair, collagen synthesis, and antioxidant properties. It's naturally found in human plasma and research explores its role in tissue regeneration and skin health.",
-    detailedDescription: "GHK-Cu (Glycyl-Histidyl-Lysine-Cu) is a naturally occurring copper-binding tripeptide first isolated from human plasma. Research continues to investigate its potential applications in topical formulations for various skin health applications.",
+    description: "GHK-Cu is a copper-binding tripeptide complex supplied in sterile vials for subcutaneous or intramuscular injection.",
+    detailedDescription: "GHK-Cu (Glycyl-Histidyl-Lysine-Cu) is a pharmaceutical-grade peptide compound formulated for injection. Each vial is manufactured under strict quality standards.",
     rating: "4.8/5.0",
     reviewCount: "2,100+ Reviews",
     features: [
-      "Collagen support being studied",
-      "Skin health research", 
-      "Topical application research"
+      "Injectable Formulation",
+      "Sterile Vial Presentation",
+      "High-Purity Compound"
     ],
     benefits: [
-      "Being studied for collagen and elastin synthesis support",
-      "Research on gene expression modulation continues",
-      "Antioxidant properties under investigation",
-      "Angiogenesis research for topical applications",
-      "Tissue support studies ongoing",
-      "Topical application research continues"
+      "Supplied as sterile injection solution",
+      "Manufactured in cGMP facilities",
+      "Third-party tested for purity and quality",
+      "Each batch includes Certificate of Analysis",
+      "Prepared for professional administration",
+      "Quality-controlled production process"
     ],
     kitIncludes: [
-      "50mg of high-purity GHK-Cu (Copper Tripeptide-1) lyophilized powder",
+      "GHK-Cu (Copper Tripeptide-1) sterile solution",
       "Manufactured in cGMP and ISO 9001-registered U.S. facilities",
-      "Certificate of Analysis (COA) available for every batch",
+      "Certificate of Analysis (COA) for every batch",
       "Third-party tested for purity, sterility, and endotoxin levels",
-      "Intended for topical formulation research",
-      "Can be reconstituted for custom formulations"
+      "Formulated for injection use",
+      "Professional-grade pharmaceutical preparation"
     ],
     specifications: [
       { label: "Active Ingredient", value: "GHK-Cu (Copper Tripeptide-1)" },
-      { label: "Strength", value: "50 mg" },
+      { label: "Form", value: "Sterile Injection Solution" },
       { label: "Purity", value: "99%+" },
-      { label: "Primary Use", value: "Topical Research" }
+      { label: "Administration", value: "Subcutaneous/Intramuscular" }
     ],
-    ctaText: "Order for Research - $179.00",
-    disclaimer: "GHK-Cu is a peptide compound intended for topical use in research formulations. Not for injection. Discontinue use if irritation occurs. Always perform a patch test before application. Consult with a healthcare provider for guidance. Results in research settings continue to be studied."
+    ctaText: "Order GHK-Cu - $179.00",
+    disclaimer: "GHK-Cu is a peptide compound intended for injection under medical supervision. Not for topical use. Prescription required. Administered by healthcare professionals only. Individual results may vary. Consult with a healthcare provider before use."
   };
 
   const compactBenefits = [
     {
-      icon: Sparkles,
-      title: "Skin Research",
-      description: "Skin health studies ongoing",
-      color: palette.darkBlue,
-    },
-    {
-      icon: Heart,
-      title: "Tissue Support",
-      description: "Tissue support being studied",
-      color: palette.lightBlue,
-    },
-    {
       icon: Shield,
-      title: "Antioxidant Research",
-      description: "Antioxidant properties under study",
+      title: "Quality Manufactured",
+      description: "Produced in cGMP facilities",
       color: palette.darkBlue,
     },
     {
       icon: Activity,
-      title: "Collagen Studies",
-      description: "Collagen research continues",
+      title: "Sterile Solution",
+      description: "Prepared for injection use",
+      color: palette.lightBlue,
+    },
+    {
+      icon: Target,
+      title: "Third-Party Tested",
+      description: "Verified purity and quality",
+      color: palette.darkBlue,
+    },
+    {
+      icon: CheckCircle,
+      title: "COA Included",
+      description: "Certificate of Analysis provided",
       color: palette.darkBlue,
     },
   ];
 
   const stats = [
-    { value: "Naturally", label: "Found in Human Plasma" },
-    { value: "Research", label: "Ongoing Studies" },
-    { value: "Topical", label: "Application Method" },
+    { value: "Pharmaceutical", label: "Grade Quality" },
+    { value: "Sterile", label: "Injection Solution" },
+    { value: "Professional", label: "Administration" },
   ];
 
   const finalFeatures = [
@@ -124,7 +116,7 @@ const GHKCuPage = () => {
     { text: "99%+ Purity Standards" },
     { text: "Third-Party Lab Testing" },
   ];
- 
+
   return (
     <>
       {/* ================= HERO SECTION ================= */}
@@ -142,7 +134,7 @@ const GHKCuPage = () => {
           overflow: "hidden",
         }}
       >
-        {/* Background elements remain the same */}
+        {/* Background elements */}
         <Box sx={{ position: "absolute", top: -100, right: -80, width: "60%", height: "50%", background: palette.white, borderBottomLeftRadius: "50% 50%", transform: "rotate(-10deg)", zIndex: 1, opacity: 0.9 }} />
         <Box sx={{ position: "absolute", inset: 0, background: `linear-gradient(135deg, ${palette.darkBlue} 0%, ${palette.lightBlue} 100%)`, zIndex: 0 }} />
 
@@ -164,7 +156,7 @@ const GHKCuPage = () => {
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
-              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade GHK-Cu (Copper Tripeptide-1)</Box> is a peptide compound being studied for its potential to support collagen production and skin health through topical application.
+              Our <Box component="span" sx={{ color: palette.white, fontWeight: 600 }}>pharmaceutical-grade GHK-Cu</Box> is a sterile injection solution formulated for professional administration.
             </Typography>
 
             <Box sx={{ mt: 2.5, mb: 4 }}>
@@ -179,12 +171,12 @@ const GHKCuPage = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button onClick={handleCtaClick} variant="contained" sx={{ px: 4.5, py: 1.6, bgcolor: palette.white, color: palette.darkBlue, borderRadius: "28px", fontSize: "18px", fontWeight: 700 }}>
-                Explore Formulations - $179
+                Order GHK-Cu - $179
               </Button>
             </motion.div>
 
             <Typography sx={{ color: palette.white, mt: 3, fontSize: 14, opacity: 0.9, display: "flex", alignItems: "center", gap: 1 }}>
-              <CheckCircle size={14} color={palette.white} /> High-Purity (99%+) • cGMP Manufactured • Third-Party Tested
+              <CheckCircle size={14} color={palette.white} /> High-Purity (99%+) • cGMP Manufactured • Sterile Solution
             </Typography>
           </motion.div>
 
@@ -193,7 +185,7 @@ const GHKCuPage = () => {
               <img src={ghkCuImage} alt={productInfo.name} style={{ width: "100%", height: "auto", display: "block" }} />
             </Box>
             <Box sx={{ position: "absolute", top: 20, right: 20, px: 2, py: 1, borderRadius: 20, bgcolor: "rgba(255,255,255,0.95)", fontWeight: 700, color: palette.darkBlue }}>
-              Skin Support Research
+              Injectable Solution
             </Box>
           </motion.div>
         </Box>
@@ -206,12 +198,12 @@ const GHKCuPage = () => {
             <Grid item xs={12} md={6} display="flex" flexDirection="column">
               <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} style={{ flex: 1 }}>
                 <Typography sx={{ fontSize: 13, textTransform: "uppercase", letterSpacing: 1.5, color: palette.darkBlue, mb: 2, fontWeight: 700, display: "inline-block", backgroundColor: `${palette.darkBlue}15`, px: 2, py: 0.5, borderRadius: "20px" }}>
-                  How It Works
+                  Product Information
                 </Typography>
 
                 <Typography variant="h2" sx={{ fontSize: { xs: "32px", md: "42px" }, fontWeight: 800, color: palette.black, mb: 3, lineHeight: 1.2 }}>
-                  The Science of{" "}
-                  <Box component="span" sx={{ color: palette.darkBlue }}>{productInfo.name}</Box>
+                  GHK-Cu
+                  <Box component="span" sx={{ color: palette.darkBlue }}> Injection</Box>
                 </Typography>
 
                 <Typography sx={{ fontSize: 16, color: palette.darkGrey, mb: 4, lineHeight: 1.8 }}>
@@ -248,13 +240,14 @@ const GHKCuPage = () => {
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <Box sx={{ textAlign: "center", mb: { xs: 5, md: 7 } }}>
               <Typography sx={{ fontSize: "12px", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", color: palette.darkBlue, mb: 1.5, display: "inline-block" }}>
-                Potential Benefits Being Studied
+                Quality Assurance
               </Typography>
               <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "36px" }, mb: 2, color: palette.black, lineHeight: 1.2 }}>
-                Research on{" "}<Box component="span" sx={{ color: palette.darkBlue }}>GHK-Cu Peptide</Box>
+                Professional-Grade
+                <Box component="span" sx={{ color: palette.darkBlue }}> GHK-Cu</Box>
               </Typography>
               <Typography sx={{ fontSize: "16px", color: palette.darkGrey, lineHeight: 1.6, maxWidth: "600px", mx: "auto" }}>
-                Ongoing research continues to explore potential applications of this peptide compound
+                Manufactured to pharmaceutical standards for injection administration
               </Typography>
             </Box>
           </motion.div>
@@ -288,8 +281,8 @@ const GHKCuPage = () => {
 
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.5 }}>
             <Box sx={{ textAlign: "center", mt: 6 }}>
-              <Typography sx={{ fontSize: "14px", fontWeight: 600, color: palette.darkBlue, mb: 2, textTransform: "uppercase", letterSpacing: "1px" }}>Ready to Learn More?</Typography>
-              <Typography sx={{ fontSize: "15px", color: palette.darkGrey, mb: 4, maxWidth: "400px", mx: "auto" }}>Explore GHK-Cu formulations for skin health research</Typography>
+              <Typography sx={{ fontSize: "14px", fontWeight: 600, color: palette.darkBlue, mb: 2, textTransform: "uppercase", letterSpacing: "1px" }}>Professional Administration</Typography>
+              <Typography sx={{ fontSize: "15px", color: palette.darkGrey, mb: 4, maxWidth: "400px", mx: "auto" }}>Formulated for injection under medical supervision</Typography>
             </Box>
           </motion.div>
         </Container>
@@ -304,9 +297,9 @@ const GHKCuPage = () => {
               <Grid item xs={12} md={6}>
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
                   <Box sx={{ position: "relative", borderRadius: "20px", overflow: "hidden", boxShadow: "0 15px 40px rgba(0, 53, 158, 0.1)", border: `1px solid ${palette.darkBlue}15`, maxWidth: "500px", mx: { xs: "auto", md: "0" }, ml: { md: "auto" }, mr: { md: "0" }, backgroundColor: palette.white, p: 2 }}>
-                    <Box component="img" src={ghkCuProductImage} alt={`${productInfo.name} Powder`} sx={{ width: "100%", height: "auto", borderRadius: "12px", display: "block" }} />
+                    <Box component="img" src={ghkCuProductImage} alt={`${productInfo.name} Vial`} sx={{ width: "100%", height: "auto", borderRadius: "12px", display: "block" }} />
                     <Box sx={{ position: "absolute", top: 16, left: 16, backgroundColor: palette.darkBlue, color: palette.white, px: 2, py: 0.5, borderRadius: "6px", fontSize: "12px", fontWeight: 700, letterSpacing: "0.5px" }}>
-                      99%+ Purity
+                      Sterile Solution
                     </Box>
                     <Box sx={{ position: "absolute", bottom: 0, left: 0, width: "100%", backgroundColor: palette.white, borderTop: `1px solid ${palette.darkBlue}15`, py: 3, display: "flex", justifyContent: "center", alignItems: "center", fontWeight: 800, fontSize: { xs: "18px", md: "22px" }, color: palette.darkBlue }}>
                       {productInfo.price}
@@ -318,9 +311,10 @@ const GHKCuPage = () => {
               <Grid item xs={12} md={6}>
                 <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }}>
                   <Box>
-                    <Typography sx={{ fontSize: "12px", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", color: palette.darkBlue, mb: 2, display: "inline-block" }}>Premium Peptide Powder</Typography>
+                    <Typography sx={{ fontSize: "12px", fontWeight: 600, letterSpacing: "2px", textTransform: "uppercase", color: palette.darkBlue, mb: 2, display: "inline-block" }}>Injection Solution</Typography>
                     <Typography variant="h3" sx={{ fontWeight: 800, fontSize: { xs: "28px", md: "34px" }, mb: 3, color: palette.black, lineHeight: 1.2 }}>
-                      The{" "}<Box component="span" sx={{ color: palette.darkBlue }}>{productInfo.name}</Box> Vial
+                      GHK-Cu
+                      <Box component="span" sx={{ color: palette.darkBlue }}> Sterile Vial</Box>
                     </Typography>
                     <Box sx={{ mb: 4 }}>
                       {productInfo.kitIncludes.map((feature, index) => (
@@ -339,10 +333,7 @@ const GHKCuPage = () => {
 
             <Box sx={{ mt: { xs: 6, md: 8 } }}>
               <Typography sx={{ fontSize: "15px", color: palette.darkGrey, lineHeight: 1.7, mb: 3, maxWidth: "800px", mx: "auto", textAlign: "center" }}>
-                Our GHK-Cu peptide is manufactured following strict quality standards. Each vial is designed for research purposes in topical formulation development.
-              </Typography>
-              <Typography sx={{ fontSize: "15px", color: palette.darkGrey, lineHeight: 1.7, mb: 5, maxWidth: "800px", mx: "auto", textAlign: "center" }}>
-                Prepared in licensed facilities following established quality standards.
+                Our GHK-Cu is supplied as a sterile injection solution manufactured under strict pharmaceutical standards.
               </Typography>
               <Box sx={{ backgroundColor: `${palette.darkBlue}05`, borderRadius: "12px", p: 3, border: `1px solid ${palette.darkBlue}10`, width: "100%", mt: 4 }}>
                 <Grid container spacing={2}>
@@ -370,16 +361,17 @@ const GHKCuPage = () => {
             <Box sx={{ textAlign: "center", maxWidth: "800px", mx: "auto" }}>
               <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                 <Typography sx={{ fontSize: "13px", fontWeight: 700, letterSpacing: "2px", textTransform: "uppercase", color: palette.white, mb: 3, display: "inline-block", backgroundColor: "rgba(255, 255, 255, 0.15)", backdropFilter: "blur(10px)", px: 3, py: 1, borderRadius: "20px", border: "1px solid rgba(255, 255, 255, 0.2)" }}>
-                  Begin Your Research
+                  Professional Use
                 </Typography>
               </motion.div>
 
               <Typography variant="h2" sx={{ fontWeight: 800, fontSize: { xs: "32px", md: "44px" }, mb: 3, color: palette.white, lineHeight: 1.2 }}>
-                Ready to Explore<Box component="span" sx={{ color: palette.white, ml: 2, opacity: 0.9 }}>Skin Support?</Box>
+                GHK-Cu
+                <Box component="span" sx={{ color: palette.white, ml: 2, opacity: 0.9 }}>Injection Solution</Box>
               </Typography>
 
               <Typography sx={{ fontSize: "18px", color: "rgba(255, 255, 255, 0.85)", lineHeight: 1.6, mb: 5, maxWidth: "600px", mx: "auto" }}>
-                Access {productInfo.name} peptide for {productInfo.price}. Includes Certificate of Analysis, manufactured in cGMP facilities, and designed for topical formulation research.
+                Access {productInfo.name} for {productInfo.price}. Includes Certificate of Analysis, manufactured in cGMP facilities, and formulated for injection administration.
               </Typography>
 
               <Box sx={{ display: "flex", flexDirection: "column", gap: 3, justifyContent: "center", alignItems: "center", mb: 5 }}>
@@ -390,7 +382,7 @@ const GHKCuPage = () => {
                 </motion.div>
                 <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }}>
                   <Typography sx={{ fontSize: "14px", fontWeight: 500, color: "rgba(255, 255, 255, 0.85)", px: 4, py: 1.2, borderRadius: "50px", display: "inline-block", cursor: "pointer", transition: "all 0.2s ease", "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.1)", color: palette.white } }}>
-                    Download formulation guide for research purposes
+                    Medical professional documentation available
                   </Typography>
                 </motion.div>
               </Box>
@@ -415,13 +407,13 @@ const GHKCuPage = () => {
                   <Typography sx={{ fontSize: "13px", fontWeight: 500, color: "rgba(255, 255, 255, 0.7)", mb: 2, textTransform: "uppercase", letterSpacing: "1px" }}>Important Information</Typography>
                   <Box sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" }, gap: 4, justifyContent: "center", alignItems: "center" }}>
                     <Typography sx={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.7)", display: "flex", alignItems: "center", gap: 1 }}>
-                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>For Topical Use Only
+                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>For Injection Only
                     </Typography>
                     <Typography sx={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.7)", display: "flex", alignItems: "center", gap: 1 }}>
-                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>Research Purposes
+                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>Medical Supervision Required
                     </Typography>
                     <Typography sx={{ fontSize: "14px", color: "rgba(255, 255, 255, 0.7)", display: "flex", alignItems: "center", gap: 1 }}>
-                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>Patch Test Recommended
+                      <Box component="span" sx={{ fontSize: "18px", fontWeight: 700 }}>⚠</Box>Prescription Required
                     </Typography>
                   </Box>
                   <Typography sx={{ fontSize: "12px", color: "rgba(255, 255, 255, 0.6)", mt: 2, fontStyle: "italic", maxWidth: "600px", mx: "auto" }}>

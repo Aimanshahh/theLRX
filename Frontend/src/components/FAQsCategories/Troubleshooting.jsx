@@ -12,6 +12,9 @@ import { keyframes } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+// Import your logo
+import logo from "../../assets/LRXLOGOS/LOGO-2.png";
+
 // Smooth fade-in animation
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }
@@ -22,7 +25,7 @@ const questions = [
   { 
     id: 1, 
     question: "What payment methods are accepted for telemedicine services?",
-    answer: "We accept all major credit/debit cards, HSA/FSA cards for eligible FDA-approved treatments, and digital payment methods. All transactions are processed through HIPAA-compliant, PCI DSS certified payment systems to ensure security and regulatory compliance." 
+    answer: "We accept all major credit/debit cards for eligible FDA-approved treatments, and digital payment methods. All transactions are processed through HIPAA-compliant, PCI DSS certified payment systems to ensure security and regulatory compliance." 
   },
   { 
     id: 2, 
@@ -38,11 +41,6 @@ const questions = [
     id: 4, 
     question: "How do refunds work for telemedicine services and medications?",
     answer: "Refund policies vary by service type. Digital medical consultations are non-refundable once provider review begins. Unopened medications may be eligible for return per pharmacy policies and state regulations. We comply with healthcare-specific refund guidelines and pharmacy board requirements." 
-  },
-  { 
-    id: 5, 
-    question: "Can I access detailed invoices for insurance reimbursement?",
-    answer: "Yes, comprehensive invoices are available in your account billing history with necessary details for insurance reimbursement or tax documentation. Invoices include provider information, service codes, and medication details as required by healthcare billing standards." 
   },
   { 
     id: 6, 
@@ -173,14 +171,45 @@ const Troubleshooting = () => {
         width: "100%",
         maxWidth: "1200px",
         mx: "auto",
-        mt: { xs: 8, sm: 10, md: 12 },
+        mt: { xs: 4, sm: 6, md: 8 }, // Reduced top margin for logo
         mb: { xs: 8, sm: 10, md: 12 },
         px: { xs: 2, sm: 3, md: 4 },
         fontFamily: "Roboto, sans-serif",
+        position: "relative", // Added for absolute positioning of logo
       }}
     >
+      {/* Logo at Top Left */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: -12, sm: -16, md: -20 }, // Positioned above content
+          left: { xs: 0, sm: 0, md: 0 },
+          zIndex: 10,
+        }}
+      >
+        <Box
+          component="img"
+          src={logo}
+          alt="LiquidRX Logo"
+          sx={{
+            height: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+            width: "auto",
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+          onClick={() => window.location.href = "/"} // Navigate to home page on click
+        />
+      </Box>
+
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as MedicalCare */}
-      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
+      <Box sx={{ 
+        width: "fit-content", 
+        mb: { xs: 6, sm: 7, md: 8 },
+        pt: { xs: 4, sm: 5, md: 6 } // Added padding to accommodate logo
+      }}>
         <Typography
           component="h1"
           variant="h1"

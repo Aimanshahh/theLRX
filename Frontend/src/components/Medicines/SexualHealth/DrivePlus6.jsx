@@ -139,8 +139,8 @@ const DrivePlus6Page = () => {
                   {[
                     "Enhanced blood-flow and nitric-oxide support",
                     "Increased responsiveness and intimate vitality",
-                    "Powerful antioxidant synergy (Pycnogenol 50mg)",
-                    "Compounded for personalized efficacy (Sildenafil 80mg)",
+                    "Powerful antioxidant synergy (Pycnogenol)",
+                    "Compounded for personalized efficacy (Sildenafil)",
                     "Stacks with other treatments for amplified results"
                   ].map((item, i) => (
                     <Box
@@ -438,7 +438,7 @@ const DrivePlus6Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
+                      Sildenafil / Bremelanotide / Pycnogenol • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
                     </Typography>
                   </Box>
                 </Box>
@@ -469,7 +469,7 @@ const DrivePlus6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    Treatment in 3 Steps
+                    Treatment in Simple Steps
                   </Typography>
                   <Typography
                     sx={{
@@ -496,14 +496,7 @@ const DrivePlus6Page = () => {
                       trend: "5-10 minutes"
                     },
                     { 
-                      label: "Step 2: Telehealth Visit", 
-                      value: "Virtual", 
-                      color: "#003B9D",
-                      description: "Consult with a licensed provider",
-                      trend: "15-20 minutes"
-                    },
-                    { 
-                      label: "Step 3: Receive Medicine", 
+                      label: "Step 2: Receive Medicine", 
                       value: "Delivered", 
                       color: "#00359E",
                       description: "Discreet shipping to your door",
@@ -515,13 +508,6 @@ const DrivePlus6Page = () => {
                       color: "#003B9D",
                       description: "Treatment tailored to your needs",
                       trend: "Ongoing support"
-                    },
-                    { 
-                      label: "Total Monthly Cost", 
-                      value: "$297", 
-                      color: "#00359E",
-                      description: "Full program access",
-                      trend: "First month $109"
                     },
                     { 
                       label: "Patient Satisfaction", 
@@ -829,7 +815,7 @@ const DrivePlus6Page = () => {
                     {
                       icon: <Sparkles size={24} color="#003B9D" />,
                       title: "Antioxidant Synergy",
-                      description: "Pycnogenol 50mg",
+                      description: "Pycnogenol",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -896,9 +882,9 @@ const DrivePlus6Page = () => {
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Sildenafil 80mg for enhanced blood-flow support",
-                      "Bremelanotide 10mg for elevated desire pathways",
-                      "Pycnogenol 50mg for potent antioxidant synergy",
+                      "Sildenafil for enhanced blood-flow support",
+                      "Bremelanotide for elevated desire pathways",
+                      "Pycnogenol for potent antioxidant synergy",
                       "Creates a more responsive, energized intimate experience",
                       "Stacks with NAD+ and peptides for optimized performance"
                     ].map((benefit, index) => (
@@ -1006,20 +992,13 @@ const DrivePlus6Page = () => {
               },
               {
                 step: "02",
-                title: "Telehealth Visit",
-                description: "Speak to your clinician virtually",
-                icon: "👨‍⚕️",
-                color: "#003B9D"
-              },
-              {
-                step: "03",
                 title: "Receive Medicine",
                 description: "Discreet delivery to your door",
                 icon: "📦",
                 color: "#00359E"
               },
               {
-                step: "04",
+                step: "03",
                 title: "Ongoing Care",
                 description: "Continued support and adjustments",
                 icon: "💪",
@@ -1269,7 +1248,7 @@ const DrivePlus6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                Drive Plus 6 Tablets • Sildenafil 80mg / Bremelanotide 10mg / Pycnogenol 50mg • Compounded formula • Telehealth consultation included • Ships to all 50 states
+                Drive Plus 6 Tablets • Sildenafil / Bremelanotide / Pycnogenol • Compounded formula • Telehealth consultation included • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

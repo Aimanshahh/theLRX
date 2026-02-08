@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -15,7 +16,6 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-import { useNavigate } from "react-router-dom";
 import { useTheme, useMediaQuery } from "@mui/material";
 
 import CloseIcon from "@mui/icons-material/Close";
@@ -34,6 +34,7 @@ import treatment5 from "../../assets/Herocards/Herocard1.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const isTablet = useMediaQuery(theme.breakpoints.down("lg"));
@@ -58,14 +59,24 @@ export default function Navbar() {
     }
   }, []);
 
-  // Handle scroll to hide TopBanner
+  // Handle scroll to hide TopBanner only on homepage
   useEffect(() => {
     const handleScroll = () => {
       setBannerHidden(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    
+    // Only add scroll listener if we're on homepage
+    if (location.pathname === "/") {
+      window.addEventListener("scroll", handleScroll);
+    } else {
+      // On medicine pages, always set bannerHidden to true
+      setBannerHidden(true);
+    }
+    
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname]);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -111,41 +122,39 @@ export default function Navbar() {
   };
 
   const exploreItems = [
-    { 
+    {
       label: "Labs", 
       subsections: [
-        { label: "Lab1", path: "/Labs/lab1" },
-        { label: "Lab2", path: "/Labs/lab2" }
+        { label: "Functional Blood Test", path: "/labs/Functional-Blood-Test" },
       ]
     },
     { 
       label: "Weight Loss", 
       subsections: [
-        { label: "Retatrutide Vial", path: "/weight-loss/retatrutide-vial" },
+        { label: "Retatrutide Injectable", path: "/weight-loss/retatrutide-vial" },
         { label: "Oral Tirzepatide RDT", path: "/weight-loss/oral-tirzepatide-rdt" },
         { label: "Oral Semaglutide RDT", path: "/weight-loss/oral-semaglutide-rdt" },
-        { label: "Tirzepatide Vial", path: "/weight-loss/tirzepatide-injectable" },
-        { label: "Semaglutide Vial", path: "/weight-loss/semaglutide-injectable" },
+        { label: "Tirzepatide Injectable", path: "/weight-loss/tirzepatide-injectable" },
+        { label: "Semaglutide Injectable", path: "/weight-loss/semaglutide-injectable" },
       ]
     },
     { 
       label: "Precision BioActives",
       subsections: [
         { label: "Vitamin B12 Injection", path: "/peptides/vitamin-b12" },
-        { label: "Sermolin 20mg", path: "/peptides/sermorelin-20mg" },
-        { label: "Pt-141 50mg", path: "/peptides/pt-141" },
+        { label: "Sermolin", path: "/peptides/sermorelin" },
+        { label: "Pt-141", path: "/peptides/pt-141" },
         { label: "CJC-1295/Iparmorelin Blend", path: "/peptides/cjc-1295-ipamorelin" },
         { label: "GHK-CU", path: "/peptides/GHKCU" },
-        { label: "BPC-157 Vial", path: "/peptides/bpc-157" },
+        { label: "BPC-157 Injectable", path: "/peptides/bpc-157" },
         { label: "NAD+Nasal Spray", path: "/peptides/NAD" },
         { label: "NAD+Injectable", path: "/peptides/NADinjectable" },
       ]
     },
-       { 
+    { 
       label: "Hair, Skin & Nails",
       subsections: [
         { label: "GHK-CU", path: "/peptides/GHKCU" },
-       
       ]
     },
     { 
@@ -223,7 +232,7 @@ export default function Navbar() {
       <AppBar
         position="fixed"
         sx={{
-          top: bannerHidden ? 0 : 50,
+          top: location.pathname === "/" ? (bannerHidden ? 0 : 50) : 0,
           backgroundColor: "white",
           boxShadow: 1,
           transition: "top 0.3s ease-in-out",

@@ -738,30 +738,34 @@ export default function AboutUs() {
                 px: { xs: 2, sm: 3 },
               }}
             >
-              <Typography
-                sx={{
-                  color: "#FFFFFF",
-                  fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 },
-                  fontSize: { 
-                    xs: "1.8rem",
-                    sm: "2.5rem", 
-                    md: "3.2rem", 
-                    lg: "4rem",
-                    xl: "4.5rem" 
-                  },
-                  textAlign: "center",
-                  textTransform: "uppercase",
-                  letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
-                  lineHeight: 1,
-                  px: { xs: 2, sm: 3, md: 4 },
-                  textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)",
-                  fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-                  padding: "12px 20px",
-                  borderRadius: "4px",
-                }}
-              >
-                THE LiquidRX WAS BUILT FOR YOU
-              </Typography>
+             <Typography
+  sx={{
+    color: "#FFFFFF",
+    fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 },
+    fontSize: { 
+      xs: "1.8rem",
+      sm: "2.5rem", 
+      md: "3.2rem", 
+      lg: "4rem",
+      xl: "4.5rem" 
+    },
+    textAlign: "center",
+    textTransform: "uppercase",
+    letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
+    lineHeight: 1,
+    px: { xs: 2, sm: 3, md: 4 },
+    textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)",
+    fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
+    padding: "12px 20px",
+    borderRadius: "4px",
+  }}
+>
+  THE{" "}
+  <span style={{ color: "#003B9D" }}>LIQUID</span>{" "}
+  <span style={{ color: "#68696B" }}>RX</span>{" "}
+  WAS BUILT FOR YOU
+</Typography>
+
             </Box>
           </Box>
         </Box>
@@ -803,7 +807,7 @@ export default function AboutUs() {
             }}
           >
 Your health journey is unique.            <br />
- treatment should be too.          </Typography>
+ Treatment should be too.          </Typography>
 
           {/* PARAGRAPH BELOW */}
           <Typography
@@ -857,9 +861,9 @@ Your health journey is unique.            <br />
       backgroundColor: "#FFFFFF",
     }}
   >
-    {/* Sexual Performance - LARGE card */}
+    {/* Weight Loss - LARGE card */}
     <CardBlock
-      title="Sexual performance"
+      title="Weight Loss"
       image={img1}
       size="large"
       sx={{
@@ -913,9 +917,9 @@ Your health journey is unique.            <br />
         }}
       />
 
-      {/* Mental Health - SMALL card */}
+      {/* Sexual function - SMALL card */}
       <CardBlock
-        title="Mental health"
+        title="Sexual function"
         image={img4}
         size="small"
         sx={{
@@ -947,7 +951,7 @@ Your health journey is unique.            <br />
   >
     {/* Weight Loss - LARGE card */}
     <CardBlock
-      title="Weight loss"
+      title="Precision BioActives"
       image={img2}
       size="large"
       sx={{

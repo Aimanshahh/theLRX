@@ -12,6 +12,9 @@ import { keyframes } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+// Import your logo
+import logo from "../../assets/LRXLOGOS/LOGO-2.png";
+
 // Smooth fade-in animation
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }
@@ -38,7 +41,7 @@ const faqData = [
   { 
     id: 4, 
     question: "Do I need health insurance for LiquidRX services?",
-    answer: "Health insurance is not required. Services are offered through a transparent direct-pay model. In some cases, patients may choose to submit receipts to their insurance provider for possible reimbursement at their discretion. Certain HSA or FSA funds may be used for eligible medical expenses, depending on individual plan rules." 
+    answer: "Health insurance is not required. Services are offered through a transparent direct-pay model." 
   },
   { 
     id: 5, 
@@ -174,14 +177,45 @@ const TheBasics = () => {
         width: "100%",
         maxWidth: "1200px",
         mx: "auto",
-        mt: { xs: 8, sm: 10, md: 12 },
+        mt: { xs: 4, sm: 6, md: 8 }, // Reduced top margin to accommodate logo
         mb: { xs: 8, sm: 10, md: 12 },
         px: { xs: 2, sm: 3, md: 4 },
         fontFamily: "Roboto, sans-serif",
+        position: "relative", // Added for absolute positioning of logo
       }}
     >
+      {/* Logo at Top Left */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: -12, sm: -16, md: -20 }, // Adjusted to position above content
+          left: { xs: 0, sm: 0, md: 0 },
+          zIndex: 10,
+        }}
+      >
+        <Box
+          component="img"
+          src={logo}
+          alt="LiquidRX Logo"
+          sx={{
+            height: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+            width: "auto",
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+          onClick={() => window.location.href = "/"} // Navigate to home page on click
+        />
+      </Box>
+
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT */}
-      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
+      <Box sx={{ 
+        width: "fit-content", 
+        mb: { xs: 6, sm: 7, md: 8 },
+        pt: { xs: 4, sm: 5, md: 6 } // Added padding top to push content down for logo
+      }}>
         <Typography
           component="h1"
           variant="h1"
@@ -264,7 +298,7 @@ const TheBasics = () => {
         >
           LiquidRX offers telemedicine services that facilitate access to care through independently licensed medical doctors, where permitted by applicable law. Services are provided in accordance with established clinical standards, applicable federal and state regulations, and recognized telehealth practices. Any prescription decisions are made solely by the treating physician based on an individual clinical evaluation and determination of appropriateness for telemedicine.
 
-LiquidRX utilizes technology to support compliant telehealth encounters and works with appropriately licensed pharmacies, as applicable, to fulfill prescriptions. Services are offered only in jurisdictions where permitted, and only when a patient’s condition may be reasonably evaluated and managed through remote care. Patient safety, regulatory compliance, and transparency are foundational to the platform’s operation.
+LiquidRX utilizes technology to support compliant telehealth encounters and works with appropriately licensed pharmacies, as applicable, to fulfill prescriptions. Services are offered only in jurisdictions where permitted, and only when a patient's condition may be reasonably evaluated and managed through remote care. Patient safety, regulatory compliance, and transparency are foundational to the platform's operation.
         </Typography>
       </Box>
     </Box>

@@ -96,7 +96,7 @@ const FullWidthGradientWithText = () => {
             textAlign: { xs: "center", sm: "center", md: "left" },
           }}
         >
-          Unlock the Free Guide to Protein for Weight Loss
+          Unlock the Free Guide to GLP-1 for Weight Loss
         </Typography>
 
         <Typography

@@ -68,7 +68,7 @@ import DrivePlus12 from "../components/Medicines/SexualHealth/DrivePlus12";
 import DrivePlus18 from "../components/Medicines/SexualHealth/DrivePlus18";
 
 // Labs
-import Lab1 from "../components/Medicines/Labs/Lab1";
+import FunctionalBloodTest from "../components/Medicines/Labs/FunctionalBloodTest";
 import Lab2 from "../components/Medicines/Labs/Lab2";
 
 // HeroCardsPages
@@ -79,28 +79,45 @@ import Fixyourrecovery from "../components/HeroCardPages/Fixyourrecovery.jsx";
 import Wantmoresex from "../components/HeroCardPages/wantmoresex.jsx";
 import Stoplowenergy from "../components/HeroCardPages/Stoplowenergy.jsx";
 
+// PrivacyPolicy and Terms&Condition
+import PrivacyPolicy from "../pages/privacypolicy.jsx";
+import TermsAndConditions from "../pages/termsandcondition.jsx";
+
 /* ------------------- LAYOUT ------------------- */
 
 function LayoutWithFooter({ children }) {
   const { pathname } = useLocation();
-   console.log("CURRENT PATH:", pathname); 
+  console.log("CURRENT PATH:", pathname);
 
-  const showHeader = pathname === "/";
+  // Show TopBanner ONLY on homepage
+  const showTopBanner = pathname === "/";
+  
+  // Show Navbar on homepage AND medicine pages
+  const showNavbar = pathname === "/" || 
+                    pathname.startsWith("/weight-loss") ||
+                    pathname.startsWith("/peptides") ||
+                    pathname.startsWith("/sexual-health") ||
+                    pathname.startsWith("/labs") ||
+                     pathname === "/build-muscle" ||
+                      pathname === "/weight-loss-program" ||
+                       pathname === "/fix-your-skin" ||
+                        pathname === "/want-more-sex" ||
+                         pathname === "/stop-low-energy";
+
 
   const hideFooter =
     pathname === "/signin" ||
     pathname === "/register" ||
     pathname === "/profile" ||
-    pathname.startsWith("/Labs");
+    pathname.startsWith("/labs");
 
   return (
     <>
-      {showHeader && (
-        <>
-          <TopBanner />
-          <Navbar />
-        </>
-      )}
+      {/* Only show TopBanner on homepage */}
+      {showTopBanner && <TopBanner />}
+      
+      {/* Show Navbar on homepage AND medicine pages */}
+      {showNavbar && <Navbar />}
 
       {children}
 
@@ -108,7 +125,6 @@ function LayoutWithFooter({ children }) {
     </>
   );
 }
-
 /* ------------------- ROUTE LOADER ------------------- */
 
 function RouteLoaderWrapper({ children }) {
@@ -155,8 +171,7 @@ export default function AppRoutes() {
               <Route path="/faqs/troubleshooting" element={<Troubleshooting />} />
               <Route path="/faqs/privacy-security" element={<PrivacyAndSecurity />} />
 
-              <Route path="/labs/lab1" element={<Lab1 />} />
-              <Route path="/labs/lab2" element={<Lab2 />} />
+             <Route path="/labs/Functional-Blood-Test" element={<FunctionalBloodTest />} />
 
               <Route path="/weight-loss/retatrutide-vial" element={<RetatrutideVial />} />
               <Route path="/weight-loss/oral-tirzepatide-rdt" element={<OralTirzepatideRDT />} />
@@ -165,7 +180,7 @@ export default function AppRoutes() {
               <Route path="/weight-loss/semaglutide-injectable" element={<SemaglutideInjectable />} />
 
               <Route path="/peptides/vitamin-b12" element={<VitaminB12 />} />
-              <Route path="/peptides/sermorelin-20mg" element={<Sermorelin20mg />} />
+              <Route path="/peptides/sermorelin" element={<Sermorelin20mg />} />
               <Route path="/peptides/pt-141" element={<PT141 />} />
               <Route path="/peptides/cjc-1295-ipamorelin" element={<CJC1295Ipamorelin />} />
               <Route path="/peptides/GHKCU" element={<GHKCU />} />
@@ -199,6 +214,9 @@ export default function AppRoutes() {
 <Route path="/want-more-sex" element={<Wantmoresex />} />
 <Route path="/stop-low-energy" element={<Stoplowenergy />} />
 
+{/* Privacy and Terms pages */}
+<Route path="/privacy-policy" element={<PrivacyPolicy />} />
+<Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>

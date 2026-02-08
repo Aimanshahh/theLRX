@@ -12,6 +12,9 @@ import { keyframes } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+// Import your logo
+import logo from "../../assets/LRXLOGOS/LOGO-2.png"; // Update this path to match your logo location
+
 // Smooth fade-in animation
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }
@@ -172,14 +175,40 @@ const AboutYourVisit = () => {
         width: "100%",
         maxWidth: "1200px",
         mx: "auto",
-        mt: { xs: 8, sm: 10, md: 12 },
+        mt: { xs: 4, sm: 6, md: 8 }, // Reduced top margin since logo is on top
         mb: { xs: 8, sm: 10, md: 12 },
         px: { xs: 2, sm: 3, md: 4 },
         fontFamily: "Roboto, sans-serif",
       }}
     >
+      {/* Logo at Top Left */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: 16, sm: 24, md: 32 },
+          left: { xs: 16, sm: 24, md: 32 },
+          zIndex: 10,
+        }}
+      >
+        <Box
+          component="img"
+          src={logo}
+          alt="LiquidRX Logo"
+          sx={{
+            height: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+            width: "auto",
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+          onClick={() => window.location.href = "/"} // Navigate to home page on click
+        />
+      </Box>
+
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as TheBasics */}
-      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
+      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 }, pt: { xs: 6, sm: 8, md: 10 } }}>
         <Typography
           component="h1"
           variant="h1"
@@ -194,7 +223,7 @@ const AboutYourVisit = () => {
             display: "inline-block",
           }}
         >
-          Telemedicine Visit FAQ: Online Medical Consultation Process
+        Online Medical Consultation Process
         </Typography>
 
         <Box

@@ -130,7 +130,7 @@ const Lust12Page = () => {
                     "Elevates desire, sensitivity, and emotional connection",
                     "Stacks best with PT-141, NAD+ Injectable, and GHK-Cu",
                     "For amplified arousal, deeper vitality, and a more complete intimate experience",
-                    "Compounded formula (Tadalafil 10mg / Pregnenolone 10mg)",
+                    "Compounded formula (Tadalafil / Pregnenolone)",
                     "Extended 12-tablet supply for continued wellness"
                   ].map((item, i) => (
                     <Box
@@ -330,8 +330,8 @@ const Lust12Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "Tadalafil 10mg - Gentle circulatory enhancement",
-                          "Pregnenolone 10mg - Balanced neuro-hormonal support"
+                          "Tadalafil - Gentle circulatory enhancement",
+                          "Pregnenolone - Balanced neuro-hormonal support"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -475,14 +475,14 @@ const Lust12Page = () => {
                   {[
                     { 
                       label: "Tadalafil", 
-                      value: "10mg", 
+                      value: "", 
                       color: "#00359E",
                       description: "Gentle circulatory support",
                       purpose: "Enhances blood flow"
                     },
                     { 
                       label: "Pregnenolone", 
-                      value: "10mg", 
+                      value: "", 
                       color: "#003B9D",
                       description: "Neuro-hormonal balance",
                       purpose: "Supports desire pathways"

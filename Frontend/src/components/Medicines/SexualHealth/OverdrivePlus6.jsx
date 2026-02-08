@@ -106,7 +106,7 @@ const OverdrivePlus6Page = () => {
                 >
                   Overdrive Plus unites elevated circulation support, desire-enhancing neuroactivation, and antioxidant-fortified blood-flow synergy to create a more responsive, energized, and deeply connected intimate experience.
                   <Box component="span" sx={{ display: 'block', mt: 1, fontWeight: 600, color: "#00359E" }}>
-                    (Tadalafil 20mg / Bremelanotide 5mg / Pycnogenol 25mg)
+                    (Tadalafil / Bremelanotide / Pycnogenol)
                   </Box>
                 </Typography>
 
@@ -1229,7 +1229,7 @@ const OverdrivePlus6Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                6-tablet pack • Compounded medication (Tadalafil 20mg/Bremelanotide 5mg/Pycnogenol 25mg) • Telehealth consultation required • 
+                6-tablet pack • Compounded medication (Tadalafil /Bremelanotide /Pycnogenol) • Telehealth consultation required • 
                 first month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>

@@ -94,8 +94,8 @@ const PRICE = {
   amount: 289.00,
   currency: 'USD',
   display: '$289.00',
-  period: 'per treatment',
-  treatmentType: 'Weekly Injection'
+  period: 'per Vial',
+  treatmentType: 'Injectable'
 };
 
 // Benefits for the "How It Works" section - Updated for Terzepatide
@@ -109,14 +109,11 @@ const injectionBenefits = [
 ];
 
 const TirzepatideInjectablePage = () => {
-
-   const rimioUrl = "https://try.thelrx.com/intake/wm-ltaaov";
+  const rimioUrl = "https://try.thelrx.com/intake/wm-ltaaov";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
   };
-
-
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -136,7 +133,7 @@ const TirzepatideInjectablePage = () => {
   };
 
   return (
-    <>
+    <Box sx={{ mt: 8 }}> {/* ADDED: This wrapper pushes content below navbar */}
       {/* Hero Section with Video */}
       <Box
         sx={{
@@ -242,23 +239,22 @@ const TirzepatideInjectablePage = () => {
                   >
                     <Box
                       component="span"
-                                           sx={{
-    display: 'block',
-    color: colors.white,
-    fontWeight: 900
-  }}
-       
+                      sx={{
+                        display: 'block',
+                        color: colors.white,
+                        fontWeight: 900
+                      }}
                     >
                       TIRZEPATIDE VIAL
                     </Box>
                     <Box
                       component="span"
                       sx={{
-    display: 'block',
-    color: colors.lightBlue,
-    fontWeight: 900,
-    mt: -1
-  }}
+                        display: 'block',
+                        color: colors.lightBlue,
+                        fontWeight: 900,
+                        mt: -1
+                      }}
                     >
                       DUAL AGONIST THERAPY
                     </Box>
@@ -389,7 +385,7 @@ const TirzepatideInjectablePage = () => {
                     variant="contained"
                     size="large"
                     endIcon={<ChevronRight />}
-                     onClick={handleCtaClick}
+                    onClick={handleCtaClick}
                     sx={{
                       px: { xs: 3.5, md: 4 },
                       py: { xs: 1.25, md: 1.5 },
@@ -658,7 +654,7 @@ const TirzepatideInjectablePage = () => {
                   variant="contained"
                   size="large"
                   endIcon={<ChevronRight />}
-                   onClick={handleCtaClick}
+                  onClick={handleCtaClick}
                   sx={{
                     background: `linear-gradient(135deg, ${colors.darkBlue}, ${colors.lightBlue})`,
                     borderRadius: '30px',
@@ -740,21 +736,20 @@ const TirzepatideInjectablePage = () => {
               </Typography>
 
               {/* Primary Description */}
-             <Typography
-  sx={{
-    fontSize: { xs: "1.1rem", md: "1.25rem" },
-    lineHeight: 2.1,
-    color: colors.darkGrey,
-    textAlign: "center",
-    fontWeight: 400,
-  }}
->
-  Tirzepatide is a dual GLP-1 and GIP receptor agonist designed to engage multiple hormonal
-  pathways involved in metabolic regulation. Its dual-receptor activity and injectable
-  delivery method are being studied to better understand their pharmacologic effects and
-  clinical considerations under the supervision of a licensed healthcare provider.
-</Typography>
-
+              <Typography
+                sx={{
+                  fontSize: { xs: "1.1rem", md: "1.25rem" },
+                  lineHeight: 2.1,
+                  color: colors.darkGrey,
+                  textAlign: "center",
+                  fontWeight: 400,
+                }}
+              >
+                Tirzepatide is a dual GLP-1 and GIP receptor agonist designed to engage multiple hormonal
+                pathways involved in metabolic regulation. Its dual-receptor activity and injectable
+                delivery method are being studied to better understand their pharmacologic effects and
+                clinical considerations under the supervision of a licensed healthcare provider.
+              </Typography>
 
               {/* Divider */}
               <Box
@@ -770,19 +765,18 @@ const TirzepatideInjectablePage = () => {
               />
 
               {/* Secondary Description */}
-             <Typography
-  sx={{
-    fontSize: { xs: "1.05rem", md: "1.15rem" },
-    lineHeight: 1.95,
-    color: alpha(colors.black, 0.75),
-    textAlign: "center",
-  }}
->
-  Tirzepatide continues to be evaluated in clinical research settings to assess its safety
-  profile and its impact on metabolic-related parameters. Ongoing treatment decisions,
-  monitoring, and follow-up should occur only with appropriate medical oversight.
-</Typography>
-
+              <Typography
+                sx={{
+                  fontSize: { xs: "1.05rem", md: "1.15rem" },
+                  lineHeight: 1.95,
+                  color: alpha(colors.black, 0.75),
+                  textAlign: "center",
+                }}
+              >
+                Tirzepatide continues to be evaluated in clinical research settings to assess its safety
+                profile and its impact on metabolic-related parameters. Ongoing treatment decisions,
+                monitoring, and follow-up should occur only with appropriate medical oversight.
+              </Typography>
             </Box>
           </motion.div>
         </Container>
@@ -1144,76 +1138,76 @@ const TirzepatideInjectablePage = () => {
               </Typography>
 
               {/* Single CTA Button */}
-          
-<Box sx={{ 
-  display: "flex", 
-  flexDirection: "column",
-  gap: 3,
-  justifyContent: "center",
-  alignItems: "center",
-  mb: 5
-}}>
-  {/* Primary CTA Button */}
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.2 }}
-  >
-    <Button
-      onClick={handleCtaClick}
-      sx={{
-        backgroundColor: colors.white,
-        color: colors.darkBlue,
-        px: 5,
-        py: 1.8,
-        fontSize: "15px",
-        fontWeight: 700,
-        borderRadius: "50px",
-        textTransform: "none",
-        minWidth: "200px",
-        boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
-        "&:hover": {
-          backgroundColor: "rgba(255, 255, 255, 0.95)",
-          boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
-        },
-      }}
-    >
-      Begin Vial Treatment
-    </Button>
-  </motion.div>
+              <Box sx={{ 
+                display: "flex", 
+                flexDirection: "column",
+                gap: 3,
+                justifyContent: "center",
+                alignItems: "center",
+                mb: 5
+              }}>
+                {/* Primary CTA Button */}
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  <Button
+                    onClick={handleCtaClick}
+                    sx={{
+                      backgroundColor: colors.white,
+                      color: colors.darkBlue,
+                      px: 5,
+                      py: 1.8,
+                      fontSize: "15px",
+                      fontWeight: 700,
+                      borderRadius: "50px",
+                      textTransform: "none",
+                      minWidth: "200px",
+                      boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.95)",
+                        boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
+                      },
+                    }}
+                  >
+                    Begin Vial Treatment
+                  </Button>
+                </motion.div>
 
-  {/* Text link in pill shape */}
-  <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.5, delay: 0.3 }}
-  >
-    <Typography
-      onClick={handleCtaClick}
-      sx={{
-        fontSize: "14px",
-        fontWeight: 500,
-        color: "rgba(255, 255, 255, 0.85)",
-        px: 4,
-        py: 1.2,
-        borderRadius: "50px",
-        display: "inline-block",
-        cursor: "pointer",
-        transition: "all 0.2s ease",
-        "&:hover": {
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
-          color: colors.white,
-        },
-      }}
-    >
-      Or learn more about dual agonist therapy
-    </Typography>
-  </motion.div>
-</Box>
+                {/* Text link in pill shape */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
+                  <Typography
+                    onClick={handleCtaClick}
+                    sx={{
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      color: "rgba(255, 255, 255, 0.85)",
+                      px: 4,
+                      py: 1.2,
+                      borderRadius: "50px",
+                      display: "inline-block",
+                      cursor: "pointer",
+                      transition: "all 0.2s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(255, 255, 255, 0.1)",
+                        color: colors.white,
+                      },
+                    }}
+                  >
+                    Or learn more about dual agonist therapy
+                  </Typography>
+                </motion.div>
+              </Box>
+
               {/* Features/Guarantees - Updated for Terzepatide */}
               <Grid container spacing={3} justifyContent="center" sx={{ mt: 4 }}>
                 {[
@@ -1344,7 +1338,7 @@ const TirzepatideInjectablePage = () => {
           </motion.div>
         </Container>
       </Box>
-    </>
+    </Box> // CLOSING the mt:8 wrapper Box
   );
 };
 
@@ -1491,7 +1485,7 @@ const TestimonialCarousel = () => {
             </IconButton>
 
             <Box sx={{ position: 'relative', height: { xs: 'auto', md: 320 }, minHeight: 320 }}>
-              <AnimatePresence mode="wait">
+                          <AnimatePresence mode="wait">
                 <motion.div
                   key={currentIndex}
                   initial={{ opacity: 0, x: 300 }}

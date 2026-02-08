@@ -5,7 +5,7 @@ import { FaFacebookF, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa";
 
 import appPreview from "../../assets/medical experts/img1removed.png";
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
-import legitScriptLogo from "../../assets/images/legitscript.png"; // Add this import
+import legitScriptLogo from "../../assets/images/legitscript.png";
 
 /* ---------------- ROUTE MAPS ---------------- */
 
@@ -18,12 +18,18 @@ const LRX_ROUTES = {
 };
 
 const POPULAR_ROUTES = {
-  "Retatrutide Vial": "/weight-loss/retatrutide-vial",
- "Tirzepetide Vial": "/weight-loss/tirzepatide-injectable",
+  "Retatrutide Injectable": "/weight-loss/retatrutide-vial",
+  "Tirzepetide Injectable": "/weight-loss/tirzepatide-injectable",
   "Vitamin B-12": "/peptides/vitamin-b12",
   "Mach-1": "/sexual-health/mach1-6",
   "Drive Plus": "/sexual-health/drive-plus-6",
   "NAD+Injectable": "/peptides/NADinjectable",
+};
+
+// Add routes for legal pages
+const LEGAL_ROUTES = {
+  "Terms & Conditions": "/terms-and-conditions",
+  "Privacy Policy": "/privacy-policy",
 };
 
 /* ---------------- SOCIAL LINKS ---------------- */
@@ -211,8 +217,8 @@ export default function Footer() {
           <FooterColumn
             title="Popular"
             items={[
-              "Retatrutide Vial",
-              "Tirzepetide Vial",
+              "Retatrutide Injectable",
+              "Tirzepetide Injectable",
               "Vitamin B-12",
               "Mach-1",
               "Drive Plus",
@@ -222,7 +228,7 @@ export default function Footer() {
           />
 
           <FooterColumn
-            title="LRX"
+            title="LiquidRX"
             items={[
               "About Us",
               "How it Works",
@@ -241,13 +247,21 @@ export default function Footer() {
       {/* LEGAL - Updated with LegitScript Logo */}
       <Box sx={{ textAlign: "center", mt: 8 }}>
         <Box sx={{ mt: 4, fontSize: "0.9rem" }}>
-          {["Terms & Conditions", "Privacy Policy", "Sitemap"].map((x) => (
+          {Object.entries(LEGAL_ROUTES).map(([label, path]) => (
             <Box
-              key={x}
-              component="span"
-              sx={{ mx: 2, color: "#000", cursor: "pointer", "&:hover": { color: darkBlue } }}
+              key={label}
+              component={RouterLink}
+              to={path}
+              sx={{
+                mx: 2,
+                color: "#000",
+                textDecoration: "none",
+                cursor: "pointer",
+                "&:hover": { color: darkBlue },
+                fontWeight: 500,
+              }}
             >
-              {x}
+              {label}
             </Box>
           ))}
         </Box>
@@ -259,7 +273,7 @@ export default function Footer() {
             src={legitScriptLogo} 
             alt="LegitScript Certified" 
             style={{ 
-              height: "160px",  // Increased from 40px to 60px
+              height: "160px",
               width: "auto",
               opacity: 0.9 
             }} 

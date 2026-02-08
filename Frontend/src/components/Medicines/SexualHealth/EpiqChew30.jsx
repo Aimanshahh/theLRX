@@ -127,8 +127,8 @@ const EpiqChew30Page = () => {
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Compounded chewable formula (Tadalafil 5mg / Vardenafil 5mg)",
-                    "Essential nutrient synergy (Vitamin D3 200IU / Vitamin K2 1mg)",
+                    "Compounded chewable formula (Tadalafil / Vardenafil)",
+                    "Essential nutrient synergy (Vitamin D3 200IU / Vitamin K2)",
                     "Consultation with a licensed provider included",
                     "Personalized treatment plans tailored to your needs",
                     "Medications delivered discreetly to your door"
@@ -444,7 +444,7 @@ const EpiqChew30Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      Tadalafil 5mg / Vardenafil 5mg / Vitamin D3 200IU / Vitamin K2 1mg • Compounded chewable tablet • Designed to stack with NAD+ Injectable, B-12, and CJC-1295/Ipamorelin
+                      Tadalafil / Vardenafil / Vitamin D3 200IU / Vitamin K2 • Compounded chewable tablet • Designed to stack with NAD+ Injectable, B-12, and CJC-1295/Ipamorelin
                     </Typography>
                   </Box>
                 </Box>
@@ -924,8 +924,8 @@ const EpiqChew30Page = () => {
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Tadalafil 5mg / Vardenafil 5mg for refined vascular support",
-                      "Vitamin D3 200IU / Vitamin K2 1mg for essential nutrient synergy",
+                      "Tadalafil / Vardenafil for refined vascular support",
+                      "Vitamin D3 200IU / Vitamin K2 for essential nutrient synergy",
                       "Helps you feel steady, energized, and confidently connected",
                       "Chewable format for convenience and ease of use",
                       "Stacks with other treatments for fully optimized wellness"
@@ -1034,20 +1034,13 @@ const EpiqChew30Page = () => {
               },
               {
                 step: "02",
-                title: "Telehealth Consultation",
-                description: "Attend your virtual consultation",
-                icon: "👨‍⚕️",
-                color: "#003B9D"
-              },
-              {
-                step: "03",
                 title: "Start Your ED Treatment",
                 description: "Begin your personalized plan",
                 icon: "💪",
                 color: "#00359E"
               },
               {
-                step: "04",
+                step: "03",
                 title: "Ongoing Support",
                 description: "Continued care and adjustments",
                 icon: "🔄",
@@ -1297,7 +1290,7 @@ const EpiqChew30Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                Epiq Chew 30 Tablets • Tadalafil 5mg / Vardenafil 5mg / Vit D3 200IU / Vit K2 1mg • Compounded chewable formula • Telehealth consultation included • Ships to all 50 states
+                Epiq Chew 30 Tablets • Tadalafil / Vardenafil / Vit D3 200IU / Vit K2 • Compounded chewable formula • Telehealth consultation included • Ships to all 50 states
               </Typography>
             </motion.div>
           </Box>

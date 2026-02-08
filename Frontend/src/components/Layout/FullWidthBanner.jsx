@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import manImg from "../../assets/section/section1.png";
+import manImg from "../../assets/section/img9.png";
 import phoneImg from "../../assets/section/img3.png";
 import bioAgeImg from "../../assets/section/img5.jpeg";
 import biomarkersImg from "../../assets/section/biomarker.jpeg";

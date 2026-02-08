@@ -76,7 +76,7 @@ const BPC157Page = () => {
       "Potential systemic effects when administered via injection"
     ],
     kitIncludes: [
-      "5mg of pharmaceutical-grade BPC-157 (Body Protection Compound-157)",
+      " of pharmaceutical-grade BPC-157 (Body Protection Compound-157)",
       "Bacteriostatic water for injection included",
       "Sterile insulin syringes with ultra-fine needles",
       "Comprehensive subcutaneous injection guide",
@@ -85,14 +85,13 @@ const BPC157Page = () => {
       "Access to clinical support team for guidance"
     ],
     specifications: [
-      { label: "Active Ingredient", value: "BPC-157 (15 amino acids)" },
-      { label: "Strength", value: "5 mg" },
+      { label: "Active Ingredient", value: "BPC-157" },
       { label: "Administration", value: "Subcutaneous" }
     ],
     ctaText: "Start Research - $189.00",
     pepProgram: {
       title: "Precision Energy Program (PEP)",
-      price: "$297",
+      price: "189",
       description: "first month - Designed to elevate cellular vitality and metabolic performance, the Precision Energy Program uses targeted peptides to restore balance, enhance recovery, and help you feel effortlessly energized throughout your day."
     },
     disclaimer: "BPC-157 is a research peptide with demonstrated properties in preclinical studies. It is not FDA-approved for human therapeutic use and should be used under medical supervision for research purposes. May interact with certain medications. Not for use by pregnant or nursing women. Discontinue use if adverse reactions occur. Individual results in clinical settings continue to be studied."
@@ -133,7 +132,7 @@ const BPC157Page = () => {
 
   const finalFeatures = [
     { text: "Medical Assessment Included" },
-    { text: "5mg Multi-Dose Vial" },
+    { text: " Multi-Dose Vial" },
     { text: "Potential Systemic Effects" },
     { text: "Clinical Support Team Access" },
   ];
@@ -141,8 +140,8 @@ const BPC157Page = () => {
   // PEP Program Steps
   const pepSteps = [
     { number: "1", title: "Medical Forms", description: "Complete a simple online medical form telling your clinician about your health and prior weight loss attempts." },
-    { number: "2", title: "Telehealth Visit", description: "Speak to your new clinician who can help you lose weight with a GLP-1 medication, if appropriate." },
-    { number: "3", title: "Receive Medicine", description: "Receive your regularly scheduled medication in the mail straight from the pharmacy." },
+
+    { number: "2", title: "Receive Medicine", description: "Receive your regularly scheduled medication in the mail straight from the pharmacy." },
   ];
   
   return (
@@ -413,7 +412,7 @@ const BPC157Page = () => {
 
             <Box sx={{ mt: { xs: 6, md: 8 } }}>
               <Typography sx={{ fontSize: "15px", color: palette.darkGrey, lineHeight: 1.7, mb: 3, maxWidth: "800px", mx: "auto", textAlign: "center" }}>
-                Our BPC-157 peptide is manufactured to the highest purity standards and is being studied for potential systemic effects. Each 5mg vial provides multiple doses for research protocols with potential application for various tissues.
+                Our BPC-157 peptide is manufactured to the highest purity standards and is being studied for potential systemic effects. Each vial provides multiple doses for research protocols with potential application for various tissues.
               </Typography>
               
               <Typography sx={{ fontSize: "15px", color: palette.darkGrey, lineHeight: 1.7, mb: 5, maxWidth: "800px", mx: "auto", textAlign: "center" }}>

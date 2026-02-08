@@ -30,10 +30,10 @@ import imageOnly4 from "../assets/detailedpages/WhatsApp Image 2026-01-03 at 5.0
 /* IMAGE-ONLY CARDS */
 import labsVerticalImg from "../assets/detailedpages/full1.jpeg";
 
-import trustCardImg1 from "../assets/detailedpages/WhatsApp Image 2026-01-02 at 2.56.00 AM.jpeg";
+import trustCardImg1 from "../assets/detailedpages/img15.jpeg";
 import trustCardImg2 from "../assets/detailedpages/img14.png";
 
-import fullWidthTallImg from "../assets/detailedpages/fullwidthimage.jpeg";
+import fullWidthTallImg from "../assets/detailedpages/img16.jpeg";
 
 import yourImage from "../assets/detailedpages/Black and Orange Modern Gradient Online Meeting Zoom Virtual Background (1500 x 800 px) (20).png";
 import card2Image from "../assets/detailedpages/img4.png";

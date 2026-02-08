@@ -12,6 +12,9 @@ import { keyframes } from "@mui/system";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 
+// Import your logo
+import logo from "../../assets/LRXLOGOS/LOGO-2.png"; // Update this path to match your logo location
+
 // Smooth fade-in animation
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(10px); }
@@ -19,11 +22,6 @@ const fadeIn = keyframes`
 `;
 
 const questions = [
-  { 
-    id: 1, 
-    question: "How much does telemedicine treatment cost with insurance?",
-    answer: "Telemedicine treatment costs vary based on the condition and prescribed medication. Many FDA-approved medication subscriptions start at $20–$40 per month. We offer transparent cash-pay pricing, and while we don't bill insurance directly, you may use HSA/FSA funds for eligible treatments." 
-  },
   { 
     id: 2, 
     question: "Are there any hidden fees for online medical consultations?",
@@ -37,12 +35,12 @@ const questions = [
   { 
     id: 4, 
     question: "Do I need health insurance for telemedicine prescriptions?",
-    answer: "Health insurance is not required for our telemedicine services. We operate on a transparent cash-pay model, making FDA-approved treatments accessible. You may submit receipts to your insurance for potential out-of-network reimbursement, though coverage varies by plan." 
+    answer: "Health insurance is not required for our telemedicine services. We operate on a transparent cash-pay model, making FDA-approved treatments accessible." 
   },
   { 
     id: 5, 
     question: "Is prescription medication shipping included in treatment costs?",
-    answer: "Most subscription plans include free discreet shipping of FDA-approved medications to your door. Shipping methods comply with pharmacy regulations and ensure medication integrity. Expedited shipping options are available for additional fees when medically appropriate." 
+    answer: "Yes, subscription plans include free discreet shipping of FDA-approved medications to your door. Shipping methods comply with pharmacy regulations and ensure medication integrity. Expedited shipping options are available for additional fees when medically appropriate." 
   },
   { 
     id: 6, 
@@ -57,7 +55,7 @@ const questions = [
   { 
     id: 8, 
     question: "What payment methods are accepted for telemedicine treatments?",
-    answer: "We accept major credit cards, HSA/FSA cards, and digital payment methods. All transactions are secure and HIPAA-compliant. Receipts include necessary details for insurance reimbursement or tax documentation when applicable." 
+    answer: "We accept major credit cards, and digital payment methods. All transactions are secure and HIPAA-compliant." 
   }
 ];
 
@@ -173,14 +171,45 @@ const MedicalCare = () => {
         width: "100%",
         maxWidth: "1200px",
         mx: "auto",
-        mt: { xs: 8, sm: 10, md: 12 },
+        mt: { xs: 4, sm: 6, md: 8 }, // Reduced top margin for logo
         mb: { xs: 8, sm: 10, md: 12 },
         px: { xs: 2, sm: 3, md: 4 },
         fontFamily: "Roboto, sans-serif",
+        position: "relative", // Added for absolute positioning of logo
       }}
     >
+      {/* Logo at Top Left */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: { xs: -12, sm: -16, md: -20 }, // Positioned above content
+          left: { xs: 0, sm: 0, md: 0 },
+          zIndex: 10,
+        }}
+      >
+        <Box
+          component="img"
+          src={logo}
+          alt="LiquidRX Logo"
+          sx={{
+            height: { xs: "32px", sm: "40px", md: "48px", lg: "56px" },
+            width: "auto",
+            cursor: "pointer",
+            transition: "transform 0.3s ease",
+            "&:hover": {
+              transform: "scale(1.05)",
+            },
+          }}
+          onClick={() => window.location.href = "/"} // Navigate to home page on click
+        />
+      </Box>
+
       {/* PERFECT PILL UNDERLINE ONLY UNDER THE TEXT - Same as TheBasics */}
-      <Box sx={{ width: "fit-content", mb: { xs: 6, sm: 7, md: 8 } }}>
+      <Box sx={{ 
+        width: "fit-content", 
+        mb: { xs: 6, sm: 7, md: 8 },
+        pt: { xs: 4, sm: 5, md: 6 } // Added padding to accommodate logo
+      }}>
         <Typography
           component="h1"
           variant="h1"
