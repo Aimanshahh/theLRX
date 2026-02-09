@@ -407,7 +407,7 @@ const SimpleHimsBackground = () => {
       mb: { xs: 2, sm: 0 },
     }}
   >
-    Test 130+ Biomarkers
+    Test 60+ Biomarkers
   </Typography>
 
   <Box

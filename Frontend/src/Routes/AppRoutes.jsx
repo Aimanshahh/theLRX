@@ -102,6 +102,7 @@ function LayoutWithFooter({ children }) {
                       pathname === "/weight-loss-program" ||
                        pathname === "/fix-your-skin" ||
                         pathname === "/want-more-sex" ||
+                        pathname === "/DetailedLab" ||
                          pathname === "/stop-low-energy";
 
 

@@ -37,7 +37,7 @@ import {
   Home,
   Shield,
   VerifiedUser,
-  Healing, // New icon for Treatment tab
+  Healing,
 } from "@mui/icons-material";
 import { getUserProfile, updateProfile as updateProfileAPI, changePassword as changePasswordAPI } from "../services/api";
 
@@ -264,7 +264,7 @@ export default function Profile() {
   const tabs = [
     { label: "Profile", icon: <PersonIcon /> },
     { label: "Security", icon: <Security /> },
-    { label: "Treatment", icon: <Healing /> }, // Added Treatment tab
+    { label: "Treatment", icon: <Healing /> },
   ];
 
   return (
@@ -543,7 +543,7 @@ export default function Profile() {
           overflow: "hidden",
           mb: 4,
         }}>
-          {/* Tabs Navigation - Now with 3 tabs - UPDATED FOR BETTER SPACING */}
+          {/* Tabs Navigation */}
           <Box sx={{ 
             borderBottom: 1, 
             borderColor: 'divider',
@@ -557,10 +557,10 @@ export default function Profile() {
               sx={{
                 "& .MuiTab-root": {
                   fontWeight: 600,
-                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' }, // Adjusted for better fit
+                  fontSize: { xs: '0.75rem', sm: '0.875rem', md: '1rem' },
                   color: "rgba(255, 255, 255, 0.8)",
-                  minHeight: 56, // Slightly reduced for better fit
-                  padding: { xs: '12px 8px', sm: '12px 16px' }, // Added padding control
+                  minHeight: 56,
+                  padding: { xs: '12px 8px', sm: '12px 16px' },
                   "&:hover": {
                     color: "white",
                   },
@@ -587,10 +587,8 @@ export default function Profile() {
 
           <Box sx={{ p: { xs: 2, sm: 3, md: 4 } }}>
             {activeTab === 0 ? (
-              /* Profile Information Tab - FORM SECTION */
+              /* Profile Information Tab */
               <Box>
-                {/* ... Profile content remains exactly the same ... */}
-                {/* Section Header */}
                 <Box sx={{ 
                   display: 'flex', 
                   justifyContent: 'space-between', 
@@ -1030,7 +1028,7 @@ export default function Profile() {
                 )}
               </Box>
             ) : activeTab === 1 ? (
-              /* Security Tab - content remains exactly the same */
+              /* Security Tab */
               <Box>
                 <Box sx={{ mb: { xs: 3, sm: 4 } }}>
                   <Typography 
@@ -1317,7 +1315,7 @@ export default function Profile() {
                 </Box>
               </Box>
             ) : (
-              /* Treatment Tab - NEW SECTION */
+              /* Treatment Tab - WITH THE NEW BUTTON */
               <Box>
                 <Box sx={{ mb: { xs: 3, sm: 4 } }}>
                   <Typography 
@@ -1339,68 +1337,209 @@ export default function Profile() {
                   </Typography>
                 </Box>
 
-                {/* Empty State for Treatment Section */}
+                {/* Treatment Plan Card with Action Button */}
                 <Box sx={{ 
-                  p: { xs: 4, sm: 6, md: 8 }, 
-                  textAlign: 'center',
-                  borderRadius: 2, 
-                  border: "2px dashed #e0e0e0", 
-                  backgroundColor: "#fafafa" 
+                  mb: { xs: 3, sm: 4 }, 
+                  p: { xs: 3, sm: 4 }, 
+                  borderRadius: 3, 
+                  border: "1px solid rgba(0, 53, 158, 0.1)", 
+                  backgroundColor: "white",
+                  boxShadow: "0 8px 32px rgba(0, 53, 158, 0.08)",
+                  position: 'relative',
+                  overflow: 'hidden',
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    height: '4px',
+                    background: 'linear-gradient(90deg, #00359E 0%, #0052D4 50%, #00D4FF 100%)',
+                  }
                 }}>
-                  <Healing 
-                    sx={{ 
-                      fontSize: { xs: 48, sm: 64, md: 72 },
-                      color: "#00359E",
-                      opacity: 0.3,
-                      mb: 2
-                    }} 
-                  />
-                  <Typography 
-                    variant="h6" 
-                    sx={{ 
-                      fontWeight: 600, 
-                      color: "#00359E",
-                      mb: 1,
-                      fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" }
-                    }}
-                  >
-                    Treatment Section Coming Soon
-                  </Typography>
-                  <Typography 
-                    variant="body2" 
-                    color="textSecondary"
-                    sx={{ 
-                      maxWidth: 500, 
-                      mx: 'auto',
-                      fontSize: { xs: "0.875rem", sm: "0.9375rem" }
-                    }}
-                  >
-                    We're working on bringing you comprehensive treatment management features. 
-                    This section will include your treatment plans, medication schedules, 
-                    and medical history.
-                  </Typography>
+                  <Grid container spacing={3} alignItems="center">
+                    <Grid item xs={12} md={8}>
+                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <Box sx={{
+                          width: 40,
+                          height: 40,
+                          borderRadius: '50%',
+                          backgroundColor: 'rgba(0, 53, 158, 0.1)',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          mr: 2
+                        }}>
+                          <Healing sx={{ color: "#00359E", fontSize: 24 }} />
+                        </Box>
+                        <Typography 
+                          variant="h6" 
+                          sx={{ 
+                            fontWeight: 700, 
+                            color: "#00359E",
+                            fontSize: { xs: "1rem", sm: "1.125rem" }
+                          }}
+                        >
+                          Current Treatment Plan
+                        </Typography>
+                      </Box>
+                      
+                      <Typography 
+                        variant="body1" 
+                        color="textSecondary"
+                        sx={{ 
+                          mb: 2,
+                          fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+                        }}
+                      >
+                        Access your personalized treatment plan, view prescription details, and track your progress in one centralized location.
+                      </Typography>
+                      
+                      <Box sx={{ 
+                        display: 'flex', 
+                        flexWrap: 'wrap',
+                        gap: 1.5,
+                        mb: 2 
+                      }}>
+                        <Box sx={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          px: 1.5,
+                          py: 0.5,
+                          backgroundColor: 'rgba(0, 212, 255, 0.1)',
+                          borderRadius: 1,
+                          border: '1px solid rgba(0, 212, 255, 0.2)'
+                        }}>
+                          <Typography variant="caption" sx={{ 
+                            color: '#0052D4',
+                            fontWeight: 600,
+                            fontSize: { xs: "0.75rem", sm: "0.8125rem" }
+                          }}>
+                            Prescription Details
+                          </Typography>
+                        </Box>
+                        <Box sx={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          px: 1.5,
+                          py: 0.5,
+                          backgroundColor: 'rgba(0, 53, 158, 0.1)',
+                          borderRadius: 1,
+                          border: '1px solid rgba(0, 53, 158, 0.2)'
+                        }}>
+                          <Typography variant="caption" sx={{ 
+                            color: '#00359E',
+                            fontWeight: 600,
+                            fontSize: { xs: "0.75rem", sm: "0.8125rem" }
+                          }}>
+                            Progress Tracking
+                          </Typography>
+                        </Box>
+                        <Box sx={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          px: 1.5,
+                          py: 0.5,
+                          backgroundColor: 'rgba(0, 82, 212, 0.1)',
+                          borderRadius: 1,
+                          border: '1px solid rgba(0, 82, 212, 0.2)'
+                        }}>
+                          <Typography variant="caption" sx={{ 
+                            color: '#0052D4',
+                            fontWeight: 600,
+                            fontSize: { xs: "0.75rem", sm: "0.8125rem" }
+                          }}>
+                            Secure Access
+                          </Typography>
+                        </Box>
+                      </Box>
+                    </Grid>
+                    
+                    <Grid item xs={12} md={4}>
+                      <Button
+                        variant="contained"
+                        fullWidth
+                        startIcon={
+                          <Box sx={{
+                            width: 20,
+                            height: 20,
+                            borderRadius: '50%',
+                            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            mr: 1
+                          }}>
+                            <Healing sx={{ fontSize: 14 }} />
+                          </Box>
+                        }
+                        onClick={() => window.open('https://dashboard.rimo.co/sign-in?returnTo=%2Fstore%2Fthe-liquid-rx', '_blank')}
+                        sx={{
+                          background: 'linear-gradient(135deg, #00359E 0%, #0052D4 50%, #00D4FF 100%)',
+                          borderRadius: 2,
+                          px: 3,
+                          py: 1.5,
+                          fontSize: { xs: "0.875rem", sm: "1rem" },
+                          fontWeight: 700,
+                          boxShadow: '0 8px 20px rgba(0, 53, 158, 0.3)',
+                          textTransform: 'none',
+                          position: 'relative',
+                          overflow: 'hidden',
+                          '&:hover': {
+                            background: 'linear-gradient(135deg, #0052D4 0%, #00359E 50%, #0052D4 100%)',
+                            boxShadow: '0 12px 24px rgba(0, 53, 158, 0.4)',
+                            transform: 'translateY(-2px)',
+                            transition: 'all 0.3s ease'
+                          },
+                          '&::before': {
+                            content: '""',
+                            position: 'absolute',
+                            top: 0,
+                            left: '-100%',
+                            width: '100%',
+                            height: '100%',
+                            background: 'linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent)',
+                            transition: 'left 0.7s ease'
+                          },
+                          '&:hover::before': {
+                            left: '100%'
+                          }
+                        }}
+                      >
+                        Check My Current Plan
+                      </Button>
+                      
+                    </Grid>
+                  </Grid>
                 </Box>
 
-                {/* Optional: Placeholder for future content */}
+                {/* Additional Features Section */}
                 <Box sx={{ mt: { xs: 3, sm: 4 } }}>
                   <Typography 
                     variant="subtitle1" 
                     sx={{ 
                       fontWeight: 600, 
                       color: "#00359E",
-                      mb: 2,
+                      mb: 3,
                       fontSize: { xs: "0.9375rem", sm: "1rem" }
                     }}
                   >
-                    Planned Features:
+                    Additional Features Coming Soon:
                   </Typography>
-                  <Grid container spacing={{ xs: 1, sm: 2 }}>
+                  <Grid container spacing={{ xs: 1.5, sm: 2 }}>
                     <Grid item xs={12} md={6}>
                       <Box sx={{ 
                         p: { xs: 1.5, sm: 2 }, 
-                        borderRadius: 1.5, 
-                        border: "1px solid #e0e0e0", 
-                        backgroundColor: "white" 
+                        borderRadius: 2, 
+                        border: "1px solid rgba(0, 53, 158, 0.1)", 
+                        backgroundColor: "white",
+                        height: '100%',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 16px rgba(0, 53, 158, 0.1)',
+                          borderColor: 'rgba(0, 53, 158, 0.2)'
+                        }
                       }}>
                         <Typography 
                           variant="body2" 
@@ -1410,16 +1549,23 @@ export default function Profile() {
                             fontSize: { xs: "0.8125rem", sm: "0.875rem" }
                           }}
                         >
-                          • Treatment Plans & Progress
+                          • Treatment Plans & Progress Tracking
                         </Typography>
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Box sx={{ 
                         p: { xs: 1.5, sm: 2 }, 
-                        borderRadius: 1.5, 
-                        border: "1px solid #e0e0e0", 
-                        backgroundColor: "white" 
+                        borderRadius: 2, 
+                        border: "1px solid rgba(0, 53, 158, 0.1)", 
+                        backgroundColor: "white",
+                        height: '100%',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 16px rgba(0, 53, 158, 0.1)',
+                          borderColor: 'rgba(0, 53, 158, 0.2)'
+                        }
                       }}>
                         <Typography 
                           variant="body2" 
@@ -1429,16 +1575,23 @@ export default function Profile() {
                             fontSize: { xs: "0.8125rem", sm: "0.875rem" }
                           }}
                         >
-                          • Medication Schedule
+                          • Medication Schedule & Reminders
                         </Typography>
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Box sx={{ 
                         p: { xs: 1.5, sm: 2 }, 
-                        borderRadius: 1.5, 
-                        border: "1px solid #e0e0e0", 
-                        backgroundColor: "white" 
+                        borderRadius: 2, 
+                        border: "1px solid rgba(0, 53, 158, 0.1)", 
+                        backgroundColor: "white",
+                        height: '100%',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 16px rgba(0, 53, 158, 0.1)',
+                          borderColor: 'rgba(0, 53, 158, 0.2)'
+                        }
                       }}>
                         <Typography 
                           variant="body2" 
@@ -1448,16 +1601,23 @@ export default function Profile() {
                             fontSize: { xs: "0.8125rem", sm: "0.875rem" }
                           }}
                         >
-                          • Appointment History
+                          • Appointment History & Notes
                         </Typography>
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={6}>
                       <Box sx={{ 
                         p: { xs: 1.5, sm: 2 }, 
-                        borderRadius: 1.5, 
-                        border: "1px solid #e0e0e0", 
-                        backgroundColor: "white" 
+                        borderRadius: 2, 
+                        border: "1px solid rgba(0, 53, 158, 0.1)", 
+                        backgroundColor: "white",
+                        height: '100%',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 16px rgba(0, 53, 158, 0.1)',
+                          borderColor: 'rgba(0, 53, 158, 0.2)'
+                        }
                       }}>
                         <Typography 
                           variant="body2" 
@@ -1467,11 +1627,45 @@ export default function Profile() {
                             fontSize: { xs: "0.8125rem", sm: "0.875rem" }
                           }}
                         >
-                          • Medical Documents
+                          • Medical Documents & Reports
                         </Typography>
                       </Box>
                     </Grid>
                   </Grid>
+                </Box>
+
+                {/* Security Notice */}
+                <Box sx={{ 
+                  mt: { xs: 3, sm: 4 },
+                  p: { xs: 2, sm: 3 },
+                  borderRadius: 2,
+                  backgroundColor: 'rgba(0, 53, 158, 0.02)',
+                  border: '1px solid rgba(0, 53, 158, 0.1)'
+                }}>
+                  <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5 }}>
+                    <Shield sx={{ color: "#00359E", mt: 0.5, fontSize: 20 }} />
+                    <Box>
+                      <Typography 
+                        variant="body2" 
+                        sx={{ 
+                          fontWeight: 600,
+                          color: "#00359E",
+                          mb: 0.5,
+                          fontSize: { xs: "0.875rem", sm: "0.9375rem" }
+                        }}
+                      >
+                        Secure Connection
+                      </Typography>
+                      <Typography 
+                        variant="caption" 
+                        color="textSecondary"
+                        sx={{ fontSize: { xs: "0.75rem", sm: "0.8125rem" } }}
+                      >
+                        Your treatment plan is accessed through a secure, encrypted connection. 
+                        All personal health information is protected and confidential.
+                      </Typography>
+                    </Box>
+                  </Box>
                 </Box>
               </Box>
             )}

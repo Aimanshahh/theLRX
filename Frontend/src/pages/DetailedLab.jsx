@@ -581,7 +581,7 @@ const FullWidthCurvedBackground = () => {
     {
       img: cardImgWide,
       title: "Comprehensive health tracking",
-      desc: "Monitor 130+ biomarkers including hormones, nutrients, and metabolic health indicators.",
+      desc: "Monitor 60+ biomarkers including hormones, nutrients, and metabolic health indicators.",
       wide: true,
     },
     {
@@ -612,187 +612,187 @@ const FullWidthCurvedBackground = () => {
   const [openFaq, setOpenFaq] = useState(null);
 
   return (
-    <>
-    {/* ================= HERO ================= */}
-<Box
-  sx={{
-    width: "100vw",
-    height: { xs: "500px", sm: "550px", md: "520px", lg: "570px" },
-    position: "relative",
-    left: "50%",
-    ml: "-50vw",
-    borderBottomLeftRadius: { xs: "24px", md: "32px", lg: "40px" },
-    borderBottomRightRadius: { xs: "24px", md: "32px", lg: "40px" },
-    overflow: "hidden",
-  }}
->
-  <Box
-    component="img"
-    src={backgroundImage}
-    alt=""
-    sx={{
-      position: "absolute",
-      inset: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-    }}
-  />
-
-  <Box
-    sx={{
-      position: "relative",
-      zIndex: 2,
-      maxWidth: "1200px",
-      mx: "auto",
-      height: "100%",
-      px: { xs: 2, sm: 3, md: 4, lg: 6 },
-      display: "grid",
-      gridTemplateColumns: { xs: "1fr", lg: "1fr 1.1fr" },
-      alignItems: { xs: "center", lg: "stretch" },
-      gap: { lg: 6 },
-      pt: { xs: "100px", sm: "110px", lg: "80px" },
-    }}
-  >
-    <Box 
-      sx={{ 
-        maxWidth: { xs: "100%", lg: "520px" }, 
-        color: "#fff",
-        alignSelf: { xs: "center", lg: "flex-start" },
-        mt: { xs: 0, lg: "100px" },
-        textAlign: { xs: "center", lg: "left" },
-        px: { xs: 1, sm: 0 },
-      }}
-    >
-      <Typography
+    <Box sx={{ mt: 8 }}>
+      {/* ================= HERO ================= */}
+      <Box
         sx={{
-          fontSize: { xs: "28px", sm: "32px", md: "48px", lg: "62px" },
-          fontWeight: 750,
-          lineHeight: 1.0,
-          mb: 2,
-          letterSpacing: "-0.6px",
+          width: "100vw",
+          height: { xs: "500px", sm: "550px", md: "520px", lg: "570px" },
+          position: "relative",
+          left: "50%",
+          ml: "-50vw",
+          borderBottomLeftRadius: { xs: "24px", md: "32px", lg: "40px" },
+          borderBottomRightRadius: { xs: "24px", md: "32px", lg: "40px" },
+          overflow: "hidden",
         }}
       >
-        Advanced insights
-        <br />
-        for better health
-      </Typography>
-
-      <Typography
-        sx={{
-          fontSize: { xs: "14px", sm: "15px" },
-          opacity: 0.9,
-          lineHeight: 1.7,
-          maxWidth: { xs: "100%", sm: "90%", lg: "460px" },
-          mx: { xs: "auto", lg: 0 },
-          px: { xs: 1, sm: 0 },
-        }}
-      >
-        Annual lab test of 130+ biomarkers, checking for indicators of
-        1,000+ conditions*—all for just $499 per year.
-      </Typography>
-    </Box>
-
-    <Stack
-      direction={{ xs: "row", md: "row", lg: "row" }}
-      spacing={{ xs: 1.5, sm: 2, md: 2, lg: 2 }}
-      sx={{
-        display: "flex",
-        justifyContent: { xs: "center", lg: "flex-end" },
-        alignSelf: { xs: "center", lg: "flex-end" },
-        mb: { xs: "40px", sm: "40px", lg: "80px" },
-        position: "relative",
-        top: { xs: "0", lg: "60px" },
-        width: { xs: "100%", lg: "auto" },
-        maxWidth: { xs: "500px", sm: "600px", md: "700px", lg: "none" },
-        flexWrap: { xs: "wrap", md: "nowrap" },
-        gap: { xs: 1.5, sm: 2, md: 2, lg: 2 },
-      }}
-    >
-      {[
-        {
-          title: "130+ lab tests",
-          desc: "Check indicators of 1,000+ conditions*",
-        },
-        { title: "2x per year", desc: "Track progress over time" },
-        { title: "No insurance", desc: "Clear, upfront costs" },
-      ].map((item, i) => (
         <Box
-          key={i}
+          component="img"
+          src={backgroundImage}
+          alt=""
           sx={{
-            // Small screens: square cards
-            width: { 
-              xs: "110px", 
-              sm: "120px", 
-              md: "180px", 
-              lg: "200px" 
-            },
-            height: { 
-              xs: "110px", 
-              sm: "120px", 
-              md: "130px", 
-              lg: "145px" 
-            },
-            p: { 
-              xs: 1.5, 
-              sm: 2, 
-              md: 2, 
-              lg: 2.5 
-            },
-            borderRadius: { 
-              xs: "14px", 
-              sm: "16px", 
-              md: "16px", 
-              lg: "20px" 
-            },
-            background:
-              "linear-gradient(180deg, rgba(80,160,200,0.35), rgba(40,120,160,0.25))",
-            backdropFilter: "blur(16px)",
-            WebkitBackdropFilter: "blur(16px)",
-            border: "1px solid rgba(255,255,255,0.18)",
-            color: "#fff",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            flexShrink: 0,
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: "1200px",
+            mx: "auto",
+            height: "100%",
+            px: { xs: 2, sm: 3, md: 4, lg: 6 },
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", lg: "1fr 1.1fr" },
+            alignItems: { xs: "center", lg: "stretch" },
+            gap: { lg: 6 },
+            pt: { xs: "100px", sm: "110px", lg: "80px" },
           }}
         >
-          <Typography
-            sx={{
-              fontWeight: 700,
-              fontSize: { 
-                xs: "13px", 
-                sm: "14px", 
-                md: "15px", 
-                lg: "16px" 
-              },
-              lineHeight: 1.2,
-              textAlign: { xs: "center", sm: "center", md: "left", lg: "left" },
+          <Box 
+            sx={{ 
+              maxWidth: { xs: "100%", lg: "520px" }, 
+              color: "#fff",
+              alignSelf: { xs: "center", lg: "flex-start" },
+              mt: { xs: 0, lg: "100px" },
+              textAlign: { xs: "center", lg: "left" },
+              px: { xs: 1, sm: 0 },
             }}
           >
-            {item.title}
-          </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "28px", sm: "32px", md: "48px", lg: "62px" },
+                fontWeight: 750,
+                lineHeight: 1.0,
+                mb: 2,
+                letterSpacing: "-0.6px",
+              }}
+            >
+              Advanced insights
+              <br />
+              for better health
+            </Typography>
 
-          <Typography
+            <Typography
+              sx={{
+                fontSize: { xs: "14px", sm: "15px" },
+                opacity: 0.9,
+                lineHeight: 1.7,
+                maxWidth: { xs: "100%", sm: "90%", lg: "460px" },
+                mx: { xs: "auto", lg: 0 },
+                px: { xs: 1, sm: 0 },
+              }}
+            >
+              Annual lab test of 60+ biomarkers, checking for indicators of
+              1,000+ conditions*. Plus, personalized insights and expert guidance to help you take control of your health.
+            </Typography>
+          </Box>
+
+          <Stack
+            direction={{ xs: "row", md: "row", lg: "row" }}
+            spacing={{ xs: 1.5, sm: 2, md: 2, lg: 2 }}
             sx={{
-              fontSize: { 
-                xs: "11px", 
-                sm: "12px", 
-                md: "12px", 
-                lg: "13px" 
-              },
-              opacity: 0.85,
-              lineHeight: 1.4,
-              textAlign: { xs: "center", sm: "center", md: "left", lg: "left" },
+              display: "flex",
+              justifyContent: { xs: "center", lg: "flex-end" },
+              alignSelf: { xs: "center", lg: "flex-end" },
+              mb: { xs: "40px", sm: "40px", lg: "80px" },
+              position: "relative",
+              top: { xs: "0", lg: "60px" },
+              width: { xs: "100%", lg: "auto" },
+              maxWidth: { xs: "500px", sm: "600px", md: "700px", lg: "none" },
+              flexWrap: { xs: "wrap", md: "nowrap" },
+              gap: { xs: 1.5, sm: 2, md: 2, lg: 2 },
             }}
           >
-            {item.desc}
-          </Typography>
+            {[
+              {
+                title: "60+ lab tests",
+                desc: "Check indicators of 1,000+ conditions*",
+              },
+              { title: "2x per year", desc: "Track progress over time" },
+              { title: "No insurance", desc: "Clear, upfront costs" },
+            ].map((item, i) => (
+              <Box
+                key={i}
+                sx={{
+                  // Small screens: square cards
+                  width: { 
+                    xs: "110px", 
+                    sm: "120px", 
+                    md: "180px", 
+                    lg: "200px" 
+                  },
+                  height: { 
+                    xs: "110px", 
+                    sm: "120px", 
+                    md: "130px", 
+                    lg: "145px" 
+                  },
+                  p: { 
+                    xs: 1.5, 
+                    sm: 2, 
+                    md: 2, 
+                    lg: 2.5 
+                  },
+                  borderRadius: { 
+                    xs: "14px", 
+                    sm: "16px", 
+                    md: "16px", 
+                    lg: "20px" 
+                  },
+                  background:
+                    "linear-gradient(180deg, rgba(80,160,200,0.35), rgba(40,120,160,0.25))",
+                  backdropFilter: "blur(16px)",
+                  WebkitBackdropFilter: "blur(16px)",
+                  border: "1px solid rgba(255,255,255,0.18)",
+                  color: "#fff",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                  flexShrink: 0,
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: { 
+                      xs: "13px", 
+                      sm: "14px", 
+                      md: "15px", 
+                      lg: "16px" 
+                    },
+                    lineHeight: 1.2,
+                    textAlign: { xs: "center", sm: "center", md: "left", lg: "left" },
+                  }}
+                >
+                  {item.title}
+                </Typography>
+
+                <Typography
+                  sx={{
+                    fontSize: { 
+                      xs: "11px", 
+                      sm: "12px", 
+                      md: "12px", 
+                      lg: "13px" 
+                    },
+                    opacity: 0.85,
+                    lineHeight: 1.4,
+                    textAlign: { xs: "center", sm: "center", md: "left", lg: "left" },
+                  }}
+                >
+                  {item.desc}
+                </Typography>
+              </Box>
+            ))}
+          </Stack>
         </Box>
-      ))}
-    </Stack>
-  </Box>
-</Box>
+      </Box>
 
       {/* ================= SNAPSHOT HEADLINE ================= */}
       <Box
@@ -1237,83 +1237,52 @@ const FullWidthCurvedBackground = () => {
               mt: { xs: 3, sm: 4, md: 5, lg: 6 },
             }}
           >
-            Join the over 2 million strong achieving better health through LRX-day to day, test to test.
+            Join the over 2 million customers achieving better health through LiquidRX-day to day, test to test.
           </Typography>
         </Box>
       </Box>
 
-      {/* STAT CARDS */}
+      {/* ================= STAT CARDS SECTION (Fixed Responsive Issues) ================= */}
       <Box
         sx={{
           maxWidth: "1200px",
           mx: "auto",
           px: { xs: 2, sm: 3, md: 4, lg: 5 },
           py: { xs: 2, sm: 3, md: 4, lg: 5 },
-          display: "grid",
-          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          width: "100%",
         }}
       >
         {/* TOP ROW – SMALLER WIDTH CARDS */}
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "1fr 1fr" },
-            gap: { xs: 2, md: "2px" },
+            gridTemplateColumns: { 
+              xs: "1fr", 
+              sm: "1fr 1fr",
+              md: "1fr 1fr" 
+            },
+            gap: { xs: 2, sm: 3, md: "2px" },
             position: "relative",
             zIndex: 2,
             mb: { xs: "-20px", sm: "-30px", md: "-50px", lg: "-70px" },
-            width: { xs: "100%", sm: "95%", md: "90%" },
-            mx: "auto",
+            width: "100%",
+            maxWidth: { xs: "100%", sm: "95%", md: "90%" },
           }}
         >
           <Box
             sx={{
               backgroundColor: "#eceeef",
               borderRadius: { xs: "16px", md: "18px", lg: "20px" },
-              aspectRatio: "3 / 2",
+              aspectRatio: { xs: "3 / 2", md: "3 / 2" },
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
               textAlign: "center",
-              px: { xs: 1, sm: 1.5 },
-              py: { xs: 2, md: 0 },
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: { xs: 16, sm: 20, md: 28, lg: 38 },
-                fontWeight: 800,
-                lineHeight: 1,
-                color: "#00359E",
-                mb: 0.3,
-              }}
-            >
-              2.4 million+
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: 10, sm: 12, md: 14, lg: 16 },
-                fontWeight: 600,
-                color: "#00359E",
-                maxWidth: { xs: 120, sm: 140, md: 160 },
-                mx: "auto",
-              }}
-            >
-              customers trust care through LiquidRX<sup>1</sup>
-            </Typography>
-          </Box>
-
-          <Box
-            sx={{
-              backgroundColor: "#eceeef",
-              borderRadius: { xs: "16px", md: "18px", lg: "20px" },
-              aspectRatio: "3 / 2",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              textAlign: "center",
-              px: { xs: 1, sm: 1.5 },
-              py: { xs: 2, md: 0 },
+              px: { xs: 2, sm: 3, md: 1.5 },
+              py: { xs: 3, sm: 4, md: 0 },
             }}
           >
             <Typography
@@ -1322,7 +1291,44 @@ const FullWidthCurvedBackground = () => {
                 fontWeight: 800,
                 lineHeight: 1.1,
                 color: "#00359E",
-                px: 1,
+                mb: 1,
+              }}
+            >
+              Good health is the most trusted asset in the world.
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: 10, sm: 12, md: 14, lg: 16 },
+                fontWeight: 600,
+                color: "#00359E",
+                maxWidth: { xs: "100%", sm: "80%", md: "160px" },
+                mx: "auto",
+              }}
+            >
+              customers trust care through LiquidRX
+            </Typography>
+          </Box>
+
+          <Box
+            sx={{
+              backgroundColor: "#eceeef",
+              borderRadius: { xs: "16px", md: "18px", lg: "20px" },
+              aspectRatio: { xs: "3 / 2", md: "3 / 2" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              textAlign: "center",
+              px: { xs: 2, sm: 3, md: 1.5 },
+              py: { xs: 3, sm: 4, md: 0 },
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: 18, sm: 20, md: 24, lg: 32 },
+                fontWeight: 800,
+                lineHeight: 1.1,
+                color: "#00359E",
+                px: { xs: 1, sm: 2 },
               }}
             >
               Doctor-trusted
@@ -1335,13 +1341,17 @@ const FullWidthCurvedBackground = () => {
         {/* CENTER CARD */}
         <Box
           sx={{
-            width: { xs: "100%", sm: "95%", md: "90%" },
-            aspectRatio: { xs: "3 / 2", sm: "3 / 1.5", md: "3 / 1.1" },
+            width: "100%",
+            maxWidth: { xs: "100%", sm: "95%", md: "90%" },
+            aspectRatio: { 
+              xs: "3 / 2", 
+              sm: "3 / 1.5", 
+              md: "3 / 1.1" 
+            },
             borderRadius: { xs: "16px", md: "18px", lg: "20px" },
             overflow: "hidden",
             position: "relative",
             zIndex: 1,
-            mx: "auto",
           }}
         >
           <Box
@@ -1360,35 +1370,39 @@ const FullWidthCurvedBackground = () => {
         <Box
           sx={{
             display: "grid",
-            gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "1fr 1fr" },
-            gap: { xs: 2, md: "2px" },
+            gridTemplateColumns: { 
+              xs: "1fr", 
+              sm: "1fr 1fr",
+              md: "1fr 1fr" 
+            },
+            gap: { xs: 2, sm: 3, md: "2px" },
             position: "relative",
             zIndex: 2,
             mt: { xs: "-20px", sm: "-30px", md: "-50px", lg: "-70px" },
-            width: { xs: "100%", sm: "95%", md: "90%" },
-            mx: "auto",
+            width: "100%",
+            maxWidth: { xs: "100%", sm: "95%", md: "90%" },
           }}
         >
           <Box
             sx={{
               backgroundColor: "#eceeef",
               borderRadius: { xs: "16px", md: "18px", lg: "20px" },
-              aspectRatio: "3 / 2",
+              aspectRatio: { xs: "3 / 2", md: "3 / 2" },
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               textAlign: "center",
-              px: { xs: 1, sm: 1.5 },
-              py: { xs: 2, md: 0 },
+              px: { xs: 2, sm: 3, md: 1.5 },
+              py: { xs: 3, sm: 4, md: 0 },
             }}
           >
             <Typography
               sx={{
-                fontSize: { xs: 16, sm: 18, md: 24, lg: 32 },
+                fontSize: { xs: 18, sm: 20, md: 24, lg: 32 },
                 fontWeight: 800,
                 lineHeight: 1.1,
                 color: "#00359E",
-                px: 1,
+                px: { xs: 1, sm: 2 },
               }}
             >
               Provider
@@ -1401,14 +1415,14 @@ const FullWidthCurvedBackground = () => {
             sx={{
               backgroundColor: "#eceeef",
               borderRadius: { xs: "16px", md: "18px", lg: "20px" },
-              aspectRatio: "3 / 2",
+              aspectRatio: { xs: "3 / 2", md: "3 / 2" },
               position: "relative",
               overflow: "hidden",
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-start",
-              px: { xs: 2, sm: 3 },
-              pt: { xs: 2, sm: 3 },
+              px: { xs: 2, sm: 3, md: 3 },
+              pt: { xs: 3, sm: 4, md: 3 },
             }}
           >
             <Box
@@ -1416,16 +1430,15 @@ const FullWidthCurvedBackground = () => {
                 position: "relative",
                 zIndex: 2,
                 width: "100%",
-                textAlign: "left",
+                textAlign: { xs: "left", md: "left" },
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { xs: 18, sm: 24, md: 32, lg: 42 },
+                  fontSize: { xs: 18, sm: 20, md: 24, lg: 32 },
                   fontWeight: 800,
                   lineHeight: 1.1,
                   color: "#00359E",
-                  textAlign: "left",
                 }}
                 >
                 In-app
@@ -1440,10 +1453,10 @@ const FullWidthCurvedBackground = () => {
               alt="In-app content"
               sx={{
                 position: "absolute",
-                right: "0%",
-                bottom: "0%",
-                height: { xs: "180%", md: "200%" },
-                width: { xs: "65%", md: "70%" },
+                right: { xs: "-5%", sm: "-10%", md: "0%" },
+                bottom: { xs: "-5%", sm: "-10%", md: "0%" },
+                height: { xs: "160%", sm: "160%", md: "200%" },
+                width: { xs: "80%", sm: "75%", md: "70%" },
                 objectFit: "contain",
                 objectPosition: "right bottom",
                 pointerEvents: "none",
@@ -1478,17 +1491,17 @@ const FullWidthCurvedBackground = () => {
         {/* ================= HUGE FULL-WIDTH TALL IMAGE ================= */}
         <Box
           sx={{
-            width: "100vw",
+            width: { xs: "calc(100vw - 3px)", sm: "calc(100vw - 48px)", md: "calc(100vw - 44px)", lg: "100vw" },
             height: {
-              xs: "40vh",
-              sm: "50vh",
+              xs: "47vh",
+              sm: "55vh",
               md: "70vh",
               lg: "90vh",
               xl: "100vh",
             },
             position: "relative",
-            left: "50%",
-            marginLeft: "-50vw",
+            left: { xs: "-1px", sm: "-24px", md: "2px", lg: "28%" },
+            marginLeft: { xs: 0, lg: "-50vw" },
             overflow: "hidden",
             borderRadius: { xs: "0px", sm: "16px", md: "24px", lg: "32px" },
             mt: { xs: 6, sm: 8, md: 10, lg: 12 },
@@ -1515,12 +1528,14 @@ const FullWidthCurvedBackground = () => {
             display: "flex",
             justifyContent: "center",
             bgcolor: "#fff",
-            px: 2,
+            px: { xs: 2, sm: 3 },
+            width: "100%",
           }}
         >
           <Box sx={{ 
             textAlign: "center", 
             maxWidth: "1100px", 
+            width: "100%",
             px: { xs: 2, sm: 3, md: 4, lg: 6 } 
           }}>
             <Typography
@@ -1554,11 +1569,11 @@ const FullWidthCurvedBackground = () => {
           </Box>
         </Box>
 
-        {/* 5 CARDS IMAGE */}
+        {/* ================= 5 CARDS IMAGE SECTION (Fixed Responsive Issues) ================= */}
         <Box
           sx={{
             width: "100%",
-            maxWidth: "1000px",
+            maxWidth: { xs: "100%", sm: "95%", md: "1000px" },
             mx: "auto",
             px: { xs: 1, sm: 2, md: 3 },
           }}
@@ -1567,14 +1582,12 @@ const FullWidthCurvedBackground = () => {
           <Box
             sx={{
               width: "100%",
-              height: { xs: "400px", sm: "500px", md: "600px", lg: "700px", xl: "750px" },
-              maxWidth: "1000px",
-              mx: "auto",
+              height: { xs: "300px", sm: "400px", md: "500px", lg: "600px", xl: "700px" },
               borderRadius: { xs: "16px", md: "18px", lg: "20px" },
               backgroundColor: "#ECEEEF",
               overflow: "hidden",
               position: "relative",
-              mb: { xs: 1, md: 0.5 },
+              mb: { xs: 2, md: 0.5 },
             }}
           >
             <Box
@@ -1583,12 +1596,12 @@ const FullWidthCurvedBackground = () => {
               alt=""
               sx={{
                 position: "absolute",
-                bottom: { xs: "-40px", sm: "-60px", md: "-80px", lg: "-90px" },
+                bottom: { xs: "-30px", sm: "-40px", md: "-60px", lg: "-80px" },
                 left: "50%",
                 transform: "translateX(-50%)",
-                height: { xs: "500px", sm: "650px", md: "800px", lg: "900px" },
+                height: { xs: "350px", sm: "450px", md: "550px", lg: "700px" },
                 width: "auto",
-                maxWidth: { xs: "100%", sm: "90%", md: "1380px" },
+                maxWidth: { xs: "95%", sm: "90%", md: "85%" },
                 objectFit: "contain",
               }}
             />
@@ -1598,18 +1611,21 @@ const FullWidthCurvedBackground = () => {
           <Box
             sx={{
               display: "grid",
-              gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "1fr 1fr" },
-              gap: { xs: 1, md: 0.5 },
-              maxWidth: "1000px",
-              mx: "auto",
-              mt: { xs: 1, md: 0.5 },
+              gridTemplateColumns: { 
+                xs: "1fr", 
+                sm: "1fr", 
+                md: "1fr 1fr" 
+              },
+              gap: { xs: 2, sm: 3, md: 0.5 },
+              width: "100%",
+              mt: { xs: 2, md: 0.5 },
             }}
           >
             {/* CARD 1 */}
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "350px", sm: "400px", md: "450px", lg: "500px", xl: "550px" },
+                height: { xs: "300px", sm: "350px", md: "400px", lg: "450px" },
                 borderRadius: { xs: "14px", md: "16px" },
                 backgroundColor: "#ECEEEF",
                 overflow: "hidden",
@@ -1622,9 +1638,9 @@ const FullWidthCurvedBackground = () => {
             >
               <Typography
                 sx={{
-                  fontSize: { xs: "22px", sm: "26px", md: "32px", lg: "38px", xl: "42px" },
+                  fontSize: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
                   fontWeight: 770,
-                  lineHeight: 1,
+                  lineHeight: 1.1,
                   mb: { xs: 2, md: 3 },
                   background: "linear-gradient(90deg, #8B8D8E 0%, #00359E 50%, #003B9D 100%)",
                   WebkitBackgroundClip: "text",
@@ -1637,8 +1653,8 @@ const FullWidthCurvedBackground = () => {
 
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "18px", lg: "20px" },
-                  lineHeight: 1,
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  lineHeight: 1.2,
                   color: "#000",
                   mb: 1.5,
                 }}
@@ -1648,8 +1664,8 @@ const FullWidthCurvedBackground = () => {
 
               <Typography
                 sx={{
-                  fontSize: { xs: "18px", sm: "22px", md: "24px", lg: "26px", xl: "28px" },
-                  lineHeight: 1,
+                  fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "22px" },
+                  lineHeight: 1.2,
                   color: "#000",
                   mb: 1.5,
                 }}
@@ -1659,8 +1675,8 @@ const FullWidthCurvedBackground = () => {
 
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "18px", lg: "20px" },
-                  lineHeight: 1,
+                  fontSize: { xs: "14px", sm: "16px", md: "18px" },
+                  lineHeight: 1.2,
                   color: "#000",
                 }}
               >
@@ -1672,7 +1688,7 @@ const FullWidthCurvedBackground = () => {
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "350px", sm: "400px", md: "450px", lg: "500px", xl: "550px" },
+                height: { xs: "300px", sm: "350px", md: "400px", lg: "450px" },
                 borderRadius: { xs: "14px", md: "16px" },
                 backgroundColor: "#ECEEEF",
                 overflow: "hidden",
@@ -1688,9 +1704,9 @@ const FullWidthCurvedBackground = () => {
                   top: "40%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
-                  height: { xs: "250px", sm: "300px", md: "350px", lg: "400px" },
+                  height: { xs: "200px", sm: "250px", md: "300px", lg: "350px" },
                   width: "auto",
-                  maxWidth: { xs: "90%", md: "80%" },
+                  maxWidth: { xs: "85%", sm: "80%", md: "75%" },
                   objectFit: "contain",
                 }}
               />
@@ -1698,16 +1714,16 @@ const FullWidthCurvedBackground = () => {
               <Box
                 sx={{
                   position: "absolute",
-                  bottom: { xs: "16px", md: "20px", lg: "24px" },
-                  left: { xs: "16px", md: "20px", lg: "24px" },
-                  right: { xs: "16px", md: "20px", lg: "24px" },
+                  bottom: { xs: "16px", sm: "20px", md: "24px" },
+                  left: { xs: "16px", sm: "20px", md: "24px" },
+                  right: { xs: "16px", sm: "20px", md: "24px" },
                 }}
               >
                 <Typography
                   sx={{
-                    fontSize: { xs: "20px", sm: "24px", md: "26px", lg: "28px" },
+                    fontSize: { xs: "18px", sm: "20px", md: "22px", lg: "24px" },
                     fontWeight: 760,
-                    lineHeight: 1,
+                    lineHeight: 1.1,
                     mb: 1,
                     color: "#000",
                   }}
@@ -1717,7 +1733,7 @@ const FullWidthCurvedBackground = () => {
                 
                 <Typography
                   sx={{
-                    fontSize: { xs: "14px", sm: "16px", md: "17px", lg: "19px" },
+                    fontSize: { xs: "12px", sm: "14px", md: "15px", lg: "16px" },
                     lineHeight: 1.3,
                     color: "#000",
                   }}
@@ -1731,7 +1747,7 @@ const FullWidthCurvedBackground = () => {
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "350px", sm: "400px", md: "450px", lg: "500px", xl: "550px" },
+                height: { xs: "300px", sm: "350px", md: "400px", lg: "450px" },
                 borderRadius: { xs: "14px", md: "16px" },
                 backgroundColor: "#ECEEEF",
                 overflow: "hidden",
@@ -1747,7 +1763,7 @@ const FullWidthCurvedBackground = () => {
                   top: 0,
                   left: 0,
                   width: "100%",
-                  height: "105%",
+                  height: "100%",
                   objectFit: "cover",
                 }}
               />
@@ -1757,7 +1773,7 @@ const FullWidthCurvedBackground = () => {
             <Box
               sx={{
                 width: "100%",
-                height: { xs: "350px", sm: "400px", md: "450px", lg: "500px", xl: "550px" },
+                height: { xs: "300px", sm: "350px", md: "400px", lg: "450px" },
                 borderRadius: { xs: "14px", md: "16px" },
                 backgroundColor: "#ECEEEF",
                 overflow: "hidden",
@@ -1770,9 +1786,9 @@ const FullWidthCurvedBackground = () => {
                 alt=""
                 sx={{
                   position: "absolute",
-                  top: { xs: -10, md: -15, lg: -20 },
+                  top: { xs: 0, md: -10, lg: -15 },
                   left: 0,
-                  width: "110%",
+                  width: "100%",
                   height: "110%",
                   objectFit: "cover",
                 }}
@@ -1788,11 +1804,12 @@ const FullWidthCurvedBackground = () => {
             mx: "auto",
             px: { xs: 2, sm: 3, md: 4, lg: 6 },
             py: { xs: 6, sm: 8, md: 10, lg: 14 },
+            width: "100%",
           }}
         >
           <Typography
             sx={{
-              fontSize: { xs: "32px", sm: "40px", md: "50px", lg: "60px", xl: "70px" },
+              fontSize: { xs: "28px", sm: "32px", md: "40px", lg: "48px", xl: "56px" },
               fontWeight: 600,
               lineHeight: 1.1,
               letterSpacing: "-0.02em",
@@ -1809,11 +1826,11 @@ const FullWidthCurvedBackground = () => {
 
           <Typography
             sx={{
-              fontSize: { xs: "16px", sm: "17px", lg: "18px" },
+              fontSize: { xs: "14px", sm: "15px", md: "16px", lg: "17px" },
               lineHeight: 1.5,
               color: "rgba(0,0,0,0.75)",
               textAlign: "center",
-              maxWidth: { xs: "100%", sm: "500px", md: "600px" },
+              maxWidth: { xs: "100%", sm: "90%", md: "600px" },
               mx: "auto",
               mb: { xs: 4, md: 6 },
             }}
@@ -1825,6 +1842,7 @@ const FullWidthCurvedBackground = () => {
             sx={{
               maxWidth: "800px",
               mx: "auto",
+              width: "100%",
             }}
           >
             {[
@@ -1893,7 +1911,7 @@ const FullWidthCurvedBackground = () => {
                 >
                   <Typography
                     sx={{
-                      fontSize: { xs: "16px", sm: "17px", md: "18px" },
+                      fontSize: { xs: "14px", sm: "15px", md: "16px", lg: "17px" },
                       fontWeight: 600,
                       color: "#00359E",
                       pr: 2,
@@ -1924,7 +1942,7 @@ const FullWidthCurvedBackground = () => {
                 >
                   <Typography
                     sx={{
-                      fontSize: { xs: "14px", sm: "15px", md: "16px" },
+                      fontSize: { xs: "13px", sm: "14px", md: "15px" },
                       lineHeight: 1.6,
                       color: "rgba(0,0,0,0.75)",
                     }}
@@ -1939,10 +1957,10 @@ const FullWidthCurvedBackground = () => {
           <Box sx={{ mt: { xs: 4, md: 6 }, textAlign: "center" }}>
             <Typography
               sx={{
-                fontSize: { xs: "12px", sm: "13px", md: "14px" },
+                fontSize: { xs: "11px", sm: "12px", md: "13px" },
                 color: "#747578",
                 fontStyle: "italic",
-                maxWidth: { xs: "100%", sm: "600px", md: "700px" },
+                maxWidth: { xs: "100%", sm: "90%", md: "700px" },
                 mx: "auto",
                 lineHeight: 1.5,
               }}
@@ -1955,7 +1973,7 @@ const FullWidthCurvedBackground = () => {
           </Box>
         </Box>
       </Box>
-    </>
+    </Box>
   );
 };
 
