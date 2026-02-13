@@ -438,7 +438,7 @@ const OverdrivePlus12Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      $297 first month for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
+complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>
@@ -1230,7 +1230,7 @@ const OverdrivePlus12Page = () => {
                 }}
               >
                 12-tablet pack • Compounded medication (Tadalafil /Bremelanotide /Pycnogenol) • Telehealth consultation required •
-                $297 first month treatment program • Ships to all 50 states • 24/7/365 ordering
+                 per month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>

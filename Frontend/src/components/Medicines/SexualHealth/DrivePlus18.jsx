@@ -521,7 +521,7 @@ const DrivePlus18Page = () => {
                       value: "$297", 
                       color: "#00359E",
                       description: "Full program access",
-                      trend: "First month $239"
+                      trend: "per month $239"
                     },
                     { 
                       label: "Patient Satisfaction", 
@@ -1167,7 +1167,7 @@ const DrivePlus18Page = () => {
                     fontSize: "1.1rem"
                   }}
                 >
-                  first month (Regularly $297/month)
+                  per month (Regularly $297/month)
                 </Typography>
               </Box>
               

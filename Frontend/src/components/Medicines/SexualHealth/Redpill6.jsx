@@ -451,7 +451,6 @@ const Redpill6Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    $297 First Month
                   </Typography>
                   <Typography
                     sx={{

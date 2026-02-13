@@ -77,10 +77,8 @@ const BPC157Page = () => {
     ],
     kitIncludes: [
       " of pharmaceutical-grade BPC-157 (Body Protection Compound-157)",
-      "Bacteriostatic water for injection included",
       "Sterile insulin syringes with ultra-fine needles",
       "Comprehensive subcutaneous injection guide",
-      "Alcohol swabs and sharps container",
       "Personalized dosing protocol under medical supervision",
       "Access to clinical support team for guidance"
     ],
@@ -92,7 +90,7 @@ const BPC157Page = () => {
     pepProgram: {
       title: "Precision Energy Program (PEP)",
       price: "189",
-      description: "first month - Designed to elevate cellular vitality and metabolic performance, the Precision Energy Program uses targeted peptides to restore balance, enhance recovery, and help you feel effortlessly energized throughout your day."
+      description: "per month - Designed to elevate cellular vitality and metabolic performance, the Precision Energy Program uses targeted peptides to restore balance, enhance recovery, and help you feel effortlessly energized throughout your day."
     },
     disclaimer: "BPC-157 is a research peptide with demonstrated properties in preclinical studies. It is not FDA-approved for human therapeutic use and should be used under medical supervision for research purposes. May interact with certain medications. Not for use by pregnant or nursing women. Discontinue use if adverse reactions occur. Individual results in clinical settings continue to be studied."
   };
@@ -437,7 +435,7 @@ const BPC157Page = () => {
       </Box>
 
       {/* ================= HOW IT WORKS SECTION ================= */}
-      <Box sx={{ width: "100%", py: { xs: 10, md: 16 }, bgcolor: palette.white, position: "relative", overflow: "hidden" }}>
+    <Box sx={{ width: "100%", py: { xs: 10, md: 16 }, bgcolor: palette.white, position: "relative", overflow: "hidden" }}>
         <Box sx={{ position: "absolute", top: "10%", left: "5%", width: "300px", height: "300px", borderRadius: "50%", background: `radial-gradient(circle, ${palette.darkBlue}05 0%, transparent 70%)`, filter: "blur(40px)" }} />
         <Box sx={{ position: "absolute", bottom: "10%", right: "5%", width: "250px", height: "250px", borderRadius: "50%", background: `radial-gradient(circle, ${palette.lightBlue}05 0%, transparent 70%)`, filter: "blur(40px)" }} />
 
@@ -449,7 +447,7 @@ const BPC157Page = () => {
               </Typography>
               <Typography sx={{ fontSize: { xs: "36px", md: "52px" }, fontWeight: 900, color: palette.black, mb: 3, lineHeight: 1.1 }}>
                 Easy as{" "}
-                <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>1 - 2 - 3</Box>
+                <Box component="span" sx={{ color: palette.darkBlue, ml: 1 }}>1 → 2 → Go</Box>
               </Typography>
               <Typography sx={{ fontSize: { xs: "18px", md: "20px" }, color: palette.darkGrey, maxWidth: "700px", mx: "auto", lineHeight: 1.6 }}>
                 LiquidRx makes it easy to get started with our comprehensive peptide therapy program
@@ -457,7 +455,14 @@ const BPC157Page = () => {
             </Box>
           </motion.div>
 
-          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" }, gap: { xs: 6, md: 4 }, mb: { xs: 8, md: 12 } }}>
+          <Box sx={{ 
+            display: "grid", 
+            gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" }, 
+            gap: { xs: 6, md: 4 }, 
+            mb: { xs: 8, md: 12 },
+            maxWidth: { md: "800px" },
+            mx: "auto"
+          }}>
             {pepSteps.map((item, index) => (
               <motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.1 }}>
                 <Box sx={{ p: { xs: 3, md: 4 }, backgroundColor: palette.white, borderRadius: "24px", border: `1px solid ${palette.darkGrey}10`, boxShadow: "0 15px 40px rgba(0, 53, 158, 0.08)", transition: "all 0.4s ease", position: "relative", overflow: "hidden", height: "100%", "&:hover": { transform: { md: "translateY(-8px)" }, boxShadow: "0 25px 60px rgba(0, 53, 158, 0.15)", borderColor: `${palette.darkBlue}40` } }}>

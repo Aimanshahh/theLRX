@@ -197,7 +197,7 @@ export default function HeroBanner() {
       <br></br>
       <TallBackgroundSection />
       <Fourcard />
-      <Carousal /> 
+      {/* <Carousal />  */}
       <br></br>
       {/* <LongCard /> */}
       <Accordion />

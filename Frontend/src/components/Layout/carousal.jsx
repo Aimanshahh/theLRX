@@ -1,257 +1,280 @@
-// CarousalWithCards.jsx
 import React from "react";
-import {
-  Box,
-  Card,
-  CardMedia,
-  Typography,
-  Button,
-  useTheme,
-  useMediaQuery,
-} from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Box, Typography } from "@mui/material";
 
+// Your original images
 import weightLossImg from "../../assets/Carousal/img4.jpg";
 import fitnessImg from "../../assets/Carousal/img2.jpg";
 import recedingHairImg from "../../assets/Carousal/img5.jpg";
 
-const carouselData = [
-  { title: "Learn more about weight loss", image: weightLossImg },
-  { title: "How long does Minoxidil take to work?", image: fitnessImg },
-  { title: "Hair regrowth that works", image: recedingHairImg },
+// Brand colours – exactly as used in AboutUs
+const brand = {
+  darkBlue: "#00359E",
+  midBlue: "#003B9D",
+  grey: "#747578",
+  lightGrey: "#8B8D8E",
+  offWhite: "#FAFAF8",
+  white: "#FFFFFF",
+  black: "#000000",
+  cardBg: "#B0C4DE", // ← your mosaic card background
+};
+
+const topics = [
+  {
+    id: 1,
+    title: "Weight Loss",
+    description: "Personalized GLP‑1 protocols. Compounded for your biology.",
+    image: weightLossImg,
+  },
+  {
+    id: 2,
+    title: "Minoxidil & Hair Regrowth",
+    description: "Formulated with azelaic acid for enhanced follicular delivery.",
+    image: fitnessImg,
+  },
+  {
+    id: 3,
+    title: "Hair Regrowth That Works",
+    description: "Multi‑pathway approach: topical + oral + peptide support.",
+    image: recedingHairImg,
+  },
 ];
 
-const issuesData = [
-  { title: "Premature Ejaculation" },
-  { title: "Erectile Dysfunction" },
-  { title: "Intimacy Boost" },
-  { title: "Hair Loss" },
-  { title: "Weight Loss" },
-  { title: "Muscle Building" },
-  { title: "Fatigue & Energy" },
-  { title: "Skin Health" },
-  { title: "Confidence Boost" },
-  { title: "Delayed Ejaculation" },
-  { title: "Metabolism Support" },
-];
-
-
-const CarousalWithCards = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-
-  // SUPER SLOW motion
-  const scrollSpeed = 6; // (lower = slower)
-
-  const settings = {
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: scrollSpeed * 10000, // ✨ ultra slow glide
-    cssEase: "linear",
-    arrows: false,
-    swipe: true,
-    pauseOnHover: true,
-    touchMove: true,
-  };
-
+const HealthMonographGrid = () => {
   return (
-    <Box sx={{ width: "100%", mt: 0, px: 0 }}>
-      {/* ---------------- STATIC HEADING LIKE HIMS ---------------- */}
-      <Box
-        sx={{
-          textAlign: "center",
-          mb: { xs: 4, sm: 6, md: 8 },
-          px: 2,
-        }}
-      >
+    <Box
+      sx={{
+        width: "100%",
+        py: { xs: 8, md: 12 },
+        px: { xs: 2, md: 4 },
+        backgroundColor: brand.offWhite,
+        position: "relative",
+        overflow: "hidden",
+
+        // ---------- DIAGONAL STRIPES (brand signature) ----------
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            ${brand.darkBlue}03 0px,
+            ${brand.darkBlue}03 1px,
+            transparent 1px,
+            transparent 12px
+          )`,
+          zIndex: 1,
+        },
+
+        // ---------- DOTTED DIAGONAL (brand signature) ----------
+        "&::after": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          backgroundImage: `repeating-linear-gradient(
+            45deg,
+            ${brand.darkBlue}08 0px,
+            ${brand.darkBlue}08 1px,
+            transparent 1px,
+            transparent 24px
+          )`,
+          backgroundSize: "20px 20px",
+          zIndex: 1,
+        },
+      }}
+    >
+      {/* ---------- HEADLINE – EXACTLY AS IN ABOUT US ---------- */}
+      <Box sx={{ position: "relative", zIndex: 2, textAlign: "center", mb: { xs: 6, md: 10 } }}>
         <Typography
           sx={{
-            fontSize: {
-  xs: "2.2rem",
-  sm: "2.8rem",
-  md: "3.4rem",
-  lg: "4rem",
-},
-            fontWeight: 700,
+            fontSize: { xs: "2.2rem", sm: "3rem", md: "4rem" },
+            fontWeight: 900,
             lineHeight: 1.1,
             letterSpacing: "-0.02em",
-            display: "inline-block",
+            fontFamily: `"Inter", "Helvetica Neue", Arial, sans-serif`,
+            textTransform: "uppercase",
           }}
         >
-          <Box
-            component="span"
-            sx={{
-              color: "#747578", // Dark grey shade for first half
-            }}
-          >
+          <Box component="span" sx={{ color: brand.grey }}>
             Here's What You&nbsp;
           </Box>
-          <br></br>
+          <br />
           <Box
             component="span"
             sx={{
-              color: "#00359E", // Darker blue shade for second half
+              color: brand.darkBlue,
+              background: `linear-gradient(180deg, ${brand.darkBlue} 0%, ${brand.midBlue} 100%)`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
             Need To Know?
           </Box>
         </Typography>
-      </Box>
-
-      {/* ---------------- HERO CAROUSEL ---------------- */}
-      <Box sx={{ position: "relative", mb: { xs: 1, sm: 2 } }}>
-        <Slider {...settings}>
-          {carouselData.concat(carouselData).map((item, idx) => (
-            <Box key={idx} sx={{ px: { xs: 0.3, sm: 0.4, md: 0.5 } }}>
-              <Card
-                sx={{
-                  width: "100%",
-                  height: {
-                    xs: 330,
-                    sm: 450,
-                    md: 540,
-                    lg: 600,
-                  },
-                  borderRadius: { xs: "12px", sm: "16px" },
-                  overflow: "hidden",
-                  position: "relative",
-                  boxShadow: "0 6px 16px rgba(0,0,0,0.12)",
-                }}
-              >
-                {/* Image */}
-                <CardMedia
-                  component="img"
-                  image={item.image}
-                  sx={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transition: "transform 0.4s ease",
-                    "&:hover": { transform: "scale(1.04)" },
-                  }}
-                />
-
-                {/* Overlay */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    background: "linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.45))",
-                  }}
-                />
-
-                {/* TEXT */}
-                <Typography
-                  sx={{
-                    position: "absolute",
-                    top: { xs: 16, sm: 22, md: 30 },
-                    left: { xs: 16, sm: 22, md: 30 },
-                    fontSize: {
-                      xs: "1.35rem",
-                      sm: "1.8rem",
-                      md: "2.2rem",
-                      lg: "2.4rem",
-                    },
-                    fontWeight: 700,
-                    color: "#fff",
-                    width: { xs: "78%", sm: "65%", md: "55%" },
-                    lineHeight: 1.12,
-                    letterSpacing: "-0.5px",
-                    textShadow: "0 2px 6px rgba(0,0,0,0.5)",
-                  }}
-                >
-                  {item.title}
-                </Typography>
-
-
-              </Card>
-            </Box>
-          ))}
-        </Slider>
-      </Box>
-
-      {/* ---------------- TILES ---------------- */}
-<Box
-  sx={{
-    mt: 1,
-    overflowX: "hidden",
-    position: "relative",
-    py: 0.5,
-    px: { xs: 0.7, sm: 1 },
-    "&:hover .scroll-tiles": { animationPlayState: "paused" },
-  }}
->
-  <Box
-    className="scroll-tiles"
-    sx={{
-      display: "flex",
-      gap: { xs: 1, sm: 1.4 },
-      animation: `scrollTiles ${scrollSpeed * 4}s linear infinite`,
-      width: "max-content",
-    }}
-  >
-    {issuesData.concat(issuesData).map((issue, i) => {
-      const colors = [
-        ["#00359E", "#003B9D"],
-        ["#002F8C", "#0050C1"],
-        ["#747578", "#5A5C5E"],
-        ["#8B8D8E", "#5A5C5E"],
-        ["#0046B3", "#0066E0"],
-        ["#1E2A47", "#00359E"],
-        ["#003B9D", "#0055D4"],
-      ];
-
-      const gradient = colors[i % colors.length];
-
-      return (
-        <Card
-          key={i}
+        <Typography
           sx={{
-            minWidth: { xs: 145, sm: 175, md: 200 },
-            height: { xs: 75, sm: 90, md: 110 },
-            borderRadius: { xs: "12px", sm: "16px" },
-            display: "flex",
-            alignItems: "flex-end",
-            p: { xs: 1.4, sm: 2 },
-            flexShrink: 0,
-            background: `linear-gradient(120deg, ${gradient[0]}, ${gradient[1]})`,
-            color: "#fff",
-            fontWeight: 700,
+            fontFamily: `"Inter", sans-serif`,
+            fontSize: "1rem",
+            color: brand.lightGrey,
+            mt: 2,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            fontWeight: 600,
           }}
         >
-          <Typography
+          From the Formulator's Bench
+        </Typography>
+      </Box>
+
+      {/* ---------- MONOGRAPH GRID – MATCHES YOUR MOSAIC CARDS ---------- */}
+      <Box
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
+          gap: "4px", // exactly like your mosaic gap
+          maxWidth: "1400px",
+          mx: "auto",
+        }}
+      >
+        {topics.map((topic) => (
+          <Box
+            key={topic.id}
             sx={{
-              fontSize: { xs: "0.85rem", sm: "1rem" },
-              fontWeight: 800,
+              position: "relative",
+              borderRadius: { xs: "20px", sm: "24px", md: "28px", lg: "32px" },
+              overflow: "hidden",
+              height: { xs: "280px", sm: "350px", md: "400px", lg: "450px" },
+              width: "100%",
+              backgroundColor: brand.cardBg, // ← your mosaic blue
+              margin: 0,
+              transition: "all 0.3s ease",
+              "&:hover": {
+                transform: "translateY(-4px)",
+                boxShadow: `0 12px 24px ${brand.darkBlue}20`,
+              },
             }}
           >
-            {issue.title}
-          </Typography>
-        </Card>
-      );
-    })}
-  </Box>
+            {/* ---------- IMAGE – BOTTOM RIGHT (EXACT MATCH) ---------- */}
+            <Box
+              component="img"
+              src={topic.image}
+              alt={topic.title}
+              sx={{
+                position: "absolute",
+                bottom: 0,
+                right: 0,
+                height: "100%",
+                width: "auto",
+                objectFit: "contain",
+                objectPosition: "right bottom",
+                zIndex: 1,
+              }}
+            />
 
-  <style>
-    {`
-      @keyframes scrollTiles {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-    `}
-  </style>
-</Box>
+            {/* ---------- NUMBER – TOP LEFT (MONOGRAPH SIGNATURE) ---------- */}
+            <Typography
+              sx={{
+                position: "absolute",
+                top: { xs: 16, sm: 20, md: 24, lg: 28 },
+                left: { xs: 16, sm: 20, md: 24, lg: 28 },
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" },
+                fontWeight: 900,
+                color: brand.white,
+                zIndex: 3,
+                lineHeight: 1,
+                textShadow: `0 2px 8px ${brand.darkBlue}40`,
+                opacity: 0.9,
+                fontFamily: `"Cormorant Garamond", serif`,
+              }}
+            >
+              {String(topic.id).padStart(2, "0")}
+            </Typography>
 
+            {/* ---------- TITLE – GRADIENT TEXT (YOUR STYLE) ---------- */}
+            <Typography
+              sx={{
+                position: "absolute",
+                top: { xs: 70, sm: 80, md: 90, lg: 100 },
+                left: { xs: 16, sm: 20, md: 24, lg: 28 },
+                fontSize: { xs: "1.5rem", sm: "1.8rem", md: "2rem", lg: "2.2rem" },
+                fontWeight: 900,
+                color: brand.black,
+                zIndex: 2,
+                lineHeight: 1.05,
+                maxWidth: { xs: "70%", sm: "65%", md: "60%" },
+                fontFamily: `"Montserrat", "Inter", sans-serif`,
+                letterSpacing: "-0.02em",
+                textTransform: "uppercase",
+                background: `linear-gradient(180deg, ${brand.black} 0%, #333333 100%)`,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              {topic.title}
+            </Typography>
+
+            {/* ---------- DESCRIPTION – SUBTLE, UNDER TITLE ---------- */}
+            <Typography
+              sx={{
+                position: "absolute",
+                top: { xs: 140, sm: 160, md: 180, lg: 200 },
+                left: { xs: 16, sm: 20, md: 24, lg: 28 },
+                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "1rem", lg: "1.1rem" },
+                fontWeight: 600,
+                color: brand.darkBlue,
+                zIndex: 2,
+                maxWidth: { xs: "70%", sm: "65%", md: "60%" },
+                fontFamily: `"Inter", sans-serif`,
+                lineHeight: 1.4,
+                textShadow: `0 1px 2px rgba(255,255,255,0.5)`,
+              }}
+            >
+              {topic.description}
+            </Typography>
+          </Box>
+        ))}
+      </Box>
+
+      {/* ---------- TYPOGRAPHIC COLOPHON – BRAND SIGNATURE ---------- */}
+      <Box
+        sx={{
+          position: "relative",
+          zIndex: 2,
+          textAlign: "center",
+          mt: { xs: 6, md: 10 },
+          maxWidth: "600px",
+          mx: "auto",
+          px: 2,
+        }}
+      >
+        <Typography
+          sx={{
+            fontSize: "0.85rem",
+            fontWeight: 600,
+            fontFamily: `"Inter", sans-serif`,
+            color: brand.lightGrey,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            borderTop: `1px solid ${brand.darkBlue}15`,
+            pt: 4,
+          }}
+        >
+          Compounded for you, by LiquidRX
+        </Typography>
+      </Box>
     </Box>
   );
 };
 
-export default CarousalWithCards;
+export default HealthMonographGrid;

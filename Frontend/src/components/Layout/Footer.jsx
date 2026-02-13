@@ -1,7 +1,14 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
+import { Box, Typography, IconButton, Grid } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
-import { FaFacebookF, FaLinkedinIn, FaTiktok, FaYoutube } from "react-icons/fa";
+import { 
+  FaFacebookF, 
+  FaLinkedinIn, 
+  FaTiktok, 
+  FaYoutube,
+  FaTwitter,
+  FaInstagram 
+} from "react-icons/fa";
 
 import appPreview from "../../assets/medical experts/img1removed.png";
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
@@ -30,6 +37,8 @@ const POPULAR_ROUTES = {
 const LEGAL_ROUTES = {
   "Terms & Conditions": "/terms-and-conditions",
   "Privacy Policy": "/privacy-policy",
+  "Refund Policy": "/refund-policy",
+  "TeleHealth Consent": "/telehealth-consent",
 };
 
 /* ---------------- SOCIAL LINKS ---------------- */
@@ -39,6 +48,16 @@ const SOCIAL_LINKS = [
     Icon: FaFacebookF,
     url: "https://www.facebook.com/people/Liquid-RX-LLC/61584448391822/",
     label: "Facebook"
+  },
+  {
+    Icon: FaTwitter,
+    url: "https://x.com/LiquidRXLLC",
+    label: "Twitter"
+  },
+  {
+    Icon: FaInstagram,
+    url: "https://www.instagram.com/liquidrxllc/",
+    label: "Instagram"
   },
   {
     Icon: FaLinkedinIn,
@@ -70,7 +89,7 @@ export default function Footer() {
       sx={{
         background: offWhite,
         pt: { xs: 6, md: 9 },
-        pb: 6,
+        pb: 4,
         px: { xs: 2, md: 4 },
       }}
     >
@@ -165,8 +184,14 @@ export default function Footer() {
             }}
           />
 
-          {/* SOCIAL ICONS - Updated with react-icons */}
-          <Box sx={{ mt: 2, display: "flex", gap: 1.5 }}>
+          {/* SOCIAL ICONS - Now with 6 icons */}
+          <Box sx={{ 
+            mt: 2, 
+            display: "flex", 
+            gap: 1.5,
+            flexWrap: "wrap",
+            justifyContent: "center"
+          }}>
             {SOCIAL_LINKS.map((social, i) => (
               <IconButton
                 key={i}
@@ -206,9 +231,7 @@ export default function Footer() {
               "Labs",
               "Weight Loss",
               "Sexual Health",
-              "Testosterone",
               "Hair Regrowth",
-              "Mental Health",
               "Drug Comparisons",
               "Drugs & Medications",
             ]}
@@ -244,44 +267,123 @@ export default function Footer() {
         </Box>
       </Box>
 
-      {/* LEGAL - Updated with LegitScript Logo */}
-      <Box sx={{ textAlign: "center", mt: 8 }}>
-        <Box sx={{ mt: 4, fontSize: "0.9rem" }}>
-          {Object.entries(LEGAL_ROUTES).map(([label, path]) => (
-            <Box
-              key={label}
-              component={RouterLink}
-              to={path}
-              sx={{
-                mx: 2,
-                color: "#000",
-                textDecoration: "none",
-                cursor: "pointer",
-                "&:hover": { color: darkBlue },
-                fontWeight: 500,
+      {/* BOTTOM SECTION - ADDRESS & LEGAL */}
+      <Box 
+        sx={{ 
+          maxWidth: "1300px", 
+          mx: "auto", 
+          mt: 8,
+          pt: 4,
+          borderTop: "1px solid rgba(0,0,0,0.1)"
+        }}
+      >
+        <Grid container spacing={3} alignItems="center">
+          {/* Address */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
+              <Typography 
+                sx={{ 
+                  fontWeight: 600, 
+                  color: darkBlue,
+                  fontSize: "1rem",
+                  mb: 0.5
+                }}
+              >
+                LiquidRX Headquarters
+              </Typography>
+              <Typography 
+                sx={{ 
+                  color: "#666",
+                  fontSize: "0.95rem",
+                  lineHeight: 1.5
+                }}
+              >
+                P.O Box 17
+                <br />
+                Grandview, Texas 76050
+              </Typography>
+            </Box>
+          </Grid>
+
+          {/* Legal Links - IMPROVED RESPONSIVE DESIGN */}
+          <Grid item xs={12} md={4}>
+            <Box 
+              sx={{ 
+                display: "flex", 
+                flexWrap: "wrap",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: { xs: 1.5, sm: 2 },
+                flexDirection: { xs: "column", sm: "row" },
               }}
             >
-              {label}
+              {Object.entries(LEGAL_ROUTES).map(([label, path], index, array) => (
+                <React.Fragment key={label}>
+                  <Box
+                    component={RouterLink}
+                    to={path}
+                    sx={{
+                      color: "#444",
+                      textDecoration: "none",
+                      fontSize: { xs: "0.85rem", sm: "0.9rem" },
+                      fontWeight: 500,
+                      whiteSpace: "nowrap",
+                      px: { xs: 0.5, sm: 1 },
+                      py: 0.5,
+                      "&:hover": { 
+                        color: darkBlue,
+                        textDecoration: "underline" 
+                      },
+                    }}
+                  >
+                    {label}
+                  </Box>
+                  {index < array.length - 1 && (
+                    <Typography 
+                      sx={{ 
+                        color: "#999", 
+                        display: { xs: "none", sm: "inline" },
+                        fontSize: "0.9rem"
+                      }}
+                    >
+                      •
+                    </Typography>
+                  )}
+                </React.Fragment>
+              ))}
             </Box>
-          ))}
-        </Box>
+          </Grid>
 
-        {/* Added LegitScript Logo - INCREASED SIZE */}
-        <Box sx={{ mt: 3, display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
-          <Box sx={{ flex: 1 }}></Box>
-          <img 
-            src={legitScriptLogo} 
-            alt="LegitScript Certified" 
-            style={{ 
-              height: "160px",
-              width: "auto",
-              opacity: 0.9 
-            }} 
-          />
-        </Box>
+          {/* LegitScript Logo */}
+          <Grid item xs={12} md={4}>
+            <Box sx={{ 
+              display: "flex", 
+              justifyContent: { xs: "center", md: "flex-end" },
+              alignItems: "center"
+            }}>
+              <img 
+                src={legitScriptLogo} 
+                alt="LegitScript Certified" 
+                style={{ 
+                  height: "80px",
+                  width: "auto",
+                  opacity: 0.9 
+                }} 
+              />
+            </Box>
+          </Grid>
+        </Grid>
 
-        <Box sx={{ mt: 3, fontSize: "0.85rem", opacity: 0.8 }}>
-          © {new Date().getFullYear()} LiquidRx. All rights reserved.
+        {/* Copyright */}
+        <Box sx={{ 
+          mt: 4, 
+          pt: 3,
+          textAlign: "center",
+          borderTop: "1px solid rgba(0,0,0,0.05)"
+        }}>
+          <Typography sx={{ fontSize: "0.85rem", color: "#777" }}>
+            © {new Date().getFullYear()} LiquidRx. All rights reserved.
+          </Typography>
         </Box>
       </Box>
     </Box>

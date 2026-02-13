@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Box, Typography, Drawer, IconButton } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import manImg from "../assets/images/aboutdoctor1.png"; 
 import videoFile from "../assets/Videos/motion2Fast_Abstract_pharmaceutical_laboratory_background_vide_0.mp4";
 
 // Import images for mosaic cards
@@ -12,8 +11,9 @@ import img3 from "../assets/Aboutus/img3.png";
 import img4 from "../assets/Aboutus/img5.png";
 import img5 from "../assets/Aboutus/img2.png";
 
-// Import your logo image
+// Import your logo images
 import logo from "../assets/LRXLOGOS/LOGO-3.png";
+import floatingLogo from "../assets/LRXLOGOS/LOGO-1.png"; // Add this import for the floating logo
 
 export default function AboutUs() {
   const navigate = useNavigate();
@@ -397,7 +397,7 @@ export default function AboutUs() {
             position: "relative",
             display: "flex",
             justifyContent: "center",
-            paddingTop: { xs: "60px", sm: "80px", md: "100px", lg: "100px" },
+            paddingTop: { xs: "60px", sm: "-20px", md: "100px", lg: "100px" },
             zIndex: 10,
             overflow: "hidden",
           }}
@@ -445,6 +445,38 @@ export default function AboutUs() {
           >
             Experience the Power of
           </Typography>
+
+          {/* ====== FLOATING LOGO - LARGER AND MORE DOMINANT ====== */}
+          <Box
+            component="img"
+            src={floatingLogo}
+            alt="LiquidRX Logo"
+            sx={{
+              position: "absolute",
+              top: { 
+                xs: "110px",
+                sm: "150px",
+                md: "190px",
+                lg: "230px",
+                xl: "270px"
+              },
+              left: "50%",
+              transform: "translateX(-50%)",
+              zIndex: 1100,
+              height: { 
+                xs: "80px", 
+                sm: "100px", 
+                md: "140px", 
+                lg: "210px",
+                xl: "240px" 
+              },
+              width: "auto",
+              maxWidth: { xs: "85%", sm: "80%", md: "85%", lg: "70%" },
+              objectFit: "contain",
+              filter: "drop-shadow(0 12px 24px rgba(0,0,0,0.4))",
+              animation: "float 5s ease-in-out infinite",
+            }}
+          />
 
           {/* ====== SCROLLING TEXT - ADJUSTED POSITION ====== */}
           <Box
@@ -520,165 +552,140 @@ export default function AboutUs() {
               WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH • WE CARE ABOUT YOUR HEALTH •
             </Box>
           </Box>
-
-          {/* ====== MAN IMAGE ====== */}
-          <Box
-            component="img"
-            src={manImg}
-            alt="Man"
-            sx={{
-              position: "absolute",
-              bottom: 0,
-              height: { 
-                xs: "200px", 
-                sm: "250px", 
-                md: "320px", 
-                lg: "380px",
-                xl: "450px" 
-              },
-              zIndex: 1000,
-              pointerEvents: "none",
-              userSelect: "none",
-              width: "auto",
-              maxWidth: "100%",
-              objectFit: "contain",
-            }}
-          />
         </Box>
 
         {/* ====== LARGER WHITE CONTENT SECTION ====== */}
-      <Box
-  sx={{
-    width: "100%",
-    backgroundColor: "#FFFFFF",
-    position: "relative",
-    zIndex: 20,
-    marginTop: {
-      xs: "-30px",
-      sm: "-40px",
-      md: "-50px",
-      lg: "-60px",
-      xl: "-70px",
-    },
-    borderRadius: {
-      xs: "30px 30px 0 0",
-      sm: "40px 40px 0 0",
-      md: "50px 50px 0 0",
-      lg: "60px 60px 0 0",
-      xl: "70px 70px 0 0",
-    },
-    boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
-    minHeight: {
-      xs: "60vh",
-      sm: "70vh",
-      md: "80vh",
-      lg: "90vh",
-      xl: "100vh",
-    },
-    display: "flex",
-    alignItems: "center",
-  }}
->
-  <Box
-    sx={{
-      width: "100%",
-      maxWidth: {
-        xs: "90%",
-        sm: "88%",
-        md: "85%",
-        lg: "80%",
-        xl: "1200px",
-      },
-      margin: "0 auto",
-      padding: {
-        xs: "60px 0",
-        sm: "80px 0",
-        md: "100px 0",
-        lg: "120px 0",
-        xl: "140px 0",
-      },
-      textAlign: "center",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      minHeight: "100%",
-    }}
-  >
-    <Typography
-      component="div"
-      sx={{
-        color: "#000000",
-        fontWeight: { xs: 700, sm: 800, md: 900 },
-        fontSize: {
-          xs: "1.4rem",
-          sm: "1.8rem",
-          md: "2.2rem",
-          lg: "2.8rem",
-          xl: "3.2rem",
-        },
-        lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
-        maxWidth: {
-          xs: "100%",
-          sm: "95%",
-          md: "90%",
-          lg: "85%",
-          xl: "80%",
-        },
-        margin: "0 auto",
-        px: { xs: 1, sm: 2, md: 3 },
-        letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
-      }}
-    >
-      Our goal is simple: to help people take control of their health through care
-      that feels{" "}
-      <Box
-        component="span"
-        sx={{
-          color: "#00359E",
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        personal, accessible, and human
-      </Box>{" "}
-      — built around real needs, not one-size-fits-all solutions. We focus on
-      delivering treatment that{" "}
-      <Box
-        component="span"
-        sx={{
-          color: "#00359E",
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        puts you in control
-      </Box>{" "}
-      and removes the friction from getting care, so improving your health feels{" "}
-      <Box
-        component="span"
-        sx={{
-          color: "#00359E",
-          fontWeight: { xs: 800, sm: 900 },
-          display: "inline",
-        }}
-      >
-        clear, simple, and achievable.
-      </Box>
-    </Typography>
+        <Box
+          sx={{
+            width: "100%",
+            backgroundColor: "#FFFFFF",
+            position: "relative",
+            zIndex: 20,
+            marginTop: {
+              xs: "-30px",
+              sm: "-40px",
+              md: "-50px",
+              lg: "-60px",
+              xl: "-70px",
+            },
+            borderRadius: {
+              xs: "30px 30px 0 0",
+              sm: "40px 40px 0 0",
+              md: "50px 50px 0 0",
+              lg: "60px 60px 0 0",
+              xl: "70px 70px 0 0",
+            },
+            boxShadow: "0 -5px 20px rgba(0,0,0,0.1)",
+            minHeight: {
+              xs: "60vh",
+              sm: "70vh",
+              md: "80vh",
+              lg: "90vh",
+              xl: "100vh",
+            },
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: {
+                xs: "90%",
+                sm: "88%",
+                md: "85%",
+                lg: "80%",
+                xl: "1200px",
+              },
+              margin: "0 auto",
+              padding: {
+                xs: "60px 0",
+                sm: "80px 0",
+                md: "100px 0",
+                lg: "120px 0",
+                xl: "140px 0",
+              },
+              textAlign: "center",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "100%",
+            }}
+          >
+            <Typography
+              component="div"
+              sx={{
+                color: "#000000",
+                fontWeight: { xs: 700, sm: 800, md: 900 },
+                fontSize: {
+                  xs: "1.4rem",
+                  sm: "1.8rem",
+                  md: "2.2rem",
+                  lg: "2.8rem",
+                  xl: "3.2rem",
+                },
+                lineHeight: { xs: 1.3, sm: 1.4, md: 1.5, lg: 1.6 },
+                maxWidth: {
+                  xs: "100%",
+                  sm: "95%",
+                  md: "90%",
+                  lg: "85%",
+                  xl: "80%",
+                },
+                margin: "0 auto",
+                px: { xs: 1, sm: 2, md: 3 },
+                letterSpacing: { xs: "-0.2px", sm: "-0.3px", md: "-0.4px" },
+              }}
+            >
+              Our goal is simple: to help people take control of their health through care
+              that feels{" "}
+              <Box
+                component="span"
+                sx={{
+                  color: "#00359E",
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                personal, accessible, and human
+              </Box>{" "}
+              — built around real needs, not one-size-fits-all solutions. We focus on
+              delivering treatment that{" "}
+              <Box
+                component="span"
+                sx={{
+                  color: "#00359E",
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                puts you in control
+              </Box>{" "}
+              and removes the friction from getting care, so improving your health feels{" "}
+              <Box
+                component="span"
+                sx={{
+                  color: "#00359E",
+                  fontWeight: { xs: 800, sm: 900 },
+                  display: "inline",
+                }}
+              >
+                clear, simple, and achievable.
+              </Box>
+            </Typography>
 
-    <Box
-      sx={{
-        mt: { xs: 4, sm: 6, md: 8, lg: 10 },
-        width: "60px",
-        height: "4px",
-        backgroundColor: "#00359E",
-        margin: "0 auto",
-        borderRadius: "2px",
-      }}
-    />
-  </Box>
-</Box>
-
+            <Box
+              sx={{
+                mt: { xs: 4, sm: 6, md: 8, lg: 10 },
+                width: "60px",
+                height: "4px",
+                backgroundColor: "#00359E",
+                margin: "0 auto",
+                borderRadius: "2px",
+              }}
+            />
+          </Box>
+        </Box>
 
         {/* ====== VIDEO SECTION ====== */}
         <Box
@@ -738,34 +745,33 @@ export default function AboutUs() {
                 px: { xs: 2, sm: 3 },
               }}
             >
-             <Typography
-  sx={{
-    color: "#FFFFFF",
-    fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 },
-    fontSize: { 
-      xs: "1.8rem",
-      sm: "2.5rem", 
-      md: "3.2rem", 
-      lg: "4rem",
-      xl: "4.5rem" 
-    },
-    textAlign: "center",
-    textTransform: "uppercase",
-    letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
-    lineHeight: 1,
-    px: { xs: 2, sm: 3, md: 4 },
-    textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)",
-    fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
-    padding: "12px 20px",
-    borderRadius: "4px",
-  }}
->
-  THE{" "}
-  <span style={{ color: "#003B9D" }}>LIQUID</span>{" "}
-  <span style={{ color: "#68696B" }}>RX</span>{" "}
-  WAS BUILT FOR YOU
-</Typography>
-
+              <Typography
+                sx={{
+                  color: "#FFFFFF",
+                  fontWeight: { xs: 800, sm: 900, md: 900, lg: 900 },
+                  fontSize: { 
+                    xs: "1.8rem",
+                    sm: "2.5rem", 
+                    md: "3.2rem", 
+                    lg: "4rem",
+                    xl: "4.5rem" 
+                  },
+                  textAlign: "center",
+                  textTransform: "uppercase",
+                  letterSpacing: { xs: "1px", sm: "2px", md: "3px", lg: "4px", xl: "5px" },
+                  lineHeight: 1,
+                  px: { xs: 2, sm: 3, md: 4 },
+                  textShadow: "0 4px 8px rgba(0, 0, 0, 0.7), 0 6px 20px rgba(0, 0, 0, 0.5)",
+                  fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif",
+                  padding: "12px 20px",
+                  borderRadius: "4px",
+                }}
+              >
+                THE{" "}
+                <span style={{ color: "#ffffff" }}>LIQUID</span>{" "}
+                <span style={{ color: "#FFFFFF" }}>RX</span>{" "}
+                WAS BUILT FOR YOU
+              </Typography>
             </Box>
           </Box>
         </Box>
@@ -806,8 +812,8 @@ export default function AboutUs() {
               color: "#000",
             }}
           >
-Your health journey is unique.            <br />
- Treatment should be too.          </Typography>
+            Your health journey is unique.            <br />
+            Treatment should be too.          </Typography>
 
           {/* PARAGRAPH BELOW */}
           <Typography
@@ -838,154 +844,155 @@ Your health journey is unique.            <br />
         </Box>
 
         {/* ====== MOSAIC CARDS SECTION WITH PROPER HEIGHT ALIGNMENT ====== */}
-<Box
-  sx={{
-    width: "100%",
-    maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
-    mx: "auto",
-    display: "grid",
-    gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-    gap: "4px",
-    px: { xs: 2, sm: 3, md: 4 },
-    pb: { xs: 4, sm: 5, md: 6 },
-    alignItems: "stretch",
-    backgroundColor: "#FFFFFF",
-  }}
->
-  {/* LEFT COLUMN */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateRows: "auto 1fr",
-      gap: "4px",
-      backgroundColor: "#FFFFFF",
-    }}
-  >
-    {/* Weight Loss - LARGE card */}
-    <CardBlock
-      title="Weight Loss"
-      image={img1}
-      size="large"
-      sx={{
-        height: { 
-          xs: "280px", 
-          sm: "350px", 
-          md: "400px", 
-          lg: "450px" 
-        },
-        "& img": {
-          position: "absolute",
-          bottom: { xs: "-30px", sm: "-40px", md: "-50px", lg: "-60px" },
-          left: { xs: "50px", sm: "80px", md: "120px", lg: "150px" },
-          height: "auto",
-          width: { xs: "80%", sm: "85%", md: "90%", lg: "100%" },
-          maxHeight: { xs: "200%", sm: "220%", md: "240%", lg: "250%" },
-          objectFit: "contain",
-          objectPosition: "left bottom",
-          zIndex: 1,
-        }
-      }}
-    />
+        <Box
+          sx={{
+            width: "100%",
+            maxWidth: { xs: "95%", sm: "90%", md: "85%", lg: "1200px", xl: "1500px" },
+            mx: "auto",
+            display: "grid",
+            gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+            gap: "4px",
+            px: { xs: 2, sm: 3, md: 4 },
+            pb: { xs: 4, sm: 5, md: 6 },
+            alignItems: "stretch",
+            backgroundColor: "#FFFFFF",
+          }}
+        >
+          {/* LEFT COLUMN */}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateRows: "auto 1fr",
+              gap: "4px",
+              backgroundColor: "#FFFFFF",
+            }}
+          >
+            {/* Weight Loss - LARGE card */}
+            <CardBlock
+              title="Weight Loss"
+              image={img1}
+              size="large"
+              sx={{
+                height: { 
+                  xs: "280px", 
+                  sm: "350px", 
+                  md: "400px", 
+                  lg: "450px" 
+                },
+                "& img": {
+                  position: "absolute",
+                  bottom: { xs: "-30px", sm: "-40px", md: "-50px", lg: "-60px" },
+                  left: { xs: "50px", sm: "80px", md: "120px", lg: "150px" },
+                  height: "auto",
+                  width: { xs: "80%", sm: "85%", md: "90%", lg: "100%" },
+                  maxHeight: { xs: "200%", sm: "220%", md: "240%", lg: "250%" },
+                  objectFit: "contain",
+                  objectPosition: "left bottom",
+                  zIndex: 1,
+                }
+              }}
+            />
 
-    {/* This Box wraps Skincare + Mental Health - SMALL cards */}
-    <Box
-      sx={{
-        display: "grid",
-        gridTemplateRows: "1fr 1fr",
-        gap: "4px",
-        height: "100%",
-      }}
-    >
-      {/* Skincare - SMALL card */}
-      <CardBlock
-        title="Skin care"
-        image={img3}
-        size="small"
-        sx={{
-          height: "200px",
-          "& img": {
-            position: "absolute",
-            bottom: { xs: "-30px", sm: "-40px", md: "-45px", lg: "-50px" },
-            left: { xs: "120px", sm: "150px", md: "180px", lg: "230px" },
-            height: { xs: "280px", sm: "320px", md: "350px", lg: "380px" },
-            width: "auto",
-            maxWidth: "100%",
-            objectFit: "contain",
-            objectPosition: "left bottom",
-            zIndex: 1,
-          }
-        }}
-      />
+            {/* This Box wraps Skincare + Mental Health - SMALL cards */}
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateRows: "1fr 1fr",
+                gap: "4px",
+                height: "100%",
+              }}
+            >
+              {/* Skincare - SMALL card */}
+              <CardBlock
+                title="Skin care"
+                image={img3}
+                size="small"
+                sx={{
+                  height: "200px",
+                  "& img": {
+                    position: "absolute",
+                    bottom: { xs: "-30px", sm: "-40px", md: "-45px", lg: "-50px" },
+                    left: { xs: "120px", sm: "150px", md: "180px", lg: "230px" },
+                    height: { xs: "280px", sm: "320px", md: "350px", lg: "380px" },
+                    width: "auto",
+                    maxWidth: "100%",
+                    objectFit: "contain",
+                    objectPosition: "left bottom",
+                    zIndex: 1,
+                  }
+                }}
+              />
 
-      {/* Sexual function - SMALL card */}
-      <CardBlock
-        title="Sexual function"
-        image={img4}
-        size="small"
-        sx={{
-          height: "200px",
-          "& img": {
-            position: "absolute",
-            bottom: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
-            left: { xs: "40px", sm: "60px", md: "75px", lg: "90px" },
-            height: { xs: "200px", sm: "220px", md: "240px", lg: "250px" },
-            width: "auto",
-            maxWidth: { xs: "85%", sm: "87%", md: "89%", lg: "90%" },
-            objectFit: "contain",
-            objectPosition: "left bottom",
-            zIndex: 1,
-          }
-        }}
-      />
-    </Box>
-  </Box>
+              {/* Sexual function - SMALL card */}
+              <CardBlock
+                title="Sexual function"
+                image={img4}
+                size="small"
+                sx={{
+                  height: "200px",
+                  "& img": {
+                    position: "absolute",
+                    bottom: { xs: "0px", sm: "0px", md: "0px", lg: "0px" },
+                    left: { xs: "40px", sm: "60px", md: "75px", lg: "90px" },
+                    height: { xs: "200px", sm: "220px", md: "240px", lg: "250px" },
+                    width: "auto",
+                    maxWidth: { xs: "85%", sm: "87%", md: "89%", lg: "90%" },
+                    objectFit: "contain",
+                    objectPosition: "left bottom",
+                    zIndex: 1,
+                  }
+                }}
+              />
+            </Box>
+          </Box>
 
-  {/* RIGHT COLUMN */}
-  <Box
-    sx={{
-      display: "grid",
-      gridTemplateRows: "auto 1fr",
-      gap: "4px",
-      backgroundColor: "#FFFFFF",
-    }}
-  >
-    {/* Weight Loss - LARGE card */}
-    <CardBlock
-      title="Precision BioActives"
-      image={img2}
-      size="large"
-      sx={{
-        height: { 
-          xs: "280px", 
-          sm: "350px", 
-          md: "400px", 
-          lg: "450px" 
-        },
-      }}
-    />
+          {/* RIGHT COLUMN */}
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateRows: "auto 1fr",
+              gap: "4px",
+              backgroundColor: "#FFFFFF",
+            }}
+          >
+            {/* Weight Loss - LARGE card */}
+            <CardBlock
+              title="Precision BioActives"
+              image={img2}
+              size="large"
+              sx={{
+                height: { 
+                  xs: "280px", 
+                  sm: "350px", 
+                  md: "400px", 
+                  lg: "450px" 
+                },
+              }}
+            />
 
-    {/* Hair Growth - LARGE card */}
-    <CardBlock
-      title="Hair growth"
-      image={img5}
-      size="large"
-      sx={{
-        height: "400px",
-        "& img": {
-          position: "absolute",
-          bottom: { xs: "-60px", sm: "-80px", md: "-100px", lg: "-113px" },
-          left: { xs: "0px", sm: "5px", md: "8px", lg: "11px" },
-          height: "auto",
-          width: { xs: "95%", sm: "97%", md: "99%", lg: "100%" },
-          maxHeight: { xs: "150%", sm: "170%", md: "185%", lg: "200%" },
-          objectFit: "contain",
-          objectPosition: "left bottom",
-          zIndex: 1,
-        }
-      }}
-    />
-  </Box>
-</Box>
+            {/* Hair Growth - LARGE card */}
+            <CardBlock
+              title="Hair growth"
+              image={img5}
+              size="large"
+              sx={{
+                height: "400px",
+                "& img": {
+                  position: "absolute",
+                  bottom: { xs: "-60px", sm: "-80px", md: "-100px", lg: "-113px" },
+                  left: { xs: "0px", sm: "5px", md: "8px", lg: "11px" },
+                  height: "auto",
+                  width: { xs: "95%", sm: "97%", md: "99%", lg: "100%" },
+                  maxHeight: { xs: "150%", sm: "170%", md: "185%", lg: "200%" },
+                  objectFit: "contain",
+                  objectPosition: "left bottom",
+                  zIndex: 1,
+                }
+              }}
+            />
+          </Box>
+        </Box>
+
         {/* ====== SUCCESS STANDARD SECTION ====== */}
         <Box
           sx={{
@@ -1022,9 +1029,9 @@ Your health journey is unique.            <br />
               color: "#000",
             }}
           >
-Good results are what we do.
+            Good results are what we do.
             <br />
-Every single time.
+            Every single time.
           </Typography>
 
           {/* PARAGRAPH BELOW */}
@@ -1051,7 +1058,7 @@ Every single time.
               mx: "auto",
             }}
           >
-               At LiquidRX, we think everyone should get great results. Our treatments work, and our team is here to help you. We make a plan just for you and support you every step of the way. We've already helped thousands of people feel better. Your journey to feeling good starts with us—we use proven methods, new ideas, and real care to help you succeed.
+            At LiquidRX, we think everyone should get great results. Our treatments work, and our team is here to help you. We make a plan just for you and support you every step of the way. We've already helped thousands of people feel better. Your journey to feeling good starts with us—we use proven methods, new ideas, and real care to help you succeed.
           </Typography>
         </Box>
 
@@ -1340,6 +1347,18 @@ Every single time.
             }
             100% {
               transform: translateX(-50%);
+            }
+          }
+
+          @keyframes float {
+            0% {
+              transform: translateX(-50%) translateY(0px);
+            }
+            50% {
+              transform: translateX(-50%) translateY(-15px);
+            }
+            100% {
+              transform: translateX(-50%) translateY(0px);
             }
           }
 

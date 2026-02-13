@@ -82,6 +82,8 @@ import Stoplowenergy from "../components/HeroCardPages/Stoplowenergy.jsx";
 // PrivacyPolicy and Terms&Condition
 import PrivacyPolicy from "../pages/privacypolicy.jsx";
 import TermsAndConditions from "../pages/termsandcondition.jsx";
+import RefundPolicy from "../pages/Refundpolicy.jsx";
+import TelehealthConsent from "../pages/Telehealthconsent.jsx"; 
 
 /* ------------------- LAYOUT ------------------- */
 
@@ -218,6 +220,8 @@ export default function AppRoutes() {
 {/* Privacy and Terms pages */}
 <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+<Route path="/refund-policy" element={<RefundPolicy />} />
+<Route path="/telehealth-consent" element={<TelehealthConsent />} />
 
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>

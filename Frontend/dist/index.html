@@ -1,14 +1,56 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2036672690243545');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2036672690243545&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+ 
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/LOGO-10-CqRNrx7l.png" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LiquidRX</title>
-    <script type="module" crossorigin src="/assets/index-C8ZGteay.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BL1cLIWn.css">
+    <script type="module" crossorigin src="/assets/index-BbjqTo3T.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DXJvXsOj.css">
   </head>
+  
   <body>
     <div id="root"></div>
+    
+    <!-- Add this script to prevent Vite from changing the title -->
+    <script>
+      // Store the original title and restore it if Vite changes it
+      const originalTitle = 'LiquidRX';
+      document.title = originalTitle;
+      
+      // Watch for title changes and revert if it's not LiquidRX
+      const observer = new MutationObserver(function(mutations) {
+        if (document.title !== originalTitle) {
+          document.title = originalTitle;
+        }
+      });
+      
+      observer.observe(
+        document.querySelector('title'), 
+        { subtree: true, characterData: true, childList: true }
+      );
+    </script>
+    
   </body>
 </html>

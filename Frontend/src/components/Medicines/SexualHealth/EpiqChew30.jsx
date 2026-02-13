@@ -527,7 +527,7 @@ const EpiqChew30Page = () => {
                       value: "$297", 
                       color: "#00359E",
                       description: "Full monthly program",
-                      trend: "First month $79"
+                      trend: "per month $79"
                     },
                     { 
                       label: "Patient Trust", 
@@ -1173,7 +1173,7 @@ const EpiqChew30Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $79 for your first month.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $79 for your per month.
               </Typography>
               
               {/* Pricing Display */}
@@ -1195,7 +1195,7 @@ const EpiqChew30Page = () => {
                     fontSize: "1.1rem"
                   }}
                 >
-                  first month (Regularly $297/month)
+                  per month (Regularly $297/month)
                 </Typography>
               </Box>
               

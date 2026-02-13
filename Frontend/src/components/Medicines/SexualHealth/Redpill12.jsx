@@ -436,7 +436,7 @@ const Redpill12Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      $297 first month for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
+                   complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>

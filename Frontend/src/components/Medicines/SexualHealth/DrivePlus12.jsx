@@ -1138,7 +1138,7 @@ const DrivePlus12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $179 for your first month.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $179.
               </Typography>
               
               {/* Pricing Display */}
@@ -1160,7 +1160,7 @@ const DrivePlus12Page = () => {
                     fontSize: "1.1rem"
                   }}
                 >
-                  first month 
+                  per month 
                 </Typography>
               </Box>
               

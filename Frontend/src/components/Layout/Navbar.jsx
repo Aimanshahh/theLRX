@@ -26,11 +26,11 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
-import treatment1 from "../../assets/Herocards/Herocard1.png";
-import treatment2 from "../../assets/Herocards/Herocards.png";
-import treatment3 from "../../assets/Herocards/herocard2.png";
-import treatment4 from "../../assets/Herocards/MEDICINE1.png";
-import treatment5 from "../../assets/Herocards/Herocard1.png";
+import treatment1 from "../../assets/medicines/Retatrutide Vials.png";
+import treatment2 from "../../assets/medicines/Tirzepatide Vial.png";
+import treatment3 from "../../assets/medicines/BPC157REMOVED.png";
+import treatment4 from "../../assets/medicines/GHK-CU1.png";
+import treatment5 from "../../assets/medicines/CJC-1295Vial.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -163,9 +163,9 @@ export default function Navbar() {
         { label: "Passion-6 Tablets", path: "/sexual-health/passion-6" },
         { label: "Passion-12 Tablets", path: "/sexual-health/passion-12" },
         { label: "Passion-18 Tablets", path: "/sexual-health/passion-18" },
-        { label: "Lust-18 Tablets", path: "/sexual-health/lust-18" },
+        { label: "Lust-6 Tablets", path: "/sexual-health/lust-6" } ,   
         { label: "Lust-12 Tablets", path: "/sexual-health/lust-12" },
-        { label: "Lust-6 Tablets", path: "/sexual-health/lust-6" },
+        { label: "Lust-18 Tablets", path: "/sexual-health/lust-18" },
         { label: "OverDrive Plus-6 Tablets", path: "/sexual-health/overdrive-plus-6" },
         { label: "OverDrive Plus-12 Tablets", path: "/sexual-health/overdrive-plus-12" },
         { label: "RedPill-6 Tablets", path: "/sexual-health/redpill-6" },
@@ -570,11 +570,11 @@ export default function Navbar() {
               }}
             >
               {[
-                { img: treatment1, title: "Tablet 1" },
-                { img: treatment2, title: "Tablet 2" },
-                { img: treatment3, title: "Tablet 3" },
-                { img: treatment4, title: "Tablet 4" },
-                { img: treatment5, title: "Tablet 5" },
+                { img: treatment1, title: "Retatrutide Vial" },
+                { img: treatment2, title: "Tirzepadtide Vial" },
+                { img: treatment3, title: "BPC-157" },
+                { img: treatment4, title: "GHK-cu" },
+                { img: treatment5, title: "CJC-1295/Ipamorelin" },
               ].map(({ img, title }, index) => (
                 <div
                   key={index}

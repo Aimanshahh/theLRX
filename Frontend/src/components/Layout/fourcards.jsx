@@ -52,7 +52,7 @@ const MedicineSidebar = ({ open, onClose }) => {
     },
    
     {
-      name: "peptides",
+      name: "BioActives",
       icon: <BiotechIcon />,
       color: "#00359E",
       bgColor: alpha("#00359E", 0.08),
@@ -63,7 +63,7 @@ const MedicineSidebar = ({ open, onClose }) => {
         { name: "NAD+" },
         { name: "NAD+ Injectable" },
         { name: "PT-141" },
-        { name: "Sermorelin 20mg" },
+        { name: "Sermorelin" },
         { name: "Vitamin B12" },
       ],
     },
@@ -108,14 +108,14 @@ const MedicineSidebar = ({ open, onClose }) => {
   // Map treatment names to their correct routes
   const getCorrectRoute = (category, treatmentName) => {
     const routeMappings = {
-      "Peptides": {
+      "BioActives": {
         "BPC-157": "/peptides/bpc-157",
         "CJC-1295 Ipamorelin": "/peptides/cjc-1295-ipamorelin",
         "GHK-CU": "/peptides/GHKCU",
         "NAD+": "/peptides/NAD",
         "NAD+ Injectable": "/peptides/NADinjectable",
         "PT-141": "/peptides/pt-141",
-        "Sermorelin 20mg": "/peptides/sermorelin-20mg",
+        "Sermorelin": "/peptides/sermorelin",
         "Vitamin B12": "/peptides/vitamin-b12"
       },
       "Sexual Health": {
