@@ -134,7 +134,7 @@ export default function HeroTextSection() {
       <Box
         sx={{
           width: "100%",
-          minHeight: { xs: "auto", md: "400vh" },
+          minHeight: "auto",
           backgroundColor: "#1F2F4A",
           display: "flex",
           borderRadius: 7,

@@ -41,7 +41,7 @@ import {
 
 // Import your assets
 import videoSrc from '../../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4';
-import oralSemaglutideImg from '../../../assets/Medicines/semaglutide.png';
+import oralSemaglutideImg from '../../../assets/Medicines/herocard2.jpeg';
 
 // Animation variants
 const staggerContainer = {
@@ -93,7 +93,7 @@ const PRICE = {
   amount: 249.00,
   currency: 'USD',
   display: '$249.00',
-  period: 'per Vial',
+  period: 'per month',
   treatmentType: 'Oral RDT'
 };
 

@@ -351,7 +351,7 @@ export default function Signin() {
                 </Box>
 
                 {/* Forgot Password Link */}
-                <Box textAlign="right" mb={3}>
+                {/* <Box textAlign="right" mb={3}>
                   <Link 
                     component="button"
                     type="button"
@@ -369,7 +369,7 @@ export default function Signin() {
                   >
                     Forgot your password?
                   </Link>
-                </Box>
+                </Box> */}
 
                 {/* Sign In Button */}
                 <Button
@@ -414,7 +414,7 @@ export default function Signin() {
                   }}
                 >
                   {isLoading ? (
-                    "Signing In..."
+                    "`Signing In..."
                   ) : (
                     <>
                       Sign In

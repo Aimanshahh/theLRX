@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Added
 import { Box, TextField, Button, Typography } from "@mui/material";
 import heroImg from "../../assets/images/guidebannerremoved.png";
 import { subscribeGuide } from "../../services/api";
@@ -6,6 +7,7 @@ import { ToastContainer, toast, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const FullWidthGradientWithText = () => {
+  const navigate = useNavigate(); // Added
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -170,7 +172,7 @@ const FullWidthGradientWithText = () => {
           </Button>
         </Box>
 
-        {/* Terms & Privacy */}
+        {/* Terms & Privacy - Now with navigation */}
         <Typography
           variant="caption"
           sx={{
@@ -185,6 +187,7 @@ const FullWidthGradientWithText = () => {
           By creating an account using email, I agree to the{" "}
           <Typography
             component="span"
+            onClick={() => navigate("/terms-and-conditions")}
             sx={{
               color: "#fff",
               textDecoration: "underline",
@@ -199,6 +202,7 @@ const FullWidthGradientWithText = () => {
           , and acknowledge the{" "}
           <Typography
             component="span"
+            onClick={() => navigate("/privacy-policy")}
             sx={{
               color: "#fff",
               textDecoration: "underline",

@@ -33,6 +33,12 @@ const POPULAR_ROUTES = {
   "NAD+Injectable": "/peptides/NADinjectable",
 };
 
+// Add routes for Careers pages (Professionals & Providers)
+const CAREERS_ROUTES = {
+  "Professionals": "/professionals",
+  "Providers": "/providers"
+};
+
 // Add routes for legal pages
 const LEGAL_ROUTES = {
   "Terms & Conditions": "/terms-and-conditions",
@@ -184,7 +190,7 @@ export default function Footer() {
             }}
           />
 
-          {/* SOCIAL ICONS - Now with 6 icons */}
+          {/* SOCIAL ICONS */}
           <Box sx={{ 
             mt: 2, 
             display: "flex", 
@@ -262,12 +268,78 @@ export default function Footer() {
             routes={LRX_ROUTES}
           />
 
-          <FooterColumn title="Careers" items={["Professionals", "Providers"]} />
-          <FooterColumn title="Connect" items={["Customer Help Center", "Press Center"]} />
+          {/* Careers column now uses CAREERS_ROUTES to make Professionals & Providers clickable */}
+          <FooterColumn 
+            title="Careers" 
+            items={["Professionals", "Providers"]} 
+            routes={CAREERS_ROUTES} 
+          />
+
+          {/* Connect Column - already clickable via RouterLink */}
+          <Box sx={{ mb: 4 }}>
+            <Typography
+              sx={{
+                fontWeight: 900,
+                fontSize: { xs: "1.25rem", md: "1.4rem" },
+                mb: 2,
+                color: "#00359E",
+              }}
+            >
+              Connect
+            </Typography>
+            <Box
+              component={RouterLink}
+              to="/customer-help-center"
+              sx={{
+                display: "block",
+                fontSize: { xs: "1.05rem", md: "1.15rem" },
+                lineHeight: 2,
+                color: "#747578",
+                mb: 1.2,
+                fontWeight: 600,
+                textDecoration: "none",
+                "&:hover": { color: "#003B9D" },
+              }}
+            >
+              Customer Help Center
+            </Box>
+            <Box
+              component={RouterLink}
+              to="/press-center"
+              sx={{
+                display: "block",
+                fontSize: { xs: "1.05rem", md: "1.15rem" },
+                lineHeight: 2,
+                color: "#747578",
+                mb: 1.2,
+                fontWeight: 600,
+                textDecoration: "none",
+                "&:hover": { color: "#003B9D" },
+              }}
+            >
+              Press Center
+            </Box>
+            <Box
+              component="a"
+              href="tel:18666699191"
+              sx={{
+                display: "block",
+                fontSize: { xs: "1.05rem", md: "1.15rem" },
+                lineHeight: 2,
+                color: "#747578",
+                mb: 1.2,
+                fontWeight: 600,
+                textDecoration: "none",
+                "&:hover": { color: "#003B9D" },
+              }}
+            >
+              (866) 669 9191
+            </Box>
+          </Box>
         </Box>
       </Box>
 
-      {/* BOTTOM SECTION - ADDRESS & LEGAL */}
+      {/* BOTTOM SECTION - ADDRESS & LEGAL (unchanged) */}
       <Box 
         sx={{ 
           maxWidth: "1300px", 
@@ -305,7 +377,7 @@ export default function Footer() {
             </Box>
           </Grid>
 
-          {/* Legal Links - IMPROVED RESPONSIVE DESIGN */}
+          {/* Legal Links */}
           <Grid item xs={12} md={4}>
             <Box 
               sx={{ 

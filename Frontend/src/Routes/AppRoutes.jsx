@@ -11,6 +11,9 @@ import Footer from "../components/Layout/Footer";
 import { LoaderProvider, useLoader } from "../contexts/LoadingContext";
 import Loader from "../components/Loader/Loader";
 
+// Chatbot
+// import ChatbotWidget from "../components/chatbot";
+
 // Pages
 import AboutUs from "../pages/AboutUs";
 import FAQspage from "../pages/FAQspage";
@@ -29,7 +32,6 @@ import Medicalcare from "../components/FAQsCategories/Medicalcare";
 import Shipping from "../components/FAQsCategories/Shipping";
 import Troubleshooting from "../components/FAQsCategories/Troubleshooting";
 import PrivacyAndSecurity from "../components/FAQscategories/PrivacyAndSecurity";
-
 
 // Weight Loss
 import RetatrutideVial from "../components/Medicines/Weight-Loss/RetatrutideVial";
@@ -83,7 +85,11 @@ import Stoplowenergy from "../components/HeroCardPages/Stoplowenergy.jsx";
 import PrivacyPolicy from "../pages/privacypolicy.jsx";
 import TermsAndConditions from "../pages/termsandcondition.jsx";
 import RefundPolicy from "../pages/Refundpolicy.jsx";
-import TelehealthConsent from "../pages/Telehealthconsent.jsx"; 
+import TelehealthConsent from "../pages/Telehealthconsent.jsx";
+import PressCenter from "../pages/presscenter.jsx";
+import CustomerHelpCenter from "../pages/customerhelpcenter.jsx";
+import Professionals from "../pages/professionals.jsx";
+import Providers from "../pages/provider.jsx";
 
 /* ------------------- LAYOUT ------------------- */
 
@@ -91,22 +97,20 @@ function LayoutWithFooter({ children }) {
   const { pathname } = useLocation();
   console.log("CURRENT PATH:", pathname);
 
-  // Show TopBanner ONLY on homepage
   const showTopBanner = pathname === "/";
-  
-  // Show Navbar on homepage AND medicine pages
-  const showNavbar = pathname === "/" || 
-                    pathname.startsWith("/weight-loss") ||
-                    pathname.startsWith("/peptides") ||
-                    pathname.startsWith("/sexual-health") ||
-                    pathname.startsWith("/labs") ||
-                     pathname === "/build-muscle" ||
-                      pathname === "/weight-loss-program" ||
-                       pathname === "/fix-your-skin" ||
-                        pathname === "/want-more-sex" ||
-                        pathname === "/DetailedLab" ||
-                         pathname === "/stop-low-energy";
 
+  const showNavbar =
+    pathname === "/" ||
+    pathname.startsWith("/weight-loss") ||
+    pathname.startsWith("/peptides") ||
+    pathname.startsWith("/sexual-health") ||
+    pathname.startsWith("/labs") ||
+    pathname === "/build-muscle" ||
+    pathname === "/weight-loss-program" ||
+    pathname === "/fix-your-skin" ||
+    pathname === "/want-more-sex" ||
+    pathname === "/DetailedLab" ||
+    pathname === "/stop-low-energy";
 
   const hideFooter =
     pathname === "/signin" ||
@@ -116,18 +120,14 @@ function LayoutWithFooter({ children }) {
 
   return (
     <>
-      {/* Only show TopBanner on homepage */}
       {showTopBanner && <TopBanner />}
-      
-      {/* Show Navbar on homepage AND medicine pages */}
       {showNavbar && <Navbar />}
-
       {children}
-
       {!hideFooter && <Footer />}
     </>
   );
 }
+
 /* ------------------- ROUTE LOADER ------------------- */
 
 function RouteLoaderWrapper({ children }) {
@@ -164,8 +164,8 @@ export default function AppRoutes() {
               <Route path="/how-it-works" element={<Howitworks />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/medical-experts" element={<Medicalexperts />} />
-              <Route path="/DetailedLab" element={<DetailedLab/>} />
-              <Route path="/profile" element={<Profile/>} />
+              <Route path="/DetailedLab" element={<DetailedLab />} />
+              <Route path="/profile" element={<Profile />} />
 
               <Route path="/faqs/basics" element={<TheBasics />} />
               <Route path="/faqs/visits" element={<AboutYourVisits />} />
@@ -174,7 +174,7 @@ export default function AppRoutes() {
               <Route path="/faqs/troubleshooting" element={<Troubleshooting />} />
               <Route path="/faqs/privacy-security" element={<PrivacyAndSecurity />} />
 
-             <Route path="/labs/Functional-Blood-Test" element={<FunctionalBloodTest />} />
+              <Route path="/labs/Functional-Blood-Test" element={<FunctionalBloodTest />} />
 
               <Route path="/weight-loss/retatrutide-vial" element={<RetatrutideVial />} />
               <Route path="/weight-loss/oral-tirzepatide-rdt" element={<OralTirzepatideRDT />} />
@@ -209,23 +209,29 @@ export default function AppRoutes() {
               <Route path="/sexual-health/drive-plus-12" element={<DrivePlus12 />} />
               <Route path="/sexual-health/drive-plus-18" element={<DrivePlus18 />} />
 
-              {/* Hero Card Pages */}
-<Route path="/build-muscle" element={<Buildmuscle />} />
-<Route path="/weight-loss-program" element={<Weightloss />} />
-<Route path="/fix-your-skin" element={<Fixyourskin />} />
-<Route path="/fix-your-recovery" element={<Fixyourrecovery />} />
-<Route path="/want-more-sex" element={<Wantmoresex />} />
-<Route path="/stop-low-energy" element={<Stoplowenergy />} />
+              <Route path="/build-muscle" element={<Buildmuscle />} />
+              <Route path="/weight-loss-program" element={<Weightloss />} />
+              <Route path="/fix-your-skin" element={<Fixyourskin />} />
+              <Route path="/fix-your-recovery" element={<Fixyourrecovery />} />
+              <Route path="/want-more-sex" element={<Wantmoresex />} />
+              <Route path="/stop-low-energy" element={<Stoplowenergy />} />
 
-{/* Privacy and Terms pages */}
-<Route path="/privacy-policy" element={<PrivacyPolicy />} />
-<Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-<Route path="/refund-policy" element={<RefundPolicy />} />
-<Route path="/telehealth-consent" element={<TelehealthConsent />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+              <Route path="/refund-policy" element={<RefundPolicy />} />
+              <Route path="/telehealth-consent" element={<TelehealthConsent />} />
+              <Route path="/press-center" element={<PressCenter />} />
+              <Route path="/customer-help-center" element={<CustomerHelpCenter />} />
+              <Route path="/professionals" element={<Professionals />} />
+              <Route path="/providers" element={<Providers />} />
 
               <Route path="*" element={<div>Page Not Found</div>} />
             </Routes>
           </LayoutWithFooter>
+
+          {/* ✅ Chatbot — floats on every page, outside routes so it persists */}
+          {/* <ChatbotWidget /> */}
+
         </RouteLoaderWrapper>
       </Router>
     </LoaderProvider>

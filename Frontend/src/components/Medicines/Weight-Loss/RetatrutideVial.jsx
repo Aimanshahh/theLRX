@@ -89,7 +89,7 @@ const PRICE = {
   amount: 449.00,
   currency: 'USD',
   display: '$449.00',
-  period: 'per vial'
+  period: 'per month'
 };
 
 // Benefits for the "How It Works" section

@@ -98,3 +98,46 @@ export const changePassword = async (passwordData) => {
     }
   }
 };
+
+// ── Chatbot ──────────────────────────────────────────
+
+// Send a message and get bot reply
+// export const sendChatMessage = async (message, sessionId) => {
+//   try {
+//     const response = await axios.post(`${BASE_URL}/chat/message`, { message, sessionId });
+//     return response.data.data.reply;
+//   } catch (error) {
+//     if (error.response && error.response.data) {
+//       throw new Error(error.response.data.message);
+//     } else {
+//       throw new Error("Failed to send message.");
+//     }
+//   }
+// };
+
+// Fetch conversation history for a session
+// export const fetchChatHistory = async (sessionId) => {
+//   try {
+//     const response = await axios.get(`${BASE_URL}/chat/history/${sessionId}`);
+//     return response.data.data.messages || [];
+//   } catch (error) {
+//     if (error.response && error.response.data) {
+//       throw new Error(error.response.data.message);
+//     } else {
+//       throw new Error("Failed to fetch chat history.");
+//     }
+//   }
+// };
+
+// Clear conversation history for a session
+// export const clearChatHistory = async (sessionId) => {
+//   try {
+//     await axios.delete(`${BASE_URL}/chat/history/${sessionId}`);
+//   } catch (error) {
+//     if (error.response && error.response.data) {
+//       throw new Error(error.response.data.message);
+//     } else {
+//       throw new Error("Failed to clear chat history.");
+//     }
+//   }
+// };

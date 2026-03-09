@@ -26,11 +26,11 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import LogoutIcon from "@mui/icons-material/Logout";
 
 import logo from "../../assets/LRXLOGOS/LOGO-2.png";
-import treatment1 from "../../assets/medicines/Retatrutide Vials.png";
-import treatment2 from "../../assets/medicines/Tirzepatide Vial.png";
-import treatment3 from "../../assets/medicines/BPC157REMOVED.png";
-import treatment4 from "../../assets/medicines/GHK-CU1.png";
-import treatment5 from "../../assets/medicines/CJC-1295Vial.png";
+import treatment1 from "../../assets/medicines/weightloss1.png";
+import treatment2 from "../../assets/medicines/terzipied.png";
+import treatment3 from "../../assets/medicines/BPC-removebg-preview.png";
+import treatment4 from "../../assets/medicines/GHK-CU.png";
+import treatment5 from "../../assets/medicines/CJC-1295.png";
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -120,6 +120,14 @@ export default function Navbar() {
       [index]: !prev[index]
     }));
   };
+
+  const treatmentPaths = {
+  "Retatrutide Vial": "/weight-loss/retatrutide-vial",
+  "Tirzepadtide Vial": "/weight-loss/tirzepatide-injectable",
+  "BPC-157": "/peptides/bpc-157",
+  "CJC-1295/Ipamorelin": "/peptides/cjc-1295-ipamorelin",
+  "GHK-cu": "/peptides/GHKCU"
+}; 
 
   const exploreItems = [
     {
@@ -548,117 +556,125 @@ export default function Navbar() {
               </div>
             ))}
 
-            {/* Top Treatments */}
-            <p
-              style={{
-                fontSize: "12px",
-                color: "#9b9b9b",
-                letterSpacing: "1px",
-                fontWeight: 600,
-                padding: `${isMobile ? "20px" : "30px"} ${getResponsivePadding()} ${isMobile ? "8px" : "12px"}`,
-              }}
-            >
-              TOP TREATMENTS
-            </p>
+           {/* Top Treatments */}
+<p
+  style={{
+    fontSize: "12px",
+    color: "#9b9b9b",
+    letterSpacing: "1px",
+    fontWeight: 600,
+    padding: `${isMobile ? "20px" : "30px"} ${getResponsivePadding()} ${isMobile ? "8px" : "12px"}`,
+  }}
+>
+  TOP TREATMENTS
+</p>
 
-            <div
-              style={{
-                display: "flex",
-                gap: isMobile ? "10px" : "14px",
-                padding: `0 ${getResponsivePadding()} ${isMobile ? "30px" : "40px"}`,
-                overflowX: "auto",
-              }}
-            >
-              {[
-                { img: treatment1, title: "Retatrutide Vial" },
-                { img: treatment2, title: "Tirzepadtide Vial" },
-                { img: treatment3, title: "BPC-157" },
-                { img: treatment4, title: "GHK-cu" },
-                { img: treatment5, title: "CJC-1295/Ipamorelin" },
-              ].map(({ img, title }, index) => (
-                <div
-                  key={index}
-                  style={{
-                    minWidth: isMobile ? "140px" : "170px",
-                    height: isMobile ? "210px" : "240px",
-                    borderRadius: "18px",
-                    border: "1px solid #ececec",
-                    padding: isMobile ? "10px" : "14px",
-                    cursor: "pointer",
-                    position: "relative",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    backgroundColor: "#fff",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      left: "10px",
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      padding: "3px 7px",
-                      borderRadius: "6px",
-                      backgroundColor: "#f2f2f2",
-                      color: "#111",
-                      lineHeight: 1,
-                    }}
-                  >
-                    Rx
-                  </div>
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "10px",
-                      right: "65px",
-                      fontSize: "11px",
-                      fontWeight: 600,
-                      padding: "3px 8px",
-                      borderRadius: "999px",
-                      backgroundColor: "#1bb978",
-                      color: "#fff",
-                      lineHeight: 1,
-                    }}
-                  >
-                    Popular
-                  </div>
-                  <div
-                    style={{
-                      flex: 1,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      paddingTop: "22px",
-                    }}
-                  >
-                    <img
-                      src={img}
-                      alt={title}
-                      style={{
-                        width: "100%",
-                        maxHeight: isMobile ? "95px" : "115px",
-                        objectFit: "contain",
-                      }}
-                    />
-                  </div>
-                  <p
-                    style={{
-                      fontWeight: 500,
-                      fontSize: isMobile ? "12px" : "14px",
-                      marginTop: "10px",
-                      marginBottom: "4px",
-                      textAlign: "left",
-                      color: "#111",
-                    }}
-                  >
-                    {title}
-                  </p>
-                </div>
-              ))}
-            </div>
-
+<div
+  style={{
+    display: "flex",
+    gap: isMobile ? "10px" : "14px",
+    padding: `0 ${getResponsivePadding()} ${isMobile ? "30px" : "40px"}`,
+    overflowX: "auto",
+  }}
+>
+  {[
+    { img: treatment1, title: "Retatrutide Vial" },
+    { img: treatment2, title: "Tirzepadtide Vial" },
+    { img: treatment3, title: "BPC-157" },
+    { img: treatment4, title: "GHK-cu" },
+    { img: treatment5, title: "CJC-1295/Ipamorelin" },
+  ].map(({ img, title }, index) => (
+    <div
+      key={index}
+      onClick={() => navigate(treatmentPaths[title])}
+      style={{
+        minWidth: isMobile ? "140px" : "170px",
+        height: isMobile ? "210px" : "240px",
+        borderRadius: "18px",
+        border: "1px solid #ececec",
+        padding: isMobile ? "10px" : "14px",
+        cursor: "pointer",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        backgroundColor: "#fff",
+        transition: "transform 0.2s, box-shadow 0.2s",
+        // Optional hover effect
+        ...(!isMobile && {
+          ':hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+          }
+        })
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: "10px",
+          left: "10px",
+          fontSize: "11px",
+          fontWeight: 600,
+          padding: "3px 7px",
+          borderRadius: "6px",
+          backgroundColor: "#f2f2f2",
+          color: "#111",
+          lineHeight: 1,
+        }}
+      >
+        Rx
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "65px",
+          fontSize: "11px",
+          fontWeight: 600,
+          padding: "3px 8px",
+          borderRadius: "999px",
+          backgroundColor: "#1bb978",
+          color: "#fff",
+          lineHeight: 1,
+        }}
+      >
+        Popular
+      </div>
+      <div
+        style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "22px",
+        }}
+      >
+        <img
+          src={img}
+          alt={title}
+          style={{
+            width: "100%",
+            maxHeight: isMobile ? "95px" : "115px",
+            objectFit: "contain",
+          }}
+        />
+      </div>
+      <p
+        style={{
+          fontWeight: 500,
+          fontSize: isMobile ? "12px" : "14px",
+          marginTop: "10px",
+          marginBottom: "4px",
+          textAlign: "left",
+          color: "#111",
+        }}
+      >
+        {title}
+      </p>
+    </div>
+  ))}
+</div>
             {/* Meet LRX */}
             <p
               style={{

@@ -37,7 +37,7 @@ import {
 
 // Import your assets
 import videoSrc from '../../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4';
-import oralTirzepatideImg from '../../../assets/Medicines/terzipied.png';
+import oralTirzepatideImg from '../../../assets/Medicines/herocard2.jpeg';
 
 // Animation variants
 const staggerContainer = {
@@ -88,7 +88,7 @@ const PRICE = {
   amount: 379.00,
   currency: 'USD',
   display: '$379.00',
-  period: 'per Vial',
+  period: 'per month',
   treatmentType: 'Oral RDT'
 };
 
@@ -776,242 +776,250 @@ const OralTirzepatidePage = () => {
       </Box>
 
       {/* New How It Works Section */}
-      <Box sx={{ py: { xs: 12, md: 16 }, backgroundColor: colors.white }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
-                  <Typography
-                    sx={{
-                      fontSize: "0.75rem",
-                      letterSpacing: 3,
-                      fontWeight: 700,
-                      color: colors.darkBlue,
-                      mb: 2,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    ORAL DELIVERY SYSTEM
-                  </Typography>
+   <Box sx={{ py: { xs: 8, md: 16 }, backgroundColor: colors.white }}>
+  <Container maxWidth="lg">
+    <Grid container spacing={{ xs: 4, md: 6 }} alignItems="center">
+      {/* Left Column - Text Content */}
+      <Grid item xs={12} md={6}>
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <Box sx={{ textAlign: { xs: "left", md: "left" } }}>
+            <Typography
+              sx={{
+                fontSize: "0.75rem",
+                letterSpacing: 3,
+                fontWeight: 700,
+                color: colors.darkBlue,
+                mb: 2,
+                textTransform: "uppercase",
+              }}
+            >
+              ORAL DELIVERY SYSTEM
+            </Typography>
 
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      fontSize: { xs: "2rem", md: "2.5rem" },
-                      fontWeight: 800,
-                      color: colors.black,
-                      mb: 3,
-                    }}
-                  >
-                    How Oral Tirzepatide Works
-                  </Typography>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: { xs: "1.75rem", sm: "2rem", md: "2.5rem" },
+                fontWeight: 800,
+                color: colors.black,
+                mb: 3,
+              }}
+            >
+              How Oral Tirzepatide Works
+            </Typography>
 
-                  <Typography
-                    sx={{
-                      fontSize: "1.1rem",
-                      color: colors.darkGrey,
-                      lineHeight: 1.8,
-                      mb: 4,
-                    }}
-                  >
-                    The rapid-dissolve tablet format allows for sublingual absorption, 
-                    bypassing the digestive system for faster onset and consistent effects.
-                  </Typography>
+            <Typography
+              sx={{
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                color: colors.darkGrey,
+                lineHeight: 1.8,
+                mb: 4,
+              }}
+            >
+              The rapid-dissolve tablet format allows for sublingual absorption, 
+              bypassing the digestive system for faster onset and consistent effects.
+            </Typography>
 
-                  {/* Mechanism Points */}
-                  <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                    {[
-                      {
-                        icon: <Pill size={24} color={colors.darkBlue} />,
-                        title: "Rapid Dissolve Technology",
-                        description: "Dissolves quickly under the tongue for fast absorption"
-                      },
-                      {
-                        icon: <Scale size={24} color={colors.darkBlue} />,
-                        title: "Dual Hormone Activation",
-                        description: "Simultaneously activates GLP-1 and GIP receptors"
-                      },
-                      {
-                        icon: <CheckCircle size={24} color={colors.darkBlue} />,
-                        title: "Convenient Administration",
-                        description: "No injections, needles, or water needed"
-                      }
-                    ].map((point, index) => (
-                      <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "flex-start" }}>
-                        <Box
-                          sx={{
-                            width: 48,
-                            height: 48,
-                            borderRadius: "12px",
-                            backgroundColor: alpha(colors.darkBlue, 0.1),
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            flexShrink: 0,
-                          }}
-                        >
-                          {point.icon}
-                        </Box>
-                        <Box>
-                          <Typography
-                            sx={{
-                              fontWeight: 700,
-                              fontSize: "1rem",
-                              color: colors.black,
-                              mb: 0.5,
-                            }}
-                          >
-                            {point.title}
-                          </Typography>
-                          <Typography
-                            sx={{
-                              fontSize: "0.9rem",
-                              color: colors.darkGrey,
-                              lineHeight: 1.6,
-                            }}
-                          >
-                            {point.description}
-                          </Typography>
-                        </Box>
-                      </Box>
-                    ))}
-                  </Box>
-                </Box>
-              </motion.div>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <motion.div
-                initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-              >
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-                  {/* Main Description */}
+            {/* Mechanism Points */}
+            <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+              {[
+                {
+                  icon: <Pill size={24} color={colors.darkBlue} />,
+                  title: "Rapid Dissolve Technology",
+                  description: "Dissolves quickly under the tongue for fast absorption"
+                },
+                {
+                  icon: <Scale size={24} color={colors.darkBlue} />,
+                  title: "Dual Hormone Activation",
+                  description: "Simultaneously activates GLP-1 and GIP receptors"
+                },
+                {
+                  icon: <CheckCircle size={24} color={colors.darkBlue} />,
+                  title: "Convenient Administration",
+                  description: "No injections, needles, or water needed"
+                }
+              ].map((point, index) => (
+                <Box key={index} sx={{ display: "flex", gap: 2, alignItems: "flex-start" }}>
                   <Box
                     sx={{
-                      p: 4,
-                      borderRadius: "20px",
-                      background: `linear-gradient(135deg, ${colors.white}, #FAFAFA)`,
-                      boxShadow: "0 15px 40px rgba(3, 18, 64, 0.08)",
-                      border: `1px solid rgba(0, 53, 158, 0.08)`,
+                      width: 48,
+                      height: 48,
+                      borderRadius: "12px",
+                      backgroundColor: alpha(colors.darkBlue, 0.1),
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
                     }}
                   >
-                    <Typography
-                      sx={{
-                        fontSize: "20px",
-                        color: colors.darkGrey,
-                        fontWeight: 900,
-                        mb: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 1,
-                      }}
-                    >
-                      <Brain size={24} color={colors.darkBlue} />
-                      How It Works
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: "16px",
-                        color: colors.darkGrey,
-                        lineHeight: 1.7,
-                        mb: 3,
-                      }}
-                    >
-                      Oral Tirzepatide RDT works by activating both GLP-1 and GIP receptors, 
-                      enhancing insulin secretion, reducing glucagon, slowing gastric emptying, 
-                      and promoting satiety for comprehensive metabolic control.
-                    </Typography>
-                    
-                    {/* Key Benefits */}
-                    <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, gap: 2, mt: 3 }}>
-                      {pillBenefits.slice(0, 4).map((benefit, index) => (
-                        <Box
-                          key={index}
-                          sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: 1.5,
-                            p: 1.5,
-                            backgroundColor: `${benefit.color}10`,
-                            borderRadius: "10px",
-                          }}
-                        >
-                          <Box
-                            sx={{
-                              width: "32px",
-                              height: "32px",
-                              borderRadius: "8px",
-                              backgroundColor: `${benefit.color}20`,
-                              display: "flex",
-                              alignItems: "center",
-                              justifyContent: "center",
-                            }}
-                          >
-                            <benefit.icon size={16} color={benefit.color} />
-                          </Box>
-                          <Typography
-                            sx={{
-                              fontSize: "13px",
-                              fontWeight: 700,
-                              color: colors.darkGrey,
-                            }}
-                          >
-                            {benefit.text}
-                          </Typography>
-                        </Box>
-                      ))}
-                    </Box>
+                    {point.icon}
                   </Box>
-
-                  {/* Usage Instructions */}
-                  <Box
-                    sx={{
-                      p: 3,
-                      backgroundColor: colors.white,
-                      borderRadius: "16px",
-                      border: `2px dashed ${colors.darkBlue}30`,
-                    }}
-                  >
+                  <Box>
                     <Typography
                       sx={{
-                        fontSize: "16px",
-                        fontWeight: 800,
-                        color: colors.darkGrey,
-                        mb: 2,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: 1,
+                        fontWeight: 700,
+                        fontSize: "1rem",
+                        color: colors.black,
+                        mb: 0.5,
                       }}
                     >
-                      <Clock size={20} color={colors.darkBlue} />
-                      Treatment Timeline
+                      {point.title}
                     </Typography>
                     <Typography
                       sx={{
-                        fontSize: "14px",
+                        fontSize: "0.9rem",
                         color: colors.darkGrey,
                         lineHeight: 1.6,
                       }}
                     >
-                      Noticeable weight reduction typically begins within 2-4 weeks. Optimal results 
-                      are achieved after 12-16 weeks of consistent use. Take once daily as directed.
+                      {point.description}
                     </Typography>
                   </Box>
                 </Box>
-              </motion.div>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
+              ))}
+            </Box>
+          </Box>
+        </motion.div>
+      </Grid>
+
+      {/* Right Column - Cards */}
+      <Grid item xs={12} md={6}>
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
+            {/* Main Description Card */}
+            <Box
+              sx={{
+                p: { xs: 3, sm: 4 },
+                borderRadius: "20px",
+                background: `linear-gradient(135deg, ${colors.white}, #FAFAFA)`,
+                boxShadow: "0 15px 40px rgba(3, 18, 64, 0.08)",
+                border: `1px solid rgba(0, 53, 158, 0.08)`,
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: "20px",
+                  color: colors.darkGrey,
+                  fontWeight: 900,
+                  mb: 2,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                <Brain size={24} color={colors.darkBlue} />
+                How It Works
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "15px", md: "16px" },
+                  color: colors.darkGrey,
+                  lineHeight: 1.7,
+                  mb: 3,
+                }}
+              >
+                Oral Tirzepatide RDT works by activating both GLP-1 and GIP receptors, 
+                enhancing insulin secretion, reducing glucagon, slowing gastric emptying, 
+                and promoting satiety for comprehensive metabolic control.
+              </Typography>
+              
+              {/* Key Benefits */}
+              <Box sx={{ 
+                display: "grid", 
+                gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" }, 
+                gap: 2, 
+                mt: 3 
+              }}>
+                {pillBenefits.slice(0, 4).map((benefit, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1.5,
+                      p: 1.5,
+                      backgroundColor: `${benefit.color}10`,
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: "32px",
+                        height: "32px",
+                        borderRadius: "8px",
+                        backgroundColor: `${benefit.color}20`,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <benefit.icon size={16} color={benefit.color} />
+                    </Box>
+                    <Typography
+                      sx={{
+                        fontSize: "13px",
+                        fontWeight: 700,
+                        color: colors.darkGrey,
+                      }}
+                    >
+                      {benefit.text}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+
+            {/* Usage Instructions */}
+            <Box
+              sx={{
+                p: { xs: 2.5, sm: 3 },
+                backgroundColor: colors.white,
+                borderRadius: "16px",
+                border: `2px dashed ${colors.darkBlue}30`,
+              }}
+            >
+              <Typography
+                sx={{
+                  fontSize: "16px",
+                  fontWeight: 800,
+                  color: colors.darkGrey,
+                  mb: 2,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 1,
+                }}
+              >
+                <Clock size={20} color={colors.darkBlue} />
+                Treatment Timeline
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "13px", sm: "14px" },
+                  color: colors.darkGrey,
+                  lineHeight: 1.6,
+                }}
+              >
+                Noticeable weight reduction typically begins within 2-4 weeks. Optimal results 
+                are achieved after 12-16 weeks of consistent use. Take once daily as directed.
+              </Typography>
+            </Box>
+          </Box>
+        </motion.div>
+      </Grid>
+    </Grid>
+  </Container>
+</Box>
 
       {/* Testimonials Section */}
       <TestimonialCarousel />

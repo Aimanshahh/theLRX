@@ -31,7 +31,7 @@ export default function Buildmuscle() {
       name: "Sermorelin Vial", 
       sub: "$189.00",
       buyNowUrl: "https://try.thelrx.com/intake/se-jd9om9",
-      learnMorePath: "/peptides/sermorelin-20mg"
+      learnMorePath: "/peptides/sermorelin"
     },
     
   ];
@@ -241,13 +241,15 @@ export default function Buildmuscle() {
           {products.map((item, index) => (
             <Box key={index} sx={{ display: "flex", flexDirection: "column" }}>
 
-              {/* IMAGE */}
+              {/* IMAGE - Now clickable */}
               <Box
+                onClick={() => handleLearnMore(item.learnMorePath)}
                 sx={{
                   width: "100%",
                   aspectRatio: "1 / 1",
                   overflow: "hidden",
                   mb: { xs: 1.5, md: 2 },
+                  cursor: "pointer", // Indicates clickability
                 }}
               >
                 <Box

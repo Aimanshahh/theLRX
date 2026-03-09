@@ -242,13 +242,15 @@ export default function Fixyourrecovery() {
           {products.map((item, index) => (
             <Box key={index} sx={{ display: "flex", flexDirection: "column" }}>
 
-              {/* IMAGE */}
+              {/* IMAGE - Now clickable */}
               <Box
+                onClick={() => handleLearnMore(item.learnMorePath)}
                 sx={{
                   width: "100%",
                   aspectRatio: "1 / 1",
                   overflow: "hidden",
                   mb: { xs: 1.5, md: 2 },
+                  cursor: "pointer", // Indicates clickability
                 }}
               >
                 <Box

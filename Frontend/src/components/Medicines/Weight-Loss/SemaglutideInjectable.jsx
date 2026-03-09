@@ -94,7 +94,7 @@ const PRICE = {
   amount: 189.00,
   currency: 'USD',
   display: '$189.00',
-  period: 'per Vial',
+  period: 'per month',
   treatmentType: 'Injectable'
 };
 
