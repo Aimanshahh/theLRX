@@ -22,14 +22,14 @@ export default function Stoplowenergy() {
     { 
       img: wegovyPill, 
       name: "Vitamin B-12 Injection", 
-      sub: "$149.00",
+      sub: "Starting at $77.00",
       buyNowUrl: "https://try.thelrx.com/intake/mb-qdl7pe",
       learnMorePath: "/peptides/vitamin-b12"
     },
     { 
       img: zepboundVial, 
       name: "NAD+", 
-      sub: "$149.00",
+      sub: "Starting at $228.00",
       buyNowUrl: "https://try.thelrx.com/intake/na-a4kt74",
       learnMorePath: "/peptides/NAD"
     },

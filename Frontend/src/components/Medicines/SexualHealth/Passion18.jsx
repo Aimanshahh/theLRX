@@ -161,7 +161,7 @@ const Passion18Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $129.00
+                      Starting at $58.00
                     </Typography>
                     <Typography
                       sx={{
@@ -760,7 +760,7 @@ const Passion18Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $129
+                      $58.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1136,7 +1136,7 @@ const Passion18Page = () => {
                     mb: 1
                   }}
                 >
-                  $129.00
+                  Starting at $58.00
                 </Typography>
                 <Typography
                   sx={{

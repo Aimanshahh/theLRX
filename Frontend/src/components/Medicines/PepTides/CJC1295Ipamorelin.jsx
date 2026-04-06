@@ -172,7 +172,7 @@ const CJC1295IpamorelinPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Start Research Protocol - $199
+                Start Research Protocol - $194.00
               </Button>
             </motion.div>
 
@@ -674,7 +674,7 @@ const CJC1295IpamorelinPage = () => {
                         color: palette.darkBlue,
                       }}
                     >
-                      $199.00
+                      Starting at $194.00
                     </Box>
                   </Box>
                 </motion.div>
@@ -1242,7 +1242,7 @@ const CJC1295IpamorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Schedule a medical consultation for $199.00. Includes comprehensive evaluation, 
+                Schedule a medical consultation for $194.00. Includes comprehensive evaluation, 
                 medical supervision, and access to compounded medications under physician guidance.
               </Typography>
 
@@ -1281,7 +1281,7 @@ const CJC1295IpamorelinPage = () => {
                       },
                     }}
                   >
-                    Schedule Consultation - $199.00
+                    Schedule Consultation - $194.00
                   </Button>
                 </motion.div>
 

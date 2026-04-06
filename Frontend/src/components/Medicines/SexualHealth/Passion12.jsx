@@ -161,7 +161,7 @@ const Passion12Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $99.00
+                      Starting at $39.00
                     </Typography>
                     <Typography
                       sx={{
@@ -170,7 +170,7 @@ const Passion12Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $129.00
+                      $39.00
                     </Typography>
                   </Box>
                   <Chip
@@ -760,7 +760,7 @@ const Passion12Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $129
+                      Starting at $39.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1136,7 +1136,7 @@ const Passion12Page = () => {
                     mb: 1
                   }}
                 >
-                  $99.00
+                  Starting at $39.00
                 </Typography>
                 <Typography
                   sx={{

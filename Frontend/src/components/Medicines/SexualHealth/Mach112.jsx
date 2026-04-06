@@ -162,7 +162,7 @@ const Mach12Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $139.00
+                      Starting at $39.00
                     </Typography>
                     <Typography
                       sx={{
@@ -171,7 +171,7 @@ const Mach12Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $199.00
+                      Starting at $39.00
                     </Typography>
                   </Box>
                   <Chip
@@ -763,7 +763,7 @@ const Mach12Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $139
+                      $39.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1141,7 +1141,7 @@ const Mach12Page = () => {
                     mb: 1
                   }}
                 >
-                  $139.00
+                  Starting at $39.00
                 </Typography>
                 <Typography
                   sx={{

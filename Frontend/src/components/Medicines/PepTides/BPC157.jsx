@@ -55,7 +55,7 @@ const BPC157Page = () => {
   // CORRECTED: Extracted from the actual BPC-157 product page
   const productInfo = {
     name: "BPC-157 Vial",
-    price: "$189.00",
+    price: "Starting at $194.00",
     description: "BPC-157 accelerates tissue repair, reduces inflammation, and supports gut health, promoting smoother recovery and greater day-to-day vitality.",
     detailedDescription: "BPC-157 accelerates tissue repair, reduces inflammation, and supports gut health, promoting smoother recovery and greater day-to-day vitality. It pairs effortlessly with Semaglutide, Tirzepatide, NAD+, and CJC-1295/Ipamorelin for enhanced healing and metabolic balance.",
     rating: "4.9/5.0",
@@ -86,10 +86,10 @@ const BPC157Page = () => {
       { label: "Active Ingredient", value: "BPC-157" },
       { label: "Administration", value: "Subcutaneous" }
     ],
-    ctaText: "Start Research - $189.00",
+    ctaText: "Start Research - $194.00",
     pepProgram: {
       title: "Precision Energy Program (PEP)",
-      price: "189",
+      price: "194",
       description: "per month - Designed to elevate cellular vitality and metabolic performance, the Precision Energy Program uses targeted peptides to restore balance, enhance recovery, and help you feel effortlessly energized throughout your day."
     },
     disclaimer: "BPC-157 is a research peptide with demonstrated properties in preclinical studies. It is not FDA-approved for human therapeutic use and should be used under medical supervision for research purposes. May interact with certain medications. Not for use by pregnant or nursing women. Discontinue use if adverse reactions occur. Individual results in clinical settings continue to be studied."
@@ -196,7 +196,7 @@ const BPC157Page = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button onClick={handleCtaClick} variant="contained" sx={{ px: 4.5, py: 1.6, bgcolor: palette.white, color: palette.darkBlue, borderRadius: "28px", fontSize: "18px", fontWeight: 700 }}>
-                Support Healing Processes - $189
+                Support Healing Processes - Starting at $194.00
               </Button>
             </motion.div>
 

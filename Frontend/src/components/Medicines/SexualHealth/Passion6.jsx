@@ -758,7 +758,7 @@ const Passion6Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $69
+                      Starting at $19
                     </Typography>
                   </Box>
                 </Box>
@@ -1134,7 +1134,7 @@ const Passion6Page = () => {
                     mb: 1
                   }}
                 >
-                  $69.00
+                  Starting at $19.00
                 </Typography>
               </Box>
               

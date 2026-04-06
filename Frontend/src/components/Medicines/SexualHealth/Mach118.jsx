@@ -162,7 +162,7 @@ const Mach18Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $199.00
+                      Starting at $58.00
                     </Typography>
                     <Typography
                       sx={{
@@ -622,7 +622,7 @@ const Mach18Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              The 18-tablet pack offers the best value at just $11.06 per tablet, compared to 
+              The 18-tablet pack offers the best value at just $6.06 per tablet, compared to 
               $13.92 per tablet in the 12-pack. This represents a 28% savings per tablet, 
               making it the most cost-effective option for serious athletes committed to 
               extended training periods.
@@ -764,7 +764,7 @@ const Mach18Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $199
+                      Starting at $58.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1142,7 +1142,7 @@ const Mach18Page = () => {
                     mb: 1
                   }}
                 >
-                  $199.00
+                  Starting at $58.00
                 </Typography>
                 <Typography
                   sx={{

@@ -171,7 +171,7 @@ const DrivePlus12Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $179.00
+                      Starting at $38.00
                     </Typography>
                     <Typography
                       sx={{
@@ -752,7 +752,7 @@ const DrivePlus12Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $179
+                      $38.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1138,7 +1138,7 @@ const DrivePlus12Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $179.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $38.00.
               </Typography>
               
               {/* Pricing Display */}
@@ -1152,7 +1152,7 @@ const DrivePlus12Page = () => {
                     mb: 1
                   }}
                 >
-                  $179.00
+                  $38.00
                 </Typography>
                 <Typography
                   sx={{

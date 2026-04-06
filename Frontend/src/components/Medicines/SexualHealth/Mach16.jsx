@@ -171,7 +171,7 @@ const Mach16Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $139.00
+                      Starting at $19.00
                     </Typography>
                     <Typography
                       sx={{
@@ -180,7 +180,7 @@ const Mach16Page = () => {
                         fontSize: "1.2rem"
                       }}
                     >
-                      $149.00
+                      $69.00
                     </Typography>
                   </Box>
                   <Chip
@@ -774,7 +774,7 @@ const Mach16Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $139
+                      Starting at $19.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1183,7 +1183,7 @@ const Mach16Page = () => {
                     mb: 1
                   }}
                 >
-                  $139.00
+                  Starting at $19.00
                 </Typography>
               </Box>
               

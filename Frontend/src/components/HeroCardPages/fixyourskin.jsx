@@ -22,7 +22,7 @@ export default function Fixyourskin() {
     { 
       img: wegovyPill, 
       name: "GHK-Cu", 
-      sub: "$179.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/gh-0ce9zd",
       learnMorePath: "/peptides/GHKCU"
     },

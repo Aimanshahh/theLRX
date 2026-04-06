@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-  Box,
-  Container,
+  Box,Container,
   Typography,
   TextField,
   Button,
@@ -1473,7 +1472,7 @@ export default function Profile() {
                             <Healing sx={{ fontSize: 14 }} />
                           </Box>
                         }
-                        onClick={() => window.open('https://dashboard.rimo.co/sign-in?returnTo=%2Fstore%2Fthe-liquid-rx', '_blank')}
+                        onClick={() => window.open('https://try.thelrx.com', '_blank')}
                         sx={{
                           background: 'linear-gradient(135deg, #00359E 0%, #0052D4 50%, #00D4FF 100%)',
                           borderRadius: 2,

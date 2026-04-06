@@ -25,7 +25,7 @@ export default function Wantmoresex() {
     { 
       img: wegovyPill, 
       name: "Passion – 6 Tablets", 
-      sub: "$69.00",
+      sub: "Starting at $19.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/passion-6",
       category: "Female"
@@ -33,7 +33,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundVial, 
       name: "Passion – 18 Tablets", 
-      sub: "$189.00",
+      sub: "Starting at $58.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/passion-18",
       category: "Female"
@@ -41,7 +41,7 @@ export default function Wantmoresex() {
     { 
       img: ozempicPen, 
       name: "Passion – 12 Tablets", 
-      sub: "$129.00",
+      sub: "Starting at $39.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/passion-12",
       category: "Female"
@@ -49,7 +49,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundPen, 
       name: "Lust – 18 Tablets", 
-      sub: "$169.00",
+      sub: "Starting at $58.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/lust-18",
       category: "Female"
@@ -57,7 +57,7 @@ export default function Wantmoresex() {
     { 
       img: semaglutideVial, 
       name: "Lust – 12 Tablets", 
-      sub: "$139.00",
+      sub: "Starting at $39.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/lust-12",
       category: "Female"
@@ -65,7 +65,7 @@ export default function Wantmoresex() {
     { 
       img: wegovyPill, 
       name: "Lust – 6 Tablets", 
-      sub: "$49.00",
+      sub: "Starting at $19.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/lust-6",
       category: "Female"
@@ -74,7 +74,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundVial, 
       name: "Overdrive Plus – 6 Tablets", 
-      sub: "$79.00",
+      sub: "Starting at $19.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/overdrive-plus-6",
       category: "Male"
@@ -82,7 +82,7 @@ export default function Wantmoresex() {
     { 
       img: ozempicPen, 
       name: "Overdrive Plus – 12 Tablets", 
-      sub: "$119.00",
+      sub: "Starting at $39.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/overdrive-plus-12",
       category: "Male"
@@ -90,7 +90,7 @@ export default function Wantmoresex() {
     { 
       img: semaglutideVial, 
       name: "Redpill – 6 Tablets", 
-      sub: "$49.00",
+      sub: "Starting at $49.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/redpill-6",
       category: "Male"
@@ -98,7 +98,7 @@ export default function Wantmoresex() {
     { 
       img: wegovyPill, 
       name: "Redpill – 12 Tablets", 
-      sub: "$119.00",
+      sub: "Starting at $119.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/redpill-12",
       category: "Male"
@@ -106,7 +106,7 @@ export default function Wantmoresex() {
     { 
       img: ozempicPen, 
       name: "Mach 1 – 18 Tablets", 
-      sub: "$199.00",
+      sub: "Starting at $58.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/mach1-18",
       category: "Male"
@@ -114,7 +114,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundPen, 
       name: "Mach 1 – 6 Tablets", 
-      sub: "$69.00",
+      sub: "Starting at $19.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/mach1-6",
       category: "Male"
@@ -122,7 +122,7 @@ export default function Wantmoresex() {
     { 
       img: semaglutideVial, 
       name: "Mach 1 – 12 Tablets", 
-      sub: "$139.00",
+      sub: "Starting at $39.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/mach1-12",
       category: "Male"
@@ -130,7 +130,7 @@ export default function Wantmoresex() {
     { 
       img: wegovyPill, 
       name: "Epiq Chew – 30 Tablets", 
-      sub: "$79.00",
+      sub: "Starting at $29.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/epiq-chew-30",
       category: "Male"
@@ -138,7 +138,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundVial, 
       name: "Drive Plus – 12 Tablets", 
-      sub: "$179.99",
+      sub: "Starting at $39.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/drive-plus-12",
       category: "Male"
@@ -146,7 +146,7 @@ export default function Wantmoresex() {
     { 
       img: ozempicPen, 
       name: "Drive Plus – 18 Tablets", 
-      sub: "$239.00",
+      sub: "starting at $58.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/drive-plus-18",
       category: "Male"
@@ -154,7 +154,7 @@ export default function Wantmoresex() {
     { 
       img: zepboundPen, 
       name: "Drive Plus – 6 Tablets", 
-      sub: "$109.00",
+      sub: "starting at $19.00",
       buyNowUrl: "https://try.thelrx.com/intake/ed-fmmbgk",
       learnMorePath: "/sexual-health/drive-plus-6",
       category: "Male"

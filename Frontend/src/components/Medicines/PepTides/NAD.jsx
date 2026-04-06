@@ -56,7 +56,7 @@ const NADNasalSprayPage = () => {
   // Extracted and structured product data from the URL
   const productInfo = {
     name: "NAD+ Nasal Spray",
-    price: "$149.00",
+    price: "Starting at $228.00",
     description: "NAD+ Nasal Spray is a fast-acting vitality booster designed to support mental clarity, sustained energy, and cellular repair—perfect for on-the-go rejuvenation.",
     detailedDescription: "NAD+ Nasal Spray is a fast-acting vitality booster designed to support mental clarity, sustained energy, and cellular repair—perfect for on-the-go rejuvenation. Delivered intranasally for rapid absorption, it helps promote focus, resilience, and overall cognitive performance while supporting healthy cellular function. This formula stacks exceptionally well with oral metabolic therapies, GHK-Cu, and CJC-1295/Ipamorelin, making it an ideal daily addition for comprehensive brain-and-body enhancement and optimized performance.",
     rating: "4.8/5.0",
@@ -89,7 +89,7 @@ const NADNasalSprayPage = () => {
       { label: "Total NAD+", value: "300 mg" },
       { label: "Administration", value: "Nasal Spray" }
     ],
-    ctaText: "Start Research - $149.00",
+    ctaText: "Start Research - $228.00",
     disclaimer: "NAD+ nasal spray is a compound being studied for research purposes. May cause mild nasal irritation in some individuals. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary."
   };
 
@@ -187,7 +187,7 @@ const NADNasalSprayPage = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button onClick={handleCtaClick} variant="contained" sx={{ px: 4.5, py: 1.6, bgcolor: palette.white, color: palette.darkBlue, borderRadius: "28px", fontSize: "18px", fontWeight: 700 }}>
-                Explore Formulations - $149
+                Explore Formulations - $228.00
               </Button>
             </motion.div>
 

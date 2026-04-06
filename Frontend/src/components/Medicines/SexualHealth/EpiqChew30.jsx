@@ -161,7 +161,7 @@ const EpiqChew30Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $79.00
+                      Starting at $29.00
                     </Typography>
                     <Typography
                       sx={{
@@ -279,7 +279,7 @@ const EpiqChew30Page = () => {
                       fontWeight: 900
                     }}
                   >
-                    $79
+                    Starting at $29.00
                   </Box>
                 </Box>
               </motion.div>
@@ -527,7 +527,7 @@ const EpiqChew30Page = () => {
                       value: "$297", 
                       color: "#00359E",
                       description: "Full monthly program",
-                      trend: "per month $79"
+                      trend: "per month $29.00"
                     },
                     { 
                       label: "Patient Trust", 
@@ -794,7 +794,7 @@ const EpiqChew30Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $79
+                      $29.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1173,7 +1173,7 @@ const EpiqChew30Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $79 for your per month.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works. Get personalized ED treatment starting at just $29.00 for your per month.
               </Typography>
               
               {/* Pricing Display */}
@@ -1187,7 +1187,7 @@ const EpiqChew30Page = () => {
                     mb: 1
                   }}
                 >
-                  $79.00
+                  $29.00
                 </Typography>
                 <Typography
                   sx={{

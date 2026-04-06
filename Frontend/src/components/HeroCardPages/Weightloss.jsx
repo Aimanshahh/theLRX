@@ -23,35 +23,35 @@ export default function Weightloss() {
     { 
       img: wegovyPill, 
       name: "Retatrutide Vial", 
-      sub: "$449.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/rt-76aoce",
       learnMorePath: "/weight-loss/retatrutide-vial"
     },
     { 
       img: zepboundVial, 
       name: "Oral Tirzepatide RDT", 
-      sub: "$379.00",
+      sub: "Starting at $213.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/oral-tirzepatide-rdt"
     },
     { 
       img: ozempicPen, 
       name: "Oral Semaglutide RDT", 
-      sub: "$249.00",
+      sub: "Starting at $125.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/oral-semaglutide-rdt"
     },
     { 
       img: zepboundPen, 
       name: "Tirzepatide Vial", 
-      sub: "$289.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/tirzepatide-injectable"
     },
     { 
       img: semaglutideVial, 
       name: "Semaglutide Vial", 
-      sub: "$189.00",
+      sub: "Starting at $144.00",
       buyNowUrl: "https://try.thelrx.com/intake/wm-ltaaov",
       learnMorePath: "/weight-loss/semaglutide-injectable"
     },

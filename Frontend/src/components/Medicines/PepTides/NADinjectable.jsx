@@ -56,7 +56,7 @@ const NADInjectablePage = () => {
   // Extracted from the URL product page structure
   const productInfo = {
     name: "NAD+ Injectable",
-    price: "$299.00",
+    price: "Starting at $298.00",
     originalPrice: "$599.00", // Assuming there might be an original price
     description: "Our pharmaceutical-grade NAD+ (Nicotinamide Adenine Dinucleotide) Injectable is being studied for its potential applications in cellular processes through systemic administration.",
     rating: "4.9/5.0",
@@ -89,7 +89,7 @@ const NADInjectablePage = () => {
       { label: "Research Dose", value: "50-100 mg" },
       { label: "Administration", value: "Subcutaneous/IM" }
     ],
-    ctaText: "Start Research - $299",
+    ctaText: "Start Research - $298",
     disclaimer: "NAD+ is a natural coenzyme, and this formulation is being studied for research purposes. May cause temporary reactions after administration. Discontinue use if adverse reactions occur. Not for use by pregnant or nursing women. Research outcomes continue to be studied and individual experiences may vary."
   };
 

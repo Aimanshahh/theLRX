@@ -22,14 +22,14 @@ export default function Fixyourrecovery() {
     { 
       img: wegovyPill, 
       name: "BPC-157", 
-      sub: "$189.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/bp-8xpx3w",
       learnMorePath: "/peptides/BPC-157"
     },
     { 
       img: zepboundVial, 
       name: "GHK-Cu", 
-      sub: "$179.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/gh-0ce9zd",
       learnMorePath: "/peptides/GHKCU"
     },

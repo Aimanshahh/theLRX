@@ -752,7 +752,7 @@ const Lust18Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $89
+                      Starting at $58.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1128,7 +1128,7 @@ const Lust18Page = () => {
                     mb: 1
                   }}
                 >
-                  $89.00
+                  Starting at $58.00
                 </Typography>
                 <Typography
                   sx={{

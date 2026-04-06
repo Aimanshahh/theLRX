@@ -159,7 +159,7 @@ const Lust6Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $49.00
+                      Starting at $19.00
                     </Typography>
                     <Typography
                       sx={{
@@ -750,7 +750,7 @@ const Lust6Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $49
+                      Starting at $19.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1125,7 +1125,7 @@ const Lust6Page = () => {
                     mb: 1
                   }}
                 >
-                  $49.00
+                  Starting at $19.00
                 </Typography>
               </Box>
 

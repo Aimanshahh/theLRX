@@ -333,7 +333,7 @@ export default function Footer() {
                 "&:hover": { color: "#003B9D" },
               }}
             >
-              (866) 669 9191
+              +1 (866) 669 9191
             </Box>
           </Box>
         </Box>

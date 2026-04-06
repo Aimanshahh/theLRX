@@ -6,6 +6,7 @@ import connectDB from "./config/db.mjs";
 // Routes
 import guideRoutes from "./routes/guideRoute.mjs";
 import authRoutes from "./routes/authRoutes.mjs";
+import chatRoutes from "./routes/chatRoutes.mjs";
 
 dotenv.config();
 
@@ -45,6 +46,7 @@ connectDB();
 // API Routes
 app.use("/api/guides", guideRoutes);
 app.use("/api/auth", authRoutes);
+app.use("/api/chat", chatRoutes);
 
 // Handle unknown routes
 app.use((req, res) => {

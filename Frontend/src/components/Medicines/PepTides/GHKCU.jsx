@@ -41,7 +41,7 @@ const GHKCuPage = () => {
   // Updated product data - Direct and accurate
   const productInfo = {
     name: "GHK-Cu Injection",
-    price: "$179.00",
+    price: "Starting at $194.00",
     description: "GHK-Cu is a copper-binding tripeptide complex supplied in sterile vials for subcutaneous or intramuscular injection.",
     detailedDescription: "GHK-Cu (Glycyl-Histidyl-Lysine-Cu) is a pharmaceutical-grade peptide compound formulated for injection. Each vial is manufactured under strict quality standards.",
     rating: "4.8/5.0",
@@ -73,7 +73,7 @@ const GHKCuPage = () => {
       { label: "Purity", value: "99%+" },
       { label: "Administration", value: "Subcutaneous/Intramuscular" }
     ],
-    ctaText: "Order GHK-Cu - $179.00",
+    ctaText: "Order GHK-Cu - $194.00",
     disclaimer: "GHK-Cu is a peptide compound intended for injection under medical supervision. Not for topical use. Prescription required. Administered by healthcare professionals only. Individual results may vary. Consult with a healthcare provider before use."
   };
 
@@ -171,7 +171,7 @@ const GHKCuPage = () => {
 
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button onClick={handleCtaClick} variant="contained" sx={{ px: 4.5, py: 1.6, bgcolor: palette.white, color: palette.darkBlue, borderRadius: "28px", fontSize: "18px", fontWeight: 700 }}>
-                Order GHK-Cu - $179
+                Order GHK-Cu - $194.00
               </Button>
             </motion.div>
 

@@ -92,7 +92,7 @@ const colors = {
 const PRICE = {
   amount: 249.00,
   currency: 'USD',
-  display: '$249.00',
+  display: '$125.00',
   period: 'per month',
   treatmentType: 'Oral RDT'
 };

@@ -88,7 +88,7 @@ const colors = {
 const PRICE = {
   amount: 449.00,
   currency: 'USD',
-  display: '$449.00',
+  display: '$194.00',
   period: 'per month'
 };
 

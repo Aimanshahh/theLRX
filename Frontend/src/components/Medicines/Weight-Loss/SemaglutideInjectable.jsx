@@ -93,7 +93,7 @@ const colors = {
 const PRICE = {
   amount: 189.00,
   currency: 'USD',
-  display: '$189.00',
+  display: '$144.00',
   period: 'per month',
   treatmentType: 'Injectable'
 };

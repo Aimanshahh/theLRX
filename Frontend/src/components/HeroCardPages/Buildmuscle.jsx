@@ -22,14 +22,14 @@ export default function Buildmuscle() {
     { 
       img: wegovyPill, 
       name: "CJC-1295/Ipamorelin Vial", 
-      sub: "$199.00",
+      sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/cj-r201jp",
       learnMorePath: "/peptides/cjc-1295-ipamorelin"
     },
     { 
       img: zepboundVial, 
       name: "Sermorelin Vial", 
-      sub: "$189.00",
+      sub: "Starting at $145.00",
       buyNowUrl: "https://try.thelrx.com/intake/se-jd9om9",
       learnMorePath: "/peptides/sermorelin"
     },

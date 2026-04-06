@@ -171,7 +171,7 @@ const DrivePlus18Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $239.00
+                      Starting at 58.00
                     </Typography>
                     <Typography
                       sx={{
@@ -521,7 +521,7 @@ const DrivePlus18Page = () => {
                       value: "$297", 
                       color: "#00359E",
                       description: "Full program access",
-                      trend: "per month $239"
+                      trend: "per month Starting at 58.00"
                     },
                     { 
                       label: "Patient Satisfaction", 
@@ -766,7 +766,7 @@ const DrivePlus18Page = () => {
                       Only
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $239
+                      Starting at 58.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1159,7 +1159,7 @@ const DrivePlus18Page = () => {
                     mb: 1
                   }}
                 >
-                  $239.00
+                  Starting at 58.00.00
                 </Typography>
                 <Typography
                   sx={{

@@ -165,7 +165,7 @@ const SermorelinPage = () => {
                   fontWeight: 700,
                 }}
               >
-                Begin Consultation - $189
+                Begin Consultation - Starting at $145
               </Button>
             </motion.div>
 
@@ -670,7 +670,7 @@ const SermorelinPage = () => {
                         color: palette.darkBlue,
                       }}
                     >
-                      $189.00
+                      Starting at $145.00
                     </Box>
                   </Box>
                 </motion.div>
@@ -1246,7 +1246,7 @@ const SermorelinPage = () => {
                   mx: "auto",
                 }}
               >
-                Start with our Sermorelin clinical kit at $189. Includes medical evaluation, 
+                Start with our Sermorelin clinical kit at $145. Includes medical evaluation, 
                 clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
@@ -1285,7 +1285,7 @@ const SermorelinPage = () => {
                       },
                     }}
                   >
-                    Begin Clinical Process - $189
+                    Begin Clinical Process - $145
                   </Button>
                 </motion.div>
 

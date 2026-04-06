@@ -118,7 +118,7 @@ const PT141Page = () => {
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
               PT-141
               <br />
-              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$229.00</Box>
+              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$194.00</Box>
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
@@ -164,7 +164,7 @@ const PT141Page = () => {
                   fontWeight: 700,
                 }}
               >
-                Begin Consultation - $229
+                Begin Consultation - $194.00
               </Button>
             </motion.div>
 
@@ -669,7 +669,7 @@ const PT141Page = () => {
                         color: palette.darkBlue,
                       }}
                     >
-                      $229.00
+                      $194.00
                     </Box>
                   </Box>
                 </motion.div>
@@ -1245,7 +1245,7 @@ const PT141Page = () => {
                   mx: "auto",
                 }}
               >
-                Start with our PT-141 clinical kit at $229. Includes medical evaluation, 
+                Start with our PT-141 clinical kit at $194.00. Includes medical evaluation, 
                 clinical oversight, and compounded formulation. Individual responses may vary.
               </Typography>
 
@@ -1284,7 +1284,7 @@ const PT141Page = () => {
                       },
                     }}
                   >
-                    Begin Clinical Process - $229
+                    Begin Clinical Process - $194.00
                   </Button>
                 </motion.div>
 

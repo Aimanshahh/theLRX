@@ -147,7 +147,7 @@ const OverdrivePlus12Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $119.00
+                      Starting at $39.00
                     </Typography>
                     <Typography
                       sx={{
@@ -272,7 +272,7 @@ const OverdrivePlus12Page = () => {
                       12 Tablets
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $119
+                      Starting at $39.00
                     </Typography>
                   </Box>
                 </Box>
@@ -1129,7 +1129,7 @@ complete ED treatment program • Consultation included • Medications delivere
                     mb: 1
                   }}
                 >
-                  $119.00
+                  Starting at $39.00
                 </Typography>
                 <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   Overdrive Plus 12 Tablets • Telehealth Included • 24/7 Support

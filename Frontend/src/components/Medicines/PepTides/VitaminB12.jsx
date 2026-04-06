@@ -118,7 +118,7 @@ const VitaminB12Page = () => {
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
               Vitamin B12 Injection
               <br />
-              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$149.00</Box>
+              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>Starting at $77.00</Box>
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
@@ -167,7 +167,7 @@ const VitaminB12Page = () => {
                   
                 }}
               >
-                Get Your Injection - $149
+                Get Your Injection - $77.00
               </Button>
             </motion.div>
 
@@ -677,7 +677,7 @@ const VitaminB12Page = () => {
                   color: palette.darkBlue,
                 }}
               >
-                $149.00
+                Starting at $77.00
               </Box>
             </Box>
           </motion.div>
@@ -1262,7 +1262,7 @@ const VitaminB12Page = () => {
                   mx: "auto",
                 }}
               >
-                Start with our Vitamin B12 injection kit at $149. Includes medical consultation, 
+                Start with our Vitamin B12 injection Starting at $77.00. Includes medical consultation, 
                 free shipping, and clinical oversight. Individual results may vary.
               </Typography>
 
@@ -1301,7 +1301,7 @@ const VitaminB12Page = () => {
                       },
                     }}
                   >
-                    Begin Clinical Process - $149
+                    Begin Clinical Process - $77.00
                   </Button>
                 </motion.div>
 

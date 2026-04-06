@@ -147,7 +147,7 @@ const OverdrivePlus6Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $79.00
+                      Starting at $19.00
                     </Typography>
                     <Typography
                       sx={{
@@ -272,7 +272,7 @@ const OverdrivePlus6Page = () => {
                       6 Tablets
                     </Typography>
                     <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      $79
+                      Starting at $19.00
                     </Typography>
                   </Box>
                 </Box>
@@ -438,7 +438,7 @@ const OverdrivePlus6Page = () => {
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      $297 per month for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
+                    Starting at $19.00 for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>
@@ -1129,7 +1129,7 @@ const OverdrivePlus6Page = () => {
                     mb: 1
                   }}
                 >
-                  $79.00
+                  Starting at $19.00
                 </Typography>
                 <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
                   Overdrive Plus 6 Tablets • Telehealth Included • 24/7 Support
