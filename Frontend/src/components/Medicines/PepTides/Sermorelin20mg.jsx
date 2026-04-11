@@ -119,7 +119,7 @@ const SermorelinPage = () => {
             <Typography sx={{ fontSize: { xs: "38px", md: "48px" }, fontWeight: 900, color: palette.white, lineHeight: 1.05, mb: 2 }}>
               Sermorelin
               <br />
-              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$189.00</Box>
+              <Box component="span" sx={{ color: palette.white, fontSize: { xs: "42px", md: "52px" } }}>$145.00</Box>
             </Typography>
 
             <Typography sx={{ mt: 1.5, fontSize: { xs: "16px", md: "18px" }, color: palette.white, lineHeight: 1.6, mb: 3 }}>
