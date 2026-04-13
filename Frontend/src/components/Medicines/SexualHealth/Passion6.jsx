@@ -159,7 +159,7 @@ const Passion6Page = () => {
                   fontSize: { xs: "2.5rem", md: "3rem" }
                 }}
               >
-                $69.00
+                $19.00
               </Typography>
               <Typography
                 sx={{
@@ -168,7 +168,7 @@ const Passion6Page = () => {
                   fontSize: "1.2rem"
                 }}
               >
-                $99.00
+                $29.00
               </Typography>
             </Box>
             <Chip

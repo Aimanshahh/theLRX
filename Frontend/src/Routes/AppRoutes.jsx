@@ -59,6 +59,7 @@ import Lust12 from "../components/Medicines/SexualHealth/Lust12";
 import Lust18 from "../components/Medicines/SexualHealth/Lust18";
 import OverdrivePlus6 from "../components/Medicines/SexualHealth/OverdrivePlus6";
 import OverdrivePlus12 from "../components/Medicines/SexualHealth/OverdrivePlus12";
+import OverdrivePlus18Page from "../components/Medicines/SexualHealth/OverdrivePlus18";
 import Redpill6 from "../components/Medicines/SexualHealth/Redpill6";
 import Redpill12 from "../components/Medicines/SexualHealth/Redpill12";
 import Mach16 from "../components/Medicines/SexualHealth/Mach16";
@@ -199,6 +200,7 @@ export default function AppRoutes() {
               <Route path="/sexual-health/lust-18" element={<Lust18 />} />
               <Route path="/sexual-health/overdrive-plus-6" element={<OverdrivePlus6 />} />
               <Route path="/sexual-health/overdrive-plus-12" element={<OverdrivePlus12 />} />
+              <Route path="/sexual-health/overdrive-plus-18" element={<OverdrivePlus18Page />} />
               <Route path="/sexual-health/redpill-6" element={<Redpill6 />} />
               <Route path="/sexual-health/redpill-12" element={<Redpill12 />} />
               <Route path="/sexual-health/mach1-6" element={<Mach16 />} />

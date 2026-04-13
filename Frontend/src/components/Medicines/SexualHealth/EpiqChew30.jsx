@@ -163,25 +163,9 @@ const EpiqChew30Page = () => {
                     >
                       Starting at $29.00
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
-                      }}
-                    >
-                      $297.00
-                    </Typography>
+
                   </Box>
-                  <Chip
-                    label="SPECIAL OFFER"
-                    size="small"
-                    sx={{
-                      bgcolor: "#00359E",
-                      color: "white",
-                      fontWeight: 700
-                    }}
-                  />
+
                 </Box>
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -502,14 +486,7 @@ const EpiqChew30Page = () => {
                       trend: "5-10 minutes"
                     },
                     { 
-                      label: "Step 2: Telehealth Visit", 
-                      value: "Virtual", 
-                      color: "#003B9D",
-                      description: "Consult with a licensed provider",
-                      trend: "15-20 minutes"
-                    },
-                    { 
-                      label: "Step 3: Start Treatment", 
+                      label: "Step 2: Start Treatment", 
                       value: "Begin", 
                       color: "#00359E",
                       description: "Receive your personalized plan",

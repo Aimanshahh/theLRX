@@ -161,7 +161,7 @@ const Lust18Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      $89.00
+                      $58.00
                     </Typography>
                     <Typography
                       sx={{

@@ -176,6 +176,7 @@ export default function Navbar() {
         { label: "Lust-18 Tablets", path: "/sexual-health/lust-18" },
         { label: "OverDrive Plus-6 Tablets", path: "/sexual-health/overdrive-plus-6" },
         { label: "OverDrive Plus-12 Tablets", path: "/sexual-health/overdrive-plus-12" },
+          { label: "OverDrive Plus-18 Tablets", path: "/sexual-health/overdrive-plus-18" },
         { label: "RedPill-6 Tablets", path: "/sexual-health/redpill-6" },
         { label: "RedPill-12 Tablets", path: "/sexual-health/redpill-12" },
         { label: "Mach1-6 Tablets", path: "/sexual-health/mach1-6" },

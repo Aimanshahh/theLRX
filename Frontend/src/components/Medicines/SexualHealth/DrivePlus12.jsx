@@ -992,13 +992,6 @@ const DrivePlus12Page = () => {
               },
               {
                 step: "02",
-                title: "Telehealth Visit",
-                description: "Speak to your clinician virtually",
-                icon: "👨‍⚕️",
-                color: "#003B9D"
-              },
-              {
-                step: "03",
                 title: "Receive Medicine",
                 description: "Discreet delivery to your door",
                 icon: "📦",

@@ -173,25 +173,7 @@ const DrivePlus6Page = () => {
                     >
                       Starting at $19.00
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
-                      }}
-                    >
-                      $297.00
-                    </Typography>
                   </Box>
-                  <Chip
-                    label="SPECIAL OFFER"
-                    size="small"
-                    sx={{
-                      bgcolor: "#00359E",
-                      color: "white",
-                      fontWeight: 700
-                    }}
-                  />
                 </Box>
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

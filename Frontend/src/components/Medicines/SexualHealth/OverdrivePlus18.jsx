@@ -11,49 +11,34 @@ import {
 import { alpha } from "@mui/material/styles";
 import { motion } from "framer-motion";
 
-// Lucide icons
+// Updated Lucide icons for ED/telehealth focus
 import {
-  Zap,
-  Battery,
-  Rocket,
   CheckCircle,
   Package,
-  Clock,
-  Calendar,
   ArrowRight,
+  Heart,
   Shield,
   Users,
-  Star,
-  Target,
-  TrendingUp,
-  Brain,
-  Eye,
-  Focus,
-  Flame,
-  Heart,
-  Pill,
   Truck,
-  Sparkles,
-  Droplet,
-  Leaf,
-  Gauge,
-  Bolt
+  Stethoscope,
+  UserCheck,
+  Zap
 } from "lucide-react";
 
 // Images
 import heroImage from "../../../assets/Medicines/menintimacy.png";
 import productImage from "../../../assets/Medicines/menintimacy.png";
 
-const DrivePlus18Page = () => {
+const OverdrivePlus18Page = () => {
   const rimioUrl = "https://try.thelrx.com/intake/ed-fmmbgk";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
   };
-
+  
   return (
     <>
-      {/* HERO SECTION */}
+      {/* HERO SECTION - UPDATED FOR 18 TABLETS */}
       <Box
         sx={{
           py: { xs: 6, md: 10 },
@@ -86,7 +71,7 @@ const DrivePlus18Page = () => {
               >
                 <Chip
                   label="COMPOUNDED ED MEDICATION - 18 TABLETS"
-                  icon={<Zap size={16} />}
+                  icon={<Package size={16} />}
                   sx={{
                     bgcolor: alpha("#00359E", 0.12),
                     color: "#00359E",
@@ -107,19 +92,7 @@ const DrivePlus18Page = () => {
                     color: "#000000"
                   }}
                 >
-                  Drive Plus{" "}
-                  <Box
-                    component="span"
-                    sx={{
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      color: "transparent",
-                      display: "block"
-                    }}
-                  >
-                    – 18 Tablets
-                  </Box>
+                  Overdrive Plus – 18 Tablets
                 </Typography>
 
                 <Typography
@@ -131,17 +104,20 @@ const DrivePlus18Page = () => {
                     fontSize: { xs: "1rem", md: "1.2rem" }
                   }}
                 >
-                  Drive Plus combines enhanced blood-flow support, elevated desire pathways, and potent antioxidant synergy to create a more responsive, energized, and deeply connected intimate experience.
+                  Overdrive Plus unites elevated circulation support, desire-enhancing neuroactivation, and antioxidant-fortified blood-flow synergy to create a more responsive, energized, and deeply connected intimate experience.
+                  <Box component="span" sx={{ display: 'block', mt: 1, fontWeight: 600, color: "#00359E" }}>
+                    (Tadalafil / Bremelanotide / Pycnogenol)
+                  </Box>
                 </Typography>
 
                 {/* FEATURES */}
                 <Box sx={{ mb: 5 }}>
                   {[
-                    "Enhanced blood-flow and nitric-oxide support",
-                    "Increased responsiveness and intimate vitality",
-                    "Powerful antioxidant synergy (Pycnogenol)",
-                    "Compounded for personalized efficacy (Sildenafil)",
-                    "Stacks with other treatments for amplified results"
+                    "Designed to help men overcome erectile challenges and restore confidence",
+                    "Consultation with a licensed provider",
+                    "Personalized treatment plans tailored to your unique needs",
+                    "Medications delivered privately and discreetly to your door",
+                    "Convenient telehealth platform for easy and ongoing access to care"
                   ].map((item, i) => (
                     <Box
                       key={i}
@@ -160,7 +136,7 @@ const DrivePlus18Page = () => {
                   ))}
                 </Box>
 
-                {/* PRICING */}
+                {/* PRICING - UPDATED TO $58 */}
                 <Box sx={{ display: "flex", alignItems: "center", gap: 3, mb: 4 }}>
                   <Box>
                     <Typography
@@ -171,20 +147,19 @@ const DrivePlus18Page = () => {
                         fontSize: { xs: "2.5rem", md: "3rem" }
                       }}
                     >
-                      Starting at 58.00
+                      Starting at $58.00
                     </Typography>
                     <Typography
                       sx={{
                         color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
+                        fontSize: "1rem"
                       }}
                     >
-                      $297.00
+                      18-tablet treatment pack
                     </Typography>
                   </Box>
                   <Chip
-                    label="SPECIAL OFFER"
+                    label="COMPOUNDED"
                     size="small"
                     sx={{
                       bgcolor: "#00359E",
@@ -220,7 +195,7 @@ const DrivePlus18Page = () => {
               </motion.div>
             </Box>
 
-            {/* RIGHT IMAGE SECTION */}
+            {/* RIGHT IMAGE SECTION - UPDATED */}
             <Box
               sx={{
                 flex: 1,
@@ -245,7 +220,7 @@ const DrivePlus18Page = () => {
                   <Box
                     component="img"
                     src={heroImage}
-                    alt="Drive Plus 18 Tablets"
+                    alt="Overdrive Plus 18 Tablets"
                     sx={{
                       width: "100%",
                       height: { xs: "300px", md: "500px" },
@@ -271,10 +246,35 @@ const DrivePlus18Page = () => {
                       gap: 0.5
                     }}
                   >
-                    <Pill size={12} />
-                    COMPOUNDED FORMULA
+                    <Heart size={12} />
+                    ED MEDICATION
                   </Box>
                   
+                  {/* PRICE BADGE - UPDATED */}
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: 20,
+                      right: 20,
+                      bgcolor: "#00359E",
+                      color: "#FFFFFF",
+                      px: 2.5,
+                      py: 1.5,
+                      borderRadius: "12px",
+                      fontSize: "1.5rem",
+                      fontWeight: 900,
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center"
+                    }}
+                  >
+                    <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
+                      18 Tablets
+                    </Typography>
+                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
+                      Starting at $58.00
+                    </Typography>
+                  </Box>
                 </Box>
               </motion.div>
             </Box>
@@ -282,7 +282,7 @@ const DrivePlus18Page = () => {
         </Container>
       </Box>
 
-      {/* SCIENTIFIC EVIDENCE SECTION */}
+      {/* TELEHEALTH PROCESS SECTION */}
       <Box
         sx={{
           mt: { xs: 8, md: 12 },
@@ -303,7 +303,7 @@ const DrivePlus18Page = () => {
               textAlign: "center"
             }}
           >
-            Personalized ED Treatment
+            ED Treatment in 3 Easy Steps
           </Typography>
           
           <Grid container spacing={6} alignItems="stretch">
@@ -320,7 +320,7 @@ const DrivePlus18Page = () => {
                   lineHeight: 1.8,
                   fontSize: "1.1rem"
                 }}>
-                  Liquid Rx provides customized solutions to help you achieve better performance and satisfaction. Whether you're facing occasional challenges or ongoing difficulties, our treatments are tailored to your specific needs for optimal results. Drive Plus is part of a complete wellness approach.
+                  LiquidRX makes it simple to access expert care. Our telehealth platform ensures privacy and convenience, allowing you to take charge of your health with confidence. From consultation to treatment, we're here to support you every step of the way.
                 </Typography>
 
                 <Box sx={{ flex: 1 }}>
@@ -333,7 +333,7 @@ const DrivePlus18Page = () => {
                       fontSize: "1.4rem"
                     }}
                   >
-                    How It Works:
+                    Simple. Convenient. Effective.
                   </Typography>
                   
                   <Grid container spacing={3}>
@@ -345,9 +345,9 @@ const DrivePlus18Page = () => {
                         mb: 3 
                       }}>
                         {[
-                          "Consultation with a licensed provider",
-                          "Personalized treatment plans tailored to your unique needs",
-                          "Medications delivered privately and discreetly to your door"
+                          "Fill out the medical form online",
+                          "Attend your telehealth consultation with a licensed provider",
+                          "Start your personalized ED treatment plan"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -384,9 +384,9 @@ const DrivePlus18Page = () => {
                         gap: 2 
                       }}>
                         {[
-                          "Enhanced blood flow and nitric-oxide support",
-                          "Powerful antioxidant synergy with Pycnogenol",
-                          "Stacks with NAD+ and other treatments for full optimization"
+                          "Receive medications discreetly at your door",
+                          "Get ongoing support from experienced providers",
+                          "Enjoy customized solutions for optimal results"
                         ].map((point, index) => (
                           <Box key={index} sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
                             <Box
@@ -417,7 +417,7 @@ const DrivePlus18Page = () => {
                     </Grid>
                   </Grid>
                   
-                  {/* Study Details */}
+                  {/* Service Details */}
                   <Box sx={{ 
                     mt: 4,
                     p: 3,
@@ -431,21 +431,21 @@ const DrivePlus18Page = () => {
                       mb: 1,
                       fontSize: "1rem"
                     }}>
-                      📊 Formula Composition:
+                      💊 Treatment Program:
                     </Typography>
                     <Typography sx={{ 
                       color: "#747578", 
                       fontSize: "0.9rem",
                       lineHeight: 1.6
                     }}>
-                      Sildenafil / Bremelanotide / Pycnogenol • Compounded for personalized efficacy • Designed to stack with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141
+                      Starting at $58.00 for complete ED treatment program • Consultation included • Medications delivered • Ongoing provider support
                     </Typography>
                   </Box>
                 </Box>
               </Box>
             </Grid>
             
-            {/* Right Column - Statistics Card */}
+            {/* Right Column - Steps Card */}
             <Grid item xs={12} md={5}>
               <Box
                 sx={{
@@ -469,7 +469,7 @@ const DrivePlus18Page = () => {
                       fontSize: "1.75rem"
                     }}
                   >
-                    Treatment in 3 Steps
+                    Complete Treatment Plan
                   </Typography>
                   <Typography
                     sx={{
@@ -477,7 +477,7 @@ const DrivePlus18Page = () => {
                       fontSize: "0.95rem"
                     }}
                   >
-                    Simple. Convenient. Effective.
+                    Everything you need for confidence restored
                   </Typography>
                 </Box>
                 
@@ -489,95 +489,84 @@ const DrivePlus18Page = () => {
                 }}>
                   {[
                     { 
-                      label: "Step 1: Fill Out Form", 
-                      value: "Online", 
+                      label: "Telehealth Consultation", 
+                      value: "Included", 
                       color: "#00359E",
-                      description: "Complete a simple medical form",
-                      trend: "5-10 minutes"
+                      description: "With licensed provider",
+                      icon: "👨‍⚕️"
                     },
                     { 
-                      label: "Step 2: Receive Medicine", 
-                      value: "Delivered", 
+                      label: "Medication Delivery", 
+                      value: "Discreet", 
                       color: "#00359E",
-                      description: "Discreet shipping to your door",
-                      trend: "Free shipping"
+                      description: "To your door",
+                      icon: "📦"
                     },
                     { 
-                      label: "Personalized Plan", 
-                      value: "Custom", 
+                      label: "Ongoing Support", 
+                      value: "24/7", 
                       color: "#003B9D",
-                      description: "Treatment tailored to your needs",
-                      trend: "Ongoing support"
+                      description: "Provider access",
+                      icon: "🔄"
                     },
                     { 
-                      label: "Total Monthly Cost", 
-                      value: "$297", 
+                      label: "Wellness Profile", 
+                      value: "Optimized", 
                       color: "#00359E",
-                      description: "Full program access",
-                      trend: "per month Starting at 58.00"
+                      description: "Performance focused",
+                      icon: "💪"
                     },
                     { 
-                      label: "Patient Satisfaction", 
-                      value: "Highly", 
+                      label: "Shipping", 
+                      value: "All 50 States", 
                       color: "#003B9D",
-                      description: "Recommended by patients",
-                      trend: "Trusted care"
+                      description: "Nationwide delivery",
+                      icon: "🇺🇸"
                     }
                   ].map((stat, index) => (
-                    <Box key={index} sx={{ mb: 2 }}>
+                    <Box key={index} sx={{ mb: 2, p: 2, borderRadius: "8px", bgcolor: alpha(stat.color, 0.05) }}>
                       <Box sx={{ 
                         display: "flex", 
                         justifyContent: "space-between", 
                         alignItems: "center",
                         mb: 0.5
                       }}>
-                        <Typography sx={{ 
-                          color: "#000000", 
-                          fontWeight: 600,
-                          fontSize: "1rem"
-                        }}>
-                          {stat.label}
-                        </Typography>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                          <Typography sx={{ fontSize: "1.2rem" }}>
+                            {stat.icon}
+                          </Typography>
+                          <Typography sx={{ 
+                            color: "#000000", 
+                            fontWeight: 600,
+                            fontSize: "1rem"
+                          }}>
+                            {stat.label}
+                          </Typography>
+                        </Box>
                         <Typography
                           sx={{
                             color: stat.color,
                             fontWeight: 900,
-                            fontSize: "1.5rem"
+                            fontSize: "1.1rem"
                           }}
                         >
                           {stat.value}
                         </Typography>
                       </Box>
-                      <Box sx={{ 
-                        display: "flex", 
-                        justifyContent: "space-between", 
-                        alignItems: "center"
-                      }}>
-                        <Typography
-                          sx={{
-                            color: "#8B8D8E",
-                            fontSize: "0.85rem"
-                          }}
-                        >
-                          {stat.description}
-                        </Typography>
-                        <Chip
-                          label={stat.trend}
-                          size="small"
-                          sx={{
-                            bgcolor: alpha(stat.color, 0.1),
-                            color: stat.color,
-                            fontWeight: 600,
-                            fontSize: "0.75rem",
-                            height: "22px"
-                          }}
-                        />
-                      </Box>
+                      <Typography
+                        sx={{
+                          color: "#8B8D8E",
+                          fontSize: "0.85rem",
+                          pl: 3
+                        }}
+                      >
+                        {stat.description}
+                      </Typography>
                     </Box>
                   ))}
                 </Box>
                 
-                {/* Study Conclusion */}
+                {/* Service Conclusion */}
                 <Box sx={{ 
                   mt: 4,
                   pt: 3,
@@ -590,14 +579,14 @@ const DrivePlus18Page = () => {
                     fontSize: "0.95rem",
                     lineHeight: 1.5
                   }}>
-                    Empowering men's health and wellness with discreet, personalized care.
+                    Empowering Men's Health and Wellness
                   </Typography>
                 </Box>
               </Box>
             </Grid>
           </Grid>
           
-          {/* Additional Research Info */}
+          {/* Additional Service Info */}
           <Box sx={{ 
             mt: 6, 
             p: 4,
@@ -611,7 +600,7 @@ const DrivePlus18Page = () => {
               mb: 2,
               fontSize: "1.2rem"
             }}>
-              🎯 Stack for Amplified Results
+              🚚 We Proudly Ship to All 50 States
             </Typography>
             <Typography sx={{ 
               color: "#747578", 
@@ -620,13 +609,13 @@ const DrivePlus18Page = () => {
               maxWidth: "800px",
               margin: "0 auto"
             }}>
-              Drive Plus stacks best with NAD+ Injectable, CJC-1295/Ipamorelin, and PT-141 for amplified stamina, heightened sensitivity, and a fully optimized performance and wellness profile.
+              Order your medications anytime — 24/7/365. Private, discreet packaging with nationwide delivery.
             </Typography>
           </Box>
         </Container>
       </Box>
 
-      {/* PRODUCT SHOWCASE SECTION */}
+      {/* SERVICE BENEFITS SECTION */}
       <Box
         sx={{
           py: { xs: 10, md: 14 },
@@ -650,7 +639,7 @@ const DrivePlus18Page = () => {
                   mb: 2
                 }}
               >
-                Drive Plus{" "}
+                Personalized{" "}
                 <Box
                   component="span"
                   sx={{
@@ -660,7 +649,7 @@ const DrivePlus18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  – 18 Tablets
+                  ED Treatment Plans
                 </Box>
               </Typography>
               <Typography
@@ -674,13 +663,13 @@ const DrivePlus18Page = () => {
                   lineHeight: 1.6
                 }}
               >
-                Compounded formula for enhanced blood flow, responsiveness, and intimate vitality.
+                Liquid Rx provides customized solutions to help you achieve better performance and satisfaction.
               </Typography>
             </motion.div>
           </Box>
 
           <Grid container spacing={6} alignItems="center">
-            {/* Product Image */}
+            {/* Service Image */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -694,17 +683,16 @@ const DrivePlus18Page = () => {
                     borderRadius: "24px",
                     overflow: "hidden",
                     boxShadow: "0 40px 80px rgba(0, 53, 158, 0.25)",
-                    transform: "perspective(1000px) rotateY(-5deg)",
-                    transition: "transform 0.5s ease",
                     "&:hover": {
-                      transform: "perspective(1000px) rotateY(0deg)"
+                      transform: "translateY(-5px)",
+                      transition: "transform 0.3s ease"
                     }
                   }}
                 >
                   <Box
                     component="img"
                     src={productImage}
-                    alt="Drive Plus 18 Tablets"
+                    alt="Men's Health Telemedicine Service"
                     sx={{
                       width: "100%",
                       height: { xs: "400px", md: "500px" },
@@ -713,7 +701,7 @@ const DrivePlus18Page = () => {
                     }}
                   />
                   
-                  {/* Floating Badges */}
+                  {/* Floating Badges - UPDATED */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -736,7 +724,6 @@ const DrivePlus18Page = () => {
                     18-TABLET PACK
                   </Box>
                   
-                  {/* Price Badge */}
                   <Box
                     sx={{
                       position: "absolute",
@@ -756,17 +743,17 @@ const DrivePlus18Page = () => {
                     }}
                   >
                     <Typography sx={{ fontSize: "0.9rem", fontWeight: 600, opacity: 0.9 }}>
-                      Only
+                      Advanced
                     </Typography>
-                    <Typography sx={{ fontSize: "1.5rem", lineHeight: 1 }}>
-                      Starting at 58.00
+                    <Typography sx={{ fontSize: "1.1rem", lineHeight: 1 }}>
+                      Formula
                     </Typography>
                   </Box>
                 </Box>
               </motion.div>
             </Grid>
 
-            {/* Product Details */}
+            {/* Service Details */}
             <Grid item xs={12} md={6}>
               <motion.div
                 initial={{ opacity: 0, x: 40 }}
@@ -784,7 +771,7 @@ const DrivePlus18Page = () => {
                       fontSize: { xs: "1.8rem", md: "2.5rem" }
                     }}
                   >
-                    Compounded Formula
+                    Direct Access to Your Health Provider
                   </Typography>
                   <Typography
                     sx={{
@@ -794,7 +781,7 @@ const DrivePlus18Page = () => {
                       mb: 3
                     }}
                   >
-                    Drive blends elevated nitric-oxide support with powerful antioxidant synergy to enhance blood flow, responsiveness, and overall intimate vitality with a smooth, confident feel.
+                    With Liquid Rx, you'll have ongoing support from experienced providers through virtual consultations. We'll be with you every step of the way, ensuring your treatment plan delivers the results you're looking for.
                   </Typography>
                 </Box>
 
@@ -802,27 +789,27 @@ const DrivePlus18Page = () => {
                 <Grid container spacing={3} sx={{ mb: 4 }}>
                   {[
                     {
-                      icon: <Heart size={24} color="#00359E" />,
-                      title: "Blood Flow",
-                      description: "Enhanced nitric-oxide",
+                      icon: <UserCheck size={24} color="#00359E" />,
+                      title: "Licensed Providers",
+                      description: "Experienced medical professionals",
                       color: "#00359E"
                     },
                     {
-                      icon: <Zap size={24} color="#003B9D" />,
-                      title: "Energy & Vitality",
-                      description: "Responsive experience",
+                      icon: <Shield size={24} color="#003B9D" />,
+                      title: "Private & Discreet",
+                      description: "Confidential treatment",
                       color: "#003B9D"
                     },
                     {
-                      icon: <Package size={24} color="#00359E" />,
-                      title: "18 Tablets",
-                      description: "Starter pack",
+                      icon: <Stethoscope size={24} color="#00359E" />,
+                      title: "Customized Plans",
+                      description: "Tailored to your needs",
                       color: "#00359E"
                     },
                     {
-                      icon: <Sparkles size={24} color="#003B9D" />,
-                      title: "Antioxidant Synergy",
-                      description: "Pycnogenol",
+                      icon: <Truck size={24} color="#003B9D" />,
+                      title: "Doorstep Delivery",
+                      description: "Nationwide shipping",
                       color: "#003B9D"
                     }
                   ].map((feature, index) => (
@@ -863,7 +850,7 @@ const DrivePlus18Page = () => {
                   ))}
                 </Grid>
 
-                {/* Formula Benefits */}
+                {/* Service Benefits */}
                 <Card
                   sx={{
                     p: 3,
@@ -884,16 +871,16 @@ const DrivePlus18Page = () => {
                       gap: 1
                     }}
                   >
-                    <Target size={20} />
-                    Key Benefits
+                    <Zap size={20} />
+                    Optimized Performance Stack
                   </Typography>
                   <Box sx={{ display: "flex", flexDirection: "column", gap: 1.5 }}>
                     {[
-                      "Sildenafil for enhanced blood-flow support",
-                      "Bremelanotide for elevated desire pathways",
-                      "Pycnogenol for potent antioxidant synergy",
-                      "Creates a more responsive, energized intimate experience",
-                      "Stacks with NAD+ and peptides for optimized performance"
+                      "Stacks best with NAD+ Injectable for amplified stamina",
+                      "Combines with CJC-1295/Ipamorelin for optimized profile",
+                      "Pairs with PT-141 for heightened sensitivity",
+                      "Creates fully optimized performance and wellness profile",
+                      "Provides elevated circulation with desire-enhancing neuroactivation"
                     ].map((benefit, index) => (
                       <Box key={index} sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                         <CheckCircle size={18} color="#00359E" />
@@ -904,31 +891,6 @@ const DrivePlus18Page = () => {
                     ))}
                   </Box>
                 </Card>
-
-                {/* CTA Button */}
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button
-                    variant="contained"
-                    size="large"
-                    fullWidth
-                    endIcon={<ArrowRight />}
-                    onClick={handleCtaClick}
-                    sx={{
-                      py: 2,
-                      fontWeight: 800,
-                      fontSize: "1.1rem",
-                      background: "linear-gradient(135deg, #00359E, #003B9D)",
-                      borderRadius: "12px",
-                      boxShadow: "0 8px 24px rgba(0, 53, 158, 0.3)",
-                      "&:hover": {
-                        background: "linear-gradient(135deg, #003B9D, #00359E)",
-                        boxShadow: "0 12px 32px rgba(0, 53, 158, 0.4)"
-                      }
-                    }}
-                  >
-                    Get Drive Plus Now
-                  </Button>
-                </motion.div>
               </motion.div>
             </Grid>
           </Grid>
@@ -959,7 +921,7 @@ const DrivePlus18Page = () => {
                   mb: 2
                 }}
               >
-                Start Treatment in{" "}
+                Confidence{" "}
                 <Box
                   component="span"
                   sx={{
@@ -969,7 +931,7 @@ const DrivePlus18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  2 Easy Steps
+                  Restored
                 </Box>
               </Typography>
               <Typography
@@ -983,7 +945,7 @@ const DrivePlus18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Simple telehealth process for personalized ED treatment.
+                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works.
               </Typography>
             </motion.div>
           </Box>
@@ -992,23 +954,30 @@ const DrivePlus18Page = () => {
             {[
               {
                 step: "01",
-                title: "Medical Forms",
-                description: "Complete a simple online medical form",
+                title: "Complete Medical Form",
+                description: "Simple online assessment",
                 icon: "📋",
                 color: "#00359E"
               },
               {
                 step: "02",
-                title: "Receive Medicine",
-                description: "Discreet delivery to your door",
-                icon: "📦",
-                color: "#00359E"
+                title: "Virtual Consultation",
+                description: "With licensed provider",
+                icon: "👨‍⚕️",
+                color: "#003B9D"
               },
               {
                 step: "03",
-                title: "Ongoing Care",
-                description: "Continued support and adjustments",
-                icon: "💪",
+                title: "Personalized Treatment",
+                description: "Customized plan for you",
+                icon: "💊",
+                color: "#00359E"
+              },
+              {
+                step: "04",
+                title: "Discreet Delivery",
+                description: "Medications to your door",
+                icon: "📦",
                 color: "#003B9D"
               }
             ].map((item, index) => (
@@ -1082,7 +1051,7 @@ const DrivePlus18Page = () => {
         </Container>
       </Box>
 
-      {/* FINAL CTA SECTION */}
+      {/* FINAL CTA SECTION - UPDATED PRICE */}
       <Box
         sx={{
           py: { xs: 8, md: 10 },
@@ -1112,7 +1081,7 @@ const DrivePlus18Page = () => {
                   lineHeight: 1.2
                 }}
               >
-                Confidence{" "}
+                Life{" "}
                 <Box
                   component="span"
                   sx={{
@@ -1123,7 +1092,7 @@ const DrivePlus18Page = () => {
                     color: "transparent"
                   }}
                 >
-                  Restored. Life Reimagined.
+                  Reimagined
                 </Box>
               </Typography>
               
@@ -1138,10 +1107,10 @@ const DrivePlus18Page = () => {
                   margin: "0 auto"
                 }}
               >
-                Join the growing number of men who trust Liquid Rx to deliver discreet, reliable care that truly works.
+                Our ED treatments provide discreet, effective solutions to help men overcome challenges and restore confidence. Designed to improve performance and support overall wellness.
               </Typography>
               
-              {/* Pricing Display */}
+              {/* Pricing Display - $58 */}
               <Box sx={{ mb: 4, display: "inline-block" }}>
                 <Typography
                   variant="h3"
@@ -1152,19 +1121,13 @@ const DrivePlus18Page = () => {
                     mb: 1
                   }}
                 >
-                  Starting at 58.00.00
+                  Starting at $58.00
                 </Typography>
-                <Typography
-                  sx={{
-                    color: "rgba(255, 255, 255, 0.7)",
-                    fontSize: "1.1rem"
-                  }}
-                >
-                  per month (Regularly $297/month)
+                <Typography sx={{ color: "rgba(255, 255, 255, 0.7)" }}>
+                  Overdrive Plus 18 Tablets • Telehealth Included • 24/7 Support
                 </Typography>
               </Box>
               
-              {/* Single Start Now Button */}
               <Box sx={{ mb: 6 }}>
                 <motion.div 
                   whileHover={{ scale: 1.05 }} 
@@ -1193,7 +1156,7 @@ const DrivePlus18Page = () => {
                       }
                     }}
                   >
-                    Start Your Consultation
+                    Start Treatment Now
                   </Button>
                 </motion.div>
               </Box>
@@ -1208,9 +1171,11 @@ const DrivePlus18Page = () => {
               }}>
                 {[
                   { icon: <Shield size={20} />, text: "Licensed Providers" },
-                  { icon: <Truck size={20} />, text: "Discreet Delivery" },
-                  { icon: <Package size={20} />, text: "12-Tablet Pack" },
-                  { icon: <Users size={20} />, text: "Patient Recommended" }
+                  { icon: <Truck size={20} />, text: "50 States Delivery" },
+                  { icon: <UserCheck size={20} />, text: "Personalized Plans" },
+                  { icon: <Heart size={20} />, text: "Men's Health Focus" },
+                  { icon: <Zap size={20} />, text: "Advanced Formula" },
+                  { icon: <Package size={20} />, text: "Discreet Packaging" }
                 ].map((item, index) => (
                   <motion.div
                     key={index}
@@ -1243,7 +1208,7 @@ const DrivePlus18Page = () => {
                 ))}
               </Box>
               
-              {/* Additional Info */}
+              {/* Additional Info - Updated */}
               <Typography
                 variant="caption"
                 sx={{
@@ -1255,7 +1220,8 @@ const DrivePlus18Page = () => {
                   lineHeight: 1.5
                 }}
               >
-                Drive Plus 18 Tablets • Sildenafil / Bremelanotide / Pycnogenol • Compounded formula • Telehealth consultation included • Ships to all 50 states
+                18-tablet pack • Compounded medication (Tadalafil / Bremelanotide / Pycnogenol) • Telehealth consultation required • 
+                per month treatment program • Ships to all 50 states • 24/7/365 ordering
               </Typography>
             </motion.div>
           </Box>
@@ -1283,4 +1249,4 @@ const DrivePlus18Page = () => {
   );
 };
 
-export default DrivePlus18Page;
+export default OverdrivePlus18Page;

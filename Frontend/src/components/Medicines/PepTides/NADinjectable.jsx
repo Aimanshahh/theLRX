@@ -29,9 +29,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for NAD+ Injectable
-import nadInjectableImage from "../../../assets/medicines/Nasal_Spray-removebg-preview.png";
+import nadInjectableImage from "../../../assets/medicines/NAD1-removebg-preview.png";
 import nadScienceVideo from "../../../assets/Videos/peptide.mp4";
-import nadInjectableProductImage from "../../../assets/medicines/Nasal_Spray-removebg-preview.png";
+import nadInjectableProductImage from "../../../assets/medicines/NAD1-removebg-preview.png";
 
 // Define your theme color palette (same as PT-141)
 const palette = {

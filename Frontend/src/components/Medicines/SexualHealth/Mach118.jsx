@@ -174,15 +174,6 @@ const Mach18Page = () => {
                       $279.00
                     </Typography>
                   </Box>
-                  <Chip
-                    label="SAVE $80"
-                    size="small"
-                    sx={{
-                      bgcolor: "#00359E",
-                      color: "white",
-                      fontWeight: 700
-                    }}
-                  />
                 </Box>
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

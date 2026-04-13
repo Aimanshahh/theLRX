@@ -164,15 +164,7 @@ const Mach12Page = () => {
                     >
                       Starting at $39.00
                     </Typography>
-                    <Typography
-                      sx={{
-                        color: "#8B8D8E",
-                        textDecoration: "line-through",
-                        fontSize: "1.2rem"
-                      }}
-                    >
-                      Starting at $39.00
-                    </Typography>
+           
                   </Box>
                   <Chip
                     label="SAVE $60"
