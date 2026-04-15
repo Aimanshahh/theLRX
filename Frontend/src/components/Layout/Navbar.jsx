@@ -150,7 +150,7 @@ export default function Navbar() {
       label: "Precision BioActives",
       subsections: [
         { label: "Vitamin B12 Injection", path: "/peptides/vitamin-b12" },
-        { label: "Sermolin", path: "/peptides/sermorelin" },
+        { label: "sermorelin", path: "/peptides/sermorelin" },
         { label: "Pt-141", path: "/peptides/pt-141" },
         { label: "CJC-1295/Iparmorelin Blend", path: "/peptides/cjc-1295-ipamorelin" },
         { label: "GHK-CU", path: "/peptides/GHKCU" },

@@ -275,7 +275,7 @@ export default function HeroSection() {
                 whiteSpace: "nowrap",
               }}
             >
-              View Sermolin
+              View sermorelin
             </Button>
           </Box>
         </Box>
@@ -355,7 +355,7 @@ export default function HeroSection() {
                     lineHeight: 1.4,
                   }}
                 >
-                  Premium bioactive compounds including Vitamin B12 Injection, Sermolin, Pt-141, and more.
+                  Premium bioactive compounds including Vitamin B12 Injection, sermorelin, Pt-141, and more.
                 </Typography>
               </Box>
 
@@ -584,7 +584,7 @@ export default function HeroSection() {
               fontWeight: 700,
             }}
           >
-            Pharmaceutical-grade bioactive compounds including Vitamin B12 Injection, Sermolin, 
+            Pharmaceutical-grade bioactive compounds including Vitamin B12 Injection, sermorelin, 
             Pt-141, CJC-1295/Ipamorelin Blend, GHK-CU, BPC-157 Injectable, NAD+ Nasal Spray, 
             and NAD+ Injectable. Individual results may vary. Consult with a healthcare provider 
             before starting any new supplement regimen.
