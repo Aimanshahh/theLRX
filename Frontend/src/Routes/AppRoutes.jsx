@@ -49,6 +49,10 @@ import BPC157 from "../components/Medicines/PepTides/BPC157";
 import GHKCU from "../components/Medicines/PepTides/GHKCU";
 import NAD from "../components/Medicines/PepTides/NAD";
 import NADInjectablePage from "../components/Medicines/PepTides/NADinjectable";
+import Glow from "../components/Medicines/PepTides/Glow.jsx";
+import Wolverine from "../components/Medicines/PepTides/Wolverine.jsx";
+import TB500 from "../components/Medicines/PepTides/TB-500.jsx";
+import Glutathione from "../components/Medicines/PepTides/Glutathione.jsx";
 
 // Sexual Health
 import Passion6 from "../components/Medicines/SexualHealth/Passion6";
@@ -191,6 +195,10 @@ export default function AppRoutes() {
               <Route path="/peptides/NAD" element={<NAD />} />
               <Route path="/peptides/NADinjectable" element={<NADInjectablePage />} />
               <Route path="/peptides/bpc-157" element={<BPC157 />} />
+              <Route path="/peptides/glow" element={<Glow />} />
+              <Route path="/peptides/wolverine" element={<Wolverine />} />
+              <Route path="/peptides/tb-500" element={<TB500 />} />
+              <Route path="/peptides/glutathione" element={<Glutathione />} />
 
               <Route path="/sexual-health/passion-6" element={<Passion6 />} />
               <Route path="/sexual-health/passion-12" element={<Passion12 />} />

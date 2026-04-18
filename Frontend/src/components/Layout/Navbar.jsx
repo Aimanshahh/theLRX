@@ -157,12 +157,18 @@ export default function Navbar() {
         { label: "BPC-157 Injectable", path: "/peptides/bpc-157" },
         { label: "NAD+Nasal Spray", path: "/peptides/NAD" },
         { label: "NAD+Injectable", path: "/peptides/NADinjectable" },
+        {label : "Wolverine ", path: "/peptides/wolverine"},
+        {label: "TB-500", path: "/peptides/tb-500"},
+        {label: "Glutathione", path: "/peptides/glutathione"},
+        
       ]
     },
     { 
       label: "Hair, Skin & Nails",
       subsections: [
         { label: "GHK-CU", path: "/peptides/GHKCU" },
+        { label: "Glow Injectable", path: "/peptides/glow" },
+
       ]
     },
     { 
