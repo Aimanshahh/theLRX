@@ -32,7 +32,7 @@ const palette = {
 };
 
 const TB500 = () => {
-  const rimioUrl = "https://try.thelrx.com/intake/gh-0ce9zd";
+  const rimioUrl = "https://try.thelrx.com/intake/tb-o44i8e";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");

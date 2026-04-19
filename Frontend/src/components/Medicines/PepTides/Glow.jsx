@@ -32,7 +32,7 @@ const palette = {
 };
 
 const Glow = () => {
-  const rimioUrl = "https://try.thelrx.com/intake/gh-0ce9zd";
+  const rimioUrl = "https://try.thelrx.com/intake/gl-exby3m";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");

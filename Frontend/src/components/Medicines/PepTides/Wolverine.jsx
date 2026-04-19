@@ -32,7 +32,7 @@ const palette = {
 };
 
 const Wolverine = () => {
-  const rimioUrl = "https://try.thelrx.com/intake/gh-0ce9zd";
+  const rimioUrl = "https://try.thelrx.com/intake/wv-bh2714";
 
   const handleCtaClick = () => {
     window.open(rimioUrl, "_blank", "noopener,noreferrer");
