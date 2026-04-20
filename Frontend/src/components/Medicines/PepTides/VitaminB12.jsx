@@ -22,9 +22,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos
-import b12InjectionImage from "../../../assets/Medicines/B-12.png";
+import b12InjectionImage from "../../../assets/Medicines/B - 12.png";
 import b12ScienceVideo from "../../../assets/Videos/peptide.mp4";
-import b12ProductImage from "../../../assets/Medicines/B-12.png";
+import b12ProductImage from "../../../assets/Medicines/B - 12.png";
 
 // Define color palette
 const palette = {

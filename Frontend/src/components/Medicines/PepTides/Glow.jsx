@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for Glow (replace with actual assets)
-import glowImage from "../../../assets/medicines/GLOW.png";
+import glowImage from "../../../assets/medicines/30.png";
 import glowScienceVideo from "../../../assets/Videos/peptide.mp4";
-import glowProductImage from "../../../assets/medicines/GLOW.png";
+import glowProductImage from "../../../assets/medicines/30.png";
 
 // Define your theme color palette
 const palette = {
@@ -42,7 +42,7 @@ const Glow = () => {
   const productInfo = {
     name: "Glow",
     price: "$194.00",
-    description: "The Glow peptide blend combines GHK-Cu (9mg), BPC-157 (1.66mg), and TB-500 (3.33mg) in a 1ml sterile injectable solution. This synergistic formulation is designed for professional administration.",
+    description: "The Glow peptide blend combines GHK-Cu, BPC-157, and TB-500 in a sterile injectable solution. This synergistic formulation is designed for professional administration.",
     detailedDescription: "Glow is a pharmaceutical-grade triple-peptide complex formulated for subcutaneous or intramuscular injection. Each vial is manufactured under strict quality standards, providing a potent combination of GHK-Cu, BPC-157, and TB-500 in precise ratios.",
     rating: "4.8/5.0",
     reviewCount: "1,800+ Reviews",
@@ -60,7 +60,7 @@ const Glow = () => {
       "Quality-controlled production process"
     ],
     kitIncludes: [
-      "Glow (GHK-Cu 9mg / BPC-157 1.66mg / TB-500 3.33mg) sterile solution",
+      "Glow (GHK-Cu / BPC-157 / TB-500) sterile solution",
       "Manufactured in cGMP and ISO 9001-registered U.S. facilities",
       "Certificate of Analysis (COA) for every batch",
       "Third-party tested for purity, sterility, and endotoxin levels",
@@ -68,7 +68,7 @@ const Glow = () => {
       "Professional-grade pharmaceutical preparation"
     ],
     specifications: [
-      { label: "Active Ingredients", value: "GHK-Cu 9mg, BPC-157 1.66mg, TB-500 3.33mg" },
+      { label: "Active Ingredients", value: "GHK-Cu, BPC-157, TB-500" },
       { label: "Form", value: "Sterile Injection Solution" },
       { label: "Purity", value: "99%+" },
       { label: "Administration", value: "Subcutaneous/Intramuscular" },

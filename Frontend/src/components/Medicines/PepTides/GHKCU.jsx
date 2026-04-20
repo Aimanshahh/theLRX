@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for GHK-Cu
-import ghkCuImage from "../../../assets/medicines/GHK-CU.png";
+import ghkCuImage from "../../../assets/medicines/28.png";
 import ghkCuScienceVideo from "../../../assets/Videos/peptide.mp4";
-import ghkCuProductImage from "../../../assets/medicines/GHK-CU.png";
+import ghkCuProductImage from "../../../assets/medicines/28.png";
 
 // Define your theme color palette
 const palette = {

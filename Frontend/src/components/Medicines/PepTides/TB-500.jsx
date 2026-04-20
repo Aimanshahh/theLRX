@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for TB-500 (replace with actual assets)
-import tb500Image from "../../../assets/medicines/TB-500.png";
+import tb500Image from "../../../assets/medicines/29.png";
 import tb500ScienceVideo from "../../../assets/Videos/peptide.mp4";
-import tb500ProductImage from "../../../assets/medicines/TB.jpeg";
+import tb500ProductImage from "../../../assets/medicines/29.png";
 
 // Define your theme color palette
 const palette = {
@@ -42,8 +42,8 @@ const TB500 = () => {
   const productInfo = {
     name: "TB-500 Injection",
     price: "$194.00",
-    description: "TB-500 (Thymosin Beta-4) is a synthetic peptide supplied in a 10mg/3ml sterile injectable solution. Formulated for professional subcutaneous or intramuscular administration.",
-    detailedDescription: "TB-500 is a pharmaceutical-grade peptide manufactured under strict quality standards. Each vial contains 10mg of TB-500 in a 3ml sterile solution, prepared for injection use.",
+    description: "TB-500 (Thymosin Beta-4) is a synthetic peptide supplied in a sterile injectable solution. Formulated for professional subcutaneous or intramuscular administration.",
+    detailedDescription: "TB-500 is a pharmaceutical-grade peptide manufactured under strict quality standards. Each vial of TB-500 in a sterile solution, prepared for injection use.",
     rating: "4.8/5.0",
     reviewCount: "1,200+ Reviews",
     features: [
@@ -60,7 +60,6 @@ const TB500 = () => {
       "Quality-controlled production process"
     ],
     kitIncludes: [
-      "TB-500 (Thymosin Beta-4) 10mg/3ml sterile solution",
       "Manufactured in cGMP and ISO 9001-registered U.S. facilities",
       "Certificate of Analysis (COA) for every batch",
       "Third-party tested for purity, sterility, and endotoxin levels",
@@ -68,9 +67,7 @@ const TB500 = () => {
       "Professional-grade pharmaceutical preparation"
     ],
     specifications: [
-      { label: "Active Ingredient", value: "TB-500 (Thymosin Beta-4)" },
       { label: "Form", value: "Sterile Injection Solution" },
-      { label: "Strength", value: "10mg per 3ml vial" },
       { label: "Purity", value: "99%+" },
       { label: "Administration", value: "Subcutaneous/Intramuscular" }
     ],

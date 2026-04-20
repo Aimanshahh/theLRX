@@ -23,9 +23,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for PT-141
-import pt141Image from "../../../assets/medicines/PT-141-removebg-preview.png";
+import pt141Image from "../../../assets/medicines/34.png";
 import pt141ScienceVideo from "../../../assets/Videos/peptide.mp4";
-import pt141ProductImage from "../../../assets/medicines/PT-141-removebg-preview.png";
+import pt141ProductImage from "../../../assets/medicines/34.png";
 
 // Define your theme color palette (same as before)
 const palette = {

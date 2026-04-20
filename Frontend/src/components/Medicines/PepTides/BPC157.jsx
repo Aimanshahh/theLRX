@@ -29,9 +29,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for BPC-157
-import bpc157Image from "../../../assets/medicines/BPC-removebg-preview.png";
+import bpc157Image from "../../../assets/medicines/27.png";
 import bpc157ScienceVideo from "../../../assets/Videos/peptide.mp4";
-import bpc157ProductImage from "../../../assets/medicines/BPC-removebg-preview.png";
+import bpc157ProductImage from "../../../assets/medicines/27.png";
 
 // Define your theme color palette (same as PT-141)
 const palette = {

@@ -29,9 +29,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for CJC-1295/Ipamorelin
-import cjcIpamImage from "../../../assets/medicines/CJC-1295.png";
+import cjcIpamImage from "../../../assets/medicines/33.png";
 import cjcIpamScienceVideo from "../../../assets/Videos/peptide.mp4";
-import cjcIpamProductImage from "../../../assets/medicines/CJC-1295.png";
+import cjcIpamProductImage from "../../../assets/medicines/33.png";
 
 // Define your theme color palette (same as PT-141)
 const palette = {

@@ -33,8 +33,8 @@ import {
 } from 'lucide-react';
 
 // Import your images here
-import heroImage from '../../../assets/Medicines/womenintimacy.png';
-import productImage from '../../../assets/Medicines/womenintimacy.png';
+import heroImage from '../../../assets/Medicines/46.png';
+import productImage from '../../../assets/Medicines/46.png';
 
 const Lust12Page = () => {
   const handleCtaClick = () => {

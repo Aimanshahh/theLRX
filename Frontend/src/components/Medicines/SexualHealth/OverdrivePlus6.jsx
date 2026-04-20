@@ -26,8 +26,8 @@ import {
 } from "lucide-react";
 
 // Images
-import heroImage from "../../../assets/Medicines/menintimacy.png";
-import productImage from "../../../assets/Medicines/menintimacy.png";
+import heroImage from "../../../assets/Medicines/45.png";
+import productImage from "../../../assets/Medicines/45.png";
 
 const OverdrivePlus6Page = () => {
   const rimioUrl = "https://try.thelrx.com/intake/ed-fmmbgk";

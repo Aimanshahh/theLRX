@@ -41,7 +41,7 @@ import {
 
 // Import your assets
 import videoSrc from '../../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4';
-import oralSemaglutideImg from '../../../assets/Medicines/herocard2.jpeg';
+import oralSemaglutideImg from '../../../assets/Medicines/42.png';
 
 // Animation variants
 const staggerContainer = {

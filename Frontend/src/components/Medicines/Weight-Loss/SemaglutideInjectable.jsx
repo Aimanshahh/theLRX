@@ -42,7 +42,7 @@ import {
 
 // Import your assets - Update with Semaglutide injectable image
 import videoSrc from '../../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4';
-import semaglutideInjectableImg from '../../../assets/Medicines/semaglutide.png';
+import semaglutideInjectableImg from '../../../assets/Medicines/36.png';
 
 // Animation variants
 const staggerContainer = {

@@ -37,7 +37,7 @@ import {
 
 // Import your assets
 import videoSrc from '../../../assets/Videos/motion2Fast_Premium_pharmaceutical_showcase_video_featuring_mu_0.mp4';
-import oralTirzepatideImg from '../../../assets/Medicines/herocard2.jpeg';
+import oralTirzepatideImg from '../../../assets/Medicines/41.png';
 
 // Animation variants
 const staggerContainer = {

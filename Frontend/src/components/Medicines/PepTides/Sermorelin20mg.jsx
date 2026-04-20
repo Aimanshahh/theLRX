@@ -24,9 +24,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos
-import sermorelinImage from "../../../assets/medicines/sermolin.png";
+import sermorelinImage from "../../../assets/medicines/35.png";
 import sermorelinScienceVideo from "../../../assets/Videos/peptide.mp4";
-import sermorelinProductImage from "../../../assets/medicines/sermolin.png";
+import sermorelinProductImage from "../../../assets/medicines/35.png";
 
 // Define your theme color palette
 const palette = {

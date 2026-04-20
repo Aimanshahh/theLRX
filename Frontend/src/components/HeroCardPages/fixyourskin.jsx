@@ -6,6 +6,7 @@ import bannerVideo from "../../assets/Videos/fixyourskin.mp4";
 
 // PRODUCT IMAGES
 import wegovyPill from "../../assets/Herocardspages/img20.jpeg";
+import glowPill from "../../assets/Herocardspages/img22.jpeg";
 
 
 
@@ -25,6 +26,13 @@ export default function Fixyourskin() {
       sub: "Starting at $194.00",
       buyNowUrl: "https://try.thelrx.com/intake/gh-0ce9zd",
       learnMorePath: "/peptides/GHKCU"
+    },
+      { 
+      img: glowPill, 
+      name: "Glow", 
+      sub: "Starting at $194.00",
+      buyNowUrl: "https://try.thelrx.com/intake/gl-exby3m",
+      learnMorePath: "/peptides/Glow"
     },
 
   ];

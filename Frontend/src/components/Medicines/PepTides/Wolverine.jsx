@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for Wolverine (replace with actual assets)
-import wolverineImage from "../../../assets/medicines/Wolverine.png";
+import wolverineImage from "../../../assets/medicines/31.png";
 import wolverineScienceVideo from "../../../assets/Videos/peptide.mp4";
-import wolverineProductImage from "../../../assets/medicines/wolverine.jpeg";
+import wolverineProductImage from "../../../assets/medicines/31.png";
 
 // Define your theme color palette
 const palette = {
@@ -41,7 +41,7 @@ const Wolverine = () => {
   // Updated product data for Wolverine blend
   const productInfo = {
     name: "Wolverine",
-    description: "The Wolverine peptide blend combines BPC-157 (1.66mg) and TB-500 (3.33mg) in a 1ml sterile injectable solution. This powerful dual-peptide formulation is designed for professional administration.",
+    description: "The Wolverine peptide blend combines BPC-157 and TB-500 in a sterile injectable solution. This powerful dual-peptide formulation is designed for professional administration.",
     detailedDescription: "Wolverine is a pharmaceutical-grade dual-peptide complex formulated for subcutaneous or intramuscular injection. Each vial is manufactured under strict quality standards, providing a potent combination of BPC-157 and TB-500 in precise ratios.",
     rating: "4.8/5.0",
     reviewCount: "1,500+ Reviews",
@@ -59,7 +59,7 @@ const Wolverine = () => {
       "Quality-controlled production process"
     ],
     kitIncludes: [
-      "Wolverine (BPC-157 1.66mg / TB-500 3.33mg) sterile solution",
+      "Wolverine (BPC-157 / TB-500) sterile solution",
       "Manufactured in cGMP and ISO 9001-registered U.S. facilities",
       "Certificate of Analysis (COA) for every batch",
       "Third-party tested for purity, sterility, and endotoxin levels",
@@ -67,7 +67,7 @@ const Wolverine = () => {
       "Professional-grade pharmaceutical preparation"
     ],
     specifications: [
-      { label: "Active Ingredients", value: "BPC-157 1.66mg, TB-500 3.33mg" },
+      { label: "Active Ingredients", value: "BPC-157, TB-500" },
       { label: "Form", value: "Sterile Injection Solution" },
       { label: "Purity", value: "99%+" },
       { label: "Administration", value: "Subcutaneous/Intramuscular" },

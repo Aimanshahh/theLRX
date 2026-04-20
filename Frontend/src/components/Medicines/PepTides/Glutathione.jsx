@@ -16,9 +16,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for Glutathione (replace with actual assets)
-import glutathioneImage from "../../../assets/medicines/gluthaione.png";
+import glutathioneImage from "../../../assets/medicines/32.png";
 import glutathioneScienceVideo from "../../../assets/Videos/peptide.mp4";
-import glutathioneProductImage from "../../../assets/medicines/glutathaione.jpeg";
+import glutathioneProductImage from "../../../assets/medicines/32.png";
 
 // Define your theme color palette
 const palette = {

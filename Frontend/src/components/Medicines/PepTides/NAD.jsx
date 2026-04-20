@@ -30,9 +30,9 @@ import {
 } from "lucide-react";
 
 // Import your images and videos for NAD+ Nasal Spray
-import nadNasalImage from "../../../assets/medicines/Nasal_Spray-removebg-preview.png";
+import nadNasalImage from "../../../assets/medicines/44.png";
 import nadScienceVideo from "../../../assets/Videos/peptide.mp4";
-import nadNasalProductImage from "../../../assets/medicines/Nasal_Spray-removebg-preview.png";
+import nadNasalProductImage from "../../../assets/medicines/44.png";
 
 // Define your theme color palette (same as PT-141)
 const palette = {
